@@ -1,6 +1,6 @@
 
 
-## Zesty.io Publishing Specification  \
+## Zesty.io Publishing Specification
 v0.1 last updated 4.11.18
 
 **Overview**
