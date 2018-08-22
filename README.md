@@ -1,13 +1,15 @@
 ---
+title: Homepage
 description: Base Repository for Zesty.org
 ---
 
-# Zesty-org
+# Homepage
 
 ## Developer Documentation
 
-* Instances API \(content\) [instances-api.zesty.org](https://instances-api.zesty.org/)
-* Accounts API [accounts-api.zesty.org](https://accounts-api.zesty.org/)
+* [Instances API](https://instances-api.zesty.org/)
+* [Accounts API](https://accounts-api.zesty.org/)
+* [Headless Zesty](headless/)
 
 ## [Working Specifications](specs/)
 
