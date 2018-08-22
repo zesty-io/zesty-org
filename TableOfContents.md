@@ -1,12 +1,13 @@
 # Table of contents
 
-* [Zesty.org](README.md)
-* [Specs](specs/specs.md)
-	* [Github Integration](specs/githubintegration.md)
-	* [Publishing](specs/publishing.md)
-* [Headless Zesty](headless.md)
-	* [Example Integrations](example-integrations/example-integrations.md)
-		* [Swift](example-integrations/swift/swift.md)
-			* [Guide](example-integrations/swift/guide.md)
-		* [React](example-integrations/react/react.md)
-			* [Guide](example-integrations/react/guide.md)
+* [Zesty-org](README.md)
+* [Specs](specs/README.md)
+  * [Github Integration](specs/githubintegration.md)
+  * [Publishing](specs/publishing.md)
+* [Headless Zesty](headless/README.md)
+  * [Example Integrations](headless/example-integrations/README.md)
+    * [Swift](headless/example-integrations/swift/README.md)
+      * [Guide](headless/example-integrations/swift/guide.md)
+    * [React](headless/example-integrations/react/README.md)
+      * [Guide](headless/example-integrations/react/guide.md)
+
