@@ -20,11 +20,11 @@ In this tutorial I'll be walking you through how to setup your Zesty.io instance
 
 First, we'll need to create an instance \(if you haven't already\).
 
-![Creating the Instance](../../../.gitbook/assets/swift-guide/instancecreation.png)
+![Creating the Instance](../../../.gitbook/assets/instancecreation.png)
 
 Any template will work, and in this example we'll be using the Bootstrap Template.
 
-![Choosing Zesty Template](../../../.gitbook/assets/swift-guide/templateselection.png)
+![Choosing Zesty Template](../../../.gitbook/assets/templateselection.png)
 
 ### Configuring the Content
 
@@ -32,19 +32,19 @@ Once we open up the manager, we'll need to configure the content that we'll load
 
 Go to Config and create a Set of Content Entries. Call it `Coupons`
 
-![Creating the Set](../../../.gitbook/assets/swift-guide/setcreation.png)
+![Creating the Set](../../../.gitbook/assets/setcreation.png)
 
 Next, we'll add a few fields to load in, a Text Field called `name`, and a TextArea Field called `description`.
 
-![Set Config](../../../.gitbook/assets/swift-guide/setconfig.png)
+![Set Config](../../../.gitbook/assets/setconfig%20%281%29.png)
 
 While we're here in the Config tab, we'll enable Basic JSON Endpoints by going to Site Settings -&gt; Sitewide Settings -&gt; Developer and clicking the right options.
 
-![Instance Settings](../../../.gitbook/assets/swift-guide/sitesettings.png)
+![Instance Settings](../../../.gitbook/assets/sitesettings%20%281%29.png)
 
 After saving, go to Content and we'll add an entry to our `Coupons` Dataset
 
-![Adding a New Entry](../../../.gitbook/assets/swift-guide/addinganewentry.png)
+![Adding a New Entry](../../../.gitbook/assets/addinganewentry.png)
 
 Now that our Zesty Instance is created, we can start making our iOS App!
 
@@ -58,11 +58,11 @@ Open up Xcode and Create a New Xcode project \(if you don't see this option, ⌘
 
 For our purposes, we'll just create a Single View App \(but you can choose any option you want for your project\)
 
-![Creating a Single View App](../../../.gitbook/assets/swift-guide/singleviewapp.png)
+![Creating a Single View App](../../../.gitbook/assets/singleviewapp%20%281%29.png)
 
 Call it whatever you'd like, and for the Organization Identifier, Apple typically recommends using a reverse domain id, so if your domain is `example.com`, enter in `com.example`. This will make sure you have a proper Bundle ID created.
 
-![Settings for new App](../../../.gitbook/assets/swift-guide/iosappnaming.png)
+![Settings for new App](../../../.gitbook/assets/iosappnaming%20%281%29.png)
 
 Hit Next, then create the project wherever you'd like. Additionally, if you'd like to use source control \(Git \[Github/Bitbucket\], etc\), make sure to specify that now.
 
@@ -74,15 +74,15 @@ To do this, we'll need to create a `Podfile`
 
 Go to File -&gt; New -&gt; File...
 
-![Creating a new file](../../../.gitbook/assets/swift-guide/newfile.png)
+![Creating a new file](../../../.gitbook/assets/newfile%20%281%29.png)
 
 Choose Other -&gt; Empty
 
-![File Type](../../../.gitbook/assets/swift-guide/filetype.png)
+![File Type](../../../.gitbook/assets/filetype%20%281%29.png)
 
 Call it `Podfile`, and store it at the base of your project directory, alongside your `.xcodeproj` file
 
-![Where to put Podfile](../../../.gitbook/assets/swift-guide/podfilelocation.png)
+![Where to put Podfile](../../../.gitbook/assets/podfilelocation%20%281%29.png)
 
 Inside `Podfile`, paste in this code: \(and replace iOS Tutorial App with the name of your Xcode Project Name
 
@@ -141,7 +141,7 @@ Once you've navigated to the directory, run `pod install` and sit back and watch
 
 * ZestySwiftContentEndpointWrapper : This Cocoapod allows easy retrieval of your Zesty data / endpoints without any hassle
 
-![Running Pod Install](../../../.gitbook/assets/swift-guide/podinstall.png)
+![Running Pod Install](../../../.gitbook/assets/podinstall.png)
 
 After running `pod install`, you may notice that an `.xcworkspace` file was created. This is now going to be the file that you open up when you want to work on your app. This is how Cocoapods integrates the libraries into your project.
 
@@ -155,23 +155,23 @@ Now that everything has been setup, we can pull our data from Zesty!
 
 We'll start by creating the UI For our Project. Open up `Main.storyboard` from the side menu, and drag a `UITableView` object from the objects inspector into the view controller. \(For Xcode 10, the inspector is located on the top\)
 
-![Adding the table view](../../../.gitbook/assets/swift-guide/addingtableview.png)
+![Adding the table view](../../../.gitbook/assets/addingtableview%20%281%29.png)
 
 After adding it, click on the table view, then the Constraints Inspector on the bottom, and set the following Constraints \(0 on all edges\)
 
-![Constraints](../../../.gitbook/assets/swift-guide/constraints.png)
+![Constraints](../../../.gitbook/assets/constraints%20%281%29.png)
 
 After this, hold the `control key` and drag from the table view to the view controller symbol \(2 times\). Select Data Source and Delegate.
 
-![Linking the table view](../../../.gitbook/assets/swift-guide/linkingTableView.gif)
+![Linking the table view](../../../.gitbook/assets/linkingtableview.gif)
 
 Next, we'll need to link the tableview to our view controller. Click the Two Circles Icon on the top right,
 
-![Two Circles Icon](../../../.gitbook/assets/swift-guide/twocircles.png)
+![Two Circles Icon](../../../.gitbook/assets/twocircles.png)
 
 and control drag the tableview to create a new outlet. Call it `tableView`.
 
-![Creating an outlet](../../../.gitbook/assets/swift-guide/creatingOutlet.gif)
+![Creating an outlet](../../../.gitbook/assets/creatingoutlet.gif)
 
 After all of this, we can close the second window \(there should be an X\), and open up `ViewController.swift`
 
@@ -229,15 +229,15 @@ A few things to note:
 * In our `getData()` function, we need to specify the array zuid of the dataset we created, `Coupons`.
   * We can figure this out by going back to our `Content` or `Config` page, and looking at the url when we've selected coupons
 
-![Where the zuid is](../../../.gitbook/assets/swift-guide/zuidloc.png)
+![Where the zuid is](../../../.gitbook/assets/zuidloc%20%281%29.png)
 
-![Other location of the zuid](../../../.gitbook/assets/swift-guide/otherloc.png)
+![Other location of the zuid](../../../.gitbook/assets/otherloc.png)
 
 After filling in those details, run your project on the iOS Simulator \(⌘R\), and see the magic happen!
 
 ## The Final Product
 
-![Final Product](../../../.gitbook/assets/swift-guide/finalproduct.png)
+![Final Product](../../../.gitbook/assets/finalproduct%20%281%29.png)
 
 ### Next Steps
 

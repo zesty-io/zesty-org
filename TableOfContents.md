@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Zesty-org](README.md)
+* [Homepage](README.md)
 * [Specs](specs/README.md)
   * [Github Integration](specs/githubintegration.md)
   * [Publishing](specs/publishing.md)
