@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Zesty.org](README.md)
 
