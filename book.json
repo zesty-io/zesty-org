@@ -1,0 +1,13 @@
+{
+    "plugins" : ["custom-js-css"],
+    "pluginsConfig": {
+  "custom-js-css": {
+    "js": [
+      "./.gitbook/assets/script.js"
+    ],
+    "css": [
+      "./.gitbook/assets/style.css"
+    ]
+  }
+}
+}
