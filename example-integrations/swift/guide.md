@@ -20,30 +20,30 @@ In this tutorial I'll be walking you through how to setup your Zesty.io instance
 ### Creating the Instance
 First, we'll need to create an instance (if you haven't already). 
 
-![Creating the Instance](images/instancecreation.png)
+![Creating the Instance](../../images/instancecreation.png)
 
 Any template will work, and in this example we'll be using the Bootstrap Template.
 
-![Choosing Zesty Template](images/templateselection.png)
+![Choosing Zesty Template](../../images/templateselection.png)
 
 ### Configuring the Content
 Once we open up the manager, we'll need to configure the content that we'll load from our iOS App.
 
 Go to Config and create a Set of Content Entries. Call it `Coupons`
 
-![Creating the Set](images/setcreation.png)
+![Creating the Set](../../images/setcreation.png)
 
 Next, we'll add a few fields to load in, a Text Field called `name`, and a TextArea Field called `description`.
 
-![Set Config](images/setconfig.png)
+![Set Config](../../images/setconfig.png)
 
 While we're here in the Config tab, we'll enable Basic JSON Endpoints by going to Site Settings -> Sitewide Settings -> Developer and clicking the right options.
 
-![Instance Settings](images/sitesettings.png)
+![Instance Settings](../../images/sitesettings.png)
 
 After saving, go to Content and we'll add an entry to our `Coupons` Dataset
 
-![Adding a New Entry](images/addinganewentry.png)
+![Adding a New Entry](../../images/addinganewentry.png)
 
 Now that our Zesty Instance is created, we can start making our iOS App!
 
@@ -57,11 +57,11 @@ Open up Xcode and Create a New Xcode project (if you don't see this option, ⌘ 
 
 For our purposes, we'll just create a Single View App (but you can choose any option you want for your project)
 
-![Creating a Single View App](images/singleviewapp.png)
+![Creating a Single View App](../../images/singleviewapp.png)
 
 Call it whatever you'd like, and for the Organization Identifier, Apple typically recommends using a reverse domain id, so if your domain is `example.com`, enter in `com.example`. This will make sure you have a proper Bundle ID created.
 
-![Settings for new App](images/iosappnaming.png)
+![Settings for new App](../../images/iosappnaming.png)
 
 Hit Next, then create the project wherever you'd like. Additionally, if you'd like to use source control (Git [Github/Bitbucket], etc), make sure to specify that now.
 
@@ -73,15 +73,15 @@ To do this, we'll need to create a `Podfile`
 
 Go to File -> New -> File...
 
-![Creating a new file](images/newfile.png)
+![Creating a new file](../../images/newfile.png)
 
 Choose Other -> Empty
 
-![File Type](images/filetype.png)
+![File Type](../../images/filetype.png)
 
 Call it `Podfile`, and store it at the base of your project directory, alongside your `.xcodeproj` file
 
-![Where to put Podfile](images/podfilelocation.png)
+![Where to put Podfile](../../images/podfilelocation.png)
 
 Inside `Podfile`, paste in this code: (and replace iOS Tutorial App with the name of your Xcode Project Name
 	
@@ -135,7 +135,7 @@ Once you've navigated to the directory, run `pod install` and sit back and watch
 
 - ZestySwiftContentEndpointWrapper : This Cocoapod allows easy retrieval of your Zesty data / endpoints without any hassle
 
-![Running Pod Install](images/podinstall.png)
+![Running Pod Install](../../images/podinstall.png)
 
 After running `pod install`, you may notice that an `.xcworkspace` file was created. This is now going to be the file that you open up when you want to work on your app. This is how Cocoapods integrates the libraries into your project. 
 
@@ -149,23 +149,23 @@ Now that everything has been setup, we can pull our data from Zesty!
 
 We'll start by creating the UI For our Project. Open up `Main.storyboard` from the side menu, and drag a `UITableView` object from the objects inspector into the view controller. (For Xcode 10, the inspector is located on the top)
 
-![Adding the table view](images/addingtableview.png)
+![Adding the table view](../../images/addingtableview.png)
 
 After adding it, click on the table view, then the Constraints Inspector on the bottom, and set the following Constraints (0 on all edges)
 
-![Constraints](images/constraints.png)
+![Constraints](../../images/constraints.png)
 
 After this, hold the `control key` and drag from the table view to the view controller symbol (2 times). Select Data Source and Delegate.
 
-![Linking the table view](images/linking\ the\ table\ view.gif)
+![Linking the table view](../../images/linking\ the\ table\ view.gif)
 
 Next, we'll need to link the tableview to our view controller. Click the Two Circles Icon on the top right, 
 
-![Two Circles Icon](images/twocircles.png)
+![Two Circles Icon](../../images/twocircles.png)
 
 and control drag the tableview to create a new outlet. Call it `tableView`.
 
-![Creating an outlet](images/creating\ an\ outlet.gif)
+![Creating an outlet](../../images/creating\ an\ outlet.gif)
 
 After all of this, we can close the second window (there should be an X), and open up `ViewController.swift`
 
@@ -221,15 +221,15 @@ A few things to note:
 - In our `getData()` function, we need to specify the array zuid of the dataset we created, `Coupons`.
 	- We can figure this out by going back to our `Content` or `Config` page, and looking at the url when we've selected coupons
 
-![Where the zuid is](images/zuidloc.png)
+![Where the zuid is](../../images/zuidloc.png)
 
-![Other location of the zuid](images/otherloc.png)
+![Other location of the zuid](../../images/otherloc.png)
 
 After filling in those details, run your project on the iOS Simulator (⌘R), and see the magic happen!
 
 ## The Final Product
 
-![Final Product](images/finalproduct.png)
+![Final Product](../../images/finalproduct.png)
 
 ### Next Steps
 
