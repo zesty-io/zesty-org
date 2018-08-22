@@ -9,3 +9,5 @@
 
 * <a href="https://docs.google.com/document/d/1PCOXFzI20O4XoPwRpKWMInXkpeZyV7phwFeq5d3hVN8/edit?usp=sharing">Github Sync for local development</a></li>
 * <a href="https://docs.google.com/document/d/1dXzNhLsnu7xoyE-SK9g9jii9L4lq8cU-H0B01HzT5F8/edit">Meta Tags for Single Pages</a></li>
+
+<script>alert('jhere')</script>
