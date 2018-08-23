@@ -9,5 +9,5 @@
     * [Swift](headless/example-integrations/swift/README.md)
       * [Guide](headless/example-integrations/swift/guide.md)
     * [React](headless/example-integrations/react/README.md)
-      * [Guide](headless/example-integrations/react/guide.md)
+      * [Guide \(Local React App\)](headless/example-integrations/react/guide.md)
 

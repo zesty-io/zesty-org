@@ -3,7 +3,7 @@ title: Homepage
 description: Base Repository for Zesty.org
 ---
 
-# Homepage
+# Home
 
 ## Developer Documentation
 
