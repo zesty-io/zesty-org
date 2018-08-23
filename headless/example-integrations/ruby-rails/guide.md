@@ -1,4 +1,4 @@
-# Guide \(Local React App\)
+# Guide
 
 ## Getting Started
 
@@ -10,23 +10,23 @@ cd pullzesty
 npm link
 ```
 
-Next, we can create your react app
+Next, we can create your ruby-rails app
 
 ```text
 cd path/to/your/projects/folder
-npx create-react-app Zesty-React
-cd Zesty-React
+rails new react-app Zesty-Ruby-Rails --skip-activerecord --webpack=react
+cd Zesty-Ruby-Rails
 ```
 
 `pull-zesty`works by pulling data from a `zesty.yaml` file. You can generate one from your website by going to `yourwebsite.com/-/zesty.yaml`
 
 {% hint style="info" %}
- You can always modify your `zesty.yaml` to fit your purposes.
+You can always modify your `zesty.yaml` to fit your purposes.
 {% endhint %}
 
 Now, you can pull content from zesty just by calling `pullzesty`
 
-```
+```text
 # include --verbose to see where the files are created
 pullzesty zesty.yaml --verbose
 ```
@@ -74,7 +74,6 @@ endpoints:
         6-202668-2mdd7d: data/widgets 
         6-6b70ec-rjxlm5: data/footer 
         6-4ea27c-45qz75: data/coupons
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}

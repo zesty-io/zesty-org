@@ -14,5 +14,6 @@
       * [Guide](headless/example-integrations/ruby-rails/guide.md)
     * [Hugo](headless/example-integrations/hugo/README.md)
       * [Guide](headless/example-integrations/hugo/guide.md)
-	* [Jekyll](headless/example-integrations/jekyll/README.md)
-		* [Guide](headless/example-integrations/jekyll/guide.md)
+    * [Jekyll](headless/example-integrations/jekyll/README.md)
+      * [Guide](headless/example-integrations/jekyll/guide.md)
+
