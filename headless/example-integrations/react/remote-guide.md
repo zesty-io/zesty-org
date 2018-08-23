@@ -1,38 +1,27 @@
-# Guide \(Local React App\)
+# Guide \(Remote React App\)
 
 ## Getting Started with the Example App
 
-First, we'll need to install the `pull-zesty` package. \(For more detail,[ see the docs page ](../../pullzesty.md)on `pullzesty`\)
+Let's start by cloning [the example app](https://github.com/zesty-io/Zesty-Remote-React-Example)
 
 ```bash
-git clone https://github.com/zesty-io/pullzesty
-cd pullzesty
-npm link
-```
-
-Next, lets clone [the example app](ttps://github.com/zesty-io/Zesty-Local-React-Example)
-
-```text
 cd path/to/your/projects/folder
-git clone https://github.com/zesty-io/Zesty-Local-React-Example
-cd Zesty-Local-React-Example
+git clone https://github.com/zesty-io/Zesty-Remote-React-Example
+cd Zesty-Remote-React-Example
 ```
 
-Now, all we need to do is run the app!
+Now, let's install and run the app
 
 ```bash
+npm install
 npm start
 ```
 
-{% hint style="info" %}
- Note how calling `npm start` also calls `pullzesty`
-{% endhint %}
-
 ### Understanding the Example Project
 
-The `zesty.yaml` file defines what endpoints we rely on. In this case, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json)\`\`
+In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json)
 
-We save the `.json` from these endpoints into `src/data` and use the data in our React code. This can be seen in `src/Home.js` and `src/Menu.js`.
+In our React code, we perform a `GET` request to these endpi This can be seen in `src/Home.js` and `src/Menu.js`.
 
 {% code-tabs %}
 {% code-tabs-item title="Home.js" %}
@@ -48,11 +37,14 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {
-    const loadData = () => {
-      let data = JSON.parse(JSON.stringify(homepageJSON));
-      this.setState({ homeData: data });
-    };
-    loadData();
+    fetch("http://burger.zesty.site/-/basic-api/homepage.json")
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        console.log(data);
+        this.setState({ homeData: data });
+      });
   }
   render() { // greatly simplified for explanation, see the full file on Github
     return (
@@ -69,12 +61,15 @@ export default class Home extends Component {
     );
   }
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-Using `componentDidMount`, we're able to load in our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
+{% hint style="info" %}
+Note how the only difference between the [local](local-guide.md#understanding-the-example-project) and [remote](remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
+{% endhint %}
 
-Additionally, it's not too much different to change this to work remotely instead of locally, as the next guide will show.
+Using `componentDidMount`, we're able to fetch our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
+
+Additionally, it's not too much different to change this to work locally instead of remotely, as the prior guide shows.
 

@@ -18,14 +18,15 @@ git clone https://github.com/zesty-io/Zesty-Local-React-Example
 cd Zesty-Local-React-Example
 ```
 
-Now, all we need to do is run the app!
+Now, all we need to do to run is install the required dependencies
 
 ```bash
+npm install
 npm start
 ```
 
 {% hint style="info" %}
- Note how calling `npm start` also calls `pullzesty`
+Note how calling `npm start` also calls `pullzesty`
 {% endhint %}
 
 ### Understanding the Example Project
@@ -69,10 +70,13 @@ export default class Home extends Component {
     );
   }
 }
-
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
+
+{% hint style="info" %}
+Note how the only difference between the [local](local-guide.md#understanding-the-example-project) and [remote](remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
+{% endhint %}
 
 Using `componentDidMount`, we're able to load in our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
 
