@@ -33,7 +33,7 @@ Note how calling `npm start` also calls `pullzesty`
 
 The `zesty.yaml` file defines what endpoints we rely on. In this case, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json)\`\`
 
-We save the `.json` from these endpoints into `src/data` and use the data in our React code. This can be seen in `src/Home.js` and `src/Menu.js`.
+We save the `.json` from these endpoints into `src/data` and use the data in our React code. This can be seen in [`src/Home.js`](https://github.com/zesty-io/Zesty-Local-React-Example/blob/master/src/Home.js) and [`src/Menu.js`.](https://github.com/zesty-io/Zesty-Local-React-Example/blob/master/src/Menu.js)
 
 {% code-tabs %}
 {% code-tabs-item title="Home.js" %}

@@ -21,13 +21,12 @@ npm start
 
 In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json)
 
-In our React code, we perform a `GET` request to these endpi This can be seen in `src/Home.js` and `src/Menu.js`.
+In our React code, we perform a `GET` request to these endpoints This can be seen in [`src/Home.js`](https://github.com/zesty-io/Zesty-Remote-React-Example/blob/master/src/Home.js) and [`src/Menu.js`](https://github.com/zesty-io/Zesty-Remote-React-Example/blob/master/src/Menu.js).
 
 {% code-tabs %}
 {% code-tabs-item title="Home.js" %}
 ```jsx
 import React, { Component } from "react";
-let homepageJSON = require("./data/homepage.json");
 
 export default class Home extends Component {
   constructor(props) {
