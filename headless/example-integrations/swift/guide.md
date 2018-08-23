@@ -4,7 +4,6 @@ Maintaining an iOS App can be extremely difficult and tricky. App Review times a
 
 In this tutorial I'll be walking you through how to setup your Zesty.io instance and iOS App to allow the iOS App to get data from the Zesty.io instance.
 
-
 ## Setting up the Zesty Instance
 
 ### Creating the Instance
