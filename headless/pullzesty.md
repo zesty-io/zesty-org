@@ -4,6 +4,36 @@
 
 Additionally, if you ever want more functionality, you can [submit a request](https://chat.zesty.io), or also create it yourself using the [BasicJSON](https://developer.zesty.io/guides/api/basic-api-json-endpoints-guide/) and [Custom Endpoints](https://developer.zesty.io/docs/code-editor/customizable-json-endpoints-for-content/) API, using simple GET Requests.
 
+## Installation
+
+`PullZesty` uses npm, so we'll first need to install node.
+
+**macOS**
+
+```text
+brew install node
+```
+
+**debian / ubuntu**
+
+```text
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+**other platforms**
+
+[See the Node.js website](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions)
+
+After we've installed node, we can simply clone the `pullzesty` repository and install the package
+
+```text
+git clone https://github.com/zesty-io/pullzesty
+cd pullzesty
+npm install
+npm link
+```
+
 ## How it Works
 
 Using `pullzesty` is simple. Simply run
