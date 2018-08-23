@@ -10,4 +10,9 @@
       * [Guide](headless/example-integrations/swift/guide.md)
     * [React](headless/example-integrations/react/README.md)
       * [Guide \(Local React App\)](headless/example-integrations/react/guide.md)
-
+    * [Ruby-Rails](headless/example-integrations/ruby-rails/README.md)
+      * [Guide](headless/example-integrations/ruby-rails/guide.md)
+    * [Hugo](headless/example-integrations/hugo/README.md)
+      * [Guide](headless/example-integrations/hugo/guide.md)
+	* [Jekyll](headless/example-integrations/jekyll/README.md)
+		* [Guide](headless/example-integrations/jekyll/guide.md)
