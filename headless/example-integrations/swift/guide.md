@@ -4,15 +4,6 @@ Maintaining an iOS App can be extremely difficult and tricky. App Review times a
 
 In this tutorial I'll be walking you through how to setup your Zesty.io instance and iOS App to allow the iOS App to get data from the Zesty.io instance.
 
-## Table of Contents
-
-1. [Setting up the Zesty Instance](guide.md#setting-up-the-zesty-instance)
-   * [Creating the Instance](guide.md#creating-the-instance)
-   * [Configuring the Content](guide.md#Cconfiguring-the-content)
-2. [Making the iOS App](guide.md#making-the-ios-app)
-   * [Setting up your project and installing libraries](guide.md#setting-up-your-project-and-installing-libraries)
-   * [Pulling Data from Zesty.io](guide.md#pulling-data-from-zesty-io)
-3. [The Final Product](guide.md#the-final-product)
 
 ## Setting up the Zesty Instance
 
@@ -149,7 +140,7 @@ Open up your xcode workspace \(just double click on the `.xcworkspace` file in f
 
 **Important**: You must use the `.xcworkspace` file to make use of the Zesty Library!
 
-## Pulling Data from Zesty.io
+### Pulling Data from Zesty.io
 
 Now that everything has been setup, we can pull our data from Zesty!
 
