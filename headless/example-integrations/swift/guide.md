@@ -6,13 +6,13 @@ In this tutorial I'll be walking you through how to setup your Zesty.io instance
 
 ## Table of Contents
 
-1. [Setting up the Zesty Instance](guide.md#Setting-up-the-Zesty-Instance)
-   * [Creating the Instance](guide.md#Creating-the-instance)
-   * [Configuring the Content](guide.md#Configuring-the-Content)
-2. [Making the iOS App](guide.md#Making-the-iOS-App)
-   * [Setting up your project and installing libraries](guide.md#Setting-up-your-project-and-installing-libraries)
-   * [Pulling Data from Zesty.io](guide.md#Pulling-Data-from-Zesty.io)
-3. [The Final Product](guide.md#The-Final-Product)
+1. [Setting up the Zesty Instance](guide.md#setting-up-the-zesty-instance)
+   * [Creating the Instance](guide.md#creating-the-instance)
+   * [Configuring the Content](guide.md#Cconfiguring-the-content)
+2. [Making the iOS App](guide.md#making-the-ios-app)
+   * [Setting up your project and installing libraries](guide.md#setting-up-your-project-and-installing-libraries)
+   * [Pulling Data from Zesty.io](guide.md#pulling-data-from-zesty-io)
+3. [The Final Product](guide.md#the-final-product)
 
 ## Setting up the Zesty Instance
 
