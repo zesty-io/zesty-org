@@ -10,7 +10,7 @@ cd pullzesty
 npm link
 ```
 
-Next, lets clone [the example app](ttps://github.com/zesty-io/Zesty-Local-React-Example)
+Next, lets clone [the example app](https://github.com/zesty-io/zesty-local-react-example)
 
 ```text
 cd path/to/your/projects/folder
