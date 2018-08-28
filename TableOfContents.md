@@ -18,4 +18,5 @@
       * [Guide](headless/example-integrations/hugo/guide.md)
     * [Jekyll](headless/example-integrations/jekyll/README.md)
       * [Guide](headless/example-integrations/jekyll/guide.md)
-* [Basic JSON API](basic-content-api/README.md)
+* [Instant Content API](basic-content-api.md)
+
