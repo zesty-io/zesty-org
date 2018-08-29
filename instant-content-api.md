@@ -1,8 +1,8 @@
 # Instant Content API
 
-## What is the Zesty.io Basic Content API?
+## What is the Zesty.io Instant Content API?
 
-The Basic Content API \(BCA\) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers \(ZUID\)s to return information. BCA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
+The Instant Content API \(BCA\) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers \(ZUID\)s to return information. BCA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
 
 This API is intended to be used to retrieve basic information about content in your instance. If you want to receive different file types \(e.g. SVG, XML, RSS, etc\), or submit parameters, we recommend using the Custom JSON API Instead.
 
@@ -10,13 +10,13 @@ This API is intended to be used to retrieve basic information about content in y
 
 ### Getting Started
 
-#### Enabling Basic Content API
+#### Enabling Instant Content API
 
-BCA is an optional feature on every Zesty.io Instance. It can be turned on from the developers settings in the Instances Manager Interface.
+ICA is an optional feature on every Zesty.io Instance. It can be turned on from the developers settings in the Instances Manager Interface.
 
-#### Accessing Basic Content API Endpoints
+#### Accessing Instant Content API Endpoints
 
-To access BCA, you make a call to your preview URL or live domain, for example: [http://burger.zesty.site/-/basic-content/6-4b5c74-fg83s2.json](http://burger.zesty.site/-/basic-content/6-4b5c74-fg83s2.json). Swap out the domain for your preview URL or your live domain. Switch out the HASH for a resource you wish to access on your Zesty.io instance.
+To access ICA, you make a call to your preview URL or live domain, for example: [http://burger.zesty.site/-/instant/6-4b5c74-fg83s2.json](http://burger.zesty.site/-/instant/6-4b5c74-fg83s2.json). Swap out the domain for your preview URL or your live domain. Switch out the HASH for a resource you wish to access on your Zesty.io instance.
 
 The hash you see is a ZUID. ZUIDs are used to represent every type of resource in Zesty.io. You can find the ZUID of a resource in a few ways through the Zesty.io Content Manager. When editing content, you will see the ZUID \(items start with 7-\) of that content in the URL of the page you are editing. You can access model ZUIDS \(models start with 6-\) by looking in the schema \(previously config\) tab.
 
@@ -32,7 +32,7 @@ BCA is optional and has to be turned on to gain access to it. Options to control
 
 ## JSON Format
 
-{% api-method method="get" host="https://yoursite.com" path="/-/basic-content/zuid.json" %}
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/zuid.json" %}
 {% api-method-summary %}
 General Format
 {% endapi-method-summary %}
@@ -78,7 +78,7 @@ Returned if the zuid exists \(Generic Item Example\)
 			"zuid": "6-model-zuid",
 			"name": "some model",
 			"label": "Some Model",
-			"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+			"resourceURI": "\/-\/instant\/6-model-zuid.json"
 		},
 		"web": {
 			"uri": "\/",
@@ -100,12 +100,12 @@ Returned if the zuid exists \(Generic Item Example\)
 				"zuid": "6-model-zuid",
 				"name": "some model",
 				"label": "Some Model",
-				"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+				"resourceURI": "\/-\/instant\/6-model-zuid.json"
 			},
 			"parent": {
 				"type": "abstract",
 				"zuid": "7-parent-item-zuid",
-				"resourceURI": "\/-\/basic-content\/7-parent-item-zuid.json",
+				"resourceURI": "\/-\/instant\/7-parent-item-zuid.json",
 			}
 		},
 		"version": {
@@ -136,7 +136,7 @@ Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://yoursite.com" path="/-/basic-content/7-item-zuid.json" %}
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/7-item-zuid.json" %}
 {% api-method-summary %}
 Content Items
 {% endapi-method-summary %}
@@ -176,7 +176,7 @@ Returned if the zuid exists \(Generic Item Example\)
 			"zuid": "6-model-zuid",
 			"name": "some model",
 			"label": "Some Model",
-			"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+			"resourceURI": "\/-\/instant\/6-model-zuid.json"
 		},
 		"web": {
 			"uri": "\/",
@@ -198,12 +198,12 @@ Returned if the zuid exists \(Generic Item Example\)
 				"zuid": "6-model-zuid",
 				"name": "some model",
 				"label": "Some Model",
-				"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+				"resourceURI": "\/-\/instant\/6-model-zuid.json"
 			},
 			"parent": {
 				"type": "abstract",
 				"zuid": "7-parent-item-zuid",
-				"resourceURI": "\/-\/basic-content\/7-parent-item-zuid.json",
+				"resourceURI": "\/-\/instant\/7-parent-item-zuid.json",
 			}
 		},
 		"version": {
@@ -234,7 +234,7 @@ Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="https://yoursite.com" path="/-/basic-content/6-array-zuid.json" %}
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/6-array-zuid.json" %}
 {% api-method-summary %}
 Models \(Previously known as Pagesets, Templatesets, Datasets\)
 {% endapi-method-summary %}
@@ -272,7 +272,7 @@ Returned if the zuid exists \(Generic Item Example\)
 			"zuid": "6-model-zuid",
 			"name": "location_pages",
 			"label": "Some Model",
-			"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+			"resourceURI": "\/-\/instant\/6-model-zuid.json"
 		},
 		"totalItems": 2
 	},
@@ -291,12 +291,12 @@ Returned if the zuid exists \(Generic Item Example\)
 					"zuid": "6-model-zuid",
 					"name": "location_pages",
 					"label": "Some Model",
-					"resourceURI": "\/-\/basic-content\/6-model-zuid.json"
+					"resourceURI": "\/-\/instant\/6-model-zuid.json"
 				},
 				"parent": {
 					"type": "item",
 					"zuid": "7-parent-zuid",
-					"resourceURI": "\/-\/basic-content\/7-parent-zuid.json"
+					"resourceURI": "\/-\/instant\/7-parent-zuid.json"
 				}
 			},
 			"version": {
@@ -319,7 +319,7 @@ Returned if the zuid exists \(Generic Item Example\)
 					"data": [{
 						"type": "item",
 						"zuid": "7-item-zuid",
-						"resourceURI": "\/-\/basic-content\/7-item-zuid.json"
+						"resourceURI": "\/-\/instant\/7-item-zuid.json"
 					}]
 				},
 				"version_zuid": "9-version-zuid",
@@ -378,12 +378,12 @@ Relationships \(such as `one-to-one` and `one-to-many`\) are returned as objects
         {
             "type": "item",
             "zuid": "7-zuid",
-            "resourceURI": "\/-\/basic-content\/7-zuid.json"
+            "resourceURI": "\/-\/instant\/7-zuid.json"
         },
         {
             "type": "item",
             "zuid": "7-zuid",
-            "resourceURI": "\/-\/basic-content\/7-zuid.json"
+            "resourceURI": "\/-\/instant\/7-zuid.json"
         }
     ]
 },
