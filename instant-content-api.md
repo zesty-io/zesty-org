@@ -2,7 +2,7 @@
 
 ## What is the Zesty.io Instant Content API?
 
-The Instant Content API \(BCA\) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers \(ZUID\)s to return information. BCA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
+The Instant Content API \(ICA\) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers \(ZUID\)s to return information. ICA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
 
 This API is intended to be used to retrieve basic information about content in your instance. If you want to receive different file types \(e.g. SVG, XML, RSS, etc\), or submit parameters, we recommend using the Custom JSON API Instead.
 
@@ -28,7 +28,7 @@ When you visit the BAC URL you see a JSON object of the data associated with the
 
 ## Security
 
-BCA is optional and has to be turned on to gain access to it. Options to control Cross Origin Resource Sharing can be used to lock the API down to specific websites. A header request with a private token can be set to secure external programmatic application calls.
+ICA is optional and has to be turned on to gain access to it. Options to control Cross Origin Resource Sharing can be used to lock the API down to specific websites. A header request with a private token can be set to secure external programmatic application calls.
 
 ## JSON Format
 
