@@ -6,7 +6,7 @@
   * [Publishing](specs/publishing.md)
 * [Website Engine](web/web.md)
 	* [Meta Tags](web/meta-tags/web.md)
-		* [Open Graph and Twitter Cards](web/meta-tags/og-tc-tags.md)
+		* [Open Graph and Twitter Cards](web/meta-tags/open-graph-twitter-card-meta-tags.md)
 * [Headless Zesty](headless/README.md)
   * [Pull Zesty](headless/pullzesty.md)
   * [Example Integrations](headless/example-integrations/README.md)
