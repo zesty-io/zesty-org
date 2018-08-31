@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Home](README.md)
-* [Specs](specs/README.md)
+* [RFCs/Specs](specs/README.md)
 * [Website Engine](web/web.md)
 	* [Meta Tags](web/meta-tags/web.md)
 		* [Open Graph and Twitter Cards](web/meta-tags/open-graph-twitter-card-meta-tags.md)
