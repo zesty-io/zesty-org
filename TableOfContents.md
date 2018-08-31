@@ -1,10 +1,11 @@
 # Table of contents
 
 * [Home](README.md)
-* [RFCs/Specs](specs/README.md)
+
 * [Website Engine](web/web.md)
 	* [Meta Tags](web/meta-tags/web.md)
 		* [Open Graph and Twitter Cards](web/meta-tags/open-graph-twitter-card-meta-tags.md)
+* [Instant Content API](instant-content-api.md)
 * [Headless Zesty](headless/README.md)
   * [Pull Zesty](headless/pullzesty.md)
   * [Example Integrations](headless/example-integrations/README.md)
@@ -19,4 +20,4 @@
       * [Guide](headless/example-integrations/hugo/guide.md)
     * [Jekyll](headless/example-integrations/jekyll/README.md)
       * [Guide](headless/example-integrations/jekyll/guide.md)
-* [Instant Content API](instant-content-api.md)
+* [RFCs/Specs](specs/README.md)
