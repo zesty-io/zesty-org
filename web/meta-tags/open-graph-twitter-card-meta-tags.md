@@ -14,7 +14,7 @@ All content items with a view and URL route in Zesty.io will have a title, descr
 
 These value will be used to auto fill in open graph and twitter cards tags.
 
-### Facebook
+### Facebook Open Graph Tags
 ```
 <meta property="og:type" content="website">
 <meta property="og:title" content="{seo_meta_title}">
@@ -23,7 +23,7 @@ These value will be used to auto fill in open graph and twitter cards tags.
 <meta property="og:site_name" content="{clippings:site_name}">
 ```
 
-### Facebook if an Image exists
+### Facebook Open Graph Tags when an Image exists
 ```
 <meta property="og:type" content="website">
 <meta property="og:title" content="{seo_meta_title}">
@@ -34,7 +34,7 @@ These value will be used to auto fill in open graph and twitter cards tags.
 
 ```
 
-### Twitter
+### Twitter Card Tags
 ```
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="{settings_twitter_handle}">
@@ -42,7 +42,7 @@ These value will be used to auto fill in open graph and twitter cards tags.
 <meta property="twitter:description" content="{seo_meta_description}">
 ```
 
-### Twitter if an Image exists
+### Twitter Card Tags when an Image exists
 ```
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="{settings_twitter_handle}">
