@@ -2,8 +2,6 @@
 
 * [Home](README.md)
 * [Specs](specs/README.md)
-  * [Github Integration](specs/githubintegration.md)
-  * [Publishing](specs/publishing.md)
 * [Website Engine](web/web.md)
 	* [Meta Tags](web/meta-tags/web.md)
 		* [Open Graph and Twitter Cards](web/meta-tags/open-graph-twitter-card-meta-tags.md)
