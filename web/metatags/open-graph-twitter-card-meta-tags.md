@@ -58,7 +58,7 @@ These value will be used to auto fill in open graph and twitter cards tags.
 <meta property="twitter:image:width" content="1200">
 ```
 
-**How** `[default_image:automated]` **works**
+**How `[default_image:automated]` is derived**
 
 Zesty.io will look for the first created content field that has a reference name that includes the string `image` or `img`. For example, a content field with the reference name `hero_image` would be a candidate. When there are multiple references with `image` or `img` in the name, Zesty.io will pick the first one created.
 

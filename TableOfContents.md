@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Home](README.md)
+* [Zesty.io Developer Documentation](README.md)
 * [Website Engine](web/README.md)
   * [Head & Meta Tags](web/metatags/README.md)
     * [Open Graph and Twitter Cards](web/metatags/open-graph-twitter-card-meta-tags.md)
