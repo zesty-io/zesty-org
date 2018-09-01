@@ -3,8 +3,8 @@
 * [Zesty.io Developer Documentation](README.md)
 * [Website Engine](web/README.md)
   * [View Templating](web/view-templating/README.md)
-    * [Head & Meta Tags](web/view-templating/metatags.md)
-  * [Open Graph and Twitter](web/open-graph-twitter-card-meta-tags.md)
+  * [Head & Meta Tags](web/metatags/metatags.md)
+  	* [Open Graph and Twitter](web/metatags/open-graph-twitter-card-meta-tags.md)
 * [Instant Content API](instant-content-api.md)
 * [Headless Examples](headless/README.md)
   * [Node Package \(PullZesty\)](headless/pullzesty.md)
@@ -20,4 +20,3 @@
   * [Hugo](headless/hugo/README.md)
     * [Guide](headless/hugo/guide.md)
 * [RFCs/Specs](specs.md)
-
