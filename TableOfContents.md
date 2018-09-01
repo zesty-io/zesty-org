@@ -3,7 +3,7 @@
 * [Zesty.io Developer Documentation](README.md)
 * [Website Engine](web/README.md)
   * [View Templating](web/view-templating/README.md)
-  * [Head & Meta Tags](web/meta-tags/README.md)
+  * [Meta Tags](web/meta-tags/README.md)
   	* [Open Graph and Twitter](web/meta-tags/open-graph-twitter-card-meta-tags.md)
 * [Instant Content API](instant-content-api.md)
 * [Headless Examples](headless/README.md)
