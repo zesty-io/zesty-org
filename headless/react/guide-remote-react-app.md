@@ -71,4 +71,3 @@ Note how the only difference between the [local](local-guide.md#understanding-th
 Using `componentDidMount`, we're able to fetch our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
 
 Additionally, it's not too much different to change this to work locally instead of remotely, as the prior guide shows.
-

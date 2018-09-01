@@ -1,4 +1,4 @@
-# Guide
+# iOS App Guide
 
 Maintaining an iOS App can be extremely difficult and tricky. App Review times are typically 1-2 days and require excessive developer input \(when all that's really being changed is an image or a string\). Zesty.io allows developers to write their code once, and let marketers update the content continuously.
 
@@ -215,7 +215,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
 A few things to note:
 
-* When we create the ZestySwiftContentEndpointWrapper, we need to specify a domain. For development purposes, we recommend using the Zesty-Provided Preview Domain. 
+* When we create the ZestySwiftContentEndpointWrapper, we need to specify a domain. For development purposes, we recommend using the Zesty-Provided Preview Domain.
 * In our `getData()` function, we need to specify the array zuid of the dataset we created, `Coupons`.
   * We can figure this out by going back to our `Content` or `Config` page, and looking at the url when we've selected coupons
 
@@ -234,4 +234,3 @@ After filling in those details, run your project on the iOS Simulator \(⌘R\), 
 Now that you know how to use the BasicJSONAPI with iOS / Swift, you can do incredible things!
 
 I recommend checking out the example ZestyBurger iOS App for a more complex example, which uses the `getCustomJSONData` functions that the library provides.
-

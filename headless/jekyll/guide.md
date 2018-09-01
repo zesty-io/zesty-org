@@ -61,5 +61,4 @@ a-spy="scroll" data-target="#site-navbar" data-offset="200">
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-As you can see in our [`home.html`](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/home.html) file, we simply load in the front-matter from the [`index.md`](https://github.com/zesty-io/jekyll-zesty/blob/master/index.md) file. 
-
+As you can see in our [`home.html`](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/home.html) file, we simply load in the front-matter from the [`index.md`](https://github.com/zesty-io/jekyll-zesty/blob/master/index.md) file.

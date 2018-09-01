@@ -1,5 +1,6 @@
 # React
 
+<<<<<<< HEAD
 ## Remote Example
 
 This React app pulls data from Zesty.io endpoints to show the simplicity of using the platform. The example consumes the Homepage and Menu endpoints from Zesty.io for a simple example.
@@ -12,3 +13,5 @@ Identical to the remote example in almost every way, the local example pulls the
 
 Github: [https://github.com/zesty-io/zesty-local-react-example](https://github.com/zesty-io/Zesty-Local-React-Example#zesty-local-react-example)
 
+=======
+>>>>>>> bbc9f7e6a46f9544d3d382a9f7faff77ae61b083
