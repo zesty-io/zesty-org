@@ -2,7 +2,7 @@
 
 * [Zesty.io Developer Documentation](README.md)
 * [Getting Started](getting-started.md)
-* [Content Instance](content-instance.md)
+* [Content Instances](content-instance.md)
 * [\[Web\]Site Engine](web/README.md)
   * [View Templating](web/view-templating.md)
   * [Meta Tags](web/meta-tags/README.md)

@@ -5,7 +5,7 @@ description: >-
   and/or IoT devices. 100% managed and automated.
 ---
 
-# Content Instance
+# Content Instances
 
 ## What is a Cloud Content Instance?
 
@@ -25,13 +25,30 @@ Websites are the most common vehicle for digital content consumption. That is wh
 
 To launch content in the past a developer would often setup open-source website software \(CMS\) or statically launch files onto a web server. This is a quick way to get a project off the ground, and if its an open-source CMS, the content can be edited right way. The primary issues with that setup is revolves around business needs and transportation of content.  
 
+#### Disadvantages to self-managed Open-Source Software Installations
+
 * **Content is Siloed:** Lives on a database installed on a remote server tied to a single application. This results in the same content living in multiple places that requires repeated updates to distribute the same content across multiple presentations.
-* **Software Decay:** Updates may not be possible after customization of the CMS.
+* **Software Decay:** Updates may not be possible after customization of the CMS. Software may jump versions, leaving prior installations on decaying software.
 * **Flailing Security:** Maintenance is a necessary evil of open-source servers and software, a developer must stay on top of monthly, event daily changes to protect the installation.
 * **Growing Maintenance:** When multiple website are needed, multiple software and/or server installs are necessary. That increases the time it takes to stay on top of maintenance. 
 * **Scalability & Reliability:**  If demand outweighs the resources allocated to a single software/server setup, performance will weaken and the website may not serve in a timely fashion, or even at all when under consumer demand.
+* **Stacking Responsibilities:** As need for project expansion is demanding, the above issues compound and require dedicated full time developer maintain and continue iteration. This results in a heavy monetary and opportunity costs for the business due to expensive development resources and/or reduction of speed to implement new presentations.
 
-  .
+{% hint style="warning" %}
+Some CMS software solutions are free to get started, but as time passes hidden costs of maintaining, securing, and upgrading start to add up. 
+{% endhint %}
 
+#### Advantages to Cloud Content Instances
 
+* **Content Anywhere:** Manage content in a single place and use it to update multiple presentations. 
+* **Seamless Updates:** Zesty.io unique wrote their software to update behind the scenes without a need for developer maintenances. 
+* **Constant Security:** Security is monitored, testing, and maintained by a dedicated team.
+* **Internet Scale & Reliability:** Ready for mass consumption, our system distributes content to cached edge points and uses anycast internet protocol routing to deliver sub-second page load.
+* **No Maintenance:** Developers can focus on delivering experiences while trusting a dedicated to upkeep cloud infrastructure.
+* **Content Repurposed:** Content can be shared between multiple instances, making large scale installs and wide-spread information projects easy to deliver and maintain.
+* **Increased Team Performance:** Do more with less facilitation and coordination. Resources once spent on maintenance and up-time can be redirected on new presentations.
+
+{% hint style="success" %}
+The cost to run a Cloud Content Instance is may be quickly justified when comparing it to developer labor costs required to maintain self-installed custom solutions. 
+{% endhint %}
 
