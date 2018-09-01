@@ -19,4 +19,3 @@
   * [Hugo](headless/hugo/README.md)
     * [Guide](headless/hugo/guide.md)
 * [RFCs/Specs](specs.md)
-
