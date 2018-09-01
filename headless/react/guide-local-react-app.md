@@ -2,7 +2,7 @@
 
 ## Getting Started with the Example App
 
-First, we'll need to install the `pull-zesty` package. \(For more detail,[ see the docs page ](../../pullzesty.md)on `pullzesty`\)
+First, we'll need to install the `pull-zesty` package. \(For more detail,[ see the docs page ](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/pullzesty.md)on `pullzesty`\)
 
 ```bash
 git clone https://github.com/zesty-io/pullzesty
@@ -75,9 +75,10 @@ export default class Home extends Component {
 {% endcode-tabs %}
 
 {% hint style="info" %}
-Note how the only difference between the [local](local-guide.md#understanding-the-example-project) and [remote](remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
+Note how the only difference between the [local](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/headless/react/local-guide.md#understanding-the-example-project) and [remote](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/headless/react/remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
 {% endhint %}
 
 Using `componentDidMount`, we're able to load in our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
 
 Additionally, it's not too much different to change this to work remotely instead of locally, as the next guide will show.
+

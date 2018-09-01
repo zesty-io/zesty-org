@@ -65,9 +65,10 @@ export default class Home extends Component {
 {% endcode-tabs %}
 
 {% hint style="info" %}
-Note how the only difference between the [local](local-guide.md#understanding-the-example-project) and [remote](remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
+Note how the only difference between the [local](https://github.com/zesty-io/zesty-org/tree/afa5f7fa7e3c4a65230b1295ae266512caa516ca/headless/react/local-guide.md#understanding-the-example-project) and [remote](https://github.com/zesty-io/zesty-org/tree/afa5f7fa7e3c4a65230b1295ae266512caa516ca/headless/react/remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
 {% endhint %}
 
 Using `componentDidMount`, we're able to fetch our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
 
 Additionally, it's not too much different to change this to work locally instead of remotely, as the prior guide shows.
+

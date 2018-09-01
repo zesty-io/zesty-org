@@ -1,4 +1,4 @@
-# Guide
+# Ruby Build Guide
 
 ## Getting Started with the Example App
 
@@ -20,7 +20,7 @@ rails s
 
 ### Understanding the Example Project
 
-In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json). To retrieve this data, we've put a React component inside our Ruby app. This streamlines the process significantly, since now we can simply use the same code as that from our[ Remote React App Guide](../react/remote-guide.md).
+In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json`](https://6c706l48-dev.preview.zestyio.com/-/basic-api/homepage.json) and [`/-/custom/menulist.json`](https://6c706l48-dev.preview.zestyio.com/-/custom/menulist.json). To retrieve this data, we've put a React component inside our Ruby app. This streamlines the process significantly, since now we can simply use the same code as that from our[ Remote React App Guide](https://github.com/zesty-io/zesty-org/tree/afa5f7fa7e3c4a65230b1295ae266512caa516ca/headless/react/remote-guide.md).
 
 In our React code, we perform a `GET` request to these endpoints. This can be seen in [`app/assets/javascripts/components/_home.js.jsx`](https://github.com/zesty-io/Zesty-Remote-React-Ruby-Example/blob/master/app/assets/javascripts/components/_home.js.jsx) and [`app/assets/javascripts/components/_menu.js.jsx`](https://github.com/zesty-io/Zesty-Remote-React-Ruby-Example/blob/master/app/assets/javascripts/components/_menu.js.jsx).
 
@@ -64,3 +64,4 @@ class Home extends Component {
 {% endcode-tabs %}
 
 Using `componentDidMount`, we're able to fetch our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
+
