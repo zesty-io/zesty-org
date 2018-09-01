@@ -1,4 +1,4 @@
-# Pull Zesty
+# Node Package \(PullZesty\)
 
 `PullZesty` is a [npm](https://npmjs.com) package created to assist you in pulling content from Zesty.io. It streamlines the process and is extremely customizable to your needs. `PullZesty` is most easily used for integrating with `React`, `Ruby on Rails`, `Hugo`, and `Jekyll`. For `Swift`, we instead recommend using the `ZestySwiftContentEndpointWrapper`, a library made specifically for iOS / macOS Development.
 

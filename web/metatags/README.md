@@ -25,7 +25,11 @@ These tags are always generated, and are not editable.
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
+#### Social Media Tags \(Twitter Card and Open Graph Meta Tags\)
+
+These tags are always auto-generated to help with sharing on social media platforms. The two social media tags automated are Open Graph \(Facebook\) and Twitter Cards \(Twitter\). The content of these tags are copied from the meta title and meta description tags. 
 
 
 
+{% page-ref page="open-graph-twitter-card-meta-tags.md" %}
 

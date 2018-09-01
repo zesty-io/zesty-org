@@ -1,4 +1,4 @@
-# Headless Zesty
+# Headless Integrations
 
 ## What is Zesty.io?
 
