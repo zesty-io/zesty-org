@@ -1,16 +1,20 @@
 # Head & Meta Tags
 
-Meta tags are auto generated in Zesty.io, some may be overwritten by content fields.
+Meta tags are auto generated in Zesty.io, some may be overwritten by content fields. This document will explain which meta tags can be affected by the user, and which are hard written into the Zesty.io Website Engine.
 
-## Automated Default HTML Meta tags
+## Automated Meta tags
+
+#### Basic SEO Meta Tags
 
 All content items with a view and URL route in Zesty.io will have a title, description, and keywords associated with them. The tags produced in the header that are affected by content items are:
 
 ```markup
 <title>{seo_meta_title}</title>
-<meta name="description" content="{seo_meta_title}">
+<meta name="description" content="{seo_meta_description}">
 <meta name="keywords" content="{seo_meta_keywords}">
 ```
+
+#### Default Environment Meta Tags
 
 These tags are always generated, and are not editable.
 
@@ -20,4 +24,8 @@ These tags are always generated, and are not editable.
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
+
+
+
+
 
