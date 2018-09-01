@@ -1,8 +1,6 @@
 ---
 title: Homepage
-description: >-
-  Zesty.io is a content management platform. Zesty.org is a collection of
-  platform documentation, guides for developers, and general know how.
+description: Base Repository for Zesty.org
 ---
 
 # Zesty.io Developer Documentation
