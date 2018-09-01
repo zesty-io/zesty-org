@@ -18,5 +18,4 @@
 		* [Guide](headless/hugo/guide.md)
 	* [Jekyll](headless/jekyll/README.md)
 		* [Guide](headless/jekyll/guide.md)
-
 * [RFCs/Specs](specs.md)
