@@ -1,3 +1,9 @@
+---
+description: >-
+  A Read Only JSON API to access any content created and managed on the Zesty.io
+  Content Platform
+---
+
 # Instant Content API
 
 ## What is the Zesty.io Instant Content API?
