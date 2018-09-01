@@ -31,5 +31,5 @@ These tags are always auto-generated to help with sharing on social media platfo
 
 
 
-{% page-ref page="open-graph-twitter-card-meta-tags.md" %}
+{% page-ref page="../open-graph-twitter-card-meta-tags.md" %}
 
