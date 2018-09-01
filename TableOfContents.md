@@ -3,7 +3,7 @@
 * [Home](README.md)
 
 * [Website Engine](web/web.md)
-	* [Meta Tags](web/meta-tags/web.md)
+	* [Meta Tags](web/meta-tags/meta-tags.md)
 		* [Open Graph and Twitter Cards](web/meta-tags/open-graph-twitter-card-meta-tags.md)
 * [Instant Content API](instant-content-api.md)
 * [Headless Zesty](headless/README.md)
