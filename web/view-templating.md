@@ -1,6 +1,17 @@
+---
+description: >-
+  Content Models in Zesty.io can be associated with a view. A view is a file
+  that loads whenever a content item is accessed through a browser by its unique
+  URL.
+---
+
 # View Templating
 
-Content Models in Zesty.io can be associated with a view. A view is a file that loads whenever a content item is accessed through a browser by its unique URL.
+## The Anatomy of a View
+
+Views are template files that are tied to a Content Model. When a content models item gets accessed by its URL, the [Zesty.io Site Engine](./) will render a view. 
+
+## Zesty.io's Templating Language, Parsley
 
 Parsley is templating language used in a view to access content managed in Zesty.io.
 
