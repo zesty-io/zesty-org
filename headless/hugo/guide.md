@@ -1,6 +1,7 @@
 # Guide
 
-<<<<<<< HEAD
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+
 ## Getting Started
 
 First, we'll need to install [Hugo](https://gohugo.io).
@@ -73,7 +74,9 @@ Hugo provides support for front-matter, which `PullZesty` takes advantage of to 
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-As you can see in our [`index.html`](https://github.com/zesty-io/hugo-project/blob/master/layouts/_default/index.html) file, we simply load in the front-matter from the [`content/_index.md`](https://github.com/zesty-io/hugo-project/blob/master/content/_index.md) file. 
+As you can see in our [`index.html`](https://github.com/zesty-io/hugo-project/blob/master/layouts/_default/index.html) file, we simply load in the front-matter from the [`content/_index.md`](https://github.com/zesty-io/hugo-project/blob/master/content/_index.md) file.
 
 =======
->>>>>>> bbc9f7e6a46f9544d3d382a9f7faff77ae61b083
+
+> > > > > > > bbc9f7e6a46f9544d3d382a9f7faff77ae61b083
+

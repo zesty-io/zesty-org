@@ -4,9 +4,9 @@
 * [Website Engine](web/README.md)
 	* [Templating](web/view-templating/README.md)
   * [Head & Meta Tags](web/metatags/README.md)
-    * [Open Graph and Twitter Cards](web/metatags/open-graph-twitter-card-meta-tags.md)
+    * [Open Graph and Twitter](web/metatags/open-graph-twitter-card-meta-tags.md)
 * [Instant Content API](instant-content-api.md)
-* [Headless Integrations](headless/README.md)
+* [Headless Examples](headless/README.md)
   * [Node Package \(PullZesty\)](headless/pullzesty.md)
   * [React](headless/react/README.md)
     * [Guide \(Local React App\)](headless/react/guide-local-react-app.md)
@@ -20,3 +20,4 @@
   * [Hugo](headless/hugo/README.md)
     * [Guide](headless/hugo/guide.md)
 * [RFCs/Specs](specs.md)
+

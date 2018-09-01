@@ -1,8 +1,8 @@
-# Open Graph and Twitter Cards
+# Open Graph and Twitter
 
-## Open Graph and Twitter Cards Meta tags
+## Open Graph \(Facebook\) and Twitter Card Meta tags
 
-Open graph and Twitter Cards are auto generated in Zesty.io. This document will explain how, and how you can override them.
+Open graph and Twitter Cards are auto generated in Zesty.io. This document will explain how they load automatically and how you can override them.
 
 ## Automated tags
 
