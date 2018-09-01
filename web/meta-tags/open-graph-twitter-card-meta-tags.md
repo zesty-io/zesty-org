@@ -96,3 +96,4 @@ Images auto resize to work with a 1200 pixel width.
 <meta name="og:image" content="{og_image|[default_image:automated]}">
 <meta name="twitter:img:src" content="{tc_image|og_image|[default_image:automated]}">
 ```
+

@@ -1,10 +1,3 @@
----
-description: >-
-  Content Models in Zesty.io can be associated with a view. A view is a file
-  that loads whenever a content item is accessed through a browser by its unique
-  URL.
----
-
 # View Templating
 
 ## What are Views?

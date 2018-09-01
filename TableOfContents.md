@@ -1,13 +1,13 @@
 # Table of contents
 
 * [Zesty.io Developer Documentation](README.md)
-* [Getting Started](getting-started/README.md)
-* [Content Instance](content-instance/README.md)
-* [(Web)Site Engine](web/README.md)
+* [Getting Started](getting-started.md)
+* [Content Instance](content-instance.md)
+* [\[Web\]Site Engine](web/README.md)
   * [View Templating](web/view-templating.md)
   * [Meta Tags](web/meta-tags/README.md)
     * [Open Graph and Twitter Card Meta Tags](web/meta-tags/open-graph-twitter-card-meta-tags.md)
-* [Instant Content API](instant-content-api/README.md)
+* [Instant Content API](instant-content-api.md)
 * [Headless Examples](headless/README.md)
   * [Node Package \(PullZesty\)](headless/pullzesty.md)
   * [React](headless/react/README.md)
@@ -22,3 +22,4 @@
   * [Hugo](headless/hugo/README.md)
     * [Guide](headless/hugo/guide.md)
 * [RFCs/Specs](specs.md)
+

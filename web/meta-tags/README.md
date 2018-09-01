@@ -4,7 +4,7 @@ Meta tags are auto generated in Zesty.io, some may be overwritten by content fie
 
 ## Automated Meta tags
 
-#### Basic SEO Meta Tags
+### Basic SEO Meta Tags
 
 All content items with a view and URL route in Zesty.io will have a title, description, and keywords associated with them. The tags produced in the header that are affected by content items are:
 
@@ -14,7 +14,7 @@ All content items with a view and URL route in Zesty.io will have a title, descr
 <meta name="keywords" content="{seo_meta_keywords}">
 ```
 
-#### Default Environment Meta Tags
+### Default Environment Meta Tags
 
 These tags are always generated, and are not editable.
 
@@ -25,10 +25,7 @@ These tags are always generated, and are not editable.
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 ```
 
-#### Social Media Tags \(Twitter Card and Open Graph Meta Tags\)
+### Social Media Tags \(Twitter Card and Open Graph Meta Tags\)
 
 These tags are always auto-generated to help with sharing on social media platforms. The two social media tags automated are Open Graph \(Facebook\) and Twitter Cards \(Twitter\). The content of these tags are copied from the meta title and meta description tags.
 
-
-
-{% page-ref page="../open-graph-twitter-card-meta-tags.md" %}
