@@ -2,14 +2,14 @@
 description: >-
   A Zesty.io Cloud Content Instance is a collection of schema, web views, and
   APIs to create, manage, and distribute content to browsers, applications,
-  and/or IoT devices.
+  and/or IoT devices. 100% managed and automated.
 ---
 
 # Content Instance
 
-## What is a Content Instance Used For?
+## What is a Cloud Content Instance?
 
-Content Instances are used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc..
+Content Instances are implementations of Zesty.io used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc.. Content Instances are set to replace traditional content management systems. 
 
 ### What type of Content Can be Stored?
 
@@ -25,7 +25,7 @@ Websites are the most common vehicle for digital content consumption. That is wh
 
 To launch content in the past a developer would often setup open-source website software \(CMS\) or statically launch files onto a web server. This is a quick way to get a project off the ground, and if its an open-source CMS, the content can be edited right way. The primary issues with that setup is revolves around business needs and transportation of content.  
 
-* **Content is Siloed:** Lives on a database installed on a remote server tied to a single application.
+* **Content is Siloed:** Lives on a database installed on a remote server tied to a single application. This results in the same content living in multiple places that requires repeated updates to distribute the same content across multiple presentations.
 * **Software Decay:** Updates may not be possible after customization of the CMS.
 * **Flailing Security:** Maintenance is a necessary evil of open-source servers and software, a developer must stay on top of monthly, event daily changes to protect the installation.
 * **Growing Maintenance:** When multiple website are needed, multiple software and/or server installs are necessary. That increases the time it takes to stay on top of maintenance. 
