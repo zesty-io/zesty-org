@@ -54,11 +54,19 @@ The cost to run a Cloud Content Instance is may be quickly justified when compar
 
 ## Anatomy of a Content Instance
 
-Each Content Instance is comprised of a Content Schema, Media Bin, and an optional Website Engine. When created, an Instance is ready for any content configuration. Once configured, content can be imported or entered, at which point content is instantly available through a headless API or fully functional website.
+Each Content Instance is comprised of three main components: **Content Schema**, a **Media Bin**, and optional **Website Engine** functionality. When an Instance is created it is ready for any content configuration. Once configured, content items can be imported or entered, at which point content stored on the instance can be made available immediately through the Instant Content API \(headless\) or fully functional website \(Site Engine\). 
 
 ### Content Schema
 
+Content Schema is where the structure of how you store and access data is defined. There is no limit or rules in how simple or complicated the schema can be, what is important is that it matches your use case. Content Schema is comprised of **Content Models**, which are individual definitions of how to store content. One simple example of a content models is **Blog Articles**, which would have the fields title \[text\], article\_content \[wysiwyg\], and data\_created \[date\]. 
+
 ### Media Bin
 
-### Site Engine
+A Media Bin is an abstract folder system that store files in the cloud. Each Content Instance get a Media Bin attached to it. Any type of file may be uploaded to a Media Bin, examples include Images \(PNG, JPG, GIF\), Video \(MP4, OGG\), Typefaces, SVGs, YAML, Javascript, CSS, etc.. Executable files may not be uploaded to a media bin.
+
+### \[Web\]Site Engine
+
+The site engine is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines optimization.
+
+{% page-ref page="web/" %}
 
