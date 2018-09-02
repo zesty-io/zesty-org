@@ -52,3 +52,13 @@ Some CMS software solutions are free to get started, but as time passes hidden c
 The cost to run a Cloud Content Instance is may be quickly justified when comparing it to developer labor costs required to maintain self-installed custom solutions. 
 {% endhint %}
 
+## Anatomy of a Content Instance
+
+Each Content Instance is comprised of a Content Schema, Media Bin, and an optional Website Engine. When created, an Instance is ready for any content configuration. Once configured, content can be imported or entered, at which point content is instantly available through a headless API or fully functional website.
+
+### Content Schema
+
+### Media Bin
+
+### Site Engine
+
