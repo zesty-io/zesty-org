@@ -60,6 +60,8 @@ Each Content Instance is comprised of three main components: **Content Schema**,
 
 Content Schema is where the structure of how you store and access data is defined. There is no limit or rules in how simple or complicated the schema can be, what is important is that it matches your use case. Content Schema is comprised of **Content Models**, which are individual definitions of how to store content. One simple example of a content models is **Blog Articles**, which would have the fields title \[text\], article\_content \[wysiwyg\], and data\_created \[date\]. 
 
+Developers use to have to build databases and model tables, this included columns, IDs, relationships in order to capture data and edit data. A lot of times this was used to power websites. This was cumbersome and difficult. This is why CMS schemas exists, they are the UI abstraction over the database. As a user of Zesty.io, you simply provide a definition of your data model, and we handle all the underpinning to store your definitions and data efficiently. 
+
 ### Media Bin
 
 A Media Bin is an abstract folder system that store files in the cloud. Each Content Instance get a Media Bin attached to it. Any type of file may be uploaded to a Media Bin, examples include Images \(PNG, JPG, GIF\), Video \(MP4, OGG\), Typefaces, SVGs, YAML, Javascript, CSS, etc.. Executable files may not be uploaded to a media bin.
