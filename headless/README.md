@@ -1,10 +1,6 @@
 # Headless Examples
 
-## What is Zesty.io?
-
-Zesty.io is a **headless content management system** for managing your content across multiple platforms. Unlike other content management systems, Zesty.io is designed from the ground up to be customizable to your needs, meaning that you can pull content from Zesty.io and put it anywhere. Whether it's an iOS App, a menu board, or even a Raspberry Pi Application, anything that can connect to the internet can pull content from one place.
-
-### Principles of Headless Zesty.io
+## Principles of Headless Zesty.io
 
 Zesty.io provides many basic content apis to pull content from your site, allowing for easy access of your content. Additionally, Zesty.io allows you to create custom endpoints, allowing you to perform logic / more advanced queries when pulling data. These endpoints are the fundamental building blocks that define headless Zesty.io products — when put together, anything can be created.
 
