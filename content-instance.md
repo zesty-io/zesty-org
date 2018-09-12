@@ -62,11 +62,11 @@ Content Schema is where the structure of how you store and access data is define
 
 Developers use to have to build databases and model tables, this included columns, IDs, relationships in order to capture data and edit data. A lot of times this was used to power websites. This was cumbersome and difficult. This is why CMS schemas exists, they are the UI abstraction over the database. As a user of Zesty.io, you simply provide a definition of your data model, and we handle all the underpinning to store your definitions and data efficiently. 
 
-### Media Storage \(Micro DAM\)
+### Micro DAM \(Media Storage\)
 
-A Micro DAM \(digital asset manager\) is an abstract folder system that stores files in the cloud. Each Content Instance get a Media Bin attached to it. Any type of file may be uploaded to a Media Bin, examples include Images \(PNG, JPG, GIF\), PDFs, Video \(MP4, OGG\), Typefaces, SVGs, YAML, Javascript, CSS, etc.. Executable files may not be uploaded to a media bin.
+A Micro DAM \(digital asset manager\) is an abstract file system that stores files in the Zesty.io cloud. Every Content Instance is provisioned with a Micro DAM. Any type of file may be uploaded to a Micro DAM, examples include Images \(PNG, JPG, GIF\), PDFs, Video \(MP4, OGG\), Fonts \(OTF, WOFF, TTF\), SVGs, YAML, Javascript, CSS, etc..
 
-### \[Web\]Site Engine
+### Web Engine
 
 The [Web Engine](web/) is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines optimization.
 

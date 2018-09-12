@@ -3,7 +3,7 @@
 * [Zesty.io Developer Documentation](README.md)
 * [Getting Started](getting-started.md)
 * [Content Instances](content-instance.md)
-* [\[Web\]Site Engine](web/README.md)
+* [Web Engine](web/README.md)
   * [View Templating](web/view-templating.md)
   * [Meta Tags](web/meta-tags/README.md)
     * [Open Graph and Twitter Card Meta Tags](web/meta-tags/open-graph-twitter-card-meta-tags.md)

@@ -17,7 +17,7 @@ EcoSystems are used to connect and share content and media between designated gr
 
 ## EcoMedia \(Shared Media\)
 
-Zesty.io [Cloud Content Instances](content-instance.md) are launched with a Media Bin. EcoMedia allows Media Bins to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
+Zesty.io [Cloud Content Instances](content-instance.md) are launched with a Media Bin. EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
 
 The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder which the user can browse, access, and upload to.
 
