@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Zesty.io Content Platform Documentation](README.md)
-* [Getting Started](getting-started.md)
+* [Getting Started](README.md)
 * [Content Instances](content-instance.md)
 * [Web Engine](web/README.md)
   * [View Templating](web/view-templating.md)
