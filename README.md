@@ -44,7 +44,7 @@ The ability to repurpose content to work on multiple devices like phones, browse
 
 #### The Core Technology Behind Zesty.io
 
-Zesty.io is built on **Google Cloud Platform** and uses **Fastly** for edge caching. Core code of the system is built in **Golang** and **NodeJS**. User interfaces are built in React. Zesty.io was originally built in PHP with a custom mootools user interface.
+Zesty.io was born in the cloud. The primary infrastructure lives on **Google Cloud Platform** and uses **Fastly** for edge caching. Core code of the system is built in **Golang** and **NodeJS**. User interfaces are built in React. Zesty.io was originally built in PHP with a custom Mootools user interface.
 
 ## Developer Documentation
 
