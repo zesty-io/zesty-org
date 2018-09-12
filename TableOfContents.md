@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Getting Started](README.md)
+* [Getting Started with Zesty.io](README.md)
 * [Content Instances](content-instance.md)
 * [Web Engine](web/README.md)
   * [View Templating](web/view-templating.md)
