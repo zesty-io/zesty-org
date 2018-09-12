@@ -6,6 +6,15 @@ description: >-
 
 # EcoSystems
 
+## Zesty.io EcoSystems
+
+EcoSystems are used to connect and share content and media between designated groups of Content Instances. EcoSystems are an add on product in the Zesty.io Platform. Common uses include
+
+* Mass multisite installations 
+* Brands managing multiple instances
+* Information Intranets
+* Reseller/Partner Templates
+
 ## EcoMedia \(Shared Media\)
 
 Zesty.io [Cloud Content Instances](content-instance.md) are launched with a Media Bin. EcoMedia allows Media Bins to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
