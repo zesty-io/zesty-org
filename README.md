@@ -31,7 +31,7 @@ We started by delivered a product that can make quick, easy, but powerful web ex
 Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experience built outside of the Zesty.io system.
 {% endtab %}
 
-{% tab title="Deliver at Edge" %}
+{% tab title="Fast Delivery" %}
 Experience need to be delivered fast. Whether it is a JSON API call or a full website page loading, we make sure that all requests are cached at the edge to ensure your end-user is delivered a fast experience without thinking about load time or uptime.
 {% endtab %}
 
