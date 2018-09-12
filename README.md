@@ -29,6 +29,8 @@ We started by delivered a product that can make quick, easy, but powerful web ex
 
 {% tab title="Asset Sharing" %}
 Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experience built outside of the Zesty.io system.
+
+{% page-ref page="ecosystems.md" %}
 {% endtab %}
 
 {% tab title="Fast Delivery" %}
