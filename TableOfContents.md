@@ -31,6 +31,7 @@
     * [Guide](headless-cms/code-examples/jekyll/guide.md)
   * [Hugo](headless-cms/code-examples/hugo/README.md)
     * [Guide](headless-cms/code-examples/hugo/guide.md)
+* [Salesforce Commerce Cloud](headless-cms/salesforce-commerce-cloud.md)
 
 ## Community
 
