@@ -102,7 +102,7 @@ Next we need to modify all the page type content models created in the first ste
 
 ### Updating the XML with Parsley
 
-The final step is putting it all together. We need to modify the XML to dynamically generate based on the entries available in the Content Models. The new XML Should look something like this. 
+The next step is putting it all together in Zesty.io. We need to modify the XML to dynamically generate based on the entries available in the Content Models. The new XML Should look something like this. 
 
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
@@ -164,4 +164,8 @@ The final step is putting it all together. We need to modify the XML to dynamica
 
 Notice in this example, we are only generating a custom content experience based on one content model, called `Standard Pages`. Within the `custom-attribute` element we include the view file for this content model. The HTML markup for this custom element needs to be written on the `standard_pages` view file in order for it to be included in the XML. You will want to repeat the loop used for `standard_pages` in this example for each Content Model that generates a custom content experience.   
 
+
+### Importing into Commerce Cloud
+
+The final step is to prompt your Commerce Cloud account to crawl the Zesty.io XML endpoint from your instance. You will want to copy the endpoint URL and paste it into the content import field in Commerce Cloud and submit. This will prompt any new pages or folders to be created and any changes to existing content to be updated. 
 
