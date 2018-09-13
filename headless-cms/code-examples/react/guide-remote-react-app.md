@@ -1,5 +1,7 @@
 # Guide \(Remote React App\)
 
+Github repository for this Walkthrough Guide: [https://github.com/zesty-io/zesty-remote-react-example](https://github.com/zesty-io/Zesty-Remote-React-Example#zesty-remote-react-example)​
+
 ## Getting Started with the Example App
 
 Let's start by cloning [the example app](https://github.com/zesty-io/Zesty-Remote-React-Example)

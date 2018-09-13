@@ -1,23 +1,27 @@
 ---
 description: >-
   Zesty.io Cloud Content Instances can share code, media and data between each
-  other to create rich distributed systems. We describe how it works here.
+  other to create rich distributed systems.
 ---
 
 # EcoSystems
 
 ## Zesty.io EcoSystems
 
-EcoSystems are used to connect and share content and media between designated groups of Content Instances. EcoSystems are an add on product in the Zesty.io Platform. Common uses include
+EcoSystems are used to network together Content Instances. Once networked in an EcoSystem, Instances may share share content, code, and media. EcoSystems are an add on product in the Zesty.io Platform. 
+
+{% hint style="success" %}
+**Common Users for EcoSystems**
 
 * Mass multisite installations 
 * Brands managing multiple instances
 * Information Intranets
 * Reseller/Partner Templates
+{% endhint %}
 
 ## EcoMedia \(Shared Media\)
 
-Zesty.io [Cloud Content Instances](content-instance.md) are launched with a Media Bin. EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
+Zesty.io [Cloud Content Instances](../content-instance.md) are launched with a Media Bin. EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
 
 The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder which the user can browse, access, and upload to.
 

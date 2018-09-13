@@ -1,12 +1,12 @@
 ---
 title: Homepage
 description: >-
-  Zesty.org is the documentation hub for the Zesty.io CMS Platform. Learn the
+  Zesty.org is the knowledge base for the Zesty.io CMS Platform. Learn the
   intricacies of Zesty.io content technology and how to implement websites,
   headless cms apps, and marketing components.
 ---
 
-# Getting Started with Zesty.io
+# Getting Started
 
 ## What is Zesty.io?
 
@@ -14,23 +14,25 @@ Zesty.io is a cloud web content management system \(WCMS\) that is API driven wi
 
 #### What makes Zesty.io different?
 
-Zesty.io delivers the same experience as a traditional content management systems \(CMS\), but does much more as it is a cloud software service. We are constantly improving our technology, often daily, with updates that positively affect all users and experiences built on the platform.  
+We architected Zesty.io to meet the needs of any content usage such as a [traditional website](services/web-engine/) CMS, a [Headless CMS API](headless-cms/code-examples/) interface, a modern JamStack implementation, or a combination of solutions. This means Zesty.io can power content beyond websites into new digital mediums like smart devices, video game data, and mobile applications.  As a cloud service, we are constantly improving our technology, often daily, with updates that positively affect all users and experiences built on the platform. 
 
 {% tabs %}
 {% tab title="Easy CMS" %}
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with. 
+
+{% page-ref page="content-instance.md" %}
 {% endtab %}
 
 {% tab title="Web Presentations" %}
-We started by delivered a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](web/).
+We started by delivered a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
 
-{% page-ref page="web/" %}
+{% page-ref page="services/web-engine/" %}
 {% endtab %}
 
 {% tab title="Asset Sharing" %}
 Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experience built outside of the Zesty.io system.
 
-{% page-ref page="ecosystems.md" %}
+{% page-ref page="services/ecosystems.md" %}
 {% endtab %}
 
 {% tab title="Fast Delivery" %}
@@ -40,7 +42,7 @@ Experience need to be delivered fast. Whether it is a JSON API call or a full we
 {% tab title="Headless Applications" %}
 The ability to repurpose content to work on multiple devices like phones, browsers, and smart devices gives business' marketing teams and developers the upper hand with non-siloed content and short term experiences. 
 
-{% page-ref page="headless/" %}
+{% page-ref page="headless-cms/code-examples/" %}
 {% endtab %}
 {% endtabs %}
 
@@ -54,7 +56,7 @@ Start exploring documentation on the left or jump to a URL above to read experie
 
 * [Instances API](https://instances-api.zesty.org/)
 * [Accounts API](https://accounts-api.zesty.org/)
-* [Headless Zesty](headless/)
+* [Headless Zesty](headless-cms/code-examples/)
 
 ## About Zesty.io
 

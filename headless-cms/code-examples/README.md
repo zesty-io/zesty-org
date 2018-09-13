@@ -1,4 +1,4 @@
-# Headless Examples
+# Headless Code Examples
 
 ## Principles of Headless Zesty.io
 

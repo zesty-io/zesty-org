@@ -29,3 +29,5 @@ These tags are always generated, and are not editable.
 
 These tags are always auto-generated to help with sharing on social media platforms. The two social media tags automated are Open Graph \(Facebook\) and Twitter Cards \(Twitter\). The content of these tags are copied from the meta title and meta description tags.
 
+{% page-ref page="open-graph-twitter-card-meta-tags.md" %}
+

@@ -5,11 +5,11 @@ description: >-
   and/or IoT devices. 100% managed and automated.
 ---
 
-# Content Instances
+# Cloud Content Instance
 
 ## What is a Cloud Content Instance?
 
-Content Instances are implementations of Zesty.io used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc.. Content Instances are set to replace traditional content management systems. 
+The primary product of Zesty.io. Content Instances are implementations of Zesty.io used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc.. Content Instances are set to replace traditional content management systems. 
 
 ### What type of Content Can be Stored?
 
@@ -19,7 +19,7 @@ Alternate styles of content include internal intranet content \(Learning Managem
 
 ### Powering Multiple Digital Presentations
 
-Websites are the most common vehicle for digital content consumption. That is why we have the [Site Engine](web/) to quickly get search engine friendly websites off the ground from a content instance. As we progress further into our digital world, websites are not the only place digital content lives or is consumed. A content instance really thrives when its content powers multiple presentations simultaneously. The most common example is article \(content marketing\) content loading both on a website and a mobile app. The value of that is two-fold, the content owner gain search engine rich website content while also leveraging a mobile app to use push notification to their user base.
+Websites are the most common vehicle for digital content consumption. That is why we have the [Site Engine](services/web-engine/) to quickly get search engine friendly websites off the ground from a content instance. As we progress further into our digital world, websites are not the only place digital content lives or is consumed. A content instance really thrives when its content powers multiple presentations simultaneously. The most common example is article \(content marketing\) content loading both on a website and a mobile app. The value of that is two-fold, the content owner gain search engine rich website content while also leveraging a mobile app to use push notification to their user base.
 
 ### Cloud Content Instances vs. Open-Source Content Management Systems \(CMS\)
 
@@ -66,9 +66,11 @@ Developers use to have to build databases and model tables, this included column
 
 A Micro DAM \(digital asset manager\) is an abstract file system that stores files in the Zesty.io cloud. Every Content Instance is provisioned with a Micro DAM. Any type of file may be uploaded to a Micro DAM, examples include Images \(PNG, JPG, GIF\), PDFs, Video \(MP4, OGG\), Fonts \(OTF, WOFF, TTF\), SVGs, YAML, Javascript, CSS, etc..
 
+{% page-ref page="services/media-storage-micro-dam.md" %}
+
 ### Web Engine
 
-The [Web Engine](web/) is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines optimization.
+The [Web Engine](services/web-engine/) is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines optimization.
 
-{% page-ref page="web/" %}
+{% page-ref page="services/web-engine/" %}
 

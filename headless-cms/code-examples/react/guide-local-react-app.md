@@ -1,5 +1,7 @@
 # Guide \(Local React App\)
 
+Github repository for this Walkthrough Guide: [https://github.com/zesty-io/zesty-local-react-example](https://github.com/zesty-io/zesty-local-react-example)
+
 ## Getting Started with the Example App
 
 First, we'll need to install the `pull-zesty` package. \(For more detail,[ see the docs page ](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/pullzesty.md)on `pullzesty`\)
