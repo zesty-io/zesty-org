@@ -8,9 +8,9 @@ description: >-
 
 ### Building out the Content Experience
 
-The first step is to build out the HTML, Javascript and CSS for the content experience you want to serve from your Commerce Cloud website. You can do in any environment, including locally or within the Zesty.io instance. 
+The first step is to build out the HTML, Javascript and CSS for the content experience you want to serve from your Commerce Cloud website. You can do this in any environment, including locally or within your Zesty.io instance. 
 
-Once built, you want to configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with Parsley references. 
+Once built, configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with Parsley references. 
 
 ### Starting the XML {#starting-the-xml}
 
