@@ -23,14 +23,11 @@
   * [React](headless-cms/code-examples/react/README.md)
     * [Guide \(Local React App\)](headless-cms/code-examples/react/guide-local-react-app.md)
     * [Guide \(Remote React App\)](headless-cms/code-examples/react/guide-remote-react-app.md)
-  * [Ruby-Rails](headless-cms/code-examples/ruby-rails/README.md)
-    * [Ruby Build Guide](headless-cms/code-examples/ruby-rails/ruby-build-guide.md)
   * [Swift](headless-cms/code-examples/swift/README.md)
     * [iOS App Guide](headless-cms/code-examples/swift/ios-app-guide.md)
-  * [Jekyll](headless-cms/code-examples/jekyll/README.md)
-    * [Guide](headless-cms/code-examples/jekyll/guide.md)
-  * [Hugo](headless-cms/code-examples/hugo/README.md)
-    * [Guide](headless-cms/code-examples/hugo/guide.md)
+  * [React Ruby Build Guide](headless-cms/code-examples/ruby-build-guide.md)
+  * [Jekyll Static Site](headless-cms/code-examples/guide.md)
+  * [Hugo Static Site](headless-cms/code-examples/guide-1.md)
 * [Salesforce Commerce Cloud](headless-cms/salesforce-commerce-cloud.md)
 
 ## Community

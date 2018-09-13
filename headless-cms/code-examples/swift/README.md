@@ -18,3 +18,5 @@ This is a full-scale iOS App that completely integrates the ZestyBurger website 
 
 Github: [https://github.com/zesty-io/zestyburger-ios](https://github.com/zesty-io/zestyburger-ios)
 
+{% page-ref page="ios-app-guide.md" %}
+
