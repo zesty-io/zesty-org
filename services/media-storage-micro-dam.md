@@ -23,12 +23,12 @@ Once files are uploaded to the Micro DAM \(through the content manager or direct
 Files load to the client device \(mobile phone, desktop, game console etc.\) from the closest point-of-presence \(POP\) server they are located on. If the file is not located on a POP server, the POP server makes a request to Zesty.io \(the origin\) for the file. At that point Zesty.io transfers the file from Cloud Storage to the POP server, any request to that file will be loaded from the POP server there after. The file will remain "cached" on the POP server for a 24 hour. This whole cycle ensure for fast delivery while delivering fresh files.
 
 {% hint style="success" %}
-#### POPs are high-density servers with 24 TB of SSDs, 768 GB of RAM, and 4 x 25 Gigabit Ethernet. Delivery is sub-millisecond Time to First Byte \(TTFB\) on the 99th%.
+#### POPs are high-density servers with 24 TB of SSDs, 768 GB of RAM, and 4 x 25 Gigabit Ethernet. Delivery is sub-millisecond Time to First Byte \(TTFB\) on the 99th%.\*
 {% endhint %}
 
 #### This map shows all the Point of Presence \(POP\) servers across the World. 
 
-![Files are propagated to Fastly&apos;s \(our partner\) POP servers for optimal and fast delivery. ](../.gitbook/assets/pop-endpoints.png)
+![\* Files are propagated to Fastly&apos;s \(our partner\) POP servers for optimal and fast delivery. ](../.gitbook/assets/pop-endpoints.png)
 
 
 
