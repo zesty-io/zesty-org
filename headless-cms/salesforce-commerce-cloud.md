@@ -1,7 +1,7 @@
 ---
 description: >-
-  This uses a standardized XML output to generate a Custom content experience
-  served with Commerce Cloud loaded from Zesty.io.
+  This article uses a standardized XML output to generate a Custom content
+  experience served with Commerce Cloud loaded from Zesty.io.
 ---
 
 # Salesforce Commerce Cloud
