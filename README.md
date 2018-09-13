@@ -3,7 +3,7 @@ title: Homepage
 description: >-
   Zesty.org is the knowledge base for the Zesty.io CMS Platform. Learn the
   intricacies of Zesty.io content technology and how to implement websites,
-  headless cms apps, and marketing components.
+  headless CMS apps, and marketing components.
 ---
 
 # Getting Started
@@ -30,13 +30,13 @@ We started by delivered a product that can make quick, easy, but powerful web ex
 {% endtab %}
 
 {% tab title="Asset Sharing" %}
-Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experience built outside of the Zesty.io system.
+Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experiences built outside of the Zesty.io system.
 
 {% page-ref page="services/ecosystems.md" %}
 {% endtab %}
 
 {% tab title="Fast Delivery" %}
-Experience need to be delivered fast. Whether it is a JSON API call or a full website page loading, we make sure that all requests are cached at the edge to ensure your end-user is delivered a fast experience without thinking about load time or uptime.
+Experiences need to be delivered fast. Whether it is a JSON API call or a full website page loading, we make sure that all requests are cached at the edge to ensure your end user is delivered a fast experience without thinking about load time or uptime.
 {% endtab %}
 
 {% tab title="Headless Applications" %}
@@ -62,5 +62,5 @@ Start exploring documentation on the left or jump to a URL above to read experie
 
 Zesty.io was founded in 2010 by Randy Apuzzo and Andy Fleming in the basement of Randy's Little Italy loft in San Diego, California. Prior to that, Randy had been building custom websites and software for various businesses since 2004. Randy and Andy leveraged Randy's customer base to test and build different aspects of the platform out. In 2011, Andy left his full time job to work with Randy to build out Zesty.io, bootstrapped on the heels of their consulting work. 
 
-Zesty.io's unique configuration allowed it to power content on both ecommerce and informational based websites. The headless nature of Zesty.io enabled Randy and Andy to quickly transition customers from on Wordpress, Joomla, and Magento. To continue bootstrapping development of the software, they partnering with marketing agencies in San Diego, Sacramento, and Las Vegas. Their partners relationships helped fuel development of Zesty.io until 2014, when they raised capital from San Diego based technology angel investors. During the capital raise, Gerry Widmer joined the team and set the platform's focus on servicing mid-market and enterprise needs. Zesty.io has doubled in size and usage every year since.
+Zesty.io's unique configuration allowed it to power content on both e-commerce and informational websites. The headless nature of Zesty.io enabled Randy and Andy to quickly transition customers from Wordpress, Joomla, and Magento. To continue bootstrapping development of the software, they partnered with marketing agencies in San Diego, Sacramento, and Las Vegas. Their partners relationships helped fuel development of Zesty.io until 2014, when they raised capital from San Diego based technology angel investors. During the capital raise, Gerry Widmer joined the team and set the platform's focus on servicing mid-market and enterprise needs. Zesty.io has doubled in size and usage every year since.
 
