@@ -1,14 +1,15 @@
 ---
 description: >-
-  Zesty.io Cloud Content Instances can share code, media and data between each
-  other to create rich distributed systems.
+  Zesty.io Cloud Content Instances are networked through an EcoSystem, they can
+  share code, media and data between each other to create rich distributed
+  systems.
 ---
 
 # EcoSystems
 
 ## Zesty.io EcoSystems
 
-EcoSystems are used to network together Content Instances. Once networked in an EcoSystem, Instances may share share content, code, and media. EcoSystems are an add on product in the Zesty.io Platform. 
+EcoSystems are used to network together Content Instances. Once networked in an EcoSystem, Content Instances may share share content, code, and media. EcoSystems are an add-on product in the Zesty.io Platform.
 
 {% hint style="success" %}
 **Common Users for EcoSystems**
