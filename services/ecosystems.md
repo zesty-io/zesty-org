@@ -29,7 +29,7 @@ The EcoMedia experience blends seamlessly into the Content Manager user interfac
 {% hint style="success" %}
 **Ways to Use EcoMedia**
 
-* Shared branding Elements
+* Shared Branding Elements
 * Multi-site Shared Images
 {% endhint %}
 
