@@ -24,7 +24,7 @@ EcoSystems are used to network together Content Instances. Once networked in an 
 
 Zesty.io [Cloud Content Instances](../content-instance.md) are launched with a [Micro Dam](media-storage-micro-dam.md). EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
 
-The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder which the user can browse, access, and upload to.
+The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder to which the user can browse, access, and upload.
 
 {% hint style="success" %}
 **Ways to Use EcoMedia**
