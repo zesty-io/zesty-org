@@ -1,6 +1,6 @@
 # Meta Tags
 
-Meta tags are auto generated in Zesty.io, some may be overwritten by content fields. This document will explain which meta tags can be affected by the user, and which are hard written into the Zesty.io Website Engine.
+Meta tags are automatically generated in Zesty.io. Some may be overwritten by content fields. This document will explain which meta tags can be affected by the user, and which are hard written into the Zesty.io Website Engine.
 
 ## Automated Meta tags
 
