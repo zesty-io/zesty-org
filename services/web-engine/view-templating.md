@@ -8,9 +8,9 @@ All Views have a ZUID that starts with **11**, for example `11-123a2f0-qw2n4`
 
 Views can carry one of three associations
 
-1. **Content Model**  Content Model can be created with a view, when this happens Content Items of that Model get unique URLs. When a content model's item gets accessed by its URL, the [Zesty.io Site Engine](./) will render the view associated with it. When a view is associated with a content model, it has unique behaviors in the Zesty.io Manager Code Editor.
-2. Endpoint, created to load a specific MIME type
-3. Snippet
+1. **Content Model** _View_ Content Models can optionally be created with a view, when this occurs Content Items of that Model get unique URLs. When a content model's item gets accessed ~~by~~ its URL, the [Zesty.io Site Engine](./) will render the view associated with it. When a view is associated with a content model, it has unique behaviors in the Zesty.io Manager Code Editor. This views invoke the `{{this}}` Parsley call which gives direct access to the specific Content Item being rendered.
+2. **Endpoint** _View_ Views created to load a specific MIME type. Through Parsley they can have access to any data in an Instance, they can also have access to foreign instance data through [EcoCode](../ecosystems.md#ecocode-shared-view-templates).
+3. **Snippet** _View_ ****Code that is intended to be reused, like html component or common each loops, can stored in a snippet and be `{{include}}`'d in both Endpoint Views of Content Model Views.
 
 ## Zesty.io's Templating Language, Parsley
 
