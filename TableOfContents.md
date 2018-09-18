@@ -6,6 +6,7 @@
 ## Services
 
 * [Web Engine](services/web-engine/README.md)
+  * [Analytics](services/web-engine/analytics.md)
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Meta Tags](services/web-engine/meta-tags/README.md)
@@ -30,6 +31,8 @@
   * [Jekyll Static Site](headless-cms/code-examples/guide.md)
   * [Hugo Static Site](headless-cms/code-examples/guide-1.md)
 * [Salesforce Commerce Cloud](headless-cms/salesforce-commerce-cloud.md)
+* [Smart Devices](headless-cms/smart-devices/README.md)
+  * [Amazon Fire TV and Roku](headless-cms/smart-devices/amazon-fire-tv-and-roku.md)
 
 ## Community
 
