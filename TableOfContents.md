@@ -6,6 +6,7 @@
 ## Services
 
 * [Web Engine](services/web-engine/README.md)
+  * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Meta Tags](services/web-engine/meta-tags/README.md)
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
