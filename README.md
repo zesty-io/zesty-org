@@ -24,7 +24,7 @@ We see content as a blank canvas, and because of that, we made a system that all
 {% endtab %}
 
 {% tab title="Web Presentations" %}
-We started by delivered a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
+We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
 
 {% page-ref page="services/web-engine/" %}
 {% endtab %}
