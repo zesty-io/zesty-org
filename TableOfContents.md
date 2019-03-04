@@ -6,6 +6,7 @@
 ## Services
 
 * [Web Engine](services/web-engine/README.md)
+  * [CSS Processing Flow](services/web-engine/css-processing-flow.md)
   * [Analytics](services/web-engine/analytics.md)
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating.md)
