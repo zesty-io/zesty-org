@@ -10,7 +10,7 @@ description: >-
 
 The first step is to build out the HTML, Javascript and CSS for the content experience you want to serve from your Commerce Cloud website. You can do this in any environment, including locally or within your Zesty.io instance. 
 
-Once built, configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with [Parsley](../services/web-engine/view-templating/#zesty-ios-templating-language-parsley) references. 
+Once built, configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with [Parsley](../services/web-engine/view-templating.md#zesty-ios-templating-language-parsley) references. 
 
 ### Starting the XML <a id="starting-the-xml"></a>
 

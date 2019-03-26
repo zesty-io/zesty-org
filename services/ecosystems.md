@@ -35,7 +35,7 @@ The EcoMedia experience blends seamlessly into the Content Manager user interfac
 
 ## EcoCode \(Shared View Templates\)
 
-Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating/). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances](../content-instance.md) in the same EcoSystem. 
+Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating.md). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances](../content-instance.md) in the same EcoSystem. 
 
 {% hint style="success" %}
 **Ways to Use EcoCode**
