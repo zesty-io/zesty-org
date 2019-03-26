@@ -11,7 +11,7 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating/README.md)
     * [Parsley](services/web-engine/view-templating/introduction-to-parsley/README.md)
-      * [Each Loop Deep Dive](services/web-engine/view-templating/introduction-to-parsley/each-loop-deep-dive.md)
+      * [Each Loop](services/web-engine/view-templating/introduction-to-parsley/each-loop-deep-dive.md)
   * [Meta Tags](services/web-engine/meta-tags/README.md)
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
 * [Micro DAM \(Media Storage\)](services/media-storage-micro-dam.md)

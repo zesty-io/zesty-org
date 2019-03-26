@@ -1,6 +1,91 @@
-# Each Loop Deep Dive
+---
+description: Learn how to iterate through Headless and Group with View content models.
+---
+
+# Each Loop
 
 
+
+### Each Loop Basics
+
+Developers can iterate over a collection in Parsley using the `{{each}}` expression.
+
+#### Simple Iteration
+
+One of the most basic examples of iteration is looping over a Zesty.io data set. This example shows a list of product names being generated from a data set named Products.
+
+```text
+<ul class="product-list">  
+{{each products as product}}
+    <li class="product">{{product.name}}</li>
+{{end-each}}
+</ul>
+```
+
+#### Limit
+
+When iterating a collection you can limit the number of iterations with `limit`. This example shows how to retrieve only the 5 latest blog posts from a content set called Posts.
+
+```text
+{{each posts as post limit 5}}
+    <article>
+        <h1>{{post.title}}</h1>
+        <p>{{post.description}}</p>
+        <a hreft="{{truepath(post.zid)}}">Read More</a>
+    </article>
+{{end-each}}
+```
+
+#### Sorting
+
+You can sort your entries by a string or integer value in which case it will sort alphabetically ascending \(A-Z or 0-9\) which is coded as`asc`, by default. To sort in descending order you must specify descending \(Z-A or 9-0\) which is coded as`desc` .
+
+Example Code
+
+```text
+// Alphabetical Sort
+{{each members as member sort by member.name}}
+    <aside>
+        <h1>{{member.name}}</h1>
+        <p>{{member.bio}}</p>
+    </aside>
+{{end-each}}
+
+// Numerical Descending Sort
+{{each posts as post sort by post.date DESC}}
+    <a href="truepath({{post.zid}})">{{post.title}}</a>
+
+When sorting by multiple columns only the first sort parameter requires the dot notation. All other parameters can be comma separated values.
+
+// Sorting by Multiple Columns
+{{each set as var sort by var.field_1, field_2, field_3 desc}}
+{{end-each}}
+```
+
+#### Comparing similarity with `like`
+
+An each loop can use the comparison `like` to find similar items. The code below shows an example of the syntax being used to search through a content set called Events where the event's zip code that matches a get variable in the URL. For example if your URL is `http://mysite.com/location-search/?zip_search=92101` the `get_var` is named `zip_search` and its value is `92101`.
+
+```text
+{{each events as event where items.zip LIKE '{get_var.zip_search}%' }}    
+    {{event.title}}<br>{{event.zip}}
+{{end-each}}
+```
+
+#### Using `where` to your results
+
+The `where` statement in the each loop essentially helps you filter the data you're looking through to target the exact pieces of data that you're looking to return. The following example shows how to use a `where` statement to narrow down your results to a 3 month date range. The below code is looping through a content set called Events and looking for items where the event's date is greater than now at an interval of 3 months.
+
+```text
+{{each events as event WHERE items.date > DATE_ADD(NOW(),INTERVAL -3 MONTH) ORDER BY event.date ASC LIMIT 0,4}}
+
+    <h1>{{event.title}}</h1>
+    <p>{{event.date}}</p>
+
+{{end-each}}
+```
+
+### Advanced Techniques
 
 Let's take a look at specific each loop iterations.
 
