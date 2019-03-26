@@ -11,6 +11,7 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Parsley](services/web-engine/introduction-to-parsley/README.md)
+    * [Parsley Index](services/web-engine/introduction-to-parsley/parsley-index.md)
     * [Each Loop](services/web-engine/introduction-to-parsley/each-loop-deep-dive.md)
   * [Meta Tags](services/web-engine/meta-tags/README.md)
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
