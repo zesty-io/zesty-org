@@ -8,6 +8,12 @@ description: >-
 
 ### Overview
 
+A Parsley Standard call uses dot notation to access a specific piece of content stored in the Zesty.io Instance database.
+
+If we think of all the content entered into a Zesty.io instance as living on tables where each content set is a table, each field is a column, and each content entry is a row, then a standard Parsley call provides instructions for which table, which row, and which column to go to to grab a specific content item.
+
+For example, consider we have a Content Collection called `articles` with a field called `title`. Every time we add an article to this Collection, we add a Row to the table were the title of the article is stored in the `title` column. To access the title of the most recently added article we can use the parsley call `{{ articles.last().title }}` which is effectively describing the `table.row.column` where the content we want can be found. The table is the `articles` table, the row is the last row, and the column is the `title` column.
+
 One of the most common Parsley calls is `{{ page.field_name }}`. This call will use the content stored for the specified field for the current page. For example, we'll say I have a `homepage` collection which has a `welcome_title` field, and I store the content "Welcome to my website!" in that field. I can use this Parsley:
 
 ```text
