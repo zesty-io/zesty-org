@@ -1,5 +1,7 @@
 ---
-description: Learn how to iterate through Headless and Group with View content models.
+description: >-
+  Learn how to iterate through Headless and Group with View content models with
+  a Parsley Each Loop.
 ---
 
 # Each Loop
