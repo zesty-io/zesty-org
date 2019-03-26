@@ -11,6 +11,7 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Parsley](services/web-engine/introduction-to-parsley/README.md)
+    * [Parsley Site Functions](services/web-engine/introduction-to-parsley/parsley-site-functions.md)
     * [Parsley Page Call](services/web-engine/introduction-to-parsley/parsley-page-call.md)
     * [Parsley Index](services/web-engine/introduction-to-parsley/parsley-index.md)
     * [Each Loop](services/web-engine/introduction-to-parsley/each-loop-deep-dive.md)
