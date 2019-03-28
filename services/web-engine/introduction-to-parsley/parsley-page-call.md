@@ -4,7 +4,7 @@ description: >-
   current view.
 ---
 
-# Parsley Page Call
+# Page Call
 
 ### Overview
 

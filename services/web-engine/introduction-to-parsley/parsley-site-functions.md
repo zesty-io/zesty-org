@@ -2,7 +2,7 @@
 description: Learn how to use all of Parsley's site functions to access site variables.
 ---
 
-# Parsley Site Functions
+# Site Functions
 
 ### site.cdn
 
