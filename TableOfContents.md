@@ -11,7 +11,6 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [Integrations](services/web-engine/integrations/README.md)
     * [How to Connect to Airtable](services/web-engine/integrations/how-to-connect-to-airtable.md)
-    * [How to Set up Google Analytics](services/web-engine/integrations/how-to-set-up-google-analytics.md)
     * [HubSpot CRM Form Integration](services/web-engine/integrations/hubspot-crm-form-integration.md)
     * [Marketo: Custom Integration](services/web-engine/integrations/marketo-custom-integration.md)
     * [Marketo Realtime Personalization Integration \(RTP Tag\)](services/web-engine/integrations/marketo-realtime-personalization-integration-rtp-tag.md)
