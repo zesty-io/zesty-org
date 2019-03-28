@@ -12,7 +12,7 @@ Now in the Articles section, you can select a tag from the 'Article Tags' field.
 
 ![articleTag](https://wyp1jm.media.zestyio.com/screen-shot-2016-07-07-at-1-24-23-pm.png)
 
-The one-to-many relationship here works in that you can have many tags to one article. This is particular useful for organizing your content, or even doing creative things like looping through the tags to create a way to filter through articles by the tags themselves. For a guide to do just that, click [here](https://developer.zesty.io/guides/searching-through-tags/)
+The one-to-many relationship here works in that you can have many tags to one article. This is particular useful for organizing your content, or even doing creative things like looping through the tags to create a way to filter through articles by the tags themselves. For a guide to do just that, click [here](https://zesty.org/services/web-engine/guides/how-to-filter-by-tags)
 
 ### In Parsley:
 
