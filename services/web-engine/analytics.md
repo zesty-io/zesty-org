@@ -11,7 +11,7 @@ description: Zesty.io supports a range of analytics products.
 To setup Google Analytics for your cloud content instance, you will need to first sign up with Google and obtain an Urchin ID and Profile ID from them.  Once you have those, follow these steps:
 
 * Open the Manager
-* Click on the "Config" tab
+* Click on the "Schema" tab
 * Click on the "Site Settings" button
 * Click on the "Analytics" tab in the left hand menu
 * Set your Google Urchin ID

@@ -10,3 +10,7 @@ The 'From our Blog' section is pulling from blog.zesty.io's endpoint:
 
 We can fetch the blogs content, loop through and display it on our footer.
 
+{% embed url="https://gist.github.com/Slunk32/0a6db5b353ce7f7640a4976ae779ddca" %}
+
+
+
