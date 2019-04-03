@@ -10,6 +10,8 @@ As opposed to something like check boxes where you can select many options for o
 
 When you create a blog in Zesty.io a one-to-one relationship between an article and an author is created.
 
+{% embed url="https://gist.github.com/Slunk32/1b869aaa4aa485c5d9556dde9217a83f" %}
+
 #### relationship:
 
 This has to match the name of the data set/template set/page set. Once the name is the same, this will dynamically set the dropdown field with the name of authors.

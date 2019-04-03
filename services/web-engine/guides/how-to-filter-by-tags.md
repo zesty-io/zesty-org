@@ -22,9 +22,15 @@ Result:
 
 Now that we have our articles with tags constructed, we can start by creating buttons out of our tags. IMPORTANT: Be sure to set the value of the zid to each button as this is what will reference which tag is being called
 
+{% embed url="https://gist.github.com/Slunk32/c0b4ddf7568b39e61a0e8aab6ae2dfa8" %}
+
 You will also need to make a div for the results of your request.
 
-Now that you have your buttons, you need to create the Ajax HTML file that will be called on each button press. AJAX files are templates that we write JavaScript AJAX requests against and get an HTML response. We plan on posting the user entered search term to this file so we know the Parsley get\_var property will be available for us to fuzzy match against. Lets have the results of our search display the title and body of the article.
+{% embed url="https://gist.github.com/Slunk32/51ce8478f6611ceae1521364a7414185" %}
+
+Now that you have your buttons, you need to create the Ajax HTML file that will be called on each button press. AJAX files are templates that we write JavaScript AJAX requests against and get an HTML response. We plan on posting the user entered search term to this file so we know the Parsley get\_var property will be available for us to fuzzy match against. Let's have the results of our search display the title and body of the article.
 
 Lastly, we have to write the javascript to add the click event to the buttons. To do this, let's put it in script tags at the bottom of the article file.
+
+{% embed url="https://gist.github.com/Slunk32/7951aac722ca8f5e080cf96df88d2400" %}
 

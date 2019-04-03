@@ -18,6 +18,8 @@ The one-to-many relationship here works in that you can have many tags to one ar
 
 When you create a blog in zesty, the logic behind the tags is already set up. Lets take a look at how tags are connected to articles in Parsley:
 
+{% embed url="https://gist.github.com/Slunk32/4ea1c2033455c3dce273d383da5ada64" %}
+
 The above code creates the listing of tags in the article 'tag' page:
 
 ![tags](https://wyp1jm.media.zestyio.com/screen-shot-2016-07-07-at-5-34-30-pm.png)

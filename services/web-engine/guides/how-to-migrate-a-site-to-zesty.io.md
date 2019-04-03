@@ -5,7 +5,7 @@ description: >-
   site to Zesty.io.
 ---
 
-# How to migrate a site to Zesty.io
+# How to Migrate a Site to Zesty.io
 
 ## How to migrate a site to Zesty.io
 

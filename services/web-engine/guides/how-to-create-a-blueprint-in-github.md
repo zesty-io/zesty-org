@@ -1,4 +1,4 @@
-# How to create a blueprint in Github
+# How to Create a Blueprint in Github
 
 ### Getting Started
 

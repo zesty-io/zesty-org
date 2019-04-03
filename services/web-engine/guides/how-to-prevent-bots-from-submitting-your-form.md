@@ -4,7 +4,7 @@ description: >-
   implementing our honeypot feature.
 ---
 
-# How to prevent bots from submitting your form
+# How to Prevent Bots From Submitting Forms
 
 ### Overview
 
