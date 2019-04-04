@@ -39,9 +39,39 @@ function eraseCookie(name) {
 }
 ```
 
-### Step 2: Remove the GA \(analytics\) and GTM \(tag manager\) auto loading
+### Step 2a: Remove the GA \(analytics\) and GTM \(tag manager\) auto loading
 
 Remove all the GA and GTM script tags stuff from the `loader` view file in the editor and save it. If you are using Zesty.io GA auto loader, you need to delete the setting. You can delete the GA settings in config &gt; settings &gt; analytics.
+
+### Step 2b: Create an Analytics Loading Function
+
+We will want to setup a function to run Google Analytics, that way we can run it as a user accepts, and run it when we check the `trackMe` cookie.
+
+```javascript
+ function loadGoogleAnalytics(){
+    var UACODE = "UA-XXXXXXX-X";
+    var GTMCODE = "GTM-XXXXXXX";
+	// run GA tracking scripts
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', UACODE, 'auto');
+        ga('send', 'pageview');
+        
+        document.write('<script async src="https://www.googletagmanager.com/gtag/js?id='+UACODE+'"><\/script>');
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', UACODE);
+        
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',GTMCODE);
+        
+        document.write('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RKTZZ4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>');
+  }
+```
 
 ### Step 3: Create CSS/HTML popup for unrecognized visits.
 
@@ -62,8 +92,14 @@ if (getCookie('trackMe') == null) {
 ```javascript
 document.getElementById("myAcceptBtn").addEventListener(
     "click", 
-    setCookie('trackMe',true,356)
+    setCookieAndLoad()
 );
+
+// this function is set this way so we do not have to reload the page
+function setCookieAndLoad(){
+    setCookie('trackMe',true,356);
+    loadGoogleAnalytics();
+}
 
 document.getElementById("myRejectBtn").addEventListener(
     "click", 
@@ -73,10 +109,15 @@ document.getElementById("myRejectBtn").addEventListener(
 
 ### Step 5: Check the `trackMe` Cookie
 
+If the trackMe cookie is true, we will want to run the load
+
 ```javascript
 if (getCookie('trackMe') == true) {
-	// run GA tracking scripts
-	ga('send', 'pageview');	
+   loadGoogleAnalytics();
 } 
 ```
+
+### Testing Cookies
+
+Use Google Chrome and [download the EditThisCookie plugin](https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en).  Once installed, a cookie icon will appear on your toolbar. Use that to check if the `trackMe` cookie is there, you can also delete the cookie there.
 
