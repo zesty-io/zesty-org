@@ -11,6 +11,7 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [Glossary](services/web-engine/glossary.md)
   * [Guides](services/web-engine/guides/README.md)
+    * [Setting up Google Analytics for GDPR](services/web-engine/guides/setting-up-google-analytics-for-gdpr.md)
     * [How Webpages are Assembled](services/web-engine/guides/how-webpages-are-assembled.md)
     * [How do Instance or Blueprint LESS Variables Work](services/web-engine/guides/how-do-instance-or-blueprint-less-variables-work.md)
     * [How to Access Basic API JSON Endpoints](services/web-engine/guides/how-to-access-basic-api-json-endpoints.md)
