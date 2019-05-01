@@ -16,7 +16,7 @@ There are 3 steps to making your site accessible to the public.
 2. Configure your DNS
 3. Confirm that your domain is live
 
-### Setting a Custom Domains
+### Setting a Custom Domain in Zesty.io Accounts
 
 First, find the instance that you would like to send live, and click the green "Launch Instance" button. The instance's settings drawer will open and you'll be prompted to set your custom domain. Enter the custom domain name that you would like and click the gray "Save" button. The next step is to configure your DNS settings.
 
