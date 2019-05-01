@@ -16,37 +16,32 @@ There are 3 steps to making your site accessible to the public.
 2. Configure your DNS
 3. Confirm that your domain is live
 
-### Custom Domains
+### Setting a Custom Domains
 
 First, find the instance that you would like to send live, and click the green "Launch Instance" button. The instance's settings drawer will open and you'll be prompted to set your custom domain. Enter the custom domain name that you would like and click the gray "Save" button. The next step is to configure your DNS settings.
 
-### DNS
+### Configuring your Domain's DNS
 
 There are three values you will need to set, the record type, host, and value. Please note that there are many domain registrars that the following instructions are not one-size-fits-all. See the **Common DNS Registrars** section below for more information.
 
-**Record Type**
+#### Sending Apex domains live \(e.g. https://mydomain.com\)
 
-There are many types of DNS records you can create. We will be setting up an **A record**.
+To connect an apex domain to Zesty.io you need to set 4 `A Records`
 
-**Record Host**
+* A Record Name: `@` Value: `151.101.1.161`
+* A Record Name: `@` Value: `151.101.65.161`
+* A Record Name: `@` Value: `151.101.129.161`
+* A Record Name: `@` Value: `151.101.193.161`
 
-This is the domain name that you are setting up to be served by Zesty.io. The host value can also be a subdomain you want to route. Common examples are `www` and `ftp`.
+If you can only set one A Record, then use `151.101.1.161`
 
-_Host values that are_ `@` _characters mean it references the current domain you are setting up DNS for._
+#### Sending Subdomain Live \(e.g. https://www.mydomain.com or https://blog.mydomain.com\)
 
-**Record Value**
+To connected a subdomain to Zesty.io you need to set a single `CNAME Record`
 
-This value depends on the type of record you are setting up. Since we are creating an A record we will want to set it to the IP address of the Zesty.io servers: `130.211.21.25`.
+* CNAME Record Name: `www` Value: `zesty.map.fastly.net`
 
-_A records always point to IP addresses._
-
-#### Advanced DNS
-
-**CNAME**
-
-CNAME records, short for Canonical Name record, is how one domain is an alias for a different domain.
-
-When you're configuring your DNS to use a CNAME record to route requests to your Zesty.io hosted instance use the value: `sites2.zesty.zone`
+The Record name: `www` in that example is swapped out with any subdomain like `blog` or `shop` to get `shop.mydomain.com`, or even `blog.shop` to get `blog.shop.mydomain.com`
 
 #### Verify your instance is live
 
