@@ -5,8 +5,8 @@
 
 ## Services
 
-* [Content Schema](services/content-modeling/README.md)
-  * [Locales / Multi-Lang Content](services/content-modeling/multi-locale-multi-lang-content-i18n.md)
+* [Content Schema](services/content/README.md)
+  * [Locales / Multi-Lang Content](services/content/multi-locale-multi-lang-content-i18n.md)
 * [Web Engine](services/web-engine/README.md)
   * [CSS Processing Flow](services/web-engine/css-processing-flow.md)
   * [Analytics](services/web-engine/analytics.md)
