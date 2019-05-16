@@ -338,6 +338,71 @@ Cake successfully retrieved.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+## Updating a Head Tag
+
+To get a head tag ZUID, call the get endpoint to see all the head tags and their ZUIDs. 
+
+{% api-method method="put" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" %}
+{% api-method-summary %}
+Put Head Tag
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Put updates the head tag in Web Engine immediately. A cache refresh in Web Engine is needed to see an update. Put will replace all attributes with the attributes you pass.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":headTagZUID" type="string" required=true %}
+use the Get All Head Tags call to find the ZUID of the tag you wish to delete.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXXXX \(user session token\)
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="raw" type="string" required=false %}
+{  
+  "type": "meta",  
+  "sort" : 2,  
+  "attributes" : {  
+     "name" : "description",  
+     "content" : " hello world"  
+  }  
+ }
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
 ## Deleting a Head Tag
 
 {% api-method method="delete" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" %}
