@@ -31,10 +31,7 @@ Post a Request with a raw JSON body. The JSON body requires 3 fields type \(meta
   
 This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear.  
   
-When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID  
-  
-  
- of the content model.
+When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID of the content model.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -74,7 +71,7 @@ Bearer XXXXXX \(APP\_SID Token\)
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Working with Meta Tags
+## Working with Meta Tags
 
 Meta tags are for search engines, social media, browser compatibilities, viewport info, etc. "Meta" tags are essentially became a catch all for all sorts of configuration information. Zesty.io has no restriction on what type of meta tags you can add. Zesty.io also auto generates meta tags for social sharing and search engines based on your content, [learn more about that here.](./#automated-meta-tags)
 
@@ -241,6 +238,37 @@ Title tags are linear, and offer one type. Title tags only accept one key value 
 	"type": "title",
 	"attributes": {
 		"value": "My Page Title"
+	},
+	"sort": 1,
+	"resourceZUID": "7-XyZ-Xyz"
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+## Working with Style Head Tags
+
+Style tags are linear, and offer one type and way to use them. Style tags only accept one key value attribute "value".
+
+**Example Head Output**
+
+```markup
+<style>
+    body {
+        background: orange;
+    }
+</style>
+```
+
+**Example Post Body to create a style tag with the Rest API**
+
+{% code-tabs %}
+{% code-tabs-item title="API Post body example for a creating a Title Tag" %}
+```markup
+{
+	"type": "style",
+	"attributes": {
+		"value": " body { background: orange;} "
 	},
 	"sort": 1,
 	"resourceZUID": "7-XyZ-Xyz"
