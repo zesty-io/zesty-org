@@ -1,4 +1,4 @@
-# Meta Tags
+# Head & Meta Tags
 
 Meta tags are automatically generated in Zesty.io. Some may be overwritten by content fields. This document will explain which meta tags can be affected by the user, and which are hard written into the Zesty.io Website Engine.
 
