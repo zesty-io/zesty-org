@@ -26,15 +26,17 @@ To access ICA, you make a call to your preview URL or live domain, for example: 
 
 The hash you see is a ZUID. ZUIDs are used to represent every type of resource in Zesty.io. You can find the ZUID of a resource in a few ways through the Zesty.io Content Manager. When editing content, you will see the ZUID \(items start with 7-\) of that content in the URL of the page you are editing. You can access model ZUIDS \(models start with 6-\) by looking in the schema \(previously config\) tab.
 
-When you visit the BAC URL you see a JSON object of the data associated with the resource you are requesting along with meta data, version information, image objects, and related resources objects.
-
-* TODO - ADD SCREENSHOTS SHOWING WHERE API ENDPOINT URLS ARE SHOWN IN THE MANAGER
-  * do this through github
-* TODO - ADD EXAMPLE JSON RESPONSE
+When you visit the ICA URL you see a JSON object of the data associated with the resource you are requesting along with meta data, version information, image objects, and related resources objects.
 
 ## Security
 
-ICA is optional and has to be turned on to gain access to it. Options to control Cross Origin Resource Sharing can be used to lock the API down to specific websites. A header request with a private token can be set to secure external programmatic application calls.
+ICA is optional and has to be turned on to gain access to it. Options to control Cross Origin Resource Sharing can be used to lock the API down to specific websites. A header request with a private token can be set to secure external programmatic application calls. That key is set by the user by editing the developer setting.
+
+Example Header \(Optional if setting is set\)
+
+```text
+Authorization: Bearer XXXXX
+```
 
 ## JSON Format
 
