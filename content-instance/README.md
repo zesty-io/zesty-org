@@ -19,7 +19,7 @@ Alternate styles of content include internal intranet content \(Learning Managem
 
 ### Powering Multiple Digital Presentations
 
-Websites are the most common vehicle for digital content consumption. That is why we have the [Site Engine](services/web-engine/) to quickly get search engine friendly websites off the ground from a content instance. As we progress further into our digital world, websites are not the only place digital content lives or is consumed. A content instance really thrives when its content powers multiple presentations simultaneously. The most common example is article \(content marketing\) content loading both on a website and a mobile app. The value of that is two-fold: the content owner gain search engine rich website content while also leveraging a mobile app to use push notification to their user base.
+Websites are the most common vehicle for digital content consumption. That is why we have the [Site Engine](../services/web-engine/) to quickly get search engine friendly websites off the ground from a content instance. As we progress further into our digital world, websites are not the only place digital content lives or is consumed. A content instance really thrives when its content powers multiple presentations simultaneously. The most common example is article \(content marketing\) content loading both on a website and a mobile app. The value of that is two-fold: the content owner gain search engine rich website content while also leveraging a mobile app to use push notification to their user base.
 
 ### Cloud Content Instances vs. Open-Source Content Management Systems \(CMS\)
 
@@ -66,11 +66,11 @@ In legacy systems and even most modern systems, developers have to build databas
 
 A Micro DAM \(digital asset manager\) is an abstract file system that stores files in the Zesty.io cloud. Every Content Instance is provisioned with a Micro DAM. Any type of file may be uploaded to a Micro DAM, examples include Images \(PNG, JPG, GIF\), PDFs, Video \(MP4, OGG\), Fonts \(OTF, WOFF, TTF\), SVGs, YAML, Javascript, CSS, etc.
 
-{% page-ref page="services/media-storage-micro-dam.md" %}
+{% page-ref page="../services/media-storage-micro-dam.md" %}
 
 ### Web Engine
 
-The [Web Engine](services/web-engine/) is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines.
+The [Web Engine](../services/web-engine/) is a fully managed and cloud hosted website serving platform. It includes a templating language to access the Content Schema on an instance between HTML markup. It enables developers to quick launch scalable websites without needing to optimize it for page load time or search engines.
 
-{% page-ref page="services/web-engine/" %}
+{% page-ref page="../services/web-engine/" %}
 

@@ -20,7 +20,7 @@ We architected Zesty.io to meet the needs of any content usage such as a [tradit
 {% tab title="Easy CMS" %}
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with. 
 
-{% page-ref page="content-instance.md" %}
+{% page-ref page="content-instance/" %}
 {% endtab %}
 
 {% tab title="Web Presentations" %}

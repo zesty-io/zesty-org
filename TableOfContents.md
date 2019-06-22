@@ -1,7 +1,8 @@
 # Table of contents
 
 * [Getting Started](README.md)
-* [Cloud Content Instance](content-instance.md)
+* [Cloud Content Instance](content-instance/README.md)
+  * [Environments & Publishing](content-instance/environments-and-publishing.md)
 
 ## Services
 
@@ -107,7 +108,7 @@
 
 * [Instant Content API](apis/instant-content-api.md)
 
-## Headless
+## Headless <a id="headless-cms"></a>
 
 * [Node Package \(PullZesty\)](headless-cms/pullzesty.md)
 * [Headless Code Examples](headless-cms/code-examples/README.md)
