@@ -6,23 +6,60 @@ description: >-
 
 # How to Launch an Instance
 
+### Overview
+
+There are 4 steps to making your site accessible to the public.
+
+1. Configure your HTTPS and WWW settings
+2. Set a custom domain
+3. Configure your DNS
+4. Confirm that your domain is live
+
 ### **Before you begin** 
 
-Before beginning the process to send your site live ensure that all content sets and code that you want to be made available to the public are published and/or listed accordingly.
+Before beginning the process to send your site live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
 
-There are 3 steps to making your site accessible to the public.
+###  1. Configure HTTPS & WWW Settings
 
-1. Set a custom domain
-2. Configure your DNS
-3. Confirm that your domain is live
+If necessary configure your HTTPS and WWW settings before launching your site. Disregard this step if your site will not be using HTTPS or plan to force prepending your domain with WWW you can move on to step 2, otherwise continue reading for instructions on accessing these settings.
 
-### Setting a Custom Domain in Zesty.io Accounts
+Open the Content Manager interface and navigate to the Schema section and then the Instance Settings subsection. Under General you'll find your HTTPS and WWW site settings. 
 
-First, find the instance that you would like to send live, and click the green "Launch Instance" button. The instance's settings drawer will open and you'll be prompted to set your custom domain. Enter the custom domain name that you would like and click the gray "Save" button. The next step is to configure your DNS settings.
+![HTTPS and WWW instance settings are outlined in the orange box.](../../../.gitbook/assets/01-https-www-settings.png)
 
-### Configuring your Domain's DNS
+Above you can see these settings outlined in orange. The tooltips will help you navigate this area and give you information about the setting. 
 
-There are three values you will need to set, the record type, host, and value. Please note that there are many domain registrars that the following instructions are not one-size-fits-all. See the **Common DNS Registrars** section below for more information.
+If you want to always redirect to HTTPS then the HTTPS on? setting must be turned on. To turn this setting on click the "HTTPS on?" button and it will turn green. 
+
+If you'd like to force prepending your domain with WWW then click the "Always prepend WWW to my domain?" button.
+
+Save your settings before starting the next step.
+
+### 2. Choose An Instance to Launch
+
+In the Accounts Manager interface locate the instance that you would like to send live and then click that instance's green "Launch Instance" button. 
+
+![To begin launching your instance click on the &quot;Launch Instance&quot; button shown here outlined in orange.](../../../.gitbook/assets/02-launch-button.png)
+
+After you click the "Launch Instance" button the instance's setting drawer will open and prompt you to set the domain name and configure your DNS settings. 
+
+![Instance Settings drawer prompts for sending your instance live.](../../../.gitbook/assets/03-instance-settings-drawer.png)
+
+### 2. Set a Custom Domain Name
+
+Enter your custom domain name in the textbox and click Save.
+
+![Enter your custom domain name in the textbox and clicking Save.](../../../.gitbook/assets/02-add-your-custom-domain-name.png)
+
+### 3. Configure you Domain's DNS Settings
+
+Configure your domain's DNS settings by following the instructions in the settings drawer. 
+
+**Please note** that domain registrars are not one-size-fits-all so all instructions may not be applicable. See the **Common DNS Registrars** section below for more information.
+
+![Configure your DNS settings with these instructions in the Instance Settings drawer.](../../../.gitbook/assets/05-update-dns.png)
+
+There are three values you will need to set, the record type, host, and value. 
 
 #### Sending Apex domains live \(e.g. https://mydomain.com\)
 

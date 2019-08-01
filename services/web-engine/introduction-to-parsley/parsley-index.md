@@ -291,6 +291,11 @@ The `getMediaURL()` call returns the original URL to that file. This is how to a
 // <a href="https://domain.com/file.pdf" >Download</a>
 ```
 
+```text
+// If looping through an image field with multiple images use this call
+{{ my-var.image.getmediaurl() }}
+```
+
 ### getNextURL\(number\)
 
 The `getNextURL()` call returns the current page url with a query parameter `p` increased by the number specified. If there is no query parameter `p`, it will set it equal to the number specified. If no number is provided, the default is 5. This can be used with `get_var.p` to do pagination with an each loop.
