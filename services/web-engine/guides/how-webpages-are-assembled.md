@@ -92,5 +92,5 @@ Now that each of the individual pieces have been created and dynamic elements ha
 
 #### A note on caching.
 
-For Zesty.io websites with full caching enabled, this whole process does not happen every time your site is visited. It happens once, and is provided to our global content delivery network \(CDN\) as a static file, and isn't compiled again until there is an update to the instance in Zesty.io.
+For Zesty.io websites with full caching enabled, this whole process does not happen every time your site is visited. It happens once, and is provided to our global content delivery network \(CDN\) as a static file, and isn't compiled again until there is an a publish event on the instance or 24 hours pass from when it was first cached.
 
