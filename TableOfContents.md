@@ -110,7 +110,9 @@
 
 ## Headless <a id="headless-cms"></a>
 
-* [Node Package \(PullZesty\)](headless-cms/pullzesty.md)
+* [Node.js](headless-cms/node.js/README.md)
+  * [Zesty.io Node API Wrapper](headless-cms/node.js/zesty.io-node-api-wrapper.md)
+  * [Node Package \(PullZesty\)](headless-cms/node.js/pullzesty.md)
 * [Headless Code Examples](headless-cms/code-examples/README.md)
   * [React](headless-cms/code-examples/react/README.md)
     * [Guide \(Local React App\)](headless-cms/code-examples/react/guide-local-react-app.md)

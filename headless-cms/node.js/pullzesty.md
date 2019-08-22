@@ -154,5 +154,5 @@ The arrays field takes in `pagegroup` type pages, and `pullzesty` creates a mark
 
 This field takes in three fields, `items` and `arrays` \(like contentZuids\), but also takes in `custom`. Items and Arrays refer to `templateset`/ single type pages and `pagegroup` type pages respectively \(just like in `contentZuids`\), but `custom` is a bit different. `Custom` can take in any custom endpoint that you've created \(for more information on how to create a custom endpoint, see [the docs at developer.zesty.io](https://developer.zesty.io/docs/code-editor/customizable-json-endpoints-for-content/). To get the endpoint url, simply find the `Data-Endpoint` field in the Code Bank inside the editor.
 
-![Finding the Data Endpoint Field](../.gitbook/assets/findingthedataendpointfield.png)
+![Finding the Data Endpoint Field](../../.gitbook/assets/findingthedataendpointfield.png)
 
