@@ -1,6 +1,10 @@
 # Accounts REST API
 
-API used to control management of users, roles, instances, and teams.
+API used to control management of users, roles, instances, and teams. 
+
+{% hint style="warning" %}
+Accounts-API requires Authentication, examples to authenticate can be found in wrapper documentation.
+{% endhint %}
 
 ### Documentation
 
