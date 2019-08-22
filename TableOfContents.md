@@ -3,6 +3,7 @@
 * [Getting Started](README.md)
 * [Cloud Content Instance](content-instance/README.md)
   * [Environments & Publishing](content-instance/environments-and-publishing.md)
+  * [Roles & Permissions](content-instance/roles-and-permissions.md)
 
 ## Services
 
