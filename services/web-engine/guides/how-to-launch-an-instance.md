@@ -58,7 +58,7 @@ Configure your domain's DNS settings by following the instructions in the settin
 ![DNS instructions in the Instance Settings drawer.](../../../.gitbook/assets/screen-shot-2019-08-30-at-12.44.24-pm.png)
 
 {% hint style="info" %}
-**Please note** that domain registrars are not one-size-fits-all so each step may not be applicable. See the **Common DNS Registrars** section below for more information.
+**Please note** that domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/services/web-engine/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
 {% endhint %}
 
 There will be 2 records to set up: an apex record \(e.g. example.com\) and a WWW record \(e.g. www.example.com\). Three values are required to set these `CNAME` records: record type, host \(or name\), and value. 
