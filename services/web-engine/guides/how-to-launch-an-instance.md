@@ -118,22 +118,3 @@ Since there are many places to purchase domains it's difficult to create all-inc
 {% endtab %}
 {% endtabs %}
 
-
-
-### Setting up A Records
-
-{% hint style="danger" %}
-**Set up A records only if required.** Extraneous DNS records can affect service. 
-{% endhint %}
-
-To connect an apex domain to Zesty.io you need to set 4 `A Records`
-
-* A Record Name: `@` Value: `151.101.1.161`
-* A Record Name: `@` Value: `151.101.65.161`
-* A Record Name: `@` Value: `151.101.129.161`
-* A Record Name: `@` Value: `151.101.193.161`
-
-If you can only set one A Record, then use `151.101.1.161`
-
-### 
-
