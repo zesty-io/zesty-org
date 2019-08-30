@@ -55,25 +55,35 @@ Enter your custom domain name in the textbox and click Save.
 
 Configure your domain's DNS settings by following the instructions in the settings drawer. 
 
-![DNS instructions in the Instance Settings drawer.](../../../.gitbook/assets/screen-shot-2019-08-30-at-12.44.24-pm.png)
+![DNS instructions in the Instance Settings drawer.](../../../.gitbook/assets/zesty-dns-settings.png)
 
 {% hint style="info" %}
 **Please note** that domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/services/web-engine/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
 {% endhint %}
 
-There will be 2 records to set up: an apex record \(e.g. example.com\) and a WWW record \(e.g. www.example.com\). Three values are required to set these `CNAME` records: record type, host \(or name\), and value. 
+There will be 2 records to set up: an apex record \(e.g. example.com\) and a WWW record \(e.g. www.example.com\). Three values are required to set these records: record type, host \(or name\), and value. 
 
-Set the apex record with the following values: 
+#### Apex Record
 
-1. Record type: `CNAME`
-2. host: `@`
-3. value: `zesty.map.fastly.net`
+Create or set an existing apex record with the following values: 
 
-Set the WWW record with the following values:
+1. Record type: `A`
+2. Host: `@`
+3. Values (*Create a separate A record for each of these IP addresses*):
+   1.  `151.101.1.161`
+   2.  `151.101.65.161`
+   3.  `151.101.129.161`
+   4.  `151.101.193.161`
+
+#### WWW Record
+Create or set an existing WWW record with the following values:
 
 1. Record type: `CNAME`
 2. host: `WWW`
 3. value: `zesty.map.fastly.net`
+
+[*Why can't I use a CNAME for my apex record?*](https://www.isc.org/blogs/cname-at-the-apex-of-a-zone/)
+
 
 ### 4. Verify your instance is live
 
