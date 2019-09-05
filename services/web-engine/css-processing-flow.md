@@ -51,6 +51,8 @@ If a file is given the name ie8.css, it will be ignored by the minification proc
 Zesty.io auto appends stylesheets to specific templates \(mostly legacy\). If you experience added CSS and it is a problem please reach out to support on the Zesty.io developer slack channel. Support engineers can remove the base CSS files.  
 
 
+### Managing Stylesheets Using the API
+
 {% api-method method="post" host="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/" %}
 {% api-method-summary %}
 Create Stylesheet
