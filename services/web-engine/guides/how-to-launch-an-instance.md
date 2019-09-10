@@ -61,6 +61,10 @@ Configure your domain's DNS settings by following the instructions in the settin
 **Please note** that domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/services/web-engine/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
 {% endhint %}
 
+{% hint style="warning" %}
+**Cloud Flare Users**: When setting DNS records in Cloud Flare, be sure to have the orange cloud off on each record. Zesty.io cannot affectively manage the cache if Cloud Flare is attempting to manage its own cache for you.
+{% endhint %}
+
 There will be 2 records to set up: an apex record \(e.g. example.com\) and a WWW record \(e.g. www.example.com\). Three values are required to set these records: record type, host \(or name\), and value.
 
 ### Apex Record
