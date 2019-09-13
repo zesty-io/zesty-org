@@ -4,6 +4,7 @@
 * [Cloud Content Instance](content-instance/README.md)
   * [Environments & Publishing](content-instance/environments-and-publishing.md)
   * [Roles & Permissions](content-instance/roles-and-permissions.md)
+  * [Publishing All Content](content-instance/publishing-all-content.md)
 
 ## Services
 
