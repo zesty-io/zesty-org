@@ -115,9 +115,6 @@
 
 ## Headless <a id="headless-cms"></a>
 
-* [Node.js](headless-cms/node.js/README.md)
-  * [Zesty.io Node API Wrapper](headless-cms/node.js/zesty.io-node-api-wrapper.md)
-  * [Node Package \(PullZesty\)](headless-cms/node.js/pullzesty.md)
 * [Headless Code Examples](headless-cms/code-examples/README.md)
   * [React](headless-cms/code-examples/react/README.md)
     * [Guide \(Local React App\)](headless-cms/code-examples/react/guide-local-react-app.md)
@@ -127,6 +124,9 @@
   * [React Ruby Build Guide](headless-cms/code-examples/ruby-build-guide.md)
   * [Jekyll Static Site](headless-cms/code-examples/guide.md)
   * [Hugo Static Site](headless-cms/code-examples/guide-1.md)
+* [Node.js](headless-cms/node.js/README.md)
+  * [Zesty.io Node API Wrapper](headless-cms/node.js/zesty.io-node-api-wrapper.md)
+  * [Node Package \(PullZesty\)](headless-cms/node.js/pullzesty.md)
 * [Salesforce Commerce Cloud](headless-cms/salesforce-commerce-cloud.md)
 * [Smart Devices](headless-cms/smart-devices/README.md)
   * [Amazon Fire TV and Roku](headless-cms/smart-devices/amazon-fire-tv-and-roku.md)

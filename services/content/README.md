@@ -39,21 +39,21 @@ Fields can control what type of data is stored, for example, text or number, The
 
 |  Type | Description |
 | :--- | :--- |
-| text | simple text, limit 256 characters |
-| textarea | simple text, can contain HTML, 256 characters, produces a larger input area |
-| wysiwyg | What You See is What You Get \(wysiwyg\), is a rich editor that provides t e user with tools to format text with titles, bolding, italics, links, video embeds etc. |
+| text | Simple text, limit 160 characters |
+| textarea | Simple text, can contain HTML, limit 1000 characters, produces a larger input area |
+| wysiwyg | What You See is What You Get \(wysiwyg\) is a rich editor that provides the user with tools to format text with titles, bolding, italics, links, Instagram embeds, video embeds, etc. |
 | markdown | A text editing area that supports the [markdown format](https://www.markdownguide.org/basic-syntax/) |
-| number | a numeric character 0-9999999999 |
-| currency | a float style number 99.99 |
-| sort | a numeric character -9999999 - 9999999 |
-| image | a field that stores an image reference Zesty.io Micro DAM |
-| files | a field that stores a file reference from Zesty.io Micro DAM |
-| link | accepts a full URL |
-| internal\_link | accepts a ZUID to a content item |
-| datetime | accepts a date in the format YYYY-MM-DD HH:mm:SS  |
-| date | accepts a date in the format YYYY-MM-DD |
-| yes\_no | a boolean field that can have custom labels on a toggle |
-| dropdown | creates a pre-populated dropdown controlled by the user generated options |
+| number | A numeric character 0-9999999999 |
+| currency | A float style number i.e. 99.99 |
+| sort | A numeric character -9999999 - 9999999 |
+| image | A field that stores an image reference Zesty.io Micro DAM |
+| files | A field that stores a file reference from Zesty.io Micro DAM |
+| link | Accepts a full URL |
+| internal\_link | Accepts a ZUID to a content item |
+| datetime | Accepts a date in the format YYYY-MM-DD HH:mm:SS  |
+| date | Accepts a date in the format YYYY-MM-DD |
+| yes\_no | A boolean field that can have custom labels on a toggle |
+| dropdown | Creates a pre-populated dropdown controlled by the user generated options |
 | one\_to\_one | One to one relationship to another content model's content item \(requires relationship field on creation\) |
 | one\_to\_many | One to many Relationship to another content model's content item. \(requires relationship field on creation\) |
 
