@@ -611,6 +611,14 @@ The `site` call returns data specific to the instance, such as the CDN URL and t
 {{ site.cdn }}
 ```
 
+### site.env
+
+The `site.env` call returns `live` for published content and views, and `dev` for versioned preview views and content. 
+
+```text
+{{ site.env }}
+```
+
 ### site.date\(\)
 
 The `site.date()` call returns the current date time and accepts arguments to modify the date based on the PHP data-time. More information available at [http://php.net/manual/en/function.date.php](http://php.net/manual/en/function.date.php)
