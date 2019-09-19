@@ -29,7 +29,7 @@ Head Tag Creation
 {% api-method-description %}
 Post a Request with a raw JSON body. The JSON body requires 3 fields type \(meta\|link\|script\|style\|title\), attributes \(key value object\), and sortOder \(integer\). JSON body example given to create meta tag. More specific ones are available under each tag type.  
   
-This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear.  
+This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear. Head tags will load by sort order ascending.   
   
 When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID of the content model.
 {% endapi-method-description %}
