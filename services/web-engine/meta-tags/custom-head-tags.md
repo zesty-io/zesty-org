@@ -28,6 +28,7 @@ Meta, Title, Script, and  Link tags may use dynamic reference to globals, settin
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
+* **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
 Examples 
 
