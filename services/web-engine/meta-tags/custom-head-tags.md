@@ -30,10 +30,14 @@ Meta, Title, Script, and  Link tags may use dynamic reference to globals, settin
 * **Globals** are accessed like `{globals.site_name}`
 * **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
-Examples 
+**Examples** 
 
-* &lt;meta name="og:price" content="${this.price}"&gt;
-* &lt;link rel="stylesheet" href="{settings.developer.bulma\_cdn\_link}"&gt;
+```markup
+<meta name="og:price" content="${this.price}">
+<link rel="stylesheet" href="{settings.developer.bulma_cdn_link}">
+<meta name="custom_verify" href="{settings.yahoo.verify_hash}">
+<meta name="foobar" href="{globals.site_name}: {this._meta_description}">
+```
 
 ### Custom Head Tag Loading
 
@@ -43,6 +47,8 @@ Custom head tags load based on their resource type in this order:
 2. View Level
 3. Model Level
 4. Item Level
+
+At each level they ordered in ascending order by their `sort_order`
 
 {% api-method method="post" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" %}
 {% api-method-summary %}
