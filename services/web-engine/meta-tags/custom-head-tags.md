@@ -21,6 +21,28 @@ We are going to go through each one, with a couple example output and how to cre
 
 A simple post request to your instances REST API will create a head tag.
 
+### Using Dynamic Values in Head Tags
+
+Meta, Title, Script, and  Link tags may use dynamic reference to globals, settings, and content values. 
+
+* **Settings** are accessed like `{settings.general.site_protocol}`
+* **Content** item values are accessed like `{this.my_title}`
+* **Globals** are accessed like `{globals.site_name}`
+
+Examples 
+
+* &lt;meta name="og:price" content="${this.price}"&gt;
+* &lt;link rel="stylesheet" href="{settings.developer.bulma\_cdn\_link}"&gt;
+
+### Custom Head Tag Loading
+
+Custom head tags load based on their resource type in this order:
+
+1. Instance Level
+2. View Level
+3. Model Level
+4. Item Level
+
 {% api-method method="post" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" %}
 {% api-method-summary %}
 Head Tag Creation
@@ -29,7 +51,7 @@ Head Tag Creation
 {% api-method-description %}
 Post a Request with a raw JSON body. The JSON body requires 3 fields type \(meta\|link\|script\|style\|title\), attributes \(key value object\), and sortOder \(integer\). JSON body example given to create meta tag. More specific ones are available under each tag type.  
   
-This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear. Head tags will load by sort order ascending.   
+This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear.   
   
 When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID of the content model.
 {% endapi-method-description %}
