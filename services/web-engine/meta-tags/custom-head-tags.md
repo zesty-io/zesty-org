@@ -17,11 +17,7 @@ Here is a list of each one with example output:
 
 We are going to go through each one, with a couple example output and how to create them with the API POST calls to the API.
 
-## Creating a Head Tag with the Rest API
-
-A simple post request to your instances REST API will create a head tag.
-
-### Using Dynamic Values in Head Tags
+## Dynamic Values in Head Tags
 
 Meta, Title, Script, and  Link tags may use dynamic reference to globals, settings, and content values. 
 
@@ -53,6 +49,10 @@ At each level they ordered in ascending order by their `sort_order`
 ### Bad Tag References
 
 If a bad tag reference is used, a reference to a global, setting, or content item that doesn't exist, then a warning `(#bad reference {this.ref} #)` will be output in preview in the tag, on production sites an empty string will be returned.
+
+## Creating a Head Tag with the Rest API
+
+A simple post request to your instances REST API will create a head tag.
 
 {% api-method method="post" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" %}
 {% api-method-summary %}
