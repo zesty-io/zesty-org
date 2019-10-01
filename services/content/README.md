@@ -18,6 +18,8 @@ Content Schema is most commonly created and controlled through the Zesty.io Cont
 
 Content Models contain instructions \(options and fields\) that determine the format of the content items that can be created and stored in them. For example, let's pretend we created a **content model** called _Person_, and _Person_ has two fields: _name_ and _date of birth_. Person now serves as a model to follow when entering or editing content in the Person content model.   
 
+{% embed url="https://youtu.be/aD0iVpQwONw" caption="Begin building your instance structure with content models." %}
+
 ### Content Fields
 
 Content Fields are stored on a content model to determine what type of content can be stored.  Content fields are created with three key attributes:
