@@ -11,14 +11,14 @@ description: >-
 Content Schema is the combination of **Content Models**, **Content Fields**, and their respective behaviors. Content Schema provides the guidelines for creating, editing, and accessing content in a Zesty.io Content Instance. Changes to Content Schema also shapes the patterns of a Content Instance's auto generated API by assigning unique identifiers.
 
 {% hint style="info" %}
-Content Schema is most commonly created and controlled through the Zesty.io Content Manager User Interface, but it can also be created through the API.
+Content Schema is most commonly created and controlled through the Zesty.io Content Manager User Interface, but it can also be created through the API
 {% endhint %}
+
+{% embed url="https://youtu.be/aD0iVpQwONw" caption="Begin building your instance structure with content models." %}
 
 ### Content Models
 
 Content Models contain instructions \(options and fields\) that determine the format of the content items that can be created and stored in them. For example, let's pretend we created a **content model** called _Person_, and _Person_ has two fields: _name_ and _date of birth_. Person now serves as a model to follow when entering or editing content in the Person content model.   
-
-{% embed url="https://youtu.be/aD0iVpQwONw" caption="Begin building your instance structure with content models." %}
 
 ### Content Fields
 
