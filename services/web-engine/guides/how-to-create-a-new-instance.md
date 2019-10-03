@@ -17,7 +17,7 @@ From the Accounts Manager interface, click the green "+ Create New Instance" but
 
 A blueprint is your instance's base which can contain pre-built CSS, HTML, and JavaScript \(commonly referred to as framework\) as well as Pages, and Entry sets. Zesty.io provides a few options for blueprints with popular frameworks with preset pages and entry sets to help you get started. You can also create your own blueprint via GitHub. If you don't want any preset options, you can select blank slate.
 
-![screenshot2](https://yl440w.media.zestyio.com/Screen-Shot-2018-05-01-at-4.37.49-PM.png)
+![Select a Blueprint](https://yl440w.media.zestyio.com/Screen-Shot-2018-05-01-at-4.37.49-PM.png)
 
 ### Step 3: Access and Roles
 
