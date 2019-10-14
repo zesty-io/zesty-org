@@ -8,7 +8,17 @@ Part of Zesty.io's Health section is a redirect manager. The redirect manager al
 
 Zesty.io allows for the creation of 301 or 302 redirects. Learn more about 301 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301) and 302 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302).
 
-To create a 301 or 302 redirect follow these steps: 1. Add a specific link in the left-hand "From" column 2. Choose whether you want a 301 or 302 redirect by toggling the switch between the columns. 3. Select the link from the dropdown that you'd like it to redirect to in the right-hand "To" column. 4. Click the green "+ Redirect" button to create the redirect.
+Create a 301 or 302 redirects by following these steps: 
+
+1. Add a specific link in the left-hand "From" column. Do not include the domain. 
+
+2. Choose whether you want a 301 or 302 redirect by toggling the switch between the columns. 
+
+3. Select the link from the dropdown that you'd like it to redirect to in the right-hand "To" column. 
+
+4. Click the green "+ Redirect" button to create the redirect.
+
+![Example of a 301 redirect](../../../../.gitbook/assets/redirect-example.png)
 
 ## Mass Redirect
 
