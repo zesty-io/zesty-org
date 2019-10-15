@@ -51,7 +51,7 @@ Use `&&` and `||` in `if` statements, and `and` and `or` everywhere else.
 
 #### Brackets
 
-Use double brackets `{{` to start a Parsley statement, use single brackets `{ }` within a Parsley call. You cannot make a Parsley statement within a Parsley statement within a Parsley statement.
+Use double brackets `{{ }}` to start a Parsley statement. Use single brackets `{ }` when making a Parsley call within a double-bracketed call. 
 
 #### Comments
 
