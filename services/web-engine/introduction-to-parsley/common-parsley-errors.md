@@ -8,9 +8,9 @@ description: >-
 
 ### Syntax Error, Unexpected '{'
 
-Missing closing `}` bracket.
+Commonly refers to a Parsley statement that is not properly closed. Look for missing closing brackets `}` or `}}` to resolve the error.
 
 ### Unknown or ambiguous field '\_\_\_\_' in '\_\_\_\_ clause' on the \_\_\_\_ content model.
 
-Calling a field in an Each Loop without proper scope declared.
+Often results from calling a field in an Each Loop without scope properly declared.
 
