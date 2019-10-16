@@ -10,7 +10,7 @@ description: >-
 
 Commonly refers to a Parsley statement that is not properly closed. Look for missing closing brackets `}` or `}}` to resolve the error.
 
-### Unknown or ambiguous field '\_\_\_\_' in '\_\_\_\_ clause' on the \_\_\_\_ content model.
+### Unknown or ambiguous field \* in \* on the \* content model.
 
 Often results from calling a field in an Each Loop without scope properly declared.
 
