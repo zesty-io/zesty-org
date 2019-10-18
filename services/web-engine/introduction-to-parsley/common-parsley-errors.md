@@ -7,7 +7,7 @@ description: >-
 # Common Parsley Errors
 
 {% hint style="warning" %}
-### If you so not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io/)
+### If you do not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io/)
 {% endhint %}
 
 ### Syntax Error, Unexpected '{'
