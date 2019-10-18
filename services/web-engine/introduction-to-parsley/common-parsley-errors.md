@@ -6,6 +6,10 @@ description: >-
 
 # Common Parsley Errors
 
+{% hint style="warning" %}
+### If you so not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io/)
+{% endhint %}
+
 ### Syntax Error, Unexpected '{'
 
 Commonly refers to a Parsley statement that is not properly closed. Look for missing closing brackets `}` or `}}` to resolve the error.
