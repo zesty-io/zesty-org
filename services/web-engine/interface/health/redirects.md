@@ -26,9 +26,20 @@ To use our mass redirect tool you can import a CSV file or an XML file to create
 
 ### CSV
 
-To create redirects with a CSV you can either have all of your "From" URLs in one column, then choose the "To" URLs in the Health section interface, or you can do it all in the CSV.
+To create redirects with a CSV you need to have all of your "From" URLs in one column, your "Target" URLs in a second column, and Code \(e.g. 301 or 302\) in a third column.
 
-To create From/To redirects with a CSV you'll first need to format your CSV. Format your CSV into 2 columns with no headers. The left-hand column is your "From" column and your right-hand column is your "To" column. The "To" column will only work with a relative path - it will not create redirects with a full path.
+Follow these steps to create a CSV of your redirects:
+
+1. Create a CSV with 3 columns
+2. Title your columns \(from left to right\)
+   1. From
+   2. Target
+   3. Code
+3. Fill in your redirects with **relative path only**. Do not include your domain.
+
+See the image below for an example of how your CSV should be formatted.
+
+![Example CSV of redirects.](../../../../.gitbook/assets/screen-shot-2019-10-18-at-3.22.43-pm.png)
 
 Once your sheet is properly formatted click the gray "Import CSV/XML" button and import your sheet.
 
