@@ -31,6 +31,16 @@ At its core, Parsley can reference any Field from any content entry from any con
 * Modify Images and create new image files 
 * And much more
 
+### Basic Rules
+
+* Curly brackets \(single or double\):
+  * on the same line will be parsed
+  * on separate lines will **not** be parsed
+  * in fields will **not** be parsed
+* Spacing
+  * Single curly brackets: no spaces between Parsley call and bracket \(e.g. `{this.my_field}`\)
+  * Double curly brackets: space\(s\) allowed between call and bracket \(e.g. `{{ this.my_field }}`\)
+
 ### Syntax Structure
 
 #### Whitespace
@@ -51,7 +61,7 @@ Use `&&` and `||` in `if` statements, and `and` and `or` everywhere else.
 
 #### Brackets
 
-Use double brackets `{{ }}` to start a Parsley statement. Use single brackets `{ }` when making a Parsley call within a double-bracketed call. 
+Use double curly brackets `{{ }}` to start a Parsley statement. Use single curly brackets `{ }` when making a Parsley call within a double-bracketed call. 
 
 #### Comments
 
