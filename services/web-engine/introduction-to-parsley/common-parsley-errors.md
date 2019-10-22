@@ -22,3 +22,7 @@ A field does not exist on specific model. This results from an unidentified fiel
 
 Often results from calling a field in an Each Loop without scope properly declared.
 
+### zuid is ambiguous needs to be qualified as z.zuid
+
+Results from a malformed filter call. `filter(zuid = '{...}')` ****call needs to be qualified as  with z.zuid `filter(z.zuid = '{...}')`
+
