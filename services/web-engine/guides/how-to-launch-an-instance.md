@@ -15,6 +15,8 @@ There are 4 steps to making your site accessible to the public.
 3. Configure your DNS.
 4. Confirm your domain is live.
 
+{% file src="../../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Migrating a site? Download the checklist." %}
+
 ## **Before you begin**
 
 Before beginning the process to send your site live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
