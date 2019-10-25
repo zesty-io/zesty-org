@@ -12,7 +12,7 @@ description: >-
 
 ### **Syntax error, unexpected \***
 
-This error results from a string missing quotes in an if-conditional. Resolve it by adding quotes around the string and ensuring the comparative operator is double equal sign \(`==`\). ****
+This error results from missing quotes around a string in an if-conditional. Resolve it by adding quotes around the string and ensuring the comparative operator is double equal sign \(`==`\). ****
 
 ### Syntax Error, Unexpected '{'
 
