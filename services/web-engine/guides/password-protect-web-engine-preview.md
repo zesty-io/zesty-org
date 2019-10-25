@@ -24,9 +24,9 @@ What it does: if the site is now the live url, its check for query parameter `pw
 
 ### **Method 2:** **Javascript Prompt with Memory**
 
-This method is a soft lock because the page can be accessed with a curl request outside of a normal browser, or with a browser that have javascript disabled.
+This method is a soft lock because the page can be accessed with a curl request outside of a normal browser, or with a browser that has javascript disabled.
 
-This method requires you to have two cookie functions added to your loader. In your loader you check to see if the website is NOT live. If it is not live then it will lock you out of the page with a javascript prompt before the site loads. It will ask for a password. An incorrect password will redirect you away \(line 18\), a correct password will store a cookie which will bypass requesting a password as you browse the stage preview site for 30 days.
+This method uses javascript to get and set cookies, and to fire off a prompt in your loader file. In your loader you check to see if the website is NOT live. If it is not live then it will lock you out of the page with a javascript prompt before the site loads. It will ask for a password. An incorrect password will redirect you away \(line 18\), a correct password will store a cookie which will bypass requesting a password as you browse the stage preview site for 30 days.
 
 {% code-tabs %}
 {% code-tabs-item title="loader" %}
