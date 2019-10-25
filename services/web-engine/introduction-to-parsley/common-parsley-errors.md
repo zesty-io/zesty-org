@@ -22,6 +22,10 @@ A field does not exist on specific model. This results from an unidentified fiel
 
 Often results from calling a field in an Each Loop without scope properly declared.
 
+### **your filter statement is missing opening or closing ' ' \(quotes for strings\) or {} \(curly brackets for parsley references\)**
+
+'Filter statements' refer to statements using the following calls: `.filter()`, `.first()`, and `.last()`. To resolve this error add quotes around strings, for example `{ page.parent_zuid }` becomes `'{ page.parent_zuid }'`; if single brackets are missing, add them. For example `page.parent_zuid` becomes `{ page.parent_zuid }`.
+
 ### zuid is ambiguous needs to be qualified as z.zuid
 
 Results from a malformed filter call. `filter(zuid = '{...}')` ****call needs to be qualified as  with z.zuid `filter(z.zuid = '{...}')`
