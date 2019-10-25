@@ -10,6 +10,10 @@ description: >-
 ### If you do not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io/)
 {% endhint %}
 
+### **Syntax error, unexpected \***
+
+This error results from a string missing quotes in an if-conditional. Resolve it by adding quotes around the string and ensuring the comparative operator is double equal sign \(`==`\). ****
+
 ### Syntax Error, Unexpected '{'
 
 Commonly refers to a Parsley statement that is not properly closed. Look for missing closing brackets `}` or `}}` to resolve the error.
@@ -22,7 +26,7 @@ A field does not exist on specific model. This results from an unidentified fiel
 
 Often results from calling a field in an Each Loop without scope properly declared.
 
-### **your filter statement is missing opening or closing ' ' \(quotes for strings\) or {} \(curly brackets for parsley references\)**
+### **Your filter statement is missing opening or closing ' ' \(quotes for strings\) or {} \(curly brackets for parsley references\)**
 
 'Filter statements' refer to statements using the following calls: `.filter()`, `.first()`, and `.last()`. To resolve this error add quotes around strings, for example `{ page.parent_zuid }` becomes `'{ page.parent_zuid }'`; if single brackets are missing, add them. For example `page.parent_zuid` becomes `{ page.parent_zuid }`.
 
