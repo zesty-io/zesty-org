@@ -12,7 +12,7 @@ description: >-
 
 ### **Syntax error, unexpected \***
 
-This error results from missing quotes around a string or missing curly brackets in an if-conditional. Resolve it by adding quotes around the string and ensuring the comparative operator is double equal sign \(`==`\) and add missing curly brackets around inner conditionals so, for example, `{{ if this.field }}` becomes `{{ if {this.field} }}`.
+This error results from missing quotes around a string or missing curly brackets in an if-conditional. Resolve it by adding quotes around the string and ensuring the comparative operator is double equal sign \(`==`\) and add missing curly brackets around inner conditionals; for example `{{ if this.field }}` becomes `{{ if {this.field} }}`.
 
 ### Syntax Error, Unexpected '{'
 
