@@ -26,6 +26,10 @@ Commonly refers to a Parsley statement that is not properly closed. Look for mis
 
 A field does not exist on specific model. This results from an unidentified field in the following calls `{{ this.something }}` and `{{ if {this.something} }}`
 
+### The content model \* cannot be found. 
+
+This error results from a missing or mis-named content model. Resolve this error by navigating to your instance's Schema section and ensuring that its reference name is correct and creating it if it doesn't exist.
+
 ### Unknown or ambiguous field \* in \* on the \* content model.
 
 Often results from calling a field in an Each Loop without scope properly declared.
