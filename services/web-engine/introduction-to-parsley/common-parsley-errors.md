@@ -12,9 +12,12 @@ Errors are designed to help the developer write proper Parsley to achieve consis
 
 **Errors can be suppressed in stage/preview in 3 ways:**
 
-1. **! Ignore:** Every parsley call can start with an `!` like `{{!this.asdasdsad}}` to suppress an error for that call only. This is useful when checking for content model fields in a file like the loader. Another common usage would be `{{if {!this.myfield} }} ...code... {{end-if}}` that way you can check for a fields that may be null, and you can check for logical at a global scope in any view. 
-2. **Bypass:** To ignore all errors on a page for a single page load, you can append the query parameter `_bypassError` like `?_bypassError=true` to the end of any URL in stage/preview Web Engine. 
-3. **Instance Setting:** In the Zesty.io manager there is a setting under the category developer that is Ignore Errors, simply turn this on to ignore all errors.
+1. **! Ignore:** Suppress errors on individual calls by prepending it with a bang \(`!`\) like so `{{!this.asdasdsad}}`.  This is especially useful when using the loader or similar files for checking content model fields. Another common technique is using an if-conditional:  `{{if {!this.myfield} }} ...code... {{end-if}}` to check for a field. Using a bang in such if-conditionals allows you to globally check for null fields without triggering an error. 
+2. **Bypass:** Ignore all errors on a page for a single page load by appending the query parameter `_bypassError` to the end of any URL in stage/preview Web Engine
+
+   For example:`hash-dev.preview.zestyio.com/?_bypassError=true`. 
+
+3. **Instance Settings:** In the Zesty.io manager navigate to you instance's Settings section, and then select Developer from the right-hand sidebar. Look for a setting called "Use Parsley Debugger" and select it, then save to ignore all errors.
 
 ## Common Error List
 
