@@ -42,7 +42,7 @@ Parsley code used to return the the search results:
 
 ### site.domain
 
-If domain is set for the Satellite, this call will return it.
+If domain is set for the instance, this call will return it.
 
 ```text
 {{site.domain}}
