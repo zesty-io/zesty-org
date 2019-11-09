@@ -8,8 +8,8 @@ description: Two methods to password protect the preview url for your content in
 
 First Method is a hard lock, it requires a query parameter. Edit your loader file and wrap all the code in an if statement like this:
 
-{% code-tabs %}
-{% code-tabs-item title="loader" %}
+{% tabs %}
+{% tab title="loader" %}
 ```javascript
 {{ if {get_var.pw} == 'test' || {site.env} == 'live' }}
 
@@ -17,8 +17,8 @@ First Method is a hard lock, it requires a query parameter. Edit your loader fil
 
 {{ end-if }}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 What it does: if the site is now the live url, its check for query parameter `pw` to equal the set string. For example `https://xyz.preview.zestyio.com?pw=test`  will load the page, but anything else will show a blank screen. This requires every preview url to have the `?pw=test` appended to the url.
 
@@ -28,8 +28,8 @@ This method is a soft lock because the page can be accessed with a curl request 
 
 This method uses javascript to get and set cookies, and to fire off a prompt in your loader file. In your loader you check to see if the website is NOT live. If it is not live then it will lock you out of the page with a javascript prompt before the site loads. It will ask for a password. An incorrect password will redirect you away \(line 18\), a correct password will store a cookie which will bypass requesting a password as you browse the stage preview site for 30 days.
 
-{% code-tabs %}
-{% code-tabs-item title="loader" %}
+{% tabs %}
+{% tab title="loader" %}
 ```markup
 {{ if {site.env} != 'live' }}
 
@@ -63,6 +63,6 @@ This method uses javascript to get and set cookies, and to fire off a prompt in 
 
 {{ current_view }}
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 

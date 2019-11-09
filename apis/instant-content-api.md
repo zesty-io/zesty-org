@@ -71,8 +71,8 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="response.json" %}
+{% tabs %}
+{% tab title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -137,8 +137,8 @@ Returned if the zuid exists \(Generic Item Example\)
 	}]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -169,8 +169,8 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="response.json" %}
+{% tabs %}
+{% tab title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -235,8 +235,8 @@ Returned if the zuid exists \(Generic Item Example\)
 	}]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -267,8 +267,8 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% code-tabs %}
-{% code-tabs-item title="response.json" %}
+{% tabs %}
+{% tab title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -340,8 +340,8 @@ Returned if the zuid exists \(Generic Item Example\)
 	]
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}

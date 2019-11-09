@@ -58,18 +58,18 @@ For example purposes, let's use the domain www.acme.com, and assume it has two l
 
 **Server Headers Appended for Locale/Multi-lang, per** [**MDN Specs**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language)\*\*\*\*
 
-{% code-tabs %}
-{% code-tabs-item title="Server headers served when accessing https://www.acme.com/about/" %}
+{% tabs %}
+{% tab title="Server headers served when accessing https://www.acme.com/about/" %}
 ```text
 Content-Language: en-us
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **HTML Appended for Locale/Multi-lang, per** [**Google Specs**](https://support.google.com/webmasters/answer/189077?hl=en)\*\*\*\*
 
-{% code-tabs %}
-{% code-tabs-item title="Head and HTML additions on page https://www.acme.com/about/" %}
+{% tabs %}
+{% tab title="Head and HTML additions on page https://www.acme.com/about/" %}
 ```markup
 <html lang="en-us">
 <head>
@@ -82,15 +82,15 @@ Content-Language: en-us
         href="https://www.acme.com/about/" />
 </head>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 **XML Sitemap**
 
 Auto-generated sitemap gets additional language qualifiers and pointers.
 
-{% code-tabs %}
-{% code-tabs-item title="Served at https://www.acme.com/sitemap.xml" %}
+{% tabs %}
+{% tab title="Served at https://www.acme.com/sitemap.xml" %}
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -115,8 +115,8 @@ Auto-generated sitemap gets additional language qualifiers and pointers.
 
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### List of Languages Zesty.io Supports
 

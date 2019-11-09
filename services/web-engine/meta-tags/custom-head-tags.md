@@ -108,8 +108,8 @@ Bearer XXXXXX \(APP\_SID Token\)
 
 Meta tags are for search engines, social media, browser compatibilities, viewport info, etc. "Meta" tags are essentially became a catch all for all sorts of configuration information. Zesty.io has no restriction on what type of meta tags you can add. Zesty.io also auto generates meta tags for social sharing and search engines based on your content, [learn more about that here.](./#automated-meta-tags)
 
-{% code-tabs %}
-{% code-tabs-item title="A few meta tag output examples" %}
+{% tabs %}
+{% tab title="A few meta tag output examples" %}
 ```markup
 <meta name="description" content="my page description" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -117,8 +117,8 @@ Meta tags are for search engines, social media, browser compatibilities, viewpor
 <meta name="viewport" content="width=device-width, height=device-height"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="orange" />
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 As you can see in the example, meta tags are versatile, everything from search engine info to hidden configurations for iPhone rendering. Meta tags are hidden and are low weight so they minimally affect page load time.
 
@@ -126,8 +126,8 @@ As you can see in the example, meta tags are versatile, everything from search e
 
 Attributes are open ended for meta tags, so any key:value pair can be added. Here are a few post body example to create a few of the examples above.
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a Description Meta Tag" %}
+{% tabs %}
+{% tab title="API Post body example for a Description Meta Tag" %}
 ```markup
 {
 	"type": "meta",
@@ -139,11 +139,11 @@ Attributes are open ended for meta tags, so any key:value pair can be added. Her
 	"resourceZUID": "7-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for an open graph description" %}
+{% tabs %}
+{% tab title="API Post body example for an open graph description" %}
 ```markup
 {
 	"type": "meta",
@@ -155,11 +155,11 @@ Attributes are open ended for meta tags, so any key:value pair can be added. Her
 	"resourceZUID": "7-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a Viewport Meta Tag" %}
+{% tabs %}
+{% tab title="API Post body example for a Viewport Meta Tag" %}
 ```markup
 {
 	"type": "meta",
@@ -171,8 +171,8 @@ Attributes are open ended for meta tags, so any key:value pair can be added. Her
 	"resourceZUID": "7-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Working with Script Head Tags
 
@@ -186,8 +186,8 @@ Script tags a used to load javascript files on page. Since head tags can be appl
 
 **Example Post Body to create script head tags with the Rest API**
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a Javascript Script Link" %}
+{% tabs %}
+{% tab title="API Post body example for a Javascript Script Link" %}
 ```markup
 {
 	"type": "script",
@@ -199,8 +199,8 @@ Script tags a used to load javascript files on page. Since head tags can be appl
 	"resourceZUID": "8-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Working with Link Head Tags
 
@@ -219,8 +219,8 @@ Link head tags a used to load CSS files, Icons,  Alternate Language URLs, etc.. 
 
 Attributes are open ended for link tags, so any can be added. Here are a few post body example to create a few of the examples above.
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for Link Tag for a CSS File" %}
+{% tabs %}
+{% tab title="API Post body example for Link Tag for a CSS File" %}
 ```markup
 {
 	"type": "link",
@@ -232,11 +232,11 @@ Attributes are open ended for link tags, so any can be added. Here are a few pos
 	"resourceZUID": "8-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a Link Tag for an Icon" %}
+{% tabs %}
+{% tab title="API Post body example for a Link Tag for an Icon" %}
 ```markup
 {
 	"type": "link",
@@ -249,8 +249,8 @@ Attributes are open ended for link tags, so any can be added. Here are a few pos
 	"resourceZUID": "8-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Working with Title Head Tags
 
@@ -264,8 +264,8 @@ Title tags are linear, and offer one type. Title tags only accept one key value 
 
 **Example Post Body to create a head tags with the Rest API**
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a creating a Title Tag" %}
+{% tabs %}
+{% tab title="API Post body example for a creating a Title Tag" %}
 ```markup
 {
 	"type": "title",
@@ -276,8 +276,8 @@ Title tags are linear, and offer one type. Title tags only accept one key value 
 	"resourceZUID": "7-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## Working with Style Head Tags
 
@@ -295,8 +295,8 @@ Style tags are linear, and offer one type and way to use them. Style tags only a
 
 **Example Post Body to create a style tag with the Rest API**
 
-{% code-tabs %}
-{% code-tabs-item title="API Post body example for a creating a Title Tag" %}
+{% tabs %}
+{% tab title="API Post body example for a creating a Title Tag" %}
 ```markup
 {
 	"type": "style",
@@ -307,8 +307,8 @@ Style tags are linear, and offer one type and way to use them. Style tags only a
 	"resourceZUID": "7-XyZ-Xyz"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ## 
 
