@@ -76,9 +76,9 @@ Upon submission Zesty WebEngine will capture that post and send a payload to the
             "submitted_from_url": "https://www.yourdomain.com/contact/",
             "submitted_at": "timestamp",
             "submitted_from_domain" :  "www.youdomain.com"
-            "first_name": ":form_input",
-            "last_name" : ":form_input",
-            "email" : ":form_input
+            "first_name": "captured_form_input",
+            "last_name" : "captured_form_input",
+            "email" : "captured_form_input"
 }
 ```
 
