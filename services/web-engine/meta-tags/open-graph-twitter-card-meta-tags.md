@@ -66,13 +66,13 @@ Zesty.io will look for the first created content field that has a reference name
 
 ### How to Override Open Graph and Twitter Card Tags
 
-You may override an open graph or twitter card meta tag on content models items by adding specific content fields to the model.
+You may override an Open Graph or Twitter Card meta tag on content models items by adding specific content fields to the model.
 
 #### OG/Twitter Title
 
-If you add a `content field` to a `model` named `og_title`, it will use that as the default for for the Open Graph meta title, and Twitter Card meta title. If not, Zesty.io will default to the models `meta title`, which exists for every `model` with a view and route. 
 
-To create a specific Twitter Card meta title, users can create a `content field` named `tc_title` on the `model`. NOTE: this will only apply to Twitter Card, and will not default to Open Graph. If only `tc_title` exists, the open graph title will still default to the `meta_title`.
+If you add a `content field` to a `model` named `og_title`, it will use that as the default for for the Open Graph meta title, and Twitter Card meta title. If a customer does not, it will default to the models `meta title`, which exists for every `model` with a view and route. If the customer wants a specific Twitter Card meta title, they can create a `content field` named `tc_title` on the `model`. NOTE: this will only apply to Twitter card, and will not default to Open Graph. If only `tc_title` exists, the Open Graph title will still default to the `meta_title`.
+
 
 ```markup
 <meta name="og:title" content="{og_title|seo_meta_title}">
@@ -90,7 +90,7 @@ The same applies for the Open Graph description and Twitter Card description, wh
 
 #### OG/Twitter Images
 
-For Open Graph and Twitter Card images, Zesty.io follows the same fall back logic and uses `og_image` and `tc_image` as the custom name. For images, if there is not `og_image` or `tc_image` tag, it will default to the first created content field with `image` or `img` in its reference name.
+For Open Graph and Twitter Card images, it follows the same fallback logic and uses `og_image` and `tc_image` as the custom name. For images, if there is not `og_image` or `tc_image` tag, it will default to the first created content field with `image` or `img` in its reference name.
 
 Images auto resize to work with a 1200 pixel width.
 
