@@ -1,14 +1,15 @@
 ---
 description: >-
-  Zesty.io Cloud Content Instances can share code, media and data between each
-  other to create rich distributed systems.
+  Zesty.io Cloud Content Instances are networked through an EcoSystem, they can
+  share code, media and data between each other to create rich distributed
+  systems.
 ---
 
 # EcoSystems
 
 ## Zesty.io EcoSystems
 
-EcoSystems are used to network together Content Instances. Once networked in an EcoSystem, Instances may share share content, code, and media. EcoSystems are an add on product in the Zesty.io Platform. 
+EcoSystems are used to network together Content Instances. Once networked in an EcoSystem, Content Instances may share share content, code, and media. EcoSystems are an add-on product in the Zesty.io Platform.
 
 {% hint style="success" %}
 **Common Users for EcoSystems**
@@ -21,20 +22,20 @@ EcoSystems are used to network together Content Instances. Once networked in an 
 
 ## EcoMedia \(Shared Media\)
 
-Zesty.io [Cloud Content Instances](../content-instance.md) are launched with a [Micro Dam](media-storage-micro-dam.md). EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
+Zesty.io [Cloud Content Instances](../content-instance/) are launched with a [Micro Dam](media-storage-micro-dam.md). EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements. 
 
-The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder which the user can browse, access, and upload to.
+The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder to which the user can browse, access, and upload.
 
 {% hint style="success" %}
 **Ways to Use EcoMedia**
 
-* Shared branding Elements
+* Shared Branding Elements
 * Multi-site Shared Images
 {% endhint %}
 
 ## EcoCode \(Shared View Templates\)
 
-Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating.md). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances](../content-instance.md) in the same EcoSystem. 
+Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating.md). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances](../content-instance/) in the same EcoSystem. 
 
 {% hint style="success" %}
 **Ways to Use EcoCode**
