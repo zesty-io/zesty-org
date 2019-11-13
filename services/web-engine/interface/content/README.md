@@ -22,7 +22,7 @@ This is the initial view when you first load the Content section or launch the c
 
 ### Entry Editing
 
-This view shows fields with the current content value\(s\) in the main section and publishing history and status to the right.@
+This view shows fields with the current content value\(s\) in the main section and publishing history and status to the right.
 
 This view is like the Item Editing view except the fields are all blank or default and there is no publishing or draft history on the right.
 
