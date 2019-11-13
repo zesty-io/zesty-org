@@ -1,32 +1,46 @@
 ---
 description: >-
   The content section is often the most used interface in Zesty.io. As the name
-  suggests this tab is where all of the content data for the instance is viewed,
-  created, edited, or deleted.
+  suggests this section is where an instance's content is viewed, created,
+  edited, and deleted.
 ---
 
 # Content
 
 ### Overview
 
-The Content section is split into two sections. The left hand column is the Content Structure list and it is always there. The right hand section is the main part of the page and changes what is displayed depending on what is selected. The four types of views are
+The Content section is generally split into two sections. The left-hand column is the content structure list and it allows users to navigate through their content; it is always available throughout this section. The right-hand section is the main part of the page and its display changes depending on what has been selected. The four types of views are
 
 * Dashboard 
-* Entry Editing
-* Create New Entry
 * Table View
+* Create New Item/Table Entry View
+* Item and Table Entry Editing View
 
 ### Dashboard
 
-This is the initial view when you first load the Content section or launch the content manager. The default dashboard shows an overview of key analytics from Google Analytics \(as long as it's been configured\), a list of recently edited entries, and highlights recent news from Zesty.io.
+This is the initial view when you first load the Content section and launch the content manager. The default dashboard shows an overview of key analytics from Google Analytics \(as long as it's been configured\), a list of recently edited entries, and highlights recent news from Zesty.io.
 
-### Entry Editing
-
-This view shows fields with the current content value\(s\) in the main section and publishing history and status to the right.
-
-This view is like the Item Editing view except the fields are all blank or default and there is no publishing or draft history on the right.
+![Zesty.io Content Manager Dashboard](../../../../.gitbook/assets/content-management-dashboard-02.png)
 
 ### Table View
 
-This is for page groups and data sets to show a list of all the entries in the content set. Clicking into an item brings up the Entry Editing view and clicking the green "+ Add New" brings up the Create New Entry view. You can search, filter, update sort order, and paginate through the table.
+This is for multi-page and headless models to show a list of all the entries in the content set. Clicking into an item brings up the Entry Editing view and clicking the blue "+ \[Add New Item\]" button brings up the Create New Item/Table Entry view. You can search, filter,  and update sort order through the table.
+
+![Table View for multi-page and headless models](../../../../.gitbook/assets/table-view.png)
+
+### Create New Item/Table Entry View
+
+This view is accessed by clicking the blue "+ \[Add New Item\]" button at the top of the table and through the white "Create New Item" dropdown near the top of the left-hand content structure column. 
+
+This view is similar to the Item/Entry Editing view except all fields are all blank or default \(depending on field type\) and the right-hand publishing status bar is absent. 
+
+Once a user begins to enter content, the grayed out "Create New Item" button in the upper right-hand corner will turn green and allow the user to save and create their new item/entry.
+
+![New Table Entry View](../../../../.gitbook/assets/new-table-item-entry-view.png)
+
+### Item and Entry Editing View
+
+These views show field\(s\) with the current content value\(s\) in the main section and the publishing status bar, which includes publishing history and status, listed status, drafting history, and more, to the right.
+
+![Item and Entry Editing View](../../../../.gitbook/assets/item-entry-editing-view.png)
 
