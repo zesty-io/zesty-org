@@ -16,7 +16,7 @@ Views can carry one of three associations:
 
 Parsley is templating language used in a view to access content managed in Zesty.io.
 
-Similar to other templating languages, Parsley uses double French brackets `{{ }}` to open and close template expressions. Inside these brackets a developer can use Parsley to access content, write conditionals, or reference look ups. Parsley templating expressions are written alongside standard HTML. See the below example for a reference.
+Similar to other templating languages, Parsley uses double curly brackets `{{ }}` to open and close template expressions. Inside these brackets a developer can use Parsley to access content, write conditionals, or reference look ups. Parsley templating expressions are written alongside standard HTML. See the below example for a reference.
 
 {% tabs %}
 {% tab title="Parsley Each Example" %}

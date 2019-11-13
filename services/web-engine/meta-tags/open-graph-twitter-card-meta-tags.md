@@ -70,9 +70,7 @@ You may override an Open Graph or Twitter Card meta tag on content models items 
 
 #### OG/Twitter Title
 
-
 If you add a `content field` to a `model` named `og_title`, it will use that as the default for for the Open Graph meta title, and Twitter Card meta title. If a customer does not, it will default to the models `meta title`, which exists for every `model` with a view and route. If the customer wants a specific Twitter Card meta title, they can create a `content field` named `tc_title` on the `model`. NOTE: this will only apply to Twitter card, and will not default to Open Graph. If only `tc_title` exists, the Open Graph title will still default to the `meta_title`.
-
 
 ```markup
 <meta name="og:title" content="{og_title|seo_meta_title}">
