@@ -37,8 +37,8 @@ The `zesty.yaml` file defines what endpoints we rely on. In this case, we are us
 
 We save the `.json` from these endpoints into `src/data` and use the data in our React code. This can be seen in [`src/Home.js`](https://github.com/zesty-io/Zesty-Local-React-Example/blob/master/src/Home.js) and [`src/Menu.js`.](https://github.com/zesty-io/Zesty-Local-React-Example/blob/master/src/Menu.js)
 
-{% code-tabs %}
-{% code-tabs-item title="Home.js" %}
+{% tabs %}
+{% tab title="Home.js" %}
 ```jsx
 import React, { Component } from "react";
 let homepageJSON = require("./data/homepage.json");
@@ -73,8 +73,8 @@ export default class Home extends Component {
   }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 Note how the only difference between the [local](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/headless/react/local-guide.md#understanding-the-example-project) and [remote](https://github.com/zesty-io/zesty-org/tree/2c2b2cdfbf60f7308aedeb999c44eb98b7dbd490/headless/react/remote-guide.md#understanding-the-example-project) examples is `componentDidMount`

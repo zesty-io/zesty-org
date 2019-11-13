@@ -20,11 +20,11 @@ We architected Zesty.io to meet the needs of any content usage such as a [tradit
 {% tab title="Easy CMS" %}
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with. 
 
-{% page-ref page="content-instance.md" %}
+{% page-ref page="content-instance/" %}
 {% endtab %}
 
 {% tab title="Web Presentations" %}
-We started by delivered a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
+We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
 
 {% page-ref page="services/web-engine/" %}
 {% endtab %}
@@ -36,7 +36,10 @@ Traditionally, content is siloed to the experience it was created for, and often
 {% endtab %}
 
 {% tab title="Fast Delivery" %}
+
 Experiences need to be delivered fast. Whether it is a JSON API call or a full website page loading, we make sure that all requests are cached at the edge to ensure your end user is delivered a fast experience without thinking about load time or uptime.
+
+{% page-ref page="services/media-storage-micro-dam.md" %}
 {% endtab %}
 
 {% tab title="Headless Applications" %}
