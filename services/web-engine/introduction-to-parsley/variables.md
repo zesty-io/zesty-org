@@ -85,6 +85,8 @@ Parsley variables are a tool for storing information we need to access later on 
 
 Please see an example of the syntax for Post variables below.
 
+Zesty.io expects FormData which can be sent [following these docs](https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects) or using a JQuery Post.
+
 ```text
 <h1>{{ post_var.name }}</h1>
 ```

@@ -33,8 +33,7 @@ In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json
 
 In our React code, we perform a `GET` request to these endpoints. This can be seen in [`app/assets/javascripts/components/_home.js.jsx`](https://github.com/zesty-io/Zesty-Remote-React-Ruby-Example/blob/master/app/assets/javascripts/components/_home.js.jsx) and [`app/assets/javascripts/components/_menu.js.jsx`](https://github.com/zesty-io/Zesty-Remote-React-Ruby-Example/blob/master/app/assets/javascripts/components/_menu.js.jsx).
 
-{% tabs %}
-{% tab title="Home.js" %}
+{% code title="Home.js" %}
 ```jsx
 class Home extends Component {
   constructor(props) {
@@ -69,8 +68,7 @@ class Home extends Component {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 Using `componentDidMount`, we're able to fetch our JSON and render it accordingly. After we load it in, it's just a matter of parsing a JS Object.
 

@@ -18,8 +18,7 @@ Parsley is templating language used in a view to access content managed in Zesty
 
 Similar to other templating languages, Parsley uses double curly brackets `{{ }}` to open and close template expressions. Inside these brackets a developer can use Parsley to access content, write conditionals, or reference look ups. Parsley templating expressions are written alongside standard HTML. See the below example for a reference.
 
-{% tabs %}
-{% tab title="Parsley Each Example" %}
+{% code title="Parsley Each Example" %}
 ```markup
 <ul>
 {{each articles as article}}
@@ -27,8 +26,7 @@ Similar to other templating languages, Parsley uses double curly brackets `{{ }}
 {{end-each}}
 </ul>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 One can quickly explore what Parsley has to offer at the [Parsley REPL](https://parsley.zesty.io/hello-world/).
 

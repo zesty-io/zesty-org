@@ -58,18 +58,15 @@ For example purposes, let's use the domain www.acme.com, and assume it has two l
 
 **Server Headers Appended for Locale/Multi-lang, per** [**MDN Specs**](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Language)\*\*\*\*
 
-{% tabs %}
-{% tab title="Server headers served when accessing https://www.acme.com/about/" %}
+{% code title="Server headers served when accessing https://www.acme.com/about/" %}
 ```text
 Content-Language: en-us
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 **HTML Appended for Locale/Multi-lang, per** [**Google Specs**](https://support.google.com/webmasters/answer/189077?hl=en)\*\*\*\*
 
-{% tabs %}
-{% tab title="Head and HTML additions on page https://www.acme.com/about/" %}
+{% code title="Head and HTML additions on page https://www.acme.com/about/" %}
 ```markup
 <html lang="en-us">
 <head>
@@ -82,15 +79,13 @@ Content-Language: en-us
         href="https://www.acme.com/about/" />
 </head>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 **XML Sitemap**
 
 Auto-generated sitemap gets additional language qualifiers and pointers.
 
-{% tabs %}
-{% tab title="Served at https://www.acme.com/sitemap.xml" %}
+{% code title="Served at https://www.acme.com/sitemap.xml" %}
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -115,8 +110,7 @@ Auto-generated sitemap gets additional language qualifiers and pointers.
 
 
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### List of Languages Zesty.io Supports
 

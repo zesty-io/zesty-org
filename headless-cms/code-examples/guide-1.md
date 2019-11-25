@@ -57,8 +57,7 @@ The example project's `package.json` also comes pre-equipped with some handy uti
 
 Hugo provides support for front-matter, which `PullZesty` takes advantage of to create the files. The real magic in this project lies in the `zesty.yaml` file, which specifies the proper paths for all of our content. This content is merely consumed by some layouts. When creating your own Hugo project, feel free to look at our [`zesty.yaml`](https://github.com/zesty-io/hugo-project/blob/master/zesty.yaml) file and our [layout files](https://github.com/zesty-io/hugo-project/tree/master/layouts).
 
-{% tabs %}
-{% tab title="layouts/\_default/index.html" %}
+{% code title="layouts/\_default/index.html" %}
 ```markup
 {{ define "content" }}
 <div data-spy="scroll" data-target="#site-navbar" data-offset="200">
@@ -76,8 +75,7 @@ Hugo provides support for front-matter, which `PullZesty` takes advantage of to 
 </div>
 {{ end }}
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 As you can see in our [`index.html`](https://github.com/zesty-io/hugo-project/blob/master/layouts/_default/index.html) file, we simply load in the front-matter from the [`content/_index.md`](https://github.com/zesty-io/hugo-project/blob/master/content/_index.md) file.
 

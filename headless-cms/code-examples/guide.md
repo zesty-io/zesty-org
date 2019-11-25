@@ -46,8 +46,7 @@ The example project's `package.json` also comes pre-equipped with some handy uti
 
 Jekyll provides support for front-matter, which `PullZesty` takes advantage of to create the files. The real magic in this project lies in the `zesty.yaml` file, which specifies the proper paths for all of our content. This content is merely consumed by some layouts. When creating your own Jekyll project, feel free to look at our [`zesty.yaml`](https://github.com/zesty-io/jekyll-zesty/blob/master/zesty.yaml) file and our [layout files](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/).
 
-{% tabs %}
-{% tab title="\_layouts/home.html" %}
+{% code title="\_layouts/home.html" %}
 ```markup
 --- layout: default ---
 <div dat
@@ -65,8 +64,7 @@ a-spy="scroll" data-target="#site-navbar" data-offset="200">
     </section>
 </div>
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 As you can see in our [`home.html`](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/home.html) file, we simply load in the front-matter from the [`index.md`](https://github.com/zesty-io/jekyll-zesty/blob/master/index.md) file.
 

@@ -71,8 +71,7 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% tabs %}
-{% tab title="response.json" %}
+{% code title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -137,8 +136,7 @@ Returned if the zuid exists \(Generic Item Example\)
 	}]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -169,8 +167,7 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% tabs %}
-{% tab title="response.json" %}
+{% code title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -235,8 +232,7 @@ Returned if the zuid exists \(Generic Item Example\)
 	}]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
@@ -267,8 +263,7 @@ configure your site to not need this
 Returned if the zuid exists \(Generic Item Example\)
 {% endapi-method-response-example-description %}
 
-{% tabs %}
-{% tab title="response.json" %}
+{% code title="response.json" %}
 ```yaml
 {
 	"meta": {
@@ -340,8 +335,7 @@ Returned if the zuid exists \(Generic Item Example\)
 	]
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}

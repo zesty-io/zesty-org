@@ -25,8 +25,7 @@ In this project, we are using two custom endpoints, [`/-/basic-api/homepage.json
 
 In our React code, we perform a `GET` request to these endpoints This can be seen in [`src/Home.js`](https://github.com/zesty-io/Zesty-Remote-React-Example/blob/master/src/Home.js) and [`src/Menu.js`](https://github.com/zesty-io/Zesty-Remote-React-Example/blob/master/src/Menu.js).
 
-{% tabs %}
-{% tab title="Home.js" %}
+{% code title="Home.js" %}
 ```jsx
 import React, { Component } from "react";
 
@@ -63,8 +62,7 @@ export default class Home extends Component {
   }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 {% hint style="info" %}
 Note how the only difference between the [local](https://github.com/zesty-io/zesty-org/tree/afa5f7fa7e3c4a65230b1295ae266512caa516ca/headless/react/local-guide.md#understanding-the-example-project) and [remote](https://github.com/zesty-io/zesty-org/tree/afa5f7fa7e3c4a65230b1295ae266512caa516ca/headless/react/remote-guide.md#understanding-the-example-project) examples is `componentDidMount`
