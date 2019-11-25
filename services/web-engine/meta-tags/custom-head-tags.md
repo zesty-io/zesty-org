@@ -203,6 +203,7 @@ Link head tags a used to load CSS files, Icons,  Alternate Language URLs, etc.. 
 <link rel="canonical" href="https://www.example.com/" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.example.com/favicon.png" />
 <link rel="alternate" type="application/rss+xml" href="https://www.example.com/feed.xml" title="RSS Feed" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
 ```
 
 **Example Post Body to Create Links with the Rest API**
@@ -214,8 +215,22 @@ Attributes are open ended for link tags, so any can be added. Here are a few pos
 {
 	"type": "link",
 	"attributes": {
+		"rel": "stylesheet",
+		"href": "https://fonts.googleapis.com/css?family=Font+Name"
+	},
+	"sort": 1,
+	"resourceZUID": "8-XyZ-Xyz"
+}
+```
+{% endcode %}
+
+{% code title="API Post body example for Link Tag for a CSS File" %}
+```markup
+{
+	"type": "link",
+	"attributes": {
 		"type": "text/css",
-		"src": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css"
+		"href": "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-grid.css"
 	},
 	"sort": 1,
 	"resourceZUID": "8-XyZ-Xyz"
@@ -230,7 +245,7 @@ Attributes are open ended for link tags, so any can be added. Here are a few pos
 	"attributes": {
 		"rel": "apple-touch-icon-precomposed",
 		"sizes": "114x114",
-		"src": "https://www.example.com/favicon.png"
+		"href": "https://www.example.com/favicon.png"
 	},
 	"sort": 1,
 	"resourceZUID": "8-XyZ-Xyz"
