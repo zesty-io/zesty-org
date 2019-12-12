@@ -12,7 +12,7 @@ description: >-
 Follow these steps to add a team to your instance.
 
 1. Login to Zesty.io and click on the Teams icon in the accounts navigation bar. ![](../../../.gitbook/assets/teams-01-accounts-nav-bar.png) 
-2. Fill out the Teams form with a team name and description, and click the green **+ Create Team** button.                                   ![](../../../.gitbook/assets/teams-02-create-a-team.png) 
+2. Fill out the Teams form with a team name and description, and click the green **+ Create Team** button. &lt;br&gt;                                ![](../../../.gitbook/assets/teams-02-create-a-team.png) 
 3. Add Team members by entering in the email addresses of your teammates in the text box and click the gray **+ Invite** button to invite them to your team. ![](../../../.gitbook/assets/teams-03-add-members.png) 
 
 {% hint style="warning" %}
