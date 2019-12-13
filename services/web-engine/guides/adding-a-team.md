@@ -53,5 +53,5 @@ Congratulations! You created your first team. Now let's add it to your instance.
 
 ![](../../../.gitbook/assets/teams-05-team-access.png)
 
-Congratulations! You just added a team to your instance. 
+Congratulations! You just added your team to your instance. 
 
