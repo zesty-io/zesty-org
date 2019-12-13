@@ -45,7 +45,7 @@ Congratulations! You created your first team. Now let's add it to your instance.
 
 ![](../../../.gitbook/assets/teams-03-navigate-to-instances.png)
 
-4. Locate the instance that you want to add your team to and click the settings cog to access your instance's settings.  
+4. Locate the instance that you want to add your team to and click the settings cog icon to access your instance's settings.  
 
 ![](../../../.gitbook/assets/teams-04-instance-settings-cog.png)
 
