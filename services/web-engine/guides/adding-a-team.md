@@ -53,5 +53,9 @@ Congratulations! You created your first team. Now let's add it to your instance.
 
 ![](../../../.gitbook/assets/teams-05-team-access.png)
 
+{% hint style="warning" %}
+If a Team's member already has access to your instance via an individual invite and has a different role set than the Team's role then that member's individual role will override their Team role.
+{% endhint %}
+
 Congratulations! You just added your team to your instance. 
 
