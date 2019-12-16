@@ -17,7 +17,7 @@
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [Glossary](services/web-engine/glossary.md)
   * [Guides](services/web-engine/guides/README.md)
-    * [Adding a Team](services/web-engine/guides/adding-a-team.md)
+    * [Creating and Adding a Team](services/web-engine/guides/adding-a-team.md)
     * [Password Protect Web Engine Preview](services/web-engine/guides/password-protect-web-engine-preview.md)
     * [Setting up Google Analytics for GDPR](services/web-engine/guides/setting-up-google-analytics-for-gdpr.md)
     * [How Webpages are Assembled](services/web-engine/guides/how-webpages-are-assembled.md)

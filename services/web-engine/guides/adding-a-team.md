@@ -5,7 +5,7 @@ description: >-
   how to add a team to your instance
 ---
 
-# Adding a Team
+# Creating and Adding a Team
 
 ### Create a Team
 
