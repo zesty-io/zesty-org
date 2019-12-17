@@ -1,12 +1,43 @@
 ---
-description: A description on Zesty Webhooks and how to use them
+description: A description on Zesty Webhooks and how to use them in production.
 ---
 
 # Webhooks
 
+{% hint style="info" %}
+**Open Perpetual Beta:** Webhooks are available to all instances. We plan on expanding the payload of the webhook to include the data an meta data of affected resource.  
+{% endhint %}
+
 ### Introduction
 
 Webhooks allow for actions performed within the Zesty.io platform to trigger external actions via RESTful HTTP API calls. An example of such a use case would be to send out email or text message alerts to customers when a new blog article being published. 
+
+[REST API Documentation and Examples](https://accounts-api.zesty.org/?version=latest#f929ad7b-4bff-4f78-9376-ead64d158b9b)
+
+### What Resources Listen for Webhooks
+
+#### Instances API 
+
+* Content Models
+* Content Model Items
+* Content Model Fields
+* Views
+* Stylesheets 
+* Scripts
+* Redirects
+* Languages
+* Instance Setting
+
+#### Accounts API
+
+* Role
+* Instance Roles
+* Instance Domains
+* Invites
+
+{% hint style="danger" %}
+Webhook for Publish Actions do not trigger for any publish event greater than 30 days out.
+{% endhint %}
 
 {% api-method method="post" host="https://accounts.api.zesty.io" path="/v1/webhooks" %}
 {% api-method-summary %}
