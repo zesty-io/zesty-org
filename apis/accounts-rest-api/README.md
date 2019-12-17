@@ -14,5 +14,5 @@ Full REST API documentation available in multiple languages here: [https://accou
 
 The Node Wrapper hits a few  Accounts API endpoints commonly used for development.
 
-{% page-ref page="../headless-cms/node.js/zesty.io-node-api-wrapper.md" %}
+{% page-ref page="../../headless-cms/node.js/zesty.io-node-api-wrapper.md" %}
 
