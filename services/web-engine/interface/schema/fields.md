@@ -32,13 +32,6 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Brandisty Logo</td>
-      <td style="text-align:left">This field allows you to upload a logo from Brandisty. Please note, to
-        use this field a Brandisty account is required.</td>
-      <td style="text-align:left"><code>&lt;brandisty name=&quot;brandisty_field&quot; name_friendly=&quot;Brandisty Field&quot; /&gt;</code>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left">Color</td>
       <td style="text-align:left">This is a field where you can enter color values such as &apos;#ffffff&apos;
         or &apos;blue&apos;. It has a limit of 150 characters. It currently does
@@ -65,16 +58,6 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
         </td>
     </tr>
     <tr>
-      <td style="text-align:left">DateTime</td>
-      <td style="text-align:left">This is a field where you can select a date from a pop-up calendar. After
-        you&apos;ve selected a date from the calendar, a time pop-up allows you
-        to select a time from a 24-hour digital clock. The DateTime is string formatted
-        YYYY-MM-DD HH-MM-SS. To apply date formating use &quot;.date()&quot; call
-        and include PHP data format characters.</td>
-      <td style="text-align:left"><code>&lt;datetime name=&quot;datetime_field&quot; name_friendly=&quot;Datetime Field&quot; /&gt;</code>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left">Dropdown</td>
       <td style="text-align:left">This field creates a dropdown with different options made up of key:value
         pairs.</td>
@@ -82,26 +65,15 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">Files</td>
-      <td style="text-align:left">This is a field where you can click a button to upload a file from the
-        media bin.</td>
-      <td style="text-align:left"><code>&lt;files name=&quot;files_field&quot; name_friendly=&quot;Files Field&quot; /&gt;</code>
-      </td>
+      <td style="text-align:left">External URL</td>
+      <td style="text-align:left">This creates a text field for a link which requires the form of a URL,
+        e.g., http:// or https://. It has a maximum character limit of 150 characters.</td>
+      <td
+      style="text-align:left"><code>&lt;link name=&quot;link_field&quot; name_friendly=&quot;Link Field&quot; /&gt;</code>
+        </td>
     </tr>
     <tr>
-      <td style="text-align:left">FontAwesome</td>
-      <td style="text-align:left">This is a text field for the name of a font-awesome icon. Field uses the
-        name of the icon only. For example, if you wanted an icon for Facebook,
-        you would type &apos;facebook&apos; (no quotes) in the text field, instead
-        of the &apos;fa fa-facebook&apos; syntax. <a href="https://fortawesome.github.io/Font-Awesome/icons/">Font Awesome Icon List</a>  <em>Printout Notes:</em> Prints
-        out exact characters represented in the backend. To use with &quot;fa&quot;
-        syntax, use &quot;substring(4,100)&quot; to strip &quot;icon&quot; from
-        the icon name.</td>
-      <td style="text-align:left"><code>&lt;fontawesome name=&quot;fontawesome_field&quot; name_friendly=&quot;Font Awesome Icon&quot; /&gt;</code>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Images</td>
+      <td style="text-align:left">Media</td>
       <td style="text-align:left">This creates a field for inserting an image from the Media Bin. The number
         of images can be limited by using the &apos;limit&apos; parameter in your
         image tag. Note that when calling the field in your view, you must use
@@ -118,14 +90,6 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
         page. Use the Parsley call <code>truepath()</code> to access the page URL.</td>
       <td
       style="text-align:left"><code>&lt;internal_link name=&quot;btn_links_to&quot; name_friendly=&quot;Button Links To&quot; /&gt;</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Link</td>
-      <td style="text-align:left">This creates a text field for a link which requires the form of a URL,
-        e.g., http:// or https://. It has a maximum character limit of 150 characters.</td>
-      <td
-      style="text-align:left"><code>&lt;link name=&quot;link_field&quot; name_friendly=&quot;Link Field&quot; /&gt;</code>
         </td>
     </tr>
     <tr>
@@ -185,26 +149,7 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
       </td>
     </tr>
     <tr>
-      <td style="text-align:left">WYSIWYG Advanced</td>
-      <td style="text-align:left">This creates a &apos;What You See Is What You Get&apos; (WYSIWYG) text
-        field, i.e., all formatting that you have, such as bolded text, font size,
-        italics, etc. will be exactly what you see on your site. Note, there is
-        currently no difference between the advanced and basic WYSIWYG.</td>
-      <td
-      style="text-align:left"><code>&lt;wysiwyg_advanced name=&quot;image_caption&quot; name_friendly=&quot;Image Caption&quot; /&gt;</code>
-        </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">WYSIWYG Basic</td>
-      <td style="text-align:left">This creates a &apos;What You See Is What You Get&apos; (WYSIWYG) text
-        field, i.e., all formatting that you have, such as bolded text, font size,
-        italics, etc. will be exactly what you see on your site. Since there is
-        currently no difference between the advanced and basic WYSIWYG, we recommend
-        using WYSIWYG Advanced.</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Yes/No</td>
+      <td style="text-align:left">Toggle</td>
       <td style="text-align:left">
         <p>This creates a customized toggle field made up of key:value pairs. The
           key will either be 0 (zero) or 1 (one), however the value is customizable.
@@ -215,6 +160,25 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
       </td>
       <td style="text-align:left"><code>&lt;yes_no name=&quot;field_type_toggle&quot; name_friendly=&quot;Field Type (text: 150 character limit; textarea: unlimited)&quot; options=&quot;0:Text;1:Textarea;&quot;  list=&quot;1&quot;/&gt;</code>
       </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">UUID</td>
+      <td style="text-align:left">This field will generate a UUID when your content model is saved.</td>
+      <td
+      style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">WYSIWYG</td>
+      <td style="text-align:left">This creates a &apos;What You See Is What You Get&apos; (WYSIWYG) text
+        field, i.e., all formatting that you have, such as bolded text, font size,
+        italics, etc. will be exactly what you see on your site.</td>
+      <td style="text-align:left"><code>&lt;wysiwyg_advanced name=&quot;image_caption&quot; name_friendly=&quot;Image Caption&quot; /&gt;</code>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left"></td>
+      <td style="text-align:left"></td>
+      <td style="text-align:left">&lt;code&gt;&lt;/code&gt;</td>
     </tr>
     <tr>
       <td style="text-align:left"></td>
