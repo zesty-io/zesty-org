@@ -163,7 +163,7 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
     </tr>
     <tr>
       <td style="text-align:left">UUID</td>
-      <td style="text-align:left">This field will generate a UUID when your content model is saved.</td>
+      <td style="text-align:left">This field generates a UUID when your content model is saved.</td>
       <td
       style="text-align:left"></td>
     </tr>
