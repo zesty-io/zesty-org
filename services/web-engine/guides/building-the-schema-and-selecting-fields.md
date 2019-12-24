@@ -98,7 +98,7 @@ If this toggle is flipped to Yes then an asterisk will appear next to the Field 
 
 ![Show-in-table toggle](../../../.gitbook/assets/field-show-in-table.png)
 
-This attribute only applies to multi-page sets and headless sets. If you'd like this field to show in the table listing view make sure this attribute is toggled to Yes. 
+This attribute only applies to multi-page sets and headless sets. If you'd like this field to show in the [table-listing view](https://zesty.org/services/web-engine/interface/content#table-listing-view) make sure this attribute is toggled to Yes. 
 
 **Tool tip and description**
 
