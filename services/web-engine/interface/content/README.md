@@ -22,7 +22,7 @@ This is the initial view when you first load the Content section and launch the 
 
 ![Zesty.io Content Manager Dashboard](../../../../.gitbook/assets/content-management-dashboard-02.png)
 
-### Table View
+### Table-listing View
 
 This is for multi-page and headless models to show a list of all the entries in the content set. Clicking into an item brings up the Entry Editing view and clicking the blue "+ \[Add New Item\]" button brings up the Create New Item/Table Entry view. You can search, filter,  and update sort order through the table.
 
