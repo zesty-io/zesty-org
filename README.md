@@ -22,7 +22,7 @@ We see content as a blank canvas, and because of that, we made a system that all
 
 
 
-We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add feature to our [Web Engine](services/web-engine/).
+We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add features to our [Web Engine](services/web-engine/). Learn how to use Zesty.io with these platform tours and guides.
 
 {% page-ref page="services/web-engine/" %}
 
