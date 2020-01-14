@@ -1,6 +1,6 @@
 ---
 description: >-
-  Learn how to select content models and fields when building you instance's
+  Learn how to select content models and fields when building your instance's
   schema.
 ---
 
