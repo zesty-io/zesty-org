@@ -8,7 +8,7 @@ description: >-
 
 ### Introduction
 
-Building your instance's schema means that we'll be creating content models and adding fields to those content models. There are 3 types of content models:
+Building your instance's schema is the first step to getting started with your new instance. Building your instance's schema means that we'll be creating content models and adding fields to those content models. There are 3 types of content models:
 
 1. Single Page \(e.g. about us page\)
 2. Multi-page sets \(e.g. blog articles\)
