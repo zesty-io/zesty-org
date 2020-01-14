@@ -18,6 +18,7 @@
   * [Glossary](services/web-engine/glossary.md)
   * [Guides](services/web-engine/guides/README.md)
     * [Building the Schema and Selecting Fields](services/web-engine/guides/building-the-schema-and-selecting-fields.md)
+    * [Content Entry, Drafts, and Publishing](services/web-engine/guides/content-entry-drafts-and-publishing.md)
     * [Creating and Adding a Team](services/web-engine/guides/adding-a-team.md)
     * [Password Protect Web Engine Preview](services/web-engine/guides/password-protect-web-engine-preview.md)
     * [Setting up Google Analytics for GDPR](services/web-engine/guides/setting-up-google-analytics-for-gdpr.md)
