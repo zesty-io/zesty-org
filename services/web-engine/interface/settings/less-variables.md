@@ -4,7 +4,7 @@ description: >-
   interface to update colors, fonts, and other design elements.
 ---
 
-# Less Variables
+# Styles
 
 ### What are LESS Variables?
 

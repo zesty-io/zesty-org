@@ -18,11 +18,3 @@ The Content Structure is where content models and fields are created, edited, an
 
 There are over 20 types of fields from basic text fields to dynamic relational content fields. Each content component has two names, a Display Name and a Reference Name. The display name is used in the Content section and the reference name is used in Parsley in the Editor section. Click this article to learn more about [Fields](/adding-fields/).
 
-### LESS Variables
-
-This section is generally only used in Zesty.io templated sites. The styles entered here are available in the Editor when editing a LESS style sheet file. Which variables are available and their default value can be set through the blueprint Github repository in the blueprint-variables.yaml. Go to the [LESS Variables](/less-variables/) article to learn more.
-
-### Site Settings
-
-The Site Settings section is important during initial set up of an instance, but usually unused after launch. This area controls settings such as elements that affect the head of a website, CORS controls for endpoints, API Keys for integrations, and forwarding preferences for www. To review in more detail the available settings, go to the [Site Settings](/site-settings/) article.
-
