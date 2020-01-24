@@ -8,16 +8,16 @@ description: >-
 
 ## What is an Automated Head?
 
-Zesty.io automates the creation &lt;head&gt; tags, which include &lt;title&gt; &lt;meta&gt; and &lt;og:title&gt; like tags to automate the optimization of search engine indexing. There are time when you may want to customize these tags and not rely on Zesty.io to produce them. If you want to overwrite the automated head tags, follow this tutorial.
+Zesty.io automates the creation &lt;head&gt; tags, which include &lt;title&gt; &lt;meta&gt; and &lt;og:title&gt; like tags to automate the optimization of search engine indexing. There are times when you may want to customize these tags and not rely on Zesty.io to produce them. If you want to overwrite the automated head tags, follow this tutorial.
 
 ### How to Setup a Custom Head File and Overwrite the Automated Meta
 
 Four steps to overwrite the head:
 
 1. Create a **text** setting in the category **developer** with the key **head\_overwrite \(**[**see API Docs**](https://instances-api.zesty.org/?version=latest#588eccb2-8f3a-482d-b2dd-cfc9a2be93e9)**\)**
-2. In the code editor, create a new _snippet_ file, lets call it "**custom\_head**" \(you can call it anything\)
+2. In the code editor, create a new _snippet_ file , lets call it "**custom\_head**" \(you can call it anything\)
 3. In settings, change the new setting's value to **"custom\_head**", save the setting.  **This turns on the overwrite.**
-4. In the code editor, edit the new snippet with your custom tags, save and publish the snippet
+4. In the code editor, add your custom tags to the "**custom\_head**" snippet you created in step 2, then save and publish it.
 
 {% hint style="warning" %}
 **Important:** add a value to the **developer.head\_overwrite** will immediately switch your WebEngine pages renders over to using a custom head. You can prepare the snippet before before editing your setting**.** Once setup, overwriting automated head tags lets you control this portion of the &lt;head&gt; through a versioned view snippet, this mean you need to publish the snippet to see a changes to a production site.
