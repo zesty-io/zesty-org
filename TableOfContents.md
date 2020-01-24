@@ -108,6 +108,7 @@
     * [Site Functions](services/web-engine/introduction-to-parsley/parsley-site-functions.md)
     * [Variables](services/web-engine/introduction-to-parsley/variables.md)
   * [Head & Meta Tags](services/web-engine/meta-tags/README.md)
+    * [Custom Head Overwrite](services/web-engine/meta-tags/custom-head-override.md)
     * [Custom Head Tags](services/web-engine/meta-tags/custom-head-tags.md)
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
 * [Micro DAM \(Media Storage\)](services/media-storage-micro-dam.md)
