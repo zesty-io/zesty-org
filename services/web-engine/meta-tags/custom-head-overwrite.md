@@ -15,9 +15,9 @@ Zesty.io automates the creation &lt;head&gt; tags, which include &lt;title&gt; &
 Four steps to overwrite the head:
 
 1. Create a **text** setting in the category **developer** with the key **head\_overwrite \(**[**see API Docs**](https://instances-api.zesty.org/?version=latest#588eccb2-8f3a-482d-b2dd-cfc9a2be93e9)**\)**
-2. Create a new _snippet_ file, lets call it "**custom\_head**" \(you can call it anything\)
-3. Change the new setting's value to **"custom\_head**", save the setting
-4. Edit the new snippet with your custom tags, save and publish the snippet
+2. In the code editor, create a new _snippet_ file, lets call it "**custom\_head**" \(you can call it anything\)
+3. In settings, change the new setting's value to **"custom\_head**", save the setting
+4. In the code editor, edit the new snippet with your custom tags, save and publish the snippet
 
 {% hint style="warning" %}
 Overwrite automated head tags lets your have a staged version of your head, this mean you need to publish to see a live result.
