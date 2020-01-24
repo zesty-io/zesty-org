@@ -16,11 +16,11 @@ Four steps to overwrite the head:
 
 1. Create a **text** setting in the category **developer** with the key **head\_overwrite \(**[**see API Docs**](https://instances-api.zesty.org/?version=latest#588eccb2-8f3a-482d-b2dd-cfc9a2be93e9)**\)**
 2. In the code editor, create a new _snippet_ file, lets call it "**custom\_head**" \(you can call it anything\)
-3. In settings, change the new setting's value to **"custom\_head**", save the setting
+3. In settings, change the new setting's value to **"custom\_head**", save the setting.  **This turns on the overwrite.**
 4. In the code editor, edit the new snippet with your custom tags, save and publish the snippet
 
 {% hint style="warning" %}
-Overwrite automated head tags lets your have a staged version of your head, this mean you need to publish to see a live result.
+**Important:** add a value to the **developer.head\_overwrite** will immediately switch your WebEngine pages renders over to using a custom head. You can prepare the snippet before before editing your setting**.** Once setup, overwriting automated head tags lets you control this portion of the &lt;head&gt; through a versioned view snippet, this mean you need to publish the snippet to see a changes to a production site.
 {% endhint %}
 
 ### Example Custom Head File
