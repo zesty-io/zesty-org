@@ -91,6 +91,7 @@
       * [Redirects](services/web-engine/interface/health/redirects.md)
     * [Audit Trail](services/web-engine/interface/audit-trail.md)
     * [Settings](services/web-engine/interface/settings/README.md)
+      * [Instance Settings](services/web-engine/interface/settings/instance-settings.md)
       * [Styles](services/web-engine/interface/settings/less-variables.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Parsley](services/web-engine/introduction-to-parsley/README.md)
