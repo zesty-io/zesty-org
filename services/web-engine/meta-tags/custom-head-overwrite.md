@@ -17,15 +17,15 @@ Four steps to overwrite the head:
 1. Create a **text** setting in the category **developer** with the key **head\_overwrite \(**[**see API Docs**](https://instances-api.zesty.org/?version=latest#588eccb2-8f3a-482d-b2dd-cfc9a2be93e9)**\)**
 2. In the code editor, create a new _snippet_ file , lets call it "**custom\_head**" \(you can call it anything\)
 3. In settings, change the new setting's value to **"custom\_head**", save the setting.  **This turns on the overwrite.**
-4. In the code editor, add your custom tags to the "**custom\_head**" snippet you created in step 2, then save and publish it.
+4. In the code editor, add your custom tags to the "**custom\_head**" snippet you created in step 2,  and then save and publish it.
 
 {% hint style="warning" %}
-**Important:** add a value to the **developer.head\_overwrite** will immediately switch your WebEngine pages renders over to using a custom head. You can prepare the snippet before before editing your setting**.** Once setup, overwriting automated head tags lets you control this portion of the &lt;head&gt; through a versioned view snippet, this mean you need to publish the snippet to see a changes to a production site.
+**Important:** add a value to the **developer.head\_overwrite** will immediately switch your WebEngine pages renders over to using a custom head. You can prepare the snippet before editing your setting**.** Once setup, overwriting automated head tags lets you control this portion of the &lt;head&gt; through a versioned view snippet, this means you need to publish the snippet to see changes to a production site.
 {% endhint %}
 
 ### Example Custom Head File
 
-Custom head files give you access to parsley logic and data access, this allows for a dynamic custom head per page.
+Custom head files give you access to Parsley logic and data access, this allows for a dynamic custom head per page.
 
 ```markup
 <title>{{this._meta_title}}</title>
@@ -45,7 +45,7 @@ Custom head files give you access to parsley logic and data access, this allows 
 
 ### What Does this Overwrite?
 
-Zesty.io automates these tags in the head:
+Zesty.io automates the following tags in the head:
 
 * &lt;title&gt; My Title &lt;/title&gt;
 * &lt;meta name="description" content="my description"&gt;
@@ -66,7 +66,7 @@ Zesty.io automates these tags in the head:
 
 ### What is Still Automated?
 
-Even when overwriting, Zesty.io will still automate this tags:
+Even when overwriting, Zesty.io will still automate the following tags:
 
 * Language specific tags that point to alternate locales of content
 * main.css link to the auto transpiled css file \(settings can overwrite this\)
