@@ -1,7 +1,7 @@
 ---
 description: >-
   Developer option to overwrite the automated meta, title, and og:tags <head>
-  tags with a parsley snippet file.
+  tags with a Parsley snippet file.
 ---
 
 # Custom Head Overwrite
