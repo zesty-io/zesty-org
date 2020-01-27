@@ -1,6 +1,6 @@
 ---
 description: >-
-  Encompass a variety of developer-oriented settings to help customize backend
+  A variety of developer-oriented settings to help customize backend
   functionality.
 ---
 
@@ -8,7 +8,7 @@ description: >-
 
 ### Introduction
 
-Instance settings are developer-oriented settings that help customize an instance's backend functionality. The most commonly edited configurations are Google Analytics, contact form options, and HTTPS settings. Each utility contains a list of settings. Below you'll find a list of which settings are nested under which utility, including descriptions or instructions from the UI.
+Instance settings are developer-oriented settings that help customize an instance's backend functionality. The most commonly edited configurations are Google Analytics, contact form options, and HTTPS settings. Each category contains a list of settings. Below you'll find a list of which settings are nested under which category along with descriptions from the UI.
 
 ### **General**
 
