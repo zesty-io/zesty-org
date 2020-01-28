@@ -35,11 +35,13 @@ Custom head files give you access to Parsley logic and data access, this allows 
 <meta property="og:description" content="{{this._meta_description}}">
 
 (** setup an if check to use an og image if available, else default to brand image **)
-{{if {this.og_image} }}
-<meta property="og:image" content="{{this.og_image}}">
+{{if {!this.og_image} }}
+<meta property="og:image" content="{{this.og_image.getImage()}}">
 {{else}}
 <meta property="og:image" content="https://www.example.com/default-share-image.png">
 {{end-if}}
+
+<link rel="icon" type="image/png" href="{{globals.site_icon.getImage()}}">
 
 ```
 
