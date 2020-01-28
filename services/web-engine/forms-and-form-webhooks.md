@@ -54,7 +54,7 @@ In your HTML form, you can add an input with the name `zcf`, \(Zesty Contact For
 
 **Sending Form Data via Webhook**
 
-In your HTML form you can add an input with the name `zwh` \(Zesty Webhook\), which WebEngine will look for. If WebEngine see `zwh` it will attempt to send a POST request to the value of `zwh` which should be the url of the remote service you wish to send a payload too. Let's look at a code:
+In your HTML form you can add an input with the name `_zesty_webhook` \(Zesty Webhook\), which WebEngine will look for. If WebEngine see `_zesty_webhook` it will attempt to send a POST request to the value of `_zesty_webhook` which should be the url of the remote service you wish to send a payload too. Let's look at a code:
 
 ```text
 <form method="post">
@@ -62,13 +62,13 @@ In your HTML form you can add an input with the name `zwh` \(Zesty Webhook\), wh
     <input type="text" name="last_name">
     <input type="text" name="email">
     
-    <input type="hidden" name="zwh" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
+    <input type="hidden" name="_zesty_webhook" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
     
     <input type="submit" value="Submit Button">
 </form>
 ```
 
-Upon submission Zesty WebEngine will capture that post and send a payload to the `zwh` value, which in our example is a Zapier url. The payload will look like this:
+Upon submission Zesty WebEngine will capture that post and send a payload to the `_zesty_webhook` value, which in our example is a Zapier url. The payload will look like this:
 
 ```text
 {
@@ -96,7 +96,7 @@ It possible to use all three methods in conjunction, so go nuts, but don't hurt 
     
     <input type="hidden" name="zcf" value="1">
     <input type="hidden" name="zlf" value="my form">     
-    <input type="hidden" name="zwh" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
+    <input type="hidden" name="_zesty_webhook" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
     
     <input type="submit" value="Submit Button">
 </form>
