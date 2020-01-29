@@ -12,7 +12,7 @@ See Rest Documentation: [https://auth-api.zesty.org/?version=latest](https://aut
 
 ## Developer Tokens
 
-In addition to authentication through the Auth API, users may create a static Developer Token to access the APIs. Users with Admin access to an Instance may create a Developer Token and associate it with a Role; this Token will then grant access to the APIs without having to login. This Developer Token is then passed in as an *Authorization* header to all requests in place of a Session Token. 
+In addition to authentication through the Auth API, users may create a static Developer Token to access the APIs. Users with Admin access to an Instance may create a Developer Token by passing in a Role ZUID; the Token will then represent that Role in requests made. Any user with the Developer Token will have the same privileges as a user with the provided Role when accessing the APIs, without having to login and retrieve a Session Token. This Developer Token is then passed in as an *Authorization: Bearer* header value to all requests in place of a Session Token. 
 
 **Please note:** The value for the Developer Token will **only** be visible upon creation; please store it in a safe location.
 
