@@ -1,24 +1,28 @@
 ---
 description: >-
-  Access and edit style variables through the config tab using a non-technical
-  interface to update colors, fonts, and other design elements.
+  Access and edit style variables through the Settings section using a
+  non-technical interface to update colors, fonts, and other design elements.
 ---
 
 # Styles
 
-### What are style Variables?
+### Overview
 
-Style Variables part of the Settings Section that provides a non-technical interface for updating style variables.
+The Styles subsection will only be available if your blueprint has style variables built-in. A blueprints styles are defined on instance creation via a file called plate-variables.xml. If you do not see a Styles subsection then your blueprint does not have styles. 
 
-When it comes to style sheets, you have the option of using LESS, SCSS, or CSS. Zesty.io is equipped to compile style sheets written in LESS or SCSS so there is no need to install any precompilers to use these languages. Simply create your style sheet and the rest is taken care of.
+### What are style variables?
+
+Each of the styles have an associated variable. That variable is denoted by the `@` followed by its name, for example: `@body-bg`.  Each of these variables is defined in the instance's [style sheet](https://zesty.org/services/web-engine/interface/editor/stylesheets). 
 
 ### Editing your variables
 
-Style Variables can be found as a subsection in the Settings section. The left-hand sidebar has all the available categories while the main content to the right has the editable fields for you to start customizing the variables. The available style variables will depend on your selected Blueprint. In order for the style variables to work they must be set up in the Editor.
+Styles offer a variety of options from font style to colors. The left-hand sidebar shows all the available categories. Once a category is selected from the left-hand navigation the main portion of the screen to the right will show the editable fields for you to start customizing the variables. The available style variables will depend on your selected Blueprint. Once you're finished editing your styles be sure to save them so your changes populate. 
 
-### Accessing your variables in Parsley
+{% hint style="info" %}
+In order for the style variables to work they must be defined in the style sheet _before_ you edit them.
+{% endhint %}
 
-In the Editor section, you can add your style variables to a LESS/SCSS file in the under Style Sheets section. A list of the variable names is available in the Styles subsection. Add those variable names to your style sheet.
+### Accessing your variables in the Editor
 
-In this example, we will be calling the Body Background Color variable. The variable name is shown on the right: `@body-bg-color`. Add this variable to your style sheet file using the reference name `@body-bg-color` to define a style property.
+In the Editor section, you can add your style variables to a LESS/SCSS file in the under Style Sheets section. All variable names are listed in the Styles subsection. Add those variable names to your style sheet and define them, for example: `@body-bg-color: #997379`.
 
