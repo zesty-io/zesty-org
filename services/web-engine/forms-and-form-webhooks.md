@@ -4,9 +4,9 @@ description: Working with html forms and utilizing Webhooks in Zesty.io WebEngin
 
 # Forms and Form Webhooks
 
-HTML pages rendered in WebEngine have access to a few ways to capture form data, render form data, or to send form data. 
+HTML pages rendered in WebEngine have access to a few ways to capture form data, render form data, or to send form data.
 
-### Capturing Form Data to an Instance's Leads Feature
+## Capturing Form Data to an Instance's Leads Feature
 
 Zesty.io Leads is feature of zesty that lets you capture user submitted data through an HTML form. Data is captured through &lt;form&gt; POSTs. Here is an example:
 
@@ -15,21 +15,20 @@ Zesty.io Leads is feature of zesty that lets you capture user submitted data thr
     <input type="text" name="first_name">
     <input type="text" name="last_name">
     <input type="text" name="email">
-    
+
     <input type="hidden" name="zlf" value="form_name">
-    
+
     <input type="submit" value="Submit Button">
 </form>
-
 ```
 
 Upon POST submission, Zesty.io will look for an input named `zlf` \(Zesty Lead Form\), and if it finds it, it will capture the form data to the leads table which can be viewed ini the Zesty.io Manager app of the instance the submission occurred on. The value you set for `zlf` is captures as the form name, you can use this value to organize your leads into groups.
 
 If you want to learn more about leads, have a look at the leads api [https://instances-api.zesty.org/?version=latest\#6ba715eb-485f-4a4b-8e8a-f2f3fa81e9a1](https://instances-api.zesty.org/?version=latest#6ba715eb-485f-4a4b-8e8a-f2f3fa81e9a1)
 
-### Sending Form Data to an Email or Through a Webhook
+## Sending Form Data to an Email or Through a Webhook
 
-There is built in functionality to send form data to an email address that is set in Zesty.io Manager Settings, under contact form. Alternatively you can have a payload sent to any remote server using a Webhook. That is often used for custom integrations or used with systems like [**Zapier**](https://zapier.com/).  
+There is built in functionality to send form data to an email address that is set in Zesty.io Manager Settings, under contact form. Alternatively you can have a payload sent to any remote server using a Webhook. That is often used for custom integrations or used with systems like [**Zapier**](https://zapier.com/).
 
 **Sending Form Data to an Email**
 
@@ -42,12 +41,12 @@ In your HTML form, you can add an input with the name `zcf`, \(Zesty Contact For
     <input type="text" name="first_name">
     <input type="text" name="last_name">
     <input type="text" name="email">
-    
+
     <input type="hidden" name="zcf" value="1">
-    
+
     <!-- optional -->
     <input type="hidden" name="email_override" value="my@email.com">
-    
+
     <input type="submit" value="Submit Button">
 </form>
 ```
@@ -61,9 +60,9 @@ In your HTML form you can add an input with the name `_zesty_webhook` \(Zesty We
     <input type="text" name="first_name">
     <input type="text" name="last_name">
     <input type="text" name="email">
-    
+
     <input type="hidden" name="_zesty_webhook" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
-    
+
     <input type="submit" value="Submit Button">
 </form>
 ```
@@ -82,9 +81,9 @@ Upon submission Zesty WebEngine will capture that post and send a payload to the
 }
 ```
 
-The verification key is an MD5 hash of your Instance ZUID, you can use this to prevent spam from hitting your endpoints. 
+The verification key is an MD5 hash of your Instance ZUID, you can use this to prevent spam from hitting your endpoints.
 
-### Using All Three Capture Methods
+## Using All Three Capture Methods
 
 It possible to use all three methods in conjunction, so go nuts, but don't hurt yourself!
 
@@ -93,16 +92,16 @@ It possible to use all three methods in conjunction, so go nuts, but don't hurt 
     <input type="text" name="first_name">
     <input type="text" name="last_name">
     <input type="text" name="email">
-    
+
     <input type="hidden" name="zcf" value="1">
     <input type="hidden" name="zlf" value="my form">     
     <input type="hidden" name="_zesty_webhook" value="https://hooks.zapier.com/hooks/catch/1111111/xxxxxx/">
-    
+
     <input type="submit" value="Submit Button">
 </form>
 ```
 
-### Handling Form Data with Parsley
+## Handling Form Data with Parsley
 
 Sometimes its nice to customize your page base on the user's input. You can access values of a form post in parsley like this:
 
@@ -112,6 +111,4 @@ Sometimes its nice to customize your page base on the user's input. You can acce
 <p>We will reach out to {{post_var.email}} within the nexst 24 hours</p>
 {{end-if}}
 ```
-
-
 
