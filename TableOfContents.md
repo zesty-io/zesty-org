@@ -93,6 +93,7 @@
     * [Settings](services/web-engine/interface/settings/README.md)
       * [Instance Settings](services/web-engine/interface/settings/instance-settings.md)
       * [Styles](services/web-engine/interface/settings/less-variables.md)
+      * [Fonts](services/web-engine/interface/settings/fonts.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Parsley](services/web-engine/introduction-to-parsley/README.md)
     * [Parsley Index](services/web-engine/introduction-to-parsley/parsley-index.md)
