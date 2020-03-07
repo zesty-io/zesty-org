@@ -45,6 +45,7 @@
     * [How to Use the Visual Sitemap](services/web-engine/guides/how-to-use-the-visual-sitemap.md)
     * [How to control and use og:image](services/web-engine/guides/how-to-control-and-use-og-image.md)
     * [How to Create a Blueprint in Github](services/web-engine/guides/how-to-create-a-blueprint-in-github.md)
+    * [Refreshing the Cache](services/web-engine/guides/refreshing-the-cache.md)
   * [Integrations](services/web-engine/integrations/README.md)
     * [How to Connect to Airtable](services/web-engine/integrations/how-to-connect-to-airtable.md)
     * [HubSpot CRM Form Integration](services/web-engine/integrations/hubspot-crm-form-integration.md)
