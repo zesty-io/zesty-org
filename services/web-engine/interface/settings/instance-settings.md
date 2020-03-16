@@ -8,7 +8,15 @@ description: >-
 
 ### Introduction
 
-Instance settings are developer-oriented settings that help customize an instance's backend functionality. The most commonly edited configurations are Google Analytics, contact form options, and HTTPS settings. Each category contains a list of settings. Below you'll find a list of which settings are nested under which category along with descriptions from the UI.
+Instance settings are developer-oriented settings that help customize an instance's backend functionality. The most commonly edited configurations are Google Analytics, contact form options, and HTTPS settings. 
+
+![The Instance Settings subsection is location under the Settings section.](../../../../.gitbook/assets/instance-settings.png)
+
+Each category contains a list of settings. Categories are located in the left-hand sidebar of the window \(image below\). In the list below you'll find a list of which settings are nested under which category along with descriptions from the UI.
+
+![Instance Setting categories in the left-hand navigation outlined in purple.](../../../../.gitbook/assets/instance-settings-nav.png)
+
+
 
 ### **General**
 
