@@ -16,8 +16,6 @@ Each category contains a list of settings. Categories are located in the left-ha
 
 ![Instance Setting categories in the left-hand navigation outlined in purple.](../../../../.gitbook/assets/instance-settings-nav.png)
 
-
-
 ### **General**
 
 * **Search Engine Crawlable:** Search engines will have permission to index each page of your site allowing for greater visibility
