@@ -12,8 +12,9 @@ Zesty.io has a templating and website engine for producing custom websites that 
 
 There are 3 steps to getting started with your instance. The first step is to build you instance's schema, and then you'll add your content, and lastly code your views. See the guides below for more information.
 
-1. [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
-2. [Content Entry, Drafts, and Publishing Basics](guides/content-entry-drafts-and-publishing.md)
+1. [Overview: making the connection between Schema, Content, and Code](https://zesty.org/services/web-engine/guides/the-connection-between-schema-content-and-code)
+2. [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
+3. [Content Entry, Drafts, and Publishing Basics](guides/content-entry-drafts-and-publishing.md)
 
 
 
