@@ -18,6 +18,7 @@
   * [Glossary](services/web-engine/glossary.md)
   * [Guides](services/web-engine/guides/README.md)
     * [Building the Schema and Selecting Fields](services/web-engine/guides/building-the-schema-and-selecting-fields.md)
+    * [Editor and Coding Basics](services/web-engine/guides/editor-and-coding-basics.md)
     * [The Connection Between Schema, Content, and Code](services/web-engine/guides/the-connection-between-schema-content-and-code.md)
     * [Content Entry, Drafts, and Publishing](services/web-engine/guides/content-entry-drafts-and-publishing.md)
     * [Creating and Adding a Team](services/web-engine/guides/adding-a-team.md)
