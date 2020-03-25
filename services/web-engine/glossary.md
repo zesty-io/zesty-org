@@ -140,6 +140,10 @@ The Single Page is a type of content model. Single pages can be used to create a
 
 Site Crawler will check your site for any bad links and suggest ways to fix them. You can find it in the Health Section.
 
+### Snippet
+
+A snippet is a file in the Editor that contains a piece of code that is abstracted from a view\(s\). Snippets are often used for repetitive pieces of code such as a header or footer and for complex pieces of codes to simplify a view. To add a snippet in a view use the [Parsley include](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) call.  
+
 ### Support Page
 
 The Support Page is a view in the Accounts interface which shows users how to access various channels of support such as Slack, email, and documentation.
