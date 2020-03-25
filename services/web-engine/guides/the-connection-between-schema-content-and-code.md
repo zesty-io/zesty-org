@@ -1,7 +1,8 @@
 ---
 description: >-
-  The connection between how Schema, Content, and Code work together may not be
-  readily clear, however this article should help clarify those connections.
+  The connection between how Schema, Content, and Code (Editor)) work together
+  may not be readily clear, however this article should help clarify those
+  connections.
 ---
 
 # The Connection Between Schema, Content, and Code
@@ -52,7 +53,7 @@ Each field's name is shown above it. The name that is shown is that field's Fiel
 
 ![Field labels, which were assign in the Schema section, shown in the Content section.](../../../.gitbook/assets/field-labels-in-conent-section.png)
 
-### Code
+### Code \(Editor\)
 
 We need to know which content model\(s\) and/or field\(s\) you want to code in before you get started. Sometimes it's easy to identify the items that you need, especially if they were named based on their function \(e.g., a blog page named Blog, or blog tag set named Blog Tags\).
 
