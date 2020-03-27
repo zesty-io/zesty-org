@@ -31,6 +31,10 @@ At its core, Parsley can reference any Field from any content entry from any con
 * Modify Images and create new image files 
 * And much more
 
+{% hint style="warning" %}
+Parsley _only_ works in Views. It does not work in Style Sheets or Scripts. Do not use Parsley in style sheet or JavaScript files. In order to use Parsley in styles and scripts use  `<script>` or `<style>` tags in views or use inline styles.
+{% endhint %}
+
 ### Basic Rules
 
 * Curly brackets \(single or double\):
