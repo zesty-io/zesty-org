@@ -22,11 +22,11 @@ There is no need to download your files locally. Everything is ready for you to 
 
 ### Style Sheets
 
-Zesty.io is equipped to compile LESS, SCSS, and CSS files for styling. There is no need to download any preprocessors. Simply add your code and the CSS will integrate seamlessly. Learn more about style sheets [here](/stylesheets).
+Zesty.io is equipped to compile LESS, SCSS, and CSS files for styling. There is no need to download any preprocessors. Simply add your code and the CSS will integrate seamlessly. Learn more about style sheets [here](https://zesty.org/services/web-engine/interface/editor/stylesheets).
 
 ### JavaScript
 
-Similarly JS files are ready to to be added and edited. These are rendered and linked at the Head of the property following the style sheets. Learn more about JavaScript [here](/javascript).
+Similarly JS files are ready to to be added and edited. These are rendered and linked at the Head of the property following the style sheets. Learn more about JavaScript [here](https://zesty.org/services/web-engine/interface/editor/javascript).
 
 ### Templating
 
