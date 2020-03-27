@@ -166,6 +166,10 @@ Use double curly brackets `{{ }}` to start a Parsley statement. Use single curly
 
 Use `(**` to start and `**)` to end comments that will not render in the output of the website.
 
+{% hint style="warning" %}
+Parsley _only_ works in Views. It does not work in Style Sheets or Scripts.
+{% endhint %}
+
 **Defining Scope**
 
 When we're referencing a field on a page we need to use Parsley to call that field within its proper scope using `{{ this. }}`.  `this` provides the scope and once the user types a `.` or period, Zesty.io will populate a list of available fields and calls for that content model. HTML can be wrapped around Parsley calls too; for example`<h1>{{ this.page_title }}</h1>`
