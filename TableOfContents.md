@@ -81,7 +81,7 @@
       * [Javascript](services/web-engine/interface/editor/javascript.md)
       * [Save and Quick Publish](services/web-engine/interface/editor/save-and-quick-publish.md)
       * [String Modifiers](services/web-engine/interface/editor/string-modifiers.md)
-      * [Stylesheets](services/web-engine/interface/editor/stylesheets.md)
+      * [Style Sheets](services/web-engine/interface/editor/stylesheets.md)
       * [Importing Code and Styles](services/web-engine/interface/editor/importing-code-and-styles.md)
       * [Version Control](services/web-engine/interface/editor/version-control.md)
     * [Leads](services/web-engine/interface/leads.md)

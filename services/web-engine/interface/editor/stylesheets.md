@@ -5,7 +5,7 @@ description: >-
   and minified CSS file to serve for your inst
 ---
 
-# Stylesheets
+# Style Sheets
 
 ### Overview
 
@@ -38,7 +38,7 @@ _Errors are returned for broken SASS at compile time._
 
 **ie8.css**
 
-If a file is given the name ie8.css, it will be ignored by the minification process and be included in its own href link in the header after the main minified CSS file is added.
+If a file is given the name ie8.css, it will be ignored by the minification process and is included in its own href link in the header after the main minified CSS file is added.
 
 ### Auto Added Stylesheet Files
 
