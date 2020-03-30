@@ -22,6 +22,7 @@
     * [The Connection Between Schema, Content, and Code](services/web-engine/guides/the-connection-between-schema-content-and-code.md)
     * [Content Entry, Drafts, and Publishing](services/web-engine/guides/content-entry-drafts-and-publishing.md)
     * [Creating and Adding a Team](services/web-engine/guides/adding-a-team.md)
+    * [Adding Instances to EcoSystems](services/web-engine/guides/adding-instances-to-ecosystems.md)
     * [Password Protect Web Engine Preview](services/web-engine/guides/password-protect-web-engine-preview.md)
     * [Setting up Google Analytics for GDPR](services/web-engine/guides/setting-up-google-analytics-for-gdpr.md)
     * [How Webpages are Assembled](services/web-engine/guides/how-webpages-are-assembled.md)
