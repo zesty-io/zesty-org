@@ -9,7 +9,7 @@ description: Instances in ecosystem can easily share media with their ecosystem 
 Users might have a use case for creating a group of interrelated instances. We call those interrelated instances an EcoSystem. When EcoSystems are created in Zesty.io they can share a media bin between all of the instances in the EcoSystem. The shared media bin allows assets to be shared so they won't need to be uploaded to every new instance in the EcoSystem.
 
 {% hint style="info" %}
-Only newly created instances can be added to an EcoSystem
+This guide only shows how instances are added to EcoSystems during the creation process. 
 {% endhint %}
 
 ### Steps to Adding Instances to EcoSystems
