@@ -31,6 +31,23 @@ Take your copied Heroku domain from step 3 and prepend `https://` to it and appe
 
 **Example form HTML Form code to put on your Zesty.io template in the Code Editor:**
 
+```text
+<form enctype="multipart/form-data" action="http://zesty-php-file-capture-test.herokuapp.com/" method="POST">
+    
+    <!-- MAX_FILE_SIZE must precede the file input field -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+    
+    <!-- RETURN_URL must precede the file input field, used after file is uploaded -->
+    <input type="hidden" name="redirect_target" value="http://www.your-website.com/thank-you/" />
+    
+    
+    <!-- Name of input element determines name in $_FILES array -->
+    <label>Send this file: <input name="userfile" type="file" /></label>
+    <br>
+    <input type="submit" value="Send File" />
+</form>
+```
+
 Save in Zesty.io, goto the page in Zesty.io's live preview, and Submit a form. Depending on your file size and internet connection, the time may vary before the page return to the thank you call back. You can verify the file uploaded by visting your Heroku domain `https://zesty-php-file-capture-test.herokuapp.com/list.php` as that will show you files uploaded. Note, every time to redeploy the Heroku site, all files will be wiped out. From here you pass the files to your favorite storage service like AWS S3 or Dropbox.
 
 ### Congratulations! Now let's dive deeper.
