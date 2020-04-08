@@ -27,7 +27,7 @@ After clicking deploy, you will see two buttons `manage app` and `view`, click `
 
 ### Step 2: create the Form with Files in Zesty.io
 
-Take your copied Heroku domain from step 3 and prepend `https://` to it and append `/submission`. The full URL should look something like this: `https://zesty-php-file-capture-test.herokuapp.com/submission`. This is the URL you will put in the form action parameter on the `<form>` tag.
+Take your copied Heroku domain from step 1 and prepend `https://`. The full URL should look something like this: `https://zesty-php-file-capture-test.herokuapp.com/`. This is the URL you will put in the form action parameter on the `<form>` tag.
 
 **Example form HTML Form code to put on your Zesty.io template in the Code Editor:**
 
