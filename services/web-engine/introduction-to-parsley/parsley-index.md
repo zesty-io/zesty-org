@@ -406,7 +406,7 @@ Example
 
 ### include
 
-The `include` call is a prompt to reference the code in any other HTML file or input, including page views, snippets and endpoints.
+The `include` call is a prompt to reference the code in any other HTML file or input, including page views, snippets and endpoints. 
 
 ```text
 {{ include header }}
