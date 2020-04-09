@@ -406,7 +406,7 @@ Example
 
 ### include
 
-The `include` call is a prompt to reference the code in any other HTML file or input, including page views, snippets and endpoints. 
+The [`include`](https://zesty.org/services/web-engine/introduction-to-parsley/include) call is a prompt to reference the code in any View which includes views, snippets, and endpoints. 
 
 ```text
 {{ include header }}
