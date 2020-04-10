@@ -21,7 +21,7 @@ If you already have a Heroku account, proceed to click the button below. If you 
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/zesty-io/example-form-file-post-with-return-php)
 
-That button will open a Heroku prompt to create a new server using this PHP repository we created for this tutorial: [Example Post File Capture Project for PHP](https://github.com/zesty-io/example-form-file-post-with-return-php). When you are done with this tutorial you may fork this repository and customize it to suit your needs. In the Heroku prompt, it will asks for config variables, paste your thank you page url \([https://www.your-website.com/thank-you/](https://www.your-website.com/thank-you/)\) and your file size limit **FILE\_SIZE\_LIMIT**
+That button will open a Heroku prompt to create a new server using this PHP repository we created for this tutorial: [Example Post File Capture Project for PHP](https://github.com/zesty-io/example-form-file-post-with-return-php). When you are done with this tutorial you may fork this repository and customize it to suit your needs. In the Heroku prompt, it will ask for a config variable: your file size limit **FILE\_SIZE\_LIMIT**
 
 After clicking deploy, you will see two buttons `manage app` and `view`, click `manage app`. It will open a dashboard with six menu items. The last one is `settings`, click settings. Scroll down to domains, and copy the _Heroku Domain_ provided.
 
