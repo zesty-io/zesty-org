@@ -23,6 +23,8 @@ There are 4 steps to making your site accessible to the public.
 
 Before beginning the process to send your site live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
 
+![Standard DNS setup for Customers on Zesty.io Cloud](../../../.gitbook/assets/basic-dns-setup.png)
+
 ## Configure HTTPS & WWW Settings
 
 If necessary configure your HTTPS and WWW settings before launching your site. Jump to [step 1](https://zesty.org/services/web-engine/guides/how-to-launch-an-instance#1-launch-instance) if your site will not be using HTTPS or force prepending your domain with WWW, otherwise continue reading for instructions on accessing these settings.
