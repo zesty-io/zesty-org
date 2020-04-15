@@ -140,10 +140,14 @@
   * [React Ruby Build Guide](tools/code-examples/ruby-build-guide.md)
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
-<!-- * [Node.js](tools/node.js/README.md)
-  * [Zesty.io Node API Wrapper](tools/node.js/zesty.io-node-api-wrapper.md)
-  * [Node Package \(PullZesty\)](tools/node.js/pullzesty.md) -->
+
 * [node-sdk](tools/node-sdk/Home.md)
+  * [Instantiation](tools/node-sdk/instantiation.md)
+  * [Instance](tools/node-sdk/instance.md)
+  * [Media](tools/node-sdk/media.md)
+  * [Accounts](tools/node-sdk/account.md)
+  * [Auth](tools/node-sdk/auth.md)
+
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)
   * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
