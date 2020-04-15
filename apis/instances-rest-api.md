@@ -18,7 +18,7 @@ Full documentation available in multiple programming languages an be found here 
 
 Node Wrapper: Currently used in Cloud Functions, customer projects, and the ATOM Plugin [https://atom.io/packages/zestyio-atom](https://atom.io/packages/zestyio-atom)
 
-{% page-ref page="../headless-cms/node.js/zesty.io-node-api-wrapper.md" %}
+{% page-ref page="../tools/node.js/zesty.io-node-api-wrapper.md" %}
 
 **NODE SDK:** is a work in Progress
 

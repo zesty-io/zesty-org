@@ -14,7 +14,7 @@ Zesty.io is a cloud web content management system \(WCMS\) that is API driven wi
 
 ### What makes Zesty.io different?
 
-We architected Zesty.io to meet the needs of any content usage such as a [traditional website](services/web-engine/) CMS, a [Headless CMS API](headless-cms/code-examples/) interface, a modern JamStack \(JavaScript, API, Markup\) implementation, or a combination of solutions. This means Zesty.io can power content beyond websites into new digital mediums like smart devices, video game data, and mobile applications. As a cloud service, we are constantly improving our technology, often daily, with updates that positively affect all users and experiences built on the platform.
+We architected Zesty.io to meet the needs of any content usage such as a [traditional website](services/web-engine/) CMS, a [Headless CMS API](tools/code-examples/) interface, a modern JamStack \(JavaScript, API, Markup\) implementation, or a combination of solutions. This means Zesty.io can power content beyond websites into new digital mediums like smart devices, video game data, and mobile applications. As a cloud service, we are constantly improving our technology, often daily, with updates that positively affect all users and experiences built on the platform.
 
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with.
 
@@ -40,7 +40,7 @@ Experiences need to be delivered fast. Whether it is a JSON API call or a full w
 
 The ability to repurpose content to work on multiple devices like phones, browsers, and smart devices gives business' marketing teams and developers the upper hand with non-siloed content and short term experiences.
 
-{% page-ref page="headless-cms/code-examples/" %}
+{% page-ref page="tools/code-examples/" %}
 
 ### The Core Technology Behind Zesty.io
 
@@ -52,7 +52,7 @@ Start exploring documentation on the left or jump to a URL above to read experie
 
 * [Instances API](https://instances-api.zesty.org/)
 * [Accounts API](https://accounts-api.zesty.org/)
-* [Headless Zesty](headless-cms/code-examples/)
+* [Headless Zesty](tools/code-examples/)
 
 ## About Zesty.io
 

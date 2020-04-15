@@ -129,23 +129,24 @@
 * [Instances REST API](apis/instances-rest-api.md)
 * [Auth API](apis/auth-api.md)
 
-## Headless <a id="headless-cms"></a>
+## Tools & Resources <a id="headless-cms"></a>
 
-* [Headless Code Examples](headless-cms/code-examples/README.md)
-  * [React](headless-cms/code-examples/react/README.md)
-    * [Guide \(Local React App\)](headless-cms/code-examples/react/guide-local-react-app.md)
-    * [Guide \(Remote React App\)](headless-cms/code-examples/react/guide-remote-react-app.md)
-  * [Swift](headless-cms/code-examples/swift/README.md)
-    * [iOS App Guide](headless-cms/code-examples/swift/ios-app-guide.md)
-  * [React Ruby Build Guide](headless-cms/code-examples/ruby-build-guide.md)
-  * [Jekyll Static Site](headless-cms/code-examples/guide.md)
-  * [Hugo Static Site](headless-cms/code-examples/guide-1.md)
-* [Node.js](headless-cms/node.js/README.md)
-  * [Zesty.io Node API Wrapper](headless-cms/node.js/zesty.io-node-api-wrapper.md)
-  * [Node Package \(PullZesty\)](headless-cms/node.js/pullzesty.md)
-* [Salesforce Commerce Cloud](headless-cms/salesforce-commerce-cloud.md)
-* [Smart Devices](headless-cms/smart-devices/README.md)
-  * [Amazon Fire TV and Roku](headless-cms/smart-devices/amazon-fire-tv-and-roku.md)
+* [Headless Code Examples](tools/code-examples/README.md)
+  * [React](tools/code-examples/react/README.md)
+    * [Guide \(Local React App\)](tools/code-examples/react/guide-local-react-app.md)
+    * [Guide \(Remote React App\)](tools/code-examples/react/guide-remote-react-app.md)
+  * [Swift](tools/code-examples/swift/README.md)
+    * [iOS App Guide](tools/code-examples/swift/ios-app-guide.md)
+  * [React Ruby Build Guide](tools/code-examples/ruby-build-guide.md)
+  * [Jekyll Static Site](tools/code-examples/guide.md)
+  * [Hugo Static Site](tools/code-examples/guide-1.md)
+<!-- * [Node.js](tools/node.js/README.md)
+  * [Zesty.io Node API Wrapper](tools/node.js/zesty.io-node-api-wrapper.md)
+  * [Node Package \(PullZesty\)](tools/node.js/pullzesty.md) -->
+* [node-sdk](tools/node-sdk/Home.md)
+* [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
+* [Smart Devices](tools/smart-devices/README.md)
+  * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
 
 ## Community
 
