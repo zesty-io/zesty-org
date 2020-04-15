@@ -148,7 +148,7 @@
   * [Accounts](tools/node-sdk/account.md)
   * [Auth](tools/node-sdk/auth.md)
 
-* [atom plugin](tools/atom-plugin.md)
+* [Atom IDE](tools/atom-plugin.md)
 
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)

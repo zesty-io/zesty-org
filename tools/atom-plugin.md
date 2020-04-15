@@ -1,5 +1,5 @@
 # Atom IDE Plugin
 
-Use the Atom IDE plugin to edit your instances code files locally and get automatics syncing to the remote instance. 
+Use the Zesty.io [Atom IDE](https://atom.io/) package to edit your instances code files locally and get automatic syncing to your remote instance. 
 
 [Get Started](https://atom.io/packages/zestyio-atom)
