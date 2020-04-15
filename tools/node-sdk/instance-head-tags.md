@@ -2,7 +2,7 @@ HTML documents contain a `<head>` tag which allows for child `<meta>`, `<link>`,
 
 ---
 
-*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation.md)*
 
 
 Get all head tags:
