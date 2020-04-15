@@ -150,8 +150,8 @@
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
 
-
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
+
 * [Smart Devices](tools/smart-devices/README.md)
   * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
 
