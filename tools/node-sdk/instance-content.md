@@ -1,7 +1,7 @@
 Content items are always accessed relative to their model, so a model ZUID is required for each call. [API documentation](https://instances-api.zesty.org/#74adb209-9eea-0561-e98b-75a2a1b9882b).
 
 ---
-*All examples assume a properly [authenticated SDK instance](https://github.com/zesty-io/node-sdk/wiki/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*
 
 **Get all content items for a model:**
 

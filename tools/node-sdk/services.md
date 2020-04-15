@@ -1,7 +1,7 @@
 The Zesty.io platform is powered by 4 main APIs. All of which are available with the node-sdk.
 
-* [`instance-api`](https://github.com/zesty-io/node-sdk/wiki/instance)
-* [`accounts-api`](https://github.com/zesty-io/node-sdk/wiki/account)
-* [`media-api`](https://github.com/zesty-io/node-sdk/wiki/media)
-* [`auth-api`](https://github.com/zesty-io/node-sdk/wiki/auth)
+* [`instance-api`](tools/node-sdk/instance)
+* [`accounts-api`](tools/node-sdk/account)
+* [`media-api`](tools/node-sdk/media)
+* [`auth-api`](tools/node-sdk/auth)
 

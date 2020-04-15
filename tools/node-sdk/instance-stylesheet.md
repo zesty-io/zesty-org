@@ -2,7 +2,7 @@ CRUD on Zesty.io stylesheet files.
 
 ---
 
-*All examples assume a properly [authenticated SDK instance](https://github.com/zesty-io/node-sdk/wiki/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*
 
 
 Get all stylesheets:

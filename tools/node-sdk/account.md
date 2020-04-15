@@ -2,4 +2,4 @@ Once you have an authenticated SDK instance you can begin requesting and/or writ
 
 ---
 
-*All examples assume a properly [authenticated SDK instance](https://github.com/zesty-io/node-sdk/wiki/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*

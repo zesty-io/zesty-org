@@ -4,7 +4,7 @@ AuditTrail entries can only be retrived. Creation is reserved for internal Zesty
 
 ---
 
-*All examples assume a properly [authenticated SDK instance](https://github.com/zesty-io/node-sdk/wiki/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*
 
 Get all audit trail entries:
 ```JavaScript

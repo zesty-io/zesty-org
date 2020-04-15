@@ -2,7 +2,7 @@
 
 Groups act as a way to organize media assets into related collections. They can also be parented to create related group hierarchies.
 
-*All examples assume a properly [authenticated SDK instance](https://github.com/zesty-io/node-sdk/wiki/instantiation)*
+*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation)*
 
 **Get all groups from a bin:**
 ```javascript
