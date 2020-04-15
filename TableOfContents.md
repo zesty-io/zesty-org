@@ -129,7 +129,7 @@
 * [Instances REST API](apis/instances-rest-api.md)
 * [Auth API](apis/auth-api.md)
 
-## Tools & Resources <a id="headless-cms"></a>
+## Tools & Resources <a id="tools"></a>
 
 * [Headless Code Examples](tools/code-examples/README.md)
   * [React](tools/code-examples/react/README.md)
@@ -147,6 +147,8 @@
   * [Media](tools/node-sdk/media.md)
   * [Accounts](tools/node-sdk/account.md)
   * [Auth](tools/node-sdk/auth.md)
+
+* [atom plugin](tools/atom-plugin.md)
 
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)
