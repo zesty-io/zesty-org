@@ -131,6 +131,15 @@
 
 ## Tools & Resources <a id="tools"></a>
 
+* [Atom Package](tools/atom-package.md)
+
+* [node-sdk](tools/node-sdk/node-sdk.md)
+  * [Instantiation](tools/node-sdk/instantiation.md)
+  * [Instance](tools/node-sdk/instance.md)
+  * [Media](tools/node-sdk/media.md)
+  * [Accounts](tools/node-sdk/account.md)
+  * [Auth](tools/node-sdk/auth.md)
+
 * [Headless Code Examples](tools/code-examples/README.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide \(Local React App\)](tools/code-examples/react/guide-local-react-app.md)
@@ -141,14 +150,6 @@
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
 
-* [node-sdk](tools/node-sdk/node-sdk.md)
-  * [Instantiation](tools/node-sdk/instantiation.md)
-  * [Instance](tools/node-sdk/instance.md)
-  * [Media](tools/node-sdk/media.md)
-  * [Accounts](tools/node-sdk/account.md)
-  * [Auth](tools/node-sdk/auth.md)
-
-* [Atom Package](tools/atom-package.md)
 
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)
