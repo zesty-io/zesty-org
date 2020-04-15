@@ -141,7 +141,7 @@
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
 
-* [node-sdk](tools/node-sdk/Home.md)
+* [node-sdk](tools/node-sdk/node-sdk.md)
   * [Instantiation](tools/node-sdk/instantiation.md)
   * [Instance](tools/node-sdk/instance.md)
   * [Media](tools/node-sdk/media.md)
