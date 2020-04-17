@@ -132,22 +132,20 @@
 ## Tools & Resources <a id="tools"></a>
 
 * [Atom Package](tools/atom-package.md)
-
-* [node-sdk](tools/node-sdk/node-sdk.md)
+* [node-sdk](tools/node-sdk/README.md)
   * [Instantiation](tools/node-sdk/instantiation.md)
-  * [Instance](tools/node-sdk/instance.md)
-    * [Content](tools/node-sdk/instance-content.md)
-    * [Model & Fields](tools/node-sdk/instance-model.md)
-    * [Stylesheet](tools/node-sdk/instance-stylesheet.md)
-    * [Views](tools/node-sdk/instance-view.md)
-    * [Audit Trail](tools/node-sdk/instance-audit-trail.md)
-    * [Head Tags](tools/node-sdk/instance-head-tags.md)
-  * [Media](tools/node-sdk/media.md)
-    * [Files](tools/node-sdk/media-file.md)
-    * [Groups](tools/node-sdk/media-group.md)
+  * [Instance](tools/node-sdk/instance/README.md)
+    * [Content](tools/node-sdk/instance/instance-content.md)
+    * [Model & Fields](tools/node-sdk/instance/instance-model.md)
+    * [Stylesheet](tools/node-sdk/instance/instance-stylesheet.md)
+    * [Views](tools/node-sdk/instance/instance-view.md)
+    * [Audit Trail](tools/node-sdk/instance/instance-audit-trail.md)
+    * [Head Tags](tools/node-sdk/instance/instance-head-tags.md)
+  * [Media](tools/node-sdk/media/README.md)
+    * [Files](tools/node-sdk/media/media-file.md)
+    * [Groups](tools/node-sdk/media/media-group.md)
   * [Accounts](tools/node-sdk/account.md)
   * [Auth](tools/node-sdk/auth.md)
-
 * [Headless Code Examples](tools/code-examples/README.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide \(Local React App\)](tools/code-examples/react/guide-local-react-app.md)
@@ -157,9 +155,7 @@
   * [React Ruby Build Guide](tools/code-examples/ruby-build-guide.md)
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
-
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
-
 * [Smart Devices](tools/smart-devices/README.md)
   * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
 

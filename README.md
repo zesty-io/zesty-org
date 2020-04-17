@@ -20,19 +20,13 @@ We see content as a blank canvas, and because of that, we made a system that all
 
 {% page-ref page="content-instance/" %}
 
-
-
 We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add features to our [Web Engine](services/web-engine/). Learn how to use Zesty.io with these platform tours and guides.
 
 {% page-ref page="services/web-engine/" %}
 
-
-
 Traditionally, content is siloed to the experience it was created for, and often locked up the software installation it was created on. With Zesty.io, content can be shared between different instances and experiences built outside of the Zesty.io system.
 
 {% page-ref page="services/ecosystems.md" %}
-
-
 
 Experiences need to be delivered fast. Whether it is a JSON API call or a full website page loading, we make sure that all requests are cached at the edge to ensure your end user is delivered a fast experience without thinking about load time or uptime.
 

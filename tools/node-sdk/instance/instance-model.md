@@ -1,10 +1,13 @@
-Retrieval of content models and model fields. 
+# Model & Fields
+
+Retrieval of content models and model fields.
 
 These functions use these `instances-api` endpoints:
-- [Content Models](https://instances-api.zesty.org/#5f8c1a85-1775-f67b-c5e0-a061f69e7ddb)
-- [Fields](https://instances-api.zesty.org/#689c935d-a46c-8eef-cf20-df60f55c38d3)
 
-*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation.md)*
+* [Content Models](https://instances-api.zesty.org/#5f8c1a85-1775-f67b-c5e0-a061f69e7ddb)
+* [Fields](https://instances-api.zesty.org/#689c935d-a46c-8eef-cf20-df60f55c38d3)
+
+_All examples assume a properly_ [_authenticated SDK instance_](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/instantiation.md)
 
 **Get all content models:**
 
@@ -49,3 +52,4 @@ try {
   console.log(err);
 }
 ```
+

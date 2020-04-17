@@ -2,7 +2,7 @@
 
 Media is how you can manage assets for an instance. Using media you can upload any type of file to get a globally cached URL for that asset.
 
-_All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation.md)_
+_All examples assume a properly_ [_authenticated SDK instance_](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/instantiation.md)
 
 **Create a file:**
 
@@ -28,3 +28,4 @@ try {
   console.log(err);
 }
 ```
+

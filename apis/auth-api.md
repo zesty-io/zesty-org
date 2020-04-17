@@ -10,9 +10,15 @@ Permissions are managed at the service level, for example, to manage permissions
 
 See Rest Documentation: [https://auth-api.zesty.org/?version=latest](https://auth-api.zesty.org/?version=latest)
 
-## Developer Tokens
+## API Tokens for Developers \(Developer Tokens\)
 
-In addition to authentication through the Auth API, users may create a semi-permanent Developer Token to access the APIs. A Developer Token is a value that represents a Role and is used to make requests to the APIs. When users perform requests with a Developer Token, it's as if they were performing the requests with the same privileges as that Role. This allows users to make requests to the APIs without having to login; once the Developer Token is created, it is valid until its expiration date. To get the Roles available on an Instance, use the [Get Instance Roles](https://accounts-api.zesty.org/?version=latest#e2ac76b2-244c-4570-9734-8e48288e3477) endpoint which will return all the Roles (and their IDs) associated with the Instance. A Token may be associated with any Role, however **only Admins and Owners on an Instance can issue Tokens**. The Developer Token is then used in place of a Session Token when making API requests.
+In addition to authentication through the Auth API, users may create a semi-permanent Developer Token to access the APIs. A Developer Token is a value that represents a Role and is used to make requests to the APIs. When users perform requests with a Developer Token, it's as if they were performing the requests with the same privileges as that Role. This allows users to make requests to the APIs without having to login; once the Developer Token is created, it is valid until its expiration date. To get the Roles available on an Instance, use the [Get Instance Roles](https://accounts-api.zesty.org/?version=latest#e2ac76b2-244c-4570-9734-8e48288e3477) endpoint which will return all the Roles \(and their IDs\) associated with the Instance. 
+
+{% hint style="warning" %}
+Only users with **Admin** or **Owner** roles of an instance can issue a Token
+{% endhint %}
+
+A Token may be associated with any Role on an instance and will follow that roles privileges. For security reasons, only Admins and Owners on an Instance can issue Tokens. The Developer Token may be used in place of a Session Token when making API requests. This is useful for writing scripts or making local editing in IDE plugins like ATOM more seamless.
 
 To create and manage your Developer Tokens, please see [Accounts API Tokens](https://accounts-api.zesty.org/?version=latest#2d602695-3f14-44c2-b97a-212c402250f6).
 

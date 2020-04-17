@@ -1,13 +1,12 @@
+# Views
+
 CRUD on view files.
 
----
+_All examples assume a properly_ [_authenticated SDK instance_](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/instantiation.md)
 
-*All examples assume a properly [authenticated SDK instance](tools/node-sdk/instantiation.md)*
+Get all views: \(returns an array of view objects\)
 
-
-Get all views:
-(returns an array of view objects)
-```JavaScript
+```javascript
 try {
   const res = await sdk.instance.getViews();
 } catch (err) {
@@ -16,7 +15,8 @@ try {
 ```
 
 Get a view by ZUID:
-```JavaScript
+
+```javascript
 try {
   const viewZUID = "11=..."; // View ZUIDS begin with 11
   const res = await sdk.instance.getView(viewZUID);
@@ -25,8 +25,9 @@ try {
 }
 ```
 
-Create a view (snippet):
-```JavaScript
+Create a view \(snippet\):
+
+```javascript
 const type = "snippet";
 const fileName = "navigation";
 const code = "my view content";
@@ -43,8 +44,9 @@ try {
 }
 ```
 
-Create a view (endpoint):
-```JavaScript
+Create a view \(endpoint\):
+
+```javascript
 const type = "ajax-json";
 const fileName = "/special-endpoint.json";
 const code = JSON.stringify({ foo: "bar" });
@@ -61,9 +63,9 @@ try {
 }
 ```
 
-Update a view:
-This will only updated view and **will not** publish it.
-```JavaScript
+Update a view: This will only updated view and **will not** publish it.
+
+```javascript
 const viewZUID = "11-...";
 const code = "my view content";
 const payload = {
@@ -78,7 +80,8 @@ try {
 ```
 
 Publish a view:
-```JavaScript
+
+```javascript
 const viewZUID = "11-...";
 const version = 1
 
@@ -88,26 +91,4 @@ try {
   console.error(err);
 }
 ```
-<!-- 
-Get all versions of a view:
-```JavaScript
-const viewZUID = "11-...";
 
-try {
-  const res = await sdk.instance.getViewVersions(viewZUID);
-} catch (err) {
-  console.error(err);
-}
-```
-
-Get a specific version of a view:
-```JavaScript
-const viewZUID = "11-...";
-const viewVersionNumber = 2;
-
-try {
-  const res = await sdk.instance.getViewVersion(viewZUID, viewVersionNumber);
-} catch (err) {
-  console.error(err);
-}
-``` -->

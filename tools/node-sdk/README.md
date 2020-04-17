@@ -1,12 +1,14 @@
-# Getting Started
+# node-sdk
+
 This is a basic example of how to setup an authenticated SDK instance and request data.
 
-*Requires [Nodejs](https://nodejs.org/) installed on your system.
+\*Requires [Nodejs](https://nodejs.org/) installed on your system.
 
-1) Use a package manager to install the SDK. e.g. `npm install @zesty-io/sdk`
+1\) Use a package manager to install the SDK. e.g. `npm install @zesty-io/sdk`
 
-2) Create an example file
-```JavaScript
+2\) Create an example file
+
+```javascript
 // example/basic/index.js
 
 const SDK = require("@zesty-io/sdk");
@@ -37,9 +39,10 @@ async function main() {
 main();
 ```
 
-3) Run the example with `node index.js`
+3\) Run the example with `node index.js`
 
 ## Further explantions of the example code
 
-1. [Instantiation of an authenticated instance](tools/node-sdk/Instantiation.md)
-2. [Requesting instance data](tools/node-sdk/Instantiation.md)
+1. [Instantiation of an authenticated instance](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)
+2. [Requesting instance data](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)
+
