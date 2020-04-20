@@ -3,26 +3,40 @@ description: Authenticate API for Zesty.io Users
 ---
 
 # Auth API
+Complete API Reference: [https://auth-api.zesty.org](https://auth-api.zesty.org/?version=latest)
 
-Auth API is used to authenticate users with Zesty.io, which returns a token that grants to access services like Instances API, Accounts API, and Media API. Auth was setup as a stand alone service so it could connect to many services in our platform.
+Authentication with Zesty.io is handled by the Auth API which issues a token that grants access to the [Instances API](/apis/instances-rest-api), [Accounts API](/apis/accounts-rest-api), and [Media API](). 
 
-Permissions are managed at the service level, for example, to manage permissions on instances, you would use the [Accounts API](https://accounts-api.zesty.org/) to do so
+Roles and permission are managed by the [Accounts API](https://accounts-api.zesty.org/).
 
-See Rest Documentation: [https://auth-api.zesty.org/?version=latest](https://auth-api.zesty.org/?version=latest)
+There are 2 types of authentication
+- User 
+- Token-based
 
-## API Tokens for Developers \(Developer Tokens\)
+## User Authentication
 
-In addition to authentication through the Auth API, users may create a semi-permanent Developer Token to access the APIs. A Developer Token is a value that represents a Role and is used to make requests to the APIs. When users perform requests with a Developer Token, it's as if they were performing the requests with the same privileges as that Role. This allows users to make requests to the APIs without having to login; once the Developer Token is created, it is valid until its expiration date. To get the Roles available on an Instance, use the [Get Instance Roles](https://accounts-api.zesty.org/?version=latest#e2ac76b2-244c-4570-9734-8e48288e3477) endpoint which will return all the Roles \(and their IDs\) associated with the Instance. 
+User authentication is done by providing a specific user account email and password combination. When authenticating as a user you are issued a session token. These are short lived 30 minute sessions that are extended whenever an authenticated action is taken. e.g. Saving content.
 
-{% hint style="warning" %}
-Only users with **Admin** or **Owner** roles of an instance can issue a Token
-{% endhint %}
+Ending a user authenticated session can be done by explicitly logging out. This ends the specifically referenced session. i.e. If you are logged in on another device it will not end that session.
 
-A Token may be associated with any Role on an instance and will follow that roles privileges. For security reasons, only Admins and Owners on an Instance can issue Tokens. The Developer Token may be used in place of a Session Token when making API requests. This is useful for writing scripts or making local editing in IDE plugins like ATOM more seamless.
+## Token-based Authentication
 
-To create and manage your Developer Tokens, please see [Accounts API Tokens](https://accounts-api.zesty.org/?version=latest#2d602695-3f14-44c2-b97a-212c402250f6).
+Token-based authentication is handled by the [Accounts API](https://accounts-api.zesty.org/?version=latest#2d602695-3f14-44c2-b97a-212c402250f6). The issued access tokens are opaque, meaning they can not be parsed to determine their underlying properties such as; instance, role or owner. They are semi-permanent tokens which allow their bearers API access. In order to create an access token you must have an authenticated user session. Only users with **Admin** or **Owner** roles of an instance can issue a token. Access tokens are scoped to instances. Allowing them to take user like actions on the scoped instances. e.g. Creating, Publishing, etc...
 
 {% hint style="info" %}
-**Please note:** The value for the Developer Token will **only** be visible upon creation; please store it in a safe location.
+**Please Note:** The value of Access Token will **only** be visible upon creation; please store it in a safe location.
 {% endhint %}
 
+Every access token is assigned a role which describes the permissions the token has against it's scoped instances. 
+
+{% hint style="info" %}
+**Please Note:** Access Token are secrets which should be guarded carefully and every precaution taken to avoid leaking them. Simply having a token allows the holder that tokens scoped access.
+{% endhint %}
+
+If you want to find out the available roles on an instance use the [Get Instance Roles](https://accounts-api.zesty.org/?version=latest#e2ac76b2-244c-4570-9734-8e48288e3477) endpoint which will return all the roles \(and their IDs\) associated with the Instance. 
+
+Access tokens are useful for automated API usage. e.g. CI/CD flows, migrating content, connecting third-party services, etc...
+
+All actions taken with an access token is recorded by the [AuditTrail API](https://instances-api.zesty.org/?version=latest#026123c3-086e-42bd-9eda-86c2b5de33a2), similiar to users. AuditTrail logs will note the token which was used for the action. These logs will not contain user information. Meaning if a token is used in a manual process, e.g. running a script, the log will not indicate the person who ran that process.
+
+Revoking tokens can be done with the Accounts API. If a token is exposed it should be cycled by deleting the token and creating a new one.
