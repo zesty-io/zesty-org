@@ -21,7 +21,7 @@ Ending a user authenticated session can be done by explicitly logging out. This 
 
 ## Token-based Authentication
 
-Token-based authentication is handled by the [Accounts API](https://accounts-api.zesty.org/?version=latest#2d602695-3f14-44c2-b97a-212c402250f6). The issued access tokens are opaque, meaning they can not be parsed to determine their underlying properties such as; role, instance or owner. They are semi-permanent tokens which allow their bearers API access. In order to create an access token you must have an authenticated user session. Only users with **Admin** or **Owner** roles of an instance can issue a token. 
+Token-based authentication is handled by the [Accounts API](https://accounts-api.zesty.org/?version=latest#2d602695-3f14-44c2-b97a-212c402250f6). The issued access tokens are opaque, meaning they can not be parsed to determine their underlying properties such as; role, instance or owner. They are valid for 90 days from creation. In order to create an access token you must have an authenticated user session. Only users with **Admin** or **Owner** roles of an instance can issue a token. 
 
 Access tokens are assigned a role and roles are scoped to instances. Allowing them to take user like actions on the scoped instances. e.g. Creating, Publishing, etc... Tokens can be assigned existing system roles or a custom role defined on an instance. Custom roles are encouraged as they allow providing only the specific access a token needs. Reducing the potential impact of a leaked token. 
 
