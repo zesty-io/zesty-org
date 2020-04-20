@@ -1,4 +1,8 @@
-# node-sdk
+---
+description: Zesty.io Software developer kit (SDK) with Node SDK
+---
+
+# Node SDK
 
 This is a basic example of how to setup an authenticated SDK instance and request data.
 
@@ -41,7 +45,9 @@ main();
 
 3\) Run the example with `node index.js`
 
-## Further explantions of the example code
+{% page-ref page="instantiation.md" %}
+
+## Further explanations of the example code
 
 1. [Instantiation of an authenticated instance](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)
 2. [Requesting instance data](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)

@@ -131,8 +131,8 @@
 
 ## Tools & Resources <a id="tools"></a>
 
-* [Atom Package](tools/atom-package.md)
-* [node-sdk](tools/node-sdk/README.md)
+* [Atom IDE Package](tools/atom-package.md)
+* [Node SDK](tools/node-sdk/README.md)
   * [Instantiation](tools/node-sdk/instantiation.md)
   * [Instance](tools/node-sdk/instance/README.md)
     * [Content](tools/node-sdk/instance/instance-content.md)
