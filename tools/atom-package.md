@@ -6,7 +6,9 @@ description: >-
 
 # Atom IDE Package
 
-## [Getting Started](https://atom.io/packages/zestyio-atom)
+## [Getting Started](https://atom.io/packages/zestyio-atom) 
+
+What this video [https://www.youtube.com/watch?v=s98dR1M2u8E](https://www.youtube.com/watch?v=s98dR1M2u8E) or follow the instruction below
 
 ### Step 1: Install the Plugin
 
