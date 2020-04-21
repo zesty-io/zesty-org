@@ -37,6 +37,7 @@
     * [How to Create one\_to\_one Relationships](services/web-engine/guides/how-to-create-one_to_one-relationships.md)
     * [How to Create a Search Page](services/web-engine/guides/how-to-create-a-search-page.md)
     * [How to Filter by Tags](services/web-engine/guides/how-to-filter-by-tags.md)
+    * [Video Embedding or Streaming Capabilities](services/web-engine/guides/video-embedding-or-streaming-capabilities.md)
     * [How to Implement Cross-instance Content Sharing](services/web-engine/guides/how-to-implement-cross-instance-content-sharing.md)
     * [How to Implement Simple Pagination](services/web-engine/guides/how-to-implement-simple-pagination.md)
     * [How to Launch an Instance](services/web-engine/guides/how-to-launch-an-instance.md)
