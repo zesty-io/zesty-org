@@ -47,10 +47,10 @@ Configure your domain's DNS settings by following the instructions in the settin
 **Cloudflare Users**: When setting DNS records in Cloudflare be sure to have the proxied by Cloudflare, an orange cloud icon, turned off on each record. Zesty.io cannot affectively manage the cache if Cloudflare is proxing requests and caching them.
 {% endhint %}
 
-There will be 2 types of records to set up: 
+There are 2 primary records you will want to ensure are setup.
 
-1. apex record \(e.g. example.org\)
-2. WWW record \(e.g. www.example.org\)
+1. The apex record \(*e.g. example.org*\)
+2. The WWW sub-domain record \(*e.g. www.example.org*\)
 
 When creating these records there will be 3 values that are required to set them up. 
 
@@ -61,6 +61,7 @@ When creating these records there will be 3 values that are required to set them
 ### Apex Record
 
 [What is an apex record?](https://docs.microsoft.com/en-us/azure/dns/dns-zones-records#record-types)
+
 [Why can't I use a CNAME for my apex record?](https://www.isc.org/blogs/cname-at-the-apex-of-a-zone/)
 
 Create or set an existing apex record with the following values:
@@ -85,7 +86,7 @@ Create or set an existing WWW record with the following values:
 - *Host*: `WWW`
 - *Value*: `zesty.map.fastly.net`
 
-![Standard DNS setup for Customers on Zesty.io Cloud](../../../.gitbook/assets/basic-dns-setup.png)
+![Standard WWW sub-domain request flow for Customers on Zesty.io Cloud](../../../.gitbook/assets/basic-dns-setup.png)
 
 
 ## 3. Confirm your instance is live
@@ -93,7 +94,7 @@ Create or set an existing WWW record with the following values:
 To confirm that your instance is live click the green "? Check DNS" button. You should see a notification in the bottom left-hand corner of the screen letting you know if your DNS has been verified.
 
 {% hint style="info" %}
-DNS changes can take time to propogate and for your <abbr title="Internet Service Provider">ISP</abbr> to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or give it a little bit more time. Typically an hour or two is enough.
+DNS changes can take time to propogate and for your <abbr title="Internet Service Provider">ISP</abbr> to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or gibing it more time. Typically an hour or two is enough.
 {% endhint %}
 
 
@@ -115,7 +116,7 @@ If you want to always redirect to HTTPS then the "HTTPS on?" setting must be tur
 
 If you'd like to force prepending your domain with WWW then click the "Always prepend WWW to my domain?" button.
 
-Save your settings before starting the next step.
+Ensure you save settings before continuing on.
 
 
 ## **Common DNS Registrars**
