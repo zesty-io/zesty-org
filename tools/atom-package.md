@@ -16,7 +16,7 @@ Install the [`zestyio-atom`](https://atom.io/packages/zestyio-atom) package. You
   
 **Option 1:** The Atom Editor can be installed through the ATOM package manager. When you have [ATOM](https://atom.io) installed, open settings, click on install, search Zesty. Install **zestyio-atom** and **zestyio-parsley-atom**.
 
-![Snap shot of searching for Zesty Plugin in the ATOM Editor](../.gitbook/assets/image%20%282%29.png)
+![Snap shot of searching for Zesty Plugin in the ATOM Editor](../.gitbook/assets/image%20%283%29.png)
 
 **Option 2:** You can install it through the command line as well
 

@@ -15,9 +15,10 @@ There are 3 steps to making your instance accessible to the public.
 {% hint style="info" %}
 Before beginning the process to send your instance live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
 {% endhint %}
-{% file src="../../../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" caption="New Site Launch Checklist" %}
-{% file src="../../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Site Migration Checklist" %}
 
+{% file src="../../../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" caption="New Site Launch Checklist" %}
+
+{% file src="../../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Site Migration Checklist" %}
 
 ## 1. Set a Custom Domain Name
 
@@ -49,10 +50,10 @@ Configure your domain's DNS settings by following the instructions in the settin
 
 There are 2 primary records you will want to ensure are setup.
 
-1. The apex record \(*e.g. example.org*\)
-2. The WWW sub-domain record \(*e.g. www.example.org*\)
+1. The apex record \(_e.g. example.org_\)
+2. The WWW sub-domain record \(_e.g. www.example.org_\)
 
-When creating these records there will be 3 values that are required to set them up. 
+When creating these records there will be 3 values that are required to set them up.
 
 1. Record type
 2. Host \(or name\)
@@ -66,13 +67,13 @@ When creating these records there will be 3 values that are required to set them
 
 Create or set an existing apex record with the following values:
 
-- *Record type*: `A`
-- *Host*: `@`
-- *Value* \(**Create a separate A record for each of these IP addresses**\):
-   - `151.101.1.161`
-   - `151.101.65.161`
-   - `151.101.129.161`
-   - `151.101.193.161`
+* _Record type_: `A`
+* _Host_: `@`
+* _Value_ \(**Create a separate A record for each of these IP addresses**\):
+  * `151.101.1.161`
+  * `151.101.65.161`
+  * `151.101.129.161`
+  * `151.101.193.161`
 
 {% hint style="info" %}
 The `@` symbol is a special value in DNS that means, the current domain.
@@ -82,21 +83,19 @@ The `@` symbol is a special value in DNS that means, the current domain.
 
 Create or set an existing WWW record with the following values:
 
-- *Record type*: `CNAME`
-- *Host*: `WWW`
-- *Value*: `zesty.map.fastly.net`
+* _Record type_: `CNAME`
+* _Host_: `WWW`
+* _Value_: `zesty.map.fastly.net`
 
 ![Standard WWW sub-domain request flow for Customers on Zesty.io Cloud](../../../.gitbook/assets/basic-dns-setup.png)
-
 
 ## 3. Confirm your instance is live
 
 To confirm that your instance is live click the green "? Check DNS" button. You should see a notification in the bottom left-hand corner of the screen letting you know if your DNS has been verified.
 
 {% hint style="info" %}
-DNS changes can take time to propogate and for your <abbr title="Internet Service Provider">ISP</abbr> to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or gibing it more time. Typically an hour or two is enough.
+DNS changes can take time to propogate and for your ISP to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or gibing it more time. Typically an hour or two is enough.
 {% endhint %}
-
 
 ## Additional Configurations
 
@@ -117,7 +116,6 @@ If you want to always redirect to HTTPS then the "HTTPS on?" setting must be tur
 If you'd like to force prepending your domain with WWW then click the "Always prepend WWW to my domain?" button.
 
 Ensure you save settings before continuing on.
-
 
 ## **Common DNS Registrars**
 

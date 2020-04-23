@@ -6,13 +6,11 @@ description: >-
 
 # Video Embedding or Streaming Capabilities
 
-## Video Embedding  
-
-#### Youtube, Instagram and Vimeo
+### Embedding Video from Youtube, Instagram and Vimeo
 
 Standard embed codes provided by social media sites may be copy and pasted into a WYSIWYG Editor or directly into the content model HTML view file.
 
-![In youtube, click share, then click the embed option to get this view.](../../../.gitbook/assets/image.png)
+![In youtube, click share, then click the embed option to get this view.](../../../.gitbook/assets/image%20%284%29.png)
 
 Web Developers can take advantage of parsley by adding a field to a content model called "youtube\_id" \(for example\), and can make dynamic template views by using code like this:
 
@@ -25,7 +23,7 @@ Web Developers can take advantage of parsley by adding a field to a content mode
 </iframe>
 ```
 
-### Streaming Video - Vidyo
+### Streaming Video 
 
 For running your own stream, we suggest using a third party like [Mux.com](https://www.mux.com). A Mux stream can be put into any Zesty.io view, and a content model field and parsley can be used to give the Content Editor control of the stream id. In this example, we use the field name _playback\_id_ for the Mux stream ID
 
@@ -264,4 +262,27 @@ const exportVidyoToken = async (req, res) => {
 
 
 ```
+
+### WebRTC Options
+
+Here is a list of 3rd party service options for peer to peer streaming through a website or mobile app.
+
+1. [**Zoom**](https://zoom.us/plan/api) **- $100 for 4000 minutes \($0.025/minute\)**
+   1. Pros - Large-scale, reliable company with solid, proven tech, robust API
+   2. Cons - Expensive, lots of features, could potentially restrict content
+2. [**Vidyo**](https://vidyo.io/) **- $3000 for 250,000 minutes \($0.012/minute\)**
+   1. Pros - Simple html code to get started
+   2. Cons - Company is focused on medical, large-scale accounts, weak support
+3. [**EasyRTC**](https://easyrtc.com/) **- Free if you host your own**
+   1. Pros - Do it yourself, more control, free
+   2. Cons - Bare bones, no support
+4. [**Twilio**](https://www.twilio.com/docs/video) **Video - $0.0015/minute for peer-to-peer, $0.01/minutes for room features**
+   1. Pros - Great price for peer-to-peer only meaning you don’t get server-based room features 
+   2. Cons - Only 10 people per room max, no group room features like recording, messaging, etc
+5. [**AppRTC**](https://zoom.us/plan/api) **- Free, DIY**
+   1. Pros - The ultimate bare bones, google sample app for WebRTC
+   2. Cons - Online demo had maybe 1- 1.5s delay, probably harder to implement
+6. [**Agora.io**](https://www.agora.io/en/pricing/) **- $2.50 per/1,000 minutes \($0.0025/minute\) for 720p**
+   1. Pros - No limit on rooms, inexpensive, lots of features such as broadcasting, solid codebase
+   2. Cons - Website not as enticing as Twilio but not bad either
 
