@@ -681,12 +681,12 @@ The `striptags` call will return a string with HTML tags removed. It also acts a
 
 ### substr\(start, length\)
 
-The `substr()` call takes the text value it is attached to and returns a substring with the desired length. Does not consider whitespace as part of length.
+The `substr()` call takes the text value it is attached to and returns a substring with the desired length. This call takes both positive and negative numbers. Negative numbers, for example, `substr(-5)` will return the last five characters in a string. Does not consider whitespace as part of length.
 
 ```text
 // $description = "This is a longer description that needs shortened!"
 {{ $description.substr(0,9) }}...
-// "This is a..."
+// "This is a lo..."
 ```
 
 ### subWords\(number\_of\_words\)
