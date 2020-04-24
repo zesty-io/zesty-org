@@ -1,12 +1,12 @@
 ---
 description: >-
   Zesty.io runs CSS pre-processers on save and publish of SASS, SC SS, LESS, and
-  CSS files.
+  CSS files. We also concatenate JS files.
 ---
 
-# CSS Processing Flow
+# CSS & JS Processing Flow
 
-Zesty.io’s Code Editor supports [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [LESS](http://lesscss.org/), and [SCSS/SASS](https://sass-lang.com/). Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file. If more than one style of stylesheet is used, they will compile and concat into a single file. The order of concatenation:
+Zesty.io’s Code Editor supports [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [LESS](http://lesscss.org/), and [SCSS/SASS](https://sass-lang.com/). Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file `/site.css`. That file is automatically linked to in your page &lt;head&gt;. If more than one style of stylesheet is used, they will compile and concat into a single file. The order of concatenation:
 
 1. **CSS**
 2. **LESS**
@@ -406,5 +406,7 @@ Default value is true
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Javascript
 
+Zesty.io combines all script files into a single concatenated `/main.js` file, this file automatically links in the head vi a script tag, and can optionally be omitted in developer settings on the instance.
 
