@@ -9,7 +9,7 @@
 ## Services
 
 * [Accounts](services/accounts/README.md)
-  * [Instances Dashboard \(all-instances view\)](services/accounts/accounts-interface-all-instances-view.md)
+  * [Accounts Interface \(all-instances view\)](services/accounts/accounts-interface-all-instances-view.md)
   * [Blueprints](services/accounts/blueprints.md)
   * [Teams](services/accounts/teams.md)
 * [Content Schema](services/content/README.md)
