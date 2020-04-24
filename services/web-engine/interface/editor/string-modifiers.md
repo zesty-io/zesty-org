@@ -103,12 +103,12 @@ Function will return a string with HTML tags removed. It also acts as a substrin
 
 ### .substr\(start, length\)
 
-Function that takes the text value it is attached to and returns a substring with the desired length. Does not consider whitespace as part of length.
+Function that takes the text value it is attached to and returns a substring with the desired length. Substring can take negative numbers as well such as `substr(-5)` to return the last five characters of a string. Does not consider whitespace as part of length.
 
 ```text
 // $description = "This is a longer description that needs shortened!"
 {{ $description.substr(0,9) }}...
-// "This is a..."
+// "This is a lo..."
 ```
 
 ### .subWords\(number\_of\_words\)
