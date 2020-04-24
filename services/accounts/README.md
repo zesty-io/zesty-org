@@ -10,9 +10,9 @@ These article will help users navigate the Accounts interface.
 
 Get started with our most popular articles.
 
-1. Instance Creation
-2. Instance Card Settings
-3. Teams
+1. [Accounts Interface overview](https://zesty.org/services/accounts/accounts-interface-all-instances-view)
+2. [Blueprints](https://zesty.org/services/accounts/blueprints)
+3. [Teams](https://zesty.org/services/accounts/teams)
 
 
 
