@@ -1,18 +1,18 @@
 ---
 description: >-
-  The Accounts interface refers to the all-instances view which shows all of a
+  The Instances Dashboard refers to the all-instances view which shows all of a
   users instances when they login.
 ---
 
-# Accounts Interface \(all-instances view\)
+# Instances Dashboard \(all-instances view\)
 
 ### **Overview**
 
-The Accounts Interface is also known as the all-instances view. This is the homescreen for the Accounts Interface when a user first logs in to Zesty.io. If a user has not yet created any instances they will be prompted to create an instance. However, if a user has already created instances they will see all of their instances, as well as have the option to create a new instance. If a user has invites to access instances those invites will appear at the top of the instances grid \(or list\). Aside from creating new instances,  this interface allows users to search for instances, access Blueprints, Teams, Account profile and more. Keep reading for a brief tour of this interface.
+The Instances Dashboard is also known as the all-instances view. This is the homescreen for the Instances Dashboard when a user first logs in to Zesty.io. If a user has not yet created any instances they will be prompted to create an instance. However, if a user has already created instances they will see all of their instances, as well as have the option to create a new instance. If a user has invites to access instances those invites will appear at the top of the instances grid \(or list\). Aside from creating new instances,  this interface allows users to search for instances, access Blueprints, Teams, Account profile and more. Keep reading for a brief tour of this interface.
 
-### Accounts Interface Tour
+### Instances Dashboard Tour
 
-Below we'll review the different sections of the Accounts interface from top to bottom.
+Below we'll review the different sections of the Instances Dashboard from top to bottom.
 
 ### Menu Bar
 
@@ -37,23 +37,23 @@ All of these items are shown just below the black menu bar near the top of the s
 
 ### Instance Views
 
-The Accounts interface will look slightly different based on whether you've created instances or not. We'll cover both of them below. 
+The Instances Dashboard will look slightly different based on whether you've created instances or not. We'll cover both of them below. 
 
 #### No-instances view
 
 Users who have not created any instances will see an interface similar to the image below. If a user has signed up for Zesty.io because they were invited to access an instance they'll see an invite to that instance. 
 
-![Accounts interface create-an-instance card.](../../.gitbook/assets/new-account-accounts-interface.png)
+![Instances Dashboard create-an-instance card.](../../.gitbook/assets/new-account-accounts-interface.png)
 
 #### Grid View
 
 Users who have previously created an instance\(s\) will see their instances in a grid or list of all of their instances. The first row is reserved for Favorites if any have been marked with a star in the upper right-hand corner of the card. 
 
-![Accounts interface grid-view shows instances on blocks or cards.](../../.gitbook/assets/instance-created-interface.png)
+![Instances Dashboard grid-view shows instances on blocks or cards.](../../.gitbook/assets/instance-created-interface.png)
 
 #### List View
 
 The list view shows the same information as the grid-view except it's in a list.
 
-![Accounts interface list-view shows instances in a list.](../../.gitbook/assets/instances-created-list-view.png)
+![Instances Dashboard list-view shows instances in a list.](../../.gitbook/assets/instances-created-list-view.png)
 
