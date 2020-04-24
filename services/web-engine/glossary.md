@@ -8,7 +8,7 @@ description: Learn the language of Zesty.io.
 
 The Account Settings, accessed through the accounts interface, allow users to update their profile, email, password, and other preferences.
 
-### Accounts Interface
+### Accounts Interface \(also see [Instances Dashboard](https://zesty.org/services/web-engine/glossary#instances-dashboard)\)
 
 The Accounts Interface is accessed after a user logs in to Zesty.io, [https://accounts.zesty.io](https://accounts.zesty.io). It allows users to access all their instances, custom blueprints, teams, account settings, and more.
 
