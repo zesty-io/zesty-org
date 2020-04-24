@@ -48,7 +48,3 @@ From the team editing view users can update the Team's name and description, and
 The card does not have to be in editing mode in order to add a new team member. 
 {% endhint %}
 
-
-
-
-
