@@ -4,7 +4,7 @@ description: Blueprints are frameworks that are used as the base of an instance.
 
 # Blueprints
 
-### Overview
+### Overview 
 
 Blueprints consist of an XML plate, which serves as the basis for the Schema structure, as well as a styles, JavaScript, and view files, and sometimes sample content. 
 
