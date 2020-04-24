@@ -88,6 +88,10 @@ An Instance is a single account \(website/web instance\) in Zesty.io. Each insta
 
 The Instances Dashboard is the homescreen of the accounts interface. It lists all of the instances a user has access to, a prompt to create new instances, and will display any open invites.
 
+### Instance Settings Drawer 
+
+The Instance Settings Drawer contains an instance's administrative settings such as domain, user access, adding a team, and more. The drawer is accessed via the Accounts interface's instance card which has a cog icon which opens the instance settings drawer when clicked.
+
 ### LESS Variables
 
 LESS Variables are variables you can access and edit through the Schema Section \(formerly called Config Tab\) using a non-technical interface to update colors, fonts, and other design elements. LESS Variables can also be access via the palette icon in the Editor section.
