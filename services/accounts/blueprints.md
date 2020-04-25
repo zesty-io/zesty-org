@@ -8,7 +8,7 @@ description: Blueprints are frameworks that are used as the base of an instance.
 
 Blueprints consist of an XML plate, which serves as the basis for the Schema structure, as well as a styles, JavaScript, and view files, and sometimes sample content. 
 
-Users can only manage Blueprints if developer settings are switched on via their account settings. 
+Users can only manage Blueprints if the blueprint setting is switched on via their user account settings. 
 
 We'll review the Blueprints interface below. 
 

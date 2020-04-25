@@ -12,6 +12,7 @@
   * [Accounts Interface \(all-instances view\)](services/accounts/accounts-interface-all-instances-view.md)
   * [Blueprints](services/accounts/blueprints.md)
   * [Teams](services/accounts/teams.md)
+  * [User Account Settings](services/accounts/user-account-settings.md)
 * [Content Schema](services/content/README.md)
   * [Locales / Multi-Lang Content](services/content/multi-locale-multi-lang-content-i18n.md)
 * [Web Engine](services/web-engine/README.md)
