@@ -13,7 +13,7 @@ This guide walks through creating a lead capture form which will store the data 
 
 Start by creating a standard [HTML form](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form). Note the two hidden fields at the top of the form; `zcf` and `zlf`.
 
-Please note: input names that are prepended with and underscore will not be emailed, however they will be captured in the Leads tab. Example: `<input name="_sendcopy">`
+Please note: input names that are prepended with and underscore will not be emailed, however they will be captured in the Leads section. Example: `<input name="_sendcopy">`
 
 {% embed url="https://gist.github.com/shrunyan/effa3ba9df5fe08b8543" %}
 
@@ -33,7 +33,7 @@ To override the email a form submission sends two a hidden input field in the fo
 
 #### ZLF: Zesty Leads Form
 
-The `zlf` input instructs Zesty to record the form submission. Then you can view your leads from the _Lead_ tab inside the Zesty Site Manager. The Leads tab will not be visible until you have captured a lead submission. The value provided in the input is simply for organizing and identifying your forms.
+The `zlf` input instructs Zesty to record the form submission. Then you can view your leads from the _Lead_ section inside the content manager. The Leads section will not be visible until you have captured a lead submission. The value provided in the input is simply for organizing and identifying your forms.
 
 This feature is a great alternative to a full CRM solution when you first get started capturing web generated leads.
 
@@ -47,7 +47,7 @@ As more people fill out the form this table will grow. By default `email`, `firs
 
 A quick way to begin capturing leads in Salesforce is with their [Web-to-lead](https://help.salesforce.com/HTViewHelpDoc?id=customize_leadcapture.htm) feature. You will need to alter your web forms so the input names match the Salesforce field names. This is how Salesforce is able to match up the form input data.
 
-When usin gSalesforce Web-to-lead you will be posting directly to a Salesforce endpoint; `https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`. This means you will by pass Zesty's lead capture feature. One way to send a lead to both Salesforce and Zesty is by using AJAX upon the form submit to post the data to another endpoint.
+When using Salesforce Web-to-lead you will be posting directly to a Salesforce endpoint; `https://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8`. This means you will by pass Zesty's lead capture feature. One way to send a lead to both Salesforce and Zesty is by using AJAX upon the form submit to post the data to another endpoint.
 
 Salesforce requires to hidden inputs.
 
