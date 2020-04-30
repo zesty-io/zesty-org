@@ -21,7 +21,13 @@ To setup Google Analytics for your cloud content instance, you will need to firs
 
 #### Verifying Setup
 
-Visit a page on your instance's live domain and inspect the &lt;head&gt; element.  You should see a Google Analytics &lt;script&gt; tag that looks something like this \(with your ID replacing the demo data "99999"\):
+Visit a page on your instance's **live domain** and inspect the &lt;head&gt; element. 
+
+{% hint style="info" %}
+Google Analytics setup can only be verified by inspecting the &lt;head&gt; of the  _live_ domain. If your instance is not live use the zesty.dev domain to send your instance live and verify your Google Analytics setup. 
+{% endhint %}
+
+You should see a Google Analytics &lt;script&gt; tag that looks something like this \(with your ID replacing the demo data "99999"\):
 
 ```text
 <!-- Google Analytics -->
