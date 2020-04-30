@@ -37,11 +37,11 @@ The `zlf` input instructs Zesty to record the form submission. Then you can view
 
 This feature is a great alternative to a full CRM solution when you first get started capturing web generated leads.
 
-![Contact form](https://wyp1jm.media.zestyio.com/Screenshot-from-2017-03-15-13-34-16.png)
+![The Leads section is only available once leads have been captured.](../../../.gitbook/assets/leads-section-01.png)
 
 As more people fill out the form this table will grow. By default `email`, `first_name`, and `last_name` input names will be displayed. Every other field will be stored and shown to you on the individual lead view.
 
-![](https://wyp1jm.media.zestyio.com/leads-view.jpg)
+![](../../../.gitbook/assets/leads-section.png)
 
 ### Salesforce: Web to Lead
 
