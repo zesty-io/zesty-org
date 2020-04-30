@@ -21,9 +21,9 @@ Please note: input names that are prepended with and underscore will not be emai
 
 #### ZCF: Zesty Contact Form
 
-The `zcf` input instructs Zesty to send an email to the recipient configured in _Config_ &gt; _Site Settings_ &gt; _Contact Form_ as shown in the picture below. A common use case for this would be having a contact form that is submitted to your company email, the recipient.
+The `zcf` input instructs Zesty.io to send an email to the recipient configured in _Settings_ &gt; _Instance Settings_ &gt; _Contact Form_ as shown in the picture below. A common use case for this would be having a contact form that is submitted to your company email, the recipient.
 
-![Contact Setting](https://wyp1jm.media.zestyio.com/Screenshot-from-2017-03-15-14-24-34.png)
+![General contact form settings are accessible in the Settings section.](../../../.gitbook/assets/settings-instance-settings-contact-form.png)
 
 #### Email Override: Setting a specific form to notify a different email than the one in settings.
 
