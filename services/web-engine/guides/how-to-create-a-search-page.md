@@ -6,8 +6,6 @@ description: >-
 
 # How to Create a Search Page
 
- Watch Video
-
 In this guide you will learn how to create a search form and search results on the Zesty platform. We will be creating a search form which will lookup results based on a postal code. Using AJAX we will request search results for a smooth user experience.
 
 We will need to create 3 files;
@@ -44,16 +42,12 @@ We need to write a Parsley `each` loop to match the posted term against any data
 
 ```text
 {{each events as event WHERE event.zip_code LIKE '{get_var.term}%'}}
+    <h1>{{event.title}}</h1>
+    <h2>{{event.zip_code}}</h2>
+{{end-each}}
 ```
 
-  
- The `%` character acts as a wildcard mechanism in Parsley. This will allow fuzzy matching as a user refines their search term.
-
-Then for each result we will describe the returned HTML.
-
-**{{event.title}}**
-
- ![{{event.title}}]({{event.image.getImage%28300%29}})
+The `%` character acts as a wildcard mechanism in Parsley. This will allow fuzzy matching as a user refines their search term.
 
 ### AJAX to Request Results
 
@@ -75,6 +69,4 @@ _Our file path includes a_ `.html` _file extension. This is not necessary since 
 ### Finishing Up
 
 Now we have a search form, search results & JavaScript to fetch the results. To implement this form we can `include zip-search-form` on any Zesty page template and our searching against events dataset functionality will be available.
-
-#### Zip Search Video Walkthrough
 
