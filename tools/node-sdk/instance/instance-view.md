@@ -2,7 +2,7 @@
 
 CRUD on view files.
 
-_All examples assume a properly_ [_authenticated SDK instance_](/tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](../instantiation.md)
 
 Get all views: \(returns an array of view objects\)
 

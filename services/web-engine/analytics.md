@@ -6,6 +6,10 @@ description: Zesty.io supports a range of analytics products.
 
 ## Google Analytics
 
+{% hint style="warning" %}
+**Making Changes to Existing Integrations**: After making a changes to an existing GA integration you must publish a file \(either in the Editor or Content section\) before you will see the changes on the live site.
+{% endhint %}
+
 ### Getting Started
 
 To setup Google Analytics for your cloud content instance, you will need to first sign up with Google and obtain an Urchin ID and Profile ID from them.  Once you have those, follow these steps:

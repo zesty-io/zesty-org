@@ -2,7 +2,7 @@
 
 Groups act as a way to organize media assets into related collections. They can also be parented to create related group hierarchies.
 
-_All examples assume a properly_ [_authenticated SDK instance_](/tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](../instantiation.md)
 
 **Get all groups from a bin:**
 
