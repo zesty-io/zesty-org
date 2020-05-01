@@ -7,7 +7,7 @@ description: Zesty.io supports a range of analytics products.
 ## Google Analytics
 
 {% hint style="warning" %}
-**Making Changes to Existing Integrations**: After making a changes to an existing GA integration you must publish a file \(either in the Editor or Content section\) before you will see the changes on the live site.
+**Making Changes to Existing Integrations**: After making changes to an existing GA integration you must publish a file \(either in the Editor or Content section\) before you will see the changes on the live site.
 {% endhint %}
 
 ### Getting Started
