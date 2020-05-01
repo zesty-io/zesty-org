@@ -6,6 +6,6 @@ Using the `media-api` you can make CRUD operations against the media assets with
 
 ## Learn more about the available media functions
 
-* [Files](/tools/node-sdk/media-file.md)
-* [Groups](/tools/node-sdk/media-group.md)
+* [Files](/tools/node-sdk/media/media-file.md)
+* [Groups](/tools/node-sdk/media/media-group.md)
 

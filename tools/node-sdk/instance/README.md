@@ -10,10 +10,10 @@ If needed these REST endpoints can be consumed directly. The `node-sdk` simply p
 
 ## Learn more about the available resources within an instance
 
-* [Content](/tools/node-sdk/instance-content.md)
-* [Model & Fields](/tools/node-sdk/instance-model.md)
-* [Stylesheet](/tools/node-sdk/instance-stylesheet.md)
-* [Views](/tools/node-sdk/instance-view.md)
-* [Audit Trail](/tools/node-sdk/instance-audit-trail.md)
-* [Head Tags](/tools/node-sdk/instance-head-tags.md)
+* [Content](/tools/node-sdk/instance/instance-content.md)
+* [Model & Fields](/tools/node-sdk/instance/instance-model.md)
+* [Stylesheet](/tools/node-sdk/instance/instance-stylesheet.md)
+* [Views](/tools/node-sdk/instance/instance-view.md)
+* [Audit Trail](/tools/node-sdk/instance/instance-audit-trail.md)
+* [Head Tags](/tools/node-sdk/instance/instance-head-tags.md)
 
