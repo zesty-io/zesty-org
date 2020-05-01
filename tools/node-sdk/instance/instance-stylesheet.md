@@ -2,7 +2,7 @@
 
 CRUD on Zesty.io stylesheet files.
 
-_All examples assume a properly_ [_authenticated SDK instance_](tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](/tools/node-sdk/instantiation.md)
 
 Get all stylesheets:
 

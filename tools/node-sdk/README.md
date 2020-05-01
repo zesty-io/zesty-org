@@ -49,6 +49,6 @@ main();
 
 ## Further explanations of the example code
 
-1. [Instantiation of an authenticated instance](tools/node-sdk/Instantiation.md)
-2. [Requesting instance data](tools/node-sdk/Instantiation.md)
+1. [Instantiation of an authenticated instance](/tools/node-sdk/Instantiation.md)
+2. [Requesting instance data](/tools/node-sdk/Instantiation.md)
 

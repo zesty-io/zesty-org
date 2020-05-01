@@ -2,7 +2,7 @@
 
 Media is how you can manage assets for an instance. Using media you can upload any type of file to get a globally cached URL for that asset.
 
-_All examples assume a properly_ [_authenticated SDK instance_](tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](/tools/node-sdk/instantiation.md)
 
 **Create a file:**
 

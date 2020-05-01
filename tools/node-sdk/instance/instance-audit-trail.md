@@ -4,7 +4,7 @@ An instances AuditTrail is a collection of records that catalogs the actions tak
 
 AuditTrail entries can only be retrived. Creation is reserved for internal Zesty.io usage, which is done at the individual API endpoint. **Deletion and updating do not exist, as this acts as an immutable record of the actions taken in an instance.**
 
-_All examples assume a properly_ [_authenticated SDK instance_](tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](/tools/node-sdk/instantiation.md)
 
 Get all audit trail entries:
 
