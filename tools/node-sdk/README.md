@@ -49,6 +49,6 @@ main();
 
 ## Further explanations of the example code
 
-1. [Instantiation of an authenticated instance](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)
-2. [Requesting instance data](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/Instantiation.md)
+1. [Instantiation of an authenticated instance](tools/node-sdk/Instantiation.md)
+2. [Requesting instance data](tools/node-sdk/Instantiation.md)
 

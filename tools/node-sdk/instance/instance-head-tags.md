@@ -2,7 +2,7 @@
 
 HTML documents contain a `<head>` tag which allows for child `<meta>`, `<link>`, `<stylesheet>` and `<script>` tags. The HeadTags SDK allows for CRUD operations to manage the available tags on a per content item basis.
 
-_All examples assume a properly_ [_authenticated SDK instance_](https://github.com/zesty-io/zesty-org/tree/5b36e6a69eaa109cf8c939006bb82ee5b6bd4eb9/tools/node-sdk/tools/node-sdk/instantiation.md)
+_All examples assume a properly_ [_authenticated SDK instance_](tools/node-sdk/instantiation.md)
 
 Get all head tags:
 
