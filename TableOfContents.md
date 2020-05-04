@@ -81,7 +81,7 @@
       * [Meta Fields](services/web-engine/interface/content/meta-fields.md)
     * [Media](services/web-engine/interface/media/README.md)
       * [How to upload multiple images](services/web-engine/interface/media/how-to-upload-multiple-images.md)
-    * [Editor](services/web-engine/interface/editor/README.md)
+    * [Web IDE \(Code Editor\)](services/web-engine/interface/editor/README.md)
       * [Outputting Content](services/web-engine/interface/editor/outputting-content.md)
       * [Code Bank](services/web-engine/interface/editor/code-bank.md)
       * [Custom Meta Tags](services/web-engine/interface/editor/custom-meta-tags.md)
