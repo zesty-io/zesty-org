@@ -9,6 +9,8 @@ redirects:
   services/web-engine/glossary: ./glossary.md
   services/web-engine/interface: services/manager-ui
   services/accounts: services/accounts-ui
+  services/content/multi-locale-multi-lang-content-i18n: content-instance/multi-locale-multi-lang-content-i18n
+  services/content: services/manager-ui/schema
 
   # https://zesty.org/services/web-engine/interface/content/assigning-publish-and-list-status
   # https://zesty.org/services/web-engine/interface/content/canonical-tags
