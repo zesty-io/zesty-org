@@ -5,8 +5,8 @@ structure:
   summary: TableOfContents.md
        
 redirects:
-  services/web-engine/interface/content/adding-and-managing-content: services/manager-ui/content/adding-and-managing-content
   services/web-engine/interface: services/manager-ui
+  services/accounts: services/accounts-ui
 
   # https://zesty.org/services/web-engine/interface/content/assigning-publish-and-list-status
   # https://zesty.org/services/web-engine/interface/content/canonical-tags

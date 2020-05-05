@@ -8,11 +8,11 @@
 
 ## Services
 
-* [Accounts](services/accounts/README.md)
-  * [Accounts Interface \(all-instances view\)](services/accounts/accounts-interface-all-instances-view.md)
-  * [Blueprints](services/accounts/blueprints.md)
-  * [Teams](services/accounts/teams.md)
-  * [User Account Settings](services/accounts/user-account-settings.md)
+* [Accounts UI](services/accounts-ui/README.md)
+  * [Accounts Interface \(all-instances view\)](services/accounts-ui/accounts-interface-all-instances-view.md)
+  * [Blueprints](services/accounts-ui/blueprints.md)
+  * [Teams](services/accounts-ui/teams.md)
+  * [User Account Settings](services/accounts-ui/user-account-settings.md)
 * [Manager UI](services/manager-ui/README.md)
   * [Content](services/manager-ui/content/README.md)
     * [Adding and Managing Content](services/manager-ui/content/adding-and-managing-content.md)

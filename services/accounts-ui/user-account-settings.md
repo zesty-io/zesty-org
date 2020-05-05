@@ -8,13 +8,13 @@ description: >-
 
 ### Overview
 
-Users can access their account settings and links to [support resources](https://zesty.org/services/accounts/user-account-settings#support-resources-tour) through the Account's interface. There are multiple account settings that a user can change including:
+Users can access their account settings and links to [support resources](https://zesty.org/services/accounts-ui/user-account-settings#support-resources-tour) through the Account's interface. There are multiple account settings that a user can change including:
 
-* [Update username](https://zesty.org/services/accounts/user-account-settings#your-profile)
-* [Change password](https://zesty.org/services/accounts/user-account-settings#password)
-* [Add an email address](https://zesty.org/services/accounts/user-account-settings#email)
-* [Activate 2-factor authentication](https://zesty.org/services/accounts/user-account-settings#two-factor-authentication-2-fa)
-* [Update preferences](https://zesty.org/services/accounts/user-account-settings#preferences)
+* [Update username](https://zesty.org/services/accounts-ui/user-account-settings#your-profile)
+* [Change password](https://zesty.org/services/accounts-ui/user-account-settings#password)
+* [Add an email address](https://zesty.org/services/accounts-ui/user-account-settings#email)
+* [Activate 2-factor authentication](https://zesty.org/services/accounts-ui/user-account-settings#two-factor-authentication-2-fa)
+* [Update preferences](https://zesty.org/services/accounts-ui/user-account-settings#preferences)
 
 ### User Account Settings Tour
 
