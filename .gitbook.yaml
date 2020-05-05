@@ -5,4 +5,41 @@ structure:
   summary: TableOfContents.md
        
 redirects:
+  services/web-engine/interface/content/adding-and-managing-content: services/manager-ui/content/adding-and-managing-content
   services/web-engine/interface: services/manager-ui
+
+  # https://zesty.org/services/web-engine/interface/content/assigning-publish-and-list-status
+  # https://zesty.org/services/web-engine/interface/content/canonical-tags
+  # https://zesty.org/services/web-engine/interface/content/csv-import
+  # https://zesty.org/services/web-engine/interface/content/editing-entry-details
+  # https://zesty.org/services/web-engine/interface/content/globals
+  # https://zesty.org/services/web-engine/interface/content/publishing-and-scheduling
+  # https://zesty.org/services/web-engine/interface/content/sitemap-priority
+  # https://zesty.org/services/web-engine/interface/content/meta-fields
+
+  # https://zesty.org/services/web-engine/interface/media/how-to-upload-multiple-images
+
+  # https://zesty.org/services/web-engine/interface/editor/outputting-content
+  # https://zesty.org/services/web-engine/interface/editor/code-bank
+  # https://zesty.org/services/web-engine/interface/editor/custom-meta-tags
+  # https://zesty.org/services/web-engine/interface/editor/javascript
+  # https://zesty.org/services/web-engine/interface/editor/save-and-quick-publish
+  # https://zesty.org/services/web-engine/interface/editor/string-modifiers
+  # https://zesty.org/services/web-engine/interface/editor/stylesheets
+  # https://zesty.org/services/web-engine/interface/editor/importing-code-and-styles
+  # https://zesty.org/services/web-engine/interface/editor/version-control
+
+  # https://zesty.org/services/web-engine/interface/leads
+  # https://zesty.org/services/web-engine/interface/schema/building-a-content-structure
+  # https://zesty.org/services/web-engine/interface/schema/content-models
+  # https://zesty.org/services/web-engine/interface/schema/adding-fields
+  # https://zesty.org/services/web-engine/interface/schema/fields
+
+  # https://zesty.org/services/web-engine/interface/health/redirects
+
+  # https://zesty.org/services/web-engine/interface/audit-trail
+
+  # https://zesty.org/services/web-engine/interface/settings/instance-settings
+  # https://zesty.org/services/web-engine/interface/settings/less-variables
+  # https://zesty.org/services/web-engine/interface/settings/fonts
+  # https://zesty.org/services/web-engine/interface/settings/account-settings
