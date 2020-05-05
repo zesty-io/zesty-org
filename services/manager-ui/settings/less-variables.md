@@ -14,7 +14,7 @@ The Styles subsection will only be available if your blueprint has style variabl
 
 ### What are style variables?
 
-Each of the Styles have an associated variable. That variable is denoted by the `@` followed by its name, for example: `@body-bg`.  Each of these variables is defined in the instance's [style sheet](https://zesty.org/services/web-engine/interface/editor/stylesheets). 
+Each of the Styles have an associated variable. That variable is denoted by the `@` followed by its name, for example: `@body-bg`.  Each of these variables is defined in the instance's [style sheet](https://zesty.org/services/manager-ui/editor/stylesheets). 
 
 ![Styles and style variable names.](../../../../.gitbook/assets/style-variable.png)
 
