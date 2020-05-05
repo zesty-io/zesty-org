@@ -5,6 +5,8 @@ structure:
   summary: TableOfContents.md
        
 redirects:
+  services/web-engine/guides: guides
+  services/web-engine/glossary: glossary
   services/web-engine/interface: services/manager-ui
   services/accounts: services/accounts-ui
 
