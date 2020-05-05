@@ -45,7 +45,7 @@ When a content model is selected from the left-hand navigation sidebar, the main
 
 ![Content editing view showing editable fields outlined in purple.](../../../.gitbook/assets/fields-and-content-editing-screen.png)
 
-If the selected model is a [headless set](https://zesty.org/services/web-engine/interface/schema/content-models#headless) or [multi-page set](https://zesty.org/services/web-engine/guides/content-entry-drafts-and-publishing#multi-page-sets) then the [table-listing view](https://zesty.org/services/web-engine/interface/content#table-listing-view) will show in the main portion of the screen and when an item is selected from the table-listing view, the main portion of the screen will show the content editing view. 
+If the selected model is a [headless set](https://zesty.org/services/manager-ui/schema/content-models#headless) or [multi-page set](https://zesty.org/services/web-engine/guides/content-entry-drafts-and-publishing#multi-page-sets) then the [table-listing view](https://zesty.org/services/manager-ui/content#table-listing-view) will show in the main portion of the screen and when an item is selected from the table-listing view, the main portion of the screen will show the content editing view. 
 
 ![Table-listing view shows items in its selected set.](../../../.gitbook/assets/table-listing-view.png)
 

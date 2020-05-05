@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-Zesty.io's built-in Web IDE section, previously known as the "Editor section", houses all of your instance's backend components. In the left-hand sidebar you can find the backend files: HTML views, style sheets, and JavaScript files. The web IDE utilities are shown in the bottom section which includes the Linked Schema \(formerly called Parsley helper or Code Bank\), [AuditTrail](https://zesty.org/services/web-engine/interface/audit-trail) history, general file information, and linked content.
+Zesty.io's built-in Web IDE section, previously known as the "Editor section", houses all of your instance's backend components. In the left-hand sidebar you can find the backend files: HTML views, style sheets, and JavaScript files. The web IDE utilities are shown in the bottom section which includes the Linked Schema \(formerly called Parsley helper or Code Bank\), [AuditTrail](https://zesty.org/services/manager-ui/audit-trail) history, general file information, and linked content.
 
 By having a web IDE in the context of your content you get powerful features like templating that is aware of your content structure. This allows for quick development against your content.
 
@@ -39,15 +39,15 @@ When you select a file from the left-hand sidebar, you'll see it open in the mai
 
 ### HTML Views
 
-There is no need to download your files locally. The environment is ready for you to edit, save, and publish right from your web browser. Pages will be automatically created under HTML views when a Page or Page Group is created in the [Schema](https://zesty.org/services/web-engine/interface/schema). You can create additional HTML snippets and custom endpoints by clicking the + symbol at the top of the left-hand sidebar.
+There is no need to download your files locally. The environment is ready for you to edit, save, and publish right from your web browser. Pages will be automatically created under HTML views when a Page or Page Group is created in the [Schema](https://zesty.org/services/manager-ui/schema). You can create additional HTML snippets and custom endpoints by clicking the + symbol at the top of the left-hand sidebar.
 
 ### Style Sheets
 
-Zesty.io is equipped to compile LESS, SCSS, and CSS files for styling. There is no need to download any preprocessors. Simply add your code and the style sheets will integrate seamlessly. Learn more about style sheets [here](https://zesty.org/services/web-engine/interface/editor/stylesheets).
+Zesty.io is equipped to compile LESS, SCSS, and CSS files for styling. There is no need to download any preprocessors. Simply add your code and the style sheets will integrate seamlessly. Learn more about style sheets [here](https://zesty.org/services/manager-ui/editor/stylesheets).
 
 ### JavaScript
 
-Similarly JavaScript files are ready to to be added and edited. These are rendered and linked in the head of the instance following the style sheets. Learn more about JavaScript [here](https://zesty.org/services/web-engine/interface/editor/javascript).
+Similarly JavaScript files are ready to to be added and edited. These are rendered and linked in the head of the instance following the style sheets. Learn more about JavaScript [here](https://zesty.org/services/manager-ui/editor/javascript).
 
 ### Templating
 

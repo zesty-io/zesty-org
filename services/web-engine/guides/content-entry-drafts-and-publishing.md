@@ -40,7 +40,7 @@ When a single-page content model is selected from the left-hand sidebar navigati
 
 ![Single-page content editing view with editable fields outlined in purple.](../../../.gitbook/assets/03-single-page-editing-view.png)
 
-2. Determine which piece\(s\) of content you want to update. Pieces of content are identified by their [field labels](https://zesty.org/services/web-engine/interface/schema/adding-fields#label-v-reference-name) which were assigned in the Schema section. Field Labels are located above each field.
+2. Determine which piece\(s\) of content you want to update. Pieces of content are identified by their [field labels](https://zesty.org/services/manager-ui/schema/adding-fields#label-v-reference-name) which were assigned in the Schema section. Field Labels are located above each field.
 
 ![](../../../.gitbook/assets/field-labels.png)
 
@@ -90,7 +90,7 @@ Follow the steps below to **edit an existing multi-page or headless item**.
 Whether you're editing a single-page item, multi-page set item, or headless set item the item editing views will look the same. 
 {% endhint %}
 
-3. Determine which piece\(s\) of content you want to update. Pieces of content are identified by their [field labels](https://zesty.org/services/web-engine/interface/schema/adding-fields#label-v-reference-name) which were assigned in the Schema section. Field Labels are located above each field.
+3. Determine which piece\(s\) of content you want to update. Pieces of content are identified by their [field labels](https://zesty.org/services/manager-ui/schema/adding-fields#label-v-reference-name) which were assigned in the Schema section. Field Labels are located above each field.
 
 4. Once you're finished editing click the green Save New Version button.
 
