@@ -6,7 +6,7 @@ structure:
        
 redirects:
   services/web-engine/guides: guides
-  services/web-engine/glossary: glossary
+  services/web-engine/glossary: ./glossary.md
   services/web-engine/interface: services/manager-ui
   services/accounts: services/accounts-ui
 
