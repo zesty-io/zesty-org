@@ -17,7 +17,7 @@ Every item of content that is authored in Zesty.io has a paired API endpoint tha
 
 Specific custom endpoints which can combine data and other information can be created through the zesty.io code editor.
 
-{% page-ref page="../services/web-engine/guides/how-to-create-a-customizable-json-endpoint-for-content.md" %}
+{% page-ref page="../guides/how-to-create-a-customizable-json-endpoint-for-content.md" %}
 
 ### API Data flows Diagram
 

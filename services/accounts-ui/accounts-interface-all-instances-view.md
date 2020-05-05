@@ -21,7 +21,7 @@ The black menu at the top of the screen contains several links, however, dependi
 * Instances: navigates to the all-instances view
 * Teams: allows users to create and manage teams
 * Blueprints: allows users to create and manage blueprints
-* \[username\] \(profile\): allows users to update their password, add [2FA](https://zesty.org/services/web-engine/guides/how-to-set-up-two-factor-authentication), and more
+* \[username\] \(profile\): allows users to update their password, add [2FA](https://zesty.org/guides/how-to-set-up-two-factor-authentication), and more
 
 ![Menu bar outlined in purple at the top of the screen.](../../.gitbook/assets/accounts-menu-bar.png)
 

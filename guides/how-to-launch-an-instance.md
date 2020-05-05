@@ -41,7 +41,7 @@ Configure your domain's DNS settings by following the instructions in the settin
 ![DNS instructions in the Instance Settings drawer.](../../../.gitbook/assets/zesty-dns-settings.png)
 
 {% hint style="info" %}
-**Please note**: Domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/services/web-engine/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
+**Please note**: Domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
 {% endhint %}
 
 {% hint style="warning" %}

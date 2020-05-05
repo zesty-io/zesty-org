@@ -32,5 +32,5 @@ New instances can be added to an EcoSystem when they are being named. Follow the
 
 ![Create new instance button.](../../../.gitbook/assets/click-create-new-instance.png)
 
-5. Complete the instance creation flow beginning with selecting a blueprint. If you're unfamiliar with the process follow [this](https://zesty.org/services/web-engine/guides/how-to-create-a-new-instance#step-2-select-a-blueprint) guide. 
+5. Complete the instance creation flow beginning with selecting a blueprint. If you're unfamiliar with the process follow [this](https://zesty.org/guides/how-to-create-a-new-instance#step-2-select-a-blueprint) guide. 
 

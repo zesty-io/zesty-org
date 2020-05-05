@@ -9,7 +9,7 @@ description: Teams allows users to create and set access permissions for groups 
 Teams allow users to create a team of users and set a single [role](https://zesty.org/content-instance/roles-and-permissions) for each team. This helps streamline the management of users, especially when dealing with large teams and multiple instances. 
 
 {% hint style="info" %}
-Teams are created in the Teams interface and a team's role is managed in the [instance's settings drawer](https://zesty.org/services/web-engine/glossary#instance-settings-drawer).
+Teams are created in the Teams interface and a team's role is managed in the [instance's settings drawer](https://zesty.org/glossary#instance-settings-drawer).
 {% endhint %}
 
 ### Teams Interface Tour
