@@ -5,10 +5,13 @@ structure:
   summary: TableOfContents.md
        
 redirects:
-  services/accounts: ./services/accounts-ui
+  content-instance: ./getting-started
   services/web-engine/guides: ./guides
   services/web-engine/glossary: ./glossary.md
   services/web-engine/interface: ./services/manager-ui
   services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
   services/content-schema: ./services/manager-ui/schema
-  content-instance: ./getting-started
+  services/accounts: ./services/accounts-ui/README.md
+  services/accounts/blueprints: ./services/accounts-ui/blueprints.md
+  services/accounts/teams: ./services/accounts-ui/teams.md
+  services/accounts/user-account-settings: ./services/accounts-ui/user-account-settings.md
