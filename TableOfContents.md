@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Getting Started](getting-started/README.md)
+* [Getting Started](README.md)
   * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [Environments & Publishing](getting-started/environments-and-publishing.md)
   * [Roles & Permissions](getting-started/roles-and-permissions.md)
