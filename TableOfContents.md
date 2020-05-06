@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Getting Started](README.md)
-* [Cloud Content Instance](getting-started/README.md)
+  * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [Environments & Publishing](getting-started/environments-and-publishing.md)
   * [Roles & Permissions](getting-started/roles-and-permissions.md)
   * [Locales / Multi-Lang Content](services/content/multi-locale-multi-lang-content-i18n.md)
