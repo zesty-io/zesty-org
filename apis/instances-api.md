@@ -8,7 +8,7 @@ description: A REST API for interacting with your instance resources.
 Every instance created in Zesty.io can be interacted with over https using the instance [API](https://en.wikipedia.org/wiki/Application_programming_interface) (Application Programming Interface). When an instance is created it is assigned a [ZUID](https://github.com/zesty-io/zuid-specification) (Zesty Universal IDentifier). Using this ZUID the instances API can be requested with the following URL pattern.
 
 ```
-ZUID.api.zesty.io/v1/
+https://ZUID.api.zesty.io/v1/
 ```
 
 The instance API is implemented as a [REST](https://restfulapi.net/) (REpresentational State Transfer) architecture. It allows for [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) (Create, Read, Update, Delete) operations on the requested instance.
@@ -28,7 +28,7 @@ Instance access is restricted by a [roles & permissions](https://zesty.org/getti
 
 ## Responses
 
-All API responses are [JSON](https://www.json.org/json-en.html) (JavaScript Object Notation). Although JSON includes the JavaScript language name it is a common format consumable across many programming langauges. It acts as a standardized way to pass various data structures over http.
+All API responses are [JSON](https://www.json.org/json-en.html) (JavaScript Object Notation) format. Although JSON includes the JavaScript language name it is a common format consumable across many programming langauges. It acts as a standardized way to pass various data structures over http.
 
 
 # Tooling
