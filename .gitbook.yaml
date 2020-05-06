@@ -1,7 +1,7 @@
 root: ./
 
 structure:
-  readme: README.md
+  readme: homepage.md
   summary: TableOfContents.md
        
 redirects:

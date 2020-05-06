@@ -1,7 +1,4 @@
 {
-    "structure": {
-        "readme": "homepage.md"
-    },
     "plugins": ["scripts"],
     "pluginsConfig": {
         "scripts": {
