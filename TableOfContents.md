@@ -1,11 +1,11 @@
 # Table of contents
 
 * [Getting Started](README.md)
-* [Cloud Content Instance](content-instance/README.md)
-  * [Environments & Publishing](content-instance/environments-and-publishing.md)
-  * [Roles & Permissions](content-instance/roles-and-permissions.md)
+* [Cloud Content Instance](getting-started/README.md)
+  * [Environments & Publishing](getting-started/environments-and-publishing.md)
+  * [Roles & Permissions](getting-started/roles-and-permissions.md)
   * [Locales / Multi-Lang Content](services/content/multi-locale-multi-lang-content-i18n.md)
-  * [Publishing All Content](content-instance/publishing-all-content.md)
+  * [Publishing All Content](getting-started/publishing-all-content.md)
 * [Guides](guides/README.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)

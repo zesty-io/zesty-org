@@ -49,7 +49,7 @@ Congratulations! You created your first team. Now let's add it to your instance.
 
 ![](../../../.gitbook/assets/teams-04-instance-settings-cog.png)
 
-5. Scroll down in the instance's settings drawer until you see the Team Access section. Paste your team's ID text box with \(Mac: CMD+v  PC: CTRL+v\), select your team's [role](../../../content-instance/roles-and-permissions.md), and then click the gray **Add Team** button.                                 
+5. Scroll down in the instance's settings drawer until you see the Team Access section. Paste your team's ID text box with \(Mac: CMD+v  PC: CTRL+v\), select your team's [role](../../../getting-started/roles-and-permissions.md), and then click the gray **Add Team** button.                                 
 
 ![](../../../.gitbook/assets/teams-05-team-access.png)
 

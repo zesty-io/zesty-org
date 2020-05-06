@@ -18,7 +18,7 @@ We architected Zesty.io to meet the needs of any content usage such as a [tradit
 
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with.
 
-{% page-ref page="content-instance/" %}
+{% page-ref page="getting-started/" %}
 
 We started by delivering a product that can make quick, easy, but powerful web experiences. We continue that tradition by continuing to approve and add features to our [Web Engine](services/web-engine/). Learn how to use Zesty.io with these platform tours and guides.
 
