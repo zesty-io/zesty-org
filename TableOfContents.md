@@ -1,5 +1,6 @@
 # Table of contents
 
+* [Introduction](homepage.md)
 * [Getting Started](getting-started/README.md)
   * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [Environments & Publishing](getting-started/environments-and-publishing.md)
