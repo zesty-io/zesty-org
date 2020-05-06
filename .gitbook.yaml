@@ -6,18 +6,24 @@ structure:
        
 # https://docs.gitbook.com/integrations/github/content-configuration#redirects
 redirects:
-  content-instance: ./getting-started
   services/web-engine/glossary: ./glossary.md
+
+  # Manager 
   services/web-engine/interface: ./services/manager-ui
-  services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
   services/content-schema: ./services/manager-ui/schema
   
+  # Accounts
   services/accounts: ./services/accounts-ui/README.md
   services/accounts/blueprints: ./services/accounts-ui/blueprints.md
   services/accounts/teams: ./services/accounts-ui/teams.md
   services/accounts/user-account-settings: ./services/accounts-ui/settings.md
   services/accounts/accounts-interface-all-instances-view: ./services/accounts-ui/instances.md
 
+  # Guides
   services/web-engine/guides: ./guides
   services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
   services/web-engine/guides/the-connection-between-schema-content-and-code: ./guides/the-connection-between-schema-content-and-code.md
+
+  # Getting Started
+  content-instance: ./getting-started
+  services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
