@@ -4,14 +4,21 @@ structure:
   readme: homepage.md
   summary: TableOfContents.md
        
+# https://docs.gitbook.com/integrations/github/content-configuration#redirects
 redirects:
   content-instance: ./getting-started
-  services/web-engine/guides: ./guides
   services/web-engine/glossary: ./glossary.md
   services/web-engine/interface: ./services/manager-ui
   services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
   services/content-schema: ./services/manager-ui/schema
+  
   services/accounts: ./services/accounts-ui/README.md
   services/accounts/blueprints: ./services/accounts-ui/blueprints.md
   services/accounts/teams: ./services/accounts-ui/teams.md
   services/accounts/user-account-settings: ./services/accounts-ui/user-account-settings.md
+  services/accounts/accounts-interface-all-instances-view: ./services/accounts-ui/accounts-interface-all-instances-view.md
+
+  services/web-engine/guides: ./guides
+  services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
+  services/web-engine/guides/the-connection-between-schema-content-and-code: ./guides/the-connection-between-schema-content-and-code.md
+  
