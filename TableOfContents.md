@@ -4,8 +4,9 @@
   * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [Environments & Publishing](getting-started/environments-and-publishing.md)
   * [Roles & Permissions](getting-started/roles-and-permissions.md)
-  * [Locales / Multi-Lang Content](services/content/multi-locale-multi-lang-content-i18n.md)
+  * [Locales / Multi-Lang Content](services/content/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
+
 * [Guides](guides/README.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)
@@ -40,6 +41,7 @@
   * [How to control and use og:image](guides/how-to-control-and-use-og-image.md)
   * [How to Create a Blueprint in Github](guides/how-to-create-a-blueprint-in-github.md)
   * [Refreshing the Cache](guides/refreshing-the-cache.md)
+
 * [Glossary](glossary.md)
 
 

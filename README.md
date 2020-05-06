@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Homepage
 description: >-
   Zesty.org is the knowledge base for the Zesty.io CMS Platform. Learn the
   intricacies of Zesty.io content technology and how to implement websites,

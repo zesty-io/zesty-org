@@ -9,6 +9,6 @@ redirects:
   services/web-engine/glossary: ./glossary.md
   services/web-engine/interface: services/manager-ui
   services/accounts: services/accounts-ui
-  services/content/multi-locale-multi-lang-content-i18n: ./getting-started/multi-locale-multi-lang-content-i18n.md
+  services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
   services/content-schema: services/manager-ui/schema
   content-instance: getting-started
