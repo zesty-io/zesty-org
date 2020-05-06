@@ -49,10 +49,10 @@
 ## Services
 
 * [Accounts UI](services/accounts-ui/README.md)
-  * [Accounts Interface \(all-instances view\)](services/accounts-ui/accounts-interface-all-instances-view.md)
+  * [Instances](services/accounts-ui/instances.md)
   * [Blueprints](services/accounts-ui/blueprints.md)
   * [Teams](services/accounts-ui/teams.md)
-  * [User Account Settings](services/accounts-ui/user-account-settings.md)
+  * [Settings](services/accounts-ui/settings.md)
 * [Manager UI](services/manager-ui/README.md)
   * [Content](services/manager-ui/content/README.md)
     * [Adding and Managing Content](services/manager-ui/content/adding-and-managing-content.md)

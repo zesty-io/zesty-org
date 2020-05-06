@@ -15,10 +15,9 @@ redirects:
   services/accounts: ./services/accounts-ui/README.md
   services/accounts/blueprints: ./services/accounts-ui/blueprints.md
   services/accounts/teams: ./services/accounts-ui/teams.md
-  services/accounts/user-account-settings: ./services/accounts-ui/user-account-settings.md
-  services/accounts/accounts-interface-all-instances-view: ./services/accounts-ui/accounts-interface-all-instances-view.md
+  services/accounts/user-account-settings: ./services/accounts-ui/settings.md
+  services/accounts/accounts-interface-all-instances-view: ./services/accounts-ui/instances.md
 
   services/web-engine/guides: ./guides
   services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
   services/web-engine/guides/the-connection-between-schema-content-and-code: ./guides/the-connection-between-schema-content-and-code.md
-  
