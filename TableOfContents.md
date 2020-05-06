@@ -135,7 +135,7 @@
 * [Instant Content API \(Read Only\)](apis/instant-content-api.md)
 * [Accounts REST API](apis/accounts-rest-api/README.md)
   * [Webhooks](apis/accounts-rest-api/webhooks.md)
-* [Instances REST API](apis/instances-rest-api.md)
+* [Instances REST API](apis/instances-api.md)
 * [Auth API](apis/auth-api.md)
 
 ## Tools & Resources <a id="tools"></a>
