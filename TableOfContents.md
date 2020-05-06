@@ -131,12 +131,12 @@
 
 ## APIs
 
-* [API Overview](apis/api-overview.md)
-* [Instant Content API \(Read Only\)](apis/instant-content-api.md)
-* [Accounts REST API](apis/accounts-rest-api/README.md)
-  * [Webhooks](apis/accounts-rest-api/webhooks.md)
-* [Instances REST API](apis/instances-api.md)
+* [Overview](apis/api-overview.md)
 * [Auth API](apis/auth-api.md)
+* [Accounts API](apis/accounts-api/README.md)
+  * [Webhooks](apis/accounts-rest-api/webhooks.md)
+* [Instances API](apis/instances-api.md)
+* [Instant API \(Read Only\)](apis/instant-content-api.md)
 
 ## Tools & Resources <a id="tools"></a>
 

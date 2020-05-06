@@ -29,4 +29,5 @@ redirects:
   services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
 
   # APIs
-  apis/instances-rest-api: ./apis/instances-api.md
+  apis/instances-rest-api: ./apis/instances-api.md  
+  apis/accounts-rest-api: ./apis/accounts-api/README.md

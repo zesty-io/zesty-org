@@ -26,6 +26,11 @@ There can be many consumers of the Instances API. For example; the [manager-ui](
 Instance access is restricted by a [roles & permissions](https://zesty.org/getting-started/roles-and-permissions) system. Accessing an instance with the API requires making an authenticated request. Which is a request that includes an `Authentication` header which contains either a [user session or an access token](https://zesty.org/apis/auth-api). Which one you use will depend upon your use case and needs.
 
 
+## Responses
+
+All API responses are [JSON](https://www.json.org/json-en.html) (JavaScript Object Notation). Although JSON includes the JavaScript language name it is a common format consumable across many programming langauges. It acts as a standardized way to pass various data structures over http.
+
+
 # Tooling
 
 ## Node SDK
