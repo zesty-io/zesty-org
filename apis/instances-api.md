@@ -1,11 +1,11 @@
 ---
-Title: Instance API
-description: The REST API that Zesty.io Manager Runs on
+Title: Instances API
+description: A REST API for interacting with your instance resources.
 ---
 
 # Instances API
 
-Every instance created in Zesty.io can be interacted with over https using the instance [API](https://en.wikipedia.org/wiki/Application_programming_interface) (Application Programming Interface). When an instance is created it is assigned a [ZUID](https://github.com/zesty-io/zuid-specification) (Zesty Universal ID). Using this ZUID the instances API can be requested with the following URL pattern.
+Every instance created in Zesty.io can be interacted with over https using the instance [API](https://en.wikipedia.org/wiki/Application_programming_interface) (Application Programming Interface). When an instance is created it is assigned a [ZUID](https://github.com/zesty-io/zuid-specification) (Zesty Universal IDentifier). Using this ZUID the instances API can be requested with the following URL pattern.
 
 ```
 ZUID.api.zesty.io/v1/
@@ -18,13 +18,15 @@ Complete API Reference: [https://instances-api.zesty.org](https://instances-api.
 {% endhint %}
 
 
+There can be many consumers of the Instances API. For example; the [manager-ui](https://zesty.org/services/manager-ui) consumes your instances API to provide it's functionality. Another common example is making instances API requests as part of a [CI/CD](https://en.wikipedia.org/wiki/Continuous_integration) (Continuous Intergration/Continuous Development) flow.
+
+
 ## Access Permissions
 
-Instance access is restricted by a [roles & permissions](getting-started/roles-and-permissions) system. Accessing an instance with the API requires making an authenticated request. Which is a request that includes an `Authentication` header which contains either a [user session or an access token](https://zesty.org/apis/auth-api). Which one you use will depend upon your use case and needs.
+Instance access is restricted by a [roles & permissions](https://zesty.org/getting-started/roles-and-permissions) system. Accessing an instance with the API requires making an authenticated request. Which is a request that includes an `Authentication` header which contains either a [user session or an access token](https://zesty.org/apis/auth-api). Which one you use will depend upon your use case and needs.
 
 
-
-## Tooling
+# Tooling
 
 ## Node SDK
 
