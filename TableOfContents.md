@@ -5,7 +5,7 @@
   * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [Environments & Publishing](getting-started/environments-and-publishing.md)
   * [Roles & Permissions](getting-started/roles-and-permissions.md)
-  * [Locales / Multi-Lang Content](services/content/i18n-multi-language.md)
+  * [Locales / Multi-Lang Content](getting-started/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
 
 * [Guides](guides/README.md)
