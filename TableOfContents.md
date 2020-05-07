@@ -8,6 +8,7 @@
   * [Locales / Multi-Lang Content](getting-started/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
 * [Guides](guides/README.md)
+  * [Bottom Loading JavaScript](guides/bottom-loading-javascript.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
