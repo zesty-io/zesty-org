@@ -8,7 +8,7 @@ description: >-
 
 "Include" lets you insert snippets and endpoints within the view you are in.
 
-### Globally Available Views, Snippets, and Endpoints
+## Globally Available Views, Snippets, and Endpoints
 
 When you create a snippet in the Editor, whether it be an HTML snippet, HTML Ajax, or JSON Ajax, these snippets are available globally. To insert this snippet, you'll need to use the "include" Parsley call and the name of your snippet.
 
@@ -28,9 +28,9 @@ If the piece of code that that's being included is an endpoint be sure to use th
 {{ include  /my/file.html }}
 ```
 
-#### Common Usage 
+### Common Usage
 
-One common use is to create a globally available header and footer. In our example below we have two separate HTML snippets: one called **header** and the other called **footer**. We want these to load in every page of our instance therefore we add them to the Loader file.  In the Loader file, we add calls for the header and footer snippet calls as follows:
+One common use is to create a globally available header and footer. In our example below we have two separate HTML snippets: one called **header** and the other called **footer**. We want these to load in every page of our instance therefore we add them to the Loader file. In the Loader file, we add calls for the header and footer snippet calls as follows:
 
 ```text
 {{ include header }]

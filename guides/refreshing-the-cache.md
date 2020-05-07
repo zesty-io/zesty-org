@@ -16,15 +16,15 @@ Learn more about caching [here](https://en.wikipedia.org/wiki/Cache_%28computing
 
 1. Locate the item that needs its cache refreshed and select it.
 
-![Locate and select the item from the sidebar.](../../../.gitbook/assets/01-cache-bust-find-item.png)
+![Locate and select the item from the sidebar.](../.gitbook/assets/01-cache-bust-find-item.png)
 
 2. In the editing view scroll down until you see Refresh Cached Item button in the right-hand sidebar and click it.
 
-![Scroll until you see the Refresh Cached Item button.](../../../.gitbook/assets/02-cache-bust-find-button.png)
+![Scroll until you see the Refresh Cached Item button.](../.gitbook/assets/02-cache-bust-find-button.png)
 
 3. A green success notification will show in the lower right-hand corner.
 
-![After clicking the button look for the green success notification.](../../../.gitbook/assets/3-cache-bust-success-notification.png)
+![After clicking the button look for the green success notification.](../.gitbook/assets/3-cache-bust-success-notification.png)
 
 4. Hard-refresh the live site and view your changes. 
 

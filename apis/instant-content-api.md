@@ -4,7 +4,7 @@ description: >-
   Content Platform
 ---
 
-# Instant Content API \(Read Only\)
+# Instant API \(Read Only\)
 
 ## What is the Zesty.io Instant Content API?
 

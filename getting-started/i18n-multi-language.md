@@ -6,7 +6,7 @@ description: Zesty.io Supports multiple locales/languages for each content item
 
 When a Zesty.io Content Instance is created, it uses english as the default language. It is possible to add more languages to a Zesty.io Content Instance. Multi-lang content is premium feature of Zesty.io, reach out to your account manager to learn more.
 
-### Activating Multilang Content
+## Activating Multilang Content
 
 The API must be used to add additional locales/languages to a Content Instance.
 
@@ -34,7 +34,7 @@ Chose a code from the Table Below
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -42,17 +42,17 @@ Chose a code from the Table Below
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### What happens when a new language is added?
+## What happens when a new language is added?
 
-When a new language is created, Zesty.io's API will automate a process to duplicate all content into a language specific version of that content. The default language is content is copied into the new language version \(it is not automatically translated\). For example, if you had an english about page \(url `/about/`\), and added Spanish with the locale of Mexico, a new content items would be created with the URL  `/es-mx/about/` and the content item would be pre-filled with the default language content. These means you would have a Spanish placeholder content item with english words in it to start. All copied new language pages start at version one \(with default language content pre-filler\) and have their own version control.
+When a new language is created, Zesty.io's API will automate a process to duplicate all content into a language specific version of that content. The default language is content is copied into the new language version \(it is not automatically translated\). For example, if you had an english about page \(url `/about/`\), and added Spanish with the locale of Mexico, a new content items would be created with the URL `/es-mx/about/` and the content item would be pre-filled with the default language content. These means you would have a Spanish placeholder content item with english words in it to start. All copied new language pages start at version one \(with default language content pre-filler\) and have their own version control.
 
 {% hint style="info" %}
 The default language can only be chosen at the creation of a content instance. Talk to a Zesty.io support tech for help doing this.
 {% endhint %}
 
-### How Does Web Engine Handle Multi-lang/Multi-Locale Content
+## How Does Web Engine Handle Multi-lang/Multi-Locale Content
 
-When Web Engine detects there are multiple languages on a Content Instance it will add specific code that is read by browsers, screen readers, and search engines to direct users to different languages/locales of the content it serves. 
+When Web Engine detects there are multiple languages on a Content Instance it will add specific code that is read by browsers, screen readers, and search engines to direct users to different languages/locales of the content it serves.
 
 For example purposes, let's use the domain www.acme.com, and assume it has two languages, English \(en-us\) and Spanish \(es-mx\).
 
@@ -105,14 +105,10 @@ Auto-generated sitemap gets additional language qualifiers and pointers.
                hreflang="en"
                href="http://www.example.com/english/page.html"/>
   </url>
-
-
-
-
 ```
 {% endcode %}
 
-### List of Languages Zesty.io Supports
+## List of Languages Zesty.io Supports
 
 Each language has an associated code, that code is used in the API to create a new language for a Content Instance.
 

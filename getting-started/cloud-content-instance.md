@@ -9,13 +9,13 @@ description: >-
 
 ## What is a Cloud Content Instance?
 
-Cloud Content Instances are the primary product of Zesty.io. Content Instances are implementations of Zesty.io used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc.. Content Instances are set to replace traditional content management systems. 
+Cloud Content Instances are the primary product of Zesty.io. Content Instances are implementations of Zesty.io used to create and manage text, image, or video based content that is distributed to digital presentations. Digital presentation can include, but are not limited to: websites, web and mobile applications, video game consoles, Alexa apps, Roku apps, digital signage, etc.. Content Instances are set to replace traditional content management systems.
 
 ### What type of Content Can be Stored?
 
 Traditionally, Zesty.io has been used for brochure style, public marketing content, that is most commonly distributed through websites. This includes, but is not limited to, product content, blogging \(content marketing\) content, promotional content, business information content, educational content.
 
-Alternate styles of content include internal intranet content \(Learning Management\), instructional content to control environments or interactive digital experiences, or content that is primarily interacted with by voice commands. 
+Alternate styles of content include internal intranet content \(Learning Management\), instructional content to control environments or interactive digital experiences, or content that is primarily interacted with by voice commands.
 
 ### Powering Multiple Digital Presentations
 
@@ -35,7 +35,7 @@ To launch content in most legacy systems, a developer would often set up open-so
 * **Stacking Responsibilities:** As need for project expansion is demanding, the above issues compound and require dedicated full time developer maintain and continue iteration. This results in a heavy monetary and opportunity costs for the business due to expensive development resources and/or reduction of speed to implement new presentations.
 
 {% hint style="warning" %}
-Some CMS software solutions are free to get started, but as time passes hidden costs of maintaining, securing, and upgrading start to add up. 
+Some CMS software solutions are free to get started, but as time passes hidden costs of maintaining, securing, and upgrading start to add up.
 {% endhint %}
 
 #### Advantages to Cloud Content Instances
@@ -49,16 +49,16 @@ Some CMS software solutions are free to get started, but as time passes hidden c
 * **Increased Team Performance:** Do more with less facilitation and coordination. Resources once spent on maintenance and up-time can be redirected on new presentations.
 
 {% hint style="success" %}
-The cost to run a Cloud Content Instance may be quickly justified when comparing it to developer labor costs required to maintain self-installed custom solutions. 
+The cost to run a Cloud Content Instance may be quickly justified when comparing it to developer labor costs required to maintain self-installed custom solutions.
 {% endhint %}
 
 ## Anatomy of a Content Instance
 
-Each Content Instance is comprised of three main components: **Content Schema**, a **Media Bin**, and optional **Website Engine** functionality. When an Instance is created, it is ready for any content configuration. Once configured, content items can be imported or entered, at which point content stored on the instance can be made available immediately through the Instant Content API \(headless\) or fully functional website \(Site Engine\). 
+Each Content Instance is comprised of three main components: **Content Schema**, a **Media Bin**, and optional **Website Engine** functionality. When an Instance is created, it is ready for any content configuration. Once configured, content items can be imported or entered, at which point content stored on the instance can be made available immediately through the Instant Content API \(headless\) or fully functional website \(Site Engine\).
 
 ### Content Schema
 
-Content Schema is where the structure of how you store and access data is defined. There is no limit or rules in how simple or complicated the schema can be; what is important is that it matches your use case. Content Schema is comprised of **Content Models**, which are individual definitions of how to store content. One simple example of a content models is **Blog Articles**, which would have the fields title \[text\], article\_content \[wysiwyg\], and data\_created \[date\]. 
+Content Schema is where the structure of how you store and access data is defined. There is no limit or rules in how simple or complicated the schema can be; what is important is that it matches your use case. Content Schema is comprised of **Content Models**, which are individual definitions of how to store content. One simple example of a content models is **Blog Articles**, which would have the fields title \[text\], article\_content \[wysiwyg\], and data\_created \[date\].
 
 In legacy systems and even most modern systems, developers have to build databases and model tables. This includes columns, IDs, relationships in order to capture data and edit data. A lot of times this is used to power websites. This is cumbersome and difficult. This is why CMS schemas exist- they are the UI abstraction over the database. As a user of Zesty.io, you simply provide a definition of your data model, and we handle all the underpinning to store your definitions and data efficiently.
 

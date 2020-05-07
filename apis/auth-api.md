@@ -6,7 +6,7 @@ description: Authenticate API for Zesty.io Users
 
 Complete API Reference: [https://auth-api.zesty.org](https://auth-api.zesty.org/?version=latest)
 
-Authentication with Zesty.io is handled by the Auth API which issues a token that grants access to the [Instances API](https://github.com/zesty-io/zesty-org/tree/235f491605bc0837da2a305c282d907ccab019a7/apis/instances-rest-api/README.md), [Accounts API](accounts-rest-api/), and [Media API](auth-api.md).
+Authentication with Zesty.io is handled by the Auth API which issues a token that grants access to the [Instances API](https://github.com/zesty-io/zesty-org/tree/235f491605bc0837da2a305c282d907ccab019a7/apis/instances-rest-api/README.md), [Accounts API](accounts-api/), and [Media API](auth-api.md).
 
 Roles and permission are managed by the [Accounts API](https://accounts-api.zesty.org/).
 

@@ -18,7 +18,7 @@ Create a 301 or 302 redirects by following these steps:
 
 4. Click the green "+ Redirect" button to create the redirect.
 
-![Example of a 301 redirect](../../../../.gitbook/assets/redirect-example.png)
+![Example of a 301 redirect](../../../.gitbook/assets/redirect-example.png)
 
 ## Mass Redirect
 
@@ -39,7 +39,7 @@ Follow these steps to create a CSV of your redirects:
 
 See the image below for an example of how your CSV should be formatted.
 
-![Example CSV of redirects.](../../../../.gitbook/assets/screen-shot-2019-10-18-at-3.22.43-pm.png)
+![Example CSV of redirects.](../../../.gitbook/assets/screen-shot-2019-10-18-at-3.22.43-pm.png)
 
 Once your sheet is properly formatted click the gray "Import CSV/XML" button and import your sheet.
 

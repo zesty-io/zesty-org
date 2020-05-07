@@ -10,7 +10,7 @@ description: >-
 
 Standard embed codes provided by social media sites may be copy and pasted into a WYSIWYG Editor or directly into the content model HTML view file.
 
-![In youtube, click share, then click the embed option to get this view.](../../../.gitbook/assets/image%20%284%29.png)
+![In youtube, click share, then click the embed option to get this view.](../.gitbook/assets/image%20%284%29.png)
 
 Web Developers can take advantage of parsley by adding a field to a content model called "youtube\_id" \(for example\), and can make dynamic template views by using code like this:
 

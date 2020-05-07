@@ -1,6 +1,6 @@
 # How to Create a one\_to\_many Relationship
 
-### Getting Started
+## Getting Started
 
 A good way to explain one-to-many relationships is through tags. In Zesty.io blogs, tags can be used to tie related content together.
 
@@ -14,11 +14,11 @@ Now in the Articles section, you can select a tag from the 'Article Tags' field.
 
 The one-to-many relationship here works in that you can have many tags to one article. This is particular useful for organizing your content, or even doing creative things like looping through the tags to create a way to filter through articles by the tags themselves. For a guide to do just that, click [here](https://zesty.org/guides/how-to-filter-by-tags)
 
-### In Parsley:
+## In Parsley:
 
 When you create a blog in zesty, the logic behind the tags is already set up. Lets take a look at how tags are connected to articles in Parsley:
 
-{% embed url="https://gist.github.com/Slunk32/4ea1c2033455c3dce273d383da5ada64" %}
+{% embed url="https://gist.github.com/Slunk32/4ea1c2033455c3dce273d383da5ada64" caption="" %}
 
 The above code creates the listing of tags in the article 'tag' page:
 

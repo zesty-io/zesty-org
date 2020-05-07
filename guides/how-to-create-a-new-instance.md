@@ -11,7 +11,7 @@ description: >-
 
 From the Accounts Manager interface, click the green "+ Create New Instance" button on the top left card and name your new instance.
 
-![Accounts Manager Interface](../../../.gitbook/assets/accts.png)
+![Accounts Manager Interface](../.gitbook/assets/accts.png)
 
 ### Step 2: Select a Blueprint
 

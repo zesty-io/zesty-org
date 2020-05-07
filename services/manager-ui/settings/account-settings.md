@@ -18,7 +18,7 @@ Accounts settings can be accessed though the Accounts management interface as we
 * 2-factor authentication
 * Preferences: manage blueprints, manage teams, and instance grid
 
-![Account settings interface.](../../../../.gitbook/assets/account-settings-screen.png)
+![Account settings interface.](../../../.gitbook/assets/account-settings-screen.png)
 
 ### Accessing Account Settings
 
@@ -26,19 +26,19 @@ Accounts settings can be accessed though the Accounts management interface as we
 
 1. From the all-instances view, click on your user name/avatar in the upper right-hand corner outlined in purple below.
 
-![Access account settings by clicking on your user name/avatar.](../../../../.gitbook/assets/accounts-interface-account-settings.png)
+![Access account settings by clicking on your user name/avatar.](../../../.gitbook/assets/accounts-interface-account-settings.png)
 
 2. A dropdown menu will appear with options. Choose My Account.
 
-![Select My Account from the dropdown.](../../../../.gitbook/assets/accounts-interface-dropdown-my-acct.png)
+![Select My Account from the dropdown.](../../../.gitbook/assets/accounts-interface-dropdown-my-acct.png)
 
 #### Content Management Interface
 
 1. Within the account interface navigate to the Settings section.
 
-![Navigate to the Settings section.](../../../../.gitbook/assets/settings-section.png)
+![Navigate to the Settings section.](../../../.gitbook/assets/settings-section.png)
 
 2. From the Settings section select Account Settings.
 
-![Select the Account Settings subsection to edit your account settings.](../../../../.gitbook/assets/settings-account-settings.png)
+![Select the Account Settings subsection to edit your account settings.](../../../.gitbook/assets/settings-account-settings.png)
 

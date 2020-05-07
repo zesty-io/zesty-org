@@ -83,7 +83,7 @@ if (getCookie('trackMe') == null) {
 } 
 ```
 
-![HTML/CSS popup, connect the buttons to your javascript functions.](../../../.gitbook/assets/screen-shot-2019-04-04-at-8.46.31-am.png)
+![HTML/CSS popup, connect the buttons to your javascript functions.](../.gitbook/assets/screen-shot-2019-04-04-at-8.46.31-am.png)
 
 ### Step 4: Connect buttons to set a preference on a cookie 
 

@@ -10,7 +10,7 @@ description: >-
 
 To edit content in Zesty.io use the Content section in the Instance Interface for the instance that you are editing. The left hand column contains all of the pages, page groups, and data sets from the content structure that have been set up. You can also click the magnifying glass in the upper right hand corner of the left column, or type ctrl/cmd + shift + k to pull up a global search modal. As you start typing, results matching your input will begin to appear as selections to click into.
 
-![The left-hand navigation bar with all of your content is outlined here.](../../../../.gitbook/assets/accessing-content.png)
+![The left-hand navigation bar with all of your content is outlined here.](../../../.gitbook/assets/accessing-content.png)
 
 ### Updating Content
 

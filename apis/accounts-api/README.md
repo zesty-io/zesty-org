@@ -1,4 +1,4 @@
-# Accounts REST API
+# Accounts API
 
 API used to control management of users, roles, instances, and teams.
 
@@ -17,6 +17,4 @@ The Node Wrapper hits a few Accounts API endpoints commonly used for development
 ## Webhooks
 
 Documentation on creating, modifying and deleting webhooks can be found below.
-
-{% page-ref page="webhooks.md" %}
 

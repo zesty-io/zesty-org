@@ -12,7 +12,7 @@ An instance's settings control a number of an instance's attributes from forcing
 
 An instance's settings are located under the Settings section in the Content Manger. 
 
-![Settings section in the content manager navigation.](../../../../.gitbook/assets/settings-section.png)
+![Settings section in the content manager navigation.](../../../.gitbook/assets/settings-section.png)
 
 An instance's settings are broken down into 4 subsections: 
 
@@ -21,15 +21,15 @@ An instance's settings are broken down into 4 subsections:
 * Fonts
 * Account Settings
 
-![Instance settings subsections.](../../../../.gitbook/assets/settings-subsections.png)
+![Instance settings subsections.](../../../.gitbook/assets/settings-subsections.png)
 
 Each subsection has their own categories as well. Each subsections' categories are located in the left-hand sidebar navigation \(outlined in purple below\).
 
-![Subsection&apos;s utilities are shown in the left-hand navigation.](../../../../.gitbook/assets/settings-subsections-utilities.png)
+![Subsection&apos;s utilities are shown in the left-hand navigation.](../../../.gitbook/assets/settings-subsections-utilities.png)
 
 Once one of the categories is selected the main portion of the screen will show you your options \(outlined in purple below\). Options will vary depending on which utility has been selected.
 
-![All of a utilities options will be shown in the main portion of the screen.](../../../../.gitbook/assets/setting-subsection-utilities-main-portion.png)
+![All of a utilities options will be shown in the main portion of the screen.](../../../.gitbook/assets/setting-subsection-utilities-main-portion.png)
 
 ### Accessing Instance Settings With Parsley
 

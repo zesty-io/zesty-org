@@ -5,7 +5,7 @@ description: >-
   sidebar navigation, and much more.
 ---
 
-# Interface
+# Manager UI
 
 Please note that not all sections are available to each property. Depending on your options, configuration, or role you may see fewer sections. Sections that may not be available because of property specific options or configuration are noted with an asterisk\(\*\).
 

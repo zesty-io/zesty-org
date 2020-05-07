@@ -20,7 +20,7 @@ Now go ahead and confirm everything has been saved. You will also see a file fol
 
 From here you should select the editor tab as shown below:
 
-![](../../../../.gitbook/assets/import-code-01.png)
+![](../../../.gitbook/assets/import-code-01.png)
 
 Here is the fun part. You can drag and drop these files right into the boxes of code on the left side of your screen. First we will drop the HTML file that came out of your website right into the left-hand navigation under HTML Views.
 

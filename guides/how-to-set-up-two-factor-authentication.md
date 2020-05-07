@@ -5,7 +5,7 @@ description: >-
   account.
 ---
 
-# How to Set Up Two-factor Authentication
+# Setting Up Two-factor Authentication
 
 Two-factor authentication make Zesty.io safer for your business. We highly recommend you and your team uses two-factor authentication to logging in. In this guide we will walk you through a few simple steps to get two-factor enabled for your user login.
 

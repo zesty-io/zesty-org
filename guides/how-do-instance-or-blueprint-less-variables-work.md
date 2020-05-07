@@ -18,7 +18,7 @@ Dropdown are used to give the user a preset of options. This is helpful for thin
 
 {% embed url="https://gist.github.com/Slunk32/dfc3feba6a0a0e22eabe0d2dcfd9551a" %}
 
-![](../../../.gitbook/assets/less-dropdown-example.png)
+![](../.gitbook/assets/less-dropdown-example.png)
 
 #### Example Color Variable: 
 
@@ -26,7 +26,7 @@ Color variables help you keep a reference to the colors used on your site. This 
 
 {% embed url="https://gist.github.com/Slunk32/27e69fdba334fd216ed3d14dc509ea54" %}
 
-![](../../../.gitbook/assets/less-color-example.png)
+![](../.gitbook/assets/less-color-example.png)
 
 #### Example Text Variable: 
 
@@ -34,7 +34,7 @@ Text variables controls the options for styling related to text. An example woul
 
 {% embed url="https://gist.github.com/Slunk32/b0320e956739d715ac68977105dccd45" %}
 
-![](../../../.gitbook/assets/less-nav-height.png)
+![](../.gitbook/assets/less-nav-height.png)
 
 #### Example Image Variable: 
 

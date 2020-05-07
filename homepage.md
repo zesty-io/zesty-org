@@ -6,7 +6,7 @@ description: >-
   headless CMS apps, and marketing components.
 ---
 
-# Getting Started
+# Introduction
 
 ## What is Zesty.io?
 

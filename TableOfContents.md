@@ -7,7 +7,6 @@
   * [Roles & Permissions](getting-started/roles-and-permissions.md)
   * [Locales / Multi-Lang Content](getting-started/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
-
 * [Guides](guides/README.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)
@@ -36,15 +35,13 @@
   * [How to Personalize User Experience with Session Variables](guides/how-to-personalize-user-experience-with-session-variables.md)
   * [How to Prevent Bots From Submitting Forms](guides/how-to-prevent-bots-from-submitting-your-form.md)
   * [How to Migrate a Site to Zesty.io](guides/how-to-migrate-a-site-to-zesty.io.md)
-  * [How to Set Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
+  * [Setting Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
   * [How to Set Up Internationalization \(i18n\)](guides/how-to-set-up-internationalization-i18n.md)
   * [How to Use the Visual Sitemap](guides/how-to-use-the-visual-sitemap.md)
   * [How to control and use og:image](guides/how-to-control-and-use-og-image.md)
   * [How to Create a Blueprint in Github](guides/how-to-create-a-blueprint-in-github.md)
   * [Refreshing the Cache](guides/refreshing-the-cache.md)
-
 * [Glossary](glossary.md)
-
 
 ## Services
 
@@ -134,7 +131,7 @@
 * [Overview](apis/api-overview.md)
 * [Auth API](apis/auth-api.md)
 * [Accounts API](apis/accounts-api/README.md)
-  * [Webhooks](apis/accounts-rest-api/webhooks.md)
+  * [Webhooks](apis/accounts-api/webhooks.md)
 * [Instances API](apis/instances-api.md)
 * [Instant API \(Read Only\)](apis/instant-content-api.md)
 
@@ -171,3 +168,4 @@
 ## Community
 
 * [RFCs/Specs](community/specs.md)
+
