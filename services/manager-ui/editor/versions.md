@@ -20,7 +20,7 @@ The diff view will allow you to select two versions of the same file and see the
 
 ### Version Rollbacks
 
-In order to revert code you will need to follow these 3 steps.
+When accessing and restoring (saving/publishing) older versions of your code you’re creating new versions. In order to revert code you will need to follow these 3 steps.
 
 1. Use the diff view to load a prior version of the code.
 2. Save the now loaded prior version of code. 
@@ -28,7 +28,6 @@ In order to revert code you will need to follow these 3 steps.
 3. Publish the new version. 
    1. **By publishing you will make the reverted code live.**
 
-When accessing and restoring (saving/publishing) older versions of your code you’re creating new versions.
 **For example**, *if working on version 4 but want to revert to version 2, select and load version 2. And on save version 5 is created. To send that code live, you would then publish it.*
 
 
