@@ -23,6 +23,7 @@ redirects:
   services/web-engine/guides: ./guides
   services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
   services/web-engine/guides/the-connection-between-schema-content-and-code: ./guides/the-connection-between-schema-content-and-code.md
+  services/web-engine/guides/how-to-launch-an-instance: ./guides/how-to-launch-an-instance.md
 
   # Getting Started
   content-instance: ./getting-started
