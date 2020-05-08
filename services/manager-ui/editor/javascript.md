@@ -20,7 +20,10 @@ It's important to note that because all the JavaScript is served before the docu
 _jQuery DOM ready example:_
 
 ```JavaScript
-$(document).ready(function() { console.log( "ready!" ); // execute your code here });
+$(document).ready(function() { 
+  // execute your code here
+  console.log( "ready!" );
+});
 ```
 
 
