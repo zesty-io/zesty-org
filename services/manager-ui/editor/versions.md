@@ -12,9 +12,9 @@ Code views (*single-page, multi-page and headless*), resources (*JavaScript and 
 
 You may need to understand the difference between two versions of a code file. This can be done by using the diff button located on the file action bar. 
 
-[!Web IDE file action bar](https://kfg6bckb.media.zestyio.com/09-action-bar.png)
+![Web IDE file action bar](https://kfg6bckb.media.zestyio.com/09-action-bar.png)
 
-[!Web IDE file diff view](https://kfg6bckb.media.zestyio.com/08-diff-view.png)
+![Web IDE file diff view](https://kfg6bckb.media.zestyio.com/08-diff-view.png)
 
 The diff view will allow you to select two versions of the same file and see the changes that have occurred between them. This can be helpful to debug a code issue or to revert to a prior version of a file. Using the "Load Version X" button will update the code editor to the selected versions code. Once loaded you can either make additional changes to the code or save it as is.
 
