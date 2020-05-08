@@ -13,6 +13,7 @@
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
   * [Content Entry, Drafts, and Publishing](guides/content-entry-drafts-and-publishing.md)
+  * [Creating a feed](guides/creating-a-feed.md)
   * [Creating and Adding a Team](guides/adding-a-team.md)
   * [Adding Instances to EcoSystems](guides/adding-instances-to-ecosystems.md)
   * [Password Protect Web Engine Preview](guides/password-protect-web-engine-preview.md)
@@ -75,7 +76,6 @@
     * [Custom Meta Tags](services/manager-ui/editor/custom-meta-tags.md)
     * [String Modifiers](services/manager-ui/editor/string-modifiers.md)
     * [Importing Code and Styles](services/manager-ui/editor/importing-code-and-styles.md)
-
   * [Leads](services/manager-ui/leads.md)
   * [Schema](services/manager-ui/schema/README.md)
     * [Building a Content Structure](services/manager-ui/schema/building-a-content-structure.md)
