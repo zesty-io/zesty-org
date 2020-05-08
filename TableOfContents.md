@@ -66,7 +66,6 @@
     * [How to upload multiple images](services/manager-ui/media/how-to-upload-multiple-images.md)
   * [Web IDE \(Code Editor\)](services/manager-ui/editor/README.md)
     * [Outputting Content](services/manager-ui/editor/outputting-content.md)
-    * [Code Bank](services/manager-ui/editor/code-bank.md)
     * [Custom Meta Tags](services/manager-ui/editor/custom-meta-tags.md)
     * [Javascript](services/manager-ui/editor/javascript.md)
     * [Save and Quick Publish](services/manager-ui/editor/save-and-quick-publish.md)
