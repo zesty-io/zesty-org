@@ -14,6 +14,7 @@ redirects:
   services/content-schema: ./services/manager-ui/schema
   services/manager-ui/editor/version-control: ./services/manager-ui/editor/versions.md
   services/manager-ui/editor/save-and-quick-publish: ./services/manager-ui/editor/saving.md
+  services/manager-ui/editor/custom-meta-tags: ./services/manager-ui/settings/instance-meta-tags.md
 
   # Accounts
   services/accounts: ./services/accounts-ui/README.md
