@@ -11,7 +11,8 @@ redirects:
   # Manager 
   services/web-engine/interface: ./services/manager-ui
   services/content-schema: ./services/manager-ui/schema
-  
+  services/manager-ui/editor/version-control: ./services/manager-ui/editor/versions.md
+
   # Accounts
   services/accounts: ./services/accounts-ui/README.md
   services/accounts/blueprints: ./services/accounts-ui/blueprints.md
