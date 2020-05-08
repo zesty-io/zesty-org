@@ -167,6 +167,7 @@
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)
   * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
+* [Chrome Browser Extension](tools/chrome-extension.md)
 
 ## Community
 
