@@ -140,7 +140,6 @@
 
 ## Tools & Resources <a id="tools"></a>
 
-* [Atom IDE Package](tools/atom-package.md)
 * [Node SDK](tools/node-sdk/README.md)
   * [Instantiation](tools/node-sdk/instantiation.md)
   * [Instance](tools/node-sdk/instance/README.md)
@@ -155,6 +154,8 @@
     * [Groups](tools/node-sdk/media/media-group.md)
   * [Accounts](tools/node-sdk/account.md)
   * [Auth](tools/node-sdk/auth.md)
+* [Atom IDE Package](tools/atom-package.md)
+* [Chrome Browser Extension](tools/chrome-extension.md)
 * [Headless Code Examples](tools/code-examples/README.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide \(Local React App\)](tools/code-examples/react/guide-local-react-app.md)
@@ -167,7 +168,6 @@
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
 * [Smart Devices](tools/smart-devices/README.md)
   * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
-* [Chrome Browser Extension](tools/chrome-extension.md)
 
 ## Community
 
