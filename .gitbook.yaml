@@ -10,8 +10,10 @@ redirects:
 
   # Manager 
   services/web-engine/interface: ./services/manager-ui
+  services/web-engine/interface/editor: services/manager-ui/README.md
   services/content-schema: ./services/manager-ui/schema
   services/manager-ui/editor/version-control: ./services/manager-ui/editor/versions.md
+  services/manager-ui/editor/save-and-quick-publish: ./services/manager-ui/editor/saving.md
 
   # Accounts
   services/accounts: ./services/accounts-ui/README.md
