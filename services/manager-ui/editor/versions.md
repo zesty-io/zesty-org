@@ -31,3 +31,8 @@ When accessing and restoring (saving/publishing) older versions of your code you
 **For example**, *if working on version 4 but want to revert to version 2, select and load version 2. And on save version 5 is created. To send that code live, you would then publish it.*
 
 
+## Developing With Version Control. E.G. Git
+
+Version control software provides very standardized and complete solutions for managing code. As such we do not want to duplciate that work. For example; we do not provide a way "[merge](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/addressing-merge-conflicts)" code. This should be handled on a local machine using your version control system of choice.
+
+We highly recommend combining version control best practices along with our [Atom IDE package](https://zesty.org/tools/atom-package). Using version control locally will provide you with workflows such as; [branching, merging and making pull requests](https://guides.github.com/introduction/flow/). Once code is a functioning state and merged to a master branch that work needs to be synced with your Zesty.io instance. When synced those changes will be on the Zesty.io dev envrionment, allowing for previewing the code effects on content before publishing. When code on your instance is ready to go live you will need to publish it from the Web IDE.
