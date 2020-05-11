@@ -6,9 +6,32 @@ description: >-
 
 # Accounts UI
 
-These article will help users navigate the Accounts interface.
+## Overview
 
-Get started with our most popular articles.
+Accounts settings can be accessed though the Accounts management interface as well as through the content management interface. The following items can be updated through your account settings:
+
+* User name
+* Gravatar
+* Primary email address
+* Add back-up email address
+* Password
+* 2-factor authentication
+* Preferences: manage blueprints, manage teams, and instance grid
+
+![Account settings interface.](../../.gitbook/assets/account-settings-screen.png)
+
+### Accessing Account Settings
+
+#### Accounts Interface
+
+1. From the all-instances view, click on your user name/avatar in the upper right-hand corner outlined in purple below.
+
+![Access account settings by clicking on your user name/avatar.](../../.gitbook/assets/accounts-interface-account-settings.png)
+
+2. A dropdown menu will appear with options. Choose My Account.
+
+![Select My Account from the dropdown.](../../.gitbook/assets/accounts-interface-dropdown-my-acct.png)
+
 
 1. [Accounts Interface overview](https://zesty.org/services/accounts-ui/accounts-interface-all-instances-view)
 2. [Blueprints](https://zesty.org/services/accounts-ui/blueprints)

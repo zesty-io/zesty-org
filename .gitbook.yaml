@@ -22,6 +22,7 @@ redirects:
   services/accounts/teams: ./services/accounts-ui/teams.md
   services/accounts/user-account-settings: ./services/accounts-ui/settings.md
   services/accounts/accounts-interface-all-instances-view: ./services/accounts-ui/instances.md
+  services/manager-ui/settings/account-settings: ./services/accounts-ui/README.md
 
   # Guides
   services/web-engine/guides: ./guides

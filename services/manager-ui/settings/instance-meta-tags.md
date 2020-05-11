@@ -1,10 +1,10 @@
 ---
-description: Learn how to add instance meta tags to the document head.
+description: Learn how to add instance scoped meta tags to the document head.
 ---
 
 # Instance Meta Tags
 
-Instance meta tags are global and are a great place to provide development specific meta information such as viewport, device, character set, etc. These are managed underneath the instance settings.
+Instance scoped meta tags are global and are a great place to provide development specific meta information such as viewport, device, character set, etc. These are managed underneath the instance settings.
 
 
 <!-- ## Creating instance meta tags
