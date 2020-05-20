@@ -11,6 +11,8 @@ description: >-
 
 Variables are a way to store information consistently so that you can access the stored information either further on in the code, or at another time. Variables are also useful for shortening frequently used long pieces of code or eliminating repetitive pieces of code. If this doesn't make sense yet, hopefully the examples will help.
 
+***Accessing cookies via Parsley does not work for pages statically cached, you'll need to use javascript for that. Our CDN serves a statically processed page, while our Preview mode renders at the server. Parsley is server side, so it only runs in Preview and not in production for statically cached CDN pages.*** 
+
 There are three types of Parsley variables: standard variables, session variables, and cookies. The only difference between them is the length of time the information stays stored with the variable.
 
 ### Standard Variables
