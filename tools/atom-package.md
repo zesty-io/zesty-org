@@ -6,15 +6,15 @@ description: >-
 
 # Atom IDE Package
 
-## Getting Started 
+## Getting Started
 
 To get started with the Atom IDE package you must first have the Atom editor installed. After you have Atom installed the next step is to obtain the details of your instance, you will use these to connect to it using Atom and then install the Zesty.io package.
 
-Download and install the Atom editor directly from [Atom's site](https://atom.io/).  
+Download and install the Atom editor directly from [Atom's site](https://atom.io/).
 
 ### Get your Instance ZUID
 
-Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️ icon on the instance you want to connect to and you'll see the Instance Details slide out from the right of the screen, from here you can find your Instance ZUID: 
+Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️ icon on the instance you want to connect to and you'll see the Instance Details slide out from the right of the screen, from here you can find your Instance ZUID:
 
 ![Instance Detials.](../.gitbook/assets/instance-details.png)
 
@@ -27,7 +27,6 @@ From the Details view scroll down until you find the Access Tokens section.
 Specify the name and the role of the token and click on Create Token.
 
 ![Accounts Interface create-an-instance card.](../.gitbook/assets/new-access-token.png)
-
 
 ### Install the Package
 
@@ -42,7 +41,6 @@ apm install zestyio-atom
 The Atom Editor can also be installed through the Atom package manager. When you have [ATOM](https://atom.io) installed, open settings, click on install, search Zesty. Install **zestyio-atom** and **zestyio-parsley-atom**.
 
 ![Snap shot of searching for Zesty Plugin in the ATOM Editor](../.gitbook/assets/image%20%283%29.png)
-
 
 ### Connect to your Zesty instance
 
@@ -69,18 +67,16 @@ Add the following JSON to the `zesty.json` file.
 
 In the `zesty.json` file replace `INSTANCE_ZUID` & `INSTANCE_TOKEN` with the values from you obtained from your instance.
 
-
-#### 3. Open your instance directory 
+#### 3. Open your instance directory
 
 in Atom to trigger the instance sync. _If Atom is already open you will need to restart it._
 
 **Once syncing is completed you should see your instance code files in your Atom project file tree.**
 
-
 **Connecting to your instance through the User sign-in modal**
 
 After installing Atom and the zestyio-atom & zestyio-parsley-atom package as necessary follow these steps.  
-This video covers using the sign-in modal method and includes instructions on  downloading Atom: [https://www.youtube.com/watch?v=s98dR1M2u8E](https://www.youtube.com/watch?v=s98dR1M2u8E)
+This video covers using the sign-in modal method and includes instructions on downloading Atom: [https://www.youtube.com/watch?v=s98dR1M2u8E](https://www.youtube.com/watch?v=s98dR1M2u8E)
 
 #### 1. Create a folder for your instance.
 
@@ -93,5 +89,5 @@ This video covers using the sign-in modal method and includes instructions on  d
 }
 ```
 
-In the `zesty.json` file replace `INSTANCE_ZUID` & `INSTANCE_TOKEN` with the values from your instance.
-a\) You can omit the `INSTANCE_TOKEN` and the package will provide an interative login to Zesty.io. This will also happen if the token becomes stale. The login process will manage writing the new access token to your `zesty.json` file.
+In the `zesty.json` file replace `INSTANCE_ZUID` & `INSTANCE_TOKEN` with the values from your instance. a\) You can omit the `INSTANCE_TOKEN` and the package will provide an interative login to Zesty.io. This will also happen if the token becomes stale. The login process will manage writing the new access token to your `zesty.json` file.
+

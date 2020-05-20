@@ -4,7 +4,7 @@ description: >-
   non-technical interface to update colors, fonts, and other design elements.
 ---
 
-# Styles
+# Instance Styles
 
 ## Overview
 

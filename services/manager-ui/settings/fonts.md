@@ -2,7 +2,7 @@
 description: Add fonts through the Settings section using a non-technical interface.
 ---
 
-# Fonts
+# Instance Fonts
 
 ### Overview
 

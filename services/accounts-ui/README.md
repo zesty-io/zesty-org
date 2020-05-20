@@ -28,10 +28,9 @@ Accounts settings can be accessed though the Accounts management interface as we
 
 ![Access account settings by clicking on your user name/avatar.](../../.gitbook/assets/accounts-interface-account-settings.png)
 
-2. A dropdown menu will appear with options. Choose My Account.
+1. A dropdown menu will appear with options. Choose My Account.
 
 ![Select My Account from the dropdown.](../../.gitbook/assets/accounts-interface-dropdown-my-acct.png)
-
 
 1. [Accounts Interface overview](https://zesty.org/services/accounts-ui/accounts-interface-all-instances-view)
 2. [Blueprints](https://zesty.org/services/accounts-ui/blueprints)
