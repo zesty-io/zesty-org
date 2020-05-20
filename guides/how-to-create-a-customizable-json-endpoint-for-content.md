@@ -6,7 +6,7 @@ Zesty.io's custom API JSON endpoints will save your app developers a lot of time
 
 Before jumping into the steps below we recommend installing a [JSON viewer extension](https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc) for Chrome for effortless viewing and simple debugging JSON.
 
-1. Navigate to the [Web IDE](https://zesty.org/services/manager-ui/editor) section, locate the blue `+` button at the top of the left-hand navigation, and click it. 
+1. Navigate to the [Web IDE](https://zesty.org/services/manager-ui/editor) section, locate the blue "create file" button at the top of the left-hand navigation, and click it. 
 2. Select Custom File Type from the dropdown.
 3. Name your file. The name of this file will be used to reference your custom endpoint. For example if the file is named `/test-data` the endpoint is referenced at `https://www.example.com/test-data.json`The preview URL can also be used in place of your live domain. 
 4. Copy this code example below, and paste it into your new file 
