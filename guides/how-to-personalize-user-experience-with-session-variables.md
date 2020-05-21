@@ -7,6 +7,10 @@ description: >-
 
 # How to Personalize User Experience with Session Variables
 
+{% hint style="warning" %}
+Parsley access to session variables should not be used on statically cached pages. 
+{% endhint %}
+
 In this guide you will learn how to create page personalization, using session variables, on the Zesty platform. We will be modifying the loader file and a view file to create the most basic form of personalization.
 
 There are three key components to executing personalization. The **URL**, the **Session Variable**, and the **Business Logic**. Let's start by looking at how to format the **URL**.

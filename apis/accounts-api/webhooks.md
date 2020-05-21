@@ -5,18 +5,18 @@ description: A description on Zesty Webhooks and how to use them in production.
 # Webhooks
 
 {% hint style="info" %}
-**Open Perpetual Beta:** Webhooks are available to all instances. We plan on expanding the payload of the webhook to include the data an meta data of affected resource.  
+**Open Perpetual Beta:** Webhooks are available to all instances. We plan on expanding the payload of the webhook to include the data an meta data of affected resource.
 {% endhint %}
 
-### Introduction
+## Introduction
 
-Webhooks allow for actions performed within the Zesty.io platform to trigger external actions via RESTful HTTP API calls. An example of such a use case would be to send out email or text message alerts to customers when a new blog article being published. 
+Webhooks allow for actions performed within the Zesty.io platform to trigger external actions via RESTful HTTP API calls. An example of such a use case would be to send out email or text message alerts to customers when a new blog article being published.
 
 [REST API Documentation and Examples](https://accounts-api.zesty.org/?version=latest#f929ad7b-4bff-4f78-9376-ead64d158b9b)
 
-### What Resources Listen for Webhooks
+## What Resources Listen for Webhooks
 
-#### Instances API 
+### Instances API
 
 * Content Models
 * Content Model Items
@@ -28,7 +28,7 @@ Webhooks allow for actions performed within the Zesty.io platform to trigger ext
 * Languages
 * Instance Setting
 
-#### Accounts API
+### Accounts API
 
 * Role
 * Instance Roles
@@ -46,10 +46,7 @@ Create Webhook
 
 {% api-method-description %}
 This endpoint allows you to create webhooks.  
-NOTE: To create a webhook, the authenticated user must have one or more the roles for the given instance:  
-- Admin  
-- Owner  
-- Developer
+NOTE: To create a webhook, the authenticated user must have one or more the roles for the given instance:
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -60,7 +57,7 @@ A description about the webhook
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="parentResourceZUID" type="string" required=false %}
-A ZUID that corresponds to a resource that acts as a parent.  Some examples of parent resources include:  
+A ZUID that corresponds to a resource that acts as a parent. Some examples of parent resources include:
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="body" type="object" required=false %}
@@ -70,14 +67,12 @@ A JSON representation of webhook's request body. The `contentType` parameter wil
 {% api-method-parameter name="authorization" type="string" required=false %}
 The authorization token that will be sent as part of your webhook request. This corresponds to the `authorization` header in the HTTP request.  
 Any provided authorization token will automatically be used as a Bearer token.  
-Ex. `authorization: Bearer ABCDEF123` 
+Ex. `authorization: Bearer ABCDEF123`
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="contentType" type="string" required=true %}
-The type of content in the request your Webhook will send to the URL. This corresponds to the `content-type` HTTP header in the request your webhook will be sending.   
-A valid content types is any one of the following:  
-- `application/json`  
--`application/x-www-form-url-encoded`
+The type of content in the request your Webhook will send to the URL. This corresponds to the `content-type` HTTP header in the request your webhook will be sending.  
+A valid content types is any one of the following:
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="URL" type="string" required=true %}
@@ -86,30 +81,20 @@ The URL your webhook send its request to.
 
 {% api-method-parameter name="method" type="string" required=true %}
 The HTTP Method that the webhook will use on the URL.  
-A valid HTTP Method is any of the following  
-- `GET`  
-- `POST`
+A valid HTTP Method is any of the following
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="eventAction" type="number" required=true %}
-A numerical value that represents an action on a resource.   
-A valid action is any of the following  
-- 1 Create   
-- 2 Update  
-- 3 Delete  
-- 4 Publish  
-- 5 Unpublish 
+A numerical value that represents an action on a resource.  
+A valid action is any of the following
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="scopedResourceZUID" type="string" required=true %}
-A ZUID string that represents ant of the following entities:  
-- Instance ZUID  
-  
+A ZUID string that represents ant of the following entities:
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="resourceZUID" type="string" required=true %}
-A ZUID that corresponds to any entity within Zesty  
- 
+A ZUID that corresponds to any entity within Zesty
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -160,16 +145,14 @@ Retrieve Webhooks by Instance ZUID
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Retrieves a list of all webhooks.  
-  
-NOTE: To create a webhook, the authenticated user must have one or more the roles for the given instance:
+Retrieves a list of all webhooks.NOTE: To create a webhook, the authenticated user must have one or more the roles for the given instance:
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="instance\_zuid" type="string" required=true %}
-Corresponds to an instance ZUID 
+Corresponds to an instance ZUID
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -180,7 +163,7 @@ Corresponds to an instance ZUID
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "_meta": {
         "timestamp": "2019-12-12T20:01:26.8671069Z",
@@ -510,7 +493,7 @@ Corresponds to the Webhook's Unique ZUID value
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "_meta": {
         "timestamp": "2019-12-16T18:35:53.383016928Z",
@@ -568,7 +551,7 @@ Corresponds to the Webhook's Unique ZUID value
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "_meta": {
         "timestamp": "2019-12-16T18:39:00.305956275Z",
@@ -587,11 +570,11 @@ Corresponds to the Webhook's Unique ZUID value
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Webhook Conditions
+## Webhook Conditions
 
-Webhooks are executed by calling API endpoints.  In order to create webhooks that will be triggered and executed by API calls, create webhooks with the following parameters. When an action occurs, such as content item creation, a search for the corresponding webhook will occur.
+Webhooks are executed by calling API endpoints. In order to create webhooks that will be triggered and executed by API calls, create webhooks with the following parameters. When an action occurs, such as content item creation, a search for the corresponding webhook will occur.
 
-#### Example: 
+### Example:
 
 An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated in instance 8-ABCD-1234. Webhooks will be triggered based on the following action conditions.
 
@@ -599,9 +582,9 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 * Update on any item belonging to content model 6-ABCD-1234 in instance 8-ABCD-1234
 * Update on any item in instance 8-ABCD-1234
 
-### Instances API Webhook
+## Instances API Webhook
 
-#### Create, Update, Delete and Publish Item**s**
+### Create, Update, Delete and Publish Item**s**
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -617,7 +600,7 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Publishing a specific item | INSTANCE\_ZUID |  | ITEM\_ZUID | PUBLISH | POST /content/model/MODEL\_ZUID/items/ITEM\_ZUID/publishings |
 | Publishing any item | INSTANCE\_ZUID |  | items | PUBLISH | POST /content/model/MODEL\_ZUID/items/ITEM\_ZUID/publishings |
 
-#### Creating, Updating and Deleting Content Models
+### Creating, Updating and Deleting Content Models
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -627,7 +610,7 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Deleting a specific content model | INSTANCE\_ZUID |  | MODEL\_ZUID | DELETE | DELETE /content/model/MODEL\_ZUID |
 | Deleting any content model | INSTANCE\_ZUID |  | models | DELETE | DELETE /content/model/MODEL\_ZUID |
 
-#### Creating, Updating and Deleting Fields
+### Creating, Updating and Deleting Fields
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -636,11 +619,11 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Updating a specific field | INSTANCE\_ZUID |  | FIELD\_ZUID | UPDATE | PUT /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
 | Updating any field for a given content model | INSTANCE\_ZUID | MODEL\_ZUID | fields | UPDATE | PUT /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
 | Updating any field | INSTANCE\_ZUID |  | fields | UPDATE | PUT /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
-| Deleting a specific field | INSTANCE\_ZUID | FIELD\_ZUID | DELETE | DELETE  | DELETE /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
+| Deleting a specific field | INSTANCE\_ZUID | FIELD\_ZUID | DELETE | DELETE | DELETE /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
 | Deleting any field for a given content model | INSTANCE\_ZUID | MODEL\_ZUID | fields | DELETE | DELETE /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
 | Deleting any field | INSTANCE\_ZUID |  | fields | DELETE | DELETE /content/model/MODEL\_ZUID/fields/FIELD\_ZUID |
 
-#### Creating, Updating and Deleting Views
+### Creating, Updating and Deleting Views
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -650,17 +633,17 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Deleting a specific view | INSTANCE\_ZUID |  | VIEW\_ZUID | DELETE | DELETE /web/views/VIEW\_ZUID |
 | Deleting any view | INSTANCE\_ZUID |  | views | DELETE | DELETE /web/views/VIEW\_ZUID |
 
-#### Creating, Updating and Deleting Stylesheets
+### Creating, Updating and Deleting Stylesheets
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Creating a new stylesheet | INSTANCE\_ZUID  |  | stylesheets | CREATE | POST /web/scripts |
+| Creating a new stylesheet | INSTANCE\_ZUID |  | stylesheets | CREATE | POST /web/scripts |
 | Update a specific stylesheet | INSTANCE\_ZUID |  | STYLESHEET\_ZUID | UPDATE | PUT /web/scripts/SCRIPT\_ZUID |
 | Updating any stylesheet | INSTANCE\_ZUID |  | scripts | UPDATE | PUT /web/scripts/SCRIPT\_ZUID |
 | Deleting a specific stylesheet | INSTANCE\_ZUID |  | SCRIPT\_ZUID | DELETE | DELETE /web/scripts/SCRIPT\_ZUID |
 | Deleting any stylesheet | INSTANCE\_ZUID |  | scripts | DELETE | DELETE /web/scripts/SCRIPT\_ZUID |
 
-#### Creating, Updating and Deleting Scripts
+### Creating, Updating and Deleting Scripts
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -670,7 +653,7 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Deleting a specific script | INSTANCE\_ZUID |  | SCRIPT\_ZUID | DELETE | DELETE /web/scripts/SCRIPT\_ZUID |
 | Deleting any script | INSTANCE\_ZUID |  | scripts | DELETE | DELETE /web/scripts/SCRIPT\_ZUID |
 
-#### Creating, Updating and Deleting Redirects
+### Creating, Updating and Deleting Redirects
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -680,7 +663,7 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Deleting a specific redirect | INSTANCE\_ZUID |  | REDIRECT\_ZUID | DELETE | DELETE /web/redirects/REDIRECT\_ZUID |
 | Deleting any redirect | INSTANCE\_ZUID |  | redirects | DELETE | DELETE /web/redirects/REDIRECT\_ZUID |
 
-#### Creating, Updating and Deleting Langs
+### Creating, Updating and Deleting Langs
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -690,96 +673,81 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
 | Deleting a specific language | INSTANCE\_ZUID |  | LANG\_ID | DELETE | DELETE /env/langs/LANG\_ID |
 | Deleting any language | INSTANCE\_ZUID |  | langs | DELETE | DELETE /env/langs/LANG\_ID |
 
-#### Creating, Updating and Deleting Settings
+### Creating, Updating and Deleting Settings
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Creating a new setting | INSTANCE\_ZUID  |  | settings | CREATE | POST /env/settings |
+| Creating a new setting | INSTANCE\_ZUID |  | settings | CREATE | POST /env/settings |
 | Update a specific setting | INSTANCE\_ZUID |  | SETTINGS\_ZUID | UPDATE | PUT /env/settings/SETTINGS\_ZUID |
 | Updating any setting | INSTANCE\_ZUID |  | settings | UPDATE | PUT /env/settings/SETTINGS\_ZUID |
 | Deleting a specific setting | INSTANCE\_ZUID |  | SETTINGS\_ZUID | DELETE | DELETE /env/settings/SETTINGS\_ZUID |
 | Deleting any setting | INSTANCE\_ZUID |  | settings | DELETE | DELETE /env/settings/SETTINGS\_ZUID |
 
-#### Creating, Updating and Deleting Leads
+### Creating, Updating and Deleting Leads
 
-### Accounts API Webhook
+## Accounts API Webhook
 
-#### Roles
+### Roles
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Creating a new role | INSTANCE\_ZUID |  | roles | CREATE | POST /roles |
 
-#### Instance Roles
+### Instance Roles
 
 | Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Generating a new Instance Role  | INSTANCE\_ZUID  | INSTANCE\_ZUID | roles | CREATE | POST /instances/INSTANCE\_ZUID/roles |
+| Generating a new Instance Role | INSTANCE\_ZUID | INSTANCE\_ZUID | roles | CREATE | POST /instances/INSTANCE\_ZUID/roles |
 
-#### Instance Domains
+### Instance Domains
+
+| Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+
+
+| Create domain for a given instance | INSTANCE\_ZUID |  | domains | CREATE | POST /instances/INSTANCE\_ZUID/domains |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+
+
+| Update a specific domain for a given instance | INSTANCE\_ZUID |  | DOMAIN\_ZUID | UPDATE | PUT /instances/INSTANCE\_ZUID/domains/DOMAIN\_ZUID |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+
+
+| Update any domain for a given instance | INSTANCE\_ZUID |  | domains | UPDATE | PUT /instances/INSTANCE\_ZUID/domains/DOMAIN\_ZUID |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">Condition</th>
-      <th style="text-align:left">Scoped Resource</th>
-      <th style="text-align:left">Parent Resource</th>
-      <th style="text-align:left">Resource</th>
-      <th style="text-align:left">Action</th>
-      <th style="text-align:left">Request URL</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">Create domain for a given instance</td>
-      <td style="text-align:left">INSTANCE_ZUID</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">domains</td>
-      <td style="text-align:left">CREATE</td>
-      <td style="text-align:left">POST /instances/INSTANCE_ZUID/domains</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Update a specific domain for a given instance</td>
-      <td style="text-align:left">INSTANCE_ZUID</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">DOMAIN_ZUID</td>
-      <td style="text-align:left">UPDATE</td>
-      <td style="text-align:left">PUT /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">Update any domain for a given instance</td>
-      <td style="text-align:left">INSTANCE_ZUID</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">domains</td>
-      <td style="text-align:left">UPDATE</td>
-      <td style="text-align:left">PUT /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">
+      <th style="text-align:left">
         <p>Delete</p>
         <p>a specific domain for a given instance</p>
-      </td>
-      <td style="text-align:left">INSTANCE_ZUID</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">DOMAIN_ZUID</td>
-      <td style="text-align:left">DELETE</td>
-      <td style="text-align:left">DELETE /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</td>
+      </th>
+      <th style="text-align:left">INSTANCE_ZUID</th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left">DOMAIN_ZUID</th>
+      <th style="text-align:left">DELETE</th>
+      <th style="text-align:left">DELETE /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</th>
     </tr>
+  </thead>
+  <tbody></tbody>
+</table><table>
+  <thead>
     <tr>
-      <td style="text-align:left">
+      <th style="text-align:left">
         <p>Delete</p>
         <p>any domain for a given instance</p>
-      </td>
-      <td style="text-align:left">INSTANCE_ZUID</td>
-      <td style="text-align:left"></td>
-      <td style="text-align:left">domains</td>
-      <td style="text-align:left">DELETE</td>
-      <td style="text-align:left">DELETE /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</td>
+      </th>
+      <th style="text-align:left">INSTANCE_ZUID</th>
+      <th style="text-align:left"></th>
+      <th style="text-align:left">domains</th>
+      <th style="text-align:left">DELETE</th>
+      <th style="text-align:left">DELETE /instances/INSTANCE_ZUID/domains/DOMAIN_ZUID</th>
     </tr>
-  </tbody>
-</table>#### Invites
-
-| Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
+  </thead>
+  <tbody></tbody>
+</table>| Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Create Invite | INSTANCE\_ZUID |  | invites | CREATE | POST /invites |
 | Respond to Invite | INSTANCE\_ZUID |  | INVITE\_ZUID | UPDATE | PUT /invites/INVITE\_ZUID |

@@ -57,6 +57,10 @@ Since the session variable is set to `1` within the if-statement we know the scr
 
 ## Cookie Variables
 
+{% hint style="warning" %}
+Parsley access to cookies should not be used on statically cached pages. Note cookies should be used carefully and should not expose sensitive information.
+{% endhint %}
+
 Cookie variables are almost the same as session variables except that they last for 30 days. These work by storing information to the browser of the visit. So if the visitor uses a different device or a different browser or manually clears their cookies, then all the Parsley cookies would be reset.
 
 Similar to standard variables and session variables, Parsley cookies are set and called the same way, however the syntax is slightly different. To set a cookie we use the `@` symbol instead of a dollar sign. See below:

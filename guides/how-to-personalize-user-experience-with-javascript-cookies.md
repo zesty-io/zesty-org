@@ -56,6 +56,10 @@ if (x) {
 
 ### The Business Logic
 
+{% hint style="warning" %}
+Parsley access to cookies should not be used on statically cached pages. Note cookies should be used carefully and should not expose sensitive information.
+{% endhint %}
+
 With an `if` statement, we are going to check the cookie's value to returned customized content. If it's a match, we will show one type of content, otherwise we will show our default content. It's quick to implement, let's take a look at the code.
 
 ```text
