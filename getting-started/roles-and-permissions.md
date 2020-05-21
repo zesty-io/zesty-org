@@ -14,19 +14,33 @@ Access to Content, Media, Leads, SEO/Health , Schema, and Code Editor sections. 
 
 Access to Content, Media, Leads, SEO/Health , Schema, and Code Editor sections. Admins can publish both content and code and can invite users to Content Instances.
 
+![Admin role access view.](../.gitbook/assets/roles-admin-access.png)
+
 #### Developer
 
 Access to Content, Media, Leads, SEO/Health, Schema, and Code Editor sections. Developers may publish both content and code.
+
+![Developer role access view.](../.gitbook/assets/roles-developer-access.png)
 
 #### SEO 
 
 Access to Content, Media, SEO/Health, Content Configurator, and Code Editor sections. SEO users may edit and publish both content and code so they can update keywords and relevant HTML tags.
 
+![SEO role access view](../.gitbook/assets/roles-seo-access.png)
+
 #### Publisher
 
 Access to Content, Media, and Leads sections. Publishers may edit, authorize, and publish both content and update meta titles and descriptions.
 
+![Publisher role access view.](../.gitbook/assets/roles-publisher-access.png)
+
+![Publisher role content access.](../.gitbook/assets/roles-publisher-content-access.png)
+
 #### Contributor
 
 Access to Content, and Media. Contributors can manage and add new content to be saved for review, but cannot publish new content. To publish new content, contributors must submit a workflow request to a user with publishing access.
+
+![Contributor role access view.](../.gitbook/assets/roles-contributor-access.png)
+
+![Contributor role content access.](../.gitbook/assets/roles-contributor-content-access.png)
 
