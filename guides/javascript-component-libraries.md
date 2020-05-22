@@ -107,15 +107,15 @@ These strategies boil down to two main groups; is the server rendering or is the
 
 Zesty.io does not offer custom server rendering environments. That is, we will not run a build script for your source code.
 
-When rendering in browser, on Zesty.io there are a few ways to deliver application bundles. Globally, per model, per page and inline.
+When rendering in browser, on Zesty.io, there are a few ways to deliver application bundles; globally, per model, per page and inline.
 
 With all of these solutions there are a few implementation details they all must consider.
-How is data fetched
-How where is the app rendered
-How is the necessary code delivered
+- How is the code built?
+- How is the code delivered?
+- How is data fetched?
 
 Each strategy typically allows for multiple combinations of solutions to these concerns. 
 
----
+----
 
-* A single bundle is not a requirement. It's possible to build multiple bundles which are shipped independently.
+*A single bundle is not a requirement. It's possible to build multiple bundles which are shipped independently.*
