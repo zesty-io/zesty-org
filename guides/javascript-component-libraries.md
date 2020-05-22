@@ -3,9 +3,6 @@ description: >-
   Implementing JavaScript component libraries on Zesty.io
 ---
 
-# JavaScript Component Libraries
-> How they relate to the Zesty.io platform
-
 This is a conceptual overview of the strategies around delivery and rendering of JavaScript based component libraries. With examples demonstrating how to implement on Zesty.io
 
 ```
@@ -14,9 +11,9 @@ f(d) = v
 
 One of the ways, although an oversimplification, to describe how these libraries work is the equation of a function given data results in a view. The function for our purposes being the component library code you author, data being content coming from the Zesty.io CMS and view is the resulting HTML output of this combination.
 
-The first thing that needs to be understood when examining these rendering options is that most JavaScript component libraries have a build step. This is the step which occurs on a computer/server, which is not the consumers (read: website visitor), that transforms a domain specific language (DSL) into JavaScript (ES5/6) which a browser can execute. Meaning there is "source code" which you author and a "shipped" JavaScript file.
+The first thing that needs to be understood when examining these rendering options is that most JavaScript component libraries have a build step. This is the step which occurs on a computer or server, which is not the consumers (*read*: website visitor), that transforms a domain specific language (DSL) into JavaScript (ES5/6) which a browser can execute. Meaning there is "source code" which you author and a "shipped" JavaScript file.
 
-Note: Some libraries do allow for "runtime" transformations. Meaning the source code is shipped to a consumer's browser and the library then transforms that into browser usablem JavaScript on their machine, which is then rendered to the page.
+**Note**: Some libraries do allow for "runtime" transformations. Meaning the source code is shipped to a consumer's browser and the library then transforms that into browser usablem JavaScript on their machine, which is then rendered to the page.
 
 Examples of JavaScript component libraries which can be used to implement these strategies;
 - [ReactJS](https://reactjs.org/)
@@ -101,7 +98,7 @@ While Zesty.io does not offer a server execution runtime, meaning we won't run y
 
 This is a solution where you author component source code which goes through a build step which combines data with the source code and outputs the generated static files. These static files are then pushed to a host which serves them to consumers.
 
-With this strategy usually you will have separate data, code and hosting management (read: third party providers). Whereas Zesty.io offers both data and hosting management allowing you to pick your choice of code authoring and build steps.
+With this strategy usually you will have separate data, code and hosting management (*read*: third party providers). Whereas Zesty.io offers both data and hosting management allowing you to pick your choice of code authoring and build steps.
 
 *e.g. Zesty (data) + Gatsby (code) + GCP Bucket (hosting)*
 
