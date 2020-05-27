@@ -33,7 +33,7 @@ redirects:
   # Getting Started
   content-instance: ./getting-started
   services/content/multi-locale-multi-lang-content-i18n: ./getting-started/i18n-multi-language.md
-  content-instance/environments-and-publishing: ./getting-started/environments-and-publishing
+  content-instance/environments-and-publishing: ./getting-started/environments-and-publishing.md
 
   # APIs
   apis/instances-rest-api: ./apis/instances-api.md  
