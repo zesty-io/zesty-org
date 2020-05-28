@@ -14,7 +14,7 @@ Download and install the Atom editor directly from [Atom's site](https://atom.io
 
 ### Get your Instance ZUID
 
-Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️\(cog\) icon on the instance card you want to connect to and you'll see the Instance Settings Drawer slide out from the right of the screen, from here you can find your Instance ZUID:
+Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️\(cog\) icon on the instance card you want to connect to and you'll see the Instance Settings Drawer slide out from the right side of the screen, from here you can find your Instance ZUID:
 
 ![Instance Details.](../.gitbook/assets/instance-details.png)
 
