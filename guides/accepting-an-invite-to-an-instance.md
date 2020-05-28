@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-Only users of an instance can access it and edit its content. To become a user of an instance a user needs to be its [owner](https://zesty.org/getting-started/roles-and-permissions#owner), part of [team](https://zesty.org/guides/adding-a-team) that's assigned to it, or invited to access it. After a user is invited to access an instance they'll need to accept their invite before they can access the instance. Likewise, if a user is not the owner or a team member of an instance they'll need be invited and accept that invite to an instance before they can access it. 
+Only users of an instance can access it and edit its content. To become a user of an instance a user needs to be its [owner](https://zesty.org/getting-started/roles-and-permissions#owner), part of [team](https://zesty.org/guides/adding-a-team) that's assigned to it, or invited to access it. After a user is invited to access an instance they'll need to accept their invite before they can access the instance. Likewise, if a user is not the owner or a team member of an instance they'll need be invited _and_ accept that invite to an instance before they can access it. 
 
 There are 2 ways to login to accept your invite: via email and by navigating to [https://accounts.zesty.io/login](https://accounts.zesty.io/login). 
 
@@ -36,6 +36,8 @@ If you don't see a verification email in your inbox check your spam folder.
 
 ### Steps
 
+There are 2 ways to get to the Zesty.io login screen:
+
 #### Get to the login screen via email 
 
 1a. Locate the invitation in your inbox. 
@@ -52,7 +54,7 @@ If you don't see a verification email in your inbox check your spam folder.
 
 1b. Navigate to the [Zesty.io login](https://accounts.zesty.io/login) screen.
 
-\*\*\*
+#### After getting to the login screen follow the steps below:
 
 2. Use your account credentials to login to your account. 
 
