@@ -8,6 +8,7 @@
   * [Locales / Multi-Lang Content](getting-started/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
 * [Guides](guides/README.md)
+  * [Adding Image Alt Text](guides/adding-image-alt-text.md)
   * [Accepting an Invite to an Instance](guides/accepting-an-invite-to-an-instance.md)
   * [Adding Instances to EcoSystems](guides/adding-instances-to-ecosystems.md)
   * [Bottom Loading JavaScript](guides/bottom-loading-javascript.md)
