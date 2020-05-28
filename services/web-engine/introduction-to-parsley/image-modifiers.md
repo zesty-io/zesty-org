@@ -12,7 +12,7 @@ All of the following Parsley calls represent a way to modify images. When the mo
 
 ### .getImage\(width, height, type\)
 
-Function takes a width, height, and an optional type \(fit or crop\) parameter and returns a URL to that image. There are many ways to utilize this function. Fit is the default type and does not need to be explicitly declared. Crop type requires 2 parameters and explicit declaration. The list below shows examples of these calls. Learn how crop and fit work with [this video](https://www.youtube.com/watch?v=gin0sTwN6U4&t=).
+Function takes a width, height, and an optional type \(fit or crop\) parameter and returns a URL of the resampled image. There are many ways to utilize this function. Fit is the default type and does not need to be explicitly declared. Crop type requires 2 parameters and explicit declaration. The list below shows examples of these calls. Learn how crop and fit work with [this video](https://www.youtube.com/watch?v=gin0sTwN6U4&t=).
 
 ```text
 // .getImage(W, H, fit or crop)
