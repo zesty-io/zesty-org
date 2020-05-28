@@ -192,3 +192,4 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
     </tr>
   </tbody>
 </table>
+

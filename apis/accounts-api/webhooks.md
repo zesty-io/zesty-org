@@ -732,7 +732,9 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
     </tr>
   </thead>
   <tbody></tbody>
-</table><table>
+</table>
+
+<table>
   <thead>
     <tr>
       <th style="text-align:left">
@@ -747,7 +749,9 @@ An item 7-ABCD-1234 corresponding to content model 6-ABCD-1234 has been updated 
     </tr>
   </thead>
   <tbody></tbody>
-</table>| Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
+</table>
+
+| Condition | Scoped Resource | Parent Resource | Resource | Action | Request URL |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Create Invite | INSTANCE\_ZUID |  | invites | CREATE | POST /invites |
 | Respond to Invite | INSTANCE\_ZUID |  | INVITE\_ZUID | UPDATE | PUT /invites/INVITE\_ZUID |

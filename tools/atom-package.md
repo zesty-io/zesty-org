@@ -14,19 +14,23 @@ Download and install the Atom editor directly from [Atom's site](https://atom.io
 
 ### Get your Instance ZUID
 
-Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️ icon on the instance you want to connect to and you'll see the Instance Details slide out from the right of the screen, from here you can find your Instance ZUID:
+Login to your zesty account and you'll arrive at the all-instances view. From here click on the ⚙️\(cog\) icon on the instance card you want to connect to and you'll see the Instance Settings Drawer slide out from the right of the screen, from here you can find your Instance ZUID:
 
-![Instance Detials.](../.gitbook/assets/instance-details.png)
+![Instance Details.](../.gitbook/assets/instance-details.png)
 
 ### Create a new Access Token
 
-From the Details view scroll down until you find the Access Tokens section.
+From the Instance Settings Drawer scroll down until you find the Access Tokens section.
 
-![Accounts Interface create-an-instance card.](../.gitbook/assets/access-tokens-ui.png)
+![Instance Settings Drawer access tokens section.](../.gitbook/assets/access-tokens-ui.png)
 
 Specify the name and the role of the token and click on Create Token.
 
-![Accounts Interface create-an-instance card.](../.gitbook/assets/new-access-token.png)
+{% hint style="warning" %}
+The token will only be revealed to the user upon creation. After you close the modal \(shown below\) you will not be able to access the token again.
+{% endhint %}
+
+![Once a token is created it&apos;s shown to the user in a modal.](../.gitbook/assets/new-access-token.png)
 
 ### Install the Package
 
