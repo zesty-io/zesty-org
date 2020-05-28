@@ -8,6 +8,7 @@
   * [Locales / Multi-Lang Content](getting-started/i18n-multi-language.md)
   * [Publishing All Content](getting-started/publishing-all-content.md)
 * [Guides](guides/README.md)
+  * [Accepting an Invite to an Instance](guides/accepting-an-invite-to-an-instance.md)
   * [Adding Instances to EcoSystems](guides/adding-instances-to-ecosystems.md)
   * [Bottom Loading JavaScript](guides/bottom-loading-javascript.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
@@ -44,7 +45,6 @@
   * [Setting Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
   * [Video Embedding or Streaming Capabilities](guides/video-embedding-or-streaming-capabilities.md)
-
 * [Glossary](glossary.md)
 
 ## Services
