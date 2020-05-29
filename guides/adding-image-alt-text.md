@@ -90,7 +90,3 @@ The steps below will cover how to use the Media sections Title field or a text f
 
 ![Code in your image tag and alt attribute.](../.gitbook/assets/09b-alt-text-code-in-image-alt-text-field.png)
 
-
-
-
-
