@@ -51,10 +51,11 @@
 ## Services
 
 * [Accounts UI](services/accounts-ui/README.md)
-  * [Instances](services/accounts-ui/instances.md)
   * [Blueprints](services/accounts-ui/blueprints.md)
-  * [Teams](services/accounts-ui/teams.md)
+  * [Instances](services/accounts-ui/instances.md)
+  * [Instance Settings Drawer](services/accounts-ui/instance-settings-drawer.md)
   * [Settings](services/accounts-ui/settings.md)
+  * [Teams](services/accounts-ui/teams.md)
 * [Manager UI](services/manager-ui/README.md)
   * [Content](services/manager-ui/content/README.md)
     * [Adding and Managing Content](services/manager-ui/content/adding-and-managing-content.md)
