@@ -26,6 +26,7 @@ redirects:
   
   # Web Engine 
   services/web-engine/introduction-to-parsley/site-functions: ./services/web-engine/introduction-to-parsley/parsley-instance-functions.md
+  
   # Guides
   services/web-engine/guides: ./guides
   services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
