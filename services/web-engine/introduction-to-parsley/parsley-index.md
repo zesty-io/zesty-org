@@ -603,49 +603,49 @@ The `settings` call returns data stored in the Instance Settings in the Config T
 // <a href="https://www.linkedin.com/company/zesty-io/">Zesty on Linkedin</a>
 ```
 
-### site
+### instance
 
-The `site` call returns data specific to the instance, such as the CDN URL and the domain or globally relevant data, such as the current data-time or the current language.
+The `instance` call returns data specific to the instance, such as the CDN URL and the domain or globally relevant data, such as the current data-time or the current language.
 
 ```text
-{{ site.cdn }}
+{{ instance.cdn }}
 ```
 
-### site.env
+### instance.env
 
-The `site.env` call returns `live` for published content and views, and `dev` for versioned preview views and content. 
+The `instance.env` call returns `live` for published content and views, and `dev` for versioned preview views and content. 
 
 ```text
-{{ site.env }}
+{{ instance.env }}
 ```
 
-### site.date\(\)
+### instance.date\(\)
 
-The `site.date()` call returns the current date time and accepts arguments to modify the date based on the PHP data-time. More information available at [http://php.net/manual/en/function.date.php](http://php.net/manual/en/function.date.php)
+The `instance.date()` call returns the current date time and accepts arguments to modify the date based on the PHP data-time. More information available at [http://php.net/manual/en/function.date.php](http://php.net/manual/en/function.date.php)
 
 ```text
-{{ site.date(l jS \of F Y h:i:s A) }}
+{{ instance.date(l jS \of F Y h:i:s A) }}
 
 //Returns:
 Sunday 31st of July 2005 08:45:12 PM
 ```
 
-### site.lorem\(number\)
+### instance.lorem\(number\)
 
-The `site.lorem()` call auto generates lorem ipsum placeholder content.
+The `instance.lorem()` call auto generates lorem ipsum placeholder content.
 
 ```text
-{{ site.lorem(20) }}
+{{ instance.lorem(20) }}
 
 // Returns : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat quam quis erat tristique pretium.
 ```
 
-### site.searchformatted\(string,limit\)
+### instance.searchformatted\(string,limit\)
 
-The `site.searchformatted()` call takes a string and a limit as arguments and outputs instance-wide search results based on meta title, meta description, and path.
+The `instance.searchformatted()` call takes a string and a limit as arguments and outputs instance-wide search results based on meta title, meta description, and path.
 
 ```text
-{{site.searchformatted({get_var.search},10)}}
+{{instance.searchformatted({get_var.search},10)}}
 ```
 
 ### slugify\(\)
