@@ -123,7 +123,7 @@
     * [Image Modifiers](services/web-engine/introduction-to-parsley/image-modifiers.md)
     * [Include](services/web-engine/introduction-to-parsley/include.md)
     * [Page Call](services/web-engine/introduction-to-parsley/parsley-page-call.md)
-    * [Site Functions](services/web-engine/introduction-to-parsley/parsley-site-functions.md)
+    * [Instance Functions](services/web-engine/introduction-to-parsley/parsley-instance-functions.md)
     * [Variables](services/web-engine/introduction-to-parsley/variables.md)
   * [Head & Meta Tags](services/web-engine/meta-tags/README.md)
     * [Custom Head Overwrite](services/web-engine/meta-tags/custom-head-overwrite.md)
