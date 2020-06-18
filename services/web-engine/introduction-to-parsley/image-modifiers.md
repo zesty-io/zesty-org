@@ -28,7 +28,7 @@ To access these images you'll need to loop through them with the following code:
 {% hint style="info" %}
  ****`media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model.   
   
-Complete the `{this. }` call with the reference name for your Media field.     
+Replace the`{this.images}`code with a reference to your model's specific field.     
    
 The order of the images is determined by the order that they appear in in the content model. 
 {% endhint %}
