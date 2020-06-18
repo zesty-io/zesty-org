@@ -5,7 +5,7 @@ description: >-
   new instance.
 ---
 
-# How to Create a New Instance
+# Creating a New Instance
 
 ### Step 1: Create the Instance
 
