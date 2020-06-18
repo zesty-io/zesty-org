@@ -1,4 +1,4 @@
-# How to Create a Customizable JSON Endpoint For Content
+# Creating a Customizable JSON Endpoint For Content
 
 Zesty.io's custom API JSON endpoints will save your app developers a lot of time by making requesting dynamic data on your frontend quick and easy. Learn more about the Zesty.io [headless CMS offering here](https://www.zesty.io/en-us/cms/headless-cms-websites-with-decoupled-architecture/).
 

@@ -5,7 +5,7 @@ description: >-
   manager.
 ---
 
-# How to Create a Lead Form
+# Creating a Lead Form
 
 This guide walks through creating a lead capture form which will store the data entered in the form to Zesty and send an email to the website marketing manager.
 
