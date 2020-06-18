@@ -6,9 +6,11 @@ description: >-
 
 # How to upload multiple images
 
-Multiple images or other media types can be added with just a couple steps. There are two ways that you can upload multiple images: one way is to drag-n-drop, and another way to use the gray "Upload Files" button. See the instructions below for more details.
+Multiple images or other media types can be added with just a couple steps. There are two ways that you can upload multiple images: one way is to drag-n-drop, and another way to use the gray "Upload Files" button. See the instructions below for more details. 
 
 Please note that individual file size must be 500MB or smaller. Depending on how many images that you upload it might take up to 24 hours to complete loading.
+
+_If you're looking for information on how to loop through multiple images in a single field refer to the_ [_Image Modifiers article_](https://zesty.org/services/web-engine/introduction-to-parsley/image-modifiers#looping-through-multiple-images-in-a-media-field)_._ 
 
 ### Uploading Images with Drag n' Drop
 
