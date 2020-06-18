@@ -2,7 +2,7 @@
 description: Learn about our basic API JSON endpoints and how to use them.
 ---
 
-# How to Access Basic API JSON Endpoints
+# Accessing Basic API JSON Endpoints
 
 This guide covers our basic API JSON endpoints. \[comment\]: &lt;&gt; \(If you're looking for our customizable API JSON endpoints read [this](https://developer.zesty.io/docs/code-editor/customizable-json-endpoints-for-content/) guide.\)
 

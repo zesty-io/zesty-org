@@ -19,7 +19,7 @@
   * [Editor and Coding Basics](guides/editor-and-coding-basics.md)
   * [How Webpages are Assembled](guides/how-webpages-are-assembled.md)
   * [How do Instance or Blueprint LESS Variables Work](guides/how-do-instance-or-blueprint-less-variables-work.md)
-  * [How to Access Basic API JSON Endpoints](guides/how-to-access-basic-api-json-endpoints.md)
+  * [Accessing Basic API JSON Endpoints](guides/how-to-access-basic-api-json-endpoints.md)
   * [How to Create a Customizable JSON Endpoint For Content](guides/how-to-create-a-customizable-json-endpoint-for-content.md)
   * [How to Create a Lead Form](guides/how-to-create-a-lead-form.md)
   * [How to Create a New Instance](guides/how-to-create-a-new-instance.md)
