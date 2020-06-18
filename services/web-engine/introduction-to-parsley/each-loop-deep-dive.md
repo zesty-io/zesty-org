@@ -6,8 +6,6 @@ description: >-
 
 # Each Loop
 
-
-
 ### Each Loop Basics
 
 Developers can iterate over a collection in Parsley using the `{{each}}` expression. 
