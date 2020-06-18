@@ -4,7 +4,7 @@ description: This index collects all Parsley syntax and methods.
 
 # Parsley Index
 
-### \_index
+## \_index
 
 When looping through a content model with an each loop, you can use `variable_name._index` to get the current count of how many times you have run through the each loop. \_index begins counting from 0. To start counting at 1 use `_num` instead.
 
@@ -22,7 +22,7 @@ When looping through a content model with an each loop, you can use `variable_na
 </div>
 ```
 
-### \_length
+## \_length
 
 When looping through a content model with an each loop, you can call `{{ variable_name._length }}` to get the total number of times the loop will run.
 
@@ -35,7 +35,7 @@ When looping through a content model with an each loop, you can call `{{ variabl
 (** As long as the loop's num does not equal its length a comma will be appended to the list of tags **)
 ```
 
-### \_num
+## \_num
 
 When looping through a content model with an each loop, you can use `variable_name._num` to get the current count of how many times you have run through the each loop. `_num` begins counting from 1. To start counting at 0 use `_index` instead.
 
@@ -48,23 +48,23 @@ When looping through a content model with an each loop, you can use `variable_na
 (** As long as the loop's num does not equal its length a comma will be appended to the list of tags **)
 ```
 
-### activate\_links\(\)
+## activate\_links\(\)
 
-Converts plain text URLS into anchor tags [URL](URL). Useful for content where text comes in with HTML stripped.
+Converts plain text URLS into anchor tags [URL](https://github.com/zesty-io/zesty-org/tree/3418a808274fc82af3fe7dbbfeb55591b527edaf/services/web-engine/introduction-to-parsley/URL/README.md). Useful for content where text comes in with HTML stripped.
 
 ```text
 {{ page.textarea.activate_links() }}
 ```
 
-### api.dribbble
+## api.dribbble
 
 ```text
 {{ each api.dribbble.getShots(USER_NAME) as shot }}
-	<img src="{{ shot.image_teaser_url }}" alt="{{ shot.title} }" />
+    <img src="{{ shot.image_teaser_url }}" alt="{{ shot.title} }" />
 {{ end-each }}
 ```
 
-### breadcrumbs
+## breadcrumbs
 
 The `breadcrumbs` call outputs an automated breadcrumb trail of links, listing the parent pages assigned to the current page. If there are no available links, then an empty span is outputted.
 
@@ -81,9 +81,9 @@ Example Output:
 </span>
 ```
 
-### clippings \(see Globals\)
+## clippings \(see Globals\)
 
-### Comments \(\*\* **\*\***\)
+## Comments \(\*\* **\*\***\)
 
 Use these comments to prevent Parsley or other code from processing in HTML and Endpoint files. Anything within these comments are server side comments and will not render out to the source code.
 
@@ -94,10 +94,9 @@ Use these comments to prevent Parsley or other code from processing in HTML and 
 **)
 (** new code **)
 <h3>{{ page.new_title }}</h3>
-
 ```
 
-### current\_view
+## current\_view
 
 The `{{ current_view }}` call is a unique Zesty.io statement that will load the Page View associated with the current website url. `{{ current_view }}` is used once in the `loader` snippet. This allows a website to have consistent template elements above and below the unique aspect of each page.
 
@@ -109,7 +108,7 @@ The `{{ current_view }}` call is a unique Zesty.io statement that will load the 
 {{ include footer }}
 ```
 
-### date\(format\)
+## date\(format\)
 
 Uses the [php date](http://php.net/manual/en/function.date.php) format to create the date string shown to the user.
 
@@ -118,7 +117,7 @@ Uses the [php date](http://php.net/manual/en/function.date.php) format to create
 // <em>Sunday, January 1st, 2011 at 10:50pm</em>
 ```
 
-### dateDiffForHumans\(\)
+## dateDiffForHumans\(\)
 
 This method creates an expression of duration comparing the date and time from a content field to the current date and time.
 
@@ -127,10 +126,10 @@ This method creates an expression of duration comparing the date and time from a
 <br/>
 Returns:
 <br/>
-[x time] ago 
+[x time] ago
 ```
 
-### each
+## each
 
 The Parsley Each statements, also known as loops, allow you to iterate \(loop\) through each entry of a content model.
 
@@ -140,7 +139,7 @@ The Parsley Each statements, also known as loops, allow you to iterate \(loop\) 
 {{ end-each }}
 ```
 
-### else
+## else
 
 The `else` statement allows for a a final case if none of the defined conditions in the `if` statement have been met.
 
@@ -154,7 +153,7 @@ Example where no condition is met
 {{ end-if }}
 ```
 
-### else-if
+## else-if
 
 The `else-if` statement is used for the defining alternate conditions, if the original if condition is not met. There can be as many `else-if` statements as needed after the opening `if` statement and before the `end-if`.
 
@@ -168,7 +167,7 @@ Example where no condition is met
 {{ end-if }}
 ```
 
-### end-each
+## end-each
 
 Required to close `each` loops.
 
@@ -178,7 +177,7 @@ Required to close `each` loops.
 {{ end-each }}
 ```
 
-### end-if
+## end-if
 
 Required to close an `if` statement.
 
@@ -192,7 +191,7 @@ Example where no condition is met
 {{ end-if }}
 ```
 
-### escapeForJs\(\)
+## escapeForJs\(\)
 
 The `escapeForJs()` call returns text with all the characters that could break a Javascript or JSON string escaped with `\`.
 
@@ -204,7 +203,7 @@ The `escapeForJs()` call returns text with all the characters that could break a
 ]
 ```
 
-### filter\(\)
+## filter\(\)
 
 The `.filter()` call can be used to access specific data based on the scope.
 
@@ -214,7 +213,7 @@ The `.filter()` call can be used to access specific data based on the scope.
 {{ another-set.filter(z.zuid = '{thispage.one-to-one}').page_title }}
 ```
 
-### find\_in\_set
+## find\_in\_set
 
 The `find_in_set` query allows for looking for a specific number or string in a comma separated list. `find_in_set` is always used to filter a Content Model related with a One-to\_Many relational field.
 
@@ -224,7 +223,7 @@ The `find_in_set` query allows for looking for a specific number or string in a 
 {{ end-each }}
 ```
 
-### first\(\)
+## first\(\)
 
 The `first()` call will access the content available in the first entry of any content model.
 
@@ -233,7 +232,7 @@ The `first()` call will access the content available in the first entry of any c
 // "This is the title for the first entry of a content model"
 ```
 
-### format\_currency\(\)
+## format\_currency\(\)
 
 The `format_currency()` call transforms a float number from a content field to the format $XX.XX.
 
@@ -243,7 +242,7 @@ The `format_currency()` call transforms a float number from a content field to t
 {{ end-each }}
 ```
 
-### get\_var
+## get\_var
 
 The `get_var` call returns the value of any query parameter in the current URL by referencing the key. When printing out any query parameter using `get_var`, be sure to use `htmlentities()` to prevent Cross-site Scripts and code injections.
 
@@ -253,7 +252,7 @@ The `get_var` call returns the value of any query parameter in the current URL b
 {{ get_var.category.htmlentities() }}
 ```
 
-### getfeedurl\(\)
+## getfeedurl\(\)
 
 Every content model in Zesty \(single page, page groups or datasets\) can access a public RSS feed. It will always be `content_model_refrence_name-feed.rss/`
 
@@ -261,7 +260,7 @@ Every content model in Zesty \(single page, page groups or datasets\) can access
 {{ content_model.getfeedurl() }}
 ```
 
-### getImage\(width, height, type\)
+## getImage\(width, height, type\)
 
 The `getImage()` function takes optional arguments for width, height, and type \(`fit` or `crop`\) and returns a URL to that image. Fit is the default and does not need to be explicitly declared. Crop type requires all 3 arguments declared. Fit is similar to the css style "contain" and crop is similar to the css style "cover".
 
@@ -274,7 +273,7 @@ The `getImage()` function takes optional arguments for width, height, and type \
 <img src="{{ page.photo.getImage(100,100,crop) }}" />
 ```
 
-### getImageTitle\(\)
+## getImageTitle\(\)
 
 The \`getImageTitle\(\) call returns the image title set in the Media Tab.
 
@@ -282,7 +281,7 @@ The \`getImageTitle\(\) call returns the image title set in the Media Tab.
 {{ page.image.getImageTitle() }}
 ```
 
-### getMediaURL\(\)
+## getMediaURL\(\)
 
 The `getMediaURL()` call returns the original URL to that file. This is how to access files stored in the Media Tab that are not images, such as PDFs and MP4s. You can also use this call to access the original file of an image without the default optimization provided by Zesty.io.
 
@@ -296,7 +295,7 @@ The `getMediaURL()` call returns the original URL to that file. This is how to a
 {{ my-var.image.getmediaurl() }}
 ```
 
-### getNextURL\(number\)
+## getNextURL\(number\)
 
 The `getNextURL()` call returns the current page url with a query parameter `p` increased by the number specified. If there is no query parameter `p`, it will set it equal to the number specified. If no number is provided, the default is 5. This can be used with `get_var.p` to do pagination with an each loop.
 
@@ -305,7 +304,7 @@ The `getNextURL()` call returns the current page url with a query parameter `p` 
 // blog/?p=10
 ```
 
-### getPreviousURL\(number\)
+## getPreviousURL\(number\)
 
 The `getPreviousURL()` call returns the current page url with a query parameter `p` decreased by the number specified. If there is no query parameter `p`, it will set it equal to 0. If no number is provided as an argument, the default is 5. This can be used with `get_var.p` to do pagination with an each loop.
 
@@ -315,7 +314,7 @@ The `getPreviousURL()` call returns the current page url with a query parameter 
 // /blog/?p=20
 ```
 
-### getUrl\(\)
+## getUrl\(\)
 
 The `getUrl()` call returns the relative path to the entry.
 
@@ -324,7 +323,7 @@ The `getUrl()` call returns the relative path to the entry.
 // <a href="/blog/">Link</a>
 ```
 
-### globals
+## globals
 
 The `globals` call is used to access content stored in the Globals \(formerly Content Clippings\) set.
 
@@ -335,7 +334,7 @@ The `globals` call is used to access content stored in the Globals \(formerly Co
 555-555-5555
 ```
 
-### Google Analytics
+## Google Analytics
 
 Parsley provides a short cut to creating google analytics tag. The advantage of using this Parsley call is that as Google Analytics updates their syntax, it will be automatically updated on your website.
 
@@ -358,7 +357,7 @@ Read the spec for GA Events [here](https://developers.google.com/analytics/devgu
 <pre><a href="https://vimeo.com/144792991" onclick="ga('send','event', 'Vimeo', ' Opened-video', ' ',undefined,'{'nonInteraction': 1}');">My Video</a></pre>
 ```
 
-### gravatar\(\)
+## gravatar\(\)
 
 The `gravatar()` function takes an email address and requests an image from the Gravatar API.
 
@@ -367,7 +366,7 @@ The `gravatar()` function takes an email address and requests an image from the 
 // <img class="highlight" src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" />
 ```
 
-### hasChildren\(\)
+## hasChildren\(\)
 
 The `hasChildren()` function returns true or false, depending if any pages are parented to the entry. This can be used to find out if a page has pages that live under it. This is helpful when using logic to create secondary navigations.
 
@@ -377,7 +376,7 @@ The `hasChildren()` function returns true or false, depending if any pages are p
 {{ end-if }}
 ```
 
-### html\_entity\_decode\(\)
+## html\_entity\_decode\(\)
 
 The `html_entity_decode` call converts all HTML entities in the provided string to their applicable characters.
 
@@ -385,7 +384,7 @@ The `html_entity_decode` call converts all HTML entities in the provided string 
 <p>{{ page.description.html_entity_decode() }}</p>
 ```
 
-### htmlentities\(\)
+## htmlentities\(\)
 
 The `htmlentities()` call convert all applicable characters to HTML entities. Should be used whenever printing out a get or post variable to prevent Cross-site Scripting and code injection.
 
@@ -394,7 +393,7 @@ The `htmlentities()` call convert all applicable characters to HTML entities. Sh
 {{ get_var.search.htmlentities() }}
 ```
 
-### if
+## if
 
 The `if` statement evaluates conditions using `==`, `!=`, `>=`, `<=`, `<`, and `>`. Within the `if` statement, multiple conditions can be combined using `&&` for and, and `||` for or. If statements can also execute math.
 
@@ -404,15 +403,15 @@ Example
 {{ end-if }}
 ```
 
-### include
+## include
 
-The [`include`](https://zesty.org/services/web-engine/introduction-to-parsley/include) call is a prompt to reference the code in any View which includes views, snippets, and endpoints. 
+The [`include`](https://zesty.org/services/web-engine/introduction-to-parsley/include) call is a prompt to reference the code in any View which includes views, snippets, and endpoints.
 
 ```text
 {{ include header }}
 ```
 
-### last\(\)
+## last\(\)
 
 The `last()` call will access the content available in the last entry of any content model.
 
@@ -420,7 +419,7 @@ The `last()` call will access the content available in the last entry of any con
 {{ articles.last().title }}
 ```
 
-### limit
+## limit
 
 The `limit` statement is used in an each loop to specify how many content entries will result. The `limit` statement can also be used to skip a number of entries and show the next set if two arguments are provided.
 
@@ -433,7 +432,7 @@ The `limit` statement is used in an each loop to specify how many content entrie
 {{ end-each }}
 ```
 
-### math\( statement \)
+## math\( statement \)
 
 The `math()` call executes an equation and returns a number.
 
@@ -447,10 +446,9 @@ The `math()` call executes an equation and returns a number.
 (** in use with a variable **)
 {{ $my_num = 4 }}
 {{ math( {$my_num} + 2 ) }}
-
 ```
 
-### navigation\(number\)
+## navigation\(number\)
 
 The `navigation()` call will access your Zesty.io Navigation Structure and output it as an HTML list. The call will mimic the content navigation layout you find in the Zesty.io Content Manager and will ignore pages marked as unlisted. A number argument will specify what level of children to access within the navigation. Blank will list all pages, 1 will only be top level pages, 2 will be top level and subpages, 3 will be top level, subpages and tertiary pages, and so on.
 
@@ -468,7 +466,7 @@ The `navigation()` call will access your Zesty.io Navigation Structure and outpu
 </ul>
 ```
 
-### number\_fomat\(number\)
+## number\_fomat\(number\)
 
 The `number_format()` call returns a number with the specified number of decimals as the argument. Blank will remove any decimals.
 
@@ -481,7 +479,7 @@ The `number_format()` call returns a number with the specified number of decimal
 3.1
 ```
 
-### obfuscate\(\)
+## obfuscate\(\)
 
 The `obfuscate()` call returns obscure text to web crawlers, like email or phone numbers.
 
@@ -489,7 +487,7 @@ The `obfuscate()` call returns obscure text to web crawlers, like email or phone
 <a href="mailto:{{setting.contact-form.sending_email.obfuscate()}}">{{setting.contact-form.sending_email.obfuscate()}}</a>
 ```
 
-### page
+## page
 
 The `page` call represents the content entry for the current page. It provides access to the data associated with the page. Any field in the Content Model can be accessed using this method when on the associated page.
 
@@ -497,19 +495,19 @@ The `page` call represents the content entry for the current page. It provides a
 {{ page.field_name }}
 ```
 
-### paypalStandard\(action, product, price, shipping\)
+## paypalStandard\(action, product, price, shipping\)
 
 Quickly create a Paypal Standard buy, donate, or add to cart button in Parsley. To start using Paypal Standard a Paypal account must be created. The Paypal account information and tax rate are set in the Config Tab, under Settings-&gt; Paypal Standard. These must be set to send money to the appropriate account. Action can be `buy`, `addtocart` and `donate`.
 
 ```text
 {{ each products as p }}
-	<h1>{{ p.title }}</h1>
-	<p>{{ p.price }}</p>
-	{{ paypalStandard(buy,{p.title},{p.price},{p.shipping}) }}
+    <h1>{{ p.title }}</h1>
+    <p>{{ p.price }}</p>
+    {{ paypalStandard(buy,{p.title},{p.price},{p.shipping}) }}
  {{ end-each }}
 ```
 
-### post\_clean\(\)
+## post\_clean\(\)
 
 The `post_clean()` call replaces `\n` `\r\n` or `\` with a blank string.
 
@@ -517,7 +515,7 @@ The `post_clean()` call replaces `\n` `\r\n` or `\` with a blank string.
 {{ page.imported_content.post_clean() }}
 ```
 
-### post\_var
+## post\_var
 
 The `post_var` call references data available in the requests post body. A couple common ways data can be added to the request post body is by submitting a form with a `method="post"` or using javascript `POST`. A common practical use for this call is to check is a form has been submitted by checking if the POST variable for the name of a required input is available.
 
@@ -529,7 +527,7 @@ Thank you for submitting your form, please check {{ post_var.email }} for a veri
 {{ end-if }}
 ```
 
-### preg\_replace\(pattern, replacement\)
+## preg\_replace\(pattern, replacement\)
 
 The `preg_replace()` call is a regular expression replacement. To learn more about Regular expression go to [http://www.regular-expressions.info/](http://www.regular-expressions.info/)
 
@@ -538,10 +536,10 @@ The `preg_replace()` call is a regular expression replacement. To learn more abo
 
 //Returns:
 I'm gonna f*x that last joke by tak*ng out all the words and add*ng new ones.
-- M*tch Hedberg 
+- M*tch Hedberg
 ```
 
-### random\(\)
+## random\(\)
 
 The `random()` call is used to reference a random content entry for a content model.
 
@@ -550,7 +548,7 @@ The `random()` call is used to reference a random content entry for a content mo
 // "the 'title' from a random item in 'articles'"
 ```
 
-### replace\(pattern, replacement\)
+## replace\(pattern, replacement\)
 
 The `replace()` call does a simple replace without any regular expression.
 
@@ -560,7 +558,7 @@ The `replace()` call does a simple replace without any regular expression.
 // "I wrote this blog post"
 ```
 
-### sectionlinks\(number\)
+## sectionlinks\(number\)
 
 The `sectionlinks()` call looks at the current page and searches up to its top-level parent to create a navigation structure as an HTML list. Depth can be specified by as a numeric argument as `sectionlinks(2)` or you can choose not to display the top level page by passing `sectionlinks(off)`
 
@@ -577,9 +575,7 @@ The `sectionlinks()` call looks at the current page and searches up to its top-l
 </ul>
 ```
 
-### server\_var
-
-
+## server\_var
 
 The `sever_var` call provides access to some of the most common server variables holding information about headers, paths, and script location. Some available variables are:
 
@@ -594,7 +590,7 @@ The `sever_var` call provides access to some of the most common server variables
 {{ server_var.HTTP_USER_AGENT  }}
 ```
 
-### setting
+## setting
 
 The `settings` call returns data stored in the Instance Settings in the Config Tab.
 
@@ -603,7 +599,7 @@ The `settings` call returns data stored in the Instance Settings in the Config T
 // <a href="https://www.linkedin.com/company/zesty-io/">Zesty on Linkedin</a>
 ```
 
-### instance
+## instance
 
 The `instance` call returns data specific to the instance, such as the CDN URL and the domain or globally relevant data, such as the current data-time or the current language.
 
@@ -611,15 +607,15 @@ The `instance` call returns data specific to the instance, such as the CDN URL a
 {{ instance.cdn }}
 ```
 
-### instance.env
+## instance.env
 
-The `instance.env` call returns `live` for published content and views, and `dev` for versioned preview views and content. 
+The `instance.env` call returns `live` for published content and views, and `dev` for versioned preview views and content.
 
 ```text
 {{ instance.env }}
 ```
 
-### instance.date\(\)
+## instance.date\(\)
 
 The `instance.date()` call returns the current date time and accepts arguments to modify the date based on the PHP data-time. More information available at [http://php.net/manual/en/function.date.php](http://php.net/manual/en/function.date.php)
 
@@ -630,7 +626,7 @@ The `instance.date()` call returns the current date time and accepts arguments t
 Sunday 31st of July 2005 08:45:12 PM
 ```
 
-### instance.lorem\(number\)
+## instance.lorem\(number\)
 
 The `instance.lorem()` call auto generates lorem ipsum placeholder content.
 
@@ -640,7 +636,7 @@ The `instance.lorem()` call auto generates lorem ipsum placeholder content.
 // Returns : Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat quam quis erat tristique pretium.
 ```
 
-### instance.searchformatted\(string,limit\)
+## instance.searchformatted\(string,limit\)
 
 The `instance.searchformatted()` call takes a string and a limit as arguments and outputs instance-wide search results based on meta title, meta description, and path.
 
@@ -648,7 +644,7 @@ The `instance.searchformatted()` call takes a string and a limit as arguments an
 {{instance.searchformatted({get_var.search},10)}}
 ```
 
-### slugify\(\)
+## slugify\(\)
 
 The `slugify()` call will concatenate strings by replacing spaces with dashes \(-\), lowercasing all letters, and stripping out all punctuation.
 
@@ -660,7 +656,7 @@ The `slugify()` call will concatenate strings by replacing spaces with dashes \(
 // calling slugify on the page title will return: my-new-homepage
 ```
 
-### sort by / order by
+## sort by / order by
 
 The `sort by` or `order by` statement can be used in an each loop to specify a field of the content model used to sort the content entries and which direction. Multiple fields can be specified using a comma separated list. If no sort is specified, the default is creation date. If no direction is specified ascending is the default.
 
@@ -669,7 +665,7 @@ The `sort by` or `order by` statement can be used in an each loop to specify a f
 {{ end-each }}
 ```
 
-### striptags\(start, length\)
+## striptags\(start, length\)
 
 The `striptags` call will return a string with HTML tags removed. It also acts as a substring method if a start and length parameter are provided.
 
@@ -679,7 +675,7 @@ The `striptags` call will return a string with HTML tags removed. It also acts a
 // "Hello Zesty.io users"
 ```
 
-### substr\(start, length\)
+## substr\(start, length\)
 
 The `substr()` call takes the text value it is attached to and returns a substring with the desired length. This call takes both positive and negative numbers. Negative numbers, for example, `substr(-5)` will return the last five characters in a string. Does not consider whitespace as part of length.
 
@@ -689,7 +685,7 @@ The `substr()` call takes the text value it is attached to and returns a substri
 // "This is a lo..."
 ```
 
-### subWords\(number\_of\_words\)
+## subWords\(number\_of\_words\)
 
 The `subWords()` call returns the first specified number of words from a body of text.
 
@@ -697,7 +693,7 @@ The `subWords()` call returns the first specified number of words from a body of
 {{ page.content.subWords(3) }}
 ```
 
-### trim\_zeros\(\)
+## trim\_zeros\(\)
 
 The `trim_zeros()` call with take a number like 8.0000000 and just show 8.
 
@@ -707,7 +703,7 @@ The `trim_zeros()` call with take a number like 8.0000000 and just show 8.
 // 8
 ```
 
-### truepath\(zuid\)
+## truepath\(zuid\)
 
 The `truepath()` call will determine the web url to access a content entry based on a ZUID. Since one-to-one and internal page fields in Zesty.io store ZUIDs, `truepath()` is a quick way to access the direct url to that content entry without needing to do an each loop or filter call.
 
@@ -715,7 +711,7 @@ The `truepath()` call will determine the web url to access a content entry based
 {{ truepath({page.link_to_article}) }}
 ```
 
-### where
+## where
 
 The `where` statement is used to filter content entries in an each loop. `Where` statements use SQL style conditional statements to determine which entries to pass through the loop. A single each can use multiple conditions using `and` and `or`.
 

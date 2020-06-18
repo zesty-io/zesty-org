@@ -1,10 +1,12 @@
 ---
-description: Learn how to use all of Parsley's instance functions to access instance variables.
+description: >-
+  Learn how to use all of Parsley's instance functions to access instance
+  variables.
 ---
 
 # Instance Functions
 
-### instance.cdn
+## instance.cdn
 
 Access the full url to the Satellite™ CDN.
 
@@ -12,7 +14,7 @@ Access the full url to the Satellite™ CDN.
 {{instance.cdn}}
 ```
 
-### instance.date\(\)
+## instance.date\(\)
 
 Access the date from the Satellite. [Additional formatting options](https://developer.zesty.io/parsley-templating/dates/).
 
@@ -20,7 +22,7 @@ Access the date from the Satellite. [Additional formatting options](https://deve
 {{instance.date()}}
 ```
 
-### instance.searchformatted\(search\_term\)
+## instance.searchformatted\(search\_term\)
 
 Search a Satellite's meta titles and descriptions.
 
@@ -40,7 +42,7 @@ Parsley code used to return the the search results:
 {{instance.searchformatted(my search term)}}
 ```
 
-### instance.domain
+## instance.domain
 
 If domain is set for the instance, this call will return it.
 
@@ -48,7 +50,7 @@ If domain is set for the instance, this call will return it.
 {{instance.domain}}
 ```
 
-### instance.lorem\(number\)
+## instance.lorem\(number\)
 
 Generate lorem ipsum placeholder text on the fly.
 
@@ -56,7 +58,7 @@ Generate lorem ipsum placeholder text on the fly.
 {{instance.lorem(200)}}
 ```
 
-### instance.sendemail\(subject, body, to\_address\)
+## instance.sendemail\(subject, body, to\_address\)
 
 Send an email with a Parsley call. This **requires a verified email** in settings &gt; contact form. Use ,, the ascii code for a comma in place of commas in the subject and body arguments.
 
@@ -64,7 +66,7 @@ Send an email with a Parsley call. This **requires a verified email** in setting
 {{instance.sendemail(hello stuaaaaaart,You are my biggest&#44; bestest fan, stuart@zesty.io)}}
 ```
 
-### instance.subnav\(\)
+## instance.subnav\(\)
 
 Generate a formatted Sub Navigation.
 
@@ -76,7 +78,7 @@ Generate a formatted Sub Navigation.
 </ul>
 ```
 
- show two sub levels and the auto generated header
+show two sub levels and the auto generated header
 
 ```text
 <h5 class="sub-navigationHeader"><a href="/about/" title="About" class=" at">About</a></h5> 
@@ -93,7 +95,7 @@ Generate a formatted Sub Navigation.
 {{instance.subnav(true 2)}}
 ```
 
-### instance.truepath\(ZUID\)
+## instance.truepath\(ZUID\)
 
 Truepath takes in a UUID-like identifier, called a "ZUID", which can be located in the the Zesty.io Manager url. Truepath returns a perfect url path to the znode content id. Use true path to ensure links never break.
 
