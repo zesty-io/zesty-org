@@ -10,7 +10,9 @@ description: >-
 
 ### Each Loop Basics
 
-Developers can iterate over a collection in Parsley using the `{{each}}` expression.
+Developers can iterate over a collection in Parsley using the `{{each}}` expression. 
+
+_If you're looking for information on how to loop through images in the field refer to the_ [_Image Modifiers article_](https://zesty.org/services/web-engine/introduction-to-parsley/image-modifiers#looping-through-multiple-images-in-a-media-field)_._ 
 
 #### Simple Iteration
 
