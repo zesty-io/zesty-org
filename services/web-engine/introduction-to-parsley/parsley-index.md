@@ -208,9 +208,9 @@ The `escapeForJs()` call returns text with all the characters that could break a
 The `.filter()` call can be used to access specific data based on the scope.
 
 ```text
-{{ scope.filter(z.zuid = '{page.one-to-one-field}').scope-field }}
+{{ scope.filter(z.zuid = '{this.one-to-one-field}').scope-field }}
 
-{{ another-set.filter(z.zuid = '{thispage.one-to-one}').page_title }}
+{{ another-set.filter(z.zuid = '{this.one-to-one}').page_title }}
 ```
 
 ## find\_in\_set
@@ -218,7 +218,7 @@ The `.filter()` call can be used to access specific data based on the scope.
 The `find_in_set` query allows for looking for a specific number or string in a comma separated list. `find_in_set` is always used to filter a Content Model related with a One-to\_Many relational field.
 
 ```text
-{{ each tags as tag where find_in_set(tag.zuid, '{page.tags}') }}
+{{ each tags as tag where find_in_set(tag.zuid, '{this.tags}') }}
 <span>{{ tag.title }}</span>
 {{ end-each }}
 ```
