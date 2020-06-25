@@ -18,6 +18,10 @@ SCSS
 
 All files are concatenated based on their type then by their order set in the editor interface of the Zesty.io manager. Each stylesheet type has its own compiler or minifier explained below. Files will transpile with their given type; Less and Sass files will compile with style variables. [Parsley](https://zesty.org/services/web-engine/introduction-to-parsley) is not accessible from to files in the Style Sheet section.  
 
+{% hint style="warning" %}
+Comments in Style files can err on compilation especially if they are single-line comments noted by `//` and at the top or bottom of the file. To mitigate this ensure that comments are noted using the multi-line `/* */` syntax. 
+{% endhint %}
+
 ### CSS
 
 All CSS with the exception of any file named ‘ie8.css’ is concatenated and run through a minification process. The repository used for CSS minification: [https://github.com/matthiasmullie/minify](https://github.com/matthiasmullie/minify)
