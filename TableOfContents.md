@@ -43,6 +43,7 @@
   * [JavaScript Component Libraries](guides/javascript-component-libraries.md)
   * [Password Protect Web Engine Preview](guides/password-protect-web-engine-preview.md)
   * [Refreshing the Cache](guides/refreshing-the-cache.md)
+  * [Reordering Child Items in a Parsley Auto-generated Navigation Bar](guides/reordering-child-items-in-a-parsley-auto-generated-navigation-bar.md)
   * [Setting up Google Analytics for GDPR](guides/setting-up-google-analytics-for-gdpr.md)
   * [Setting Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
