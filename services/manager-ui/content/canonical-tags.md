@@ -26,3 +26,5 @@ Each page has its own canonical tag settings \(though the default setting is typ
 * **On – Allow certain parameters** — This also automatically generates a self-referential canonical tag, but allows the query parameters you list to be included
 * **On – Custom Path** — This generates the first part of the URL \(including the correct http/https and www/non-www setting\), but uses the custom path you specify
 
+### URL Case Sensitivity
+Canonical tag outputs will follow case sensitivity of URL paths. Uniformity in case output is standard practice as these URLs may get indexed separately and affect SEO. For further information please refer to: https://tools.ietf.org/html/rfc4343
