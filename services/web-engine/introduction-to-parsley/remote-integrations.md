@@ -67,6 +67,9 @@ Parsley can be used to server side render product pages by accessing GroupBy. Th
     <h1>{{product.title}}</h1>
     <img src="{{product.visualVariants:0:productImage}}" alt="{{result.title}} Image">
     <textarea>{{product._json}}</textarea>
+    <!-- this gets the first naviigation refinement available -->
+    <p>Refinements count: {{navitem._refinementCount}}</p>
+    <p>Refinements String: {{navitem._refinements}}</p>
 {{end-each}}
 ```
 
@@ -75,7 +78,10 @@ Parsley can be used to server side render product pages by accessing GroupBy. Th
 ```markup
 <ul>
 {{each api.gbi.navigation(collection, area, search) as navitem}}
-    <li>{{navitem.navItem}}</li>
+    <li><strong>{{navitem.navItem}}</strong>
+    <p>Refinements count: {{navitem._refinementCount}}</p>
+    <p>Refinements String: {{navitem._refinements}}</p>
+    </li>
 {{end-each}}
 </ul>
 ```
