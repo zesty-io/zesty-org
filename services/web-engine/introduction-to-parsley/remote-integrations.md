@@ -1,5 +1,5 @@
 ---
-description: Parsley can make remote request to foreign date for server side rendering.
+description: Parsley can make web requests to remote data for server side rendering.
 ---
 
 # Remote Integrations
@@ -16,9 +16,9 @@ This integration requires an api from GroupBy, and three settings in Zesty. The 
 
 ### Working in Parsley
 
-In parsley each loops can be used to iterate over search, product, or navigation data.
+In Parsley each loops can be used to iterate over search, product, refinements, or navigation data from GroupBy.
 
-{% code title="Searching GroupBy..." %}
+{% code title="api.gbi.search: Searching GroupBy:" %}
 ```markup
 {{each api.gbi.search(collection, area, search, limit) as result}}
     <h1>{{result.title}}</h1>
@@ -27,7 +27,14 @@ In parsley each loops can be used to iterate over search, product, or navigation
 ```
 {% endcode %}
 
-Note: GroupBy results are custom tailored per each customer implementation, because of that, zesty flattens the returned object so Parsley can access it like `{{result.visualVariants:0:productImage}}`the use of the semicolons is in place of `.` , so treat it as you were accessing a JSON \(javascript object notation\) object.  You may output a full JSON string from the result to view the object to know paths like `{{result.visualVariants:0:productImage}}`or as a shortcut to work with dynamic javascript rendering. It is done like this:
+### Parameter Breakdown
+
+* **collection:** The collection name from GroupBy _e.g. products_
+* **area:** The area name from GroupBy _e.g. Storefront_
+* **search:** Search query _e.g. Red Dress_
+* **limit**: Maximum results to return and each through _e.g. 20 \(defaults to 10\)_
+
+**Note:** GroupBy results are custom tailored per each customer implementation, because of that, zesty flattens the returned object so Parsley can access it like `{{result.visualVariants:0:productImage}}`the use of the semicolons is in place of `.` , so treat it as you were accessing a JSON \(javascript object notation\) object.  You may output a full JSON string from the result to view the object to know paths like `{{result.visualVariants:0:productImage}}`or as a shortcut to work with dynamic javascript rendering. It is done like this:
 
 {% code title="Working with JSON" %}
 ```markup
