@@ -558,6 +558,34 @@ The `replace()` call does a simple replace without any regular expression.
 // "I wrote this blog post"
 ```
 
+## request.path\(\)
+
+Get the full path from request, for example lets use the url /store/12345/my-product/
+
+```text
+{{ request.path() }} // output: /store/12345/my-product/
+```
+
+## request.pathPart\(num\)
+
+Get the "parts" of a url, for example lets use the url /store/12345/my-product/
+
+```text
+{{ request.pathPart(1) }} // output: store
+{{ request.pathPart(2) }} // output: 12345
+{{ request.pathPart(3) }} // output: my-product
+{{ request.pathPart(4) }} // output: (empty string)
+```
+
+## request.queryParam\(num\)
+
+Get the query parameters from url, for example lets use the url /store/12345/my-product/?test=hello
+
+```text
+{{ request.queryParam(test) }} // output: hello
+{{ request.queryParam(lala) }} // output: (empty string)
+```
+
 ## sectionlinks\(number\)
 
 The `sectionlinks()` call looks at the current page and searches up to its top-level parent to create a navigation structure as an HTML list. Depth can be specified by as a numeric argument as `sectionlinks(2)` or you can choose not to display the top level page by passing `sectionlinks(off)`
