@@ -21,5 +21,3 @@ Before jumping into the steps below we recommend installing a [JSON viewer exten
 
 {% embed url="https://gist.github.com/ardeay/cdcfed6dd2c1ddb672ded64b2478ece5" %}
 
-\`\`
-
