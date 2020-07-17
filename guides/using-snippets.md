@@ -8,7 +8,7 @@ description: >-
 
 ###  Overview 
 
-The code in Views can get pretty crowded with code depending on what you're working on. Snippets can make all that code more modular and easy to manage by allowing user to abstract complicated and repeated pieces of code into a separate file. When you want to include your abstracted code into a view, use the Parsley  call. 
+The code in Views can get pretty crowded with code depending on what you're working on. [Snippets](https://zesty.org/glossary#snippet) can make all that code more modular and easy to manage by allowing user to abstract complicated and repeated pieces of code into a separate file. When you want to include your abstracted code into a view, use the Parsley [`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/include) call. 
 
 ### Common Use Cases 
 
@@ -27,7 +27,7 @@ The Loader, which comes with every single Zesty.io instance, is a Snippet. This 
 
 ### Creating Snippets 
 
-For this guide we're going to be making a simple header for our website. We are starting at the last step of the Schema-Content-Code process: coding it all in. If you need a refresher on how Zesty.io works refer to these articles: create an instance, build the Schema, and add Content before jumping into the Web IDE to code it all in. 
+For this guide we're going to be making a simple header for our website. We are starting at the last step of the [Schema-Content-Code](https://zesty.org/guides/the-connection-between-schema-content-and-code) process: coding it all in. If you need a refresher on how Zesty.io works refer to these articles: [create an instance](https://zesty.org/guides/how-to-create-a-new-instance), [build the Schema](https://zesty.org/guides/building-the-schema-and-selecting-fields), and [add Content](https://zesty.org/services/manager-ui/content/adding-and-managing-content) before jumping into the Web IDE to code it all in. 
 
 1. Navigate to the Web IDE.
 
@@ -51,7 +51,7 @@ For this guide we're going to be making a simple header for our website. We are 
 
 ### Using Snippets
 
-When working on your Snippet you'll need to include it in a view in order to preview your changes. Since we're working on a header that we want to be on every single page, we're going to add our Snippet to the Loader which loads every view.
+When working on your Snippet you'll need to include it in a view in order to preview your changes. Since we're working on a header that we want to be on every single page, we're going to add our Snippet to the [Loader](https://zesty.org/services/manager-ui/editor/outputting-content#loader) which loads every view.
 
 After creating your Snippet: 
 
