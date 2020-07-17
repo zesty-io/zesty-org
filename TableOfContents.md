@@ -49,6 +49,7 @@
   * [Setting up Google Analytics for GDPR](guides/setting-up-google-analytics-for-gdpr.md)
   * [Setting Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
+  * [Using Snippets](guides/using-snippets.md)
   * [Video Embedding or Streaming Capabilities](guides/video-embedding-or-streaming-capabilities.md)
 * [Glossary](glossary.md)
 
