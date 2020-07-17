@@ -75,3 +75,7 @@ After creating your Snippet:
 
 ![Publish your snippet once you&apos;re ready to go live.](../.gitbook/assets/05-use-snip-send-live.png)
 
+{% hint style="info" %}
+To send snippets live both the snippet _and_ the view that the snippet is included in need to be published.
+{% endhint %}
+
