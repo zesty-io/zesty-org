@@ -69,5 +69,52 @@ Setup an API token with purge access. This will be needed to run a purge on your
 
 Hybrid is an enterprise offering from Zesty.io, please reach out to support for help or clarification.
 
+## 5.\) Updating Zesty.io to Send the Purge Request
 
+When you have a purge function deployed and have tested that you can post a payload to it to trigger a cache purge, you will then want to update Zesty.io to know about the URL and the x-auth key. Rest API documentation can be found here [https://accounts-api.zesty.org/?version=latest\#d1864580-86f7-4ff4-afdd-edea5563992a](https://accounts-api.zesty.org/?version=latest#d1864580-86f7-4ff4-afdd-edea5563992a)
+
+Once added, code and content updates will automatically run your purge request.
+
+{% api-method method="post" host="https://accounts.api.zesty.io/v1/ecosystems/35-xyz-xyzxyz?action=updateCDNDefaults" path="" %}
+{% api-method-summary %}
+Update EcoSystem to run a remote Purge URL
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Your Post Body looks like:   
+`{   
+  "defaultCDNType": "AKAMAI",   
+  "defaultCDNPurgeURL": "https://location-of-cloud-purge-function.com",   
+  "defaultCDNPurgeAuth": "SECRET_KEY"  
+}`  
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXX
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="Raw Body" type="string" required=true %}
+Pass a body as described in the description above.
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
