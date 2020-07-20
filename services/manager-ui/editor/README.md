@@ -34,8 +34,9 @@ In addition to the Web IDE code can be authored locally using the [Atom IDE pack
 **Skip word right:** CTRL/CMD+right arrow  
 **Skip word left:** CTRL/CMD+left arrow  
 **Highlight word right:** CTRL/CMD+shift+right arrow  
-**Highlight word left:** CTRL/CMD+shift+left arrow **Highlight lines up:** CTRL/CMD+shift+up arrow  
-**Highlight lines below:** CTRL/CMD+shift+down arrow
+**Highlight word left:** CTRL/CMD+shift+left arrow&lt;br&gt; **Highlight lines up:** CTRL/CMD+shift+up arrow  
+**Highlight lines below:** CTRL/CMD+shift+down arrow  
+**Hightlight multiple selections:** CTRL/CMD+d
 
 ## HTML Views
 
