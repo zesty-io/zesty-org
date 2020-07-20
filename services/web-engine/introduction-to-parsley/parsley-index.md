@@ -586,6 +586,46 @@ Get the query parameters from url, for example lets use the url /store/12345/my-
 {{ request.queryParam(lala) }} // output: (empty string)
 ```
 
+## response.addHeader\(name, value\)
+
+This call will add a header to the response. This call does not output anything.
+
+```text
+{{response.addHeader(ab-test, 4)}}
+```
+
+## response.redirect301\(url\)
+
+This call will add a redirect the page.
+
+```text
+{{response.redirect301(https://www.google.com)}}
+```
+
+## response.redirect302\(url\)
+
+This call will add a redirect the page.
+
+```text
+{{response.redirect301(https://www.google.com)}}
+```
+
+## response.addHeader\(name, value\)
+
+This call will add a header to the response. This call does not output anything.
+
+```text
+{{response.addHeader(ab-test, 4)}}
+```
+
+## response.addHeader\(name, value\)
+
+This call will add a header to the response. This call does not output anything.
+
+```text
+{{response.addHeader(ab-test, 4)}}
+```
+
 ## sectionlinks\(number\)
 
 The `sectionlinks()` call looks at the current page and searches up to its top-level parent to create a navigation structure as an HTML list. Depth can be specified by as a numeric argument as `sectionlinks(2)` or you can choose not to display the top level page by passing `sectionlinks(off)`
