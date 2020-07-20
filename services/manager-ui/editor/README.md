@@ -110,3 +110,9 @@ If your, in development, work is stored in your browsers localStorage what to do
 
 When a file is marked as out-of-sync the Web IDE will load the [file diffing view](https://zesty.org/services/manager-ui/editor/versions#diffing-versions) and you will need to make a choice. You will have to choose between saving your changes and overwriting the current remote file or choosing the remote file and losing your local changes. This choice allows you to think critically about which code should be the current state shared across your team.
 
+### Renaming Files
+
+When renaming an HTML View, navigate to the [Schema section](https://zesty.org/services/manager-ui/schema) and change the HTML View's [reference name](https://zesty.org/guides/the-connection-between-schema-content-and-code#schema). 
+
+For Snippets, endpoints, style sheet, and JavaScript files, you'll need to create a new file with the new name, transfer your new code, and delete your old file. 
+
