@@ -16,6 +16,14 @@ You may need to understand the difference between two versions of a code file. T
 
 The diff view will allow you to select two versions of the same file and see the changes that have occurred between them. This can be helpful to debug a code issue or to revert to a prior version of a file. Using the "Load Version X" button will update the code editor to the selected versions code. Once loaded you can either make additional changes to the code or save it as is.
 
+#### Diff Colors
+
+**Yellow** - Syntax warnings. These are not items that necessarily need to be corrected, however, they indicate items that should probably be cleaned up like unused variables, unused CSS variables, etc. 
+
+**Red** - Code that's been removed.
+
+**Green** - Code that's been added.
+
 ### Version Rollbacks
 
 When accessing and restoring \(saving/publishing\) older versions of your code you’re creating new versions. In order to revert code you will need to follow these 3 steps.
