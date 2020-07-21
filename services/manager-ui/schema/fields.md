@@ -110,10 +110,10 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
     <tr>
       <td style="text-align:left">One to Many</td>
       <td style="text-align:left">This field allows users to create one-to-many relationship between a page
-        and a dataset, a pageset and a dataset, or a dataset and a dataset.</td>
-      <td
-      style="text-align:left"><code>&lt;one_to_many name=&quot;additional_fields&quot; name_friendly=&quot;Additional Form Fields&quot; relationship=&quot;custom_form_fields&quot; relationship_field=&quot;custom_field_name&quot; /&gt;</code>
-        </td>
+        and a dataset, a pageset and a dataset, or a dataset and a dataset. There
+        may be a limit to how many items can be related.</td>
+      <td style="text-align:left"><code>&lt;one_to_many name=&quot;additional_fields&quot; name_friendly=&quot;Additional Form Fields&quot; relationship=&quot;custom_form_fields&quot; relationship_field=&quot;custom_field_name&quot; /&gt;</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">One to One</td>
