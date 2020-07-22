@@ -610,28 +610,12 @@ This call will add a redirect the page.
 {{response.redirect301(https://www.google.com)}}
 ```
 
-### response.return404\(message\)
+## response.return404\(message\)
 
 This call will response to your default 404 page, if there is no default 404 page, a generic 404 page will display with the "message" param as an h1 tag.
 
 ```text
 {{response.return4040(My Default Message)}}
-```
-
-## response.addHeader\(name, value\)
-
-This call will add a header to the response. This call does not output anything.
-
-```text
-{{response.addHeader(ab-test, 4)}}
-```
-
-## response.addHeader\(name, value\)
-
-This call will add a header to the response. This call does not output anything.
-
-```text
-{{response.addHeader(ab-test, 4)}}
 ```
 
 ## sectionlinks\(number\)
