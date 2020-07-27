@@ -65,7 +65,7 @@ Parsley can be used to server side render product pages by accessing GroupBy. Th
 ```markup
 {{each api.gbi.product(collection, area, productId) as product}}
     <h1>{{product.title}}</h1>
-    <img src="{{product.visualVariants:0:productImage}}" alt="{{result.title}} Image">
+    <img src="{{product.visualVariants:0:productImage}}" alt="{{product.title}} Image">
     <textarea>{{product._json}}</textarea>
     <!-- this gets the first naviigation refinement available -->
     <p>Refinements count: {{navitem._refinementCount}}</p>
