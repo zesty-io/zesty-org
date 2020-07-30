@@ -771,7 +771,7 @@ The `truepath()` call will determine the web URL to access a content entry based
 {{ truepath({page.link_to_article}) }}
 ```
 
-`truepath()` can be used in [each loops](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#each) as well, for example `{{ truepath(this.zuid) }}` or `{{ this.zuid.truepath() }}` and you can assign it to a Parsley variable as well.
+`truepath()` can be used in [each loops](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#each) as well, for example `{{ truepath(this.zuid) }}` or `{{ this.zuid.truepath() }}` and you can assign it to a Parsley variable as well. 
 
 ```text
 {{each articles as art limit 5}}
