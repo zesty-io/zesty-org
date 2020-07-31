@@ -73,7 +73,7 @@ Similarly JavaScript files are ready to to be added and edited. These are render
 
 ## Snippets
 
-Snippets allow for resuable pieces of code which can be included into other views. They work well for dynmaic sections of content which do not require URLs. e.g. A contact form. Building this as a snippet allows for it's reuse across a website.
+Snippets allow for resuable pieces of code which can be included into other views. They work well for dynmaic sections of content which do not require URLs. e.g. A contact form. Building this as a snippet allows for it's reuse across a website. Learn more about creating and using snippets [here](https://zesty.org/guides/using-snippets).
 
 ## Custom Endpoints
 
