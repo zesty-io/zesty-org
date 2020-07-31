@@ -94,7 +94,7 @@ Do not see a file extension you need? The platform is designed to allow for addi
 
 ## Multitenancy
 
-Zesty.io is a multi tenant platform. This means there are multiple independent users operating against a shared environment. Said more simply, team members and yourself can work on the same files. While this provides powerful colloabrative workflows it introduces some complex questions for the application to answer. One of those being, when two or more users are working on the same file and introduce different changes which is the correct one?
+Zesty.io is a multi-tenant platform. This means there are multiple independent users operating against a shared environment. In other words, team members and yourself can work on the same files. While this provides powerful collaborative workflows it introduces some complex questions for the application to answer. One of those being, when two or more users are working on the same file and introduce different changes which is the correct one?
 
 The Web IDE is powered by the [instances API](https://zesty.org/apis/instances-api) which takes a simple approach of the last request made is the current state of the data. Meaning if you are working on `file A` and save the following code `var foo = "bar"` but then afterwards a team member is working on the same `file A` and saves the code `var foo = "baz"` then that will be the current state of the code when it is next requested.
 
