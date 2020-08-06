@@ -1,6 +1,6 @@
 ---
 description: >-
-  The connection between how Schema, Content, and Code (Editor)) work together
+  The connection between how Schema, Content, and Code (Editor) work together
   may not be readily clear, however this article should help clarify those
   connections.
 ---
