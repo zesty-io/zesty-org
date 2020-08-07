@@ -32,6 +32,7 @@ redirects:
   services/web-engine/guides/adding-instances-to-ecosystems: ./guides/adding-instances-to-ecosystems.md
   services/web-engine/guides/the-connection-between-schema-content-and-code: ./guides/the-connection-between-schema-content-and-code.md
   services/web-engine/guides/how-to-launch-an-instance: ./guides/how-to-launch-an-instance.md
+  guides/wildcard-view: ./services/manager-ui/editor/custom-file-types-endpoints#working-with-wild-card-views-to-resolve-dynamic-url-paths
 
   # Getting Started
   content-instance: ./getting-started
