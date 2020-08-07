@@ -56,7 +56,7 @@ EcoCode can be accessed by any Content Instance that is part of an EcoSystem. Ec
 
 The above line of Parsley code would attempt to access the Instance's \(with the ZUID `8-x1y2z3-b4c5d6f7`\) footer view.
 
-> :warning:**_NOTE:_**  This feature requires activation. Please connect with your Account Manager if you would like to use EcoCode.
+> **_NOTE:_**  This feature requires activation. Please connect with your Account Manager if you would like to use EcoCode.
 
 ### EcoCode Scope
 
