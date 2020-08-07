@@ -48,13 +48,15 @@ Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option
 
 ### Implementing EcoCode
 
-EcoCode can be accessed by any Content Instance that is part of an EcoSystem. EcoCode is implemented as Parsley code, and can be accessed from any view. It is simply done by knowing two pieces of information: the ZUID of an Instance and the name of a view.
+EcoCode can be accessed by any Content Instance that is part of an EcoSystem. EcoCode is implemented as Parsley code, and can be accessed from any view. It is simply done by knowing two pieces of information: the ZUID of an Instance and the name of a view. Currently, EcoCode is not available for OYD setups.
 
 ```php
 {{include 8-x1y2z3-b4c5d6f7.footer}}
 ```
 
 The above line of Parsley code would attempt to access the Instance's \(with the ZUID `8-x1y2z3-b4c5d6f7`\) footer view.
+
+> :warning:**_NOTE:_**  This feature requires activation. Please connect with your Account Manager if you would like to use EcoCode.
 
 ### EcoCode Scope
 
