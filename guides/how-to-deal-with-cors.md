@@ -1,4 +1,7 @@
-# How to Deal With CORS
+---
+description: >-
+  This guide explains CORS and provides tips and strategies around debugging these types of request.
+---
 
 ## Overview
 
@@ -34,7 +37,7 @@ Most browser inspectors can be accessed by right click on a web page to show the
 
 The console is where we can see errors and logs from both the browser and our pages source code. When a CORS error occurs you should see a console error stating what the error was.
 
-// TODO Show screenshot of CORS error
+<!-- // TODO Show screenshot of CORS error -->
 
 {% hint style="warn" %}
 Sometimes when a server error occurs the browser will display it as a CORS error. When you see a CORS error in the console it is important to inspect the request and confirm the response headers.
@@ -54,7 +57,7 @@ In addition to the `Allow-Access-Control-*` headers there are also `[Access-Cont
 
 Using the network tab we can inspect all the network traffic to and from the domain we are on. When clicking on a request, such as our OPTIONS request, we will see both the request and response headers. Looking at the response headers of our OPTIONS request we will be able see what `Allow-Access-Control-*` were returned from our back-end server. These are the instructions which the browser then follows. 
 
-// TODO screeenshot of OPTIONS network request response headers
+<!-- // TODO screeenshot of OPTIONS network request response headers -->
 
 If the domain we are on is not shown in the `Allow-Access-Control-Origin` value then we will not be able to make the CORS request.
 
@@ -86,7 +89,7 @@ Because your Zesty.io instance can act as an API to front-end code you have the 
 Your instance has two types of APIs the [Instant JSON API](https://zesty.org/apis/instant-content-api) and [Custom Endpoints](https://zesty.org/services/manager-ui/editor/custom-file-types-endpoints). By [turning on the CORS setting](https://zesty.org/services/manager-ui/settings/instance-settings#developer) for these APIs in the instance Developer settings you will requests from external domains to yours. This how you can allow public browser access to your APIs.
 
 
-# Inclusion
+# In Conclusion
 
 CORS errors can be one of the biggest points of frustration when authoring front-end code. Hopefully with this guide we have given you some helpful insight and strategies for debugging these error when they occur. 
 
