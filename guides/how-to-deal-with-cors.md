@@ -51,7 +51,7 @@ An origin is the combination of the protocol, domain, and port
 
 `Allow-Access-Control-Origin` has a special value which can be set, an asterisk `*`. This is known as a "wildcard". Meaning that the back-end server allows requests from any origin. Public APIs need this value set in order to allow requests from any origin.
 
-In addition to the `Allow-Access-Control-*` headers there are also `[Access-Control-Request-*](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers)` headers. We suggest gaining a cursory understanding of the available values here to more full understand how CORS requests are formulated.
+In addition to the `Allow-Access-Control-*` headers there are also [`Access-Control-Request-*`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Request-Headers) headers. We suggest gaining a cursory understanding of the available values here to more full understand how CORS requests are formulated.
 
 #### Network
 
@@ -69,7 +69,7 @@ Most Network tabs allow filtering to types of request, such as XHR. Some browser
 
 If you are just starting to learn about CORS one of the best places to start is the [Mozilla Developer Network (MDN) documentation on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). It is an excellent resource for all things front-end.
 
-When authoring code which will make a `Fetch` CORS request one setting you will want to be familiar with is `[mode](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode)`. This is the setting which explicitly states what type of request you want to make. It is useful to define this to ensure consistency on how a browser makes the request along with communicating to yourself or other developers in the future what the intent and expectations of the network request are.
+When authoring code which will make a `Fetch` CORS request one setting you will want to be familiar with is [`mode`](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode). This is the setting which explicitly states what type of request you want to make. It is useful to define this to ensure consistency on how a browser makes the request along with communicating to yourself or other developers in the future what the intent and expectations of the network request are.
 
 ## Solving CORS Issues
 
