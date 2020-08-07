@@ -74,7 +74,7 @@ Does a simple replace without any regular expression.
 
 ```text
 // $description = "We wrote this blog post"
-{{ $description.replace('We', 'I') }}
+{{ $description.replace(We, I) }}
 // "I wrote this blog post"
 {{ page.article_body.replace( src='(.*?)', data-src='\') }}
 ```
