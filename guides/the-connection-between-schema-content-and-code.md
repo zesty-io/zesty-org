@@ -9,7 +9,7 @@ description: >-
 
 ## Overview
 
-Schema \(content models and fields\), Content, and Code are all connected to one another through names, labels, and reference names; however unless a user sees all those items at once it can be difficult to put it all together. First of all we'll go through the relevant details for each section and then we'll put it all together. 
+Schema \(content models and fields\), Content, and Code are all connected to one another through names, labels, and reference names; however unless a user sees all those items at once it can be difficult to put it all together. First of all we'll go through the relevant details for each section and then we'll put it all together.
 
 ## Schema
 

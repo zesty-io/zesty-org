@@ -22,7 +22,7 @@ EcoSystems are used to network together Content Instances. Once networked in an 
 
 ## EcoMedia \(Shared Media\)
 
-Zesty.io [Cloud Content Instances]() are launched with a [Micro Dam](media-storage-micro-dam.md). EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements.
+Zesty.io [Cloud Content Instances](ecosystems.md) are launched with a [Micro Dam](media-storage-micro-dam.md). EcoMedia allows Micro DAMs \(Zesty.io Digital Asset Managers\) to be shared between Cloud Content Instances. This is useful for mass multisite installations or just when a couple company Instances want to share brand elements.
 
 The EcoMedia experience blends seamlessly into the Content Manager user interface, and appear as top level folder to which the user can browse, access, and upload.
 
@@ -35,7 +35,7 @@ The EcoMedia experience blends seamlessly into the Content Manager user interfac
 
 ## EcoCode \(Shared View Templates\)
 
-Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating.md). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances]() in the same EcoSystem.
+Zesty.io Cloud Content Instances are launched with the Web\[Site\] Engine option which allows for custom [view and template creation](web-engine/view-templating.md). EcoCode allows for view template code written in HTML and Parsley \(not excluding inline CSS or Javascript\) to be shared as amongst other [Cloud Content Instances](ecosystems.md) in the same EcoSystem.
 
 {% hint style="success" %}
 **Ways to Use EcoCode**
@@ -56,7 +56,7 @@ EcoCode can be accessed by any Content Instance that is part of an EcoSystem. Ec
 
 The above line of Parsley code would attempt to access the Instance's \(with the ZUID `8-x1y2z3-b4c5d6f7`\) footer view.
 
-> **_NOTE:_**  This feature requires activation. Please connect with your Account Manager if you would like to use EcoCode.
+> _**NOTE:**_ This feature requires activation. Please connect with your Account Manager if you would like to use EcoCode.
 
 ### EcoCode Scope
 

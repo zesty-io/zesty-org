@@ -17,7 +17,6 @@
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Content Entry, Drafts, and Publishing](guides/content-entry-drafts-and-publishing.md)
   * [Creating a Customizable JSON Endpoint For Content](guides/how-to-create-a-customizable-json-endpoint-for-content.md)
-  * [Wildcard View](guides/wildcard-view.md)
   * [Creating a feed](guides/creating-a-feed.md)
   * [Creating a Lead Form](guides/how-to-create-a-lead-form.md)
   * [Creating a New Instance](guides/how-to-create-a-new-instance.md)

@@ -7,7 +7,7 @@ description: >-
 
 # String Modifiers
 
-### .getNextURL\(\)
+## .getNextURL\(\)
 
 A quick way to retrieve the next URL in line in a page group.
 
@@ -15,7 +15,7 @@ A quick way to retrieve the next URL in line in a page group.
 {{ page.getNextURL() }}
 ```
 
-### .getPreviousURL\(\)
+## .getPreviousURL\(\)
 
 Quick access to the URL of the previous page in line in a page group.
 
@@ -23,7 +23,7 @@ Quick access to the URL of the previous page in line in a page group.
 { page.getpreviousurl() }}
 ```
 
-### .getUrl\(\)
+## .getUrl\(\)
 
 Returns the relative path to the item you are trying to access.
 
@@ -32,7 +32,7 @@ Returns the relative path to the item you are trying to access.
 // <a href="https://zesty.io/blog/updates/new-sitemap-xml-control-in-zesty/">Link</a>
 ```
 
-### .htmlentities\(\)
+## .htmlentities\(\)
 
 Converts the text string provided into HTML entities. Useful for when outputting text from the database.
 
@@ -40,7 +40,7 @@ Converts the text string provided into HTML entities. Useful for when outputting
 <p>{{ page.description.htmlentities() }}</p>
 ```
 
-### .html\_entity\_decode\(\)
+## .html\_entity\_decode\(\)
 
 Converts all HTML entities in the provided string to their applicable characters.
 
@@ -48,7 +48,7 @@ Converts all HTML entities in the provided string to their applicable characters
 <p>{{ page.description.html_entity_decode() }}</p>
 ```
 
-### .obfuscate\(\)
+## .obfuscate\(\)
 
 Use this call to render obscure text to web crawlers, like email or phone numbers.
 
@@ -57,7 +57,7 @@ Use this call to render obscure text to web crawlers, like email or phone number
 {{setting.contact-form.sending_email.obfuscate()}}</a>
 ```
 
-### .preg\_replace\(pattern, replacement\)
+## .preg\_replace\(pattern, replacement\)
 
 Executes a regular expression find and replace on the text attached to the call.
 
@@ -68,7 +68,7 @@ Executes a regular expression find and replace on the text attached to the call.
 // "Hello-all-and-welcome-to-Zesty"
 ```
 
-### .replace\(pattern, replacement\)
+## .replace\(pattern, replacement\)
 
 Does a simple replace without any regular expression.
 
@@ -79,7 +79,7 @@ Does a simple replace without any regular expression.
 {{ page.article_body.replace( src='(.*?)', data-src='\') }}
 ```
 
-### .slugify\(\)
+## .slugify\(\)
 
 Slugify will concatenate strings by replacing spaces with dashes \(-\), lowercasing all letters, and stripping out all punctuation.
 
@@ -91,7 +91,7 @@ Slugify will concatenate strings by replacing spaces with dashes \(-\), lowercas
 // calling slugify on the page title will return: my-new-homepage
 ```
 
-### .striptags\(start, length\)
+## .striptags\(start, length\)
 
 Function will return a string with HTML tags removed. It also acts as a substring method if a `start` and `length` parameter are provided.
 
@@ -101,7 +101,7 @@ Function will return a string with HTML tags removed. It also acts as a substrin
 {{thispage.html.striptags(4,6)}}
 ```
 
-### .substr\(start, length\)
+## .substr\(start, length\)
 
 Function that takes the text value it is attached to and returns a substring with the desired length. Substring can take negative numbers as well such as `substr(-5)` to return the last five characters of a string. Does not consider whitespace as part of length.
 
@@ -111,7 +111,7 @@ Function that takes the text value it is attached to and returns a substring wit
 // "This is a lo..."
 ```
 
-### .subWords\(number\_of\_words\)
+## .subWords\(number\_of\_words\)
 
 Return the first X words from a body of text. This is a cleaner method and subString\(\) when creating text previews in lists because it will not create breaks in the middle of words.
 
@@ -119,7 +119,7 @@ Return the first X words from a body of text. This is a cleaner method and subSt
 {{ page.content.subWords(3) }}
 ```
 
-### site.lorem\(number\)
+## site.lorem\(number\)
 
 Auto generates lorem ipsum placeholder content from this example string:
 
@@ -129,7 +129,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat quam q
 {{site.lorem(20)}}
 ```
 
-### site.searchformatted
+## site.searchformatted
 
 Takes a string parameter and a limit paramenter and outputs a site wide search results based on a meta title, meta desription, and page url.
 
