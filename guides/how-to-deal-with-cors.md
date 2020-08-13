@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-CORS can be one of the must frustrating things to debug when working with front-end code. This guide provide steps for determining if you are having a CORS issue, ways to resolve them, and how to configure CORS on your Zesty.io instance.
+CORS can be one of the most frustrating things to debug when working with front-end code. This guide provide steps for determining if you are having a CORS issue, ways to resolve them, and how to configure CORS on your Zesty.io instance.
 
 {% hint style="info" %}
 If you are just starting to learn about CORS one of the best places to start is the [Mozilla Developer Network \(MDN\) documentation on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS). It is an excellent resource for all things front-end.
