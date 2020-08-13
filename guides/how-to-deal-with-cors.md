@@ -1,7 +1,7 @@
 ---
 description: >-
   This guide explains CORS and provides tips and strategies around debugging
-  these types of request.
+  these types of requests.
 ---
 
 # How to Deal With CORS
