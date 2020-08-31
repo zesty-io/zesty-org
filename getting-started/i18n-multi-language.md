@@ -4,7 +4,7 @@ description: Zesty.io Supports multiple locales/languages for each content item
 
 # Locales / Multi-Lang Content
 
-When a Zesty.io Content Instance is created, it uses english as the default language. It is possible to add more languages to a Zesty.io Content Instance. Multi-lang content is premium feature of Zesty.io, reach out to your account manager to learn more.
+When a Zesty.io Content Instance is created, it uses English as the default language. It is possible to add more languages to a Zesty.io Content Instance. Multi-lang content is premium feature of Zesty.io, reach out to your account manager to learn more.
 
 ## Activating Multilang Content
 
