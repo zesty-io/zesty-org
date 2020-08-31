@@ -40,7 +40,7 @@ Follow these steps to create a CSV of your redirects:
 2. Title your columns \(from left to right\)
    1. From
    2. Target
-   3. Code
+   3. Code 
 3. Fill in your redirects with **relative path only**. Do not include your domain.
 
 See the image below for an example of how your CSV should be formatted.
