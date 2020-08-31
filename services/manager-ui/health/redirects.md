@@ -4,6 +4,8 @@
 
 Part of Zesty.io's Health section is a redirect manager. The redirect manager allows users to create and delete either 301 or 302 redirects, as well as to mass upload redirects without needing access to `.htaccess` files. All of your current redirects are visible upon navigating to your instance's Health section.
 
+![Access the health section from the Manager UI navigation bar.](../../../.gitbook/assets/health-section-nav.png)
+
 ### 301 and 302 redirects
 
 Zesty.io allows for the creation of 301 or 302 redirects. Learn more about 301 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301) and 302 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302).
@@ -42,6 +44,8 @@ See the image below for an example of how your CSV should be formatted.
 ![Example CSV of redirects.](../../../.gitbook/assets/screen-shot-2019-10-18-at-3.22.43-pm.png)
 
 Once your sheet is properly formatted click the gray "Import CSV/XML" button and import your sheet.
+
+![Redirect and CSV upload interface.](../../../.gitbook/assets/health-section-csv-upload.png)
 
 ### XML Sitemap
 
