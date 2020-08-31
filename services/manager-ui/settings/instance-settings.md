@@ -14,7 +14,7 @@ Instance settings are developer-oriented settings that help customize an instanc
 
 Each category contains a list of settings. Categories are located in the left-hand sidebar of the window \(image below\). In the list below you'll find a list of which settings are nested under which category along with descriptions from the UI.
 
-![Instance Setting categories in the left-hand navigation outlined in purple.](../../../.gitbook/assets/instance-settings-nav.png)
+![Instance Setting categories in the left-hand navigation outlined in purple.](../../../.gitbook/assets/instance-settings%20%281%29.png)
 
 ### **General**
 
@@ -65,4 +65,13 @@ Each category contains a list of settings. Categories are located in the left-ha
 * **Use Google Universal Code:** The new version of Googles tracking code.\*\|\*Google Universal Code
 * **Display Advertising Support:** If you turn on Display Advertising, you need to enable Re-marketing with Google Analytics or Google Display Network \(GDN\) Impression Reporting. With this setting on the Analytics tracking code is updated. Once you have made that change, Google Analytics collects the information it normally does, as well as the DoubleClick cookie when that cookie is present.
 * **Google Auto Linker:** When tracking sessions across multiple domains, the Client-ID value has to be transferred from one domain to the other. To do this, the Analytics tracking code has linking features that allow the source domain to place the Client-ID in the URL parameters of a link, where the destination domain can access it. Add your secondary domain or domains here as a comma separated list.
+
+### Security
+
+* **Header: X-Frame-Options**: Learn more at [https://developer.mozilla.org/enUS/docs/Web/HTTP/Headers/X-Frame-Options](https://developer.mozilla.org/enUS/docs/Web/HTTP/Headers/X-Frame-Options)
+* **Strict-Transport-Security:** Learn more at [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security)
+* **Content-Security-Policy:** Learn more at [https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+* **X-Content-Type-Options:** Learn more at [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options)
+* **Referrer-Policy:** Learn more at [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+* **Feature-Policy:** Learn more at [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
 
