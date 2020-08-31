@@ -18,7 +18,7 @@ Access the Health section via the Manager UI's main navigation bar at the top of
 
 The Health section home screen shows the redirect manager. Here we can create new redirects, view and delete existing redirects, and mass upload redirects through CSV or XML format.
 
-![Redirects are located under the Health section.](../../../.gitbook/assets/health-section-manage-redirects.png)
+![Redirects are accessed via the Health section.](../../../.gitbook/assets/health-section-manage-redirects.png)
 
 When creating a new redirect, always start the old redirect with a forward slash, `/`, and include the entire path after the domain. Redirects are case sensitive, so `/old-path/` and `/Old-Path/` would need to be separate entries.
 
@@ -35,7 +35,7 @@ To mass upload from XML, use the XML format required for sitemap.xml files provi
 
 This section is where you can input custom robots.txt statements to allow or disallow crawlers access to pages. The control for the site-wide settings for allowing or disallowing crawl access is in the Settings section of the Schema section.
 
-![Access the Robots.txt file from the Health section.](../../../.gitbook/assets/health-section-robots.png)
+![The robots.txt file is accessed via the Health section.](../../../.gitbook/assets/health-section-robots.png)
 
 The robots.txt editor allows control over search engine crawling rules per site. To access this tool, please navigate to the Health section.
 
