@@ -1,3 +1,7 @@
+---
+description: Create redirects with relative paths to ensure that none of your pages 404.
+---
+
 # Redirects
 
 ### Overview
