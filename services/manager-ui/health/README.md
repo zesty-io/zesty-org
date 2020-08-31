@@ -1,10 +1,18 @@
 ---
 description: >-
-  The Health Tab, previously called the SEO Tab, is where you can edit and
+  The Health Section, previously called the SEO Tab, is where you can edit and
   manage redirects, create a robots.txt, and crawl the site for 404 links.
 ---
 
 # Health
+
+### Overview
+
+In the Health Section users can manager redirects, robots.txt, and the site crawler. All of these tools can help you diagnose and correct the health of your instance. 
+
+Access the Health section via the Manager UI's main navigation bar at the top of the screen. 
+
+![Access the Health section via the Manager UI&apos;s main navigation.](../../../.gitbook/assets/health-section-nav.png)
 
 ### Manage Redirects
 
