@@ -36,13 +36,14 @@ While CORS policies are set by the back-end server \(domain-B\) there are a few 
 
 One of the biggest "gotchas" in front-end development can be browser extensions. When installed you've given them permission to run code on the browser tabs you are viewing and  as such they have the ability to modify functionality happening on a web page. Not all extensions are good actors and can cause intentional and unintentional side effects; one of those being modifying network requests. Whenever you are debugging front-end issues we always suggest using a "clean-room" profile.  A "clean-room" profile is a browser profile without any extensions installed. This will ensure that you don't have any unexpected changes in behavior from 3rd party code locations.
 
-#### Setting the Header
+#### Setting Request Headers
 
 Explicitly setting the header can cause issues. These issues will be indicated by an error in the console. For example, the error below says: Request header field skip-caching is not allowed by Access-Control-Allow-Headers in preflight response. 
 
 ![Access-Control-Allow-Headers failure in the Chrome console.](../.gitbook/assets/header-errors.png)
 
-This means that a skip-caching header has been explicitly declared and is causing the failure. Only certain headers are allowed on CORS requests. This [document](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) from Mozilla Developer Network shows which headers are allowed. 
+This means that a skip-caching header has been explicitly declared and is causing the failure.   
+Explicitly set request headers, that are not default headers, have to be explicitly allowed by the values returned in the `Access-Control-Allow-Headers` header. If you're unsure about  what allowed headers the endpoint supports, look at the preflight Options response. The values displayed on the Access-Control-Allow-Headers determines what can be used. 
 
 #### Investigating HTTP Response Headers
 
