@@ -38,7 +38,7 @@ One of the biggest "gotchas" in front-end development can be browser extensions.
 
 #### Setting the Header
 
-Explicitly setting the header can cause issues. These issues will be indicated by the error in the console. For example, the error below says: Request header field skip-caching is not allowed by Access-Control-Allow-Headers in preflight response. 
+Explicitly setting the header can cause issues. These issues will be indicated by an error in the console. For example, the error below says: Request header field skip-caching is not allowed by Access-Control-Allow-Headers in preflight response. 
 
 ![Access-Control-Allow-Headers failure in the Chrome console.](../.gitbook/assets/header-errors.png)
 
