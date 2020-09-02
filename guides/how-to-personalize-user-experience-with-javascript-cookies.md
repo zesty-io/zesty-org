@@ -5,7 +5,7 @@ description: >-
   setup cookies using JavaScript, and later how
 ---
 
-# How to Personalize User Experience with JavaScript Cookies
+# Personalize User Experience with JavaScript Cookies
 
 In the event where you want to store a cookie based on a user action without passing a link, you would need to use JavaScript. This guide explains how to setup cookies using JavaScript and later how to use logic to control personalization.
 

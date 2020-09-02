@@ -34,7 +34,7 @@
   * [How to Implement Simple Pagination](guides/how-to-implement-simple-pagination.md)
   * [How to Launch an Instance](guides/how-to-launch-an-instance.md)
   * [How to Personalize User Experience by Accessing Geolocation](guides/how-to-personalize-user-experience-by-accessing-geolocation.md)
-  * [How to Personalize User Experience with JavaScript Cookies](guides/how-to-personalize-user-experience-with-javascript-cookies.md)
+  * [Personalize User Experience with JavaScript Cookies](guides/how-to-personalize-user-experience-with-javascript-cookies.md)
   * [How to Personalize User Experience with Session Variables](guides/how-to-personalize-user-experience-with-session-variables.md)
   * [How to Prevent Bots From Submitting Forms](guides/how-to-prevent-bots-from-submitting-your-form.md)
   * [How to Migrate a Site to Zesty.io](guides/how-to-migrate-a-site-to-zesty.io.md)
