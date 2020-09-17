@@ -59,7 +59,7 @@ Congratulations! You just added your team to your instance.
 
 ## Accepting an Invite to a Team
 
-In order to accept an invite to a team, navigate to the Teams interface, and click the blue Accept Invite button. 
+In order to accept an invite to a team, navigate to the Teams interface, and click the blue Accept Invite button.  
 
 ![](../.gitbook/assets/teams-interface%20%281%29.png)
 
