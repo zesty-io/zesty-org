@@ -755,7 +755,7 @@ The `subWords()` call returns the first specified number of words from a body of
 
 ## trim\_zeros\(\)
 
-The `trim_zeros()` call with take a number like 8.0000000 and just show 8.
+The `trim_zeros()` call with take a number like 8.0000000 and just show 8. It will also trim leading zeros as well so a number like 00800.00 will show 800.
 
 ```text
 // $num = 8.000000000
