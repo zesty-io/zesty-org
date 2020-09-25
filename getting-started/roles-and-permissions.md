@@ -1,13 +1,13 @@
 # Roles & Permissions
 
-User Roles and Permissions are applied to User or Team access to Content Instances. Controls range from types of resources they can edit to whether they can save, create, delete or publish.
+User Roles and Permissions are applied to User or [Team access](https://zesty.org/guides/adding-a-team) to via the Accounts [instance settings drawer](https://zesty.org/services/accounts-ui/instance-settings-drawer). Role permissions range from limiting the types of resources a user can access to whether they can save, create, delete or publish.
 
-All users are managed by Site Administrators. Access and roles are specific to the users role to a single instance, or the team's role to a single connection to other Zesty.io platform instances.
+All users are managed by Owner and Admin user roles. Access and roles are specific to an individual user's role on a single instance. If they are a member of a team then their access will be limited to the team's role as it's assigned on an instance.
 
 {% hint style="info" %}
 Note: the Leads and Analytics in the screenshots below are only visible if an instance has[ form that uses Zesty's ZLF](https://zesty.org/services/manager-ui/leads#how-to-connect-forms-to-zlf) and if [analytics have been activated](https://zesty.org/services/web-engine/analytics).  
   
-All roles have access to publishing content _except for the Contributor role_. 
+All roles have access to publishing/unpublishing and deleting content _except for the Contributor role_. 
 {% endhint %}
 
 ### Base Roles Types
