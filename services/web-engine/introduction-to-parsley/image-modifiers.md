@@ -81,3 +81,21 @@ Function takes a user's email and requests an image from the Gravatar API.
 // <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" />
 ```
 
+### Responsive Images with `srcset`
+
+In addition to Parsley you can use `srcset` to create responsive images. Learn more about `srcset` with [this MDN article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). 
+
+This is an example of how `srcset` can be used with Parsley:
+
+```text
+<picture>
+			<source media="(max-width: 700px)" sizes="(max-width: 500px) 50vw, 10vw"
+			srcset="{{this.hero_image_mobile.getImage()}} 138w, {{this.hero_image_mobile.getImage()}} 138w">
+			
+			<source media="(max-width: 1400px)" sizes="(max-width: 1000px) 100vw, 50vw"
+			srcset="{{this.hero_image.getImage()}} 416w, {{this.hero_image.getImage()}} 416w">
+			
+			<img src="{{this.hero_image.getImage()}}" alt="Hero">
+</picture>
+```
+
