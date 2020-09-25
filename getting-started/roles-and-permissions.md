@@ -4,43 +4,49 @@ User Roles and Permissions are applied to User or Team access to Content Instanc
 
 All users are managed by Site Administrators. Access and roles are specific to the users role to a single instance, or the team's role to a single connection to other Zesty.io platform instances.
 
+{% hint style="info" %}
+Note: the Leads and Analytics in the screenshots below are only visible if an instance has[ form that uses Zesty's ZLF](https://zesty.org/services/manager-ui/leads#how-to-connect-forms-to-zlf) and if [analytics have been activated](https://zesty.org/services/web-engine/analytics).  
+  
+All roles have access to publishing content _except for the Contributor role_. 
+{% endhint %}
+
 ### Base Roles Types
 
 #### **Owner**
 
-Access to Content, Media, Leads, SEO/Health , Schema, and Code Editor sections. In Zesty.io accounts, they can access the billing section and assign admins. Owners can publish both content and code and can invite users to Content Instances.
+Full access to all sections: Content, Media, Web IDE, Leads, Analytics, Schema, Health, Audit Trail, and Settings. In Accounts they have full access as well which includes the ability to: launch instances, add domains, invite new users and set their roles, add a team, create tokens, and reset the blueprint. 
 
 #### **Admin** 
 
-Access to Content, Media, Leads, SEO/Health , Schema, and Code Editor sections. Admins can publish both content and code and can invite users to Content Instances.
+Admins have the same privileges as the Owner role.
 
-![Admin role access view.](../.gitbook/assets/roles-admin-access.png)
+![Admin role access view.](../.gitbook/assets/admin-role-access.png)
 
 #### Developer
 
-Access to Content, Media, Leads, SEO/Health, Schema, and Code Editor sections. Developers may publish both content and code.
+Access to: Content, Media, Web IDE, Leads, Analytics, Schema, Health, and Settings sections.
 
-![Developer role access view.](../.gitbook/assets/roles-developer-access.png)
+![Developer role access view.](../.gitbook/assets/developer-role-access%20%281%29.png)
 
 #### SEO 
 
-Access to Content, Media, SEO/Health, Content Configurator, and Code Editor sections. SEO users may edit and publish both content and code so they can update keywords and relevant HTML tags.
+Access to: Content, Media, Leads, Analytics, and Health sections.
 
-![SEO role access view](../.gitbook/assets/roles-seo-access.png)
+![SEO role access view.](../.gitbook/assets/seo-role-access.png)
 
 #### Publisher
 
-Access to Content, Media, and Leads sections. Publishers may edit, authorize, and publish both content and update meta titles and descriptions.
+Access to Content, Media, Leads, and Analytics sections. 
 
-![Publisher role access view.](../.gitbook/assets/roles-publisher-access.png)
-
-![Publisher role content access.](../.gitbook/assets/roles-publisher-content-access.png)
+![Publisher role access view.](../.gitbook/assets/publisher-role-access.png)
 
 #### Contributor
 
-Access to Content, and Media. Contributors can manage and add new content to be saved for review, but cannot publish new content. To publish new content, contributors must submit a workflow request to a user with publishing access.
+Access to Content and Media sections. 
 
-![Contributor role access view.](../.gitbook/assets/roles-contributor-access.png)
+![Contributor role access view.](../.gitbook/assets/contributor-role-access.png)
 
-![Contributor role content access.](../.gitbook/assets/roles-contributor-content-access.png)
+Contributors can create and edit but they **cannot publish** content. To publish new content, contributors must submit a workflow request to a user with publishing access.
+
+![Contributor role content view.](../.gitbook/assets/contributor-role-content-access.png)
 
