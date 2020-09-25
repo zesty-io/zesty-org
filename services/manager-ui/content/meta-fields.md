@@ -10,6 +10,8 @@ description: >-
 
 There a couple places to add meta information in Zesty.io. Pages \(single pages and page groups\) have meta fields in their settings for link, title, description, and keywords. If you need to add custom meta tags those can be added in the editor utilities under the Editor section.
 
+![An item&apos;s meta information shown in the Content section.](../../../.gitbook/assets/content-meta-data.png)
+
 ### Meta Information for Single Page and Page Group
 
 Take the following steps to access and edit your page's meta settings: 1. From the Content section select the page or page group that you'd like to edit.
