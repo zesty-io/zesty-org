@@ -38,6 +38,10 @@ All SCSS files are concatenated based on their order in the Editor and run throu
 
 _Errors are returned for broken SASS at compile time._
 
+{% hint style="warning" %}
+SCSS cannot be used in base blueprints files. This refers the the files that are loaded from a GitHub repo upon blueprint selection during instance creation.
+{% endhint %}
+
 ### Special Files
 
 **ie8.css**
