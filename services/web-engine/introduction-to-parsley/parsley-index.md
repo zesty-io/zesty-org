@@ -637,7 +637,13 @@ The `sectionlinks()` call looks at the current page and searches up to its top-l
 
 ## seo\_link\_title
 
+{% hint style="warning" %}
+**Deprecated:** this functionality is only available to test in preview, it is not available for production websites because they are statically cached.
+{% endhint %}
+
 This call will access the Navigation Title for an item which is located under an [item's Meta information](https://zesty.org/services/manager-ui/content/meta-fields) in the Content section. 
+
+The `sever_var` call provides access to some of the most common server variables holding information about headers, paths, and script location. Some available variables are:
 
 ```text
 {{ this.seo_link_title }}
@@ -652,8 +658,6 @@ This call will access the Meta Title for an item which is located under an [item
 ```
 
 ## server\_var
-
-The `sever_var` call provides access to some of the most common server variables holding information about headers, paths, and script location. Some available variables are:
 
 * REMOTE\_ADDR 
 * HTTP\_USER\_AGENT 

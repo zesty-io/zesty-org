@@ -111,7 +111,7 @@ This functionality can be used in conjunction with search or product navigation 
 <!-- this store a string for later access -->
 {{$refinements = {navitem._refinements} }}
 	<ul>
-	{{each api.gbi.searchWithRefinements(products, Storefront, ,{$$refinements},10) as refined }}
+	{{each api.gbi.searchWithRefinements(products, Storefront, ,{$refinements},10) as refined }}
 	<li>{{refined.title}}</li>
 	{{end-each}}
 	</ul>
