@@ -144,9 +144,10 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
         bottom right corner is draggable for resizing. Line breaks print out as
         <br
         />tags unless you add &apos;_raw&apos; to the end of the field name in the
-        Parsley call.</td>
-      <td style="text-align:left"><code>&lt;textarea name=&quot;bubble_blurb&quot; name_friendly=&quot;Bubble Blurb&quot; list=&quot;1&quot; /&gt;</code>
-      </td>
+        Parsley call. Use carriage returns or HTML to create line breaks.</td>
+      <td
+      style="text-align:left"><code>&lt;textarea name=&quot;bubble_blurb&quot; name_friendly=&quot;Bubble Blurb&quot; list=&quot;1&quot; /&gt;</code>
+        </td>
     </tr>
     <tr>
       <td style="text-align:left">Toggle</td>
