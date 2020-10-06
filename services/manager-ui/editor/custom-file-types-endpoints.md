@@ -48,7 +48,7 @@ Wild Card Views files can be used to dynamically generate pages from data not lo
 **Referral Pages**: A URL like `/referral/3e5h1/`\(represented as a custom file type named `/referral/*/index.parsley` where `3e5h1`is a unique identifier which can be accessed with `{{request.pathPart(2)}}` and can be used to present a printable coupon on page, or to make a request to an external system via javascript. 
 
 {% hint style="info" %}
-Pages that use wildcard routing will not include Zesty automated head tags. These pages will need to be fully built top to bottom.
+Pages that use wildcard routing will not include Zesty automated head tags. These pages will need to be fully built top to bottom. 
 {% endhint %}
 
 ##  Snippets 
