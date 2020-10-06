@@ -9,10 +9,14 @@ description: >-
 
 ### Overview
 
-Zesty.io’s Code Editor supports CSS, LESS, and SCSS/SASS. Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file. If more than one style of stylesheet is used, they will compile and concat into a single file in the following order of concatenation:  
+Zesty.io’s Code Editor supports CSS, LESS, and SCSS/SASS. Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file called `site.css`. If more than one style of stylesheet is used, they will compile and concat into a single file in the following order of concatenation:  
 CSS  
 LESS  
 SCSS
+
+{% hint style="info" %}
+To create style files that are not compiled through this flow and used site-wide you can create style sheets in a [custom endpoint](https://zesty.org/services/manager-ui/editor/custom-file-types-endpoints) and add them to the item's head that requires it.
+{% endhint %}
 
 ### Compilers and Minifiers
 
