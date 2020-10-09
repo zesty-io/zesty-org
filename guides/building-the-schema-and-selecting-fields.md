@@ -56,7 +56,7 @@ Fields are added to a content model after it's been created. Fields allow users 
 
 ![Add a field step 1: Click the dropdown for a list of field types.](../.gitbook/assets/field-selection-dropdown.png)
 
-Click the dropdown to select a field. Determine the field type you need by thinking about the type of content that will be entered. Learn more about field types by reading this [article](https://github.com/zesty-io/zesty-org/tree/e76310312201061ff526540e6164d65245ee9d9b/services/web-engine/interface/schema/fields.md#table-of-field-types).
+Click the dropdown to select a field. Determine the field type you need by thinking about the type of content that will be entered. Learn more about field types by reading this [article](https://zesty.org/services/manager-ui/schema/fields).
 
 ### Step 2: Field Type
 
