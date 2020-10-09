@@ -14,7 +14,7 @@ There are 4 steps to getting started with your instance. The first guide will gi
 
 1. [Overview: making the connection between Schema, Content, and Code](https://zesty.org/guides/the-connection-between-schema-content-and-code)
 2. [Building the Schema and Selecting Fields](https://zesty.org/guides/building-the-schema-and-selecting-fields)
-3. [Content Entry, Drafts, and Publishing Basics](https://github.com/zesty-io/zesty-org/tree/63f53129027d982c71e0f5213579e0b10a768dee/services/web-engine/guides/content-entry-drafts-and-publishing.md)
+3. [Content Entry, Drafts, and Publishing Basics](https://zesty.org/guides/content-entry-drafts-and-publishing)
 4. [Editor and Coding Basics](https://zesty.org/guides/editor-and-coding-basics)
 
 
