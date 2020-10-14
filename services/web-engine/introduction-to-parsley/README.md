@@ -46,6 +46,8 @@ Once you're familiar with the basic rules below jump into our [Parsley Repl](htt
 * Spacing
   * Single curly brackets: no spaces between Parsley call and bracket \(e.g. `{this.my_field}`\)
   * Double curly brackets: space\(s\) allowed between call and bracket \(e.g. `{{ this.my_field }}`\)
+* Case Sensitive
+  * Parsley is a case-sensitive language which means that `{{ This.my_field }}` and `{{ this.my_field }}` are not the same call and both are not valid. Be sure to follow case in the examples closely.
 
 ### Syntax Structure
 
