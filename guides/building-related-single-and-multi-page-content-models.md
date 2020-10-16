@@ -12,7 +12,7 @@ When building your instance's Schema it's important to consider what you'd like 
 
 When you're building an instance with multiple single-page content models that are related to multi-page model\(s\) it can be confusing to know which way to build them. Do you make one multi-page model for each single-page model? Or do you make a one multi-page model for _all_ of your single-page models? There are at least a couple different ways to architect your content models and this article will help you understand the implications of 2 types of builds.
 
-_Note:_ having a general, global understanding your teams needs including basic coding skills will help you further assess their needs and understand how to [build your Schema](https://zesty.org/guides/building-the-schema-and-selecting-fields).
+_Note:_ having a general, global understanding your teams needs including basic coding skills will help you further assess their needs and understand how to [build your Schema](https://zesty.org/guides/building-related-single-and-multi-page-content-models#building-your-schema).
 
 {% hint style="info" %}
 Some of the images below contain hard-to-read text. Click the images to expand them.
