@@ -43,6 +43,7 @@
   * [How to Use the Visual Sitemap](guides/how-to-use-the-visual-sitemap.md)
   * [How to Create a Blueprint in Github](guides/how-to-create-a-blueprint-in-github.md)
   * [JavaScript Component Libraries](guides/javascript-component-libraries.md)
+  * [Building Related Single and Multi-page Content Models](guides/building-related-single-and-multi-page-content-models.md)
   * [Password Protect Web Engine Preview](guides/password-protect-web-engine-preview.md)
   * [Refreshing the Cache](guides/refreshing-the-cache.md)
   * [Reordering Child Items in a Parsley Auto-generated Navigation Bar](guides/reordering-child-items-in-a-parsley-auto-generated-navigation-bar.md)
