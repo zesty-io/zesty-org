@@ -40,7 +40,7 @@
   * [How to Migrate a Site to Zesty.io](guides/how-to-migrate-a-site-to-zesty.io.md)
   * [How to Set Up Internationalization \(i18n\)](guides/how-to-set-up-internationalization-i18n.md)
   * [How to Use the Visual Sitemap](guides/how-to-use-the-visual-sitemap.md)
-  * [How to control and use og:image](guides/how-to-control-and-use-og-image.md)
+  * [Controlling and use og:image](guides/how-to-control-and-use-og-image.md)
   * [How to Create a Blueprint in Github](guides/how-to-create-a-blueprint-in-github.md)
   * [JavaScript Component Libraries](guides/javascript-component-libraries.md)
   * [Password Protect Web Engine Preview](guides/password-protect-web-engine-preview.md)

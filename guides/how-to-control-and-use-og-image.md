@@ -1,4 +1,4 @@
-# How to control and use og:image
+# Controlling and use og:image
 
 When users share your content to a social network using the [Open Graph protocol](http://ogp.me/), e.g. Facebook, you can control the content that network will associate with the shared url.
 
