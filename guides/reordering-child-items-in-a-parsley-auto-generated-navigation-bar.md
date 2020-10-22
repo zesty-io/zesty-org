@@ -10,6 +10,8 @@ description: >-
 
 Parsley's  [`{{ navigation() }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#navigation-number) call automatically creates a navigation bar based on an instances content models. Depending on how the call is configured, users will see child items in their navigation bar. Child items will show up in dropdowns underneath their parent item. 
 
+**Note:** the `{{ navigation() }}` call creates an HTML list structure but does not styles the navigation bar as shown below.
+
 ![A dropdown of child pages is shown outlined in purple.](../.gitbook/assets/auto-gen-nav-dropdowns.png)
 
 These child items are shown in the order they're created, however users may want to reorder them. Follow the steps below to reorder them.
