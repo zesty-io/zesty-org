@@ -6,6 +6,8 @@ description: >-
 
 # How to Launch an Instance
 
+**This guide is for launching instances with custom domains. Please disregard this if you're using the default `zesty.dev` domains.**
+
 There are 3 steps to making your instance accessible to the public.
 
 1. Set a custom domain name
