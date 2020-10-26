@@ -10,6 +10,10 @@ Part of Zesty.io's Health section is a redirect manager. The redirect manager al
 
 ![Access the health section from the Manager UI navigation bar.](../../../.gitbook/assets/health-section-nav%20%281%29.png)
 
+{% hint style="warning" %}
+_We resolve published pages prior to redirects to prevent a redirect from mistakenly  overtaking actual published pages._ Therefore be sure to unpublish items that you're making redirects for to ensure your redirects perform as expected.
+{% endhint %}
+
 ### 301 and 302 redirects
 
 Zesty.io allows for the creation of 301 or 302 redirects. Learn more about 301 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/301) and 302 redirects [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/302).
