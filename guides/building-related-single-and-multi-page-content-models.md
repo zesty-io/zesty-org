@@ -15,7 +15,7 @@ When you're building an instance with multiple single-page content models that a
 _Note:_ having a general, global understanding your teams needs including basic coding skills will help you further assess their needs and understand how to [build your Schema](https://zesty.org/guides/building-related-single-and-multi-page-content-models#building-your-schema).
 
 {% hint style="info" %}
-Some of the images below contain hard-to-read text. Click the images to expand them.
+Some of the images below contain hard-to-read text. Click the images to expand them & zoom-in to read text.
 {% endhint %}
 
 ### Considerations Before Building
