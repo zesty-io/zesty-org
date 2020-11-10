@@ -23,6 +23,10 @@ To setup Google Analytics for your cloud content instance, you will need to firs
 * Make sure that the "Use Google Universal Code" toggle is on \(green\)
 * Click "Save"
 
+{% embed url="https://www.youtube.com/watch?v=dTx9RjT19\_g" %}
+
+_Watch this video to see how to authenticate Google Analytics in Zesty.io._
+
 #### Verifying Setup
 
 Visit a page on your instance's **live domain** and inspect the &lt;head&gt; element. 
