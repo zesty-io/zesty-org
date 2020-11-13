@@ -7,9 +7,16 @@ description: >-
 
 # Custom File Types / Endpoints
 
-## Custom File Type/Endpoint 
+## Custom File Type/Endpoint Overview 
 
-Endpoints are _\(Mixed Extensions\)_ Parsley accessible file for creating endpoints or custom experiences. These files need to be named with a full path with an extension like `/my/file/path.json`. The file is accessible at `hash-dev.preview.zesty.io/my/file/path.json`. File types that can be used: css, html, json, js, xml, css, csv, tsv, xml, yaml, md, svg, txt, rss, ics, vcf, xhtml.
+Endpoints are _\(Mixed Extensions\)_ Parsley accessible file for creating endpoints or custom experiences. These files need to be named with a full path with an extension like `/my/file/path.json`. The file can be viewed at `hash-dev.preview.zesty.io/my/file/path.json` or `my-custom-domain.com/my/file/path.json` as long as the file and its content has been published. File types that can be used: css, html, json, js, xml, css, csv, tsv, xml, yaml, md, svg, txt, rss, ics, vcf, xhtml.
+
+{% hint style="info" %}
+Always use relative URLs or production links in your views for example: `/my/file/path.json`  or  `//my-custom-domain.com/my/file/path.json`   
+This is important because **preview URLs are not cached**. However, **production URLs** _**are**_ **cached** and do not have to go to origin to render.
+{% endhint %}
+
+### 
 
 ### Creating a custom file type from the Web IDE
 
