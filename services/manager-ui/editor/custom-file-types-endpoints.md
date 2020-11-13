@@ -12,8 +12,11 @@ description: >-
 Endpoints are _\(Mixed Extensions\)_ Parsley accessible file for creating endpoints or custom experiences. These files need to be named with a full path with an extension like `/my/file/path.json`. The file can be viewed at `hash-dev.preview.zesty.io/my/file/path.json` or `my-custom-domain.com/my/file/path.json` as long as the file and its content has been published. File types that can be used: css, html, json, js, xml, css, csv, tsv, xml, yaml, md, svg, txt, rss, ics, vcf, xhtml.
 
 {% hint style="info" %}
-Always use relative URLs or production links in your views for example: `/my/file/path.json`  or  `//my-custom-domain.com/my/file/path.json`   
-This is important because **preview URLs are not cached**. However, **production URLs** _**are**_ **cached** and do not have to go to origin to render.
+Always use relative URLs or production links in your views for example: `/my/file/path.json`  or  `//my-custom-domain.com/my/file/path.json` . We recommend using relative links as the endpoint will render relative to the domain that you're on.  
+  
+This is important because preview URLs are not cached, they do not collect analytics, Google does not recognize it as their own domain, and it can expose unpublished content.   
+  
+However, production URLs _are_ cached and thus perform faster, is recognized by Google  and collects analytics, and will not expose unpublished content.
 {% endhint %}
 
 ### 
