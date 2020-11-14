@@ -411,6 +411,39 @@ The [`include`](https://zesty.org/services/web-engine/introduction-to-parsley/in
 {{ include header }}
 ```
 
+## instance.host\_env
+
+Shows the instance's webengine URL. This only works in preview - not on live.
+
+```text
+{{ instance.host_env }}
+```
+
+## instance.host\_live
+
+Shows you the instance's first registered domain. This only works in preview - not on live.
+
+```text
+{{ instance.host_live }}
+```
+
+## instance.host\_preview \(or instance.host\_relative\)
+
+Shows an instance's preview URL. This only works in preview - not on live.
+
+```text
+{{ instance.host_preview }}
+{{ instance.host_relative }}
+```
+
+## instance.host\_protocol
+
+Shows the instance's protocol based on its settings. This only works on preview - not on live.
+
+```text
+{{ instance.host_protocol }}
+```
+
 ## last\(\)
 
 The `last()` call will access the content available in the last entry of any content model.
