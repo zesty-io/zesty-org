@@ -47,6 +47,14 @@ Shows an instance's preview URL. This only works in preview - not on live.
 {{ instance.host_relative }}
 ```
 
+## instance.host\_protocol
+
+Shows the instance's protocol based on its settings. This only works on preview - not on live.
+
+```text
+{{ instance.host_protocol }}
+```
+
 ## instance.searchformatted\(search\_term\)
 
 Search a Satellite's meta titles and descriptions.
@@ -81,14 +89,6 @@ Generate lorem ipsum placeholder text on the fly.
 
 ```text
 {{ instance.lorem(200) }}
-```
-
-## instance.host\_protocol
-
-Shows the instance's protocol based on its settings. This only works on preview - not on live.
-
-```text
-{{ instance.host_protocol. }}
 ```
 
 ## instance.sendemail\(subject, body, to\_address\)
