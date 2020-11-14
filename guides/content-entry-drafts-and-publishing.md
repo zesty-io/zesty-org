@@ -52,7 +52,7 @@ When a single-page content model is selected from the left-hand sidebar navigati
 
 Multi-page and headless sets have the same flow when it comes to editing and adding new content.
 
-Follow the steps below to **create a new multi-page or headless set item**. _\*\*_
+Follow the steps below to **create a new multi-page or headless set item**. 
 
 1. Determine which multi-page or headless set that you want to add a new entry for and click on it to select it. 
 
@@ -102,6 +102,8 @@ Globals is a special headless set that is built-in to every Zesty.io instance an
 This headless set does **not** have a table-listing view and does **not** allow for multiple entries. However, users can add fields to it via the Schema section. When Globals are selected in the left-hand sidebar navigation the editing view looks exactly like the other content editing views.
 
 ![Editing Globals screen. Globals do not have a table-listing view. ](../.gitbook/assets/00-special-headless-set-globals%20%281%29.png)
+
+
 
 ## Drafts and Publishing
 

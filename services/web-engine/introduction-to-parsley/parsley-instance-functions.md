@@ -11,7 +11,7 @@ description: >-
 Access the full url to the Satellite™ CDN.
 
 ```text
-{{instance.cdn}}
+{{ instance.cdn }}
 ```
 
 ## instance.date\(\)
@@ -19,7 +19,32 @@ Access the full url to the Satellite™ CDN.
 Access the date from the Satellite. [Additional formatting options](https://developer.zesty.io/parsley-templating/dates/).
 
 ```text
-{{instance.date()}}
+{{ instance.date() }}
+```
+
+## instance.host\_env
+
+Shows the instance's webengine URL. This only works in preview - not on live.
+
+```text
+{{ instance.host_env }}
+```
+
+## instance.host\_live
+
+Shows you the instance's first registered domain. This only works in preview - not on live.
+
+```text
+{{ instance.host_live }}
+```
+
+## instance.host\_preview \(or instance.host\_relative\)
+
+Shows an instance's preview URL. This only works in preview - not on live.
+
+```text
+{{ instance.host_preview }}
+{{ instance.host_relative }}
 ```
 
 ## instance.searchformatted\(search\_term\)
@@ -39,7 +64,7 @@ Returns search results in this format:
 Parsley code used to return the the search results:
 
 ```text
-{{instance.searchformatted(my search term)}}
+{{ instance.searchformatted(my search term) }}
 ```
 
 ## instance.domain
@@ -47,7 +72,7 @@ Parsley code used to return the the search results:
 If domain is set for the instance, this call will return it.
 
 ```text
-{{instance.domain}}
+{{ instance.domain }}
 ```
 
 ## instance.lorem\(number\)
@@ -55,7 +80,15 @@ If domain is set for the instance, this call will return it.
 Generate lorem ipsum placeholder text on the fly.
 
 ```text
-{{instance.lorem(200)}}
+{{ instance.lorem(200) }}
+```
+
+## instance.host\_protocol
+
+Shows the instance's protocol based on its settings. This only works on preview - not on live.
+
+```text
+{{ instance.host_protocol. }}
 ```
 
 ## instance.sendemail\(subject, body, to\_address\)
@@ -90,9 +123,9 @@ show two sub levels and the auto generated header
 ```
 
 ```text
-{{instance.subnav(false)}} 
+{{ instance.subnav(false) }} 
 
-{{instance.subnav(true 2)}}
+{{ instance.subnav(true 2) }}
 ```
 
 ## instance.truepath\(ZUID\)
@@ -100,6 +133,6 @@ show two sub levels and the auto generated header
 Truepath takes in a UUID-like identifier, called a "ZUID", which can be located in the the Zesty.io Manager url. Truepath returns a perfect url path to the znode content id. Use true path to ensure links never break.
 
 ```text
-{{instance.truepath(501)}}
+{{ instance.truepath(501) }}
 ```
 
