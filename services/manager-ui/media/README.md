@@ -12,6 +12,12 @@ The Media tab is where all of an instance's media is organized. All types of fil
 
 ![The media section interface.](../../../.gitbook/assets/01-media-section.png)
 
+### Media File Information
+
+Media file information such as the name, file name, ZUID, and more is accessed by clicking the cog icon in the lower left-hand corner of the thumbnail frame. 
+
+![The cog icon in the thumbnail frame allows you to access the media file&apos;s information.](../../../.gitbook/assets/media-file-information.png)
+
 ### Groups
 
 Media can be organized into groups, groups can be nested, and media can be drag-and-dropped between groups. These groups are only visual representations used in the interface and do not affect the path of the media.  
