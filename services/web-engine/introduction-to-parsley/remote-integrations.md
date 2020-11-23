@@ -14,7 +14,9 @@ description: Parsley can make web requests to remote data for server side render
 {{end-each}}
 ```
 
-The above code and an example of pulling remote JSON data \(this can be from any source, zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options. 
+The above code is an example of pulling remote JSON data \(this can be from any source, Zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options. 
+
+### JSON Formatting Options
 
 #### Remote JSON Format Option 1: Single Flat Object
 
@@ -35,7 +37,7 @@ The above code and an example of pulling remote JSON data \(this can be from any
 
 ### Handling Errors
 
-When an error occurs \(timeout or bad JSON formatting\) the each look will return over a single flat error object. You can handle this by first looking for an error object field name `error` or by simply ignoring it by writing a single if statement that looks for a value from your object.
+When an error occurs \(for example: a timeout or bad JSON formatting\) the each loop will return over a single flat error object. You can handle this by first looking for an error object field name `error` or by simply ignoring it by writing a single if statement that looks for a value from your object.
 
 **Handling Errors Method 1: Check for error object**
 
@@ -78,7 +80,7 @@ When an error occurs \(timeout or bad JSON formatting\) the each look will retur
 
 ## Including a Remote File 
 
-You may also include a remote file for Parsley execution. This is useful for single source templating or integrating pre-rendered javascript like react modules. Click a head to the include documentation tot learn how to include a remote file into your Parsley execution.
+You can also include a remote file for Parsley execution. This is useful for single-source templating or integrating pre-rendered javascript like React modules. Click ahead to the include documentation to learn how to _include_ a remote file into your Parsley execution.
 
 {% page-ref page="include.md" %}
 
