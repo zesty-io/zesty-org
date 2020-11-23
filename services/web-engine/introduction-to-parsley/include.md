@@ -38,3 +38,11 @@ One common use is to create a globally available header and footer. In our examp
 {{ include footer }}
 ```
 
+### Working with Remote Files
+
+Include can also pull in text from a remote file. The file must be accessible without authentication. There is a 3 second timeout for every request, if your remote file takes longer than 3 seconds to return, you will get a blank string. Include will grab the remote string and parse it with Parsley. You can use parsley code in your remote text.
+
+```text
+{{ include https://parsley.zesty.io/test/remoteinclude.parsley }}
+```
+

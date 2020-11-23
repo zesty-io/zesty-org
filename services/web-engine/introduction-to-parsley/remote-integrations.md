@@ -4,6 +4,78 @@ description: Parsley can make web requests to remote data for server side render
 
 # Remote Integrations
 
+## JSON Iteration with Parsley
+
+```markup
+{{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
+
+<h1>{{obj.title}}</h1>
+
+{{end-each}}
+```
+
+The above code and an example of pulling remote JSON data \(this can be from any source, zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options. 
+
+#### JSON Format Option 1 - Single Flat Object
+
+```javascript
+{
+    "title": "Hello, World"
+}
+```
+
+#### JSON Format Option 2 - An Array of Flat Objects
+
+```javascript
+[
+    {"title": "Hello, World"},
+    {"title": "FooBar"}
+]
+```
+
+### Handling Errors
+
+When an error occurs \(timeout or bad JSON formatting\) the each look will return over a single flat error object. You can handle this by first looking for an error object field name `error` or by simply ignoring it by writing a single if statement that looks for a value from your object.
+
+**Method 1: Check for error object**
+
+```markup
+{{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
+
+    {{if {obj.error} }}
+    
+    (** output an error message if desired **)
+    <span style="color:red">{{obj.error}}</span>
+    
+    {{else}}
+    
+    (** put actual presentation here)
+    <h1>{{obj.title}}</h1>
+    
+    {{end-if}}
+
+{{end-each}}
+```
+
+**Method 2: Check for a field on your custom object**
+
+```markup
+{{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
+
+    {{if {obj.title} }}
+    
+    <h1>{{obj.title}}</h1>
+    
+    {{end-if}}
+    
+
+{{end-each}}
+```
+
+{% hint style="warning" %}
+**Timeout:** There is a 3 second timeout on all remote requests. If the request does not return in 3 seconds, and error will be thrown and nothing will be returned.
+{% endhint %}
+
 ## GroupBy \(GBi\) eCommerce Search
 
 GroupBy is smart eCommerce search tool that can reference millions of rich product data points in seconds. Zesty.io integrates with GroupBy in these ways: search, product lookup, personalized navigation, and personalized product refinement lookups. The GroupBy integration into the Zesty.io's Server Side Rendering language Parsley can be used to produce statically cached, search engine rich, product pages, category pages, search pages, and home pages.
