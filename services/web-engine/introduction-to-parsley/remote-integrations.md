@@ -76,6 +76,12 @@ When an error occurs \(timeout or bad JSON formatting\) the each look will retur
 **Timeout:** There is a 3 second timeout on all remote requests. If the request does not return in 3 seconds, and error will be thrown and nothing will be returned.
 {% endhint %}
 
+## Including a Remote File 
+
+You may also include a remote file for Parsley execution. This is useful for single source templating or integrating pre-rendered javascript like react modules. Click a head to the include documentation tot learn how to include a remote file into your Parsley execution.
+
+{% page-ref page="include.md" %}
+
 ## GroupBy \(GBi\) eCommerce Search
 
 GroupBy is smart eCommerce search tool that can reference millions of rich product data points in seconds. Zesty.io integrates with GroupBy in these ways: search, product lookup, personalized navigation, and personalized product refinement lookups. The GroupBy integration into the Zesty.io's Server Side Rendering language Parsley can be used to produce statically cached, search engine rich, product pages, category pages, search pages, and home pages.
