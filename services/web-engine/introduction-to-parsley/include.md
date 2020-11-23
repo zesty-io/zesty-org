@@ -30,7 +30,7 @@ If the piece of code that's being included is an endpoint be sure to use the ful
 
 ### Common Usage
 
-One common use is to create a globally available header and footer. In our example below we have two separate HTML snippets: one called **header** and the other called **footer**. We want these to load in every page of our instance therefore we add them to the Loader file. In the Loader file, we add calls for the header and footer snippet calls as follows:
+One common use of snippets is to create a globally available header and footer. In the example below we have two separate HTML snippets: one called **header** and the other called **footer**. We want these to load in every page of our instance therefore we add them to the Loader file. In the Loader file, we add calls for the header and footer snippet calls as follows:
 
 ```text
 {{ include header }]
@@ -38,9 +38,13 @@ One common use is to create a globally available header and footer. In our examp
 {{ include footer }}
 ```
 
+Get a full walk-through for how to do this with the **Using Snippets** guide that's linked below.
+
+{% page-ref page="../../../guides/using-snippets.md" %}
+
 ### Working with Remote Files
 
-Include can also pull in text from a remote file. The file must be accessible without authentication. There is a 3 second timeout for every request, if your remote file takes longer than 3 seconds to return, you will get a blank string. Include will grab the remote string and parse it with Parsley. You can use parsley code in your remote text.
+`{{ include }}` can also pull in text from a remote file. The file must be accessible _without_ authentication. There is a 3 second timeout for every request, if your remote file takes longer than 3 seconds to return, you will get a blank string. `{{ include }}` will grab the remote string and parse it with Parsley. You can use Parsley code in your remote text as well.
 
 ```text
 {{ include https://parsley.zesty.io/test/remoteinclude.parsley }}
