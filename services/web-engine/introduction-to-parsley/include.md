@@ -4,7 +4,7 @@ description: >-
   insert a snippet within the view you are in.
 ---
 
-# Include
+# Include Syntax
 
 \`\`[`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) lets you insert snippets and endpoints within the view you are in.
 
