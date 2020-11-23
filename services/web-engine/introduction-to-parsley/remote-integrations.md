@@ -16,7 +16,7 @@ description: Parsley can make web requests to remote data for server side render
 
 The above code and an example of pulling remote JSON data \(this can be from any source, zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options. 
 
-#### JSON Format Option 1 - Single Flat Object
+#### Remote JSON Format Option 1: Single Flat Object
 
 ```javascript
 {
@@ -24,7 +24,7 @@ The above code and an example of pulling remote JSON data \(this can be from any
 }
 ```
 
-#### JSON Format Option 2 - An Array of Flat Objects
+#### Remote JSON Format Option 2: An Array of Flat Objects
 
 ```javascript
 [
@@ -37,7 +37,7 @@ The above code and an example of pulling remote JSON data \(this can be from any
 
 When an error occurs \(timeout or bad JSON formatting\) the each look will return over a single flat error object. You can handle this by first looking for an error object field name `error` or by simply ignoring it by writing a single if statement that looks for a value from your object.
 
-**Method 1: Check for error object**
+**Handling Errors Method 1: Check for error object**
 
 ```markup
 {{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
@@ -57,7 +57,7 @@ When an error occurs \(timeout or bad JSON formatting\) the each look will retur
 {{end-each}}
 ```
 
-**Method 2: Check for a field on your custom object**
+**Handling Errors Method 2: Check for a field on your custom object**
 
 ```markup
 {{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
