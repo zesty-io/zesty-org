@@ -6,23 +6,23 @@ description: >-
 
 # Include Syntax
 
-\`\`[`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) lets you insert snippets and endpoints within the view you are in.
+\`\`[`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) allows you to insert snippets and endpoints within the [view](https://zesty.org/services/web-engine/view-templating#what-are-views) you are in.
 
 ## Globally Available Views, Snippets, and Endpoints
 
-When you create a snippet in the Editor, whether it be an HTML snippet, HTML Ajax, or JSON Ajax, these snippets are available globally. To insert this snippet, you'll need to use the "include" Parsley call and the name of your snippet.
+When you [create a snippet](https://zesty.org/guides/using-snippets#creating-snippets) in the [Web IDE](https://zesty.org/services/manager-ui/editor), whether it be an HTML snippet, HTML Ajax, or JSON Ajax, these snippets are available globally. To insert this snippet, you'll need to use the `{{ include }}` Parsley call and the name of your snippet.
 
 ```text
 {{ include my-snippet }}
 ```
 
-While the include prompt is commonly used for [snippets](https://zesty.org/glossary#snippet), users can also use the include prompt for including a view file within another view. For example, if you have a view with a Display Name of Contact Us and a Reference Name of contact\_us the include prompt would take the form of `{{ include contact_us }}`.
+While the `{{ include }}` prompt is commonly used for [snippets](https://zesty.org/glossary#snippet), users can also use the `{{ include }}` prompt for including view files within one another. For example, if you have a view with a [Reference Name](https://zesty.org/glossary#parsley-reference-name) of _contact\_us_ the `{{ include }}` prompt would take the form of `{{ include contact_us }}`.
 
 ```text
 {{ include reference_name }}
 ```
 
-If the piece of code that that's being included is an endpoint be sure to use the full name of the endpoint.
+If the piece of code that's being included is an endpoint be sure to use the full name of the endpoint.
 
 ```text
 {{ include  /my/file.html }}
