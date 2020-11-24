@@ -22,11 +22,11 @@ The steps below will cover how to use the Media sections Title field or a text f
 
 1. Navigate to the Media section.
 
-![Navigate to the Media section.](../.gitbook/assets/01ab-alt-text-navigate-to-media.png)
+![Navigate to the Media section.](../.gitbook/assets/manager-ui-media.png)
 
 2. Upload an image via drag n' drop or via the file manager. 
 
-![Upload an image.](../.gitbook/assets/02ab-alt-text-add-an-image.png)
+![Upload an image.](../.gitbook/assets/media-manager-ui-upload-img.png)
 
 3. The Title field will automatically be filled out with the image's file name. Edit the Title field and add your image alt text. 
 
@@ -38,7 +38,7 @@ The steps below will cover how to use the Media sections Title field or a text f
 
 5. Navigate to the Content section.
 
-![Navigate to the Content section.](../.gitbook/assets/05a-alt-text-navigate-to-content.png)
+![Navigate to the Content section.](../.gitbook/assets/media-man-ui-nav-to-content.png)
 
 6. Add your image to your content and save \(and publish as necessary\).
 
