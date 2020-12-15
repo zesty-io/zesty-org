@@ -20,13 +20,13 @@ The Content section is generally split into two sections. The left-hand column i
 
 This is the initial view when you first load the Content section and launch the content manager. The default dashboard shows an overview of key analytics from Google Analytics \(as long as it's been configured\), a list of recently edited entries, and highlights recent news from Zesty.io.
 
-![Zesty.io Content Manager Dashboard](../../../.gitbook/assets/content-management-dashboard-02.png)
+![Zesty.io Content Manager dashboard.](../../../.gitbook/assets/01-content.png)
 
 ### Table-listing View
 
 This is for multi-page and headless models to show a list of all the entries in the content set. Clicking into an item brings up the Entry Editing view and clicking the blue "+ \[Add New Item\]" button brings up the Create New Item/Table Entry view. You can search, filter,  and update sort order through the table.
 
-![Table View for multi-page and headless models](../../../.gitbook/assets/table-view.png)
+![Table View for multi-page and headless models.](../../../.gitbook/assets/02-content-table-listing-view.png)
 
 ### Create New Item/Table Entry View
 
@@ -36,11 +36,11 @@ This view is similar to the Item/Entry Editing view except all fields are all bl
 
 Once a user begins to enter content, the grayed out "Create New Item" button in the upper right-hand corner will turn green and allow the user to save and create their new item/entry.
 
-![New Table Entry View](../../../.gitbook/assets/new-table-item-entry-view.png)
+![New Table Entry View.](../../../.gitbook/assets/03-content-new-item-table-view.png)
 
 ### Item and Entry Editing View
 
 These views show field\(s\) with the current content value\(s\) in the main section and the publishing status bar, which includes publishing history and status, listed status, drafting history, and more, to the right.
 
-![Item and Entry Editing View](../../../.gitbook/assets/item-entry-editing-view.png)
+![Item and Entry Editing View.](../../../.gitbook/assets/04-content-item-edit-view.png)
 
