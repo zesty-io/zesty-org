@@ -12,13 +12,13 @@ In the Health Section users can manager redirects, robots.txt, and the site craw
 
 Access the Health section via the Manager UI's main navigation bar at the top of the screen. 
 
-![Access the Health section via the Manager UI&apos;s main navigation.](../../../.gitbook/assets/health-section-nav.png)
+![Access the Health section via the Manager UI&apos;s main navigation.](../../../.gitbook/assets/01-seo-navigate-to-seo%20%281%29.png)
 
 ### Manage Redirects
 
 The Health section home screen shows the redirect manager. Here we can create new redirects, view and delete existing redirects, and mass upload redirects through CSV or XML format.
 
-![Redirects are accessed via the Health section.](../../../.gitbook/assets/health-section-manage-redirects.png)
+![Redirects are accessed via the Health section.](../../../.gitbook/assets/02-seo-manage-redirects.png)
 
 When creating a new redirect, always start the old redirect with a forward slash, `/`, and include the entire path after the domain. Redirects are case sensitive, so `/old-path/` and `/Old-Path/` would need to be separate entries.
 
@@ -33,6 +33,10 @@ To mass upload from XML, use the XML format required for sitemap.xml files provi
 
 ### robots.txt
 
+{% hint style="info" %}
+Robots.txt is now located in the [Settings section](https://zesty.org/services/manager-ui/settings).
+{% endhint %}
+
 This section is where you can input custom robots.txt statements to allow or disallow crawlers access to pages. The control for the site-wide settings for allowing or disallowing crawl access is in the Settings section of the Schema section.
 
 ![The robots.txt file is accessed via the Health section.](../../../.gitbook/assets/health-section-robots.png)
@@ -43,7 +47,5 @@ From here you can see the button labeled `Robots.txt`. Once clicked, the manager
 
 ### Site Crawler
 
-The Crawler \(formerly Spice Crawler\) will comb through the pages of the site and report irregular links, including 404 and 301 responses. Once the report is finished, you can click on any of the results to see the pages where the links were found.
-
-![The Site Crawler can be accessed via the Health section.](../../../.gitbook/assets/health-section-spice-crawler.png)
+As of 2020 The Site Crawler \(formerly Spice Crawler\) has been deprecated.  
 
