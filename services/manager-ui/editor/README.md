@@ -18,7 +18,7 @@ The Web IDE serves as the in-app editor of your instances code. Powered by the [
 
 Access the Web IDE by selecting Web IDE from the main navigation.
 
-![Select Web IDE from the main nav to access it.](../../../.gitbook/assets/web-ide-access.png)
+![Select Web IDE from the main nav to access it.](../../../.gitbook/assets/01-ide-navigate-to-ide.png)
 
 {% hint style="success" %}
 In addition to the Web IDE code can be authored locally using the [Atom IDE package](https://zesty.org/tools/atom-package).
@@ -47,7 +47,7 @@ In addition to the Web IDE code can be authored locally using the [Atom IDE pack
 
 For every [Schema](https://zesty.org/services/manager-ui/schema) model created there is an associated model view created with the same model reference name. These model views allow for author HTML documents. e.g. Markup, Inline style sheets and JavaScript. HTML Views are located at the top of the left-hand sidebar which is shown outlined in purple below.
 
-![HTML Views are are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/web-ide-html-views.png)
+![HTML Views are are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/02-ide-views.png)
 
 ### Templating With Parsley
 
@@ -63,13 +63,13 @@ Therefore you can build your schema and develop against it instantly which allow
 
 Zesty.io is equipped to compile LESS, SCSS, and CSS files for styling. There is no need to download any preprocessors. Simply add your code and the style sheets will integrate seamlessly. Learn more about style sheets [here](https://zesty.org/services/manager-ui/editor/stylesheets). Style sheets are located in the left-hand sidebar in a section called Site.CSS which is outlined in purple below.
 
-![Style sheets are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/web-ide-style-sheets.png)
+![Style sheets are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/03-ide-styles.png)
 
 ## JavaScript
 
 Similarly JavaScript files are ready to to be added and edited. These are rendered and linked in the head of the instance following the style sheets. Learn more about JavaScript [here](https://zesty.org/services/manager-ui/editor/javascript). JavaScript files are located in the left-hand sidebar in a section called Site.JS which is outlined in purple below.
 
-![JavaScript files are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/web-ide-javascript.png)
+![JavaScript files are located in the left-hand sidebar of the Web IDE.](../../../.gitbook/assets/04-ide-javascript.png)
 
 ## Snippets
 
