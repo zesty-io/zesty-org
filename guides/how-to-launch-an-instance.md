@@ -152,3 +152,19 @@ Since there are many places to purchase domains it's difficult to create all-inc
 {% endtab %}
 {% endtabs %}
 
+## Swapping out domains
+
+Two instances cannot have the same domain assigned to it. Before the domain is added to a new instance it will need to be removed from the old one. 
+
+### Removing a domain name
+
+1. From the Accounts settings drawer, click the red trashcan icon button to the right of the name. 
+
+![Use the trashcan button to remove a domain name.](../.gitbook/assets/screen-shot-2020-12-21-at-2.48.11-pm.png)
+
+2. A modal will pop up and confirm that you'd like to remove the domain. To confirm click the red **Remove** button. 
+
+![Click the red Remove button to remove the domain.](../.gitbook/assets/screen-shot-2020-12-21-at-3.01.21-pm.png)
+
+A success notification will appear in the lower left-hand corner of the screen if it's been successfully removed and you'll be able to add it to another instance.
+
