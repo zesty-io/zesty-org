@@ -166,5 +166,5 @@ Two instances cannot have the same domain assigned to it. Before the domain is a
 
 ![Click the red Remove button to remove the domain.](../.gitbook/assets/screen-shot-2020-12-21-at-3.01.21-pm.png)
 
-A success notification will appear in the lower left-hand corner of the screen if it's been successfully removed and you'll be able to add it to another instance.
+If it's been successfully removed a success notification will appear in the lower left-hand corner of the screen and you'll be able to add that domain to another instance.
 
