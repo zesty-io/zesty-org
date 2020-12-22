@@ -6,17 +6,21 @@ description: Zesty.io Supports multiple locales/languages for each content item
 
 When a Zesty.io Content Instance is created, it uses English as the default language. It is possible to add more languages to a Zesty.io Content Instance. Multi-lang content is premium feature of Zesty.io, reach out to your account manager to learn more.
 
-## Activating Multilang Content
+## Adding Multi-lang Content
 
 The API must be used to add additional locales/languages to a Content Instance.
 
+{% hint style="info" %}
+Note: adding a language makes that language's relative pages available in preview, to have a added language be accessible to the live production domain, you need to activate the language 
+{% endhint %}
+
 {% api-method method="post" host="https://8-XYZ-XYZXYZ.api.zesty.io" path="/v1/env/langs/" %}
 {% api-method-summary %}
-Language Creation
+Adding a Language
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Posting to the \`/env/langs/\` API endpoint will create a new language for all content items in a Zesty.io Content Instance
+Posting to the \`/env/langs/\` API endpoint will create a new language for all content items in a Zesty.io Content Instance. Rest Documentation: https://instances-api.zesty.org/\#082ef04e-b251-493f-92c1-062994292702
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -49,6 +53,42 @@ When a new language is created, Zesty.io's API will automate a process to duplic
 {% hint style="info" %}
 The default language can only be chosen at the creation of a content instance. Talk to a Zesty.io support tech for help doing this.
 {% endhint %}
+
+## How to Activate a language
+
+Languages are added "non-active" meaning they are not accessible via the published website. It is setup that way so developers can add a language and prepare all the content by updates and publishing without affecting the live website. Once a language is ready to go live, it must be activated. 
+
+{% api-method method="put" host="https://8-XYZ-XYZXYZ.api.zesty.io" path="/v1/env/langs/fr-FR?action=activate" %}
+{% api-method-summary %}
+Activating a Language
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Set a language to activate, which means the language's published pages become accessible to the live website. See REST docs here https://instances-api.zesty.org/\#a8e6496e-c430-4a75-9ab3-8479b74e479c
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## How Does Web Engine Handle Multi-lang/Multi-Locale Content
 
