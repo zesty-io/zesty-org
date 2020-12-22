@@ -8,7 +8,13 @@ description: Create redirects with relative paths to ensure that none of your pa
 
 Part of Zesty.io's Health section is a redirect manager. The redirect manager allows users to create and delete either 301 or 302 redirects, as well as to mass upload redirects without needing access to `.htaccess` files. All of your current redirects are visible upon navigating to your instance's Health section.
 
-![Access the health section from the Manager UI navigation bar.](../../../.gitbook/assets/health-section-nav%20%281%29.png)
+To navigate to the Health section select the Health/SEO icon in the main menu.
+
+![Access the health section from the Manager UI navigation bar.](../../../.gitbook/assets/01-seo-navigate-to-seo%20%282%29.png)
+
+The Health/SEO section will show all redirects if any have been created and allow you to upload a CSV of redirects. 
+
+![Redirects can be created and managed through this interface.](../../../.gitbook/assets/02-seo-manage-redirects%20%281%29.png)
 
 {% hint style="warning" %}
 _We resolve published pages prior to redirects to prevent a redirect from mistakenly  overtaking actual published pages._ Therefore be sure to unpublish items that you're making redirects for to ensure your redirects perform as expected.
@@ -20,15 +26,15 @@ Zesty.io allows for the creation of 301 or 302 redirects. Learn more about 301 r
 
 Create a 301 or 302 redirects by following these steps: 
 
-1. Add a specific link in the left-hand "From" column. Do not include the domain. 
+1. Add a specific link in the left-hand "From" column. Do not include the domain. For example: `/team-members` 
 
 2. Choose whether you want a 301 or 302 redirect by toggling the switch between the columns. 
 
-3. Select the link from the dropdown that you'd like it to redirect to in the right-hand "To" column. 
+3. Search for a link by typing the name of the page into the textbox. For example, if your page was called "About Us" then you'd stay by typing "about " and see what results are returned. Select the link that you'd like it to redirect **to** in the right-hand "To" column from the results. 
 
 4. Click the green "+ Redirect" button to create the redirect.
 
-![Example of a 301 redirect](../../../.gitbook/assets/redirect-example.png)
+![Create redirect interface.](../../../.gitbook/assets/seo-redirect-from-to.png)
 
 ## Mass Redirect
 
@@ -53,7 +59,7 @@ See the image below for an example of how your CSV should be formatted.
 
 Once your sheet is properly formatted click the gray "Import CSV/XML" button and import your sheet.
 
-![Redirect and CSV upload interface.](../../../.gitbook/assets/health-section-csv-upload.png)
+![Redirect and CSV upload interface.](../../../.gitbook/assets/redirects.png)
 
 ### XML Sitemap
 
