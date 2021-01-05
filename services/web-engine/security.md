@@ -12,3 +12,13 @@ Once a user is verified by \(via password or their user login session\), a uniqu
 
 Preview Lock Protection exists to protect your un-published changes and to prevent users from using the preview URL in production.
 
+#### Turning on Preview Lock Protection
+
+For Instances created before Jan 1, 2021, contact your account manager, as you will need a setting  added to your instance to toggle on Preview Lock.  Once you have that setting you may edit it in the manager-ui under `/settings/instance/security` from there you may toggle Preview Lock on or off.
+
+![Preview Lock On is a legacy setting for Instances created before Jan 1, 2021](../../.gitbook/assets/image%20%285%29.png)
+
+#### Setting a Preview Lock Protection Password
+
+If you wish for your preview to be accessed by non-authenticated Zesty users, you may set a preview lock password which prompts an unauthenticated user to enter a password. They may try 5 times before being locked out. 
+
