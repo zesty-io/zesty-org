@@ -61,6 +61,12 @@ Once your sheet is properly formatted click the gray "Import CSV/XML" button and
 
 ![Redirect and CSV upload interface.](../../../.gitbook/assets/redirects.png)
 
+
+
+{% hint style="info" %}
+When importing content into a date field use the format: MM/DD/YYYY or  MM/D/YY
+{% endhint %}
+
 ### XML Sitemap
 
 To mass upload from XML, use the XML format required for sitemap.xml files provided to search engines. This format only reads old paths and requires selecting the new path to redirect to using the interface.
