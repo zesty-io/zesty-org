@@ -690,19 +690,6 @@ This call will access the Meta Title for an item which is located under an [item
 {{ this.seo_meta_title }}
 ```
 
-## server\_var
-
-* REMOTE\_ADDR 
-* HTTP\_USER\_AGENT 
-* HTTP\_REFERER
-* HTTP\_HOST
-* REQUEST\_URI
-* REQUEST\_METHOD
-
-```text
-{{ server_var.HTTP_USER_AGENT  }}
-```
-
 ## setting
 
 The `settings` call returns data stored in the Instance Settings in the Config Tab.
