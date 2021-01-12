@@ -152,6 +152,7 @@
   * [Webhooks](apis/accounts-api/webhooks.md)
 * [Instances API](apis/instances-api.md)
 * [Instant API \(Read Only\)](apis/instant-content-api.md)
+* [GraphQL](apis/graphql.md)
 
 ## Tools & Resources <a id="tools"></a>
 
