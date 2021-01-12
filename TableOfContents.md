@@ -48,6 +48,7 @@
   * [Refreshing the Cache](guides/refreshing-the-cache.md)
   * [Reordering Child Items in a Parsley Auto-generated Navigation Bar](guides/reordering-child-items-in-a-parsley-auto-generated-navigation-bar.md)
   * [Setting up Google Analytics for GDPR](guides/setting-up-google-analytics-for-gdpr.md)
+  * [Setting up the x-default hreflang header](guides/setting-up-the-x-default-hreflang-header.md)
   * [Setting Up Two-factor Authentication](guides/how-to-set-up-two-factor-authentication.md)
   * [The Connection Between Schema, Content, and Code](guides/the-connection-between-schema-content-and-code.md)
   * [Using Snippets](guides/using-snippets.md)
