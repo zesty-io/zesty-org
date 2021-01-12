@@ -22,7 +22,7 @@ Once we open up the manager, we'll need to configure the content that we'll load
 
 Go to Config and create a Set of Content Entries. Call it `Coupons`
 
-![Creating the Set](../../../.gitbook/assets/setcreation.png)
+![Creating the Set](../../../.gitbook/assets/setcreation%20%281%29.png)
 
 Next, we'll add a few fields to load in, a Text Field called `name`, and a TextArea Field called `description`.
 
@@ -48,7 +48,7 @@ Open up Xcode and Create a New Xcode project \(if you don't see this option, ⌘
 
 For our purposes, we'll just create a Single View App \(but you can choose any option you want for your project\)
 
-![Creating a Single View App](../../../.gitbook/assets/singleviewapp%20%281%29.png)
+![Creating a Single View App](../../../.gitbook/assets/singleviewapp%20%281%29%20%281%29.png)
 
 Call it whatever you'd like, and for the Organization Identifier, Apple typically recommends using a reverse domain id, so if your domain is `example.com`, enter in `com.example`. This will make sure you have a proper Bundle ID created.
 
@@ -64,7 +64,7 @@ To do this, we'll need to create a `Podfile`
 
 Go to File -&gt; New -&gt; File...
 
-![Creating a new file](../../../.gitbook/assets/newfile%20%281%29.png)
+![Creating a new file](../../../.gitbook/assets/newfile%20%281%29%20%281%29.png)
 
 Choose Other -&gt; Empty
 
@@ -149,7 +149,7 @@ We'll start by creating the UI For our Project. Open up `Main.storyboard` from t
 
 After adding it, click on the table view, then the Constraints Inspector on the bottom, and set the following Constraints \(0 on all edges\)
 
-![Constraints](../../../.gitbook/assets/constraints%20%281%29.png)
+![Constraints](../../../.gitbook/assets/constraints%20%281%29%20%281%29.png)
 
 After this, hold the `control key` and drag from the table view to the view controller symbol \(2 times\). Select Data Source and Delegate.
 
@@ -157,7 +157,7 @@ After this, hold the `control key` and drag from the table view to the view cont
 
 Next, we'll need to link the tableview to our view controller. Click the Two Circles Icon on the top right,
 
-![Two Circles Icon](../../../.gitbook/assets/twocircles.png)
+![Two Circles Icon](../../../.gitbook/assets/twocircles%20%281%29.png)
 
 and control drag the tableview to create a new outlet. Call it `tableView`.
 
@@ -221,7 +221,7 @@ A few things to note:
 
 ![Where the zuid is](../../../.gitbook/assets/zuidloc%20%281%29.png)
 
-![Other location of the zuid](../../../.gitbook/assets/otherloc.png)
+![Other location of the zuid](../../../.gitbook/assets/otherloc%20%281%29.png)
 
 After filling in those details, run your project on the iOS Simulator \(⌘R\), and see the magic happen!
 

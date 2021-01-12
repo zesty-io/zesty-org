@@ -14,7 +14,7 @@ To navigate to the Health section select the Health/SEO icon in the main menu.
 
 The Health/SEO section will show all redirects if any have been created and allow you to upload a CSV of redirects. 
 
-![Redirects can be created and managed through this interface.](../../../.gitbook/assets/02-seo-manage-redirects%20%281%29.png)
+![Redirects can be created and managed through this interface.](../../../.gitbook/assets/02-seo-manage-redirects.png)
 
 {% hint style="warning" %}
 _We resolve published pages prior to redirects to prevent a redirect from mistakenly  overtaking actual published pages._ Therefore be sure to unpublish items that you're making redirects for to ensure your redirects perform as expected.

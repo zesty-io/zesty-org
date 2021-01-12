@@ -674,7 +674,7 @@ The `sectionlinks()` call looks at the current page and searches up to its top-l
 **Deprecated:** this functionality is only available to test in preview, it is not available for production websites because they are statically cached.
 {% endhint %}
 
-This call will access the Navigation Title for an item which is located under an [item's Meta information](https://zesty.org/services/manager-ui/content/meta-fields) in the Content section. 
+This call will access the Navigation Title for an item which is located under an [item's Meta information](https://zesty.org/services/manager-ui/content/meta-fields) in the Content section.
 
 The `sever_var` call provides access to some of the most common server variables holding information about headers, paths, and script location. Some available variables are:
 
@@ -805,13 +805,13 @@ The `trim_zeros()` call with take a number like 8.0000000 and just show 8. It wi
 
 ## truepath\(zuid\)
 
-The `truepath()` call will determine the web URL to access a content entry based on a [ZUID](https://zesty.org/glossary#zuid). Since one-to-one and internal page fields in Zesty.io store ZUIDs, `truepath()` is a quick way to access the direct url to that content entry without needing to do an each loop or filter call. 
+The `truepath()` call will determine the web URL to access a content entry based on a [ZUID](https://zesty.org/glossary#zuid). Since one-to-one and internal page fields in Zesty.io store ZUIDs, `truepath()` is a quick way to access the direct url to that content entry without needing to do an each loop or filter call.
 
 ```text
 {{ truepath({page.link_to_article}) }}
 ```
 
-`truepath()` can be used in [each loops](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#each) as well, for example `{{ truepath(this.zuid) }}` or `{{ this.zuid.truepath() }}` and you can assign it to a Parsley variable as well. 
+`truepath()` can be used in [each loops](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#each) as well, for example `{{ truepath(this.zuid) }}` or `{{ this.zuid.truepath() }}` and you can assign it to a Parsley variable as well.
 
 ```text
 {{each articles as art limit 5}}

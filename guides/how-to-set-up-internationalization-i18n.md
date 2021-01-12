@@ -1,3 +1,9 @@
+---
+description: >-
+  Multinational and multilingual websites can be configured to point all
+  visitors to a default page through this Setting.
+---
+
 # How to Set Up Internationalization \(i18n\)
 
 Internationalization \(i18n\) in Zesty is a way to help you manage your multi-language sites. Sites with an international audience can have the option to switch between different languages while using the same content structure with just a click of a button.

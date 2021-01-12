@@ -12,13 +12,13 @@ In the Health Section users can manager redirects, robots.txt, and the site craw
 
 Access the Health section via the Manager UI's main navigation bar at the top of the screen. 
 
-![Access the Health section via the Manager UI&apos;s main navigation.](../../../.gitbook/assets/01-seo-navigate-to-seo%20%281%29.png)
+![Access the Health section via the Manager UI&apos;s main navigation.](../../../.gitbook/assets/01-seo-navigate-to-seo%20%282%29%20%281%29.png)
 
 ### Manage Redirects
 
 The Health section home screen shows the redirect manager. Here we can create new redirects, view and delete existing redirects, and mass upload redirects through CSV or XML format.
 
-![Redirects are accessed via the Health section.](../../../.gitbook/assets/02-seo-manage-redirects.png)
+![Redirects are accessed via the Health section.](../../../.gitbook/assets/02-seo-manage-redirects%20%281%29.png)
 
 When creating a new redirect, always start the old redirect with a forward slash, `/`, and include the entire path after the domain. Redirects are case sensitive, so `/old-path/` and `/Old-Path/` would need to be separate entries.
 
