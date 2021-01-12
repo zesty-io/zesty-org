@@ -8,7 +8,7 @@ Internationalization \(i18n\) in Zesty is a way to help you manage your multi-la
 
 **How to set up Internationalization**
 
-From the config tab in the header, select ‘Languages’.
+From the config tab in the header, select ‘Languages’. 
 
 ![configlanguage](https://wyp1jm.media.zestyio.com/screen-shot-2016-04-27-at-11-50-27-am.png)
 
