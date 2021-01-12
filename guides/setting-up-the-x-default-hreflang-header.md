@@ -16,5 +16,15 @@ The purpose of this head tag is to designate the path that you want _all_ users 
 
 Before you setup this path you should have a language added to your instance and have it activated. Languages can be added and activated via [API](https://zesty.org/getting-started/i18n-multi-language).
 
+### Setting the x-default hreflang header
 
+1. Identify which path you'd like to use as you default page
+
+2. Navigate to the Settings section, and under Instance settings select i18n
+
+![Navigate to Instance Settings to modify the I18n setting.](../.gitbook/assets/set-multilang-header.png)
+
+3. Add the path you chose in step 1 and click save.
+
+![Add the path that you want to designate and click Save.](../.gitbook/assets/multilang-header-path.png)
 
