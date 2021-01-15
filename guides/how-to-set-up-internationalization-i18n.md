@@ -1,38 +1,60 @@
 ---
-description: Add languages and activate them with our API.
+description: >-
+  Setting up internationalization allows users to add multiple languages to
+  their instance.
 ---
 
 # How to Set Up Internationalization \(i18n\)
 
-Internationalization \(i18n\) in Zesty is a way to help you manage your multi-language sites. Sites with an international audience can have the option to switch between different languages while using the same content structure with just a click of a button.
+### Overview
 
-**How to set up Internationalization**
+Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of example.com/language-locale/my-content e.g., `example.com/es-mx/my-content`.
 
-From the config tab in the header, select ‘Languages’. 
+{% hint style="warning" %}
+Zesty.io's multi-lang will **not** translate the page for you. However, it will add the language and locale to the URL.
+{% endhint %}
 
-![configlanguage](https://wyp1jm.media.zestyio.com/screen-shot-2016-04-27-at-11-50-27-am.png)
+Once a language is added the template is duplicated. Although languages share a template they will have separate ZUIDs - in other words - duplicates do not share their ZUID with the original language. For example, the template for English will have the same template as Spanish, however, each one will have their own ZUID. 
 
-**Default Language**
+![Content is duplicated when languages are added.](../.gitbook/assets/01a-duplicated-content.png)
 
-The default language will be the language automatically selected when creating a new page. **Note:** ‘Content Structure’ listed inside of the config tab will only show for the default language.
+ And the item's path will be prepended with the language and locale except for the original language.
 
-**Other Languages**
+![Languages \(except original\) are prepended with language and locale.](../.gitbook/assets/02b-lang-locale-paths.png)
 
-_Set as Default_: Setting a language as default will change the default language to the selected one.
+### Before you begin 
 
-_Activate for Website Visitors_: While adding a language to your site lets you interact with the content of the page through Zesty, the page will not be publically visible until you activate it. To make your page publically visible, select ‘Activate for Website Visitors’.
+Adding languages to your instance requires using our [API](https://zesty.org/getting-started/i18n-multi-language) to both add _and_ activate languages. If you're not familiar with using APIs there are many resources online to support your learning, such as [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction).
 
-_Add a Language_: Select a language from the dropdown to store it in your language options. **Note:** Only certain users \(Admin and Developer\) will have access to add a language.
+### **Steps for implementing i18n**
 
-![configlanguage](https://wyp1jm.media.zestyio.com/i18n.gif)
+#### **Step 1: Adding languages**
 
-**How to create content in other languages**
+Follow our API documentation to \[add a language\]\(https://zesty.org/getting-started/i18n-multi-language\#adding-a-language\).
 
-Once internationalization is set up, a language selector dropdown will appear in each content page.
+{% hint style="info" %}
+Multiple languages **cannot** be added with a single **POST**. Every language that you add requires a separate POST. For example, if you wanted to add es-MX, es-ES, and es-UY - you'll need to three \(3\) separate **POST**s to add each language.
+{% endhint %}
 
-![otherlanguage](https://wyp1jm.media.zestyio.com/i18n_lang.gif)
+#### **Step 2: Activating languages**
 
-Select your new language option from the dropdown. Once selected, you will be able to edit content from the page specific to the chosen language.
+Follow our API documentation to \[activate a language\]\(https://zesty.org/getting-started/i18n-multi-language\#activating-a-language\).
 
-[Contact us](https://www.zesty.io/contact/) to add internationalization to your site.
+{% hint style="info" %}
+Multiple languages **cannot** be activated with a single PUT. Every language that you want to activate requires a separate PUT.
+{% endhint %}
+
+{% hint style="warning" %}
+Languages must be activated in order to be viewed on a live site.
+{% endhint %}
+
+### **Creating Content in Other Languages**
+
+Once internationalization is setup, a language selector dropdown will appear in each content item that allows you to select the language.
+
+![Select the content&apos;s language through this dropdown.](../.gitbook/assets/05-i18n-language-select-dropdown.png)
+
+Select the language/locale option from the dropdown. Once selected, you will be able to edit content for that item in the chosen language/locale. Each language/locale will have its own versions and ZUID.
+
+![Content editing views are duplicated on a per-language basis.](../.gitbook/assets/06-i18n-es-mx-editing-content.png)
 
