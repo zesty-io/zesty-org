@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of example.com/language-locale/my-content e.g., `example.com/es-mx/my-content`.
+Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English. Contact support@zesty.io if want to make an instance with a different default language.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of example.com/language-locale/my-content e.g., `example.com/es-mx/my-content`.
 
 {% hint style="warning" %}
 Zesty.io's multi-lang will **not** translate the page for you. However, it will add the language and locale to the URL.
