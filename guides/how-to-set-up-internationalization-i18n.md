@@ -40,14 +40,10 @@ Multiple languages **cannot** be added with a single **POST**. Every language th
 
 #### **Step 2: Activating languages**
 
-Follow our API documentation to [activate a language](https://zesty.org/getting-started/i18n-multi-language#activating-a-language).
+Follow our API documentation to [activate a language](https://zesty.org/getting-started/i18n-multi-language#activating-a-language). **Languages must be activated in order to be viewed on a live site.**
 
 {% hint style="info" %}
 Multiple languages **cannot** be activated with a single PUT. Every language that you want to activate requires a separate PUT.
-{% endhint %}
-
-{% hint style="warning" %}
-Languages must be activated in order to be viewed on a live site.
 {% endhint %}
 
 ### **Creating Content in Other Languages**
