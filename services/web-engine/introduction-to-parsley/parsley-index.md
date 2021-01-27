@@ -499,14 +499,14 @@ The `navigation()` call will access your Zesty.io Navigation Structure and outpu
 </ul>
 ```
 
-## number\_fomat\(number\)
+## number\_format\(number\)
 
 The `number_format()` call returns a number with the specified number of decimals as the argument. Blank will remove any decimals.
 
 ```text
 {{ $number = 3.14 }}
 
-{{ $number.number_fomat(1) }} 
+{{ $number.number_format(1) }} 
 
 // Returns: 
 3.1
