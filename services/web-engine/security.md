@@ -1,3 +1,7 @@
+---
+description: Preview Lock protects your preview URL from being freely accessed.
+---
+
 # Security
 
 ## Preview Lock Protection
@@ -10,7 +14,7 @@ _Accessibility to these settings may vary by your Zesty.io plan._
 **Any instance created on or after Jan 1, 2021 is automatically locked.** If your instance is older and you would like Preview Lock Protection, please reach out to support. 
 {% endhint %}
 
-Once a user is verified by \(via password or their user login session\), a unique device imprint cookie \[ZVerified\] is created and is used to quickly bypass the preview lock for every network request.
+Once a user is verified by \(via password or their user login session\), a unique device imprint cookie _ZVerified_ is created and is used to quickly bypass the preview lock for every network request.
 
 Preview Lock Protection exists to protect your un-published changes and to prevent users from using the preview URL in production.
 
