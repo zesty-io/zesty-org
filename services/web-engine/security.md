@@ -1,5 +1,5 @@
 ---
-description: Preview Lock protects your preview URL from being freely accessed.
+description: Preview Lock protects your preview URL from being freely accessed and misused.
 ---
 
 # Security
