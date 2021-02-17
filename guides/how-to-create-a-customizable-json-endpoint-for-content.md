@@ -11,6 +11,10 @@ Before jumping into the steps below we recommend installing a [JSON viewer exten
 3. Name your file. The name of this file will be used to reference your custom endpoint. For example if the file is named `/test-data` the endpoint is referenced at `https://www.example.com/test-data.json`The preview URL can also be used in place of your live domain. **Note:** _always consume the production URL when accessing endpoints. Preview.zesty.io URLs not only show unpublished data but also are not cached._
 4. Copy this code example below, and paste it into your new file 
 
+{% hint style="warning" %}
+Note: Don't forget to add the leading slash in your file name as the file name gets concatenated to your instance's url.
+{% endhint %}
+
 {% embed url="https://gist.github.com/ardeay/1b8a4ccffd5bf1b8035df23e3eccb460" %}
 
 5. Replace content references in the copied code above with actual [content models](https://zesty.org/services/manager-ui/schema/content-models) in your Zesty.io instance. You have full access to [Parsley](https://zesty.org/services/web-engine/introduction-to-parsley) code in this view. 
