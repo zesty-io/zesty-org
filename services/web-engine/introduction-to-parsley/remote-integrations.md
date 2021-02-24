@@ -14,7 +14,7 @@ description: Parsley can make web requests to remote data for server side render
 {{end-each}}
 ```
 
-The above code is an example of pulling remote JSON data \(this can be from any source, Zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options. 
+The above code is an example of pulling remote JSON data \(this can be from any source, Zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options.
 
 ### JSON Formatting Options
 
@@ -45,15 +45,15 @@ When an error occurs \(for example: a timeout or bad JSON formatting\) the each 
 {{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
 
     {{if {obj.error} }}
-    
+
     (** output an error message if desired **)
     <span style="color:red">{{obj.error}}</span>
-    
+
     {{else}}
-    
+
     (** put actual presentation here)
     <h1>{{obj.title}}</h1>
-    
+
     {{end-if}}
 
 {{end-each}}
@@ -65,11 +65,11 @@ When an error occurs \(for example: a timeout or bad JSON formatting\) the each 
 {{each api.json.get(https://www.zesty.io/-/gql/about.json) as obj}}
 
     {{if {obj.title} }}
-    
+
     <h1>{{obj.title}}</h1>
-    
+
     {{end-if}}
-    
+
 
 {{end-each}}
 ```
@@ -78,7 +78,7 @@ When an error occurs \(for example: a timeout or bad JSON formatting\) the each 
 **Timeout:** There is a 3 second timeout on all remote requests. If the request does not return in 3 seconds, and error will be thrown and nothing will be returned.
 {% endhint %}
 
-## Including a Remote File 
+## Including a Remote File
 
 You can also include a remote file for Parsley execution. This is useful for single-source templating or integrating pre-rendered javascript like React modules. Click ahead to the include documentation to learn how to _include_ a remote file into your Parsley execution.
 
@@ -119,7 +119,7 @@ This method allows you to run a string based search to your GroupBy API
 
 ### Accessing Nested Data
 
-GroupBy results are custom tailored per each customer implementation, because of that, zesty flattens the returned object so Parsley can access it like `{{result.visualVariants:0:productImage}}`the use of the semicolons is in place of `.` , so treat it as you were accessing a JSON \(javascript object notation\) object.  
+GroupBy results are custom tailored per each customer implementation, because of that, zesty flattens the returned object so Parsley can access it like `{{result.visualVariants:0:productImage}}`the use of the semicolons is in place of `.` , so treat it as you were accessing a JSON \(javascript object notation\) object.
 
 ### Working with JSON output
 
@@ -168,7 +168,7 @@ Parsley can be used to server side render product pages by accessing GroupBy. Th
 
 ## Accessing a Search with Refinements from GroupBy \(api.gbi.searchWithRefinements\)
 
-A very powerful feature of GroupBy is to make searches, but with relative refinements based on the product being browsed. 
+A very powerful feature of GroupBy is to make searches, but with relative refinements based on the product being browsed.
 
 ```markup
 <ul>
@@ -180,7 +180,7 @@ A very powerful feature of GroupBy is to make searches, but with relative refine
 </ul>
 ```
 
-This functionality can be used in conjunction with search or product navigation output to produce results that output similar to how Amazon.com generates. Parsley conveniently generates a string that can be passed to achieve these results.   
+This functionality can be used in conjunction with search or product navigation output to produce results that output similar to how Amazon.com generates. Parsley conveniently generates a string that can be passed to achieve these results.
 
 ```markup
 <!-- Custom Related Items Below the Product -->
@@ -190,14 +190,13 @@ This functionality can be used in conjunction with search or product navigation 
 <h2>Total Refinements: {{navitems._refinementCount}}</h2>
 <!-- this store a string for later access -->
 {{$refinements = {navitem._refinements} }}
-	<ul>
-	{{each api.gbi.searchWithRefinements(products, Storefront, ,{$refinements},10) as refined }}
-	<li>{{refined.title}}</li>
-	{{end-each}}
-	</ul>
+    <ul>
+    {{each api.gbi.searchWithRefinements(products, Storefront, ,{$refinements},10) as refined }}
+    <li>{{refined.title}}</li>
+    {{end-each}}
+    </ul>
 <hr>
 {{end-each}}
-
 ```
 
 **How the Refinements String Works**
@@ -206,5 +205,5 @@ Parsley needs strings passed to it, therefore a custom string output was made to
 
 `categories*1:Value:Jewelry Watches|categories*1:Value:Women|categories*1:Value:Bed Bath|categories*1:Value:Men|categories*1:Value:Fine China|categories*1:Value:Handbags Accessories|categories*1:Value:Plus Sizes|categories*1:Value:Dining Entertaining|categories*1:Value:Bath Rugs Bath Mats|categories*1:Value:Shower Curtains`
 
-It's a delimited string. Here is how it works if you need to generate your own string. `*` represents `.`, colons `:` act like CSV, `|` are the delimiter. 
+It's a delimited string. Here is how it works if you need to generate your own string. `*` represents `.`, colons `:` act like CSV, `|` are the delimiter.
 

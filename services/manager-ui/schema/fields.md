@@ -74,11 +74,12 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
     </tr>
     <tr>
       <td style="text-align:left">Media</td>
-      <td style="text-align:left">This creates a field for inserting an image from the Media Bin. The number
-        of images can be limited by using the &apos;limit&apos; parameter in your
+      <td style="text-align:left">This creates a field for inserting an asset from the Media Bin. The number
+        of assets can be limited by using the &apos;limit&apos; parameter in your
         image tag. Note that when calling the field in your view, you must use
         the <code>getImage()</code> Parsley call to access the file URL, if not the
-        file&apos;s CDN ID number will print out on the page.</td>
+        file&apos;s CDN ID number will print out on the page. The default number
+        of assets is 1, however this can be modified upon creation.</td>
       <td style="text-align:left"><code>&lt;images name=&quot;main_image&quot; name_friendly=&quot;Main Image&quot; limit=&quot;1&quot; /&gt;</code>
       </td>
     </tr>
