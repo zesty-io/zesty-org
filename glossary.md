@@ -102,7 +102,7 @@ The Live Preview is a separate window to view the preview version of your instan
 
 ## Loader
 
-The Loader is a snippet file included and required on every Zesty.io instance. The loader file is called within the body tag when a view is loaded. Within the loader you include any site wide HTML wraps, global elements \(like a header and footer\) and a `{{ current_view }}` call to call the page specific view
+The Loader is a special snippet file included in and required on every Zesty.io instance. The loader creates the body of the page and is loaded inside of a page's &lt;body&gt; tags. It's common to include global elements such as headers and footers in the loader file too. At minimum the loader _must_ have the Parsley call `{{ current_view }}` in order to view any content.
 
 ## Media Folders
 
