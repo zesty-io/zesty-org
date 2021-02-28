@@ -74,3 +74,11 @@ There are 2 ways to get to the Zesty.io login screen:
 
 If you've been invited to access an instance but you do not see an invitation once you login, ensure that the invite email and Zesty.io account email _are an exact match_. For example, you'll have issues accessing your invitation if your account has been created with a personal email address, and the invitation was sent to a professional email address.
 
+**Invitee doesn't have a Zesty.io account**
+
+Anyone can be invited to access an instance whether or not they have an existing Zesty.io account. However, only users who **do have an existing account** will be able to accept an invite. Before you try to accept an invite be sure that you have a Zesty.io account under the email that you've been invited with.
+
+**Unable to accept invite via email link**
+
+If you're unable to accept an invite via the link in the email you can login to your account and view invitations in the Accounts interface and accept them there. Invitations to instances show up in their own section above the instances that you already have access to.  
+
