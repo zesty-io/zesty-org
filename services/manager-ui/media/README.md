@@ -20,10 +20,22 @@ Media file information such as the name, file name, ZUID, and more is accessed b
 
 ### Groups
 
-Media can be organized into groups, groups can be nested, and media can be drag-and-dropped between groups. These groups are only visual representations used in the interface and do not affect the path of the media.  
+Media can be organized into groups, groups can be nested. These groups are only visual representations used in the interface and do not affect the path of the media.  
 To create a new group click the **+ New Group** button, which will cause a modal will pop up allowing you to name your group. Once you've named your group click the **Create Group** button in the modal and you're done.
 
 ![Media can be organized into groups.](../../../.gitbook/assets/02-media-groups.png)
+
+#### **Customizing collapsed/expanded Groups**
+
+When an instance has a large amount of assets it can be difficult to find the group that you're looking for; to help with this the Media section will remember which folders are collapsed/expanded so when you navigate away and back you can pick up where you left off.  
+
+#### Hiding Groups
+
+Hiding groups can further help a user navigate groups, especially with a large number of assets. To hide group, hover over its name and an eye icon will appear. Click the eye icon to hide the group. 
+
+![Groups can be hidden by clicking the eye icon.](../../../.gitbook/assets/media-hide-groups.png)
+
+Once groups have been hidden they can be viewed going to the Hidden Items section which is located at the bottom of the sidebar underneath all of the groups.
 
 ### EcoBins
 
