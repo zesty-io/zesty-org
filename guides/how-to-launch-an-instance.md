@@ -28,11 +28,11 @@ Start by locating the instance that you want to launch in the Accounts Manager i
 
 ![To begin launching your instance click the &quot;Publish Instance&quot; button.](../.gitbook/assets/screen-shot-2019-08-30-at-1.04.05-pm.png)
 
-After you click the "Publish Instance" button the instance settings will open and prompt you to set a domain name and configure your DNS settings.
+After you click the "Publish Instance" button the instance settings will open and prompt you to set a domain name and configure your DNS settings. 
 
 ![Instance Settings drawer prompts for sending your instance live.](../.gitbook/assets/screen-shot-2019-08-30-at-12.41.50-pm.png)
 
-Enter your custom domain name in the textbox and click Save.
+Enter your custom domain name in the textbox and click Save. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`. 
 
 ![Enter your custom domain name in the textbox and clicking Save.](../.gitbook/assets/screen-shot-2019-08-30-at-12.43.30-pm.png)
 
