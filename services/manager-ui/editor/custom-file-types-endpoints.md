@@ -65,3 +65,9 @@ Pages that use wildcard routing will not include Zesty automated head tags. Thes
 
 Snippets are _\(html\)_ Parsley accessible file meant to abstract common use of code, or for organizing file build. Examples: slider, footer, header. These can be used inside of each loops as well.
 
+## Troubleshooting
+
+Before you view the live endpoint always be sure to view the endpoint on preview. Viewing the endpoint on preview will ensure that you catch any Parsley errors.
+
+
+
