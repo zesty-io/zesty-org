@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English. Contact support@zesty.io if want to make an instance with a different default language.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of example.com/language-locale/my-content e.g., `example.com/es-mx/my-content`.
+Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English. Contact support@zesty.io if want to make an instance with a different default language.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of domain/language-locale/my-content e.g., `example.com/es-mx/my-content`.
 
 ![Example URL structure in internationalization.](../.gitbook/assets/i18n-domain-paths.png)
 
@@ -23,6 +23,11 @@ Once a language is added the template is duplicated. Although languages share a 
  And the item's path will be prepended with the language and locale _except for the original language_.
 
 ![Languages \(except original\) are prepended with language and locale.](../.gitbook/assets/02b-lang-locale-paths.png)
+
+{% hint style="danger" %}
+Deleting one multi-lang item will delete all of its siblings.   
+For example, if you have an item in en-US, es-MX, and fr-FR and delete the es-MX item, the en-US and fr-FR item will also be deleted.
+{% endhint %}
 
 ### Before you begin 
 
