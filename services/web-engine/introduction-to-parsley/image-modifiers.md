@@ -25,6 +25,8 @@ To access these images you'll need to loop through them with the following code:
 {{end-each}}
 ```
 
+In this example, `images` is the field's reference name.
+
 {% hint style="info" %}
  ****`media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model.   
   
@@ -32,6 +34,10 @@ Replace the`{this.images}`code with a reference to your model's specific field.
    
 The order of the images is determined by the order that they appear in in the content model. 
 {% endhint %}
+
+When wrapping this special each loop with an if-conditional be sure to use the media field's reference name to in the if-conditional. For example, if the reference name for your field is `images`  and you're checking for an empty field then your if-conditional will look like this: 
+
+`{{ if {this.images} != '' }}`
 
 ### .getImage\(width, height, type\)
 
