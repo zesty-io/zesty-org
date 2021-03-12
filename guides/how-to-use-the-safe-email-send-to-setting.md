@@ -40,8 +40,17 @@ If you're not comfortable using our API send a request via [Slack](http://chat.z
 
 Before trying to use this feature be sure that it is available on your instance. If it is not follow the above instructions on how to add it.
 
-1. Navigate to Settings and then Contact Form.
+1. Navigate to Settings and then Contact Form. 
+
+![](../.gitbook/assets/01-navigate-to-settings.png)
+
 2. Fill out the Safe Email Sent To List field with comma separated value\(s\).
+
+![](../.gitbook/assets/02-enter-emails.png)
+
 3. Save your changes.
-4. Refresh the cache with a publish or use the refresh cache button to ensure that the changes you've made have persisted.
+
+![](../.gitbook/assets/03-save.png)
+
+4. Refresh the cache by publishing a file or use the refresh cache button to ensure that the changes you've made have persisted.
 
