@@ -52,5 +52,5 @@ Before trying to use this feature be sure that it is available on your instance.
 
 ![](../.gitbook/assets/03-save.png)
 
-4. Refresh the cache by publishing a file or use the refresh cache button to ensure that the changes you've made have persisted.
+4. Refresh the cache by publishing a file or use the [refresh cache button](https://zesty.org/guides/refreshing-the-cache) to ensure that the changes you've made have persisted.
 
