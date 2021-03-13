@@ -12,9 +12,9 @@ In order to safe guard against email spoofing we've added a setting for forms th
 
 There are 3 different behaviors that can happen on form submission depending on whether or not the Safe Email field is filled out. 
 
-1. **The field is left blank:** on submission the form will be processed as if Safe Email setting is absent.
+1. **The field is left blank:** on submission the field is ignored.
 2. **The field is filled out** _**and matches**_ **the email override value:**  on submission Zesty.io will validate the email override value against the Safe Email field value\(s\) and will send an email.
-3. **The field is filled out and it** _**does not match**_ **the email override value:** submitting a form will validate the email override value against the Safe Email field value\(s\) and will not send an email.
+3. **The field is filled out and it** _**does not match**_ **the email override value:** on submission Zesty.io will validate the email override value against the Safe Email field value\(s\) and will not send an email.
 
 ### Adding the Safe Email Send To Setting
 
