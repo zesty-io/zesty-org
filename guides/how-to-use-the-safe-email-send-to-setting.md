@@ -1,5 +1,5 @@
 ---
-description: Safe guard against email spoofing with the Safe Email Send To setting.
+description: Safeguard against email spoofing with the Safe Email Send To setting.
 ---
 
 # How to Use the Safe Email Send To Setting
