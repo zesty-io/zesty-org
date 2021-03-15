@@ -6,7 +6,7 @@ description: Safeguard against email spoofing with the Safe Email Send To settin
 
 ### Overview
 
-In order to safeguard against email spoofing we've added a setting for forms that are using are an [email override](https://zesty.org/guides/how-to-create-a-lead-form#email-override-setting-a-specific-form-to-notify-a-different-email-than-the-one-in-settings) field. This field is activated by adding a list of emails in the form of comma separated values \(CSV\). When the field is activated the email override value will be validated against the CSV list; if the email override value does not match a value in the list the email will not be sent.
+In order to safeguard against email spoofing we've added a setting for forms that are using are an [email override](https://zesty.org/guides/how-to-create-a-lead-form#email-override-setting-a-specific-form-to-notify-a-different-email-than-the-one-in-settings) field. This field is activated by adding a list of emails in the form of comma separated values \(CSV\). When the field is activated the email override value will be validated against the CSV list; if the email override value does _not_ match a value in the list the email will not be sent.
 
 ### Behavior
 
