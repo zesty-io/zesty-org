@@ -6,7 +6,10 @@ description: Preview Lock protects your preview URL from being freely accessed a
 
 ## Preview Lock Protection
 
-The WebEngine preview URL is locked from public consumption; it will not render unless the user is logged in, and has access to that instance. Alternatively, a password can be provided if the [Settings](https://zesty.org/services/manager-ui/settings) with `category: security` and `key: preview_lock_password` is set, a user may enter the password to start a verified session.
+The WebEngine preview URL is locked from public consumption. As such it will only render if:
+
+1.  The user is logged in _and_ has access to that instance. 
+2. A valid password has been provided. This password is set by via the [Settings](https://zesty.org/services/manager-ui/settings)  under  `category: security` and `key: preview_lock_password` is set, a user may enter the password to start a verified session.
 
 {% hint style="info" %}
 **Any instance created on or after Jan 1, 2021 is automatically locked.** If your instance is older and you would like Preview Lock Protection, please reach out to support. 
