@@ -35,7 +35,7 @@ Replace the`{this.images}`code with a reference to your model's specific field.
 The order of the images is determined by the order that they appear in in the content model. 
 {% endhint %}
 
-When wrapping this special each loop with an if-conditional be sure to use the media field's reference name to in the if-conditional. For example, if the reference name for your field is `images`  and you're checking for an empty field then your if-conditional will look like this: 
+When wrapping this special each loop with an [if-conditional](https://zesty.org/services/web-engine/introduction-to-parsley/if-conditionals) be sure to use the media field's reference name to in the if-conditional. For example, if the reference name for your field is `images`  and you're checking for an empty field then your if-conditional will look like this: 
 
 `{{ if {this.images} != '' }}`
 
