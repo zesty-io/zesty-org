@@ -9,6 +9,7 @@
   * [Publishing All Content](getting-started/publishing-all-content.md)
   * [ZUIDs](getting-started/zuids.md)
 * [Guides](guides/README.md)
+  * [Adding a Favicon](guides/adding-a-favicon.md)
   * [Adding Image Alt Text](guides/adding-image-alt-text.md)
   * [Accepting an Invite to an Instance](guides/accepting-an-invite-to-an-instance.md)
   * [Accessing Basic API JSON Endpoints](guides/how-to-access-basic-api-json-endpoints.md)
