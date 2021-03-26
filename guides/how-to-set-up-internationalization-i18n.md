@@ -26,7 +26,7 @@ Once a language is added the template is duplicated. Although languages share a 
 
 {% hint style="danger" %}
 Deleting one multi-lang item will delete all of its siblings.   
-For example, if you have an item in en-US, es-MX, and fr-FR and delete the es-MX item, the en-US and fr-FR item will also be deleted.
+For example, if you have an item in en-US, es-MX, and fr-FR and you delete the es-MX item, its en-US and fr-FR siblings will also be deleted.
 {% endhint %}
 
 ### Before you begin 
