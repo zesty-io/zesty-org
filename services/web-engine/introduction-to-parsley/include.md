@@ -50,3 +50,19 @@ Get a full walk-through for how to do this with the **Using Snippets** guide tha
 {{ include https://parsley.zesty.io/test/remoteinclude.parsley }}
 ```
 
+### Using Dynamic Values in Includes
+
+Includes make use dynamic reference to globals, settings, query parameters, path parts, post values, and `this` content values. The scope is limited to just those values because include are processes before parsley starts its rendering process.
+
+* **Settings** are accessed like `{settings.general.site_protocol}`
+* **Content** item values are accessed like `{this.my_title}`
+* **Globals** are accessed like `{globals.site_name}`
+* **Query Params** are accessed like ****`{query_param.key}` or `{get_var.key}`
+* **Path Parts** accessed like ****`{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
+* **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
+
+```text
+{{ include https://parsley.zesty.io/testers/hello/?testMe={get_var.testParam}&testPathPart={path_part.0} }}
+{{ include {get_var.testParam} }}
+```
+
