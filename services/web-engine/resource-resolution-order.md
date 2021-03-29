@@ -23,8 +23,6 @@ When a request is served by WebEngine, it reads the url path and attempts to mat
 11. 301 redirects
 12. 404 Pages e.g. when no resources match the url pattern
 
-
-
 ### Base Directory Setting
 
 Zesty.io will default all automated assets to the root `/` directory unless there is a setting on the instance with category:`general` key:`base_directory` with a directory set as its value e.g. `/blog/`
