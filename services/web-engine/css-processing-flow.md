@@ -40,7 +40,11 @@ The command to compile SASS to CSS is \`sassc --stdin --sass --style compressed\
 
 Errors are returned for broken SASS at compile time.
 
-### **Special Files**
+### **Special Rules and Files**
+
+**Asset Directory Settings**
+
+A special setting with the values `category: general` `key:default_asset_base_directory` may be set to a base have your `site.css` and `main.js` files load from a specific directory like `/my/directory/site.js` this is useful for launching sub directory specific website instances.  
 
 #### **ie8.css**
 
