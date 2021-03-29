@@ -34,6 +34,8 @@ Zesty.io will default all automated assets to the root `/` directory unless ther
 * sitemap.xml
 * robots.txt
 * feed.xml
+* [Instant JSON API](../../apis/instant-content-api.md)
+* [GQL API](../../apis/graphql.md)
 
 Other files created in the code editor must be manually named to follow the path of your choice. Content items must also be parent to a content item with the base name of your choice. For example if you are using Zesty.io WebEngine for only the `/blog/` path of your website you need to setup a content item as a holder with the path `/blog/` as its URL, and also create a setting with category:`general` key:`base_directory`   with the value `/blog/`
 
