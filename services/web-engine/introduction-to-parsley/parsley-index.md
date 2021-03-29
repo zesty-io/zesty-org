@@ -572,6 +572,16 @@ I'm gonna f*x that last joke by tak*ng out all the words and add*ng new ones.
 - M*tch Hedberg
 ```
 
+## publish\_date
+
+`publish_date` returns an item's published date including a timestamp. _Note: This call does not work in each loops as a sort-by method._
+
+```text
+{{ page.publish_date }}
+
+// Returns: 2021-01-12 20:06:49 
+```
+
 ## random\(\)
 
 The `random()` call is used to reference a random content entry for a content model.
