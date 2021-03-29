@@ -572,16 +572,6 @@ I'm gonna f*x that last joke by tak*ng out all the words and add*ng new ones.
 - M*tch Hedberg
 ```
 
-## publish\_date
-
-`publish_date` returns an item's published date including a timestamp. _Note: This call does not work in each loops as a sort-by method._
-
-```text
-{{ page.publish_date }}
-
-// Returns: 2021-01-12 20:06:49 
-```
-
 ## random\(\)
 
 The `random()` call is used to reference a random content entry for a content model.
@@ -676,6 +666,14 @@ The `sectionlinks()` call looks at the current page and searches up to its top-l
       </ul>
     </li>
 </ul>
+```
+
+## seo\_meta\_description
+
+Use this call to access an item's meta description. 
+
+```text
+{{ this.seo_meta_description }}
 ```
 
 ## seo\_link\_title
