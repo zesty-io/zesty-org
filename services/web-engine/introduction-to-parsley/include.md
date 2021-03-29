@@ -54,6 +54,10 @@ Get a full walk-through for how to do this with the **Using Snippets** guide tha
 
 Includes make use dynamic reference to globals, settings, query parameters, path parts, post values, and `this` content values. The scope is limited to just those values because include are processes before parsley starts its rendering process.
 
+{% hint style="warning" %}
+**Note:** Includes are part of Parsley, but are processed before Parsley starts to render, therefore developers are limited to the scope of the values listed below.
+{% endhint %}
+
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
