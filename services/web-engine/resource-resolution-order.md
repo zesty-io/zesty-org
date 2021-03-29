@@ -4,7 +4,7 @@ description: >-
   redirects to 404s.
 ---
 
-# Resource Resolution Order
+# Resource Resolution
 
 When a request is served by WebEngine, it reads the url path and attempts to match the url path to a content item resources. URL are checked against resource in a specific order, and will resolve the resource first if a match is found. If two resources share a URL path, then the one that loads first will resolve and the other is ignored.
 
@@ -22,4 +22,20 @@ When a request is served by WebEngine, it reads the url path and attempts to mat
 10. Wild Card Views e.g. _/store/\*/cool-shirt/_
 11. 301 redirects
 12. 404 Pages e.g. when no resources match the url pattern
+
+
+
+### Base Directory Setting
+
+Zesty.io will default all automated assets to the root `/` directory unless there is a setting on the instance with category:`general` key:`base_directory` with a directory set as its value e.g. `/blog/`
+
+**Automated files this rule apply to:**
+
+* site.js
+* site.css
+* sitemap.xml
+* robots.txt
+* feed.xml
+
+Other files created in the code editor must be manually named to follow the path of your choice. Content items must also be parent to a content item with the base name of your choice. For example if you are using Zesty.io WebEngine for only the `/blog/` path of your website you need to setup a content item as a holder with the path `/blog/` as its URL, and also create a setting with category:`general` key:`base_directory`   with the value `/blog/`
 

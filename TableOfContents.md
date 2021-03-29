@@ -105,7 +105,7 @@
     * [Instance Styles](services/manager-ui/settings/less-variables.md)
     * [Instance Fonts](services/manager-ui/settings/fonts.md)
 * [Web Engine](services/web-engine/README.md)
-  * [Resource Resolution Order](services/web-engine/resource-resolution-order.md)
+  * [Resource Resolution](services/web-engine/resource-resolution-order.md)
   * [Forms and Form Webhooks](services/web-engine/forms-and-form-webhooks.md)
   * [CSS & JS Processing Flow](services/web-engine/css-processing-flow.md)
   * [Analytics](services/web-engine/analytics.md)
