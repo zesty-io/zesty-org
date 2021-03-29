@@ -27,7 +27,7 @@ When a request is served by WebEngine, it reads the url path and attempts to mat
 
 Zesty.io will default all automated assets to the root `/` directory unless there is a setting on the instance with category:`general` key:`base_directory` with a directory set as its value e.g. `/blog/`
 
-**Automated files this rule apply to:**
+**Automated files this rule applies to:**
 
 * site.js
 * site.css
