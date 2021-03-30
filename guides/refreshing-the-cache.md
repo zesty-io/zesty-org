@@ -12,6 +12,8 @@ Caching allows for data to be stored and quickly retrieved when requests are mad
 
 Learn more about caching [here](https://en.wikipedia.org/wiki/Cache_%28computing%29).
 
+## Refreshing Cached Items
+
 ### Steps to Refresh Cached Item\(s\)
 
 1. Locate the item that needs its cache refreshed and select it.
@@ -28,9 +30,17 @@ Learn more about caching [here](https://en.wikipedia.org/wiki/Cache_%28computing
 
 4. Hard-refresh the live site and view your changes. 
 
+## Refreshing the Instance Cache
 
+{% hint style="info" %}
+Only user roles with publishing privileges can access this feature.
+{% endhint %}
 
+1. From any section in the content manager access the main instance menu in the upper right-hand corner by clicking on it. Then from the dropdown click on the **Refresh Instance Cache** button.
 
+![Content dashboard with instance cache button.](../.gitbook/assets/screen-shot-2021-03-29-at-4.58.42-pm.png)
+
+**Note:** If you have a large number of pages it may take some time for all of the pages refresh.
 
 
 
