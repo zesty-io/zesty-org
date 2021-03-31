@@ -14,7 +14,7 @@ Learn more about caching [here](https://en.wikipedia.org/wiki/Cache_%28computing
 
 ## Refreshing Cached Items
 
-### Steps to Refresh Cached Item\(s\)
+### Steps to Refresh Cached Item\(s\) 
 
 1. Locate the item that needs its cache refreshed and select it.
 
