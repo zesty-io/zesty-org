@@ -2,9 +2,9 @@
 description: You may log into Zesty.io using Microsoft Single-On
 ---
 
-# Microsoft SSO
+# Microsoft Single Sign-On \(SSO\)
 
-You may log into Zesty.io using Microsoft Single-On, do this by clicking the Microsoft button which is located below the login form at [https://accounts.zesty.io/login](https://accounts.zesty.io/login)
+You may log in to Zesty.io and [create a new account](https://accounts.zesty.io/signup) using Microsoft SSO, do this by clicking the Microsoft button which is located below the login form at [https://accounts.zesty.io/login](https://accounts.zesty.io/login)
 
 ![The Microsoft SSO button is located below the user/password form located at https://accounts.zesty.io/login](../.gitbook/assets/image%20%281%29.png)
 
