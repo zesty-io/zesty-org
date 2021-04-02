@@ -21,6 +21,10 @@ We are going to go through each one, with a couple example output and how to cre
 
 Meta, Title, Script, and  Link tags may use dynamic reference to globals, settings, and content values. 
 
+{% hint style="warning" %}
+Even though values shown below use curly braces { } these are **not** Parsley references.
+{% endhint %}
+
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
