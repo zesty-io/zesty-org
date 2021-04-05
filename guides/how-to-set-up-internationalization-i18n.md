@@ -40,7 +40,7 @@ Adding languages to your instance requires using our [API](https://zesty.org/get
 Follow our API documentation to [add a language](https://zesty.org/getting-started/i18n-multi-language#adding-a-language).
 
 {% hint style="info" %}
-Multiple languages **cannot** be added with a single **POST**. Every language that you add requires a separate POST. For example, if you wanted to add es-MX, es-ES, and es-UY - you'll need to three \(3\) separate **POST**s to add each language.
+Multiple languages **cannot** be added with a single **POST**. Every language that you add requires a separate POST. For example, if you wanted to add es-MX, es-ES, and es-UY - you'll need to do three \(3\) separate **POST**s to add each language.
 {% endhint %}
 
 #### **Step 2: Activating languages**
