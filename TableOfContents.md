@@ -145,7 +145,8 @@
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
   * [Security](services/web-engine/security.md)
   * [Adaptive Rendering](services/web-engine/adaptive-rendering.md)
-* [Micro DAM \(Media Storage\)](services/media-storage-micro-dam.md)
+* [Micro DAM \(Media Storage\)](services/media-storage-micro-dam/README.md)
+  * [Micro DAM Domains](services/media-storage-micro-dam/micro-dam-domains.md)
 * [EcoSystems](services/ecosystems.md)
 
 ## APIs

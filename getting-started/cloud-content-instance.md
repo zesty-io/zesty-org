@@ -66,7 +66,7 @@ In legacy systems and even most modern systems, developers have to build databas
 
 A Micro DAM \(digital asset manager\) is an abstract file system that stores files in the Zesty.io cloud. Every Content Instance is provisioned with a Micro DAM. Any type of file may be uploaded to a Micro DAM, examples include Images \(PNG, JPG, GIF\), PDFs, Video \(MP4, OGG\), Fonts \(OTF, WOFF, TTF\), SVGs, YAML, Javascript, CSS, etc.
 
-{% page-ref page="../services/media-storage-micro-dam.md" %}
+{% page-ref page="../services/media-storage-micro-dam/" %}
 
 ### Web Engine
 
