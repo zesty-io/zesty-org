@@ -16,6 +16,8 @@ The /-/media/ routing may also be used to pass through any storage bucket url fr
 
 **Parsley:** If the domain being proxied is a zesty media url, WebEngine will look to replace that domain with the relative path `/-/media/` when the getImage\(\) parsley function is called called.
 
+**Hardcoded Media URLs:** Hard coded media URLs occur when developers directly paste the full media.zesty.io.com domain into their code. This often occurs in CSS files. WebEngine will scan the final rendered document for hard coded occurrences and actively replace them with the /-/media/... relative path.
+
 #### Understanding /-/media Caching
 
 Media served this way will be purged by regular publishes. Media gets cache keys: Instance ZUID, Legacy Site ID, domain, and an MD5\(Instance ZUID+Filepath\). You can mimic this key by concatenating the zuid and file path into a single string then running an md5 string conversion on it.
