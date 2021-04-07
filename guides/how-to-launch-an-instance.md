@@ -42,7 +42,7 @@ Enter your custom domain name in the textbox, select a branch, and click **+ Add
 **Hybrid OYD:** If you are setting up a domain with Hybrid Zesty.io, please follow this guide
 {% endhint %}
 
-Configure your domain's DNS settings by following the instructions in the settings drawer.
+Configure your domain's DNS settings by following the instructions in the settings drawer. 
 
 ![DNS instructions in the Instance Settings drawer.](../.gitbook/assets/zesty-dns-settings.png)
 
