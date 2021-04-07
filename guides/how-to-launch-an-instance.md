@@ -111,7 +111,7 @@ DNS changes can take time to propogate and for your ISP to pickup. They can also
 If necessary you can configure your HTTPS and WWW settings before launching your site.
 {% endhint %}
 
-Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings.
+Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings. 
 
 ![Settings section with HTTPS and WWW settings.](../.gitbook/assets/www-settings.png)
 
