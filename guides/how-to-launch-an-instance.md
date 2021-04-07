@@ -113,7 +113,7 @@ If necessary you can configure your HTTPS and WWW settings before launching your
 
 Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings.
 
-![Settings section with HTTPS and WWW settings.](../.gitbook/assets/settings-http-www.png)
+![Settings section with HTTPS and WWW settings.](../.gitbook/assets/www-settings.png)
 
 Above you can see these settings outlined in orange. The tooltips will help you navigate this area and give you information about each setting.
 
