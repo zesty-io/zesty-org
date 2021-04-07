@@ -32,9 +32,9 @@ After you click the "Publish Instance" button the instance settings will open an
 
 ![Instance Settings drawer prompts for sending your instance live.](../.gitbook/assets/accounts-setting-launch-instructions.png)
 
-Enter your custom domain name in the textbox and click Save. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`. 
+Enter your custom domain name in the textbox, select a branch, and click **+ Add Domain**. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`. 
 
-![Enter your custom domain name in the textbox and clicking Save.](../.gitbook/assets/screen-shot-2019-08-30-at-12.43.30-pm.png)
+![Enter your domain, select a branch, and click Add Domain.](../.gitbook/assets/add-domain-set-branch.png)
 
 ## 2. Configure you DNS
 
