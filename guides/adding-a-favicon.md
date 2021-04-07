@@ -8,7 +8,7 @@ description: >-
 
 ### Overview
 
-Favicons are typically 16x16 pixel icon that's shown in a browser's tabs and bookmark lists. They not only serve as branding, but they help users easily identify your site in bookmark lists and among multiple browser tabs.
+Favicons are typically 16x16 pixel icon that's shown in a browser's tabs and bookmark lists. They not only serve as branding, but they help users easily identify your site in bookmark lists and among multiple browser tabs. 
 
 ![Favicon in browser tab.](../.gitbook/assets/favicon-example.png)
 
