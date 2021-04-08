@@ -36,6 +36,8 @@ These value will be used to auto fill in Open Graph and Twitter Cards tags.
 <meta property="og:description" content="{seo_meta_description}">
 <meta property="og:url" content="[fully_qualified_url:automated]">
 <meta property="og:image" content="[default_image:automated]">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="{clippings:site_name}">
 ```
 
@@ -58,11 +60,14 @@ These value will be used to auto fill in Open Graph and Twitter Cards tags.
 <meta name="twitter:card" content="summary_large_image">
 <meta property="twitter:image:src" content="[default_image:automated]">
 <meta property="twitter:image:width" content="1200">
+<meta property="twitter:image:height" content="630">
 ```
 
 **How** `[default_image:automated]` **is Derived**
 
 Zesty.io will look for the first created content field that has a reference name that includes the string `image` or `img`. For example, a content field with the reference name `hero_image` would be a candidate. When there are multiple references with `image` or `img` in the name, Zesty.io will pick the first one created.
+
+Images auto resize \(cropped\) to work with a 1200 pixel width and a 630 pixel height per Facebook's recommendation [https://developers.facebook.com/docs/sharing/webmasters/images/](https://developers.facebook.com/docs/sharing/webmasters/images/).
 
 ### How to Override Open Graph and Twitter Card Tags
 
@@ -89,8 +94,6 @@ The same applies for the Open Graph description and Twitter Card description, wh
 #### OG/Twitter Images
 
 For Open Graph and Twitter Card images, it follows the same fallback logic and uses `og_image` and `tc_image` as the custom name. For images, if there is not `og_image` or `tc_image` tag, it will default to the first created content field with `image` or `img` in its reference name.
-
-Images auto resize to work with a 1200 pixel width.
 
 ```markup
 <meta name="og:image" content="{og_image|[default_image:automated]}">

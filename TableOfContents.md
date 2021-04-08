@@ -17,7 +17,7 @@
   * [Bottom Loading JavaScript](guides/bottom-loading-javascript.md)
   * [Building the Schema and Selecting Fields](guides/building-the-schema-and-selecting-fields.md)
   * [Content Entry, Drafts, and Publishing](guides/content-entry-drafts-and-publishing.md)
-  * [Controlling and use og:image](guides/how-to-control-and-use-og-image.md)
+  * [Controlling and use of og:image](guides/how-to-control-and-use-og-image.md)
   * [Creating a Customizable JSON Endpoint For Content](guides/how-to-create-a-customizable-json-endpoint-for-content.md)
   * [Creating a feed](guides/creating-a-feed.md)
   * [Creating a Lead Form](guides/how-to-create-a-lead-form.md)
