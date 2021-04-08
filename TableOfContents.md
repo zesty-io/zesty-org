@@ -125,6 +125,7 @@
     * [Zesty.io Google Webmasters Integration](services/web-engine/integrations/zesty.io-google-webmasters-integration.md)
   * [View Templating](services/web-engine/view-templating.md)
   * [Parsley](services/web-engine/introduction-to-parsley/README.md)
+    * [Parsley AutoLayout](services/web-engine/introduction-to-parsley/parsley-autolayout.md)
     * [Parsley Index](services/web-engine/introduction-to-parsley/parsley-index.md)
     * [Accessing Multi-language in Ajax files](services/web-engine/introduction-to-parsley/accessing-multi-language-in-ajax-files.md)
     * [Accessing Multi-language in Parsley](services/web-engine/introduction-to-parsley/accessing-multi-language-in-parsley.md)
