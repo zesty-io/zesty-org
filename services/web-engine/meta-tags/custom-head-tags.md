@@ -19,7 +19,7 @@ We are going to go through each one, with a couple example output and how to cre
 
 ## Dynamic Values in Head Tags
 
-Meta, Title, Script, and  Link tags may use dynamic reference to globals, settings, and content values. 
+Meta, Title, Script, and Link tags may use dynamic reference to globals, settings, and content values.
 
 {% hint style="warning" %}
 Even though values shown below use curly braces { } these are **not** Parsley references.
@@ -32,7 +32,7 @@ Even though values shown below use curly braces { } these are **not** Parsley re
 * **Path Parts** accessed like ****`{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
 * **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
-**Examples** 
+**Examples**
 
 ```markup
 <meta name="og:price" content="${this.price}">
