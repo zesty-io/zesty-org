@@ -18,7 +18,7 @@ There are 3 different behaviors that can happen on form submission depending on 
 
 ### Adding the Safe Email Send To Setting
 
-This setting can be added via our [API](https://instances-api.zesty.org/#56267a59-88a5-40b0-bd1c-a23de605a6e4) with the following JSON body:
+This setting can be added via our [API](https://instances-api.zesty.org/#d295e8c8-40a2-435c-85cd-23a043a7135f) with the following JSON body:
 
 ```text
 {
