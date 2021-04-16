@@ -38,7 +38,7 @@ Even though values shown below use curly braces { } these are **not** Parsley re
 <meta name="og:price" content="${this.price}">
 <link rel="stylesheet" href="{settings.developer.bulma_cdn_link}">
 <meta name="custom_verify" href="{settings.yahoo.verify_hash}">
-<meta name="foobar" href="{globals.site_name}: {this._meta_description}">
+<meta name="foobar" href="{globals.site_name}: {this.seo_meta_description}">
 ```
 
 ### Custom Head Tag Loading
