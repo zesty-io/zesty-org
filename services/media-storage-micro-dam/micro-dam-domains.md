@@ -2,11 +2,11 @@
 
 ## Default Micro DAM Domain
 
-By default, all micro-dam instances are assigned a random hash on a zestyio.com domain e.g. `xyz.media.zestyio.com` This domain is what server all media you upload to that instance. This URL serves as a direct pathway to an obfuscated storage bucket. All assets served on this domain are cached indefinitely for speed. 
+By default, all micro-dam instances are assigned a random hash on a zestyio.com domain e.g. `xyz.media.zestyio.com` This domain is what serves all media you upload to an instance. This URL serves as a direct pathway to an obfuscated storage bucket. All assets served on this domain are cached indefinitely for speed. 
 
 ### Custom Vanity Domains for Micro DAMs
 
-Enterprise level customers have the option to create a MicroDAM with a custom vanity domain. To create a Micro DAM with a vanity URL, please reach-out out to your account manager. Note, only new MicroDAM can be assigned a Vanity domain. Vanity domains cannot be retroactively assigned to preexisting buckets that already have media that is consumed over the web. 
+Enterprise-level customers have the option to create a MicroDAM with a custom vanity domain. To create a Micro DAM with a vanity URL please reach out to your account manager. Note, only a new MicroDAM can be assigned a vanity domain. Vanity domains cannot be retroactively assigned to preexisting buckets that already have media that is consumed over the web. 
 
 ### On Domain URL path for Micro DAMs _\(/-/media\)_
 
