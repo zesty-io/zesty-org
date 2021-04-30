@@ -2,7 +2,7 @@
 description: Automagical HTML output of headless content.
 ---
 
-# AutoLayout
+# Parsley AutoLayout
 
 Parsley AutoLayout \(PAL\) is a function that generates automatic HTML by looking at the content item's fields. It gets the sort order and each field's type and outputs HTML. PAL can be use on Parsley calls that reference a single content items \(this, loop variables, and data calls\). 
 
