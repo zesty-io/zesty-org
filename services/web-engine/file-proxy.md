@@ -1,8 +1,8 @@
-# Adaptive Rendering
+# File Proxy
 
 ### Integrating external files and sources with Zesty
 
-Adaptive Rendering allows you to implement your external cloud bucket with Zesty. You can seamlessly integrate your external files via Zesty's proxy setting which will direct WebEngine to initially search through your cloud bucket and finally search through Zesty's resources to match the path part of a linked source. All external files are served via proxy so you will see a clean url structure with all your bucket files.
+File Proxying allows you to implement your external cloud bucket with Zesty. You can seamlessly integrate your external files via Zesty's proxy setting which will direct WebEngine to initially search through your cloud bucket and finally search through Zesty's resources to match the path part of a linked source. All external files are served via proxy so you will see a clean url structure with all your bucket files.
 
 ### Integrating an external cloud bucket with a Zesty Instance
 
