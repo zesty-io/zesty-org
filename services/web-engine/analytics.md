@@ -23,6 +23,14 @@ To setup Google Analytics for your cloud content instance, you will need to firs
 * Make sure that the "Use Google Universal Code" toggle is on \(green\)
 * Click "Save"
 
+{% hint style="warning" %}
+Analytics are no longer accessible via the content manager homescreen. 
+
+Analytics are now located at `/analytics`.   
+  
+Only users with Owner, Admin, and Developer roles can setup Google Analytics.
+{% endhint %}
+
 {% embed url="https://www.youtube.com/watch?v=dTx9RjT19\_g" %}
 
 _Watch this video to see how to authenticate Google Analytics in Zesty.io._
