@@ -18,9 +18,9 @@ The Content section is generally split into two sections. The left-hand column i
 
 ### Dashboard
 
-This is the initial view when you first load the Content section and launch the content manager. The default dashboard shows an overview of key analytics from Google Analytics \(as long as it's been configured\), a list of recently edited entries, and highlights recent news from Zesty.io.
+This is the initial view when you first load the Content section and launch the content manager. The default dashboard gives you jumplinks to popular sections and their docs, as well as customized statistics and to links to files you're working on. 
 
-![Content Manager dashboard.](../../../.gitbook/assets/01-content.png)
+![Content section dashboard.](../../../.gitbook/assets/content-homescreen.png)
 
 ### Table-listing View
 
