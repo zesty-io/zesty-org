@@ -2,13 +2,15 @@
 
 ## How Do Redirects work on Zesty.io Web Engine?
 
-Redirects are created and managed inside the Instance Manager.  In the Manage Redirects section in the Health tab, you can add and maintain 301 and 302 redirects.
+Redirects are created and managed inside the Content Manager. In the Manager's  SEO section, you can add and maintain 301 and 302 redirects.
 
-You might want to use a redirect if, for example, you have changed the URL of a page or resource and wish user's who visit the old URL to be directed to the new one by their browser.
+Rediects are especially helpful when you've changed the URL of a page or resource. When URLs are changed users might still have links to those old URLs. When accessed those old URLs will 404 if a redirect is not in place. When a redirect has been created the browser will automatically send the user to the new page \(instead of terminating at the 404 page\).
 
-You may add a new redirect in the Content Managers in the `/seo` section. By entering the URL path that you want the redirect to take visitors away from, select 301 if it is a permanent move or 302 if temporary, then select the new target URL path that you wish the user to be taken to.
+New redirects are created in the Manager's `/seo` section. First in the From field enter the relative path that you want to redirect from, then select the redirect type: 301 \(permanent move\) or 302 \(temporary move\), lastly select the target or To URL from the dropdown. Once your fields are filled out click the green Create Redirect button.
 
-### Types of Redirects
+![Interface for creating rediects.](../../.gitbook/assets/redirect-form.png)
+
+### Redirect Formats
 
 | Type | Example: Old Path =&gt; New Path |
 | :--- | :--- |
@@ -44,7 +46,7 @@ Any request to `/old/path/` will redirect to `/my/new/path/?a=1&b=2`
 
 ### Path Redirects with Wildcards
 
-A path redirect with wildcards is a statically typed path with asterisk which can catch any path and pass it forward into a new dynamically built path. For Example:
+A path redirect with wildcards is a statically typed path with an asterisk\(s\) which can catch any path and pass it forward into a new dynamically built path. For Example:
 
 {% code title="redirect:path" %}
 ```elixir
@@ -58,7 +60,7 @@ A path redirect with wildcards is a statically typed path with asterisk which ca
 ```
 {% endcode %}
 
-**Example Results Table**
+**Example Redirect Results Table**
 
 | Incoming Request Path | Redirect Path |
 | :--- | :--- |
