@@ -91,6 +91,7 @@
     * [Custom File Types / Endpoints](services/manager-ui/editor/custom-file-types-endpoints.md)
     * [Importing Code and Styles](services/manager-ui/editor/importing-code-and-styles.md)
   * [Leads](services/manager-ui/leads.md)
+  * [Analytics](services/manager-ui/analytics.md)
   * [Schema](services/manager-ui/schema/README.md)
     * [Building a Content Structure](services/manager-ui/schema/building-a-content-structure.md)
     * [Content Models](services/manager-ui/schema/content-models.md)
