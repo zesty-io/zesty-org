@@ -9,7 +9,7 @@ description: >-
 
 ### Overview
 
-Zesty.io has approximately 20 field datatype options. Each option is named and describe below. As you go through adding fields to your Content Models, you'll give each field a label and reference name. The label is what you'll see in the Content section as you're making your entries. The reference is what you'll use to call that field using Parsley for templating your views, snippets, and/or feeds in the Editor section.
+Zesty.io has approximately 20 field datatype options. Each option is named and describe below. As you go through adding fields to your Content Models, you'll give each field a label and reference name. The label is what you'll see in the Content section as you're making your entries. The reference is what you'll use to call that field using Parsley for templating your views, snippets, and/or feeds in the Editor section. 
 
 ### Table of Field Types
 
@@ -58,20 +58,21 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
         </td>
     </tr>
     <tr>
-      <td style="text-align:left">Dropdown</td>
-      <td style="text-align:left">This field creates a dropdown with different options made up of key:value
-        pairs.</td>
-      <td style="text-align:left"><code>&lt;dropdown name=&quot;default_fields&quot; name_friendly=&quot;Default Form Fields&quot; options=&quot;no_form:No Form;basic_form:Patient Basic Form;adv_form:Patient Advanced Form;&quot; /&gt;</code>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left">DateTime</td>
       <td style="text-align:left">This is a field where you can select a date from a pop-up calendar. After
         you&apos;ve selected a date from the calendar, a time pop-up allows you
         to select a time from a 24-hour digital clock. The DateTime is string formatted
         YYYY-MM-DD HH-MM-SS. To apply date formatting use &quot;.date()&quot; call
         and include PHP data format characters.</td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">&lt;datetime name=&quot;datetimefield&quot;<em> </em>name_friendly=&quot;Datetime
+        Field &quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">Dropdown</td>
+      <td style="text-align:left">This field creates a dropdown with different options made up of key:value
+        pairs.</td>
+      <td style="text-align:left"><code>&lt;dropdown name=&quot;default_fields&quot; name_friendly=&quot;Default Form Fields&quot; options=&quot;no_form:No Form;basic_form:Patient Basic Form;adv_form:Patient Advanced Form;&quot; /&gt;</code>
+      </td>
     </tr>
     <tr>
       <td style="text-align:left">External URL</td>
