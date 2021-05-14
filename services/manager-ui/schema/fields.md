@@ -65,6 +65,15 @@ Zesty.io has approximately 20 field datatype options. Each option is named and d
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">DateTime</td>
+      <td style="text-align:left">This is a field where you can select a date from a pop-up calendar. After
+        you&apos;ve selected a date from the calendar, a time pop-up allows you
+        to select a time from a 24-hour digital clock. The DateTime is string formatted
+        YYYY-MM-DD HH-MM-SS. To apply date formatting use &quot;.date()&quot; call
+        and include PHP data format characters.</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
       <td style="text-align:left">External URL</td>
       <td style="text-align:left">This creates a text field for a link which requires the form of a URL,
         e.g., http:// or https://. It has a maximum character limit of 150 characters.</td>
