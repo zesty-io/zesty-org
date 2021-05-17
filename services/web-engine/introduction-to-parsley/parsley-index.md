@@ -707,6 +707,20 @@ The `settings` call returns data stored in the Instance Settings in the Config T
 // <a href="https://www.linkedin.com/company/zesty-io/">Zesty on Linkedin</a>
 ```
 
+## toJSON\(\)
+
+A function outputs a JSON string that can be use in inline javascript. The function can be called off this, data calls, or loop variables. 
+
+```text
+{{this.toJSON}} 
+
+{{model.first().toJSON()}}
+
+{{each model as item}}
+    {{item.toJSON()}}
+{{end-each}}
+```
+
 ## instance
 
 The `instance` call returns data specific to the instance, such as the CDN URL and the domain or globally relevant data, such as the current data-time or the current language.
