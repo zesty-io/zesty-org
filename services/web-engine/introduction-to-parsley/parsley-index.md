@@ -520,6 +520,14 @@ The `obfuscate()` call returns obscure text to web crawlers, like email or phone
 <a href="mailto:{{setting.contact-form.sending_email.obfuscate()}}">{{setting.contact-form.sending_email.obfuscate()}}</a>
 ```
 
+## xssProtect\(\)
+
+The `xssProtect()` call encode, decodes, strips html and turns characters into entities.
+
+```text
+{{get_var.search.xssProtect()}}
+```
+
 ## page
 
 The `page` call represents the content entry for the current page. It provides access to the data associated with the page. Any field in the Content Model can be accessed using this method when on the associated page.
