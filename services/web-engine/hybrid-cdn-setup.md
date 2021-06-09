@@ -30,6 +30,10 @@ Use your `mydomain-com.webengine.origin.zesty.zone`equivalent as the origin or h
 
 **WWW Redirect:** If you are servicing an apex domain like https://mydomain.com as http://www.mydomain.com, you will need to set a rule to 301 redirect with the query string \(for example https://mydomain.com/?utm\_campaign=12345\) to the www version of the domain or the non-www version, whatever your preference is. Whatever version of the domain you chose, you can set the www behavior in manager ui &gt; settings &gt; general. This will ensure your canonical tags match your desired domain. 
 
+### Hybrid CDN data flow visualization
+
+![](../../.gitbook/assets/screen-shot-2021-06-09-at-9.07.31-pm.png)
+
 ## 4.\) Configure Purging
 
 For Zesty.io to custom purge your CDN service, you will need to provide the Zesty.io EcoSystem which your content instance is associated with a purge url. That purge URL need to accept a POST request with a JSON raw body payload that looks like:
@@ -74,6 +78,10 @@ Hybrid is an enterprise offering from Zesty.io, please reach out to support for 
 When you have a purge function deployed and have tested that you can post a payload to it to trigger a cache purge, you will then want to update Zesty.io to know about the URL and the x-auth key. Rest API documentation can be found here [https://accounts-api.zesty.org/?version=latest\#d1864580-86f7-4ff4-afdd-edea5563992a](https://accounts-api.zesty.org/?version=latest#d1864580-86f7-4ff4-afdd-edea5563992a)
 
 Once added, code and content updates will automatically run your purge request.
+
+{% hint style="info" %}
+Note that clicking the Clear Cache buttons in the Manager UI will ultimately trigger a cache purge in your configured CDN
+{% endhint %}
 
 {% api-method method="post" host="https://accounts.api.zesty.io/v1/ecosystems/35-xyz-xyzxyz?action=updateCDNDefaults" path="" %}
 {% api-method-summary %}
