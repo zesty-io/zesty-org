@@ -110,7 +110,7 @@ The `{{ current_view }}` call is a unique Zesty.io statement that will load the 
 
 ## date\(format\)
 
-Uses the [php date](http://php.net/manual/en/function.date.php) format to create the date string shown to the user.
+Uses the [php date](https://www.php.net/manual/en/datetime.format.php) format to create the date string shown to the user.
 
 ```text
 <em>{{ page.published_date.date(l, F jS, Y \a\t g:ia) }}</em> 
