@@ -110,12 +110,14 @@ webp is the only option, see notes above
 {% endapi-method-response-example-description %}
 
 ```
-
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg&auto=webp
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg&amp;auto=webp](../../.gitbook/assets/image%20%288%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/parsley-logo-brackets.png" path="?bg-color=006699" %}
 {% api-method-summary %}
@@ -149,9 +151,9 @@ https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699](../../.gitbook/assets/image%20%286%29.png)
+![https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699](../../.gitbook/assets/image%20%287%29.png)
 
-{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=3" %}
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=20" %}
 {% api-method-summary %}
 Gaussian Blur:   ?blur
 {% endapi-method-summary %}
@@ -176,12 +178,14 @@ Gaussian blur your image.
 {% endapi-method-response-example-description %}
 
 ```
-
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?blur=20
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?blur=20](../../.gitbook/assets/image%20%286%29.png)
 
 #### About Zesty.io On-The-Fly Media Technology
 
