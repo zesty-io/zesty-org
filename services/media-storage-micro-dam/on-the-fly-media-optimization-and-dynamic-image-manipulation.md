@@ -28,6 +28,7 @@ All image may be manipulated on-the-fly by passing query parameter to the end of
 | **none** | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](%20https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg) |
 | **?width=** | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300) |
 | **?orient=** | \*\*\*\*[https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v) |
+| **?bg-color=** | [https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699](https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699) |
 
 ![Original Image Source: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](../../.gitbook/assets/arcade-space-ship-example.jpg)
 
@@ -35,8 +36,8 @@ We recognize the following parameters in the query string of the image request:
 
 | Parameter | Description |
 | :--- | :--- |
-| \`\`[`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
-| [`bg-color`](https://developer.fastly.com/reference/io/bg-color) | Set the background color of an image. |
+| [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
+| [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
 | [`blur`](https://developer.fastly.com/reference/io/blur) | Set the blurriness of the output image. |
 | [`brightness`](https://developer.fastly.com/reference/io/brightness) | Set the brightness of the output image. |
 | [`canvas`](https://developer.fastly.com/reference/io/canvas) | Increase the size of the canvas around an image. |
@@ -62,17 +63,17 @@ We recognize the following parameters in the query string of the image request:
 
 Manipulation query parameters can be specified in any order, but they are processed in this order:
 
-1. `precrop`
-2. `trim`
-3. `crop`
-4. `orient`
-5. `width` `height` `dpr` `fit` `resize-filter` `disable` `enable`
-6. `pad` `canvas` `bg-color`
-7. `brightness` `contrast` `saturation`
-8. `sharpen`
-9. `blur`
-10. `x-fastly-imageopto-overlay`
-11. `format` `auto` `optimize` `quality` `profile` `level`
+| Order | Query Call |
+| :--- | :--- |
+| 1 | `trim` |
+| 2 | `crop` |
+| 3 | `orient` |
+| 4 | `width`     `height`    `dpr`     `fit`     `resize-filter`      |
+| 5 | `pad`     `canvas`     `bg-color` |
+| 6 | `brightness`     `contrast`     `saturation` |
+| 7 | `sharpen` |
+| 8 | `blur` |
+| 9 | `format`    `auto`    `optimize`    `quality`    `profile`    `level` |
 
 ## Zesty.io OTF DAM: On-The-Fly Image Options API
 
@@ -80,7 +81,7 @@ Manipulation query parameters can be specified in any order, but they are proces
 
 Enables optimizations based on [content negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation). Although the WebP format produces images at a higher compression ratio with a lower loss of quality, it is not supported in all browsers.
 
-{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?auto=webp" path="" %}
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?auto=webp" %}
 {% api-method-summary %}
 Auto Optimize: ?auto
 {% endapi-method-summary %}
@@ -95,11 +96,11 @@ Enables optimizations based on content negotiation. Although the WebP format pro
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="auto" type="string" required=false %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="auto" type="string" %}
 webp is the only option, see notes above
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -115,4 +116,40 @@ webp is the only option, see notes above
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/parsley-logo-brackets.png" path="?bg-color=006699" %}
+{% api-method-summary %}
+Background Color: ?bg-color
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Change the background color of a transparent image.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="bg-color" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### About Zesty.io On-The-Fly Technology
+
+Zesty.io leverages Fastly's Image Optimization technology layered on top of the Zesty.io DAM Media Manager. Features documented here relate to what is supported through Zesty.io WebEngine and Media services.
 
