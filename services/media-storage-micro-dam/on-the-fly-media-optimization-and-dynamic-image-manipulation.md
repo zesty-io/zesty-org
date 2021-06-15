@@ -123,14 +123,14 @@ Background Color:   ?bg-color
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Change the background color of a transparent image.
+Change the background color of a transparent image. Tip: you can make background transparent using a decimal value on the end like `0,80,200,0.5`
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="bg-color" type="string" required=false %}
-
+Hex RBG: `005989` Decimal: `125,80,200,0.5`
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -142,12 +142,14 @@ Change the background color of a transparent image.
 {% endapi-method-response-example-description %}
 
 ```
-
+https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699](../../.gitbook/assets/image%20%286%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=3" %}
 {% api-method-summary %}
