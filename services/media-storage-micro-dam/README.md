@@ -1,14 +1,14 @@
 ---
 description: >-
-  A Micro DAM (digital asset manager) is an abstract file system that stores
-  files in the Zesty.io cloud.
+  A DAM (digital asset manager) is an abstract file system that stores and
+  optimizes files in the Zesty.io cloud.
 ---
 
-# Micro DAM \(Media Storage\)
+# DAM \(Media Management\)
 
-## What is a Micro DAM?
+## What is a DAM?
 
-A Micro DAM \(digital asset manager\) is a Zesty.io service for managing files that are served publicly. Designed as an abstract file system, the Micro DAM allows file organization that mimics an operating system directory structure. We brand it a Micro DAM because it does not have the same features as a fully featured enterprise DAM. For example, it does not handle digital right management \(DRM\), and assumes that every file added to it will be accessed publicly.
+A DAM \(digital asset manager\) is a Zesty.io service for managing files that are served publicly. Designed as an abstract file system, the DAM allows file organization that mimics an operating system directory structure. Zesty.io's DAM differs from dedicated enterprise DAMs in two ways: it does not handle digital right management \(DRM\), and assumes that every file added to it will be accessed publicly.
 
 ## What type of Files can be Stored on the Micro DAM?
 
@@ -16,7 +16,7 @@ Many file types may be uploaded to a Micro DAM. Examples include images \(PNG, J
 
 ## File Life Cycle
 
-Once files are uploaded to the Micro DAM \(through the content manager or directly through the API\), they are copied to cloud storage on Google Cloud Platform. From there they are propagated to the multiple edge point-of-presence \(POP\) points across the world. Files live on the Micro DAM until they are deleted from the Micro DAM through the API or the media section of the content manager.
+Once files are uploaded to the DAM \(through the content manager or directly through the API\), they are copied to cloud storage on Google Cloud Platform. From there they are propagated to the multiple edge point-of-presence \(POP\) points across the world. Files live on the DAM until they are deleted from the DAM through the API or the media section of the content manager.
 
 ### File Delivery & Content Delivery Network \(CDN\) Details
 

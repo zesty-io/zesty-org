@@ -147,8 +147,9 @@
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
   * [Security](services/web-engine/security.md)
   * [File Proxy](services/web-engine/file-proxy.md)
-* [Micro DAM \(Media Storage\)](services/media-storage-micro-dam/README.md)
-  * [Micro DAM Domains](services/media-storage-micro-dam/micro-dam-domains.md)
+* [DAM \(Media Management\)](services/media-storage-micro-dam/README.md)
+  * [On-The-Fly Media Optimization and Dynamic Image Manipulation](services/media-storage-micro-dam/on-the-fly-media-optimization-and-dynamic-image-manipulation.md)
+  * [Custom DAM Media Domains](services/media-storage-micro-dam/micro-dam-domains.md)
 * [EcoSystems](services/ecosystems.md)
 
 ## APIs
