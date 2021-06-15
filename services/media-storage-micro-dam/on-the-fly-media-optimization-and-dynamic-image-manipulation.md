@@ -27,7 +27,7 @@ All image may be manipulated on-the-fly by passing query parameter to the end of
 | :--- | :--- |
 | **none** | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](%20https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg) |
 | **?width=** | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300) |
-| ?orient= | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v) |
+| **?orient=** | \*\*\*\*[https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v) |
 
 ![Original Image Source: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](../../.gitbook/assets/arcade-space-ship-example.jpg)
 
@@ -35,7 +35,7 @@ We recognize the following parameters in the query string of the image request:
 
 | Parameter | Description |
 | :--- | :--- |
-| `auto` | Enable optimization features automatically. |
+| \`\`[`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
 | [`bg-color`](https://developer.fastly.com/reference/io/bg-color) | Set the background color of an image. |
 | [`blur`](https://developer.fastly.com/reference/io/blur) | Set the blurriness of the output image. |
 | [`brightness`](https://developer.fastly.com/reference/io/brightness) | Set the brightness of the output image. |
@@ -76,24 +76,26 @@ Manipulation query parameters can be specified in any order, but they are proces
 
 ## Zesty.io OTF DAM: On-The-Fly Image Options API
 
+### Auto Optimize
+
+Enables optimizations based on [content negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation). Although the WebP format produces images at a higher compression ratio with a lower loss of quality, it is not supported in all browsers.
+
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?auto=webp" path="" %}
 {% api-method-summary %}
-Auto Optimize
+auto
 {% endapi-method-summary %}
 
 {% api-method-description %}
 `?auto=webp` _Deliver lossless \(because input image is lossless\) WebP where client support is available, otherwise deliver a PNG  
 ?`format=pjpg&auto=webp`Deliver lossy \(because format=pjpg is lossy\) WebP where client support is available, otherwise deliver a progressive JPEG  
-`?format=png&auto=webp`	Deliver lossless \(because format=png is lossless\) WebP where client support is available, otherwise deliver a PNG_  
-  
- Enables optimizations based on content negotiation: https://developer.mozilla.org/en-US/docs/Web/HTTP/Content\_negotiation
+`?format=png&auto=webp`	Deliver lossless \(because format=png is lossless\) WebP where client support is available, otherwise deliver a PNG_
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="auto" type="string" required=false %}
-
+webp is the only option, see notes above
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
