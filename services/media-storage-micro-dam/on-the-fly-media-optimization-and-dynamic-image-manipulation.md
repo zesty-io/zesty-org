@@ -38,7 +38,7 @@ We recognize the following parameters in the query string of the image request:
 | :--- | :--- |
 | [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
-| [`blur`](https://developer.fastly.com/reference/io/blur) | Set the blurriness of the output image. |
+| [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
 | [`brightness`](https://developer.fastly.com/reference/io/brightness) | Set the brightness of the output image. |
 | [`canvas`](https://developer.fastly.com/reference/io/canvas) | Increase the size of the canvas around an image. |
 | [`contrast`](https://developer.fastly.com/reference/io/contrast) | Set the contrast of the output image. |
@@ -83,7 +83,7 @@ Enables optimizations based on [content negotiation](https://developer.mozilla.o
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?auto=webp" %}
 {% api-method-summary %}
-Auto Optimize: ?auto
+Auto Optimize:   ?auto
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -119,7 +119,7 @@ webp is the only option, see notes above
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/parsley-logo-brackets.png" path="?bg-color=006699" %}
 {% api-method-summary %}
-Background Color: ?bg-color
+Background Color:   ?bg-color
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -149,7 +149,39 @@ Change the background color of a transparent image.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### About Zesty.io On-The-Fly Technology
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=3" %}
+{% api-method-summary %}
+Gaussian Blur:   ?blur
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Gaussian blur your image.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="blur" type="number" required=false %}
+0.5 to 1000
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### About Zesty.io On-The-Fly Media Technology
 
 Zesty.io leverages Fastly's Image Optimization technology layered on top of the Zesty.io DAM Media Manager. Features documented here relate to what is supported through Zesty.io WebEngine and Media services.
 
