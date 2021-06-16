@@ -41,8 +41,8 @@ We recognize the following parameters in the query string of the image request:
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
 | [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas) | Increase the size of the canvas around an image. |
-| [`contrast`](https://developer.fastly.com/reference/io/contrast) | Set the contrast of the output image. |
-| [`crop`](https://developer.fastly.com/reference/io/crop) | Remove pixels from an image. |
+| [`contrast`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#contrast-image-jpg-contrast) | Set the contrast of the output image. |
+| [`crop`](https://developer.fastly.com/reference/io/crop) | Remove pixels from an image. Great for thumbnails. |
 | [`dpr`](https://developer.fastly.com/reference/io/dpr) | Serve correctly sized images for devices that expose a device pixel ratio. |
 | [`fit`](https://developer.fastly.com/reference/io/fit) | Set how the image will fit within the size bounds provided. |
 | [`format`](https://developer.fastly.com/reference/io/format) | Specify the output format to convert the image to. |
@@ -282,6 +282,78 @@ See above documentation
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?contrast=20" %}
+{% api-method-summary %}
+Contrast: /image.jpg?contrast=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Change the image contrast, the value can be anything between -100 and 100, negative numbers start to wash out the image, positive number increase the vibrancy of the images colors.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="contrast" type="integer" required=false %}
+-100 to 100
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?contrast=100
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?contrast=100](../../.gitbook/assets/image%20%2819%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?crop=1:1" %}
+{% api-method-summary %}
+Crop: /image.jpg?crop=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Crop an image evenly from all sides by passing in a ratio 1:1 is a perfect square, 16:9 is letter box, 10:1 is a slim rectangle etc. Great for making thumbnails by passing in a width and a crop, `?crop=1:1&width=50` makes a tiny square, for example.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="crop" type="string" required=false %}
+1:1 \|\| 10:1 \|\| 16:9
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=400
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2821%29.png)
+
+![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2820%29.png)
+
+
 
 #### About Zesty.io On-The-Fly Media Technology
 
