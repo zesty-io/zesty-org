@@ -50,9 +50,8 @@ We recognize the following parameters in the query string of the image request:
 | [`orient`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#orientation-image-jpg-orient) | Change the cardinal orientation of the image. |
 | [`pad`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-padding-image-jpg-pad) | Add pixels to the edge of an image, like css padding. |
 | [`quality`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-quality-image-jpg-quality) | Optimize the image to the given compression level for lossy file formatted images. |
-| [`resize-filter`](https://developer.fastly.com/reference/io/resize-filter) | Specify the resize filter used when resizing images. |
-| [`saturation`](https://developer.fastly.com/reference/io/saturation) | Set the saturation of the output image. |
-| [`sharpen`](https://developer.fastly.com/reference/io/sharpen) | Set the sharpness of the output image. |
+| [`saturation`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#saturation-image-jpg-saturation) | Set the saturation of the output image. |
+| [`sharpen`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#sharpen-image-jpg-sharpen) | Set the sharpness of the output image. |
 | [`trim`](https://developer.fastly.com/reference/io/trim) | Remove pixels from the edge of an image. |
 | [`width`](https://developer.fastly.com/reference/io/width) | Resize the width of the image. |
 
@@ -65,12 +64,12 @@ Manipulation query parameters can be specified in any order, but they are proces
 | 1 | `trim` |
 | 2 | `crop` |
 | 3 | `orient` |
-| 4 | `width`     `height`    `dpr`     `fit`     `resize-filter`      |
+| 4 | `width`     `height`    `dpr`     `fit`          |
 | 5 | `pad`     `canvas`     `bg-color` |
 | 6 | `brightness`     `contrast`     `saturation` |
 | 7 | `sharpen` |
 | 8 | `blur` |
-| 9 | `format`    `auto`    `optimize`    `quality`    `profile`    `level` |
+| 9 |  `auto`    `optimize`    `quality`    `profile`    `level` |
 
 ## Zesty.io OTF DAM: On-The-Fly Image Options API
 
@@ -352,9 +351,9 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=40
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2825%29.png)
+![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2826%29.png)
 
-![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2824%29.png)
+![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2825%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?dpr=2" %}
 {% api-method-summary %}
@@ -390,7 +389,7 @@ DPR will increase the delivered size by a multiple 1-10 to accommodate for the d
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2829%29.png)
+![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2831%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?fit=cover&height=200&width=200" %}
 {% api-method-summary %}
@@ -440,11 +439,11 @@ height in pixels
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2830%29.png)
+![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2833%29.png)
 
-![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2826%29.png)
+![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2827%29.png)
 
-![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2822%29.png)
+![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2823%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?height=200" %}
 {% api-method-summary %}
@@ -478,7 +477,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2828%29.png)
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2829%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?optimize=high" %}
 {% api-method-summary %}
@@ -631,9 +630,79 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=55
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Reduced from 56KB to 4KB https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=1](../../.gitbook/assets/image%20%2823%29.png)
+![Reduced from 56KB to 4KB https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=1](../../.gitbook/assets/image%20%2824%29.png)
 
-![56KB full quality https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=100&amp;width=500](../../.gitbook/assets/image%20%2827%29.png)
+![56KB full quality https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=100&amp;width=500](../../.gitbook/assets/image%20%2828%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?saturation=-50" %}
+{% api-method-summary %}
+Saturation:    /image.jpg?saturation=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Play with the intensity levels of colors, also use to grayscale an image by passing -100 
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+-100 for grayscale 0 is normal 100 is intense
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?saturation=-50](../../.gitbook/assets/image%20%2832%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?saturation=100](../../.gitbook/assets/image%20%2822%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?saturation=-100](../../.gitbook/assets/image%20%2830%29.png)
+
+{% api-method method="get" host="" path="" %}
+{% api-method-summary %}
+Sharpen:    /image.jpg?sharpen
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 #### About Zesty.io On-The-Fly Media Technology
 
