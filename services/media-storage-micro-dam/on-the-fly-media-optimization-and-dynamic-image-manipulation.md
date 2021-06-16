@@ -39,7 +39,7 @@ We recognize the following parameters in the query string of the image request:
 | [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
-| [`brightness`](https://developer.fastly.com/reference/io/brightness) | Set the brightness of the output image. |
+| [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
 | [`canvas`](https://developer.fastly.com/reference/io/canvas) | Increase the size of the canvas around an image. |
 | [`contrast`](https://developer.fastly.com/reference/io/contrast) | Set the contrast of the output image. |
 | [`crop`](https://developer.fastly.com/reference/io/crop) | Remove pixels from an image. |
@@ -83,7 +83,7 @@ Enables optimizations based on [content negotiation](https://developer.mozilla.o
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?auto=webp" %}
 {% api-method-summary %}
-Auto Optimize:   ?auto
+Auto Optimize:   /image.jpg?auto=
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -121,7 +121,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg&auto=
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/parsley-logo-brackets.png" path="?bg-color=690167" %}
 {% api-method-summary %}
-Background Color:   ?bg-color
+Background Color:   /image.jpg?bg-color=
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -157,7 +157,7 @@ https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=20" %}
 {% api-method-summary %}
-Gaussian Blur:   ?blur
+Gaussian Blur:   /image.jpg?blur=
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -188,6 +188,100 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?blur=20
 {% endapi-method %}
 
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?blur=20](../../.gitbook/assets/image%20%286%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?brightness=20" %}
+{% api-method-summary %}
+Brightness:  /image.jpg?brightness=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Adjusts the "brightness" of an image. This effect adds perceived light to an image.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="brightness" type="integer" required=false %}
+0 unchanged \|\| -100 black \|\| 100 white
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?brightness=20
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?brightness=20](../../.gitbook/assets/image%20%2815%29.png)
+
+## Canvas
+
+Set the size of the canvas around the image without changing the size of the image itself. This can be used for advanced cropping control. 
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?canvas=500,100](../../.gitbook/assets/image%20%2818%29.png)
+
+This parameter takes multiple values which can get complicated, so we included example along the way. The first two represent the desired width and height, either as measurements of pixels, separated with a comma, or as a ratio, separated with a colon. The remaining parameters allow the placement of the image within the canvas to be adjusted. On each dimension, placement can be made either with a position coordinate \(`x` or `y`, which are relative to the top left of the newly-enlarged canvas\) or as a percentage offset from the center of the image using `offset-x` and `offset-y`. 
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?canvas=500,400,offset-x20,offset-y20](../../.gitbook/assets/image%20%2816%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=500&amp;canvas=320,100](../../.gitbook/assets/image%20%2817%29.png)
+
+These can be mixed and matched, but only one method can be used for each dimension \(i.e., `x` can be combined with `offset-y` but `x` cannot be combined with `offset-x`\).
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=1000&amp;canvas=400,130,offset-x50,offset-y95](../../.gitbook/assets/image%20%2814%29.png)
+
+The remaining parameters determine the position of the cropped region.
+
+Offset positioning acts to distribute the remaining space according to the specified offset proportions. For example, `offset-y10` would place the image so that 10% of the leftover space is above the image and 90% below it.
+
+1. `x` and `y` can be set as a value in pixels \(e.g., `40` is 40 pixels\) or as a percentage suffixed with `p` \(e.g., `50p` is 50%\).
+2. When `x` and `y` are percentages, they are calculated as percentages of the _image_ size, not the canvas size.
+3. `offset-x` and `offset-y` are always interpreted as percentages of the canvas size \(e.g., `25` is 25%\).
+4. If no `x`, `y`, `offset-x`, or `offset-y` parameters are supplied, the image is positioned in the center of the canvas.
+5. The background color of the canvas will default to transparency for image output formats that support transparency and white for formats that don't. This behavior can be changed by adding the [`bg-color`](https://developer.fastly.com/reference/io/bg-color) parameter.
+6. When using `canvas` and [`pad`](https://developer.fastly.com/reference/io/pad) at the same time, [`pad`](https://developer.fastly.com/reference/io/pad) will be ignored.
+7. Any fractional pixel measurements will be rounded to the nearest whole pixel.
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?canvas=500,100" %}
+{% api-method-summary %}
+Canvas Control: /image.jpg?canvas=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Allows the user to precisely crop an image by specific positions.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="canvas" type="string" required=false %}
+See above documentation
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 #### About Zesty.io On-The-Fly Media Technology
 
