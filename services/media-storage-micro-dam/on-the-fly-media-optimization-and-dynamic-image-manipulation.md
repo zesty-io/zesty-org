@@ -42,8 +42,8 @@ We recognize the following parameters in the query string of the image request:
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
 | [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas) | Increase the size of the canvas around an image. |
 | [`contrast`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#contrast-image-jpg-contrast) | Set the contrast of the output image. |
-| [`crop`](https://developer.fastly.com/reference/io/crop) | Remove pixels from an image. Great for thumbnails. |
-| [`dpr`](https://developer.fastly.com/reference/io/dpr) | Serve correctly sized images for devices that expose a device pixel ratio. |
+| [`crop`](https://developer.fastly.com/reference/io/crop) | Crop an image by removing pixels from an image based on a ratio. Great for thumbnails. |
+| [`dpr`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#device-pixel-ratio-dpr-image-jpg-dpr) | Device Pixel Ratio - Serve correctly sized images for devices that expose a device pixel ratio. |
 | [`fit`](https://developer.fastly.com/reference/io/fit) | Set how the image will fit within the size bounds provided. |
 | [`format`](https://developer.fastly.com/reference/io/format) | Specify the output format to convert the image to. |
 | [`frame`](https://developer.fastly.com/reference/io/frame) | Extract the first frame from an animated image sequence. |
@@ -353,7 +353,41 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=40
 
 ![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2820%29.png)
 
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?dpr=2" %}
+{% api-method-summary %}
+Device Pixel Ratio \(dpr\):   /image.jpg?dpr= 
+{% endapi-method-summary %}
 
+{% api-method-description %}
+For optimizing delivery of images to devices with high pixel ratios. The iPhone XS, for example, has a resolution of 375x812 pixels, but its device to pixel ration is 3, so it renders 1125x2436. A developer can access this value from JavaScript by calling `window.devicePixelRatio`  
+  
+DPR will increase the delivered size by a multiple 1-10 to accommodate for the device Pixel Ratio. Use with JavaScript dynamically when rendering a view and you know the clients Device Pixel Ratio. 
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="dpr" type="number" required=false %}
+1-10
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2822%29.png)
 
 #### About Zesty.io On-The-Fly Media Technology
 
