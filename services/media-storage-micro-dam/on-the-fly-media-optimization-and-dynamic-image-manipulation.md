@@ -48,9 +48,8 @@ We recognize the following parameters in the query string of the image request:
 | [`height`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#height-images-jpg-height) | Resize the height of the image. |
 | [`optimize`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-optimize-image-jpg-optimize) | Automatically apply optimal quality compression. |
 | [`orient`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#orientation-image-jpg-orient) | Change the cardinal orientation of the image. |
-| [`pad`](https://developer.fastly.com/reference/io/pad) | Add pixels to the edge of an image. |
-| [`precrop`](https://developer.fastly.com/reference/io/precrop) | Remove pixels from an image before any other transformations occur. |
-| [`quality`](https://developer.fastly.com/reference/io/quality) | Optimize the image to the given compression level for lossy file formatted images. |
+| [`pad`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-padding-image-jpg-pad) | Add pixels to the edge of an image, like css padding. |
+| [`quality`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-quality-image-jpg-quality) | Optimize the image to the given compression level for lossy file formatted images. |
 | [`resize-filter`](https://developer.fastly.com/reference/io/resize-filter) | Specify the resize filter used when resizing images. |
 | [`saturation`](https://developer.fastly.com/reference/io/saturation) | Set the saturation of the output image. |
 | [`sharpen`](https://developer.fastly.com/reference/io/sharpen) | Set the sharpness of the output image. |
@@ -321,12 +320,18 @@ Crop: /image.jpg?crop=
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Crop an image evenly from all sides by passing in a ratio 1:1 is a perfect square, 16:9 is letter box, 10:1 is a slim rectangle etc. Great for making thumbnails by passing in a width and a crop, `?crop=1:1&width=50` makes a tiny square, for example.
+Crop an image evenly from all sides by passing in a ratio 1:1 is a perfect square, 16:9 is letter box, 10:1 is a slim rectangle etc. Great for making thumbnails by passing in a width and a crop, `?crop=1:1&width=50` makes a tiny square, for example.  
+  
+To crop before other commands are run, use `precrop` instead of `crop`
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
+{% api-method-parameter name="precrop" type="string" required=false %}
+use over crop when needed before other changes
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="crop" type="string" required=false %}
 1:1 \|\| 10:1 \|\| 16:9
 {% endapi-method-parameter %}
@@ -347,9 +352,9 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=40
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2823%29.png)
+![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2825%29.png)
 
-![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2822%29.png)
+![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2824%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?dpr=2" %}
 {% api-method-summary %}
@@ -385,7 +390,7 @@ DPR will increase the delivered size by a multiple 1-10 to accommodate for the d
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2826%29.png)
+![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2829%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?fit=cover&height=200&width=200" %}
 {% api-method-summary %}
@@ -435,11 +440,11 @@ height in pixels
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2827%29.png)
+![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2830%29.png)
 
-![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2824%29.png)
+![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2826%29.png)
 
-![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2821%29.png)
+![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2822%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?height=200" %}
 {% api-method-summary %}
@@ -473,7 +478,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2825%29.png)
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2828%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?optimize=high" %}
 {% api-method-summary %}
@@ -552,6 +557,83 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=l
 {% endapi-method %}
 
 ![Orientation example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=l](../../.gitbook/assets/image%20%2820%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?pad=10,20,50,10" %}
+{% api-method-summary %}
+Image Padding:   /image.jpg?pad=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Add extra pixels around an image by following the same standards as the CSS padding attribute.   
+  
+**For example:**   
+top, right, bottom, left:  `10,20,10,20`  
+single number to get even all around:  `100`  
+top bottom and left and right as: 100,200  
+  
+**Tip:** combine with `bg-color` to change the padding color
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="pad" type="string" required=false %}
+100,20,200,111
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?pad=10,10,50,10&amp;bg-color=FFC0CB&amp;width=500](../../.gitbook/assets/image%20%2821%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?quality=55" %}
+{% api-method-summary %}
+Image Quality:   /image.jpg?quality=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Control the file size of the image by reducing the quality. 
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=55
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![Reduced from 56KB to 4KB https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=1](../../.gitbook/assets/image%20%2823%29.png)
+
+![56KB full quality https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?quality=100&amp;width=500](../../.gitbook/assets/image%20%2827%29.png)
 
 #### About Zesty.io On-The-Fly Media Technology
 
