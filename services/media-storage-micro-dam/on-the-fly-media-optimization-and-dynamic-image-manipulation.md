@@ -44,7 +44,7 @@ We recognize the following parameters in the query string of the image request:
 | [`contrast`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#contrast-image-jpg-contrast) | Set the contrast of the output image. |
 | [`crop`](https://developer.fastly.com/reference/io/crop) | Crop an image by removing pixels from an image based on a ratio. Great for thumbnails. |
 | [`dpr`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#device-pixel-ratio-dpr-image-jpg-dpr) | Device Pixel Ratio - Serve correctly sized images for devices that expose a device pixel ratio. |
-| [`fit`](https://developer.fastly.com/reference/io/fit) | Set how the image will fit within the size bounds provided. |
+| [`fit`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#fit-image-jpg-fit-cover-and-height-200-and-width-200) | Set how the image will fit within the width and height provided. |
 | [`format`](https://developer.fastly.com/reference/io/format) | Specify the output format to convert the image to. |
 | [`frame`](https://developer.fastly.com/reference/io/frame) | Extract the first frame from an animated image sequence. |
 | [`height`](https://developer.fastly.com/reference/io/height) | Resize the height of the image. |
@@ -349,9 +349,9 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=40
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2821%29.png)
+![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2822%29.png)
 
-![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2820%29.png)
+![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2821%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?dpr=2" %}
 {% api-method-summary %}
@@ -387,7 +387,63 @@ DPR will increase the delivered size by a multiple 1-10 to accommodate for the d
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2822%29.png)
+![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2824%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?fit=cover&height=200&width=200" %}
+{% api-method-summary %}
+Fit: /image.jpg?fit=cover&height=200&width=200
+{% endapi-method-summary %}
+
+{% api-method-description %}
+The fit parameter controls how the image will be constrained within the provided size \(width and height\) values, in order to maintain proportions that fit within the confines of the width and height.  
+  
+Note: width and height must be pass with fit to work properly   
+  
+`bounds`  fit entirely within the specified region, making one dimension smaller if needed.  
+  
+`cover` cover the specified region, making one dimension larger if needed.  
+  
+`crop`  Resize and crop the image centrally to exactly fit the specified region.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="fit" type="string" required=false %}
+bounds \|\| cover \|\| crop
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="width" type="number" required=true %}
+width in pixels
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="height" type="number" required=true %}
+height in pixels
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![Fit Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2825%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2823%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2820%29.png)
+
+
 
 #### About Zesty.io On-The-Fly Media Technology
 
