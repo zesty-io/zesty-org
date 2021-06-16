@@ -45,11 +45,9 @@ We recognize the following parameters in the query string of the image request:
 | [`crop`](https://developer.fastly.com/reference/io/crop) | Crop an image by removing pixels from an image based on a ratio. Great for thumbnails. |
 | [`dpr`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#device-pixel-ratio-dpr-image-jpg-dpr) | Device Pixel Ratio - Serve correctly sized images for devices that expose a device pixel ratio. |
 | [`fit`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#fit-image-jpg-fit-cover-and-height-200-and-width-200) | Set how the image will fit within the width and height provided. |
-| [`format`](https://developer.fastly.com/reference/io/format) | Specify the output format to convert the image to. |
-| [`frame`](https://developer.fastly.com/reference/io/frame) | Extract the first frame from an animated image sequence. |
-| [`height`](https://developer.fastly.com/reference/io/height) | Resize the height of the image. |
-| [`optimize`](https://developer.fastly.com/reference/io/optimize) | Automatically apply optimal quality compression. |
-| [`orient`](https://developer.fastly.com/reference/io/orient) | Change the cardinal orientation of the image. |
+| [`height`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#height-images-jpg-height) | Resize the height of the image. |
+| [`optimize`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-optimize-image-jpg-optimize) | Automatically apply optimal quality compression. |
+| [`orient`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#orientation-image-jpg-orient) | Change the cardinal orientation of the image. |
 | [`pad`](https://developer.fastly.com/reference/io/pad) | Add pixels to the edge of an image. |
 | [`precrop`](https://developer.fastly.com/reference/io/precrop) | Remove pixels from an image before any other transformations occur. |
 | [`quality`](https://developer.fastly.com/reference/io/quality) | Optimize the image to the given compression level for lossy file formatted images. |
@@ -349,9 +347,9 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&width=40
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2822%29.png)
+![Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=1:1&amp;width=200](../../.gitbook/assets/image%20%2823%29.png)
 
-![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2821%29.png)
+![Crop example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?crop=4:1&amp;width=800](../../.gitbook/assets/image%20%2822%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?dpr=2" %}
 {% api-method-summary %}
@@ -387,7 +385,7 @@ DPR will increase the delivered size by a multiple 1-10 to accommodate for the d
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2824%29.png)
+![DPR example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?dpr=2&amp;width=200](../../.gitbook/assets/image%20%2826%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?fit=cover&height=200&width=200" %}
 {% api-method-summary %}
@@ -437,13 +435,123 @@ height in pixels
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![Fit Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2825%29.png)
+![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2827%29.png)
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2823%29.png)
+![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2824%29.png)
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2820%29.png)
+![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2821%29.png)
 
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?height=200" %}
+{% api-method-summary %}
+Height:   /images.jpg?height=
+{% endapi-method-summary %}
 
+{% api-method-description %}
+Control the height of the image, the width, if not provided, will adapt to match the original ratio of the image.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="height" type="number" required=false %}
+A height in pixels
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2825%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?optimize=high" %}
+{% api-method-summary %}
+Image Optimize   /image.jpg?optimize=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Difference and output are minimal for most images that use this param, to be more aggressive in sizing, use the QUALITY param.   
+  
+`log`        Output image quality will be similar to the input image quality.  
+`medium`  More optimization is allowed. Visual quality of the input is preserved.  
+`high`	  Minor visual artifacts may be visible. This produces the smallest file.  
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="optimize" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?orient=l" %}
+{% api-method-summary %}
+Orientation:    /image.jpg?orient=
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Rotate the image on 90 degree angles  
+`r`	   Orient the image right.  
+`l`	   Orient the image left.  
+`h`	   Flip the image horizontally.  
+`v`	   Flip the image vertically.  
+`hv`   Flip the image both horizontally and vertically \(also `vh`\).  
+`rv`   Flip the image horizontally, then orient the image left \(also `rv` or `vr`\).  
+`vl`   Flip the image horizontally, then orient the image right \(also `lv`or `vl`\).
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="orient" type="string" required=false %}
+see above docs for options
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=l
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+![Orientation example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=l](../../.gitbook/assets/image%20%2820%29.png)
 
 #### About Zesty.io On-The-Fly Media Technology
 
