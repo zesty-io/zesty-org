@@ -40,7 +40,7 @@ We recognize the following parameters in the query string of the image request:
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
-| [`canvas`](https://developer.fastly.com/reference/io/canvas) | Increase the size of the canvas around an image. |
+| [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas) | Increase the size of the canvas around an image. |
 | [`contrast`](https://developer.fastly.com/reference/io/contrast) | Set the contrast of the output image. |
 | [`crop`](https://developer.fastly.com/reference/io/crop) | Remove pixels from an image. |
 | [`dpr`](https://developer.fastly.com/reference/io/dpr) | Serve correctly sized images for devices that expose a device pixel ratio. |
