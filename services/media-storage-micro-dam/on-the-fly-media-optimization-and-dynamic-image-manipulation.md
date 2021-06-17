@@ -36,7 +36,7 @@ We recognize the following parameters in the query string of the image request:
 
 | Parameter | Description |
 | :--- | :--- |
-| [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto)\`\` | Enable optimization features automatically. |
+| [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto-optimize-image-jpg-auto)\`\` | Enable optimization features automatically. |
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
@@ -73,9 +73,7 @@ Manipulation query parameters can be specified in any order, but they are proces
 
 ## Zesty.io OTF DAM: On-The-Fly Image Options API
 
-### Auto Optimize
-
-Enables optimizations based on [content negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation). Although the WebP format produces images at a higher compression ratio with a lower loss of quality, it is not supported in all browsers.
+All query parameters listed below may be used in conjunction with one another, and may be stacked. Some query params conflict with each other, for example [pad](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-padding-image-jpg-pad) and [canvas](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas). This behavior is documented under each example API call.
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?auto=webp" %}
 {% api-method-summary %}
@@ -221,31 +219,21 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?brightness=20
 
 ## Canvas
 
-Set the size of the canvas around the image without changing the size of the image itself. This can be used for advanced cropping control. 
+Canvas is used for advanced targeted cropping of images. 
+
+The `canvas` image modifier query parameter takes multiple values which can get complicated, so we included example references as they are best to understand the behavior. To get a feel for it, experiment with the image url example provided, and play with the numbers.
 
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?canvas=500,100](../../.gitbook/assets/image%20%2818%29.png)
 
-This parameter takes multiple values which can get complicated, so we included example along the way. The first two represent the desired width and height, either as measurements of pixels, separated with a comma, or as a ratio, separated with a colon. The remaining parameters allow the placement of the image within the canvas to be adjusted. On each dimension, placement can be made either with a position coordinate \(`x` or `y`, which are relative to the top left of the newly-enlarged canvas\) or as a percentage offset from the center of the image using `offset-x` and `offset-y`. 
-
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?canvas=500,400,offset-x20,offset-y20](../../.gitbook/assets/image%20%2816%29.png)
+The canvas query param takes comma separated values **`SIZE,POSITION`**, where **SIZE** is a pixel width and height `500,100`or a ratio like `2:1`. The **POSITION**  is represented as a percentage offset from the center of the image using `offset-x` and `offset-y`like `offset-x50,offset-y95` . **POSITION** and **SIZE** together look like this:`canvas=400,130,offset-x50,offset-y95`. If **POSITION** is omitted, the image centers by default. 
 
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=500&amp;canvas=320,100](../../.gitbook/assets/image%20%2817%29.png)
 
-These can be mixed and matched, but only one method can be used for each dimension \(i.e., `x` can be combined with `offset-y` but `x` cannot be combined with `offset-x`\).
-
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=1000&amp;canvas=400,130,offset-x50,offset-y95](../../.gitbook/assets/image%20%2814%29.png)
 
-The remaining parameters determine the position of the cropped region.
-
-Offset positioning acts to distribute the remaining space according to the specified offset proportions. For example, `offset-y10` would place the image so that 10% of the leftover space is above the image and 90% below it.
-
-1. `x` and `y` can be set as a value in pixels \(e.g., `40` is 40 pixels\) or as a percentage suffixed with `p` \(e.g., `50p` is 50%\).
-2. When `x` and `y` are percentages, they are calculated as percentages of the _image_ size, not the canvas size.
-3. `offset-x` and `offset-y` are always interpreted as percentages of the canvas size \(e.g., `25` is 25%\).
-4. If no `x`, `y`, `offset-x`, or `offset-y` parameters are supplied, the image is positioned in the center of the canvas.
-5. The background color of the canvas will default to transparency for image output formats that support transparency and white for formats that don't. This behavior can be changed by adding the [`bg-color`](https://developer.fastly.com/reference/io/bg-color) parameter.
-6. When using `canvas` and [`pad`](https://developer.fastly.com/reference/io/pad) at the same time, [`pad`](https://developer.fastly.com/reference/io/pad) will be ignored.
-7. Any fractional pixel measurements will be rounded to the nearest whole pixel.
+* The background color of the canvas will default to transparency for image output formats that support transparency and white for formats that don't. This behavior can be changed by adding the [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-image-jpg-bg-color) parameter.
+* When using [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas) and [`pad`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-padding-image-jpg-pad) at the same time, [`pad`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#image-padding-image-jpg-pad) will be ignored.
+*  Fractional pixel measurements are rounded to the nearest whole pixel.
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?canvas=500,100" %}
 {% api-method-summary %}
@@ -253,7 +241,7 @@ Canvas Control: /image.jpg?canvas=
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Allows the user to precisely crop an image by specific positions.
+Allows the user to precisely crop an image by specific positions as described above. 
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -278,6 +266,8 @@ See above documentation
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?canvas=500,400,offset-x20,offset-y20](../../.gitbook/assets/image%20%2816%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?contrast=20" %}
 {% api-method-summary %}
@@ -399,7 +389,7 @@ Fit: /image.jpg?fit=cover&height=200&width=200
 {% api-method-description %}
 The fit parameter controls how the image will be constrained within the provided size \(width and height\) values, in order to maintain proportions that fit within the confines of the width and height.  
   
-Note: width and height must be pass with fit to work properly   
+Note: `width` and `height` must be pass with fit to work properly. Use the the navigation on the right to search on width and height. An example of this is `image.jpg?fit=cover&height=200&width=200`  
   
 `bounds`  fit entirely within the specified region, making one dimension smaller if needed.  
   
@@ -709,41 +699,9 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?sharpen=a5,r5,t4
 
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?sharpen=a10,r1000,t100](../../.gitbook/assets/image%20%2822%29.png)
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?sharpen=a10,r500,t10](../../.gitbook/assets/image%20%2838%29.png)
-
-{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?trim=25,50,75,100" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
 ![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?sharpen=a5,r5,t4](../../.gitbook/assets/image%20%2821%29.png)
+
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?sharpen=a10,r500,t10](../../.gitbook/assets/image%20%2838%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?trim=25,50,75,100" %}
 {% api-method-summary %}
@@ -751,7 +709,7 @@ Trim  /image.jpg?trim=
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Values are accept the same as CSS padding or margin values. The numbers may be pixels or percentages. Pixel value example: `25,50,75,100` Percentage example `25p,50p,20p,10p`
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -777,13 +735,15 @@ Trim  /image.jpg?trim=
 {% endapi-method-spec %}
 {% endapi-method %}
 
+![Trim: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?trim=25p,50p,20p,10p](../../.gitbook/assets/image%20%2840%29.png)
+
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?width=100" %}
 {% api-method-summary %}
 Width:   /image.jpg?width=
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Constrain the width of the image, the height, if not passed, with auto size.
+Constrain the width of the image, the height, if not passed, will auto size itself to the original ratio of thr image.
 {% endapi-method-description %}
 
 {% api-method-spec %}
