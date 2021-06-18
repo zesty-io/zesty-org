@@ -46,6 +46,7 @@ We recognize the following parameters in the query string of the image request:
 | :--- | :--- |
 | [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto-optimize-image-jpg-auto)\`\` | Enable optimization features automatically. |
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color) | Set the background color of an image. |
+| \`\`[`bypass`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#bypass-image-jpg-raw-true)\`\` | Ignore all optimization and fetch the raw original image |
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur) | Set the blurriness of the output image. |
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness) | Set the brightness of the output image. |
 | [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas) | Increase the size of the canvas around an image. |
@@ -156,6 +157,38 @@ https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699
 ![https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=105,1,103](../../.gitbook/assets/image%20%288%29.png)
 
 ![https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=323CF3](../../.gitbook/assets/image%20%2810%29.png)
+
+{% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?raw=true" %}
+{% api-method-summary %}
+Bypass:   /image.jpg?raw=true
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Bypass any optimization and return the original image.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="raw" type="string" required=false %}
+true
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?raw=true
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?blur=20" %}
 {% api-method-summary %}
