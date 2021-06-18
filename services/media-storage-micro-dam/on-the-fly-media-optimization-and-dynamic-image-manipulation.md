@@ -19,6 +19,14 @@ Zesty.io automatically transforms images as the content-type "webp", which is a 
 * If the source image contains orientation metadata, this orientation will be applied directly to the image data and metadata will be removed.
 * Images are served with their original name and extension, but will still output as `content-type` "webp" 
 
+### Bypass Image Optimization 
+
+To bypass image optimization to get the raw encoding and data of the origin image, append `?raw=true` to the end of the image request like so:
+
+`https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?raw=true`
+
+This is useful for fetching EXIF data or other meta data hidden in your image file.
+
 ### Image Manipulation Options
 
 All image may be manipulated on-the-fly by passing query parameter to the end of the image URL. See the example below
