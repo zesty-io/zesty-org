@@ -4,7 +4,7 @@
 
 A good way to explain one-to-many relationships is through tags. In Zesty.io blogs, tags can be used to tie related content together.
 
-To demonstrate how to use tags, lets make a blog through the visual sitemap. Once the blog is created, create a new Article Tag from the content page.
+To demonstrate how to use tags, lets make a blog content model. Once the blog is created, create a new Article Tag from the content page.
 
 ![contentTab](https://wyp1jm.media.zestyio.com/screen-shot-2016-07-07-at-12-33-26-pm.png)
 
