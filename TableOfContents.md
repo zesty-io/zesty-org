@@ -42,7 +42,6 @@
   * [How to Migrate a Site to Zesty.io](guides/how-to-migrate-a-site-to-zesty.io.md)
   * [How to Set Up Internationalization \(i18n\)](guides/how-to-set-up-internationalization-i18n.md)
   * [How to Use the Safe Email Send To Setting](guides/how-to-use-the-safe-email-send-to-setting.md)
-  * [How to Use the Visual Sitemap](guides/how-to-use-the-visual-sitemap.md)
   * [How to Create a Blueprint in Github](guides/how-to-create-a-blueprint-in-github.md)
   * [JavaScript Component Libraries](guides/javascript-component-libraries.md)
   * [Building Related Single and Multi-page Content Models](guides/building-related-single-and-multi-page-content-models.md)
