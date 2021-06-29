@@ -31,10 +31,6 @@ Analytics are now located at `/analytics`.
 Only users with Owner, Admin, and Developer roles can setup Google Analytics.
 {% endhint %}
 
-{% embed url="https://www.youtube.com/watch?v=dTx9RjT19\_g" %}
-
-_Watch this video to see how to authenticate Google Analytics in Zesty.io._
-
 #### Verifying Setup
 
 Visit a page on your instance's **live domain** and inspect the &lt;head&gt; element. 
