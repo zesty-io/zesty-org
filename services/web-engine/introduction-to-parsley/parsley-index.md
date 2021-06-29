@@ -734,6 +734,81 @@ A function outputs a JSON string that can be use in inline javascript. The funct
 {{end-each}}
 ```
 
+{% code title="Example Output for {{this.toJSON}} call on zesty.io\'s homepage" %}
+```javascript
+{
+    title: "Your Content, Anywhere",
+    content: "<h1>A CONTENT PLATFORM THAT POWERS ENTERPRISE GRADE WEBSITES AND APPLICATIONS</h1>",
+    image: {
+        type: "images",
+        totalItems: 1,
+        data: [
+            {
+                type: "image",
+                zuid: "3-5c58033-eb8cq",
+                url: "https://zestyio.media.zestyio.com/Zesty.io---9-5seg.mp4"
+            }
+        ]
+    },
+    customer_logo_heading: "Trusted by enterprises, startups, and everyone in between",
+    main_headline: "Managing content at scale is difficult.",
+    main_description: "<ul><li><p>Security issues, and out of date software</p></li><li><p>Editing the same content in multiple places</p></li><li><p>Developers needed for content updates</p></li></ul><h1>..but it doesn’t have to be</h1><ul><li><p>Centralized content management</p></li><li><p>Automated security and product improvements</p></li><li><p>Easy Distribution at global scale</p></li></ul>",
+    pagina_nueva: null,
+    og_image: {
+    type: "images",
+    totalItems: 1,
+    data: [
+            {
+                type: "image",
+                zuid: "3-a4f5ca6-a25px",
+                url: "https://kfg6bckb.media.zestyio.com/zesty-share-image-generic.png"
+            }
+        ]
+    },
+    meta: {
+        type: "item",
+        model_name: "homepage",
+        zuid: "7-31209c-g7qsjg",
+        createdAt: "2020-10-01 06:33:30",
+        updatedAt: "2020-10-01 06:33:29",
+        listed: "1",
+        version: "200",
+        locale: {
+            id: "1",
+            name: "English (United States)",
+            code: "en-US",
+            default: "1",
+            active: "1",
+            enabled: "1"
+        },
+        model: {
+            type: "model",
+            zuid: "6-31079c-vdg69q",
+            name: "homepage",
+            label: "Homepage",
+            resourceURI: "https://www.zesty.io/-/instant/6-31079c-vdg69q.json"
+        },
+        web: {
+            url: "https://www.zesty.io/",
+            uri: "/",
+            fragment: "zesty_home",
+            canonical_tag_mode: "1",
+            sitemap_priority: "-1.0",
+            sitemap_last_updated: "2020-10-01 06:33:29",
+            canonical_query_param_whitelist: null,
+            canonical_tag_custom_value: null,
+            seo_link_text: "Homepage",
+            seo_meta_title: "Zesty.io: The Headless CMS for Marketers + Developers",
+            seo_meta_description: "Built for teams to manage and distribute content to multiple sites, devices, and anywhere else it needs to go.",
+            seo_meta_keywords: null
+        }
+    }
+}
+```
+{% endcode %}
+
+## \*\*\*\*
+
 ## instance
 
 The `instance` call returns data specific to the instance, such as the CDN URL and the domain or globally relevant data, such as the current data-time or the current language.
