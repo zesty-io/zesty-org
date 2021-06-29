@@ -717,7 +717,7 @@ The `settings` call returns data stored in the Instance Settings in the Config T
 
 ## toJSON\(\)
 
-A function outputs a JSON string that can be use in inline javascript. The function can be called off this, data calls, or loop variables. 
+A function outputs a JSON string that can be use in inline JavaScript. The function can be called off this, data calls, or loop variables. Parsley REPL Example [https://parsley.zesty.io/turn-any-content-item-to-json/](https://parsley.zesty.io/turn-any-content-item-to-json/)
 
 `{{this.toJSON(depth, showMeta)}}`
 
