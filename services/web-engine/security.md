@@ -1,10 +1,12 @@
 ---
-description: Preview Lock protects your preview URL from being freely accessed and misused.
+description: >-
+  Authentication headers and Preview Lock protects your preview URL from being
+  freely accessed and misused.
 ---
 
 # Security
 
-## Preview Lock Protection
+## Stage Preview Lock Protection
 
 The WebEngine preview URL is locked from public consumption. As such it will only render if:
 
@@ -28,4 +30,20 @@ For Instances created before Jan 1, 2021, contact your account manager, as you w
 #### Setting a Preview Lock Protection Password
 
 When the preview URL is being accessed by non-authenticated Zesty users, you may set a Preview Lock Password which prompts an unauthenticated user to enter a password. They may try 5 times before being locked out. 
+
+## Production Authentication Headers
+
+ Production sites can be blocked by forcing an authorization header to be added to each request like`Authorization: bearer [SECRET KEY]` . Authorization headers can be edited in manager ui &gt; settings &gt; security
+
+**Headless Authorization** will be applied to Instant, Headless, and GQL APIs.
+
+**Full WebEngine Authorization** will be applied to every request. This setting will collide with Headless Authorization, therefore, headless authorization needs to be removed when using Full WebEngine authorization.
+
+{% hint style="warning" %}
+Adding authorization secret key reflect immediately in production site and will block public access. Pages that are already cached will need to be [purged ](environment-states-and-caching-behaviors.md#ways-to-purge-refresh-the-cache-of-your-instance)for required authentication to take effect.
+{% endhint %}
+
+![Editable in manager ui &amp;gt; settings &amp;gt; security](../../.gitbook/assets/image%20%2845%29.png)
+
+
 
