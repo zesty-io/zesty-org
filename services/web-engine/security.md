@@ -11,7 +11,7 @@ description: >-
 The WebEngine preview URL is locked from public consumption. As such it will only render if:
 
 1.  The user is logged in _and_ has access to that instance. 
-2. A valid password has been provided. This password is set by via the [Settings](https://zesty.org/services/manager-ui/settings)  under  `category: security` and `key: preview_lock_password` is set, a user may enter the password to start a verified session.
+2. A valid password has been provided. This password is set by via the [Settings](https://zesty.org/services/manager-ui/settings)  under `security` , a user may enter the password to start a verified session.
 
 {% hint style="info" %}
 **Any instance created on or after Jan 1, 2021 is automatically locked.** If your instance is older and you would like Preview Lock Protection, please reach out to support. 
@@ -30,6 +30,16 @@ For Instances created before Jan 1, 2021, contact your account manager, as you w
 #### Setting a Preview Lock Protection Password
 
 When the preview URL is being accessed by non-authenticated Zesty users, you may set a Preview Lock Password which prompts an unauthenticated user to enter a password. They may try 5 times before being locked out. 
+
+#### **Linking with a Password**
+
+If the ability to pass the preview lock password as a get parameter is required for internal sharing or for internal authenticated workflow \(Jira, Private Github, Etc\), then a password can be passed with the `zpw` query param like:
+
+`https://HASH-dev.webengine.zesty.io/?zpw=12345`
+
+where `12345` is whatever the preview lock password is. The user that opens that link will be authenticated for their browsing session, and will be able to free view the site without entering a password.
+
+This also works for headless testing against the preview environment. 
 
 ## Production Authentication Headers
 
