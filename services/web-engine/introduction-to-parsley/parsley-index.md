@@ -719,10 +719,15 @@ The `settings` call returns data stored in the Instance Settings in the Config T
 
 A function outputs a JSON string that can be use in inline javascript. The function can be called off this, data calls, or loop variables. 
 
-```text
-{{this.toJSON}} 
+`{{this.toJSON(depth, showMeta)}}`
 
-{{model.first().toJSON()}}
+* `depth` is an integer for hydration depth, max is 5
+* `showMeta` true or false: `true` gives all meta, routing, and zuid details, and locale details. `false` is just content
+
+```text
+{{this.toJSON(3,false)}} 
+
+{{model.first().toJSON(2, true)}}
 
 {{each model as item}}
     {{item.toJSON()}}
