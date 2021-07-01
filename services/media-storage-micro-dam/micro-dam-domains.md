@@ -16,7 +16,7 @@ Enterprise-level customers have the option to create a DAM with a custom vanity 
 
 ### On Domain URL path for DAMs _\(/-/media\)_
 
-Enterprise level customers have the option to enables WebEngine to proxy through a media bucket of images to a `/-/media/` path on the registered domain to an instance. This feature may be used to replace the `xyz.media.zestyio.com` media domain in favor of `myregistereddomain.com/-/media/`
+Enterprise level customers have the option to enables WebEngine to proxy through a media bucket of images to a `/-/media/` path on the registered domain to an [instance](../../glossary.md#instance). This feature may be used to replace the `xyz.media.zestyio.com` media domain in favor of `myregistereddomain.com/-/media/`
 
 The /-/media/ routing may also be used to pass through any storage bucket url from Amazon, Azure, or Google. This allows WebEngine to proxy and /-/media/\*.\* request to another service. Note, both media.zestyio.com and an external bucket domain cannot be used simultaneously.  
 

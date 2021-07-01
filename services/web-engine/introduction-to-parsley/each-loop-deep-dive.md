@@ -14,7 +14,7 @@ _If you're looking for information on how to loop through multiple images in a s
 
 #### Simple Iteration
 
-One of the most basic examples of iteration is looping over a Zesty.io data set. This example shows a list of product names being generated from a data set named Products.
+One of the most basic examples of iteration is looping over a Zesty.io data set. This example shows a list of product names being generated from a data set named Products. [Work with a live example](https://parsley.zesty.io/looping-and-each-statements/).
 
 ```text
 <ul class="product-list">  

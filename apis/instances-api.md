@@ -5,21 +5,19 @@ description: A REST API for interacting with your instance resources.
 
 # Instances API
 
-## Instances API
-
 Every instance created in Zesty.io can be interacted with over https using the instance [API](https://en.wikipedia.org/wiki/Application_programming_interface) \(Application Programming Interface\). When an instance is created it is assigned a [ZUID](https://github.com/zesty-io/zuid-specification) \(Zesty Universal IDentifier\). Using this ZUID the instances API can be requested with the following URL pattern.
-
-```text
-https://ZUID.api.zesty.io/v1/
-```
-
-The instance API is implemented as a [REST](https://restfulapi.net/) \(REpresentational State Transfer\) architecture. It allows for [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) \(Create, Read, Update, Delete\) operations on the requested instance.
 
 {% hint style="info" %}
 Complete API Reference: [https://instances-api.zesty.org](https://instances-api.zesty.org)
 {% endhint %}
 
-There can be many consumers of the Instances API. For example; the [manager-ui](https://zesty.org/services/manager-ui) consumes your instances API to provide it's functionality. Another common example is making instances API requests as part of a [CI/CD](https://en.wikipedia.org/wiki/Continuous_integration) \(Continuous Intergration/Continuous Development\) flow.
+```text
+https://ZUID.api.zesty.io/v1/
+```
+
+The instance API is implemented as a [REST](https://restfulapi.net/) \(Representational State Transfer\) architecture. It allows for [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) \(Create, Read, Update, Delete\) operations on the requested instance.
+
+There can be many consumers of the Instances API. For example; the [manager-ui](https://zesty.org/services/manager-ui) consumes your instances API to provide it's functionality. Another common example is making instances API requests as part of a [CI/CD](https://en.wikipedia.org/wiki/Continuous_integration) \(Continuous Integration/Continuous Development\) flow.
 
 ### Access Permissions
 
@@ -37,5 +35,5 @@ All API responses are [JSON](https://www.json.org/json-en.html) \(JavaScript Obj
 
 ### Node SDK
 
-The [node-sdk](https://www.npmjs.com/package/@zesty-io/sdk) is the primary tool for interacting with Zesty.io platform resources. It can be used to programatically manage an instance.
+The [node-sdk](https://www.npmjs.com/package/@zesty-io/sdk) is the primary tool for interacting with Zesty.io platform resources. It can be used to programmatically manage an instance.
 
