@@ -19,6 +19,26 @@ Zesty.io automatically transforms images as the content-type "webp", which is a 
 * If the source image contains orientation metadata, this orientation will be applied directly to the image data and metadata will be removed.
 * Images are served with their original name and extension, but will still output as `content-type` "webp" 
 
+### OTF DAM Quick Examples
+
+```markup
+<!-- using the direct media url, append query parameters to the url --> 
+<img src="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=200" alt="space ship example">
+<!-- using parsley, append query paramters outside th call -->
+<img src="{{this.image.getImage()}}?width200&crop=1:1" alt="parsley example">
+
+<!-- example using src set images to be used at different display pixel densities -->
+<img srcset="{{this.image.getImage()}}?width=320&dpr=1.5 1.5x,
+             {{this.image.getImage()}}?width=320&dpr=2 2x"
+     src="{{this.image.getImage()}}?width=320"/>
+     
+<!-- HTML5 art direction, use different images based on browser width -->
+<picture>
+  <source srcset="{{this.image.getImage()}}?width=600&crop=16:9" media="(min-width: 600px)"/>
+  <img src="{{this.image.getImage()}}?width=320&crop=1:1"/>
+</picture>
+```
+
 ### Bypass Image Optimization 
 
 To bypass image optimization to get the raw encoding and data of the origin image, append `?raw=true` to the end of the image request like so:
