@@ -18,6 +18,10 @@ Access the full url to the Satellite™ CDN.
 
 Access the date from the Satellite. [Additional formatting options](https://developer.zesty.io/parsley-templating/dates/).
 
+{% hint style="info" %}
+Please note that this Parsley call outputs the current date in GMT time zone.
+{% endhint %}
+
 ```text
 {{ instance.date() }}
 ```
