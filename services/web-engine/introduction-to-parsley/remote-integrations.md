@@ -16,6 +16,10 @@ description: Parsley can make web requests to remote data for server side render
 
 The above code is an example of pulling remote JSON data \(this can be from any source, Zesty.io just happens to be the example\). The JSON you are accessing has to be in a specific structure which is one of two options.
 
+{% hint style="info" %}
+Parsley will add `_index` `_length` and `_num`to each object, if you have references to those fields in your JSON object, they will be overwritten. You can use {{obj.num}}, {{obj.\_index}} or {{obj.\_length}} to aid in your logic. index starts at 0, num starts at 1.
+{% endhint %}
+
 ### JSON Formatting Options
 
 #### Remote JSON Format Option 1: Single Flat Object
