@@ -8,11 +8,11 @@ Parsley AutoLayout \(PAL\) is a function that generates automatic HTML by lookin
 
 **Examples:**
 
-* `{{this.autoLayout(inline)}}`
-* `{{each model as item}} {{item.autoLayout(inline)}} {{end-each}}`
-* `{{model.first().autoLayout(inline)}}`
+* `{{this.autoLayout(stacked)}}`
+* `{{each model as item}} {{item.autoLayout(stacked)}} {{end-each}}`
+* `{{model.first().autoLayout(stacked)}}`
 
-Auto Layout takes one parameter `autoLayout(type)`. The default default type is `inline` and currently the only available option. Planned future options include `grid` and `article` . The type will change the layout behavior of the auto layout and HTML output, but it will not change the content outputted.
+Auto Layout takes one parameter `autoLayout(type)`. The default default type is `stacked` and currently the only available option. Planned future options include `grid` and `article` . The type will change the layout behavior of the auto layout and HTML output, but it will not change the content outputted.
 
 If auto layout is called on an illegal reference it will output an error string stating the fact, this error will be suppressed to a comment on live instances.
 
@@ -20,7 +20,7 @@ If auto layout is called on an illegal reference it will output an error string 
 
 The Inline option stacks html element on top of one another.
 
-{% code title="{{this.autolayout\(inline\)}} example" %}
+{% code title="{{this.autolayout\(stacked\)}} example" %}
 ```markup
 <div class="pal-container">
     <h1 class="pal-text">Hello, World</h1>
