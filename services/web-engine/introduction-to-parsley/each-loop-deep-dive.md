@@ -203,3 +203,13 @@ loop content...
 {{ end-each }}
 ```
 
+### Eaching through Media
+
+When you have a content item that has a media field that has more than one media reference, you can loop through them with an each loop like so. In this example, our media reference is {{this.multiple\_images}}
+
+```text
+{{ each media.{this.multiple_images} as image}}
+    <img alt="{{image._length}} {{image._num}}" src="{{ image.image.getImage(960,460,crop) }}">
+{{ end-each }}
+```
+
