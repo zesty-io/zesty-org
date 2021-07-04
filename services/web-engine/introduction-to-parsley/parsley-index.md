@@ -483,7 +483,18 @@ The `math()` call executes an equation and returns a number.
 
 ## navigation\(number\)
 
-The `navigation()` call will access your Zesty.io Navigation Structure and output it as an HTML list. The call will mimic the content navigation layout you find in the Zesty.io Content Manager and will ignore pages marked as unlisted. A number argument will specify what level of children to access within the navigation. Blank will list all pages, 1 will only be top level pages, 2 will be top level and subpages, 3 will be top level, subpages and tertiary pages, and so on.
+The `navigation()` call will access your Zesty.io Navigation Structure and output it as an HTML list. 
+
+```text
+site.navigation(INT depth, BOOL bootstrap, BOOL json)
+
+{{site.navigation()}} // all defaults to html output
+{{site.navigation(1)}}  // depth of the parent child levels
+{{site.navigation(3, false, true)}}  // json output
+
+```
+
+The call will mimic the content navigation layout you find in the Zesty.io Content Manager and will ignore pages marked as unlisted. A number argument will specify what level of children to access within the navigation. Blank will list all pages, 1 will only be top level pages, 2 will be top level and subpages, 3 will be top level, subpages and tertiary pages, and so on.
 
 ```text
 {{ navigation() }}
@@ -497,6 +508,8 @@ The `navigation()` call will access your Zesty.io Navigation Structure and outpu
      </li>
      <li><a href="..."></a></li>
 </ul>
+
+
 ```
 
 ## number\_format\(number\)
