@@ -47,5 +47,7 @@ Each HTML element outputs with a class of "pal-\[fieldtype\]" while the encompas
 
 ### Content Layout Designer Behavior
 
-The drag n drop Content Designer Layout output will be automatically accessed by default by autoLayout when `auto` or `json` is passed. 
+The drag n drop Content Layout Designer output will be automatically accessed by default by autoLayout when `auto` or `json` is passed. 
+
+Content Layout Designer write two files when a save or publish occurs, they follow this format `/z/pvl/[ZUID].json` and `/z/pvl/[ZUID].zhtml` When autoLayout\(\) resolves, it looks to see if the associated content item or content model has a related set of files that match this format, if they do, Content Layout Designer will resolve automatically. 
 
