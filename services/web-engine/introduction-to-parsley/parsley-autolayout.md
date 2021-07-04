@@ -1,5 +1,7 @@
 ---
-description: Automagical HTML output of headless content.
+description: >-
+  Automagical HTML output of headless content. Instant access to Content Layout
+  output.
 ---
 
 # Parsley AutoLayout
@@ -8,13 +10,13 @@ Parsley AutoLayout \(PAL\) is a function that generates automatic HTML by lookin
 
 **Examples:**
 
-* `{{this.autoLayout(stacked)}}`
+* `{{this.autoLayout()}}`
 * `{{each model as item}} {{item.autoLayout(stacked)}} {{end-each}}`
-* `{{model.first().autoLayout(stacked)}}`
+* `{{model.first().autoLayout(auto)}}`
 
-Auto Layout takes one parameter `autoLayout(type)`. The default default type is `stacked` and currently the only available option. Planned future options include `grid` and `article` . The type will change the layout behavior of the auto layout and HTML output, but it will not change the content outputted.
+Auto Layout takes a single parameter `autoLayout(mode)`. The default mode is `auto` . `auto` `stacked` and `json` the current available options. The type will change the layout behavior of the auto layout and HTML output, but it will not change the content outputted. Auto will also access output from the [Content ](parsley-autolayout.md#content-designer-layout-behavior)[Layout](parsley-autolayout.md#content-designer-layout-behavior) [Designer tool](parsley-autolayout.md#content-designer-layout-behavior).
 
-If auto layout is called on an illegal reference it will output an error string stating the fact, this error will be suppressed to a comment on live instances.
+If auto layout is called on an illegal parsley reference it will output an error string stating the fact, this error will be suppressed to a comment on live instances.
 
 ### Parsley AutoLayout Output Examples
 
@@ -42,4 +44,8 @@ The Inline option stacks html element on top of one another.
 ### CSS Classes
 
 Each HTML element outputs with a class of "pal-\[fieldtype\]" while the encompassing div has the class "pal-container". Developer can control PAL to have custom output by targeting these CSS classes in their own code.
+
+### Content Layout Designer Behavior
+
+The drag n drop Content Designer Layout output will be automatically accessed by default by autoLayout when `auto` or `json` is passed. 
 
