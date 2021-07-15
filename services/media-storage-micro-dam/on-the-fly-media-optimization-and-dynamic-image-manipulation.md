@@ -37,6 +37,12 @@ Zesty.io automatically transforms images as the content-type "webp", which is a 
   <source srcset="{{this.image.getImage()}}?width=600&crop=16:9" media="(min-width: 600px)"/>
   <img src="{{this.image.getImage()}}?width=320&crop=1:1"/>
 </picture>
+
+<style>
+  .header {
+    background-image: url(https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=2000)
+  }
+</style>
 ```
 
 ### Bypass Image Optimization 
