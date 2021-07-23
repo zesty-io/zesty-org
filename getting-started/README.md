@@ -6,7 +6,7 @@ description: >-
   headless CMS apps, and marketing components.
 ---
 
-# Getting Started
+# Common Concepts
 
 ## Getting Started with Your Instance
 
