@@ -413,7 +413,7 @@ Default value is true
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Javascript
+### JavaScript
 
-Zesty.io combines all script files into a single concatenated `/main.js` file, this file automatically links in the head vi a script tag, and can optionally be omitted in developer settings on the instance.
+Zesty.io combines all script files into a single concatenated `/main.js` file, this file automatically links in the head via script tag, and can optionally be omitted in developer settings on the instance.
 

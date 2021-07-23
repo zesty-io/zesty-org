@@ -23,7 +23,7 @@ The Instance Settings Drawer contains many of an instances general settings. Any
 * Access Tokens
 * Blueprint Settings
   * Blueprint name
-  * Github Link
+  * GitHub Link
   * Change blueprint button
 
 ### Accessing the Instance Settings Drawer

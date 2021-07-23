@@ -18,7 +18,7 @@ Full access to all sections: Content, Media, Web IDE, Leads, Analytics, Schema, 
 
 #### **Admin** 
 
-Admins have the same privileges as the Owner role.
+Admins have the same privileges as the Owner role except for deleting other users.
 
 ![Admin role access view.](../.gitbook/assets/admin-role-access.png)
 
