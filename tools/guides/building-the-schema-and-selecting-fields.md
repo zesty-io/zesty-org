@@ -20,29 +20,29 @@ After we create content models, we'll add fields to them. Fields allow users to 
 
 The Schema section's home screen has a step-by-step guide to help you choose the right content model for your needs. After the content model type is selected, you'll name it, then select a parent if necessary, and create it.
 
-![Schema section home screen.](../.gitbook/assets/schema-section-homescreen.png)
+![Schema section home screen.](../../.gitbook/assets/schema-section-homescreen.png)
 
 ### Step 1: Model Type
 
-![Creating a content model step 1: select a model type.](../.gitbook/assets/schema-section-content-model-creation-step1-model-type.png)
+![Creating a content model step 1: select a model type.](../../.gitbook/assets/schema-section-content-model-creation-step1-model-type.png)
 
 Use the toggles to answer the prompts and the content model type will be automatically selected based on your answers. If you already know what you need go ahead and select your content model type from the dropdown.
 
 ### Step 2: Model Description
 
-![Creating a content model step 2: give it a name.](../.gitbook/assets/schema-section-content-model-creation-step2-model-description.png)
+![Creating a content model step 2: give it a name.](../../.gitbook/assets/schema-section-content-model-creation-step2-model-description.png)
 
 Fill out the Display Name textbox and the Reference Name will auto-populate. The Display Name is used to identify the model in the Content section. The Reference Name is used to identify the model in the Editor section. The Description is optional. The model's Display Name, Reference Name, and Description can all be edited after it's been created.
 
 ### Step 3: Model Parent
 
-![Creating a content model step 3: select a parent](../.gitbook/assets/schema-section-content-model-creation-step3-model-parent.png)
+![Creating a content model step 3: select a parent](../../.gitbook/assets/schema-section-content-model-creation-step3-model-parent.png)
 
 Selecting a parent for your model will affect how it displays in Content section and will create default paths for its routing. For example if you have a set called Articles and you select a page called Blog Page as its parent, the URL path for the articles will be: `/blog-page/article-name`. The model's parent can be edited after it's been created.
 
 ### Step 4: Content Model Creation
 
-![Creating a content model step 4: create the model](../.gitbook/assets/create-new-model-button%20%281%29.png)
+![Creating a content model step 4: create the model](../../.gitbook/assets/create-new-model-button%20%281%29.png)
 
 Click the green Create New Model button to create your model.
 
@@ -50,17 +50,17 @@ Click the green Create New Model button to create your model.
 
 Fields are added to a content model after it's been created. Fields allow users to enter their content.
 
-![Content Model without any fields.](../.gitbook/assets/add-field-to-content-model.png)
+![Content Model without any fields.](../../.gitbook/assets/add-field-to-content-model.png)
 
 ### Step 1: Field Dropdown
 
-![Add a field step 1: Click the dropdown for a list of field types.](../.gitbook/assets/field-selection-dropdown.png)
+![Add a field step 1: Click the dropdown for a list of field types.](../../.gitbook/assets/field-selection-dropdown.png)
 
 Click the dropdown to select a field. Determine the field type you need by thinking about the type of content that will be entered. Learn more about field types by reading this [article](https://zesty.org/services/manager-ui/schema/fields).
 
 ### Step 2: Field Type
 
-![Add a field step 2: select a field type](../.gitbook/assets/select-a-field-type.png)
+![Add a field step 2: select a field type](../../.gitbook/assets/select-a-field-type.png)
 
 Select a field from the dropdown by hovering over it and clicking it.
 
@@ -84,31 +84,31 @@ All of these attributes can also be edited after the field is created. _\*\*_
 
 **Field Label and Field Name**
 
-![Field Label and Field Name](../.gitbook/assets/label-and-name-your-field%20%281%29.png)
+![Field Label and Field Name](../../.gitbook/assets/label-and-name-your-field%20%281%29.png)
 
 Give your field a Field Label and Field Name.The Field Label will be displayed in the Content section when you're adding content. The Field Name will be used to identify a content model's field in the Editor. The Field Name will auto-populate based on the Field Label's text.
 
 **Is this field required?**
 
-![Required field toggle](../.gitbook/assets/field-required-option.png)
+![Required field toggle](../../.gitbook/assets/field-required-option.png)
 
 If this toggle is flipped to Yes then an asterisk will appear next to the Field Label in the Content section. This field will be required to have content in it prior to saving and publishing in the Content section.
 
 **Show this value in the table listing view?**
 
-![Show-in-table toggle](../.gitbook/assets/field-show-in-table.png)
+![Show-in-table toggle](../../.gitbook/assets/field-show-in-table.png)
 
 This attribute only applies to multi-page sets and headless sets. If you'd like this field to show in the [table-listing view](https://zesty.org/services/manager-ui/content#table-listing-view) make sure this attribute is toggled to Yes.
 
 **Tool tip and description**
 
-![Tool tip and description attribute.](../.gitbook/assets/field-tool-tip-description.png)
+![Tool tip and description attribute.](../../.gitbook/assets/field-tool-tip-description.png)
 
 The Tool tip and Description attributes are used to direct your content editors when they're entering content. For example, if you have a text area and you want to limit its content to 3 sentences you can instruct your content editors to limit the content to 3 sentences.
 
 ### Step 4: Field Creation
 
-![Add Field button](../.gitbook/assets/add-field-button.png)
+![Add Field button](../../.gitbook/assets/add-field-button.png)
 
 Once you're finished filling out the attributes click the green + ADD FIELD button to add the field to your content model.
 

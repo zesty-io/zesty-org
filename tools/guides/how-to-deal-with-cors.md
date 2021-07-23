@@ -18,7 +18,7 @@ If you are just starting to learn about CORS one of the best places to start is 
 
 CORS is an acronym for Cross-Origin Resource Sharing. CORS is when one domain makes an XMLHttpRequest \(XHR\) to another domain. This commonly occurs when using JavaScript to make an HTTP request to an API. ****
 
-![CORS diagram](../.gitbook/assets/cors.png)
+![CORS diagram](../../.gitbook/assets/cors.png)
 
 CORS provides instructions by the requested server to the requesting client \(your web browser\) on what its rules are on requests from other domains which aren't itself. A basic example of CORS is as follows: When domain-A makes a request to domain-B, domain-B will send instructions back to domain-A stating whether or not domain-A is _allowed_ to make that request to domain-B. _We will refer to this example throughout this guide._
 
@@ -40,7 +40,7 @@ One of the biggest "gotchas" in front-end development can be browser extensions.
 
 Explicitly setting the header can cause issues. These issues will be indicated by an error in the console. For example, the error below says: Request header field skip-caching is not allowed by Access-Control-Allow-Headers in preflight response. 
 
-![Access-Control-Allow-Headers failure in the Chrome console.](../.gitbook/assets/header-errors.png)
+![Access-Control-Allow-Headers failure in the Chrome console.](../../.gitbook/assets/header-errors.png)
 
 This means that a skip-caching header has been explicitly declared and is causing the failure.   
 Explicitly set request headers, that are not default headers, have to be explicitly allowed by the values returned in the `Access-Control-Allow-Headers` header. If you're unsure about  what allowed headers the endpoint supports, look at the preflight Options response. The values displayed on the Access-Control-Allow-Headers determines what can be used. 
@@ -53,17 +53,17 @@ _Please be aware that not all browser inspectors are created equal and can have 
 
 Most browsers' inspectors can be accessed by right-clicking on a web page to show the context menu and selecting the "inspect" option. 
 
-![Opening the inspector in Chrome](../.gitbook/assets/open-inspector.png)
+![Opening the inspector in Chrome](../../.gitbook/assets/open-inspector.png)
 
 This should open the inspector which will contain multiple tabs. The two we are interested in will be the "Console" and "Network" tab.
 
-![Chrome&apos;s inspector.](../.gitbook/assets/open-inspector-shown.png)
+![Chrome&apos;s inspector.](../../.gitbook/assets/open-inspector-shown.png)
 
 **Console**
 
 The console is where we can see errors and logs from both the browser and our page's source code. 
 
-![Chrome&apos;s console](../.gitbook/assets/console.png)
+![Chrome&apos;s console](../../.gitbook/assets/console.png)
 
 When a CORS error occurs you should see a console error stating what the error was.
 
@@ -73,7 +73,7 @@ Sometimes when a server error occurs the browser will display it as a CORS error
 
 Typically the displayed error will point out the exact header which caused the CORS failure.
 
-![Example CORS error from the console.](../.gitbook/assets/cors-error.png)
+![Example CORS error from the console.](../../.gitbook/assets/cors-error.png)
 
  This information is usually enough to understand what caused the failure and what is needed to allow the request to succeed. Most commonly this is a mismatch between the origin-domain \(domain-A\) and requested-domain \(domain-B\). If your response header `Access-Control-Allow-Origin` value does not match the domain you are on, then it will fail. If this is the case you will need to communicate with the back-end server owner \(domain-B\) to determine a solution. For example: they would need to allow the domain \(domain-A\) you are requesting from.
 
@@ -89,17 +89,17 @@ In addition to the `Access-Control-Allow-*` headers there are also [`Access-Cont
 
 By using the network tab we can inspect all the network traffic to and from the domain we are on. 
 
-![Chrome&apos;s inspector tool.](../.gitbook/assets/network-tab.png)
+![Chrome&apos;s inspector tool.](../../.gitbook/assets/network-tab.png)
 
 When clicking on a request, such as our HTTP [OPTIONS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/OPTIONS) method request, \(OPTIONS is a type of [HTTP request method](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) like GET, POST, etc.\) we will see both the request and response headers. 
 
 _Note:_ In order to see the requests' methods you may need to right-click in the inspector and select _Method_ from the menu shown.
 
-![Select Method from the ,menu to shown to see the Method column. ](../.gitbook/assets/inspector-show-method.png)
+![Select Method from the ,menu to shown to see the Method column. ](../../.gitbook/assets/inspector-show-method.png)
 
 In looking at the response headers of our OPTIONS request we will be able see what `Access-Control-Allow-*` were returned from our back-end server. These instructions are the instructions that the browser then follows.
 
-![Request headers in Chrome&apos;s inspector.](../.gitbook/assets/inspector-headers.png)
+![Request headers in Chrome&apos;s inspector.](../../.gitbook/assets/inspector-headers.png)
 
 If the domain we are on is _not_ shown in the `Access-Control-Allow-Origin` value then we will not be able to make the CORS request.
 
@@ -127,7 +127,7 @@ Since your Zesty.io instance can act as an API to front-end code you have the op
 
 Your instance has two types of APIs the [Instant JSON API](https://zesty.org/apis/instant-content-api) and [Custom Endpoints](https://zesty.org/services/manager-ui/editor/custom-file-types-endpoints). By [turning on the CORS setting](https://zesty.org/services/manager-ui/settings/instance-settings#developer) for these APIs in the [instance Developer settings](https://zesty.org/services/manager-ui/settings/instance-settings#developer) you will allow  requests from external domains to yours. This is how you can allow public browser access to your APIs.
 
-![Zesty.io CORS developer settings.](../.gitbook/assets/zesty-io-cors-settings.png)
+![Zesty.io CORS developer settings.](../../.gitbook/assets/zesty-io-cors-settings.png)
 
 ## Conclusion
 

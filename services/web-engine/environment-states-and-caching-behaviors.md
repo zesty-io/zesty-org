@@ -8,7 +8,7 @@ description: >-
 
 ### WebEngine Environment States
 
-WebEngine has two primary states, stage preview \[**dev**\], and published production \[**live**\]. **Live** is available through registered domains which have their branch set to **live. Dev** is available through your preview domain _HASH-dev.preview.zesty.io_ or through a [registered domain](../../guides/how-to-launch-an-instance.md#1-set-a-custom-domain-name) that has branch set to **dev.** Domains are assigned in the accounts.zesty.io user interface.
+WebEngine has two primary states, stage preview \[**dev**\], and published production \[**live**\]. **Live** is available through registered domains which have their branch set to **live. Dev** is available through your preview domain _HASH-dev.preview.zesty.io_ or through a [registered domain](../../tools/guides/how-to-launch-an-instance.md#1-set-a-custom-domain-name) that has branch set to **dev.** Domains are assigned in the accounts.zesty.io user interface.
 
 | Environment State | What resolves |
 | :--- | :--- |

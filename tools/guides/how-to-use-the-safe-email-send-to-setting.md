@@ -42,15 +42,15 @@ Before trying to use this feature be sure that it is available on your instance.
 
 1. Navigate to Settings and then Contact Form. 
 
-![](../.gitbook/assets/01-navigate-to-settings.png)
+![](../../.gitbook/assets/01-navigate-to-settings.png)
 
 2. Fill out the Safe Email Sent To List field with comma separated value\(s\).
 
-![](../.gitbook/assets/02-enter-emails.png)
+![](../../.gitbook/assets/02-enter-emails.png)
 
 3. Save your changes.
 
-![](../.gitbook/assets/03-save.png)
+![](../../.gitbook/assets/03-save.png)
 
 4. Refresh the cache by publishing a file or use the [refresh cache button](https://zesty.org/guides/refreshing-the-cache) to ensure that the changes you've made have persisted.
 

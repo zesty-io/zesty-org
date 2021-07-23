@@ -16,33 +16,33 @@ Below we'll give you a brief guide of the Editor section, including a brief Pars
 
 A link to the Editor section can be found in the header navigation. The header navigation is found at the top of the content manager.
 
-![Editor section in the header navigation.](../.gitbook/assets/navigate-to-editor.png)
+![Editor section in the header navigation.](../../.gitbook/assets/navigate-to-editor.png)
 
 Once the Editor section opens, select a file from one of the left-hand navigation's 3 sections: Views, Style Sheets, and Scripts,  and edit the code in the main portion of the screen. The drawer below the main portion of the screen is the utility drawer which contains snippets of Parsley, meta tags, publishing history, and more.
 
-![Editor section homescreen.](../.gitbook/assets/editor-home-screen.png)
+![Editor section homescreen.](../../.gitbook/assets/editor-home-screen.png)
 
 #### Views
 
 The views are organized alphabetically except of the endpoints that begin with a forward slash  `/` which will appear at the top of the list. Select a file by clicking on it and the code will show in the main portion of the screen.
 
-![Views is the first section of the left-hand navigation.](../.gitbook/assets/views-sidebar.png)
+![Views is the first section of the left-hand navigation.](../../.gitbook/assets/views-sidebar.png)
 
 **General tour**
 
 Once a file is selected a tab will show below the header nav with that file's name and the code shows in the main portion of the screen.
 
-![Currently open files will show in tabs just below the main header navigation.](../.gitbook/assets/views-opened-files.png)
+![Currently open files will show in tabs just below the main header navigation.](../../.gitbook/assets/views-opened-files.png)
 
 The name of the file that you're in shows at the top of the code editing portion \(main portion\) of the screen.
 
-![File names are shown at the top of the code editing portion of the screen.](../.gitbook/assets/file-names.png)
+![File names are shown at the top of the code editing portion of the screen.](../../.gitbook/assets/file-names.png)
 
 **Adding files**
 
 Add a new snippet, endpoint, or HTML Ajax file by clicking the `+` symbol in the Views header.
 
-![Click the plus symbol to add a new file.](../.gitbook/assets/editor-add-new-file.png)
+![Click the plus symbol to add a new file.](../../.gitbook/assets/editor-add-new-file.png)
 
 1. Click the `+` symbol. 
 
@@ -50,7 +50,7 @@ Add a new snippet, endpoint, or HTML Ajax file by clicking the `+` symbol in the
 
 3. A modal will open so you can name your new file.
 
-![Modal for new View file.](../.gitbook/assets/new-view-file.png)
+![Modal for new View file.](../../.gitbook/assets/new-view-file.png)
 
 If you choose an Endpoint make sure to start the name with a forward slash and include a file extension such as `.txt` or `.json`.
 
@@ -60,13 +60,13 @@ If you choose an Endpoint make sure to start the name with a forward slash and i
 
 Click in the code editing portion of the screen to edit the code. 
 
-![Click into the main portion of the screen where the code is displayed to edit it.](../.gitbook/assets/coding-portion-of-the-screen.png)
+![Click into the main portion of the screen where the code is displayed to edit it.](../../.gitbook/assets/coding-portion-of-the-screen.png)
 
 **Saving changes**
 
 Use CMD+s or CTRL+s to save your changes; additionally there is a save button that turns green once changes are made to a file.
 
-![The green save button highlights itself once a change has been made.](../.gitbook/assets/editor-save-button.png)
+![The green save button highlights itself once a change has been made.](../../.gitbook/assets/editor-save-button.png)
 
 **Publish file\(s\)**
 
@@ -74,15 +74,15 @@ Once a file has been changed there are several publishing workflows to consider:
 
 * Once a file has been edited and saved. An icon will show next to its name in the left-hand navigation. Click the icon to publish it. 
 
-![Publish icon in the left-hand navigation.](../.gitbook/assets/pub-by-clicking-icon.png)
+![Publish icon in the left-hand navigation.](../../.gitbook/assets/pub-by-clicking-icon.png)
 
 * Click the Review and Publish button which is next to the green Save button. 
 
-![Click the Review and Publish button to review a diff of your changes before you publish.](../.gitbook/assets/screen-shot-2020-03-23-at-5.54.19-pm.png)
+![Click the Review and Publish button to review a diff of your changes before you publish.](../../.gitbook/assets/screen-shot-2020-03-23-at-5.54.19-pm.png)
 
 Once you have reviewed your changes click the green Publish to Live Web Engine button to publish your changes.
 
-![Review and publish diff between current and dev versions.](../.gitbook/assets/editor-review-and-pub-diff.png)
+![Review and publish diff between current and dev versions.](../../.gitbook/assets/editor-review-and-pub-diff.png)
 
 * Click the green Publish All button which is shown above the Review and Publish button. 
 
@@ -90,7 +90,7 @@ Once you have reviewed your changes click the green Publish to Live Web Engine b
 Use the Publish All button with caution. This button will publish _all_ of your changes. For example, if multiple changes have been made and saved across a number of files like style sheets, script, and views clicking Publish All will send all of those files live. 
 {% endhint %}
 
-![The green Publish All button will publish all of the changes that have been made to any file.](../.gitbook/assets/editor-publish-all-button.png)
+![The green Publish All button will publish all of the changes that have been made to any file.](../../.gitbook/assets/editor-publish-all-button.png)
 
 {% hint style="info" %}
 Stylesheets and Scripts have the same editing, saving & publishing, and new file workflows as the Views thus the Style Sheet and Scripts descriptions will not contain images for viewing/editing/publishing/adding those files.
@@ -100,21 +100,21 @@ Stylesheets and Scripts have the same editing, saving & publishing, and new file
 
 The Stylesheets section is below the Views section in the left-hand sidebar and supports CSS, SCSS, and LESS files. 
 
-![Stylesheets are located below the Views.](../.gitbook/assets/stylessheets.png)
+![Stylesheets are located below the Views.](../../.gitbook/assets/stylessheets.png)
 
 **Reordering style files**
 
 1. Click the stacked up and down arrows to rearrange the order of your files. 
 
-![](../.gitbook/assets/stylesheet-reordering.png)
+![](../../.gitbook/assets/stylesheet-reordering.png)
 
 2. Use the arrows to drag filed and rearrange them.
 
-![Use the arrows drag your files into a different order.](../.gitbook/assets/drag-arrows-to-rearrange.png)
+![Use the arrows drag your files into a different order.](../../.gitbook/assets/drag-arrows-to-rearrange.png)
 
 3. Click the orange button with disc icon to save the order of your files.
 
-![Orange save button with disc icon.](../.gitbook/assets/orange-save-button.png)
+![Orange save button with disc icon.](../../.gitbook/assets/orange-save-button.png)
 
 {% hint style="info" %}
 Script files are reordered in the same way as stylesheet files thus the Scripts section below does not contain images and instructions on how reorder files.

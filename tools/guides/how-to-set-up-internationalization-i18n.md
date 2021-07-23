@@ -10,7 +10,7 @@ description: >-
 
 Internationalization \(i18n\) refers to adapting your instance's into another language. This gives sites with an international audience the ability to create content in different languages with the click of a button. _**Note: By default all Zesty.io instances are in English. Contact support@zesty.io if want to make an instance with a different default language.**_  When languages are added the muti-lang URLs will contain both the language _and_ locale as applicable. For example, es \(Spanish\) has variants by locale such as CO \(Columbia\), ES \(Spain\), MX \(Mexico\), UY \(Uruguay\) and so on; the URL will be in the form of domain/language-locale/my-content e.g., `example.com/es-mx/my-content`.
 
-![Example URL structure in internationalization.](../.gitbook/assets/i18n-domain-paths.png)
+![Example URL structure in internationalization.](../../.gitbook/assets/i18n-domain-paths.png)
 
 {% hint style="warning" %}
 Zesty.io's multi-lang will **not** translate the page for you. However, it will add the language and locale to the URL.
@@ -18,11 +18,11 @@ Zesty.io's multi-lang will **not** translate the page for you. However, it will 
 
 Once a language is added the template is duplicated. Although languages share a template _they have separate ZUIDs_ - in other words - duplicates do not share their ZUID with the original language. For example, the template for English will have the same template as Spanish, however, each one will have their own ZUID. 
 
-![Content is duplicated when languages are added.](../.gitbook/assets/01a-duplicated-content.png)
+![Content is duplicated when languages are added.](../../.gitbook/assets/01a-duplicated-content.png)
 
  And the item's path will be prepended with the language and locale _except for the original language_.
 
-![Languages \(except original\) are prepended with language and locale.](../.gitbook/assets/02b-lang-locale-paths.png)
+![Languages \(except original\) are prepended with language and locale.](../../.gitbook/assets/02b-lang-locale-paths.png)
 
 {% hint style="danger" %}
 Deleting one multi-lang item will delete all of its siblings.   
@@ -55,9 +55,9 @@ Multiple languages **cannot** be activated with a single PUT. Every language tha
 
 Once internationalization is setup, a language selector dropdown will appear in each content item that allows you to select the language.
 
-![Select the content&apos;s language through this dropdown.](../.gitbook/assets/05-i18n-language-select-dropdown.png)
+![Select the content&apos;s language through this dropdown.](../../.gitbook/assets/05-i18n-language-select-dropdown.png)
 
 Select the language/locale option from the dropdown. Once selected, you will be able to edit content for that item in the chosen language/locale. Each language/locale will have its own versions and ZUID.
 
-![Content editing views are duplicated on a per-language basis.](../.gitbook/assets/06-i18n-es-mx-editing-content.png)
+![Content editing views are duplicated on a per-language basis.](../../.gitbook/assets/06-i18n-es-mx-editing-content.png)
 

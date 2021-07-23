@@ -22,9 +22,9 @@ Before you setup this path you should have a language added to your instance and
 
 2. Navigate to the Settings section, and under Instance settings select i18n
 
-![Navigate to Instance Settings to modify the I18n setting.](../.gitbook/assets/set-multilang-header.png)
+![Navigate to Instance Settings to modify the I18n setting.](../../.gitbook/assets/set-multilang-header.png)
 
 3. Add the path you chose in step 1 and click save.
 
-![Add the path that you want to designate and click Save.](../.gitbook/assets/multilang-header-path.png)
+![Add the path that you want to designate and click Save.](../../.gitbook/assets/multilang-header-path.png)
 

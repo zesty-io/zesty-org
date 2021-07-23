@@ -31,23 +31,23 @@ For this guide we're going to be making a simple header for our website. We are 
 
 1. Navigate to the Web IDE.
 
-![Navigate to the Web IDE.](../.gitbook/assets/01-create-snippet-navigate-to-ide.png)
+![Navigate to the Web IDE.](../../.gitbook/assets/01-create-snippet-navigate-to-ide.png)
 
 2. Create the blue Create File button. Note: depending on your screen size you'll simple see a blue button with a + sign on it.
 
-![Create a new file.](../.gitbook/assets/02-create-snippet-blue-create-file-button.png)
+![Create a new file.](../../.gitbook/assets/02-create-snippet-blue-create-file-button.png)
 
 3. Select Snippet from the dropdown.
 
-![Select Snippet as your File Type.](../.gitbook/assets/03-create-snippet-select-snippet-from-dropdown.png)
+![Select Snippet as your File Type.](../../.gitbook/assets/03-create-snippet-select-snippet-from-dropdown.png)
 
 4. Give it a name. There is no need to add an extension to the file name. 
 
-![Give your snippet a name.](../.gitbook/assets/04-create-snippet-name-it.png)
+![Give your snippet a name.](../../.gitbook/assets/04-create-snippet-name-it.png)
 
 5. Click Create.
 
-![Click the green Create File button to create your file.](../.gitbook/assets/05-create-snippet-click-create-file.png)
+![Click the green Create File button to create your file.](../../.gitbook/assets/05-create-snippet-click-create-file.png)
 
 ### Using Snippets
 
@@ -57,23 +57,23 @@ After creating your Snippet:
 
 1. Include your snippet in a View so you can view your changes as you're coding.
 
-![Include your snippet in a view.](../.gitbook/assets/01-use-snip-include-in-view.png)
+![Include your snippet in a view.](../../.gitbook/assets/01-use-snip-include-in-view.png)
 
 2. Code your Snippet as necessary.
 
-![Add code to your snippet file.](../.gitbook/assets/02-use-snip-code-snippet-as-necessary.png)
+![Add code to your snippet file.](../../.gitbook/assets/02-use-snip-code-snippet-as-necessary.png)
 
 3. Save your changes. 
 
-![Save your changes.](../.gitbook/assets/03-use-snip-save-changes.png)
+![Save your changes.](../../.gitbook/assets/03-use-snip-save-changes.png)
 
 4. preview them before sending them live.
 
-![Before and after adding the header snippet.](../.gitbook/assets/snippets-before-and-after.png)
+![Before and after adding the header snippet.](../../.gitbook/assets/snippets-before-and-after.png)
 
 5. Once you're satisfied with the code in your Snippet, send it live by publishing it.
 
-![Publish your snippet once you&apos;re ready to go live.](../.gitbook/assets/05-use-snip-send-live.png)
+![Publish your snippet once you&apos;re ready to go live.](../../.gitbook/assets/05-use-snip-send-live.png)
 
 {% hint style="info" %}
 To send snippets live both the snippet _and_ the view that the snippet is included in need to be published.

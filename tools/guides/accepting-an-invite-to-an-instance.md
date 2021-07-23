@@ -22,7 +22,7 @@ If you've never created an account in Zesty.io then [create an account](https://
 
 1. Navigate to [https://accounts.zesty.io/signup](https://accounts.zesty.io/signup) to sign up for an account.
 
-![](../.gitbook/assets/accept-invitation-create-account-form.png)
+![](../../.gitbook/assets/accept-invitation-create-account-form.png)
 
 2. After you've created an account, check your email and verify your account. 
 
@@ -32,7 +32,7 @@ If you don't see a verification email in your inbox check your spam folder.
 
 3. Click the orange "Verify your email address" button to verify your email address.
 
-![](../.gitbook/assets/accept-invitation-email-verification.png)
+![](../../.gitbook/assets/accept-invitation-email-verification.png)
 
 ### Steps
 
@@ -42,11 +42,11 @@ There are 2 ways to get to the Zesty.io login screen:
 
 1a. Locate the invitation in your inbox. 
 
-![](../.gitbook/assets/accept-invitation-invitation-email.png)
+![](../../.gitbook/assets/accept-invitation-invitation-email.png)
 
 2a. Open the email and click on the orange "Login to accept invite" button, which will route you to the Zesty.io login screen.
 
-![](../.gitbook/assets/accept-invitation-email-click-to-accept.png)
+![](../../.gitbook/assets/accept-invitation-email-click-to-accept.png)
 
 
 
@@ -58,15 +58,15 @@ There are 2 ways to get to the Zesty.io login screen:
 
 2. Use your account credentials to login to your account. 
 
-![Zesty.io login screen.](../.gitbook/assets/accept-invitation-sign-in.png)
+![Zesty.io login screen.](../../.gitbook/assets/accept-invitation-sign-in.png)
 
 3. There will be an Invites section in your all-instances view. Click the green Accept Invite section to accept your invite.
 
-![Accounts homescreen with Invites and All-Instances sections.](../.gitbook/assets/accept-invitation-all-instances-view.png)
+![Accounts homescreen with Invites and All-Instances sections.](../../.gitbook/assets/accept-invitation-all-instances-view.png)
 
 4. Once you accept your invite the instance's settings drawer will open and you'll see a  notification in the lower left-hand corner that you've accepted access to an instance. 
 
-![Acceptance notification and instance settings drawer.](../.gitbook/assets/accept-invite-instance-drawer-and-notification.png)
+![Acceptance notification and instance settings drawer.](../../.gitbook/assets/accept-invite-instance-drawer-and-notification.png)
 
 ### Troubleshooting
 

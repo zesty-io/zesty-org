@@ -23,7 +23,7 @@ Please note: input names that are prepended with and underscore will not be emai
 
 The `zcf` input instructs Zesty.io to send an email to the recipient configured in _Settings_ &gt; _Instance Settings_ &gt; _Contact Form_ as shown in the picture below. A common use case for this would be having a contact form that is submitted to your company email, the recipient.
 
-![General contact form settings are accessible in the Settings section.](../.gitbook/assets/settings-instance-settings-contact-form.png)
+![General contact form settings are accessible in the Settings section.](../../.gitbook/assets/settings-instance-settings-contact-form.png)
 
 #### Email Override: Setting a specific form to notify a different email than the one in settings.
 
@@ -37,11 +37,11 @@ The `zlf` input instructs Zesty to record the form submission. Then you can view
 
 This feature is a great alternative to a full CRM solution when you first get started capturing web generated leads.
 
-![The Leads section is only available once leads have been captured.](../.gitbook/assets/leads-section-01.png)
+![The Leads section is only available once leads have been captured.](../../.gitbook/assets/leads-section-01.png)
 
 As more people fill out the form this table will grow. By default `email`, `first_name`, and `last_name` input names will be displayed. Every other field will be stored and shown to you on the individual lead view.
 
-![](../.gitbook/assets/leads-section.png)
+![](../../.gitbook/assets/leads-section.png)
 
 ### Salesforce: Web to Lead
 

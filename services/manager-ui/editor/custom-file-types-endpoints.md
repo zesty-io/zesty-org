@@ -29,7 +29,7 @@ Create a file name with a full path, starting with a forward slash, like `/this/
 
 ### Some examples of file types that can be made
 
-* Custom JSON files \([How to Guide](../../../guides/how-to-create-a-customizable-json-endpoint-for-content.md)\)
+* Custom JSON files \([How to Guide](../../../tools/guides/how-to-create-a-customizable-json-endpoint-for-content.md)\)
 * SVG created off datasets \(e.g. dynamically rendering images of build locations\)
 * Dataset exports \(custom CSV exports\)
 * Contact information through VCARDS

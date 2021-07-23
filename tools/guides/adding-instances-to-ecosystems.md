@@ -18,19 +18,19 @@ New instances can be added to an EcoSystem when they are being named. Follow the
 
 1. Click the green  '+ Create Instance' button from the all-instances view.
 
-![The Create Instance button near the top right-hand corner of the all-instances view.](../.gitbook/assets/new-instance.png)
+![The Create Instance button near the top right-hand corner of the all-instances view.](../../.gitbook/assets/new-instance.png)
 
 1. Click in the text box and give you instance a name.
 
-![Name your instance text box.](../.gitbook/assets/name-instance.png)
+![Name your instance text box.](../../.gitbook/assets/name-instance.png)
 
 1. Click the arrow to reveal the dropdown and select which instance you'd like to share your media bin with \(ie create an EcoSystem with\).
 
-![Select an EcoSystem from the dropdown.](../.gitbook/assets/select-ecosys.png)
+![Select an EcoSystem from the dropdown.](../../.gitbook/assets/select-ecosys.png)
 
 1. Click the gray '+ Create New Instance' button. 
 
-![Create new instance button.](../.gitbook/assets/click-create-new-instance.png)
+![Create new instance button.](../../.gitbook/assets/click-create-new-instance.png)
 
 1. Complete the instance creation flow beginning with selecting a blueprint. If you're unfamiliar with the process follow [this](https://zesty.org/guides/how-to-create-a-new-instance#step-2-select-a-blueprint) guide. 
 

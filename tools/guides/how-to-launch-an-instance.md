@@ -18,23 +18,23 @@ There are 3 steps to making your instance accessible to the public.
 Before beginning the process to send your instance live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
 {% endhint %}
 
-{% file src="../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" caption="New Site Launch Checklist" %}
+{% file src="../../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" caption="New Site Launch Checklist" %}
 
-{% file src="../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Site Migration Checklist" %}
+{% file src="../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Site Migration Checklist" %}
 
 ## 1. Set a Custom Domain Name
 
 Start by locating the instance that you want to launch in the Accounts Manager interface and then click that instance's "Publish Instance" button.
 
-![To begin launching your instance click the &quot;Publish Instance&quot; button.](../.gitbook/assets/screen-shot-2019-08-30-at-1.04.05-pm.png)
+![To begin launching your instance click the &quot;Publish Instance&quot; button.](../../.gitbook/assets/screen-shot-2019-08-30-at-1.04.05-pm.png)
 
 After you click the "Publish Instance" button the instance settings will open and prompt you to set a domain name and configure your DNS settings. 
 
-![Instance Settings drawer prompts for sending your instance live.](../.gitbook/assets/accounts-setting-launch-instructions.png)
+![Instance Settings drawer prompts for sending your instance live.](../../.gitbook/assets/accounts-setting-launch-instructions.png)
 
 Enter your custom domain name in the textbox, select a branch, and click **+ Add Domain**. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`. 
 
-![Enter your domain, select a branch, and click Add Domain.](../.gitbook/assets/add-domain-set-branch.png)
+![Enter your domain, select a branch, and click Add Domain.](../../.gitbook/assets/add-domain-set-branch.png)
 
 ## 2. Configure you DNS
 
@@ -44,7 +44,7 @@ Enter your custom domain name in the textbox, select a branch, and click **+ Add
 
 Configure your domain's DNS settings by following the instructions in the settings drawer. 
 
-![DNS instructions in the Instance Settings drawer.](../.gitbook/assets/zesty-dns-settings.png)
+![DNS instructions in the Instance Settings drawer.](../../.gitbook/assets/zesty-dns-settings.png)
 
 {% hint style="info" %}
 **Please note**: Domain registrars are not one-size-fits-all so each step may not be applicable. See the [**Common DNS Registrars**](https://zesty.org/guides/how-to-launch-an-instance#common-dns-registrars) section below for more information.
@@ -93,7 +93,7 @@ Create or set an existing WWW record with the following values:
 * _Host_: `WWW`
 * _Value_: `zesty.map.fastly.net`
 
-![Standard WWW sub-domain request flow for Customers on Zesty.io Cloud](../.gitbook/assets/basic-dns-setup.png)
+![Standard WWW sub-domain request flow for Customers on Zesty.io Cloud](../../.gitbook/assets/basic-dns-setup.png)
 
 ## 3. Confirm your instance is live
 
@@ -113,7 +113,7 @@ If necessary you can configure your HTTPS and WWW settings before launching your
 
 Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings. 
 
-![HTTPS and WWW settings.](../.gitbook/assets/www-settings-general.png)
+![HTTPS and WWW settings.](../../.gitbook/assets/www-settings-general.png)
 
 Above you can see these settings outlined in orange. The tooltips will help you navigate this area and give you information about each setting.
 
@@ -160,11 +160,11 @@ Two instances cannot have the same domain assigned to it. Before the domain is a
 
 1. From the Accounts settings drawer, click the red trashcan icon button to the right of the name. 
 
-![Use the trashcan button to remove a domain name.](../.gitbook/assets/screen-shot-2020-12-21-at-2.48.11-pm.png)
+![Use the trashcan button to remove a domain name.](../../.gitbook/assets/screen-shot-2020-12-21-at-2.48.11-pm.png)
 
 2. A modal will pop up and confirm that you'd like to remove the domain. To confirm click the red **Remove** button. 
 
-![Click the red Remove button to remove the domain.](../.gitbook/assets/screen-shot-2020-12-21-at-3.01.21-pm.png)
+![Click the red Remove button to remove the domain.](../../.gitbook/assets/screen-shot-2020-12-21-at-3.01.21-pm.png)
 
 If it's been successfully removed a success notification will appear in the lower left-hand corner of the screen and you'll be able to add that domain to another instance.
 

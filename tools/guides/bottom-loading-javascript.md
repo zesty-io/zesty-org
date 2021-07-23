@@ -12,23 +12,23 @@ Follow these steps to bottom load your JavaScript.
 
 1. Navigate to your Settings section -&gt; Instance Settings category -&gt; Developer. 
 
-![Navigate to your instance&apos;s Settings section.](../.gitbook/assets/01-bottom-load-js.png)
+![Navigate to your instance&apos;s Settings section.](../../.gitbook/assets/01-bottom-load-js.png)
 
 2. Toggle the "Automatically include JavaScript" in head setting to _Off_ and save.
 
-![Automatically include JavaScript in head setting.](../.gitbook/assets/02-bottom-load-js-toggle.png)
+![Automatically include JavaScript in head setting.](../../.gitbook/assets/02-bottom-load-js-toggle.png)
 
 3. Navigate to the Editor and find the Loader listed under Views, and select it.
 
-![Editor section with loader file selected.](../.gitbook/assets/03-bottom-load-js-editor.png)
+![Editor section with loader file selected.](../../.gitbook/assets/03-bottom-load-js-editor.png)
 
 4. Add a script tag with the following Parsley call in the `src` attribute `{{instance.getJsUrl()}}`. For example: `<script type="text/javascript" src="{{instance.getJsUrl()}}"></script>`
 
-![Add a script tag to the Loader.](../.gitbook/assets/04-bottom-load-js-add-script-tag.png)
+![Add a script tag to the Loader.](../../.gitbook/assets/04-bottom-load-js-add-script-tag.png)
 
 5. Save and Publish your changes to send them live. 
 
-![Save and publish to send your changes live.](../.gitbook/assets/05-bottom-load-js-save-and-publish.png)
+![Save and publish to send your changes live.](../../.gitbook/assets/05-bottom-load-js-save-and-publish.png)
 
 
 
