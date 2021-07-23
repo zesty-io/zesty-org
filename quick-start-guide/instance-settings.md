@@ -19,7 +19,7 @@ After creating your instance you will be redirected to that instance's Settings 
 
 ### Domain & DNS Configuration
 
-Here you can added in your owned custom domains and D
+Here you can added in your owned custom domains and access DNS configurations. The DNS A records can be added to your domain's DNS settings. For additional setup information, see [How To Launch an Instance](../guides/how-to-launch-an-instance.md).
 
 ![](../.gitbook/assets/image%20%2883%29.png)
 
