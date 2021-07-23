@@ -46,7 +46,7 @@ Additional details regarding your instance are provided as well, shown below:
 
 ### Adding Users and Teams
 
-Each instance will need users and/or a team added. The user that creates the instance is giving ownership and may add in the desired users/team. Users are assigned a role, which governs their control in the instance. 
+Each instance will need users and/or a team added. The user that creates the instance is given ownership and may add in the desired users/team. Users are assigned a role, which governs their control in the instance. 
 
 {% hint style="info" %}
 [Roles & Permissions](../getting-started/roles-and-permissions.md#base-roles-types) provides a breakdown of each role and their access reach
