@@ -146,9 +146,6 @@
     * [Form Post to PHP with File Captured](tools/guides/integrations/form-post-to-php-with-file-captured.md)
     * [Stripe Checkout Integration](tools/guides/integrations/stripe-checkout-integration.md)
     * [Using ICS to create a Calendar Downloadd](tools/guides/integrations/using-ics-to-create-a-calendar-downloadd.md)
-    * [Zesty Burger: An Introduction to using iOS and Zesty.io](tools/guides/integrations/zesty-burger-an-introduction-to-using-ios-and-zesty.io.md)
-    * [Zesty Burger: ZestySwiftContentEndpointWrapper Documentation](tools/guides/integrations/zesty-burger-zestyswiftcontentendpointwrapper-documentation.md)
-    * [Zesty Burger: Running the Zesty Burger Demo](tools/guides/integrations/zesty-burger-running-the-zesty-burger-demo.md)
     * [Zesty.io Google Webmasters Integration](tools/guides/integrations/zesty.io-google-webmasters-integration.md)
   * [Forms and Form Webhooks](tools/guides/forms-and-form-webhooks.md)
   * [How to Implement Simple Pagination](tools/guides/how-to-implement-simple-pagination.md)
@@ -197,8 +194,6 @@
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
-* [Smart Devices](tools/smart-devices/README.md)
-  * [Amazon Fire TV and Roku](tools/smart-devices/amazon-fire-tv-and-roku.md)
 
 ## Community
 
