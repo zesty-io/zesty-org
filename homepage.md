@@ -16,6 +16,10 @@ Zesty.io is a cloud web content management system \(WCMS\) that is API driven wi
 
 We architected Zesty.io to meet the needs of any content usage such as a [traditional website](services/web-engine/) CMS, a [Headless CMS API](tools/code-examples/) interface, a modern JamStack \(JavaScript, API, Markup\) implementation, or a combination of solutions. This means Zesty.io can power content beyond websites into new digital mediums like smart devices, video game data, and mobile applications. As a cloud service, we are constantly improving our technology, often daily, with updates that positively affect all users and experiences built on the platform.
 
+With the diversity of client needs as our focal point, we built an ecosystem that has an straightforward workflow.  Its construction revolved around the expectation that content creation shouldn't be limited to engineering departments. Continual assessments and updates are preformed to ensure a streamlined interface accessible for marketers, content creators and developers. In the Quick Start Guide below, we provide the layout and navigational guide to creating your first project.
+
+{% page-ref page="quick-start-guide/" %}
+
 We see content as a blank canvas, and because of that, we made a system that allows for any content configuration that is easy for any user to work with.
 
 {% page-ref page="getting-started/" %}
