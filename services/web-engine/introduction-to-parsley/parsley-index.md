@@ -275,7 +275,7 @@ The `getImage()` function takes optional arguments for width, height, and type \
 
 ## getImageTitle\(\)
 
-The \`getImageTitle\(\) call returns the image title set in the Media Tab.
+The `getImageTitle()` call returns the image title set in the Media Tab.
 
 ```text
 {{ page.image.getImageTitle() }}
