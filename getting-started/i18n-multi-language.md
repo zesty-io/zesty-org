@@ -142,6 +142,36 @@ Auto-generated sitemap gets additional language qualifiers and pointers.
 ```
 {% endcode %}
 
+## Accessing Multi-Lang Locales with Parsley
+
+Parsley can be used to iterate through available languages. `{{each langs as lang}}` give you access to 
+
+* `{{lang.code}}` string e.g. `en-US` , `es-MX`
+* `{{lang.default}}` Boolean 1 or 0, 1 is true
+* `{{lang.name}}` string e.g. `English (United States)`, `Spanish (Mexico)`
+
+![](../.gitbook/assets/image%20%28110%29.png)
+
+{% code title="Parsley example usage for each looping through langs" %}
+```markup
+{{each langs as lang}}
+	{{if {lang.default} == 1}}
+	{{$path = / }}
+	{{else}}
+	{{$path = /{lang.code}/ }}
+	{{end-if}}
+	<a class="navbar-item" href="{{$path}}">
+		<span class="icon mr-2">
+			<img src="https://4q6k83l9.media.zestyio.com/{{lang.code}}.png?width=32" alt="{{lang.name}} flag"/>
+		</span>
+		<span>
+			{{lang.name}}
+		</span>
+	</a>
+{{end-each}}
+```
+{% endcode %}
+
 ## List of Languages Zesty.io Supports
 
 Each language has an associated code, that code is used in the API to create a new language for a Content Instance.
