@@ -144,6 +144,22 @@ Auto-generated sitemap gets additional language qualifiers and pointers.
 
 ## Accessing Multi-Lang Locales with Parsley
 
+Accessing the current language using Parsley is done by calling 
+
+* `{{instance.current_lang.code}}`
+* `{{instance.current_lang.id}}`
+* `{{instance.current_lang.name}}`
+
+```markup
+  <!-- to access them globally with javascript, add this to the top of the loader file-->
+  <script>
+  CURRENT_LANG_ID = '{{instance.current_lang.id}}'; // 1
+  CURRENT_LANG_NAME = '{{instance.current_lang.name)}}'; // English (United States) 
+  CURRENT_LANG_CODE = '{{instance.current_lang.code)}}'; // en-us
+  </script> 
+  <!-- this method is useful to array filter out locale content when using headless endpoint with client side javascript-->
+```
+
 Parsley can be used to iterate through available languages. `{{each langs as lang}}` give you access to 
 
 * `{{lang.code}}` string e.g. `en-US` , `es-MX`
