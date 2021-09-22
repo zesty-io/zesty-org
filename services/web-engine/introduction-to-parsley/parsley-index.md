@@ -669,7 +669,7 @@ This call will add a redirect the page.
 This call will response to your default 404 page, if there is no default 404 page, a generic 404 page will display with the "message" param as an h1 tag.
 
 ```text
-{{response.return4040(My Default Message)}}
+{{response.return404(My Default Message)}}
 ```
 
 ## sectionlinks\(number\)
