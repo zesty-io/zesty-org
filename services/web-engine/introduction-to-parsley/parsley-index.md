@@ -110,7 +110,7 @@ The `{{ current_view }}` call is a unique Zesty.io statement that will load the 
 
 ## date\(format\)
 
-Uses the [php date](https://www.php.net/manual/en/datetime.format.php) format to create the date string shown to the user. 
+Uses the [php date](https://www.php.net/manual/en/datetime.format.php) format to create the date string shown to the user.
 
 ```text
 <em>{{ page.published_date.date(l, F jS, Y \a\t g:ia) }}</em> 
@@ -483,7 +483,7 @@ The `math()` call executes an equation and returns a number.
 
 ## navigation\(number\)
 
-The `navigation()` call will access your Zesty.io Navigation Structure and output it as an HTML list. 
+The `navigation()` call will access your Zesty.io Navigation Structure and output it as an HTML list.
 
 ```text
 site.navigation(INT depth, BOOL bootstrap, BOOL json)
@@ -491,7 +491,6 @@ site.navigation(INT depth, BOOL bootstrap, BOOL json)
 {{site.navigation()}} // all defaults to html output
 {{site.navigation(1)}}  // depth of the parent child levels
 {{site.navigation(3, false, true)}}  // json output
-
 ```
 
 The call will mimic the content navigation layout you find in the Zesty.io Content Manager and will ignore pages marked as unlisted. A number argument will specify what level of children to access within the navigation. Blank will list all pages, 1 will only be top level pages, 2 will be top level and subpages, 3 will be top level, subpages and tertiary pages, and so on.
@@ -508,8 +507,6 @@ The call will mimic the content navigation layout you find in the Zesty.io Conte
      </li>
      <li><a href="..."></a></li>
 </ul>
-
-
 ```
 
 ## number\_format\(number\)
@@ -691,7 +688,7 @@ The `sectionlinks()` call looks at the current page and searches up to its top-l
 
 ## seo\_meta\_description
 
-Use this call to access an item's meta description. 
+Use this call to access an item's meta description.
 
 ```text
 {{ this.seo_meta_description }}

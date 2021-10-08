@@ -48,7 +48,7 @@ Open up Xcode and Create a New Xcode project \(if you don't see this option, ⌘
 
 For our purposes, we'll just create a Single View App \(but you can choose any option you want for your project\)
 
-![Creating a Single View App](../../../.gitbook/assets/singleviewapp%20%281%29%20%281%29%20%281%29%20%281%29.png)
+![Creating a Single View App](../../../.gitbook/assets/singleviewapp%20%281%29%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 Call it whatever you'd like, and for the Organization Identifier, Apple typically recommends using a reverse domain id, so if your domain is `example.com`, enter in `com.example`. This will make sure you have a proper Bundle ID created.
 
@@ -157,7 +157,7 @@ After this, hold the `control key` and drag from the table view to the view cont
 
 Next, we'll need to link the tableview to our view controller. Click the Two Circles Icon on the top right,
 
-![Two Circles Icon](../../../.gitbook/assets/twocircles%20%281%29%20%281%29%20%281%29.png)
+![Two Circles Icon](../../../.gitbook/assets/twocircles%20%281%29%20%281%29%20%281%29%20%281%29.png)
 
 and control drag the tableview to create a new outlet. Call it `tableView`.
 

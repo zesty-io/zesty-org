@@ -41,7 +41,7 @@ For the search results we are going to make a HTML AJAX file in the code editor.
 We need to write a Parsley `each` loop to match the posted term against any dataset property that we have setup. In our example we will see if there are any event zip codes which match our search term. We could easily add a Parsley `OR` statement and match against multiple values.
 
 ```text
-{{each events as event WHERE event.zip_code LIKE '{get_var.term}%'}}
+{{each events as event WHERE event.zip_code LIKE '%{get_var.term}%'}}
     <h1>{{event.title}}</h1>
     <h2>{{event.zip_code}}</h2>
 {{end-each}}

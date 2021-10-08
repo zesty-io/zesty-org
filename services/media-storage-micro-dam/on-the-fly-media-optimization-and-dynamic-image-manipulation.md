@@ -498,7 +498,7 @@ height in pixels
 
 ![Fit Crop Example: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=crop&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2837%29.png)
 
-![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2830%29.png)
+![Fit Bounds example keeps within the width, reducing height: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=bounds&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2833%29.png)
 
 ![Fit cover fits within the largest bounds, which is height in this examples: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?fit=cover&amp;width=200&amp;height=400](../../.gitbook/assets/image%20%2825%29.png)
 
@@ -534,7 +534,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2833%29.png)
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?height=100](../../.gitbook/assets/image%20%2833%29%20%281%29.png)
 
 {% api-method method="get" host="https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg" path="?optimize=high" %}
 {% api-method-summary %}
@@ -836,7 +836,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=800
 {% endapi-method-spec %}
 {% endapi-method %}
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=800](../../.gitbook/assets/image%20%2832%29.png)
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=800](../../.gitbook/assets/image%20%2825%29%20%281%29.png)
 
 #### About Zesty.io On-The-Fly Media Technology
 
