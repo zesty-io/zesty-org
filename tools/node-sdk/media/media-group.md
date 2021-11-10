@@ -30,5 +30,4 @@ try {
 
 **Create a group:**
 
-`````javascript try { const binZUID = "1-..." const group = await sdk.media.createGroup({ name:```My New Group\`, binZUID, }\); console.log\(group\) } catch \(err\) { console.log\(err\); }
-
+` ``javascript try { const binZUID = "1-..." const group = await sdk.media.createGroup({ name: `My New Group\`, binZUID, }); console.log(group) } catch (err) { console.log(err); }
