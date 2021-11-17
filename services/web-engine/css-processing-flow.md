@@ -44,7 +44,7 @@ Errors are returned for broken SASS at compile time.
 
 **Asset Directory Settings**
 
-A special setting with the values `category: general` `key:base_directory` may be set to a base have your `site.css` and `main.js` files load from a specific directory like `/my/directory/site.js` this is useful for launching sub directory specific website instances. &#x20;
+A special setting with the values `category: general` `key:base_directory` may be set to a base have your `site.css` and `site.js` files load from a specific directory like `/my/directory/site.js` this is useful for launching sub directory specific website instances. &#x20;
 
 #### **ie8.css**
 
@@ -336,4 +336,4 @@ Default value is true
 
 ### JavaScript
 
-Zesty.io combines all script files into a single concatenated `/main.js` file, this file automatically links in the head via script tag, and can optionally be omitted in developer settings on the instance.
+Zesty.io combines all script files into a single concatenated `/site.js` file, this file automatically links in the head via script tag, and can optionally be omitted in developer settings on the instance.
