@@ -4,16 +4,16 @@ description: How to add custom head tags to more resources in Web Engine.
 
 # Custom Head Tags
 
-Head tags can be added to content models, views, the instance (global), or content items. They can be used to set facebook open graph tags, twitter cards, script links, css links, favicons, etc.. This document will explain how they works, what they are for, and how to create them with the API.
+Head tags can be added to content models, views, the instance \(global\), or content items. They can be used to set facebook open graph tags, twitter cards, script links, css links, favicons, etc.. This document will explain how they works, what they are for, and how to create them with the API.
 
-**There are 5 different types of head tags available in Zesty.io. **\
-****Here is a list of each one with example output:
+**There are 5 different types of head tags available in Zesty.io.**   
+Here is a list of each one with example output:
 
-1. **Meta** e.g. _\<meta name="description" content="my page description" />_
-2. **Link** e.g. _\<link rel="stylesheet" type="text/css" href="/site.css" />_
-3. **Script** e.g. _\<script type="text/javascript" src="/site.js?v=43">\</script>_
-4. **Title** e.g. _\<title>My Page Title\</title>_
-5. **Style** e.g. _\<style>body { background: orange } \</style>_
+1. **Meta** e.g. _&lt;meta name="description" content="my page description" /&gt;_
+2. **Link** e.g. _&lt;link rel="stylesheet" type="text/css" href="/site.css" /&gt;_
+3. **Script** e.g. _&lt;script type="text/javascript" src="/site.js?v=43"&gt;&lt;/script&gt;_
+4. **Title** e.g. _&lt;title&gt;My Page Title&lt;/title&gt;_
+5. **Style** e.g. _&lt;style&gt;body { background: orange } &lt;/style&gt;_
 
 We are going to go through each one, with a couple example output and how to create them with the API POST calls to the API.
 
@@ -28,8 +28,8 @@ Even though values shown below use curly braces { } these are **not** Parsley re
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
-* **Query Params** are accessed like** **`{query_param.key}` or `{get_var.key}`
-* **Path Parts **accessed like** **`{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
+* **Query Params** are accessed like ****`{query_param.key}` or `{get_var.key}`
+* **Path Parts** accessed like ****`{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
 * **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
 **Examples**
@@ -60,84 +60,55 @@ If a bad tag reference is used, a reference to a global, setting, or content ite
 
 A simple post request to your instances REST API will create a head tag.
 
-{% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" method="post" summary="Head Tag Creation" %}
-{% swagger-description %}
-Post a Request with a raw JSON body. The JSON body requires 3 fields type (meta|link|script|style|title), attributes (key value object), and sortOder (integer). JSON body example given to create meta tag. More specific ones are available under each tag type.
+{% api-method method="post" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" %}
+{% api-method-summary %}
+Head Tag Creation
+{% endapi-method-summary %}
 
-\
-
-
-
-
-\
-
-
-This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear. 
-
-\
-
-
-
-
-\
-
-
+{% api-method-description %}
+Post a Request with a raw JSON body. The JSON body requires 3 fields type \(meta\|link\|script\|style\|title\), attributes \(key value object\), and sortOder \(integer\). JSON body example given to create meta tag. More specific ones are available under each tag type.  
+  
+This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear.   
+  
 When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID of the content model.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer XXXXXX (APP_SID Token)
-{% endswagger-parameter %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXXX \(APP\_SID Token\)
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="body" name="raw" type="object" %}
-{ 
-
-\
-
-
-    "type": "meta",
-
-\
-
-
-    "resourceZUID": "8-XyZ-XyZ"
-
-\
-
-
-     "attributes": { 
-
-\
-
-
-           "name": "description",
-
-\
-
-
-           "content": "my page description"
-
-\
-
-
-     }, 
-
-\
-
-
-    "sort": 1 
-
-\
-
-
+{% api-method-body-parameters %}
+{% api-method-parameter name="raw" type="object" required=true %}
+{   
+    "type": "meta",  
+    "resourceZUID": "8-XyZ-XyZ"  
+     "attributes": {   
+           "name": "description",  
+           "content": "my page description"  
+     },   
+    "sort": 1   
 }
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```
+
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## Working with Meta Tags
 
@@ -203,7 +174,7 @@ Attributes are open ended for meta tags, so any key:value pair can be added. Her
 
 ## Working with Script Head Tags
 
-Script tags a used to load javascript files on page. Since head tags can be applied to content models, views, items, or globally, this enables you as the developer to optimize what you load per page.&#x20;
+Script tags a used to load javascript files on page. Since head tags can be applied to content models, views, items, or globally, this enables you as the developer to optimize what you load per page. 
 
 **Example Head Output**
 
@@ -229,7 +200,7 @@ Script tags a used to load javascript files on page. Since head tags can be appl
 
 ## Working with Link Head Tags
 
-Link head tags a used to load CSS files, Icons,  Alternate Language URLs, etc.. Like general meta tags, link tags feel like open ended configuration tags, as shown in the example head output. Since head tags can be applied to content models, views, items, or globally, this enables you as the developer to set specific link tags to configure page differently and optimize them for search engines and mobile rendering.&#x20;
+Link head tags a used to load CSS files, Icons,  Alternate Language URLs, etc.. Like general meta tags, link tags feel like open ended configuration tags, as shown in the example head output. Since head tags can be applied to content models, views, items, or globally, this enables you as the developer to set specific link tags to configure page differently and optimize them for search engines and mobile rendering. 
 
 **Example Head Output**
 
@@ -342,26 +313,36 @@ Style tags are linear, and offer one type and way to use them. Style tags only a
 ```
 {% endcode %}
 
-##
+## 
 
 ## How to See all the Head Tags on a Content Instance
 
 To see all the head tags on a content instance, make a Get request to the REST API endpoint `/v1/web/headtags`
 
-{% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" method="get" summary="Get Head Tags" %}
-{% swagger-description %}
-This endpoint allows you to view all the head tags you have on a content instance. Note, if you are logged into Zesty.io you can navigate to this get endpoint in your browser. Replace 
+{% api-method method="get" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" %}
+{% api-method-summary %}
+Get Head Tags
+{% endapi-method-summary %}
 
-`8-XyZ123-123xYz`
+{% api-method-description %}
+This endpoint allows you to view all the head tags you have on a content instance. Note, if you are logged into Zesty.io you can navigate to this get endpoint in your browser. Replace `8-XyZ123-123xYz`with your Instance ZUID.
+{% endapi-method-description %}
 
-with your Instance ZUID.
-{% endswagger-description %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXXXXX \(User Session Token\)
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer XXXXXXXX (User Session Token)
-{% endswagger-parameter %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Cake successfully retrieved.
+{% endapi-method-response-example-description %}
 
-{% swagger-response status="200" description="Cake successfully retrieved." %}
 ```javascript
 {
     _meta: {
@@ -388,93 +369,113 @@ Bearer XXXXXXXX (User Session Token)
     }]
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## Updating a Head Tag
 
-To get a head tag ZUID, call the get endpoint to see all the head tags and their ZUIDs.&#x20;
+To get a head tag ZUID, call the get endpoint to see all the head tags and their ZUIDs. 
 
-{% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" method="put" summary="Put Head Tag" %}
-{% swagger-description %}
+{% api-method method="put" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" %}
+{% api-method-summary %}
+Put Head Tag
+{% endapi-method-summary %}
+
+{% api-method-description %}
 Put updates the head tag in Web Engine immediately. A cache refresh in Web Engine is needed to see an update. Put will replace all attributes with the attributes you pass.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="path" name=":headTagZUID" type="string" %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":headTagZUID" type="string" required=true %}
 use the Get All Head Tags call to find the ZUID of the tag you wish to delete.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer XXXXXXX (user session token)
-{% endswagger-parameter %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXXXX \(user session token\)
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="body" name="raw" type="string" %}
-{
-
-\
-
-
-  "type": "meta",
-
-\
-
-
-  "sort" : 2,
-
-\
-
-
-  "attributes" : {
-
-\
-
-
-     "name" : "description",
-
-\
-
-
-     "content" : " hello world"
-
-\
-
-
-  }
-
-\
-
-
+{% api-method-body-parameters %}
+{% api-method-parameter name="raw" type="string" required=false %}
+{  
+  "type": "meta",  
+  "sort" : 2,  
+  "attributes" : {  
+     "name" : "description",  
+     "content" : " hello world"  
+  }  
  }
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="" %}
-```
-```
-{% endswagger-response %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
 
-{% swagger-response status="500" description="" %}
+{% endapi-method-response-example-description %}
+
 ```
+
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=500 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ## Deleting a Head Tag
 
-{% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" method="delete" summary="Delete Head Tag" %}
-{% swagger-description %}
+{% api-method method="delete" host="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags/:headTagZUID" %}
+{% api-method-summary %}
+Delete Head Tag
+{% endapi-method-summary %}
+
+{% api-method-description %}
 Removes a head tag immediately from Web Engine. A cache refresh in Web Engine is needed to see this update.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="path" name=":headTagZUID" type="string" %}
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":headTagZUID" type="string" required=true %}
 use the Get All Head Tags call to find the ZUID of the tag you wish to delete.
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
 
-{% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer XXXXXXX (user session token)
-{% endswagger-parameter %}
+{% api-method-headers %}
+{% api-method-parameter name="Authorization" type="string" required=true %}
+Bearer XXXXXXX \(user session token\)
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
 ```
+
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+

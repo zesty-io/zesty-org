@@ -4,13 +4,13 @@ description: >-
   Content Platform
 ---
 
-# Instant API (Read Only)
+# Instant API \(Read Only\)
 
 ## What is the Zesty.io Instant Content API?
 
-The Instant Content API (ICA) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers (ZUID)s to return information. ICA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
+The Instant Content API \(ICA\) is a Read Only interface that returns JSON data via HTTP GET requests. It uses Zesty Unique Identifiers \(ZUID\)s to return information. ICA is primarily used for headless applications, but is not limited to that use. Dynamic Website data or middleware interpreters are also common uses.
 
-This API is intended to be used to retrieve basic information about content in your instance. If you want to receive different file types (e.g. SVG, XML, RSS, etc), or submit parameters, we recommend using the Custom JSON API Instead.
+This API is intended to be used to retrieve basic information about content in your instance. If you want to receive different file types \(e.g. SVG, XML, RSS, etc\), or submit parameters, we recommend using the Custom JSON API Instead.
 
 ## Introduction
 
@@ -24,7 +24,7 @@ ICA is an optional feature on every Zesty.io Instance. It can be turned on from 
 
 To access ICA, you make a call to your preview URL or live domain, for example: [http://burger.zesty.site/-/instant/6-4b5c74-fg83s2.json](http://burger.zesty.site/-/instant/6-4b5c74-fg83s2.json). Swap out the domain for your preview URL or your live domain. Switch out the HASH for a resource you wish to access on your Zesty.io instance.
 
-The hash you see is a ZUID. ZUIDs are used to represent every type of resource in Zesty.io. You can find the ZUID of a resource in a few ways through the Zesty.io Content Manager. When editing content, you will see the ZUID (items start with 7-) of that content in the URL of the page you are editing. You can access model ZUIDS (models start with 6-) by looking in the schema (previously config) tab.
+The hash you see is a ZUID. ZUIDs are used to represent every type of resource in Zesty.io. You can find the ZUID of a resource in a few ways through the Zesty.io Content Manager. When editing content, you will see the ZUID \(items start with 7-\) of that content in the URL of the page you are editing. You can access model ZUIDS \(models start with 6-\) by looking in the schema \(previously config\) tab.
 
 When you visit the ICA URL you see a JSON object of the data associated with the resource you are requesting along with meta data, version information, image objects, and related resources objects.
 
@@ -32,59 +32,45 @@ When you visit the ICA URL you see a JSON object of the data associated with the
 
 ICA is optional and has to be turned on to gain access to it. Options to control Cross Origin Resource Sharing can be used to lock the API down to specific websites. A header request with a private token can be set to secure external programmatic application calls. That key is set by the user by editing the developer setting.
 
-Example Header (Optional if setting is set)
+Example Header \(Optional if setting is set\)
 
-```
+```text
 Authorization: Bearer XXXXX
 ```
 
 ## JSON Format
 
-{% swagger baseUrl="https://yoursite.com" path="/-/instant/zuid.json" method="get" summary="General Format" %}
-{% swagger-description %}
-All objects will return meta and data fields. 
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/zuid.json" %}
+{% api-method-summary %}
+General Format
+{% endapi-method-summary %}
 
-\
-
-
-
-
-\
-
-
-The meta field gives information on what type the object is, in addition to its model container.
-
-\
-
-
-
-
-\
-
-
-The data field contains meta, version, and content fields.
-
-\
-
-
-
-
-\
-
-
+{% api-method-description %}
+All objects will return meta and data fields.   
+  
+The meta field gives information on what type the object is, in addition to its model container.  
+  
+The data field contains meta, version, and content fields.  
+  
 The data meta field contains the actual object metadata, the data version field contains information detailing which version was returned. Lastly, the data content field returns the actual content that was set in the config tab of Zesty.io
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Access Token" type="string" required=false %}
+Name and value may change in the future. You can also  
 configure your site to not need this
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="Returned if the zuid exists (Generic Item Example)" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Returned if the zuid exists \(Generic Item Example\)
+{% endapi-method-response-example-description %}
+
 {% code title="response.json" %}
 ```yaml
 {
@@ -151,24 +137,36 @@ configure your site to not need this
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
-{% swagger baseUrl="https://yoursite.com" path="/-/instant/7-item-zuid.json" method="get" summary="Content Items" %}
-{% swagger-description %}
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/7-item-zuid.json" %}
+{% api-method-summary %}
+Content Items
+{% endapi-method-summary %}
+
+{% api-method-description %}
 Content Items are designated by a 7 in their zuid. Items will only return one object in the data array.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Access Token" type="string" required=false %}
+Name and value may change in the future. You can also  
 configure your site to not need this
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="Returned if the zuid exists (Generic Item Example)" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Returned if the zuid exists \(Generic Item Example\)
+{% endapi-method-response-example-description %}
+
 {% code title="response.json" %}
 ```yaml
 {
@@ -235,24 +233,36 @@ configure your site to not need this
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
-{% swagger baseUrl="https://yoursite.com" path="/-/instant/6-array-zuid.json" method="get" summary="Models (Previously known as Pagesets, Templatesets, Datasets)" %}
-{% swagger-description %}
+{% api-method method="get" host="https://yoursite.com" path="/-/instant/6-array-zuid.json" %}
+{% api-method-summary %}
+Models \(Previously known as Pagesets, Templatesets, Datasets\)
+{% endapi-method-summary %}
+
+{% api-method-description %}
 Arrays are designated by a 6 in their zuid. They can return multiple items.
-{% endswagger-description %}
+{% endapi-method-description %}
 
-{% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Access Token" type="string" required=false %}
+Name and value may change in the future. You can also  
 configure your site to not need this
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="Returned if the zuid exists (Generic Item Example)" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+Returned if the zuid exists \(Generic Item Example\)
+{% endapi-method-response-example-description %}
+
 {% code title="response.json" %}
 ```yaml
 {
@@ -326,8 +336,10 @@ configure your site to not need this
 }
 ```
 {% endcode %}
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 
 
@@ -337,7 +349,7 @@ configure your site to not need this
 
 Images are returned as objects, containing data regarding how many images were returned, as well as the media url and the image zuid
 
-```
+```text
 "imageRef" : {
     "type": "images",
     "totalItems": 2,
@@ -358,9 +370,9 @@ Images are returned as objects, containing data regarding how many images were r
 
 ### Relationships
 
-Relationships (such as `one-to-one` and `one-to-many`) are returned as objects, containing data regarding how many items are related (`one-to-one` relationships will always return 1) , as well as a resource URI to retrieve more data on the related item
+Relationships \(such as `one-to-one` and `one-to-many`\) are returned as objects, containing data regarding how many items are related \(`one-to-one` relationships will always return 1\) , as well as a resource URI to retrieve more data on the related item
 
-```
+```text
 "relationshipRef": {
     "type": "relationship",
     "totalItems": 2,
@@ -378,3 +390,4 @@ Relationships (such as `one-to-one` and `one-to-many`) are returned as objects, 
     ]
 },
 ```
+

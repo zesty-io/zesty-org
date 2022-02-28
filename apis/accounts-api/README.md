@@ -14,14 +14,7 @@ Full REST API documentation available in multiple languages here: [https://accou
 
 The Node Wrapper hits a few Accounts API endpoints commonly used for development.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}
-
 ## Webhooks
 
 Documentation on creating, modifying and deleting webhooks can be found below.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
-{% endcontent-ref %}

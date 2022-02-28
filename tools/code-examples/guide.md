@@ -13,7 +13,7 @@ First, we'll need to install [Jekyll](https://jekyllrb.com).
 
 ### Installing Jekyll
 
-```
+```text
 gem install bundler jekyll
 ```
 
@@ -21,14 +21,14 @@ gem install bundler jekyll
 
 Next, let's clone the example project
 
-```
+```text
 git clone https://github.com/zesty-io/jekyll-zesty/
 cd jekyll-zesty
 ```
 
 Now, we simply need to install and run the project!
 
-```
+```text
 npm install
 ```
 
@@ -38,15 +38,15 @@ Note how `npm install` runs `pullzesty`
 
 The example project's `package.json` also comes pre-equipped with some handy utility commands.
 
-* `npm start` # rebuilds data from zesty.io and runs a jekyll server
-* `npm run-script build-jekyll` # rebuilds data from zesty.io and runs jekyll to build a folder in `docs/`
-* `npm run-script all` # rebuilds data from zesty.io, runs jekyll to build a folder in `docs/`, and runs a jekyll server
+* `npm start` \# rebuilds data from zesty.io and runs a jekyll server
+* `npm run-script build-jekyll` \# rebuilds data from zesty.io and runs jekyll to build a folder in `docs/`
+* `npm run-script all` \# rebuilds data from zesty.io, runs jekyll to build a folder in `docs/`, and runs a jekyll server
 
 ## Understanding the Example Project
 
-Jekyll provides support for front-matter, which `PullZesty` takes advantage of to create the files. The real magic in this project lies in the `zesty.yaml` file, which specifies the proper paths for all of our content. This content is merely consumed by some layouts. When creating your own Jekyll project, feel free to look at our [`zesty.yaml`](https://github.com/zesty-io/jekyll-zesty/blob/master/zesty.yaml) file and our [layout files](https://github.com/zesty-io/jekyll-zesty/blob/master/\_layouts/).
+Jekyll provides support for front-matter, which `PullZesty` takes advantage of to create the files. The real magic in this project lies in the `zesty.yaml` file, which specifies the proper paths for all of our content. This content is merely consumed by some layouts. When creating your own Jekyll project, feel free to look at our [`zesty.yaml`](https://github.com/zesty-io/jekyll-zesty/blob/master/zesty.yaml) file and our [layout files](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/).
 
-{% code title="_layouts/home.html" %}
+{% code title="\_layouts/home.html" %}
 ```markup
 --- layout: default ---
 <div dat
@@ -66,4 +66,5 @@ a-spy="scroll" data-target="#site-navbar" data-offset="200">
 ```
 {% endcode %}
 
-As you can see in our [`home.html`](https://github.com/zesty-io/jekyll-zesty/blob/master/\_layouts/home.html) file, we simply load in the front-matter from the [`index.md`](https://github.com/zesty-io/jekyll-zesty/blob/master/index.md) file.
+As you can see in our [`home.html`](https://github.com/zesty-io/jekyll-zesty/blob/master/_layouts/home.html) file, we simply load in the front-matter from the [`index.md`](https://github.com/zesty-io/jekyll-zesty/blob/master/index.md) file.
+

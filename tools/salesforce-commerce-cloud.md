@@ -8,11 +8,11 @@ description: >-
 
 ### Building out the Content Experience
 
-The first step is to build out the HTML, Javascript and CSS for the content experience you want to serve from your Commerce Cloud website. You can do this in any environment, including locally or within your Zesty.io instance.&#x20;
+The first step is to build out the HTML, Javascript and CSS for the content experience you want to serve from your Commerce Cloud website. You can do this in any environment, including locally or within your Zesty.io instance. 
 
-Once built, configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with [Parsley](../services/web-engine/view-templating.md#zesty-ios-templating-language-parsley) references.&#x20;
+Once built, configure the experience in Zesty.io for content editing by building out content models and fields to replace the dynamic pieces with [Parsley](../services/web-engine/view-templating.md#zesty-ios-templating-language-parsley) references. 
 
-### Starting the XML <a href="starting-the-xml" id="starting-the-xml"></a>
+### Starting the XML <a id="starting-the-xml"></a>
 
 The next step is to set up a custom XML endpoint within your Zesty.io instance. Within that paste in this XML code:
 
@@ -69,40 +69,40 @@ The next step is to set up a custom XML endpoint within your Zesty.io instance. 
  </library>
 ```
 
-&#x20;Content marked with single brackets, `[]`, will be replaced with Parsley references.
+ Content marked with single brackets, `[]`, will be replaced with Parsley references.
 
-### Building out the content models. <a href="building-out-the-content-models" id="building-out-the-content-models"></a>
+### Building out the content models. <a id="building-out-the-content-models"></a>
 
 To update this XML with dynamic content calls we need to build out the Content Models and fields to replace the variable content pieces in the XML.
 
-#### Folders <a href="folders" id="folders"></a>
+#### Folders <a id="folders"></a>
 
 First we need a top-level page group for the `Folders`. This content model needs six fields and it needs one entry for `Root`, which will act as a top-level indicator.
 
-| Field Name   | Field Type                                                                  |
-| ------------ | --------------------------------------------------------------------------- |
-| Display Name | Text                                                                        |
-| Description  | Textarea                                                                    |
-| Online Flag  | Yes/No                                                                      |
-| Template     | Text                                                                        |
-| Parent       | <p>One to Many <br><em>(Relate to: Folders, Display: Display Name)</em></p> |
-| Position     | Text                                                                        |
+| Field Name | Field Type |
+| :--- | :--- |
+| Display Name | Text |
+| Description | Textarea |
+| Online Flag | Yes/No  |
+| Template | Text |
+| Parent | One to Many  _\(Relate to: Folders, Display: Display Name\)_ |
+| Position | Text |
 
 #### Content Pages
 
 Next we need to modify all the page type content models created in the first step for generating the content experience. These content models requires 5 fields for the Meta info and any additional fields specific to the html template being created. The 5 required fields are:
 
-| Field Name            | Field Type                                                                  |
-| --------------------- | --------------------------------------------------------------------------- |
-| Display Name          | Text                                                                        |
-| Description           | Textarea                                                                    |
-| Online Flag           | Yes/No                                                                      |
-| Searchable Flag       | Yes/No                                                                      |
-| Folder Classification | <p>One to Many <br><em>(Relate to: Folders, Display: Display Name)</em></p> |
+| Field Name | Field Type |
+| :--- | :--- |
+| Display Name | Text |
+| Description | Textarea |
+| Online Flag | Yes/No |
+| Searchable Flag | Yes/No |
+| Folder Classification | One to Many  _\(Relate to: Folders, Display: Display Name\)_ |
 
 ### Updating the XML with Parsley
 
-The next step is putting it all together in Zesty.io. We need to modify the XML to dynamically generate based on the entries available in the Content Models. The new XML Should look something like this.&#x20;
+The next step is putting it all together in Zesty.io. We need to modify the XML to dynamically generate based on the entries available in the Content Models. The new XML Should look something like this. 
 
 ```markup
 <?xml version="1.0" encoding="UTF-8"?>
@@ -162,9 +162,10 @@ The next step is putting it all together in Zesty.io. We need to modify the XML 
 </library>
 ```
 
-Notice in this example, we are only generating a custom content experience based on one content model, called `Standard Pages`. Within the `custom-attribute` element we include the view file for this content model. The HTML markup for this custom element needs to be written on the `standard_pages` view file in order for it to be included in the XML. You will want to repeat the loop used for `standard_pages` in this example for each Content Model that generates a custom content experience. \
+Notice in this example, we are only generating a custom content experience based on one content model, called `Standard Pages`. Within the `custom-attribute` element we include the view file for this content model. The HTML markup for this custom element needs to be written on the `standard_pages` view file in order for it to be included in the XML. You will want to repeat the loop used for `standard_pages` in this example for each Content Model that generates a custom content experience.   
 
 
 ### Importing into Commerce Cloud
 
-The final step is to prompt your Commerce Cloud account to crawl the Zesty.io XML endpoint from your instance. You will want to copy the endpoint URL and paste it into the content import field in Commerce Cloud and submit. This will prompt any new pages or folders to be created and any changes to existing content to be updated.&#x20;
+The final step is to prompt your Commerce Cloud account to crawl the Zesty.io XML endpoint from your instance. You will want to copy the endpoint URL and paste it into the content import field in Commerce Cloud and submit. This will prompt any new pages or folders to be created and any changes to existing content to be updated. 
+

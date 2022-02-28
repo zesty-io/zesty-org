@@ -10,7 +10,7 @@ description: >-
 
 Developers can iterate over a collection in Parsley using the `{{each}}` expression.&#x20;
 
-_If you're looking for information on how to loop through multiple images in a single field refer to the _[_Image Modifiers article_](https://zesty.org/services/web-engine/introduction-to-parsley/image-modifiers#looping-through-multiple-images-in-a-media-field)_. _
+_If you're looking for information on how to loop through multiple images in a single field refer to the_ [_Image Modifiers article_](https://zesty.org/services/web-engine/introduction-to-parsley/image-modifiers#looping-through-multiple-images-in-a-media-field)_._&#x20;
 
 #### Simple Iteration
 
@@ -46,7 +46,7 @@ Example Code
 
 ```
 // Alphabetical Sort
-{{ each members as member sort by member.name }}
+{{ each members as member sort by name }}
     <aside>
         <h1>{{ member.name }}</h1>
         <p>{{ member.bio }}</p>
@@ -54,7 +54,7 @@ Example Code
 {{ end-each }}
 
 // Numerical Descending Sort
-{{ each posts as post sort by post.date DESC }}
+{{ each posts as post sort by date DESC }}
     <a href="truepath({{post.zid}})">{{ post.title }}</a>
 
 When sorting by multiple columns only the first sort parameter requires the dot notation. All other parameters can be comma separated values.
@@ -70,7 +70,7 @@ An each loop can output a unique list of items by grouping them based on a singl
 For example, if you had a list of products, but only wanted to print out items with unique barcodes, you could group your products by barcode, shown in the example below. If there are duplicates, only the most recent entry will be outputted.
 
 ```
-{{ each products as product group group product.barcode }}
+{{ each products as product_group group group barcode }}
 ...loop content...
 {{ end-each }}
 ```
@@ -80,7 +80,7 @@ For example, if you had a list of products, but only wanted to print out items w
 An each loop can use the comparison `like` to find similar items. The code below shows an example of the syntax being used to search through a content set called Events where the event's zip code that matches a get variable in the URL. For example if your URL is `http://mysite.com/location-search/?zip_search=92101` the `get_var` is named `zip_search` and its value is `92101`.
 
 ```
-{{ each events as event where items.zip LIKE '{get_var.zip_search}%' }}    
+{{ each events as event where zip LIKE '{get_var.zip_search}%' }}    
     {{ event.title }}<br>{{ event.zip }}
 {{ end-each }}
 ```
@@ -90,7 +90,7 @@ An each loop can use the comparison `like` to find similar items. The code below
 The `where` statement in the each loop essentially helps you filter the data you're looking through to target the exact pieces of data that you're looking to return. The following example shows how to use a `where` statement to narrow down your results to a 3 month date range. The below code is looping through a content set called Events and looking for items where the event's date is greater than now at an interval of 3 months.
 
 ```
-{{ each events as event WHERE items.date > DATE_ADD(NOW(),INTERVAL -3 MONTH) ORDER BY event.date ASC LIMIT 0,4 }}
+{{ each events as event WHERE date > DATE_ADD(NOW(),INTERVAL -3 MONTH) ORDER BY date ASC LIMIT 0,4 }}
 
     <h1>{{ event.title }}</h1>
     <p>{{ event.date }}</p>
@@ -109,7 +109,7 @@ You can think of an each statement as being made up of 4 sections. These are the
 Here is an example of an each loop with some more complex items. Content in parentheses is placeholder content.
 
 ```
-{{ each (set_refrence_name) as (variable) where (variable.field) = (value) and (other_field) != ‘{(page.field)}’ or (field) like “%(value)%” sort by (variable.sort) desc limit (number to skip),(number to show) }}
+{{ each (set_refrence_name) as (variable) where (field) = (value) and (other_field) != ‘{(page.field)}’ or (field) like “%(value)%” sort by (sort) desc limit (number to skip),(number to show) }}
 loop content...
 {{ end-each }}
 ```
@@ -129,7 +129,7 @@ loop content...
 The sort section is written as “sort by variable.field asc/desc” where asc or desc represent ascending or descending. Ascending is assumed if no direction is specified. As a warning, if you reference a field that doesn’t exist to sort by, the page will break. Please note that if you want to sort by more than one field, only the first field requires the form "variable.field", subsequent fields can be directly referenced by their name.
 
 ```
-{{ each articles as art sort by art.sort_order, date DESC }}
+{{ each articles as art sort by sort_order, date DESC }}
 loop content...
 {{ end-each }}
 ```
@@ -149,7 +149,7 @@ loop content...
 The where is written as “where something compared to something” and if that condition is true the loop will execute. One of the most common uses would be checking if entries belong on a category page, which might look something like this:
 
 ```markup
-{{ each articles as art where art.parent_zuid = '{page.zuid}' }}
+{{ each articles as art where parent_zuid = '{page.zuid}' }}
 loop content...
 {{ end-each }}
 ```
@@ -165,7 +165,7 @@ There are several comparison values you can use to generate the each loop with t
 You can set up multiple comparisons on a single each loop by separating them with “and” or “or” or both. The following example is looping through a content set called Events. It's looping through featured events and looking for today's events or future events by comparing today's date against the event's date in the content set. One thing to note is that you can’t use the variable.field notation for fields after an "and" or an "or," you just reference the field name directly. The only exceptions to this are the Zesty.io auto-included data like “zuid” and "parent\_zuid" which must be referenced as “z.zuid” after an “and” or an “or” modifier.
 
 ```
-{{ each events as eve where eve.date > {site.date()} and featured = 1 or date = {site.date} }}
+{{ each events as eve where date > {site.date()} and featured = 1 or date = {site.date} }}
 loop content...
 {{ end-each }}
 ```
@@ -175,7 +175,7 @@ loop content...
 One of the more complex items you can write in an each loop is using a find\_in\_set filter. This is used almost exclusively with the one-to-many field type. The syntax is “where find\_in\_set(target\_number, set\_of\_numbers)” For example a blog article might have many tags associated with it. On the blog page, the loop would look like this:
 
 ```
-{{ each tags as tag where find_in_set(tag.zuid, ‘{page.tags}’) }}
+{{ each tags as tag where find_in_set(z.zuid, ‘{page.tags}’) }}
 loop content...
 {{ end-each }}
 ```
@@ -187,7 +187,7 @@ This is how you would write the loop on the tags page to find related articles.
 ```
 
 
-{{ each articles as art where find_in_set('{page.zuid}', art.tags ) }}
+{{ each articles as art where find_in_set('{page.zuid}', tags ) }}
 loop content...
 {{ end-each }}
 
@@ -205,7 +205,7 @@ loop content...
 
 ### Eaching through Media
 
-When you have a content item that has a media field that has more than one media reference, you can loop through them with an each loop like so. In this example, our media reference is {{this.multiple\_images}}
+When you have a content item that has a media field that has more than one media reference, you can loop through them with an each loop like so. In this example, our media reference is \{{this.multiple\_images\}}
 
 ```
 {{ each media.{this.multiple_images} as image}}

@@ -8,7 +8,7 @@ description: >-
 # How to Personalize User Experience with Session Variables
 
 {% hint style="warning" %}
-Parsley access to session variables should not be used on statically cached pages.&#x20;
+Parsley access to session variables should not be used on statically cached pages. 
 {% endhint %}
 
 In this guide you will learn how to create page personalization, using session variables, on the Zesty platform. We will be modifying the loader file and a view file to create the most basic form of personalization.
@@ -19,11 +19,11 @@ There are three key components to executing personalization. The **URL**, the **
 
 The url will contain the key to personalization, it is simply stored in a Get variable. A Get variable can be appended to the end of any URL. In our example, let's use `st`, short for session test.
 
-```
+```text
 https://mydomain.com/page/?st=developer
 ```
 
-&#x20;_**Note**: when you setup links with advertisers, just append _`?st=developer`_ or _`?st=marketer`_etc. and you can custom curate any experience you want to deliver._
+ _**Note**: when you setup links with advertisers, just append_ `?st=developer` _or_ `?st=marketer`_etc. and you can custom curate any experience you want to deliver._
 
 Easy right? Now let's store that value to a session variable.
 
@@ -35,7 +35,7 @@ In this example, we are going to store the Get variable passed by the URL to our
 
 Open the loader view file and add:
 
-```
+```text
 {{$_sesvar = {get_var.ct} }}
     
 <div class="container">
@@ -43,13 +43,13 @@ Open the loader view file and add:
 </div>
 ```
 
-&#x20;_**Note**: the name of the session variable doesn't effect the result, but the name cannot have spaces or abnormal characters. Session variables can also be overwritten, so on a page for marketers you could overwrite the variable to _`{{$_sesvar = 'marketers'}}`_, and then start targeting your language to marketers._
+ _**Note**: the name of the session variable doesn't effect the result, but the name cannot have spaces or abnormal characters. Session variables can also be overwritten, so on a page for marketers you could overwrite the variable to_ `{{$_sesvar = 'marketers'}}`_, and then start targeting your language to marketers._
 
 ### The Business Logic
 
 In our URL `https://mydomain.com/page/?st=developer` we are passing the value `developer` and capturing that value into our session variable. With an `if` statement, we are going to check the session variable's value against our desired match `developer`. If it's a match, we will show one type of content, otherwise we will show our default content. It's quick to implement, let's take a look at the code.
 
-```
+```text
 <h1>Page Title</h1>
 <hr/>
 {{if $_sesvar == 'developer'}}
@@ -65,4 +65,5 @@ In our URL `https://mydomain.com/page/?st=developer` we are passing the value `d
 {{end-if}}
 ```
 
-&#x20;It's that easy, have fun!
+ It's that easy, have fun!
+

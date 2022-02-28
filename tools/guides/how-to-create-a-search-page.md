@@ -11,7 +11,7 @@ In this guide you will learn how to create a search form and search results on t
 We will need to create 3 files;
 
 1. `zip-search-form` Zesty snippet file
-2. `zip-search-results` Zesty HTML AJAX file&#x20;
+2. `zip-search-results` Zesty HTML AJAX file 
 3. `zip-search.js` Zesty JavaScript file
 
 Here is an example of what that code would look like. Read on to cover each step independently.
@@ -26,13 +26,13 @@ Start by structuring your data. For this example we are searching for events lis
 
 In the code editor we will create a snippet file to build the search form in. This will allow the form to be included anywhere we need. For our example we are creating a `zip-search-form` snippet and will `include` it on a page. We are not including a form tag with an action attribute because we will be controlling submitting the user input via AJAX.
 
-```
+```text
 <input id="search" />    
 <ul id="results"></ul>
 ```
 
-\
-&#x20;This a very simple example and can be expanded upon to fit your search purposes. As well as made more semantic with a form tag and labels for inputs.
+  
+ This a very simple example and can be expanded upon to fit your search purposes. As well as made more semantic with a form tag and labels for inputs.
 
 ### Search Results
 
@@ -40,7 +40,7 @@ For the search results we are going to make a HTML AJAX file in the code editor.
 
 We need to write a Parsley `each` loop to match the posted term against any dataset property that we have setup. In our example we will see if there are any event zip codes which match our search term. We could easily add a Parsley `OR` statement and match against multiple values.
 
-```
+```text
 {{each events as event WHERE event.zip_code LIKE '%{get_var.term}%'}}
     <h1>{{event.title}}</h1>
     <h2>{{event.zip_code}}</h2>
@@ -64,8 +64,9 @@ Two important things to note about the url;
 1. All HTML AJAX files can be requested at the `/ajax/YOUR-FILENAME` url path.
 2. Attaching the input value to the url makes the value available as a `get_var.term` on the fetched page.
 
-_Our file path includes a _`.html`_ file extension. This is not necessary since Zesty templates are virtualized. We are using it so we can see it and understand conceptually what it represents._
+_Our file path includes a_ `.html` _file extension. This is not necessary since Zesty templates are virtualized. We are using it so we can see it and understand conceptually what it represents._
 
 ### Finishing Up
 
 Now we have a search form, search results & JavaScript to fetch the results. To implement this form we can `include zip-search-form` on any Zesty page template and our searching against events dataset functionality will be available.
+

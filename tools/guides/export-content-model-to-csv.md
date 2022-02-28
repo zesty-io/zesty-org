@@ -2,29 +2,47 @@
 
 You can export a model's content items to a Comma Separated Value file by using a GET request to the  cloud function  `contentToolsModeltoCSV` or by writing your own NodeJS script.
 
-{% swagger baseUrl="https://us-central1-zesty-prod.cloudfunctions.net/contentToolsModeltoCSV" path="" method="get" summary="Content Model to CSV" %}
-{% swagger-description %}
+{% api-method method="get" host="https://us-central1-zesty-prod.cloudfunctions.net/contentToolsModeltoCSV" path="" %}
+{% api-method-summary %}
+Content Model to CSV
+{% endapi-method-summary %}
 
-{% endswagger-description %}
+{% api-method-description %}
 
-{% swagger-parameter in="header" name="Authentication" type="string" %}
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-headers %}
+{% api-method-parameter name="Authentication" type="string" required=true %}
 Bearer XXXXXX
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-headers %}
 
-{% swagger-parameter in="query" name="instanceZUID" type="string" %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="instanceZUID" type="string" required=false %}
 8-XXX-XXXXX
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
 
-{% swagger-parameter in="query" name="modelZUID" type="string" %}
+{% api-method-parameter name="modelZUID" type="string" required=true %}
 6-XXX-XXXXX
-{% endswagger-parameter %}
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
 
-{% swagger-response status="200" description="A CSV output" %}
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+A CSV output
+{% endapi-method-response-example-description %}
+
 ```
 a comma seperated value string    
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 ### Write your Own CSV Export
 
@@ -67,3 +85,4 @@ const csvStringifier = createCsvStringifier({
 let csvstring = csvStringifier.getHeaderString()+csvStringifier.stringifyRecords(itemData);
 console.log(csvstring);
 ```
+

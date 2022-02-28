@@ -42,7 +42,7 @@ Once you're familiar with the basic rules below jump into our [Parsley Repl](htt
 * Curly brackets (single or double):
   * on the same line will be parsed
   * on separate lines will **not** be parsed
-  * in fields will **not **be parsed
+  * in fields will **not** be parsed
 * Spacing
   * Single curly brackets: no spaces between Parsley call and bracket (e.g. `{this.my_field}`)
   * Double curly brackets: space(s) allowed between call and bracket (e.g. `{{ this.my_field }}`)
@@ -61,7 +61,7 @@ Use double equals `==` in `if` statements and single equals everywhere else.
 
 #### Quotes
 
-Do not use quotes in `if` statements. Only use quotes around hard coded strings and single bracket parsley variables everywhere else.
+Use quotes in `if` statements when evaluating strings.&#x20;
 
 #### Conjunctions
 
