@@ -114,7 +114,7 @@
 * [Instant API (Read Only)](apis/instant-content-api.md)
 * [GraphQL](apis/graphql.md)
 
-## Tools & Resources <a href="tools" id="tools"></a>
+## Tools & Resources <a href="#tools" id="tools"></a>
 
 * [Guides](tools/guides/README.md)
   * [Adding a Favicon](tools/guides/adding-a-favicon.md)
@@ -187,6 +187,7 @@
 * [Atom IDE Package](tools/atom-package.md)
 * [Chrome Browser Extension](tools/chrome-extension.md)
 * [Headless Code Examples](tools/code-examples/README.md)
+  * [Next JS](tools/code-examples/next-js.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide (Local React App)](tools/code-examples/react/guide-local-react-app.md)
     * [Guide (Remote React App)](tools/code-examples/react/guide-remote-react-app.md)
