@@ -9,9 +9,9 @@ description: >-
 
 ### Overview
 
-Zesty.io’s Code Editor supports CSS, LESS, and SCSS/SASS. Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file called `site.css`. If more than one style of stylesheet is used, they will compile and concat into a single file in the following order of concatenation:  
-CSS  
-LESS  
+Zesty.io’s Code Editor supports CSS, LESS, and SCSS/SASS. Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file called `site.css`. If more than one style of stylesheet is used, they will compile and concat into a single file in the following order of concatenation:\
+CSS\
+LESS\
 SCSS
 
 {% hint style="info" %}
@@ -20,10 +20,10 @@ To create style files that are not compiled through this flow and used site-wide
 
 ### Compilers and Minifiers
 
-All files are concatenated based on their type then by their order set in the editor interface of the Zesty.io manager. Each stylesheet type has its own compiler or minifier explained below. Files will transpile with their given type; Less and Sass files will compile with style variables. [Parsley](https://zesty.org/services/web-engine/introduction-to-parsley) is not accessible from to files in the Style Sheet section.  
+All files are concatenated based on their type then by their order set in the editor interface of the Zesty.io manager. Each stylesheet type has its own compiler or minifier explained below. Files will transpile with their given type; Less and Sass files will compile with style variables. [Parsley](https://zesty.org/services/web-engine/introduction-to-parsley) is not accessible from to files in the Style Sheet section. &#x20;
 
 {% hint style="warning" %}
-Comments in Style files can err on compilation especially if they are single-line comments noted by `//` and at the top or bottom of a file. To mitigate this ensure that comments are noted using the multi-line `/* */` syntax. 
+Comments in Style files can err on compilation especially if they are single-line comments noted by `//` and at the top or bottom of a file. To mitigate this ensure that comments are noted using the multi-line `/* */` syntax.&#x20;
 {% endhint %}
 
 ### CSS
@@ -38,7 +38,7 @@ _Errors are returned for broken LESS at compile time._
 
 ### SCSS/SASS
 
-All SCSS files are concatenated based on their order in the Editor and run through the SASSC compiler with the flags ‘ --style compressed --stdin’, that behavior is hard coded and cannot be changed. The repository used for compiling SASS: [https://github.com/sass/sassc](https://github.com/sass/sassc%20)
+All SCSS files are concatenated based on their order in the Editor and run through the SASSC compiler with the flags ‘ --style compressed --stdin’, that behavior is hard coded and cannot be changed. The repository used for compiling SASS: [https://github.com/sass/sassc](https://github.com/sass/sassc)
 
 _Errors are returned for broken SASS at compile time._
 
@@ -54,7 +54,7 @@ If a file is given the name ie8.css, it will be ignored by the minification proc
 
 ### Auto Added Stylesheet Files
 
-Zesty.io auto appends stylesheets to specific templates \(mostly legacy\). If you experience added CSS and it is a problem please reach out to support on the Zesty.io developer slack channel. Support engineers can remove the base CSS files.
+Zesty.io auto appends stylesheets to specific templates (mostly legacy). If you experience added CSS and it is a problem please reach out to support on the Zesty.io developer slack channel. Support engineers can remove the base CSS files.
 
 ### CSS files migrating from Legacy to ZUID Zesty.io
 
@@ -62,9 +62,8 @@ All old CSS files use to be processed by the LESSC compiler for minification or 
 
 ### **Operations that happen on pre-existing CSS files:**
 
-* Head type changes from text/css to text/less  
-* View type changes from text/css to text/less  
+* Head type changes from text/css to text/less &#x20;
+* View type changes from text/css to text/less &#x20;
 * File extension changes from .css to .less
 
 New CSS files will abide by the rules in this specification.
-

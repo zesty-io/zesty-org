@@ -187,7 +187,7 @@
 * [Atom IDE Package](tools/atom-package.md)
 * [Chrome Browser Extension](tools/chrome-extension.md)
 * [Headless Code Examples](tools/code-examples/README.md)
-  * [Next JS](tools/code-examples/next-js.md)
+  * [NextJS](tools/code-examples/nextjs.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide (Local React App)](tools/code-examples/react/guide-local-react-app.md)
     * [Guide (Remote React App)](tools/code-examples/react/guide-remote-react-app.md)

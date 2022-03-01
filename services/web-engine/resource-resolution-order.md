@@ -17,7 +17,7 @@ When a request is served by WebEngine, it reads the url path and attempts to mat
 5. Legacy JSON endpoints _e.g. /-/custom/_
 6. Well Known Files _e.g. /.well-known/\*_
 7. Custom endpoints _e.g. /custom/endpoints.json_
-8. Legacy HTML endpoints _e.g. /ajax/_ 
+8. Legacy HTML endpoints _e.g. /ajax/_&#x20;
 9. Content Models Views if a content item's meta path matches the request page _e.g. /about/team/_
 10. Wild Card Views e.g. _/store/\*/cool-shirt/_
 11. 301 redirects
@@ -27,8 +27,8 @@ When a request is served by WebEngine, it reads the url path and attempts to mat
 
 **Overview**
 
-Zesty.io will default all automated assets files to the root `/` directory unless the base directory setting has been added and set.   
-  
+Zesty.io will default all automated assets files to the root `/` directory unless the base directory setting has been added and set. \
+\
 there is a setting on the instance with category:`general` key:`base_directory` with a directory set as its value e.g. `/blog/`
 
 **Base Directory and Zesty.io Auto-created Files**
@@ -45,13 +45,13 @@ Once the Base Directory settings has a value the Zesty.io auto-created files lis
 
 **Using the Base Directory setting** **with non-automated files**
 
-Other files created in the code editor such as custom endpoints must be manually named to follow the path of your choice. If you want content items to follow the same path as the Base Directory setting value, then a content model must exist with that path. For example, if you're using Zesty.io WebEngine only for your website's  `/blog/` subdirectory then you need to setup a content item as a placeholder with `/blog/` as its URL _and_ create the Base Directory setting \(as shown below\)  with the value `/blog/`. 
+Other files created in the code editor such as custom endpoints must be manually named to follow the path of your choice. If you want content items to follow the same path as the Base Directory setting value, then a content model must exist with that path. For example, if you're using Zesty.io WebEngine only for your website's  `/blog/` subdirectory then you need to setup a content item as a placeholder with `/blog/` as its URL _and_ create the Base Directory setting (as shown below)  with the value `/blog/`.&#x20;
 
 #### Adding the Base Directory Setting
 
 The Base Directory setting can be added via [API](https://instances-api.zesty.org/#d295e8c8-40a2-435c-85cd-23a043a7135f) with the following JSON body:
 
-```text
+```
 {
     "category": "general",
     "keyFriendly": "Base Directory",
@@ -65,5 +65,4 @@ The Base Directory setting can be added via [API](https://instances-api.zesty.or
 }
 ```
 
- If you know what value you want the base directory set to go ahead and add it to the JSON body under `value`.
-
+&#x20;If you know what value you want the base directory set to go ahead and add it to the JSON body under `value`.

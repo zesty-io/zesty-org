@@ -16,10 +16,10 @@ Users can upload multiple images to a single Media field as shown in the example
 
 ![Multiple images in a single Media field.](../../../.gitbook/assets/multiple-images-in-field-example.png)
 
-  
-To access these images you'll need to loop through them with the following code: 
+\
+To access these images you'll need to loop through them with the following code:&#x20;
 
-```text
+```
 {{each media.{this.images} as media }}
 	<img src="{{media.image.getImage()}}"/>
 {{end-each}}
@@ -28,22 +28,22 @@ To access these images you'll need to loop through them with the following code:
 In this example, `images` is the field's reference name.
 
 {% hint style="info" %}
- ****`media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model.   
-  
-Replace the`{this.images}`code with a reference to your model's specific field.     
-   
-The order of the images is determined by the order that they appear in in the content model. 
+&#x20;**** `media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model. \
+\
+Replace the`{this.images}`code with a reference to your model's specific field.   \
+&#x20;\
+The order of the images is determined by the order that they appear in in the content model.&#x20;
 {% endhint %}
 
-When wrapping this special each loop with an [if-conditional](https://zesty.org/services/web-engine/introduction-to-parsley/if-conditionals) be sure to use the media field's reference name to in the if-conditional. For example, if the reference name for your field is `images`  and you're checking for an empty field then your if-conditional will look like this: 
+When wrapping this special each loop with an [if-conditional](https://zesty.org/services/web-engine/introduction-to-parsley/if-conditionals) be sure to use the media field's reference name to in the if-conditional. For example, if the reference name for your field is `images`  and you're checking for an empty field then your if-conditional will look like this:&#x20;
 
 `{{ if {this.images} != '' }}`
 
-### .getImage\(width, height, type\)
+### .getImage(width, height, type)
 
-Function takes a width, height, and an optional type \(fit or crop\) parameter and returns a URL of the resampled image. There are many ways to utilize this function. Fit is the default type and does not need to be explicitly declared. Crop type requires 2 parameters and explicit declaration. The list below shows examples of these calls. Learn how crop and fit work with [this video](https://www.youtube.com/watch?v=gin0sTwN6U4&t=).
+Function takes a width, height, and an optional type (fit or crop) parameter and returns a URL of the resampled image. There are many ways to utilize this function. Fit is the default type and does not need to be explicitly declared. Crop type requires 2 parameters and explicit declaration. The list below shows examples of these calls. Learn how crop and fit work with [this video](https://www.youtube.com/watch?v=gin0sTwN6U4\&t=).
 
-```text
+```
 // .getImage(W, H, fit or crop)
 <img src="{{ thispage.photo.getImage() }}" />
 <img src="{{ thispage.photo.getImage(100) }}" />
@@ -53,47 +53,47 @@ Function takes a width, height, and an optional type \(fit or crop\) parameter a
 <img src="{{ thispage.photo.getImage(100,100,crop) }}" />
 ```
 
-### .getImageFileName\(\)
+### .getImageFileName()
 
 When called on an image reference, returns the image file name.
 
-```text
+```
 {{ page.image.getImageFileName() }}
 ```
 
-### .getImageTitle\(\)
+### .getImageTitle()
 
 When called on an image reference, returns the image title.
 
-```text
+```
 {{ page.image.getImageTitle() }}
 ```
 
-### .getMediaURL\(\)
+### .getMediaURL()
 
 Function does not take parameters and returns the original URL to that file. This is how to access files stored in media that are not images, such as PDFs and MP4s. You can also use this call to access the original file of an image that has not been optimized or altered by Zesty.io.
 
-```text
+```
 <a href="{{ page.download_file.getMediaURL() }}" >Download</a>
 // <a href="https://domain.com/file.pdf" >Download</a>
 ```
 
-### .gravatar\(email\)
+### .gravatar(email)
 
 Function takes a user's email and requests an image from the Gravatar API.
 
-```text
+```
 <img src="{{ thispage.author_email.gravatar() }}" />
 // <img src="http://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50" />
 ```
 
 ### Responsive Images with `srcset`
 
-In addition to Parsley you can use `srcset` to create responsive images. Learn more about `srcset` with [this MDN article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images). 
+In addition to Parsley you can use `srcset` to create responsive images. Learn more about `srcset` with [this MDN article](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia\_and\_embedding/Responsive\_images).&#x20;
 
 This is an example of how `srcset` can be used with Parsley:
 
-```text
+```
 <picture>
 			<source media="(max-width: 700px)" sizes="(max-width: 500px) 50vw, 10vw"
 			srcset="{{this.hero_image_mobile.getImage()}} 138w, {{this.hero_image_mobile.getImage()}} 138w">
@@ -104,4 +104,3 @@ This is an example of how `srcset` can be used with Parsley:
 			<img src="{{this.hero_image.getImage()}}" alt="Hero">
 </picture>
 ```
-

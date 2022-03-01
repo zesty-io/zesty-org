@@ -18,21 +18,25 @@ There are 3 steps to making your instance accessible to the public.
 Before beginning the process to send your instance live ensure that all content and code that you want to be made available to the public are published and listed accordingly.
 {% endhint %}
 
-{% file src="../../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" caption="New Site Launch Checklist" %}
+{% file src="../../.gitbook/assets/zesty.io-new-site-launch-checklist-includes-links.pdf" %}
+New Site Launch Checklist
+{% endfile %}
 
-{% file src="../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" caption="Site Migration Checklist" %}
+{% file src="../../.gitbook/assets/zesty.io-migration-launch-checklist-includes-links.pdf" %}
+Site Migration Checklist
+{% endfile %}
 
 ## 1. Set a Custom Domain Name
 
 Start by locating the instance that you want to launch in the Accounts Manager interface and then click that instance's "Publish Instance" button.
 
-![To begin launching your instance click the &quot;Publish Instance&quot; button.](../../.gitbook/assets/screen-shot-2019-08-30-at-1.04.05-pm.png)
+![To begin launching your instance click the "Publish Instance" button.](../../.gitbook/assets/screen-shot-2019-08-30-at-1.04.05-pm.png)
 
-After you click the "Publish Instance" button the instance settings will open and prompt you to set a domain name and configure your DNS settings. 
+After you click the "Publish Instance" button the instance settings will open and prompt you to set a domain name and configure your DNS settings.&#x20;
 
 ![Instance Settings drawer prompts for sending your instance live.](../../.gitbook/assets/accounts-setting-launch-instructions.png)
 
-Enter your custom domain name in the textbox, select a branch, and click **+ Add Domain**. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`. 
+Enter your custom domain name in the textbox, select a branch, and click **+ Add Domain**. The domain name should be limited to the root only. Do not add protocol or trailing slash. For example, if your domain is example.com you'll enter `example.com`.&#x20;
 
 ![Enter your domain, select a branch, and click Add Domain.](../../.gitbook/assets/add-domain-set-branch.png)
 
@@ -42,7 +46,7 @@ Enter your custom domain name in the textbox, select a branch, and click **+ Add
 **Hybrid OYD:** If you are setting up a domain with Hybrid Zesty.io, please follow this guide
 {% endhint %}
 
-Configure your domain's DNS settings by following the instructions in the settings drawer. 
+Configure your domain's DNS settings by following the instructions in the settings drawer.&#x20;
 
 ![DNS instructions in the Instance Settings drawer.](../../.gitbook/assets/zesty-dns-settings.png)
 
@@ -56,13 +60,13 @@ Configure your domain's DNS settings by following the instructions in the settin
 
 There are 2 primary records you will want to ensure are setup.
 
-1. The apex record \(_e.g. example.org_\)
-2. The WWW sub-domain record \(_e.g. www.example.org_\)
+1. The apex record (_e.g. example.org_)
+2. The WWW sub-domain record (_e.g. www.example.org_)
 
 When creating these records there will be 3 values that are required to set them up.
 
 1. Record type
-2. Host \(or name\)
+2. Host (or name)
 3. Value.
 
 ### Apex Record
@@ -75,7 +79,7 @@ Create or set an existing apex record with the following values:
 
 * _Record type_: `A`
 * _Host_: `@`
-* _Value_ \(**Create a separate A record for each of these IP addresses**\):
+* _Value_ (**Create a separate A record for each of these IP addresses**):
   * `151.101.1.161`
   * `151.101.65.161`
   * `151.101.129.161`
@@ -111,9 +115,9 @@ DNS changes can take time to propogate and for your ISP to pickup. They can also
 If necessary you can configure your HTTPS and WWW settings before launching your site.
 {% endhint %}
 
-Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings. 
+Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings.&#x20;
 
-![HTTPS and WWW settings.](../../.gitbook/assets/www-settings-general%20%281%29.png)
+![HTTPS and WWW settings.](<../../.gitbook/assets/www-settings-general (1).png>)
 
 Above you can see these settings outlined in orange. The tooltips will help you navigate this area and give you information about each setting.
 
@@ -154,17 +158,16 @@ Since there are many places to purchase domains it's difficult to create all-inc
 
 ## Swapping out domains
 
-Two instances cannot have the same domain assigned to it. Before the domain is added to a new instance it will need to be removed from the old one. 
+Two instances cannot have the same domain assigned to it. Before the domain is added to a new instance it will need to be removed from the old one.&#x20;
 
 ### Removing a domain name
 
-1. From the Accounts settings drawer, click the red trashcan icon button to the right of the name. 
+1. From the Accounts settings drawer, click the red trashcan icon button to the right of the name.&#x20;
 
 ![Use the trashcan button to remove a domain name.](../../.gitbook/assets/screen-shot-2020-12-21-at-2.48.11-pm.png)
 
-2. A modal will pop up and confirm that you'd like to remove the domain. To confirm click the red **Remove** button. 
+2\. A modal will pop up and confirm that you'd like to remove the domain. To confirm click the red **Remove** button.&#x20;
 
 ![Click the red Remove button to remove the domain.](../../.gitbook/assets/screen-shot-2020-12-21-at-3.01.21-pm.png)
 
 If it's been successfully removed a success notification will appear in the lower left-hand corner of the screen and you'll be able to add that domain to another instance.
-
