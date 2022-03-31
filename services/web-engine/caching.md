@@ -4,7 +4,7 @@ description: 'Zesty.io: Caching Document which describes the details of caching 
 
 # Caching
 
-**Note**: For a general overview of caching we recommend starting with the [`MDN HTTP caching` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)article.
+**Note**: For a general overview of caching we recommend starting with the [MDN HTTP caching ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)article.
 
 ![](https://lh6.googleusercontent.com/HtF0LS2OJcOrwgOuWiyS1ioAZr0vLbNVbnal3kH57SBdtEIY32cM7KaoFiZ0GL9abrCLgdfnJXxVX3A\_1Yuh-oTN94RnDWxAdRxctfMcHlyRT3fBbG3PcV1lTtb0w6sw7dBxtRw)
 
@@ -56,9 +56,9 @@ This offering is for customers who want to maintain control over the data in tra
 
 Browsers usually provide a cache as well. These are typically informed by the headers on responses. This is a layer which can often be overlooked.
 
-### Cache Time-to-Live (TTL)&#x20;
+## Cache Time-to-Live (TTL)&#x20;
 
-TTL: time-to-live is the concept of how long a particular response should remain a cache object before the cache invalidates it and fetches the latest. Regardless of if it was explicitly purged. Learn more about TTL in the Fastly Cache freshness and TTLs | Fastly Developer Hub support article.
+TTL: time-to-live is the concept of how long a particular response should remain a cache object before the cache invalidates it and fetches the latest. Regardless of if it was explicitly purged. Learn more about TTL in the [Fastly Cache freshness and TTLs | Fastly Developer Hub](https://developer.fastly.com/learning/concepts/cache-freshness/) support article.
 
 One important aspect when determining what TTL value should be set is thinking about the type of data being returned. Most often the primary concern is how likely is the data to change over time.
 
@@ -68,16 +68,16 @@ But the data for the URL [https://www.zesty.io/sitemap.xml](https://www.zesty.io
 
 Some URLs should never be cached. For example; [https://\{{instance\_zuid\}}.api.zesty.io/v1/content/models/\{{content\_model\_zuid\}}/items](https://\{{instance\_zuid\}}.api.zesty.io/v1/content/models/%7B%7Bcontent\_model\_zuid%7D%7D/items) is an API responses which can change often, sometimes hourly.
 
-### Cache Destruction
+## Cache Destruction
 
 &#x20;When a change is desired to be public it needs to be published. Publishing involves the process of telling all pertinent caches that the prior cache object is no longer valid and the next time the data is requested it should re-fetch the latest.
 
 There are typically two events which start this process;
 
-#### Publish&#x20;
+### Publish&#x20;
 
 The most common event for triggering cache destruction. It is an action which immediately communicates to caches telling them the specified cache object is no longer valid.
 
-#### Schedule&#x20;
+### Schedule&#x20;
 
 Scheduling is just a delayed publish. This event adds additional layers of architecture to achieve this. We operate a Scheduler which takes a job to be run at a specific time. The job being the specific publish event we want to occur.
