@@ -4,7 +4,7 @@ description: 'Zesty.io: Caching Document which describes the details of caching 
 
 # Caching
 
-Note: For a general overview of caching we recommend starting with the [`MDN HTTP caching` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)article.
+**Note**: For a general overview of caching we recommend starting with the [`MDN HTTP caching` ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)article.
 
 ![](https://lh6.googleusercontent.com/HtF0LS2OJcOrwgOuWiyS1ioAZr0vLbNVbnal3kH57SBdtEIY32cM7KaoFiZ0GL9abrCLgdfnJXxVX3A\_1Yuh-oTN94RnDWxAdRxctfMcHlyRT3fBbG3PcV1lTtb0w6sw7dBxtRw)
 
