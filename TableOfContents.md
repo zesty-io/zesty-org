@@ -24,6 +24,7 @@
 ## Services
 
 * [WebEngine](services/web-engine/README.md)
+  * [Caching](services/web-engine/caching.md)
   * [Modes](services/web-engine/modes.md)
   * [Environment States & Caching Behaviors](services/web-engine/environment-states-and-caching-behaviors.md)
   * [Resource Resolution](services/web-engine/resource-resolution-order.md)
