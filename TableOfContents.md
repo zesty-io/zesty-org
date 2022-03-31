@@ -24,7 +24,6 @@
 ## Services
 
 * [WebEngine](services/web-engine/README.md)
-  * [Caching](services/web-engine/caching.md)
   * [Modes](services/web-engine/modes.md)
   * [Environment States & Caching Behaviors](services/web-engine/environment-states-and-caching-behaviors.md)
   * [Resource Resolution](services/web-engine/resource-resolution-order.md)
@@ -51,6 +50,7 @@
     * [Open Graph and Twitter Card Meta Tags](services/web-engine/meta-tags/open-graph-twitter-card-meta-tags.md)
   * [30X Redirects](services/web-engine/30x-redirects.md)
   * [Security](services/web-engine/security.md)
+  * [Caching](services/web-engine/caching.md)
   * [Hybrid CDN Setup](services/web-engine/hybrid-cdn-setup.md)
   * [File Proxy](services/web-engine/file-proxy.md)
 * [DAM (Media Management)](services/media-storage-micro-dam/README.md)
