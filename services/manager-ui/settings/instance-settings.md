@@ -32,7 +32,7 @@ Each category contains a list of settings. Categories are located in the left-ha
 * **Allow cross domain access to Instant JSON API:** Toggle CORS Headers
 * **Automatically include JavaScript in head**
 * **Custom View Endpoints CORS Allow Any Origin**
-* **Auto Include Google Analytics Tag:** if on (default) it will auto include a Goggle Analytics tracking script tag which is created using the **Google Analytics ID** setting. IF the **Google Analytics ID** is not written as a setting, it wont do anything. If the **Auto Include Google Analytics Tag** setting is OFF, no GA script tag will be auto included regardless if **Google Analytics ID** code is set.
+* **Auto Include Google Analytics Tag:** if on (default) it will auto include a Google Analytics tracking script tag which is created using the **Google Analytics ID** setting. IF the **Google Analytics ID** is not written as a setting, it wont do anything. If the **Auto Include Google Analytics Tag** setting is OFF, no GA script tag will be auto included regardless if **Google Analytics ID** code is set.
 
 ### **Contact form**
 
