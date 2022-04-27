@@ -52,6 +52,7 @@
   * [Security](services/web-engine/security.md)
   * [Caching](services/web-engine/caching.md)
   * [Hybrid CDN Setup](services/web-engine/hybrid-cdn-setup.md)
+  * [Zesty URLs & Their Functionality](services/web-engine/zesty-urls-and-their-functionality.md)
   * [File Proxy](services/web-engine/file-proxy.md)
 * [DAM (Media Management)](services/media-storage-micro-dam/README.md)
   * [On-The-Fly Media Optimization and Dynamic Image Manipulation](services/media-storage-micro-dam/on-the-fly-media-optimization-and-dynamic-image-manipulation.md)
