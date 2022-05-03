@@ -11,6 +11,8 @@
   * [Content Manager Settings](quick-start-guide/content-manager-settings.md)
   * [Coding & Parsley](quick-start-guide/coding-and-parsley.md)
   * [Publishing](quick-start-guide/publishing.md)
+  * [TroubleShooting](quick-start-guide/troubleshooting/README.md)
+    * [Duplicate Path Part](quick-start-guide/troubleshooting/duplicate-path-part.md)
 * [Common Concepts](getting-started/README.md)
   * [Cloud Content Instance](getting-started/cloud-content-instance.md)
   * [The Connection Between Schema, Content, and Code](getting-started/the-connection-between-schema-content-and-code.md)
