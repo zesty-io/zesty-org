@@ -580,7 +580,7 @@ Thank you for submitting your form, please check {{ post_var.email }} for a veri
 
 ## preg\_replace(pattern, replacement)
 
-The `preg_replace()` call is a regular expression replacement. To learn more about Regular expression go to [http://www.regular-expressions.info/](http://www.regular-expressions.info)
+The `preg_replace()` call is a regular expression replacement. To learn more about Regular expression go to [http://www.regular-expressions.info/](http://www.regular-expressions.info/)
 
 ```
 {{ page.content.preg_replace(/i/,*) }}

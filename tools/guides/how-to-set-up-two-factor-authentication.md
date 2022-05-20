@@ -30,7 +30,7 @@ Two-factor authentication make Zesty.io safer for your business. We highly recom
 
 ### Login
 
-The very first thing you will need to do is [log into Zesty.io](https://accounts.zesty.io). ![login sample](https://wyp1jm.media.zestyio.com/2fa-step1.png)
+The very first thing you will need to do is [log into Zesty.io](https://accounts.zesty.io/). ![login sample](https://wyp1jm.media.zestyio.com/2fa-step1.png)
 
 ### Open your profile settings
 

@@ -6,7 +6,7 @@ description: >-
 
 # CSS & JS Processing Flow
 
-Zesty.io’s Code Editor supports [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [LESS](http://lesscss.org), and [SCSS/SASS](https://sass-lang.com). Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file `/site.css`. That file is automatically linked to in your page \<head>. If more than one style of stylesheet is used, they will compile and concat into a single file. The order of concatenation:
+Zesty.io’s Code Editor supports [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [LESS](http://lesscss.org/), and [SCSS/SASS](https://sass-lang.com/). Every save of a stylesheet will combine, compile, and minify all stylesheet files into a single CSS file `/site.css`. That file is automatically linked to in your page \<head>. If more than one style of stylesheet is used, they will compile and concat into a single file. The order of concatenation:
 
 1. **CSS**
 2. **LESS**

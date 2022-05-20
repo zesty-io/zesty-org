@@ -10,7 +10,7 @@ description: >-
 
 To get started with the Atom IDE package you must first have the Atom editor installed. After you have Atom installed the next step is to install the zestyio-atom packages. After you've done that obtain the details of the instance that you want to edit in Atom. You will use details to connect to it to Atom.
 
-If you don't have Atom, download and install the Atom editor directly from [Atom's site](https://atom.io).
+If you don't have Atom, download and install the Atom editor directly from [Atom's site](https://atom.io/).
 
 ### 1. Install the Package
 

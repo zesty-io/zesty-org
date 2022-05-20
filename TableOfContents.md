@@ -64,6 +64,7 @@
   * [Instances](services/accounts-ui/instances.md)
   * [Instance Settings Drawer](services/accounts-ui/instance-settings-drawer.md)
   * [Settings](services/accounts-ui/settings.md)
+  * [Inviting Users](services/accounts-ui/inviting-users.md)
   * [Teams](services/accounts-ui/teams.md)
 * [Manager UI](services/manager-ui/README.md)
   * [Content](services/manager-ui/content/README.md)

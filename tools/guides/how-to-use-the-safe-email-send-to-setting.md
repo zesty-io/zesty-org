@@ -34,7 +34,7 @@ This setting can be added via our [API](https://instances-api.zesty.org/#d295e8c
 }
 ```
 
-If you're not comfortable using our API send a request via [Slack](http://chat.zesty.io) or email support@zesty.io and ask for the setting to be added to your instance.
+If you're not comfortable using our API send a request via [Slack](http://chat.zesty.io/) or email support@zesty.io and ask for the setting to be added to your instance.
 
 ### Using Safe Email Send To
 

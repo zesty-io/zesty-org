@@ -21,7 +21,7 @@ Errors are designed to help the developer write proper Parsley to achieve consis
 ## Common Error List
 
 {% hint style="warning" %}
-### If you do not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io)
+### If you do not see your error here please report it to us at [chat.zesty.io](http://chat.zesty.io/)
 {% endhint %}
 
 ### **Invalid numeric literal**

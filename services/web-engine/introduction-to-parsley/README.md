@@ -37,7 +37,7 @@ Parsley _only_ works in Views. It does not work in Style Sheets or Scripts. Do n
 
 ### Basic Rules
 
-Once you're familiar with the basic rules below jump into our [Parsley Repl](http://parsley.zesty.io) for some practice.&#x20;
+Once you're familiar with the basic rules below jump into our [Parsley Repl](http://parsley.zesty.io/) for some practice.&#x20;
 
 * Curly brackets (single or double):
   * on the same line will be parsed

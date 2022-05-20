@@ -17,7 +17,7 @@ First, we'll need to install [Hugo](https://gohugo.io).
 brew install hugo
 ```
 
-(If you aren't using brew, [get it here](https://brew.sh))
+(If you aren't using brew, [get it here](https://brew.sh/))
 
 **debian / ubuntu**
 
