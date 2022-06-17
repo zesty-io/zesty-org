@@ -40,7 +40,7 @@ Enter your custom domain name in the textbox, select a branch, and click **+ Add
 
 ![Enter your domain, select a branch, and click Add Domain.](../../.gitbook/assets/add-domain-set-branch.png)
 
-## 2. Configure you DNS
+## 2. Configure your DNS
 
 {% hint style="info" %}
 **Hybrid OYD:** If you are setting up a domain with Hybrid Zesty.io, please follow this guide
@@ -55,7 +55,7 @@ Configure your domain's DNS settings by following the instructions in the settin
 {% endhint %}
 
 {% hint style="warning" %}
-**Cloudflare Users**: When setting DNS records in Cloudflare be sure to have the proxied by Cloudflare, an orange cloud icon, turned off on each record. Zesty.io cannot affectively manage the cache if Cloudflare is proxing requests and caching them.
+**Cloudflare Users**: When setting DNS records in Cloudflare be sure to have the proxied by Cloudflare, an orange cloud icon, turned off on each record. Zesty.io cannot effectively manage the cache if Cloudflare is proxying requests and caching them.
 {% endhint %}
 
 There are 2 primary records you will want to ensure are setup.
@@ -104,7 +104,7 @@ Create or set an existing WWW record with the following values:
 To confirm that your instance is live click the green "? Check DNS" button. You should see a notification in the bottom left-hand corner of the screen letting you know if your DNS has been verified.
 
 {% hint style="info" %}
-DNS changes can take time to propogate and for your ISP to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or gibing it more time. Typically an hour or two is enough.
+DNS changes can take time to propagate and for your ISP to pickup. They can also be cached. If you don't see your changes taking effect try loading the domain in a new browser and/or giving it more time. Typically an hour or two is enough.
 {% endhint %}
 
 ## Additional Configurations
@@ -115,7 +115,7 @@ DNS changes can take time to propogate and for your ISP to pickup. They can also
 If necessary you can configure your HTTPS and WWW settings before launching your site.
 {% endhint %}
 
-Open the Content Manager interface and navigate to the Settings section. Under General you'll find your HTTPS and WWW site settings.&#x20;
+Open the Content Manager interface and navigate to the Settings section. Under General, you'll find your HTTPS and WWW site settings.&#x20;
 
 ![HTTPS and WWW settings.](<../../.gitbook/assets/www-settings-general (1).png>)
 
