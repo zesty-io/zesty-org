@@ -53,10 +53,39 @@ module.exports = {
 
 ### Working with Zesty View Components
 
-The Zesty.io configuration for next.js will look for a component name after the content model in `views/zesty` directory in your nextjs project. A content model named `articles` will look for a component `views/zesty/Article.js` Note the slight name change, as the naming convention is a `PascalCase` without pluralization, therefore `articles` becomes `Article`. We call this the alternate name, you can find the automated alternate name by look at the [`?toJSON`](../../../apis/json-endpoints/headless-and-hybrid-tojson.md#content-output) response of any content item through WebEngine.
+The Zesty.io configuration for next.js will look for a component name after the content model in `views/zesty` directory in your next.js project. A content model named `articles` will look for a component `views/zesty/Article.js` Note the slight name change, as the naming convention is a `PascalCase` without pluralization, therefore `articles` becomes `Article`. We call this the alternate name, you can find the automated alternate name by look at the [`?toJSON`](../../../apis/json-endpoints/headless-and-hybrid-tojson.md#content-output) response of any content item through WebEngine.
+
+{% hint style="info" %}
+Content models that start with a number will need N prepended to the name, e.g. `3slides` will be named `N3slides.js.` The sync script will automatically do this..
+{% endhint %}
 
 Instead of manually creating component, Zesty.io provide a script from downloading and creating components for each content model in your zesty.io instance.&#x20;
 
-After a `npm run sync` a view component is created for each Zesty Content Model in the `views/zesty` directory. Zesty Content Items that have URL will automatically resolve to the component in that `views` directory that is assocaited with the content models name.
+#### Zesty.io Next.js Sync
+
+The zesty sync is already built into the nextjs-starter, but if you would like to implement a custom sync file, you may download or reference this file [https://github.com/zesty-io/nextjs-starter/blob/main/lib/zesty/sync.js](https://github.com/zesty-io/nextjs-starter/blob/main/lib/zesty/sync.js)
+
+Once sync is in your project, add this line to your package.json file `"sync": "node lib/zesty/sync.js",` under `"scripts"` once that is in place you can  run `npm run sync` from your terminal to automatically pull down files.
+
+After a `npm run sync` a view component is created for each Zesty Content Model in the `views/zesty` directory. Zesty Content Items that have URL will automatically resolve to the component in that `views` directory that is associated with the content models name.
+
+```
+// Example Component
+
+import React  from 'react';
+
+function Article({ content }) {
+    return (
+        <>
+            {/* Zesty.io Output Example and accessible JSON object for this component. Delete or comment out when needed.  */}
+            <h1 dangerouslySetInnerHTML={{__html:content.meta.web.seo_meta_title}}></h1>
+            <div>{content.meta.web.seo_meta_description}</div>
+            {/* End of Zesty.io output example */}
+        </>
+    );
+}
+
+export default Article;
+```
 
 Each Component loads with a {content} object, this object is a direct feed of that URLs ?toJSON response. [Read about toJSON](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#tojson)
