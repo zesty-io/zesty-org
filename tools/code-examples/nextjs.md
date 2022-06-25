@@ -2,7 +2,7 @@
 description: How to run NextJS with Zesty.io
 ---
 
-# Next JS
+# NextJS
 
 ### Getting Started
 

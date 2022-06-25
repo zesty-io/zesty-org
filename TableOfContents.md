@@ -197,7 +197,7 @@
 * [Atom IDE Package](tools/atom-package.md)
 * [Chrome Browser Extension](tools/chrome-extension.md)
 * [Headless Code Examples](tools/code-examples/README.md)
-  * [NextJS](tools/code-examples/nextjs/README.md)
+  * [NextJS](tools/code-examples/nextjs.md)
     * [Dynamic Page Resolution in Next.js](tools/code-examples/nextjs/dynamic-page-resolution-in-next.js.md)
   * [React](tools/code-examples/react/README.md)
     * [Guide (Local React App)](tools/code-examples/react/guide-local-react-app.md)

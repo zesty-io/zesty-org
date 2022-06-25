@@ -53,6 +53,10 @@ module.exports = {
 
 ### Working with Zesty View Components
 
+The Zesty.io configuration for next.js will look for a component name after the content model in `views/zesty` directory in your nextjs project. A content model named `articles` will look for a component `views/zesty/Article.js` Note the slight name change, as the naming convention is a `PascalCase` without pluralization, therefore `articles` becomes `Article`. We call this the alternate name, you can find the automated alternate name by look at the [`?toJSON`](../../../apis/json-endpoints/headless-and-hybrid-tojson.md#content-output) response of any content item through WebEngine.
+
+Instead of manually creating component, Zesty.io provide a script from downloading and creating components for each content model in your zesty.io instance.&#x20;
+
 After a `npm run sync` a view component is created for each Zesty Content Model in the `views/zesty` directory. Zesty Content Items that have URL will automatically resolve to the component in that `views` directory that is assocaited with the content models name.
 
 Each Component loads with a {content} object, this object is a direct feed of that URLs ?toJSON response. [Read about toJSON](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#tojson)
