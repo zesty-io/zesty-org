@@ -14,10 +14,10 @@ For example; If the user account you instantiate the SDK with has a role of cont
 
 **When using the SDK we recommend these 2 things for authenticating.**
 
-1. An account created specifically for using with the SDK 
+1. An account created specifically for using with the SDK&#x20;
 2. The role of `developer` for the SDK user
 
-### [async/await syntax](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
+### [async/await syntax](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async\_await)
 
 ```javascript
 async function authedSDK() {
@@ -39,7 +39,7 @@ async function authedSDK() {
 const instance = await authedSDK()
 ```
 
-### [Promise syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+### [Promise syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using\_promises)
 
 ```javascript
 const auth = new SDK.Auth();
@@ -55,4 +55,3 @@ const sdk = auth.login(
   throw err
 })
 ```
-

@@ -28,4 +28,3 @@ try {
   console.log(err);
 }
 ```
-

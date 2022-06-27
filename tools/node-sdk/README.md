@@ -45,10 +45,11 @@ main();
 
 3\) Run the example with `node index.js`
 
-{% page-ref page="instantiation.md" %}
+{% content-ref url="instantiation.md" %}
+[instantiation.md](instantiation.md)
+{% endcontent-ref %}
 
 ## Further explanations of the example code
 
 1. [Instantiation of an authenticated instance](instantiation.md)
 2. [Requesting instance data](instantiation.md)
-

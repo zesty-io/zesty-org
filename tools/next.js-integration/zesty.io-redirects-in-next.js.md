@@ -15,5 +15,32 @@ module.exports = {
     return await fetchZestyRedirects()
   },
   ...
-node}
+}
 ```
+
+If you wish to combine redirects from multiple sources, fetch the  `await fetchZestyRedirects()` into a separate variable and join the array [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/concat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/concat)
+
+Example of joining zesty redirects to your customer redirects.
+
+```javascript
+// next.config.js
+const { fetchZestyRedirects } = require('./lib/zesty/fetchRedirects');
+
+module.exports = {
+  async redirects() {
+    let myRedirects = [
+      {
+        source: '/about',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+    const zestyRedirects = await fetchZestyRedirects();
+    
+    myRedirects.concat(zestyRedirects );
+    return myRedirects
+  },
+  ...
+}
+```
+

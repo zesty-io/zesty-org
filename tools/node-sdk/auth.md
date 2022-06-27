@@ -13,8 +13,7 @@ The login function takes 2 parameters a user email and password. It then talks t
 
 ### response
 
-```text
-
+```
 ```
 
 ## `verifyToken`
@@ -23,11 +22,9 @@ Given a session `token` this function will talk with the `auth-api` to ensure th
 
 ### parameters
 
-* `token` 
+* `token`&#x20;
 
 ### response
 
-```text
-
 ```
-
+```

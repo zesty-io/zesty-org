@@ -2,7 +2,7 @@
 description: How to load dynamic zesty.io content into your next.js project
 ---
 
-# Dynamic Page Resolution in Next.js
+# Dynamic Pages in Next.js
 
 To dynamically load your Zesty.io instance's content into your Next.js project, you will need three files and zesty env values in your next.config.js file. You can see a working example of this in our nextjs starter [https://github.com/zesty-io/nextjs-starter](https://github.com/zesty-io/nextjs-starter). The starter is a great place to launch your nextjs app with everything for Zesty.io already configured.
 

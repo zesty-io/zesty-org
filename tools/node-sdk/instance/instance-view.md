@@ -4,7 +4,7 @@ CRUD on view files.
 
 _All examples assume a properly_ [_authenticated SDK instance_](../instantiation.md)
 
-Get all views: \(returns an array of view objects\)
+Get all views: (returns an array of view objects)
 
 ```javascript
 try {
@@ -25,7 +25,7 @@ try {
 }
 ```
 
-Create a view \(snippet\):
+Create a view (snippet):
 
 ```javascript
 const type = "snippet";
@@ -44,7 +44,7 @@ try {
 }
 ```
 
-Create a view \(endpoint\):
+Create a view (endpoint):
 
 ```javascript
 const type = "ajax-json";
@@ -91,4 +91,3 @@ try {
   console.error(err);
 }
 ```
-

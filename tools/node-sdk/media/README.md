@@ -8,4 +8,3 @@ Using the `media-api` you can make CRUD operations against the media assets with
 
 * [Files](media-file.md)
 * [Groups](media-group.md)
-
