@@ -141,8 +141,11 @@
 ## Tools & Resources <a href="#tools" id="tools"></a>
 
 * [Next.js Integration](tools/code-examples/nextjs.md)
-  * [Dynamic Pages in Next.js](tools/code-examples/nextjs/dynamic-page-resolution-in-next.js.md)
-  * [Zesty.io Redirects in Next.js](tools/next.js-integration/zesty.io-redirects-in-next.js.md)
+  * [The Content Object](tools/next.js-integration/the-content-object.md)
+  * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
+  * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
+  * [SSR: Server Side Rendering](tools/next.js-integration/ssr-server-side-rendering.md)
+  * [SSG: Static Site Generation](tools/next.js-integration/ssg-static-site-generation.md)
 * [Guides](tools/guides/README.md)
   * [Adding a Favicon](tools/guides/adding-a-favicon.md)
   * [Analytics](tools/guides/analytics.md)
