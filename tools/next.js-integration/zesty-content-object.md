@@ -1,4 +1,8 @@
-# The Content Object
+---
+description: How to work with the Zesty content object that is fed into Next.js components.
+---
+
+# Zesty Content Object
 
 ### How the page content object works
 
