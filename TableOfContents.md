@@ -141,10 +141,10 @@
 ## Tools & Resources <a href="#tools" id="tools"></a>
 
 * [Next.js Integration](tools/code-examples/nextjs.md)
-  * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
   * [Zesty Content Object](tools/next.js-integration/zesty-content-object.md)
   * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
   * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
+  * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
   * [SSR: Server Side Rendering](tools/next.js-integration/ssr-server-side-rendering.md)
   * [SSG: Static Site Generation](tools/next.js-integration/ssg-static-site-generation.md)
 * [Guides](tools/guides/README.md)
