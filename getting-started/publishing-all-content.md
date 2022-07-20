@@ -21,6 +21,10 @@ bearer XXXXXXXXXXXXX ... is your APP_SID cookie or authorization token found in 
 8-xyz-xyz ... This Zesty Unique Identifier can be found in accounts.zesty.io by clicking into your instance's setting
 {% endswagger-parameter %}
 
+{% swagger-parameter in="query" name="lang" %}
+The language code variant, example: es-MX
+{% endswagger-parameter %}
+
 {% swagger-response status="200" description="Tell you how many items are in the instance along with an array mapping the items zuids, versions, and model zuids" %}
 ```
 {
@@ -59,6 +63,10 @@ bearer XXXXXXXXXXXXX ... is your APP_SID cookie or authorization token found in 
 
 {% swagger-parameter in="query" name="instanceZUID" type="string" %}
 8-xyz-xyz ... This Zesty Unique Identifier can be found in accounts.zesty.io by clicking into your instance's setting
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="lang" %}
+The language code variant, example: es-MX
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}
