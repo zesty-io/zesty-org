@@ -167,6 +167,7 @@
   * [Creating a feed](tools/guides/creating-a-feed.md)
   * [Creating a Lead Form](tools/guides/how-to-create-a-lead-form.md)
   * [Creating and Adding a Team](tools/guides/adding-a-team.md)
+  * [Create a Downloadable Image or Zip File](tools/guides/create-a-downloadable-image-or-zip-file.md)
   * [Editor and Coding Basics](tools/guides/editor-and-coding-basics.md)
   * [How Webpages are Assembled](tools/guides/how-webpages-are-assembled.md)
   * [How do Instance or Blueprint LESS Variables Work](tools/guides/how-do-instance-or-blueprint-less-variables-work.md)
