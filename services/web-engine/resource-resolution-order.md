@@ -66,3 +66,14 @@ The Base Directory setting can be added via [API](https://instances-api.zesty.or
 ```
 
 &#x20;If you know what value you want the base directory set to go ahead and add it to the JSON body under `value`.
+
+### Reserved Paths
+
+Some path parts are reserved for security reasons. Any content item url path that includes these words will 404.
+
+* vendor
+* composer
+* package
+* package-lock
+* gulpfile
+* README
