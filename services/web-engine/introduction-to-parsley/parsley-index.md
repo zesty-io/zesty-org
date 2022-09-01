@@ -297,7 +297,7 @@ The `getMediaURL()` call returns the original URL to that file. This is how to a
 
 ## getNextURL(number)
 
-The `getNextURL()` call returns the current page url with a query parameter `p` increased by the number specified. If there is no query parameter `p`, it will set it equal to the number specified. If no number is provided, the default is 5. This can be used with `get_var.p` to do pagination with an each loop.
+The `getNextURL()` call returns the current page url with a query parameter `p` increased by the number specified. If there is no query parameter `p`, it will set it equal to the number specified. If no number is provided, the default is 10. This can be used with `get_var.p` to do pagination with an each loop.
 
 ```
 {{ page.getNextURL(10) }}
@@ -306,11 +306,11 @@ The `getNextURL()` call returns the current page url with a query parameter `p` 
 
 ## getPreviousURL(number)
 
-The `getPreviousURL()` call returns the current page url with a query parameter `p` decreased by the number specified. If there is no query parameter `p`, it will set it equal to 0. If no number is provided as an argument, the default is 5. This can be used with `get_var.p` to do pagination with an each loop.
+The `getPreviousURL()` call returns the current page url with a query parameter `p` decreased by the number specified. If there is no query parameter `p`, it will set it equal to 0. If no number is provided as an argument, the default is 10. This can be used with `get_var.p` to do pagination with an each loop.
 
 ```
 // on the page /blog/?p=30
-{{ page.getpreviousurl(10) }}
+{{ page.getPreviousURL(10) }}
 // /blog/?p=20
 ```
 
