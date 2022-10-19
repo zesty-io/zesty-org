@@ -465,6 +465,19 @@ The `limit` statement is used in an each loop to specify how many content entrie
 {{ end-each }}
 ```
 
+## length
+
+The `length` of a given string.
+
+```
+{{this.title.length}}
+// outputs a number, ex. 11
+
+{{if {this.title.length} > 5}}
+ // do this 
+{{end-if}}
+```
+
 ## math( statement )
 
 The `math()` call executes an equation and returns a number.
