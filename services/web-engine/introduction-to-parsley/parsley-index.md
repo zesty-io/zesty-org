@@ -465,15 +465,15 @@ The `limit` statement is used in an each loop to specify how many content entrie
 {{ end-each }}
 ```
 
-## length
+## length()
 
 The `length` of a given string.
 
 ```
-{{this.title.length}}
+{{this.title.length()}}
 // outputs a number, ex. 11
 
-{{if {this.title.length} > 5}}
+{{if {this.title.length()} > 5}}
  // do this 
 {{end-if}}
 ```
