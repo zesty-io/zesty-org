@@ -36,23 +36,29 @@ To better organize your files, you can create folders and sub-folders from the m
 3. [Find and View Folders](folders/find-and-view-folders.md)
 4. Do miscellaneous tasks such as: [Rename Folders](folders/rename-folders.md), [Hide Folders](folders/hide-folders.md)
 
-<figure><img src="../../../.gitbook/assets/2022-10-26 15.53.06.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2022-10-26 15.53.06 (1).gif" alt=""><figcaption></figcaption></figure>
 
 ### Step 4: Upload Files
 
-You can upload files directly from your computer simply by clicking on the upload button in the top right hand corner or by dragging and dropping them into Media.
+You can upload files directly from your computer simply by clicking on the upload button in the top right hand corner or by dragging and dropping them into Media. To learn more about how to upload files [go here](files/upload-files.md).
 
 <figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.02.26 PM.png" alt=""><figcaption></figcaption></figure>
 
 ### Step 5: Preview Files
 
-You can see all your files in the form of cards in All Media or in a folder. To see the full preview of a file, simply click on the cards.
+You can see all your files in the form of cards in All Media or in a folder. To see the full preview of a file, simply click on the cards. From here you can:
+
+1. [Get File ZUID](files/get-file-zuid.md)
+2. [Rename a File](files/rename-file.md)
+3. [Move a File](files/move-file.md)
+4. [Use "On-the-Fly Editor"](files/on-the-fly-editor.md)
+5. [Delete File](files/delete-file.md)
 
 <figure><img src="../../../.gitbook/assets/2022-10-26 16.12.38.gif" alt=""><figcaption></figcaption></figure>
 
 ### Step 6: Search Files & Folders
 
-To quickly find a file or folder, simply click on the search bar in the left Media sidebar, type in your query, and hit enter.
+To quickly find a file or folder, simply click on the search bar in the left Media sidebar, type in your query, and hit enter. To learn more about how to search for files and folders [go here.](search-files-and-folders.md)
 
 <figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.13.36 PM.png" alt=""><figcaption></figcaption></figure>
 
