@@ -1,43 +1,67 @@
 ---
-description: >-
-  The Media tab is where all of a properties media is organized. Types of media
-  that can be uploaded include SVG, PDF, MOV, Mp4, GIF, JPEG, and more.
+description: Upload, store, and organize files such as images, videos, and more
 ---
 
 # Media
 
-### Overview
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 3.22.55 PM.png" alt=""><figcaption></figcaption></figure>
 
-The Media tab is where all of an instance's media is organized. All types of files can be uploaded, including SVG, PDF, MOV, Mp4, GIF, JPEG, PDF, and more.
+## What is Media?
 
-![The media section interface.](../../../.gitbook/assets/01-media-section.png)
+Media (also known as a Digital Asset Manager), is a feature through which you can upload, store, share, and organize files such as images, videos, PDFs, etc. You can then access and use these files in content on your website or app to create richer content experiences.**The key benefits of using the Media app are:**
 
-### Media File Information
+1. **Single Source of Truth for Files:** All your files can be uploaded, searched, managed, and viewed from one place.
+2. **Multiple Image Output Formats:** While we always store image assets in their original state, we have an "On-the-fly" image editor to access a myriad of output formats and optimizations, and alterations you can choose to best fit your use case.
 
-Media file information such as the name, file name, ZUID, and more is accessed by clicking the cog icon in the lower left-hand corner of the thumbnail frame. 
+## How to Get Started with Media?
 
-![The cog icon in the thumbnail frame allows you to access the media file&apos;s information.](../../../.gitbook/assets/media-file-information.png)
+### Step 1: Click on Media in the Left Navigation Bar
 
-### Groups
+By default it should open to "All Media". From here you can view all the files you have uploaded in your instance such as images, documents, and videos.
 
-Media can be organized into groups, groups can be nested. These groups are only visual representations used in the interface and do not affect the path of the media.  
-To create a new group click the **+ New Group** button, which will cause a modal will pop up allowing you to name your group. Once you've named your group click the **Create Group** button in the modal and you're done.
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 3.24.45 PM.png" alt=""><figcaption></figcaption></figure>
 
-![Media can be organized into groups.](../../../.gitbook/assets/02-media-groups.png)
+### Step 2: See All Your Uploaded Files in the "All Media" tab
 
-#### **Customizing collapsed/expanded Groups**
+You can now see all the files stored in your instance from the "All Media" tab.&#x20;
 
-When an instance has a large amount of assets it can be difficult to find the group that you're looking for; to help with this the Media section will remember which folders are collapsed/expanded so when you navigate away and back you can pick up where you left off.  
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 3.45.33 PM.png" alt=""><figcaption></figcaption></figure>
 
-#### Hiding Groups
+### Step 3: Organize your work & files with Folders
 
-Hiding groups can further help a user navigate groups, especially with a large number of assets. To hide group, hover over its name and an eye icon will appear. Click the eye icon to hide the group. 
+To better organize your files, you can create folders and sub-folders from the media sidebar. To get started with folders, you can learn more about how to:
 
-![Groups can be hidden by clicking the eye icon.](../../../.gitbook/assets/media-hide-groups.png)
+1. [Create Folders](folders/create-folders.md)
+2. [Create Sub Folders](folders/create-sub-folders.md)
+3. [Find and View Folders](folders/find-and-view-folders.md)
+4. Do miscellaneous tasks such as: [Rename Folders](folders/rename-folders.md), [Hide Folders](folders/hide-folders.md)
 
-Once groups have been hidden they can be viewed going to the Hidden Items section which is located at the bottom of the sidebar underneath all of the groups.
+<figure><img src="../../../.gitbook/assets/2022-10-26 15.53.06.gif" alt=""><figcaption></figcaption></figure>
 
-### EcoBins
+### Step 4: Upload Files
 
-Instances can have EcoBins which allow media to be shared across instances. Contact support@zesty.io if you're interested in an EcoBin to share media across your instances.
+You can upload files directly from your computer simply by clicking on the upload button in the top right hand corner or by dragging and dropping them into Media.
 
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.02.26 PM.png" alt=""><figcaption></figcaption></figure>
+
+### Step 5: Preview Files
+
+You can see all your files in the form of cards in All Media or in a folder. To see the full preview of a file, simply click on the cards.
+
+<figure><img src="../../../.gitbook/assets/2022-10-26 16.12.38.gif" alt=""><figcaption></figcaption></figure>
+
+### Step 6: Search Files & Folders
+
+To quickly find a file or folder, simply click on the search bar in the left Media sidebar, type in your query, and hit enter.
+
+<figure><img src="../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.13.36 PM.png" alt=""><figcaption></figcaption></figure>
+
+## FAQ
+
+### How do I create EcoBins?
+
+Instances can have EcoBins which allow media to be shared across instances. Contact [support@zesty.io](mailto:support@zesty.io) if you're interested in an EcoBin to share media across your instances.
+
+### Have a feature request or feedback for the Media App?
+
+You can share it [here](https://docs.google.com/forms/d/e/1FAIpQLSd4D42GO8DXB5\_o3u2bq3A8GwpTFPd80Un1kDpxL5xSgqECVQ/viewform).
