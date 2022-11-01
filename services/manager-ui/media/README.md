@@ -15,6 +15,12 @@ Media (also known as a Digital Asset Manager), is a feature through which you ca
 
 ## How to Get Started with Media?
 
+We recommend you get started by watching the video below or following along with the steps shared below.&#x20;
+
+{% embed url="https://www.youtube.com/watch?v=SJJna8s4CZ0&t=23s&ab_channel=ZestyioContentPlatform" %}
+w
+{% endembed %}
+
 ### Step 1: Click on Media in the Left Navigation Bar
 
 By default it should open to "All Media". From here you can view all the files you have uploaded in your instance such as images, documents, and videos.
