@@ -12,9 +12,11 @@ In the left navigation bar, click on the media tab. By default it should open to
 
 You can find the image by selecting the file in all media, or a file in a folder, or by using search.&#x20;
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.41.50 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 3: Click on the "Launch On-the-Fly Image Editor" Button
 
-
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.42.56 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4: Make the modifications you wish to make using the sliders and buttons
 
@@ -24,11 +26,16 @@ You can change the image's:&#x20;
 * Height & Width
 * Orientation (with rotates and flips)
 * Optimization
+* Saturation
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.46.06 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 5: Copy the URL with your newly added parameters
 
-Note: all the modifications you make will not get added to your original file URL, they will only be on this newly generate URL
+In this case, I rotated the image, and reduced it's saturation to -100% and then copied the URL.
 
+Note: all the modifications you make will not get added to your original file URL, they will only be on this newly generated URL
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.45.02 PM.png" alt=""><figcaption></figcaption></figure>
 
 ###

@@ -15,16 +15,21 @@ By default it should open to "All Media". From here you can view all the files y
 
 ### Step 2: Scan the Left Sidebar and click on the folder you wish to open
 
+In this case I want to open the "Brand" folder.&#x20;
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 8.06.29 PM.png" alt=""><figcaption></figcaption></figure>
+
 ### Step 3: You can now view your folder!
 
-**From here, you can:**
+**From here you can:**
 
-* Upload files directly into a folder
-* Create sub-folders
-* View Folders
-* Rename Folders
-* Hide Folders
-* View Hidden Folders
+* View uploaded files and created folders
+* [Upload files directly into a folder](../files/upload-files.md)
+* [Create sub-folders](create-sub-folders.md)
+* [Rename your folder](rename-folders.md)
+* [Hide Folders](hide-folders.md)
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 8.07.08 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Method 2: Using the Search Bar
 
@@ -36,11 +41,11 @@ By default it should open to "All Media". From here you can view all the files y
 
 ### Step 2: Click on the Search Bar in the Media Side Navigation Bar
 
-### Step 3: Type in the name of the folder you are searching for
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 8.08.29 PM.png" alt=""><figcaption></figcaption></figure>
 
-You can search by File Name, Folder Name, URL, ZUIDs, or key words.
+### Step 3: Type in the name of the folder you are searching for & hit enter
 
-### Step 4: See Your Search Results
+You can now see your search results!
 
-These results are sorted in Alphabetical order by default.
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 8.09.41 PM.png" alt=""><figcaption></figcaption></figure>
 

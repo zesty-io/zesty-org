@@ -8,6 +8,8 @@ By default it should open to "All Media". From here you can view all the files y
 
 ## Step 2: Click on the Plus Button in the Folders section of the left Media sidebar
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.53.20 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 3: In the pop-up, select your destination folder, type your new folder name, and click done
 
 **If you want this folder to be:**
@@ -15,13 +17,16 @@ By default it should open to "All Media". From here you can view all the files y
 * At the root level of your instance bin, then select the destination folder as "None".
 * Inside of an existing folder, then select the destination folder as whichever folder you want it to be inside of
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.54.08 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 4: Your New Folder is Now Made!
 
 **From here, you can:**
 
-* Upload files directly into a folder
-* Create sub-folders
-* View Folders
-* Rename Folders
-* Hide Folders
-* View Hidden Folders
+* View uploaded files and created folders
+* [Upload files directly into a folder](../files/upload-files.md)
+* [Create sub-folders](create-sub-folders.md)
+* [Rename your folder](rename-folders.md)
+* [Hide Folders](hide-folders.md)
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.54.39 PM.png" alt=""><figcaption></figcaption></figure>

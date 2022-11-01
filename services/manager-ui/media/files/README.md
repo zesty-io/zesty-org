@@ -5,11 +5,12 @@ In Zesty, you can upload a variety of files such as PNGs, JPEGs, SVG, PDF, MOV, 
 **Learn how to:**&#x20;
 
 1. [Upload Files](upload-files.md)
-2. [Preview Files](preview-files.md)
-3. [Get File ZUID](get-file-zuid.md)
-4. [Rename a File](rename-file.md)
-5. [Move a File](move-file.md)
-6. [Use "On-the-Fly Editor"](on-the-fly-editor.md)
-7. [Delete File](delete-file.md)
+2. [Preview Files](preview-file.md)
+3. [Use "On-the-Fly Editor"](on-the-fly-editor.md)
+4. [Get File URL](get-file-url.md)
+5. [Get File ZUID](get-file-zuid.md)
+6. [Rename a File](rename-file.md)
+7. [Move a File](move-file.md)
+8. [Delete File](delete-file.md)
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.30.48 PM.png" alt=""><figcaption></figcaption></figure>

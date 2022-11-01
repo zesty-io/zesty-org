@@ -12,12 +12,23 @@ In the left navigation bar, click on the media tab. By default it should open to
 
 You can find the image by selecting the file in all media, or a file in a folder, or by using search.&#x20;
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.41.50 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 3: Click on the more button(3 dots) in the top right corner of the image preview pop-up
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.47.55 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4: Select the Delete Option from the drop down menu
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.48.44 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 5: Click on the Delete Button in the pop-up
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.49.40 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 6:  Your file has now been deleted
 
-You should see a small alert showing that the file has been deleted appear in the bottom right corner.&#x20;
+* You will now not be able to see the file in the Media app.&#x20;
+* You should see a small alert showing that the file has been deleted appear in the bottom right corner.&#x20;
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.50.22 PM.png" alt=""><figcaption></figcaption></figure>

@@ -10,21 +10,29 @@ By default it should open to "All Media". From here you can view all the files y
 
 This should open the view showing the contents of folder.
 
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.57.35 PM.png" alt=""><figcaption></figcaption></figure>
+
 ## Step 3: Click on the "Create Sub-Folder" button in the Folder Header
+
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.58.17 PM.png" alt=""><figcaption></figcaption></figure>
 
 ## Step 4: Type your New Folder Name, and click on Done.
 
 Note: The existing folder you are in will already be set as the destination folder. If you change it to another folder, then the sub-folder will be made inside of that folder instead. ****&#x20;
 
-Your New Sub Folder is Now Made!
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.59.26 PM.png" alt=""><figcaption></figcaption></figure>
 
-## Step 5 (Optional): Click on the New Sub Folder made
+## Step 5 (Optional): Your New Sub Folder is Made! Click on the New Sub Folder you made from the grid
 
-**From here, you can:**
+<figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 8.01.05 PM.png" alt=""><figcaption></figcaption></figure>
 
-* Upload files directly into a folder
-* Create sub-folders
-* View Folders
-* Rename Folders
-* Hide Folders
-* View Hidden Folders
+## **Step 6: See your New Subfolder!**
+
+**From this subfolder you can:**
+
+* View uploaded files and created folders
+* [Upload files directly into a folder](../files/upload-files.md)
+* [Create sub-folders](create-sub-folders.md)
+* [Rename your folder](rename-folders.md)
+* [Hide Folders](hide-folders.md)
+

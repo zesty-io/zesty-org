@@ -31,7 +31,9 @@ Locate the media that you wish to upload on your local machine and select every 
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.45.10 PM.png" alt=""><figcaption></figcaption></figure>
 
-### Step 5: Your images are now uploaded
+### Step 5: Your files are now uploaded
+
+Now you can simply click on the file to [preview](preview-file.md) it and get more information about it such as it's [ZUID](get-file-zuid.md), URL, Name, etc.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.45.54 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -57,6 +59,6 @@ In the left side navigation bar, click on the media tab. By default it should op
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.48.54 PM.png" alt=""><figcaption></figcaption></figure>
 
-### Step 5: Your images are now uploaded
+### Step 5: Your files are now uploaded
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-26 at 4.50.30 PM.png" alt=""><figcaption></figcaption></figure>
