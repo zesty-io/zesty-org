@@ -166,6 +166,7 @@
   * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
   * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
   * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
+  * [Pagination and Search Example with Custom Endpoint and Next.js](tools/next.js-integration/pagination-and-search-example-with-custom-endpoint-and-next.js.md)
   * [SSR: Server Side Rendering](tools/next.js-integration/ssr-server-side-rendering.md)
   * [SSG: Static Site Generation](tools/next.js-integration/ssg-static-site-generation.md)
 * [Guides](tools/guides/README.md)
