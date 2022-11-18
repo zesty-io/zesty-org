@@ -67,6 +67,7 @@
   * [Inviting Users](services/accounts-ui/inviting-users.md)
   * [Teams](services/accounts-ui/teams.md)
 * [Manager UI](services/manager-ui/README.md)
+  * [Home Dashboard](services/manager-ui/home-dashboard.md)
   * [Content](services/manager-ui/content/README.md)
     * [Adding and Managing Content](services/manager-ui/content/adding-and-managing-content.md)
     * [Assigning Publish and List Status](services/manager-ui/content/assigning-publish-and-list-status.md)
