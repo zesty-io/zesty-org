@@ -37,7 +37,7 @@ bearer XXXXXXXXXXXXX ... is your APP_SID cookie or authorization token found in 
 The language code variant, example: es-MX. Defaults to en-US
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="Tell you how many items are in the instance along with an array mapping the items zuids, versions, and model zuids" %}
+{% swagger-response status="200" description="Expand to see response example" %}
 {% code lineNumbers="true" %}
 ```json
 {
@@ -78,7 +78,7 @@ bearer XXXXXXXXXXXXX ... is your APP_SID cookie or authorization token found in 
 The language code variant, example: es-MX. Default to en-US
 {% endswagger-parameter %}
 
-{% swagger-response status="200" description="" %}
+{% swagger-response status="200" description="Expand to see response example" %}
 {% code lineNumbers="true" %}
 ```json
 {
