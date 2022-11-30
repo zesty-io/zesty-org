@@ -13,8 +13,12 @@ Publish All endpoints runs against the default language, to publish alternative 
 Note these endpoints queue individual publishing requests which process at 1,800 a minute.
 
 {% hint style="warning" %}
-This call must be made with an authentication token made from a user login. Developer tokens will not work.
+These endpoints must be made with an authentication token made from a user login. Developer tokens will not work.
 {% endhint %}
+
+#### Publish All Content
+
+Will iterate through each model of an instance, and queue all items for publishing.
 
 {% swagger baseUrl="https://us-central1-zesty-prod.cloudfunctions.net/publishAllContent" path="" method="get" summary="Publish All Content" %}
 {% swagger-description %}
@@ -49,7 +53,9 @@ The language code variant, example: es-MX. Defaults to en-US
 {% endswagger-response %}
 {% endswagger %}
 
+#### Publish All Model Content
 
+Will iterate through each item in a specific single content model and queue them for publishing.
 
 {% swagger baseUrl="https://us-central1-zesty-prod.cloudfunctions.net/publishAllModelContent" path="" method="get" summary="Publish All Model Content" %}
 {% swagger-description %}
