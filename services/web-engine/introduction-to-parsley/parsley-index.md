@@ -624,21 +624,18 @@ The `replace()` call does a simple replace without any regular expression.
 
 ## request.path()
 
-Get the full path from request, for example lets use the url /store/12345/my-product/
+Gets the full path from request **excluding** query parameters, for example lets use the url /store/12345/my-product/
 
 ```
-{{ request.path() }} // output: /store/12345/my-product/
+{{ request.path() }} // outputs: /store/12345/my-product/
 ```
 
-{% hint style="info" %}
-Note: When using `request.path()` without specifying the path position it will include query params in the returned value. For example:
-{% endhint %}
+## request.fullpath()
+
+Gets the full path from request **including** query parameters, for example lets use the url /store/12345/my-product/?query=newvalue
 
 ```
-// example domain:
-https://www.mydomain.com/sub-path/?query=newValue
-// returns
-/sub-path/?query=newValue
+{{ request.fullpath() }} // outputs: /store/12345/my-product/?query=newvalue
 ```
 
 ## request.pathPart(num)
