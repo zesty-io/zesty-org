@@ -630,6 +630,17 @@ Get the full path from request, for example lets use the url /store/12345/my-pro
 {{ request.path() }} // output: /store/12345/my-product/
 ```
 
+{% hint style="info" %}
+Note: When using `request.path()` without specifying the path position it will include query params in the returned value. For example:
+{% endhint %}
+
+```
+// example domain:
+https://www.mydomain.com/sub-path/?query=newValue
+// returns
+/sub-path/?query=newValue
+```
+
 ## request.pathPart(num)
 
 Get the "parts" of a url, for example lets use the url /store/12345/my-product/
