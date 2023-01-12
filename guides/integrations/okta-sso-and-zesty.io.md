@@ -21,7 +21,7 @@ This document is a guide on how to configure [Okta](https://help.okta.com/en-us/
 3. Copy the values of **Client ID** and **Client Secret**
 * Client ID is a public identifier for the client that is required in OIDC/OAuth flows
 * Client Secret is a private identifier that SHOULD NOT BE SHARED
-* Tenant’s own Client ID and Client Secret will be used as authentication is specific within that tenant only. In Okta, a unique identity concept is specific to the tenant that is used to authenticate the user. 
+* In Okta, a unique identity concept is specific to the tenant that is used to authenticate the user. With that, the tenant's own Client ID and Client Secret will be used as authentication is specific within that tenant only. As an example, **john.doe@example.com** is a registered Okta user in both **Company A** and **Company B** tenants, with Issuer URLs **https://companyA.okta.com** and **https://companyB.okta.com** respectively. The user information for that user is not identical to each tenant, so the Zesty.io application will use each unique combination of user and tenant to identify and authenticate the user. 
 4. Under ***"General"*** tab, find the **Okta domain** (or **Issuer URL**) which is the URL of the Okta tenant being accessed
 5. Assign people or group who can use the Zesty.io SSO application in ***"Assign"*** section
 
