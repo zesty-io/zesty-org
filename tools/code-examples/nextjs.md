@@ -6,6 +6,8 @@ description: How to run NextJS with Zesty.io
 
 ### Getting Started
 
+{% embed url="https://www.youtube.com/watch?v=Y2cux28b9q0" %}
+
 Node and NPM need to be installed. From your command line.
 
 ```
