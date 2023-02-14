@@ -124,6 +124,7 @@
     * [View Instance Activity Insights](services/manager-ui/audit-trail/view-instance-activity-insights.md)
     * [View Instance Timeline](services/manager-ui/audit-trail/view-instance-timeline.md)
   * [Tabs](services/manager-ui/tabs.md)
+  * [AI Content Assistant](services/manager-ui/ai-content-assistant.md)
   * [Settings](services/manager-ui/settings/README.md)
     * [Instance Settings](services/manager-ui/settings/instance-settings.md)
     * [Instance Meta Tags](services/manager-ui/settings/instance-meta-tags.md)
