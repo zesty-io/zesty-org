@@ -1,0 +1,2090 @@
+{
+	"info": {
+		"_postman_id": "9d13ae45-a1f3-bca7-ab4b-a982637b014c",
+		"name": "Media API",
+		"description": "The Media Service is a collection of four services `resolver`, `modify`, `manager`, and `storage`. \n\nMedia File ZUID example: `3-19c69dd-07a7a`\n\n## Media Manager Service\nIt's job is to communicate with the database. The majority of endpoint we used commonly are in this service. This service orchestrates all the services.\n\nhttps://svc.zesty.io/media-manager-service\n\n## Media Storage Service\nIt's job is to communicate with the storage provider\n\nhttps://svc.zesty.io/media-storage-service\n\n## Media Resolved Service\nIt's job it to get a media file ZUID and return the associate CDN path. This service is consumed everywhere we load media. It is the most heavily trafficked service of the 4.\n\nhttps://svc.zesty.io/media-resolver-service\n\n## Media Modify Service\nIt's job to minipulate images, it gets commands from manager, and makes requests to storage.\n\nhttps://svc.zesty.io/media-modify-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Bin",
+					"item": [
+						{
+							"name": "Get Eco Bins",
+							"_postman_id": "42bc563e-be9d-4b75-9220-56a4889db15a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{manager_api_url}}/eco/26556/bins",
+								"description": "Fetch bins associated with an Eco ID"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Site Bins",
+							"_postman_id": "5709d3a3-3dc5-53dc-ba7e-9140fb68ebc2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{manager_api_url}}/site/{{ex_instance_id}}/bins",
+								"description": "Fetch bins associated with an Instance ID (unique from an Instance ZUID)"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Bin",
+							"_postman_id": "b75a7a1d-bd49-6912-9458-4877ef72943a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{manager_api_url}}/bin/{{ex_bin_zuid}}"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bin",
+							"_postman_id": "5d7d6d36-cd36-be53-743f-f83dc487bf07",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cdn_prefix",
+											"description": "cdn_prefix",
+											"type": "text",
+											"value": ""
+										},
+										{
+											"key": "eco_id",
+											"value": "",
+											"description": "(optional if site_id is in post body) if bin is associated with an eco system",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "",
+											"description": "name of the bin to create",
+											"type": "text"
+										},
+										{
+											"key": "site_id",
+											"value": "",
+											"description": "(optional if eco_id is in post body) the site id ",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "{{protocol}}://{{manager_api_url}}/bin",
+								"description": "This endpoint creates a bin based on the default storage driver and default cdn."
+							},
+							"response": []
+						},
+						{
+							"name": "Update Bin",
+							"_postman_id": "7bd68b78-8532-e4cb-a59b-efa24d84ce72",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "zesty-corporate-template",
+											"description": "string",
+											"type": "text"
+										}
+									],
+									"options": {
+										"formdata": {}
+									}
+								},
+								"url": "{{protocol}}://{{manager_api_url}}/bin/{{media_bin_zuid}}",
+								"description": ":id is the bin_id\n\nonly the name can be changed"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Bin",
+							"_postman_id": "449b3da4-69b4-f853-f9d0-31a620859cf6",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/bin/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"bin",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Bin Files",
+							"_postman_id": "337b8d94-5605-09fb-578a-8449a35a709d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{media_manager_host}}/bin/{{media_bin_zuid}}/files"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Bin Groups (folders)",
+							"_postman_id": "e9bc7028-d063-b48b-fa44-a50daaf4a70e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{media_manager_host}}/bin/{{media_bin_zuid}}/groups"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "f6023a91-531a-87cb-c267-64a18d375dc8",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab02bd93-050a-43f5-a63c-988729a696e4",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb2e610b-81f8-4192-823f-197097effaa0",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Group (AKA folders)",
+					"item": [
+						{
+							"name": "Create Group",
+							"_postman_id": "e2600abe-a4b3-3dc4-5fe1-f48d7559a559",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bin_id",
+											"value": "",
+											"description": "media bin id",
+											"type": "text"
+										},
+										{
+											"key": "group_id",
+											"value": "",
+											"description": "(optional) group id set the parent, this group/folder would be nested under the parent, otherwise default to parent (bin_id)",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "",
+											"description": "(optional) is named 'new folder' by default",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{media_manager_host}}/group",
+								"description": "Allow user to create a group, nested under another group or at the top level."
+							},
+							"response": []
+						},
+						{
+							"name": "Update Group",
+							"_postman_id": "2dd8892b-3101-af64-49c2-34f3979c39d0",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "",
+											"description": "new name of the folder",
+											"type": "text"
+										},
+										{
+											"key": "group_id",
+											"value": "",
+											"description": "group_id of the parent group",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/group/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"group",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Group",
+							"_postman_id": "c2668203-f55d-4f0a-a01e-10fd7191e70f",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/group/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"group",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Group",
+							"_postman_id": "a25f2562-1c3d-9600-3301-21a6666ca526",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/group/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"group",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "f8ca9f18-b49f-14af-7b59-2cf09a8224cf",
+					"description": "Groups (folders) are virtual tags that group together files. This is used to organize the frontend to create an file system experience.",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "22193a3f-4b57-43d7-8afa-ee49e6cb5f40",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "bee1e474-ec44-4c02-994f-c682156a07ce",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "File",
+					"item": [
+						{
+							"name": "Get File",
+							"_postman_id": "f400371f-8e10-14a2-4bec-11e40427e9e6",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/file/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"file",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": "Takes file ZUID"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete File",
+							"_postman_id": "d15396c1-6083-e2c3-60f8-5335f5cca14b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{protocol}}://{{media_manager_host}}/file/{{media_file_zuid}}",
+								"description": "Hard delete of the file, takes file zuid."
+							},
+							"response": []
+						},
+						{
+							"name": "Update File",
+							"_postman_id": "3f4912ac-9559-35e2-d467-904d13960966",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "filename",
+											"value": "",
+											"description": "string of the filename",
+											"type": "text"
+										},
+										{
+											"key": "group_id",
+											"value": "",
+											"description": "(optional) will change the group if provided",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "",
+											"description": "(optiona) string update of the title (label)",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/file/:id",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"file",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"description": "Basic update to file."
+							},
+							"response": []
+						},
+						{
+							"name": "Create File",
+							"_postman_id": "101761f2-2950-25ff-4211-957ca5d918b0",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "bin_id",
+											"value": "",
+											"description": "hash id of the media bin",
+											"type": "text"
+										},
+										{
+											"key": "group_id",
+											"value": "",
+											"description": "group/folder zuid",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"value": "",
+											"description": "name of the file to be stored in container",
+											"type": "text"
+										},
+										{
+											"key": "createdBy",
+											"value": "",
+											"description": "(optional) legacy id of the user. This does appear to be used at this time. We need to update this to ZUID of the user.",
+											"type": "text"
+										},
+										{
+											"key": "cdnUrl",
+											"value": "",
+											"description": "(optional) CDN url",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "",
+											"description": "(optional) label of the file, if not included it defaults to the filename",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{media_manager_host}}/file"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "0f67d7d5-e29f-26fe-2888-bccc89f18dea",
+					"description": "Basic file management CRUD calls",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "File Modification",
+					"item": [
+						{
+							"name": "Create Modified File",
+							"_postman_id": "70518576-7acd-be35-53cf-ef2a066ab031",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_id",
+											"value": "",
+											"description": "File zuid to be modified",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"value": "",
+											"description": "corresponding filename",
+											"type": "text"
+										},
+										{
+											"key": "bin_id",
+											"value": "",
+											"description": "id of the media bin",
+											"type": "text"
+										},
+										{
+											"key": "cdnUrl",
+											"value": "",
+											"description": "CDN url",
+											"type": "text"
+										},
+										{
+											"key": "storageUrl",
+											"value": "",
+											"description": "Storage URL",
+											"type": "text"
+										},
+										{
+											"key": "actions_hash",
+											"value": "",
+											"description": "hash of actions to be send to modify service",
+											"type": "text"
+										},
+										{
+											"key": "created_by",
+											"value": "",
+											"description": "(optional) legacy Zesty.io user id or string",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{media_manager_host}}/file/modified"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Modified File",
+							"_postman_id": "2e48aa2b-cc89-f56f-e867-659e27f1384c",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"file",
+										":file_zuid",
+										"modified",
+										":actionHash"
+									],
+									"variable": [
+										{
+											"key": "file_zuid",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "actionHash",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Modified File",
+							"_postman_id": "a3869b56-b06c-d1ed-f1b6-259bd328ea2f",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"host": [
+										"{{media_manager_host}}"
+									],
+									"path": [
+										"file",
+										":file_zuid",
+										"modified",
+										":actionHash"
+									],
+									"variable": [
+										{
+											"key": "file_zuid",
+											"value": "",
+											"type": "string"
+										},
+										{
+											"key": "actionHash",
+											"value": "",
+											"type": "string"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Modified File",
+							"_postman_id": "e90dd742-7594-32d1-242a-b61593109178",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file_id",
+											"value": "",
+											"description": "File zuid to be modified",
+											"type": "text"
+										},
+										{
+											"key": "filename",
+											"value": "",
+											"description": "corresponding filename",
+											"type": "text"
+										},
+										{
+											"key": "bin_id",
+											"value": "",
+											"description": "id of the media bin",
+											"type": "text"
+										},
+										{
+											"key": "cdnUrl",
+											"value": "",
+											"description": "CDN url",
+											"type": "text"
+										},
+										{
+											"key": "storageUrl",
+											"value": "",
+											"description": "Storage URL",
+											"type": "text"
+										},
+										{
+											"key": "actions_hash",
+											"value": "",
+											"description": "hash of actions to be send to modify service",
+											"type": "text"
+										},
+										{
+											"key": "created_by",
+											"value": "",
+											"description": "(optional) legacy Zesty.io user id or string",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{media_manager_host}}/file/modified"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "fb499549-9f20-11a9-8752-7440b9db9719",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Migrate Bin",
+							"_postman_id": "521b783a-5d7c-47b4-4c51-d4e692f069ac",
+							"request": {
+								"method": null,
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{media_manager_host}}/admin/bin/migrate"
+							},
+							"response": []
+						},
+						{
+							"name": "Clone Bin",
+							"_postman_id": "f35868b4-5c1d-ecad-a560-209a61fbf31a",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": "{{media_manager_host}}/admin/bin/clone"
+							},
+							"response": []
+						}
+					],
+					"_postman_id": "6098f7d5-7ad7-0eae-2707-e545dfa79177",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "297d2a7d-f186-4cd2-8491-667129d42c31",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "3fa7b3ef-8e32-4e17-abbc-3aa2c3138e92",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			],
+			"_postman_id": "358da090-1875-cf66-1424-cb8e4e69462b",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "{{APP_SID}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "e734de8c-5c23-4862-a6d2-002416a7d163",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "eedcde8c-641b-4d64-841b-f88352241e46",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Storage",
+			"item": [
+				{
+					"name": "Health Endpoint",
+					"_postman_id": "41c8daf8-5195-f1a0-aef0-e27c9681ed6f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "{{media_storage_host}}/"
+					},
+					"response": []
+				},
+				{
+					"name": "Bucket Creation",
+					"_postman_id": "e394c3af-1fdc-5f70-7501-4ffded16dd9b",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{media_storage_host}}/bucket"
+					},
+					"response": []
+				},
+				{
+					"name": "Bucket Deletion",
+					"_postman_id": "25c328e4-8f5d-d056-e003-c456da0ccda6",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{media_storage_host}}/bucket/:bucket_id",
+							"host": [
+								"{{media_storage_host}}"
+							],
+							"path": [
+								"bucket",
+								":bucket_id"
+							],
+							"variable": [
+								{
+									"key": "bucket_id",
+									"value": "",
+									"type": "string"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "File Creation",
+					"_postman_id": "ad7e82e3-e314-6b4e-3fbf-5c48ff5a2181",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{media_storage_host}}/upload/:provider/:bucketName",
+							"host": [
+								"{{media_storage_host}}"
+							],
+							"path": [
+								"upload",
+								":provider",
+								":bucketName"
+							],
+							"variable": [
+								{
+									"key": "provider",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "bucketName",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"description": "In the URI:\n`bucketName` is accessed by media manager service /sites/site_id/bins\n`provider` is the driver name (gcp or rackspace)"
+					},
+					"response": []
+				},
+				{
+					"name": "File Update",
+					"_postman_id": "74fc65f1-6963-90c9-190b-c3f6eb6856f4",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								},
+								{
+									"key": "storage_name",
+									"value": "",
+									"description": "the storage bucket name (from media bins)",
+									"type": "text"
+								},
+								{
+									"key": "prev_name",
+									"value": "",
+									"description": "the previous name of the file",
+									"type": "text"
+								},
+								{
+									"key": "next_name",
+									"value": "",
+									"description": "the new name of the file",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{media_storage_host}}/file"
+					},
+					"response": []
+				},
+				{
+					"name": "File Delete",
+					"_postman_id": "760baf8c-6ed5-58dd-daf0-4e06b6a19700",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								},
+								{
+									"key": "storage_name",
+									"value": "",
+									"description": "the storage bucket name (from media bins)",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{media_storage_host}}/file"
+					},
+					"response": []
+				},
+				{
+					"name": "Batch Files Delete",
+					"_postman_id": "34f7cce0-e105-d363-bde9-18486d40195d",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storage_driver",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								},
+								{
+									"key": "storage_name",
+									"value": "",
+									"description": "the storage bucket name (from media bins)",
+									"type": "text"
+								},
+								{
+									"key": "filenames",
+									"value": "",
+									"description": "comma seperated filename",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{media_storage_host}}/files",
+						"description": "Deletes multiple files at once"
+					},
+					"response": []
+				},
+				{
+					"name": "File Copy (operation)",
+					"_postman_id": "860a0a99-50ae-5e53-bce1-4a124f0b0d40",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "storageProvider",
+									"value": "gcp",
+									"description": "gcp or rackspace",
+									"type": "text"
+								},
+								{
+									"key": "bucketName",
+									"value": "",
+									"description": "name of storage bucket pulled off the media manager bins endpoint",
+									"type": "text"
+								},
+								{
+									"key": "filenamesUrls",
+									"value": "",
+									"description": "{id: [filename, sourceUrl]}",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{media_storage_host}}/file/copy",
+						"description": "Copy a file from a remote URL into the storage bucket.\nThis is admittedly not as simple as it should be because I've added in allowing some copies to fail while others succeed as part of the same request.\n\n## Example Response Body\n\n```{ id: {\n    name        : 'test-2.png',\n    originalName: 'test 2.png',\n    storageUrl: 'https://storage.googleapis.com/bucketname/test-2.png',\n    sizeBytes,\n    mimetype\n  },\n  id: {\n    originalName: 'file2.svg',\n    sourceResponseCode: 404\n    error: 'failure reading source url: http://doesnotexist.com/blah'\n  }\n}```"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "583ca7c5-0362-3f0c-20e6-be86c30ec31a"
+		},
+		{
+			"name": "Modify",
+			"item": [
+				{
+					"name": "Crop 200x200 top left",
+					"_postman_id": "822501cb-2dd6-7728-c29c-236c4d5a3543",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200&actions[crop][x]=30&actions[crop][y]=40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[crop][width]",
+									"value": "200"
+								},
+								{
+									"key": "actions[crop][height]",
+									"value": "200"
+								},
+								{
+									"key": "actions[crop][x]",
+									"value": "30"
+								},
+								{
+									"key": "actions[crop][y]",
+									"value": "40"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crop Rotate Optimize",
+					"_postman_id": "ff1fb456-2ec8-02cb-a2fd-021733716010",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-23f0b5f-a8k5x&file_name=my_test_file_name&actions[optimize][quality]=100&actions[crop][width]=100&actions[crop][height]=1000&actions[crop][x]=0&actions[crop][y]=0&actions[rotate][degrees]=90&actions[rotate][color]=000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-23f0b5f-a8k5x"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[optimize][quality]",
+									"value": "100"
+								},
+								{
+									"key": "actions[crop][width]",
+									"value": "100"
+								},
+								{
+									"key": "actions[crop][height]",
+									"value": "1000"
+								},
+								{
+									"key": "actions[crop][x]",
+									"value": "0"
+								},
+								{
+									"key": "actions[crop][y]",
+									"value": "0"
+								},
+								{
+									"key": "actions[rotate][degrees]",
+									"value": "90"
+								},
+								{
+									"key": "actions[rotate][color]",
+									"value": "000000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sepia Optimize Blur",
+					"_postman_id": "1323dc2a-48cb-ca3e-8642-27cf75c09be6",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[sepia]=true&actions[optimize][quality]=50&actions[blur][radius]=0x8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[sepia]",
+									"value": "true"
+								},
+								{
+									"key": "actions[optimize][quality]",
+									"value": "50"
+								},
+								{
+									"key": "actions[blur][radius]",
+									"value": "0x8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resize Blur",
+					"_postman_id": "a10c10b5-51d4-f2af-c5c7-20fc29e2d3e5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[optimize][quality]=100&actions[resize][width]=200&actions[resize][height]=50&actions[blur][radius]=0x4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[optimize][quality]",
+									"value": "100"
+								},
+								{
+									"key": "actions[resize][width]",
+									"value": "200"
+								},
+								{
+									"key": "actions[resize][height]",
+									"value": "50"
+								},
+								{
+									"key": "actions[blur][radius]",
+									"value": "0x4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sepia",
+					"_postman_id": "f4415036-392b-b002-fdde-0ef9a221e51c",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[sepia]=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[sepia]",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Blur",
+					"_postman_id": "790e7b95-feb8-8c13-542a-a3e0adcec2d5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[blur][radius]=0x8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[blur][radius]",
+									"value": "0x8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Black and White",
+					"_postman_id": "440916cf-e124-f6d4-f68d-b0cd81b36a32",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[blackandwhite]=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[blackandwhite]",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mosaic",
+					"_postman_id": "9743aafa-7c7b-fd78-7340-ea5dcdcccb7b",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[mosaic]=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[mosaic]",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Noise",
+					"_postman_id": "e805f56c-0f7a-e3f5-c814-a8043c36a8bc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[noise][radius]=0x3&actions[noise][type]=gaussian",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[noise][radius]",
+									"value": "0x3"
+								},
+								{
+									"key": "actions[noise][type]",
+									"value": "gaussian"
+								}
+							]
+						},
+						"description": "radius|type\nTo add noise pass one of the following:\nuniform\ngaussian\nmultiplicative\nimpulse\nlaplacian\npoisson\nOtherwise the argument will be interpreted as a radius which adjusts the weight of the effect."
+					},
+					"response": []
+				},
+				{
+					"name": "Flop",
+					"_postman_id": "aa2962fc-c376-dd23-272d-0a96139fcd21",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[flop]=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[flop]",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flip",
+					"_postman_id": "38024ca0-923c-b96a-9374-4ff5f561acfc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[flip]=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[flip]",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Colorize",
+					"_postman_id": "09892cf3-86d2-af21-e332-93099a10be2f",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[colorize][r]=74&actions[colorize][g]=3&actions[colorize][b]=4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[colorize][r]",
+									"value": "74"
+								},
+								{
+									"key": "actions[colorize][g]",
+									"value": "3"
+								},
+								{
+									"key": "actions[colorize][b]",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resize",
+					"_postman_id": "ccebdcae-c8f7-ec79-8b77-8a91fcb4175f",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[resize][width]=400&actions[resize][height]=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[resize][width]",
+									"value": "400"
+								},
+								{
+									"key": "actions[resize][height]",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rotate",
+					"_postman_id": "dfa71194-98c0-b9ea-6a6c-dd62200a4a98",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[rotate][degrees]=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[rotate][degrees]",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Zesty Resize",
+					"_postman_id": "35234dbc-481f-eab4-2532-86c4e878c95a",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[zesty_resize][width]=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[zesty_resize][width]",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Zesty Crop",
+					"_postman_id": "c249338c-0ffc-22b1-81e4-158a3b6f499e",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test&actions[crop][width]=200&actions[crop][height]=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test"
+								},
+								{
+									"key": "actions[crop][width]",
+									"value": "200"
+								},
+								{
+									"key": "actions[crop][height]",
+									"value": "200"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Minify",
+					"_postman_id": "ef0a04bc-f10b-c7a6-d897-76478fe665ba",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[minify][factor]=.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[minify][factor]",
+									"value": ".1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crop",
+					"_postman_id": "33174f1a-f63c-00c4-063a-2b8d4e159c43",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[crop][width]",
+									"value": "200"
+								},
+								{
+									"key": "actions[crop][height]",
+									"value": "200"
+								}
+							]
+						},
+						"description": "options x y params\n\n[crop][x]\n[crop][y]"
+					},
+					"response": []
+				},
+				{
+					"name": "Optimize",
+					"_postman_id": "fb69cd25-905e-a3f1-d4f4-148f9c0fd258",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[optimize][quality]=50",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8040",
+							"path": [
+								"modify"
+							],
+							"query": [
+								{
+									"key": "zuid",
+									"value": "3-19c69dd-07a7a"
+								},
+								{
+									"key": "file_name",
+									"value": "my_test_file_name"
+								},
+								{
+									"key": "actions[optimize][quality]",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "b5a5de73-e174-ec19-9893-2e3dba24b769"
+		},
+		{
+			"name": "Resolver",
+			"item": [
+				{
+					"name": "resolve file",
+					"_postman_id": "813165b7-fbf9-47e5-8e54-724915027a81",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "text/plain",
+								"type": "text"
+							},
+							{
+								"key": "cookie",
+								"value": "APP_SID=67e0548b019ebc596f9204f0e9c8e846fe18d490",
+								"type": "text"
+							},
+							{
+								"key": "x-auth",
+								"value": "67e0548b019ebc596f9204f0e9c8e846fe18d490",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 67e0548b019ebc596f9204f0e9c8e846fe18d490",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"items\": [\n\t\t\t\t{\t\n\t\t\t\t\t\"id\": \"3-375d91d-6zshl\",\n        \t\t\t\"actions\"  => [\n\t\t\t            [\n\t\t\t                \"type\" : \"getimage\",\n\t\t\t                \"options\": {\n\t\t\t                \t\"width\" : 300,\n\t\t\t                \t\"height\" : 300,\n\t\t\t                \t\"type\" : \"crop\"\n\t\t\t                }\n\t\t\t            ]\n\t\t\t        ],\n        \t\t\t\"property\" => \"url\"\n\t\t\t\t}\n\t\t]\n}"
+						},
+						"url": "https://svc.zesty.io/media-resolver-service/resolve"
+					},
+					"response": []
+				},
+				{
+					"name": "invalidate",
+					"_postman_id": "ee287b91-7baa-4d26-923d-db1398d7d57d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "text/plain",
+								"disabled": true
+							},
+							{
+								"key": "cookie",
+								"type": "text",
+								"value": "APP_SID=db99a1ca1659e925d3b4c3995ac623c704ef03c2",
+								"disabled": true
+							},
+							{
+								"key": "x-auth",
+								"type": "text",
+								"value": "db99a1ca1659e925d3b4c3995ac623c704ef03c2",
+								"disabled": true
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer db99a1ca1659e925d3b4c3995ac623c704ef03c2",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[[\"3-9c35b26-tojz3\",\"url\",\"*\"]]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://svc.zesty.io/media-resolver-service/invalidatePublic"
+					},
+					"response": []
+				},
+				{
+					"name": "resolve file Copy",
+					"_postman_id": "49e32944-7d24-44a5-962c-b65bb600dcb9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "cookie",
+								"value": "APP_SID={{APP_SID}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://svc.zesty.io/media-resolver-service/resolve/3-5ebdca9-hgneq/getimage?w=100",
+							"protocol": "https",
+							"host": [
+								"svc",
+								"zesty",
+								"io"
+							],
+							"path": [
+								"media-resolver-service",
+								"resolve",
+								"3-5ebdca9-hgneq",
+								"getimage"
+							],
+							"query": [
+								{
+									"key": "w",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "ff083543-d708-cb05-90eb-e0a0f5fefa47"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{auth_token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "3d2e9944-3c5e-4a1f-9a54-278335f31cbf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c61a4903-e58b-4f14-b9e3-302d2704d1bf",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
