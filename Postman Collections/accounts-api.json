@@ -1,0 +1,6011 @@
+{
+	"info": {
+		"_postman_id": "b15a0abd-330b-17dc-bf88-68a30c593961",
+		"name": "Accounts API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/instances",
+			"item": [
+				{
+					"name": "Create Instance",
+					"_postman_id": "3803b0f6-3481-19d7-e211-1db25f8c1027",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Test Instance with database defaults\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances",
+						"description": "Creates an instance."
+					},
+					"response": []
+				},
+				{
+					"name": "Create Instance with an ecosystem ID",
+					"_postman_id": "d37b9e1e-1e3a-453f-ad6e-8069fc4b6620",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Instance Name\",\n    \"ecoZUID\": \"{{ecosystem_zuid}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances",
+						"description": "Creates an instance with an ecosystem."
+					},
+					"response": []
+				},
+				{
+					"name": "Verify DNS",
+					"_postman_id": "b3e4fd14-01b4-4eba-a911-4c6333821303",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"domain\": \"www.google.com\",\n  \"aRecord\": \"172.217.14.68\",\n  \"cName\": \"www.google.com\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/dns",
+						"description": "Verifies a DNS record matches a CName or A record"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance",
+					"_postman_id": "96f1c092-be87-8f2a-021f-c9b26613d80a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}",
+						"description": "Gets a single instance by its ZUID"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Instances",
+					"_postman_id": "60970994-9efb-9a8b-a34c-74a16b3f95de",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "www",
+								"type": "text"
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances",
+						"description": "Gets all instances a user has access to."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Invited Instances",
+					"_postman_id": "0f14db41-569d-43a0-8b8c-a8af5c43b4a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/invites",
+						"description": "Gets all instances a user has been invited to."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Users",
+					"_postman_id": "74fa699a-73a3-8043-a477-e7adec563fda",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/users",
+						"description": "Gets a single instance's users."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Users With Roles",
+					"_postman_id": "b440898f-c658-4f0f-abca-9f0b256c0eb9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/users/roles",
+						"description": "Gets a single instance's users with their instance-based role attached."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Pending Users",
+					"_postman_id": "6f7bad3d-36ab-41f8-a771-517f5341fb07",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/users/pending",
+						"description": "Gets a single instance's pending users."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Companies",
+					"_postman_id": "911fe932-b91d-afa7-a0e0-6f7036eda434",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/companies",
+						"description": "Gets a single instance's companies."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Instance",
+					"_postman_id": "48097d31-3692-7a9b-315a-4833487fc7b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Instance Name\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}",
+						"description": "Update permissions for a given user and content instance. Takes one of following values for the query param `action`.\n\n- `updateEcosystem`\n- `updateDomain`\n- `updateBlueprint`\n- `purgeCache`"
+					},
+					"response": [
+						{
+							"id": "df100aeb-924c-4f1e-b18d-28757a99b7eb",
+							"name": "Update Instance Ecosystem",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"ecoZUID\": \"{{ecosystem_zuid}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateEcosystem",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateEcosystem",
+											"description": "Update an Instance's Ecosystem"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "5b14ce9c-0ebf-4a94-921c-fec4711eea97",
+							"name": "Update Instance Domain",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"domain\": \"{{domain_name}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateDomain",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateDomain",
+											"description": "Update the instance's domain"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "9d1ca515-d7e2-43e4-a89e-ef97a1465dae",
+							"name": "Update Instance Blueprint",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"blueprintID\": {{blueprint_id}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateBlueprint",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateBlueprint",
+											"description": "Updates Instance's Blueprint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "572b721c-8a15-4d14-a874-7eec84112ae1",
+							"name": "Update Instance and Purge Cache",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=purgeCache",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "purgeCache",
+											"description": "Purges Cache"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Instance Blueprint",
+					"_postman_id": "eb5dd2cf-e945-44d0-9ec6-250f87a385cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"blueprintZUID\": \"{{blueprint_zuid}}\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/blueprints",
+						"description": "**Erases the current instance and replaces instance with the specified blueprint**\n\n**Warning:** This is a destructive action and is **NOT** reversible."
+					},
+					"response": []
+				},
+				{
+					"name": "Purge Instance",
+					"_postman_id": "b5c945a5-929b-4dfb-9ade-449577642d2c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=purgeCache",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"instances",
+								"{{instance_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "purgeCache",
+									"description": "Purge Instance's CDN Cache"
+								}
+							]
+						},
+						"description": "Update permissions for a given user and content instance. Takes one of following values for thea query param `action`.\n- `updateEcosystem`\n- `updateDomain`\n- `updateBlueprint`\n- `purgeCache`"
+					},
+					"response": [
+						{
+							"id": "2521390b-4cf9-4556-a136-a74c58ed41d2",
+							"name": "Update Instance and Purge Cache",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=purgeCache",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "purgeCache",
+											"description": "Purges Cache"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "27548e0d-7ada-4c24-8ac5-b0d299077899",
+							"name": "Update Instance Ecosystem",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"ecoZUID\": \"{{ecosystem_zuid}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateEcosystem",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateEcosystem",
+											"description": "Update an Instance's Ecosystem"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "650d673a-80c7-42cf-bb07-98cfdbc62cc9",
+							"name": "Update Instance Domain",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"domain\": \"{{domain_name}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateDomain",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateDomain",
+											"description": "Update the instance's domain"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "eabdc5bf-25eb-45ae-9174-f4bc1870f278",
+							"name": "Update Instance Blueprint",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"blueprintID\": {{blueprint_id}}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}?action=updateBlueprint",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"instances",
+										"{{instance_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updateBlueprint",
+											"description": "Updates Instance's Blueprint"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Instance",
+					"_postman_id": "e5adf55e-50fd-d775-1020-847662a989cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}",
+						"description": "Deletes a single instance."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "d79b12a4-02b7-ac1f-341f-953dcde35368",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cda03172-259f-4c12-9912-c8f823760525",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a60f2880-40b7-4602-97ac-7c68eab7eeda",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/instances/domains",
+			"item": [
+				{
+					"name": "Create Domain",
+					"_postman_id": "8e73b3e3-0cd5-4df6-9e36-78eb09a16a79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"domain\": \"{{domain_name}}\",\n    \"branch\": \"live\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/domains",
+						"description": "Creates a domain for a given instance."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Domain",
+					"_postman_id": "95b8894d-c4b8-459d-a3a3-0a8f19ebed45",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/domains/{{domain_zuid}}",
+						"description": "Gets a single instance's domain."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Domains",
+					"_postman_id": "6e755794-72ad-4bfc-9550-5ccc61df57ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/domains",
+						"description": "Gets all domains associated with an instance."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Domain",
+					"_postman_id": "d9c14bad-cfcd-4f8e-8243-3914162fbdc2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"domain\": \"{{domain_name}}\",\n  \"branch\": \"live\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/domains/{{domain_zuid}}",
+						"description": "Updates a single domain."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Domain",
+					"_postman_id": "2c73dc3d-8b6f-4bae-b828-adfb80d19efc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/domains/{{domain_zuid}}",
+						"description": "Deletes a single instance's domain."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "af913c2d-53e0-4427-80c1-c8f5ca264888",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cda03172-259f-4c12-9912-c8f823760525",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "a60f2880-40b7-4602-97ac-7c68eab7eeda",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/users",
+			"item": [
+				{
+					"name": "Create User",
+					"_postman_id": "35e8fa49-d570-179a-a4ad-dfdd90261a78",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"First Name\", \n    \"lastName\":\"Last Name\", \n    \"email\":\"useremail@example.com\",\n    \"password\": \"userpassword\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users",
+						"description": "Creates a single user. Returns hydrated user error."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User",
+					"_postman_id": "52d81f9c-3404-f53d-8614-dc73ba8207e9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "Zesty.com",
+								"type": "text"
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}",
+						"description": "Gets a single user."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Instances",
+					"_postman_id": "2288e1f4-4e32-6dbe-3a6e-0b70d2a0dfc6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}/instances",
+						"description": "Gets a single user's instances."
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"_postman_id": "f81edf43-a115-4a2e-b113-4be60205ffc9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"oldPassword\": \"old_password\",\r\n\t\"password\": \"new_password\"\r\n}",
+							"options": {}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}?action=updatePassword",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"users",
+								"{{user_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "updatePassword",
+									"description": "Updates the user's password"
+								}
+							]
+						},
+						"description": "Updates a user."
+					},
+					"response": [
+						{
+							"id": "5a50f976-6709-4339-98af-55e938780228",
+							"name": "Update User Password",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"oldPassword\": \"old_password\",\n\t\"password\": \"new_password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}?action=updatePassword",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"users",
+										"{{user_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "updatePassword",
+											"description": "Update user password"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 17 Dec 2019 22:15:06 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": ""
+						},
+						{
+							"id": "277bf75c-1900-4872-98ae-922cc6e847a4",
+							"name": "Update User to enable to 2FA",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}?action=enableAuthy",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"users",
+										"{{user_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "enableAuthy",
+											"description": "Registers the user with Authy for 2FA"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"_postman_id": "85cb0cb9-82af-dc2b-efcf-ca2c518d7d87",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}",
+						"description": "Deletes a single user"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "5d15608a-13a2-fed1-c91b-ec29f024f39a",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "63bea94a-94d9-46e1-9149-62e7f07f33e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6cd23cab-2b23-4ccd-970e-36bb0f80d76f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/users/emails",
+			"item": [
+				{
+					"name": "Add Unverified Email",
+					"_postman_id": "8a651333-e80e-4b2f-97b9-da1615b567cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Firstname Lastname\",\n  \"address\": \"{{email_address}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/emails",
+						"description": "Adds an email address as unverified; sends verification email"
+					},
+					"response": []
+				},
+				{
+					"name": "Resend Email Verification",
+					"_postman_id": "a03423fb-099c-487a-9b6e-44c6e774a5c6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/emails/verifications?address={{url_encoded_email}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"users",
+								"emails",
+								"verifications"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "{{url_encoded_email}}"
+								}
+							]
+						},
+						"description": "Resends the email used for verifying an email address"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Emails",
+					"_postman_id": "d32dbd36-7b70-4a3e-b59e-07d4c0657e58",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/emails",
+						"description": "Gets user email address."
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email Address",
+					"_postman_id": "ad56c8e5-3da9-482a-b1a9-13f60cdedfbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/emails/verifications?address={{email_address}}&verificationCode={{verification_code}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"users",
+								"emails",
+								"verifications"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "{{email_address}}"
+								},
+								{
+									"key": "verificationCode",
+									"value": "{{verification_code}}"
+								}
+							]
+						},
+						"description": "Verifies an email address."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Email",
+					"_postman_id": "20fb4f86-8104-4d53-802b-da24c67589ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/emails?address={{url_encoded_email}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"users",
+								"emails"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": "{{url_encoded_email}}"
+								}
+							]
+						},
+						"description": "Removes a verified or unverified email address."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "1778c4dc-41e3-48e2-b2c3-637d8dfa4c91",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "{{authorization}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "09e4d7b4-cbdb-40ef-8428-2669c8f68ea2",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1d5a2af-7f1a-4f4f-b3ad-ab61d1807ee5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/companies",
+			"item": [
+				{
+					"name": "Create Company",
+					"_postman_id": "74b38111-1bbd-4e85-b58d-4ba445e266dd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Test Company Name\",\n    \"description\": \"Description goes here\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/companies",
+						"description": "Creates a single company"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company",
+					"_postman_id": "888e285b-cf7a-d10c-19ec-65e60659d8ec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/companies/{{company_zuid}}",
+						"description": "Get a single company by it's ZUID"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Companies",
+					"_postman_id": "20c7a93a-1835-3267-a19c-e57794bccd64",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/companies",
+						"description": "Get a list of all companies."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Company",
+					"_postman_id": "2e7c8ad9-47fa-40d3-b961-84e048011822",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\":\"Firstname\", \n    \"lastName\":\"Lastname\", \n    \"email\": \"{{email_address}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/companies/{{company_zuid}}",
+						"description": "Deletes a single company"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "f439f7b8-6a5b-2629-e39e-43dba0a2b546",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "63bea94a-94d9-46e1-9149-62e7f07f33e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6cd23cab-2b23-4ccd-970e-36bb0f80d76f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/invites",
+			"item": [
+				{
+					"name": "Create Invite",
+					"_postman_id": "7be46e20-1c52-4f50-bcb2-7cb2724f942f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"inviteeName\": \"Firstname Lastname\",\n  \"inviteeEmail\": \"test@email.com\",\n  \"entityZUID\": \"{{instance_zuid}}\",\n  \"accessLevel\": \"{{test_access_level}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites",
+						"description": "Creates a single user's invite."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Invite",
+					"_postman_id": "2bf452f8-619e-40ae-9b27-80c55a8d746d",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}",
+						"description": "Gets a specific user's invite."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Invites",
+					"_postman_id": "d3d15373-7936-421a-9ca9-a71381ab4acc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites",
+						"description": "Gets all user's invites."
+					},
+					"response": []
+				},
+				{
+					"name": "Respond to Invite",
+					"_postman_id": "d9e54981-d5ac-4745-b33f-f3dfac63aceb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}?action=accept",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"invites",
+								"{{invite_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "accept",
+									"description": "Accept an invite."
+								}
+							]
+						},
+						"description": "Responds to an invite based on the query parameter provided. Takes one of following values for the query param `action`.\n- `accept`\n- `decline`\n- `cancel`"
+					},
+					"response": [
+						{
+							"id": "4508e579-5d6b-448c-9a37-7186f74d1f37",
+							"name": "Accept an Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}?action=accept",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"invites",
+										"{{invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "accept",
+											"description": "Accept an invite."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "6fc02386-5178-43a9-b624-11a0775482bd",
+							"name": "Decline an Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}?action=decline",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"invites",
+										"{{invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "decline",
+											"description": "Decline an invite.",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "129aede1-df77-4f5c-a017-f3fd05f15d9e",
+							"name": "Cancel an Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}?action=cancel",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"invites",
+										"{{invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "cancel",
+											"description": "Cancel an invite. You must have a sufficient privilege to perform this action."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Invite",
+					"_postman_id": "0f3cc031-2672-42b0-81ab-de0ccbe600a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/invites/{{invite_zuid}}",
+						"description": "Deletes a single user's invite."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "01063dbf-b940-4b85-bfa1-1466fccead6f",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "63bea94a-94d9-46e1-9149-62e7f07f33e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6cd23cab-2b23-4ccd-970e-36bb0f80d76f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/blueprints",
+			"item": [
+				{
+					"name": "Create Blueprint",
+					"_postman_id": "17bd46cc-4467-4397-85fb-083246e35ea8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"blueprint name\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/blueprints",
+						"description": "Creates a single blueprint."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blueprint",
+					"_postman_id": "418b971d-4aae-8e09-d9ff-c864e69ad2e3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/blueprints/{{blueprint_id}}",
+						"description": "Gets a single blueprint."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Blueprints",
+					"_postman_id": "7a73bb58-5007-44f3-85e7-cfa0d1d64f60",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/blueprints",
+						"description": "Gets all blueprints available to a user."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance's Blueprint",
+					"_postman_id": "1285e10b-b594-697d-58d0-e12ca5bbdcdd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/blueprints",
+						"description": "Get blueprints for a given instance"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Blueprint",
+					"_postman_id": "44732887-1de4-452f-8921-f2414525ce12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"new blueprint name\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/blueprints/{{blueprint_id}}",
+						"description": "Updates a blueprint with the given values."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Blueprint",
+					"_postman_id": "04cdf561-d196-4181-9d56-754a079b6e44",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/blueprints/{{blueprint_id}}",
+						"description": "Deletes a single blueprint."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "522486de-73a1-65b3-8129-70ca7031ec36",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7bc91105-ae46-41a6-9d3c-40da47cba62e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c493844-8f16-4811-947e-4107df3f5054",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/teams",
+			"item": [
+				{
+					"name": "Create Team",
+					"_postman_id": "541a69a1-2158-42a1-9b80-b91f65b73da5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Example Team Name\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams",
+						"description": "Creates a single team."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team",
+					"_postman_id": "c6ca5c18-9ddc-4479-874b-7b3b6149da74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}",
+						"description": "Gets a single Team by its ZUID"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Teams",
+					"_postman_id": "1b79398e-a760-4a28-83a7-c3d5faf6186c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams",
+						"description": "Gets a all teams associated with the user."
+					},
+					"response": []
+				},
+				{
+					"name": "Update Team",
+					"_postman_id": "9ffe9535-cb20-4889-ba9a-9ccc83ef7fca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Example New Team Name\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}",
+						"description": "Updates a team with the given values."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Team",
+					"_postman_id": "df59fed5-01a6-4154-a96c-52ae074a755a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}",
+						"description": "Delete a single team."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "ec2541cd-c496-4836-8d86-916696478f0f",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7bc91105-ae46-41a6-9d3c-40da47cba62e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c493844-8f16-4811-947e-4107df3f5054",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/team/instances",
+			"item": [
+				{
+					"name": "Add Team to Instance",
+					"_postman_id": "01889bbf-4529-4e6e-a8d0-193172837719",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teamZUID\": \"{{team_zuid}}\",\n  \"roleZUID\": \"{{role_zuid}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/teams",
+						"description": "Creates a single team and adds it to an instance."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Instance's Teams",
+					"_postman_id": "e507fba0-a188-4d93-8bf5-10473487d677",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/teams",
+						"description": "Gets all Teams associated with the Instance."
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Team's Instances",
+					"_postman_id": "7554d1bc-e020-40c4-aeaf-c2c4ede5c20d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}/instances",
+						"description": "Gets a all Instances associated with the Team."
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Team from Instance",
+					"_postman_id": "0c437d65-829b-4aec-a0a5-ca2cfaab28b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/teams/{{team_zuid}}",
+						"description": "Removes a  ALL Team members from a given Instance."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "baf502d5-44f6-4bc6-93e7-495fea151d49",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "7bc91105-ae46-41a6-9d3c-40da47cba62e",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c493844-8f16-4811-947e-4107df3f5054",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/teams/invites",
+			"item": [
+				{
+					"name": "Create Team Invite",
+					"_postman_id": "ef74acb1-3386-428f-9e00-72949a8a8872",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"teamZUID\": \"\",\n  \"inviteeName\": \"Test testington\",\n  \"inviteeEmail\": \"testemail@example.com\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites",
+						"description": "Creates a single invite for the given Team"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team Invite",
+					"_postman_id": "40086c94-327c-4361-9ee6-aca4dc2cd631",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}",
+						"description": "Gets a single Team invite"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Team Invites",
+					"_postman_id": "01066884-29d7-4193-8610-e1c28e406a3e",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites",
+						"description": "Gets a single user's Team invites"
+					},
+					"response": []
+				},
+				{
+					"name": "Respond to Team Invite",
+					"_postman_id": "b808c270-0593-45ac-a183-bc541e5f9565",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}?action=accept",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"teams",
+								"invites",
+								"{{team_invite_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "accept",
+									"description": "Accept an invite"
+								}
+							]
+						},
+						"description": "Responds to a team invite based on the query parameter provided\n\n- ?action=accept\t:: Accept an invite.\n- ?action=decline\t:: Decline an invite.\n- ?action=cancel\t:: Cancel an invite; you must have sufficient privilege to perform this"
+					},
+					"response": [
+						{
+							"id": "89ceb06e-db1a-4858-9a56-fd3df365e7a1",
+							"name": "Accept a Team Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}?action=accept",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"teams",
+										"invites",
+										"{{team_invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "accept",
+											"description": "Accept an invite"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "c303976f-2d25-4714-bfdc-34776a130d46",
+							"name": "Decline Team Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}?action=decline",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"teams",
+										"invites",
+										"{{team_invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "decline",
+											"description": "Decline an invite"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "f967bc3d-0bc2-4577-8fee-cbfb8110029a",
+							"name": "Cancel Team Invite",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}?action=cancel",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"teams",
+										"invites",
+										"{{team_invite_zuid}}"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "cancel",
+											"description": "Cancel an invite. You must have sufficient privilege to perform this action."
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Team Invite",
+					"_postman_id": "e7cb3ad5-bb2b-477f-9bcf-803e869214b8",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "",
+								"value": "",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/invites/{{team_invite_zuid}}",
+						"description": "Deletes a single invite for a Team"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "c7320b89-a5d3-4914-b5ca-6eda5f081b19",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "63bea94a-94d9-46e1-9149-62e7f07f33e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "6cd23cab-2b23-4ccd-970e-36bb0f80d76f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/teams/members",
+			"item": [
+				{
+					"name": "Get Team Members",
+					"_postman_id": "6f551795-a8f7-43c8-ae76-4f03dfcbd025",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}/users",
+						"description": "Gets the members of a single Team"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Team Member",
+					"_postman_id": "ff54ea3a-3bc8-4836-9a22-607c8efbe1a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"admin\": true\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}/users/{{user_zuid}}",
+						"description": "Updates the team role of a single user."
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Team Member",
+					"_postman_id": "1fa489b3-abb4-48c1-b096-526788b4809f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}/users/{{user_zuid}}",
+						"description": "Removes a single user from a team."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team Members Pending",
+					"_postman_id": "5dbf43bb-e9da-48e8-aa6b-a9edb13973d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/teams/{{team_zuid}}/users/pending",
+						"description": "Gets the pending members of a single Team"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "dad85936-9daa-4add-aa5b-ebe207d10026"
+		},
+		{
+			"name": "/roles",
+			"item": [
+				{
+					"name": "Create Role",
+					"_postman_id": "8ff2b779-17a9-4cf5-8324-2f0b60401a1f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"test custom role name\",\n  \"entityZUID\": \"{{instance_zuid}}\",\n  \"systemRoleZUID\": \"{{system_role_zuid}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles",
+						"description": "Creates a role with the provided system role as its base."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role",
+					"_postman_id": "e3b0ddd1-0fa3-4039-97da-3184bcac7f87",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}",
+						"description": "Gets a role by its zuid"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Roles",
+					"_postman_id": "4020da0f-1d1f-430b-acdd-f17854da9ed7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles",
+						"description": "Gets all roles associated with the current user"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Role",
+					"_postman_id": "02500ed4-83e0-4b50-add6-323ea78d4fd3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}",
+						"description": "Deletes a role by its zuid"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Instance Roles",
+					"_postman_id": "1d9b8301-0e52-409d-8693-eecb74c17013",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/roles",
+						"description": "Creates a single instance's base roles."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Role",
+					"_postman_id": "c30ae573-7048-42c6-b8b0-ebc89d9a8e6d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/roles/{{role_zuid}}",
+						"description": "Gets a role by its zuid"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Roles",
+					"_postman_id": "e2ac76b2-244c-4570-9734-8e48288e3477",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/roles",
+						"description": "Gets a single instance's roles"
+					},
+					"response": []
+				},
+				{
+					"name": "Assign User Role",
+					"_postman_id": "60a1c8d4-5d8d-4256-9fe5-74345ecfac09",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json",
+								"disabled": true
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}/roles/{{role_zuid}}",
+						"description": "Adds an entry for the provided user and role ZUID."
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Roles",
+					"_postman_id": "91b414eb-5709-4674-b56b-d1e4023561bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}/roles",
+						"description": "Gets a role by its zuid"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Role",
+					"_postman_id": "7852f82d-8341-43e2-afc9-7460e261be6e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"roleZUID\": \"{{role_zuid}}\"\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}/roles/{{current_role_zuid}}",
+						"description": "Updates the entry for the provided user and role ZUID with the `roleZUID` element in the request body. Fails if the user/role entry in the URL does not exist."
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Role",
+					"_postman_id": "0f12a70d-ae21-48d5-9b9e-0c83dc1c1407",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/users/{{user_zuid}}/roles/{{role_zuid}}",
+						"description": "Unassigns a role from a user."
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "45eb9252-6fd9-4949-9da0-8b515494a163"
+		},
+		{
+			"name": "/roles/granulars",
+			"item": [
+				{
+					"name": "Create Granular Role",
+					"_postman_id": "22a7196b-6970-491e-b3f9-360d8eb22aea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"resourceZUID\": \"{{item_zuid}}\",\n    \"name\": \"\",\n    \"create\": true,\n    \"read\": true,\n    \"update\": false,\n    \"delete\": false,\n    \"publish\": false,\n    \"grant\": false\n}",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars",
+						"description": "Adds a granular role to the role with the given role ZUID.\n\nStartFragment\n\nIn the body content, you can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Granular Role",
+					"_postman_id": "a226b8e7-3553-4f36-add1-848ce9b62e18",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars/{{resource_zuid}}",
+						"description": "Gets granular role by its role and resource ZUID.\n\nStartFragment\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Granular Role",
+					"_postman_id": "218bab5e-10a6-4c16-a149-b9e019f5f1bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars/{{resource_zuid}}",
+						"description": "Deletes a granular role by its role and resource ZUID.\n\nStartFragment\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragme"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Granular Roles",
+					"_postman_id": "ad8d4832-e0ec-4c80-a20b-0239079bdcee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [],
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars",
+						"description": "Gets granular roles by their role zuid"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Granular Roles",
+					"_postman_id": "934f60ab-3b60-4cfd-a9d4-a43f18a6383c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " [\n        {\n            \"resourceZUID\": \"{{item_zuid}}\",\n            \"name\": \"\",\n            \"create\": true,\n            \"read\": true,\n            \"update\": true,\n            \"delete\": false\n        }\n    ]",
+							"options": {}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars",
+						"description": "Updates the granular roles for the give role ZUID. The resource ZUID for each granular permission must be included in the body of each update.\n\nStartFragment\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragmen"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "dfec51e4-3eae-41c4-9c96-374d3eacda83"
+		},
+		{
+			"name": "/ecosystems",
+			"item": [
+				{
+					"name": "Create Ecosystem",
+					"_postman_id": "2653ff45-767f-4d6d-9a3e-69f72fe56cb3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"ecosystem_name\",\n\t\"description\": \"ecosystem description\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ecosystem",
+					"_postman_id": "99eb1039-e4ad-46ff-8357-895b4dcbb86a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/{{ecosystem_zuid}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ecosystems",
+					"_postman_id": "750eb50b-c53c-44aa-aa4a-b0b1199fb4bf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ecosystem",
+					"_postman_id": "58cf7f59-1199-4914-834e-7b5ade8fa95a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Updated Ecosystem Name\",\n\t\"description\": \"Updated description\"\n}\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/{{ecosystem_zuid}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ecosystem Database Defaults",
+					"_postman_id": "dda0af1b-9b2e-4d1d-968c-a3cdbf48595c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"defaultDatabaseHost\": \"1.1.1.1\",\n\t\"defaultDatabaseUser\": \"root\",\n\t\"defaultDatabasePassword\": \"pass\"\n}\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/{{ecosystem_zuid}}?action=updateDatabaseDefaults",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"ecosystems",
+								"{{ecosystem_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "updateDatabaseDefaults"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ecosystem CDN Defaults",
+					"_postman_id": "d1864580-86f7-4ff4-afdd-edea5563992a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"defaultCDNType\": \"AKAMAI\",\n\t\"defaultCDNPurgeURL\": \"https://location-of-cloud-purge-function.com\",\n\t\"defaultCDNPurgeAuth\": \"Secret Key\"\n}\t",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/{{ecosystem_zuid}}?action=updateCDNDefaults",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{accounts_api_url}}"
+							],
+							"path": [
+								"{{accounts_api_version}}",
+								"ecosystems",
+								"{{ecosystem_zuid}}"
+							],
+							"query": [
+								{
+									"key": "action",
+									"value": "updateCDNDefaults"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ecosystem",
+					"_postman_id": "1ae26a3d-ed07-4a1b-a9a0-63714997d002",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/ecosystems/{{ecosystem_zuid}}"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "8e92affb-0c94-456f-b352-dd3436a2a3c2"
+		},
+		{
+			"name": "/webhook",
+			"item": [
+				{
+					"name": "Create Webhook",
+					"_postman_id": "33656725-d6b5-47f4-8fea-1ecc9fc5b37d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{content_model_zuid}}\",\n\t\"resource\": \"items\",\n\t\"eventAction\": 1,\n\t\"method\": \"GET\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"body\": {\n        \"text\":\" this is the body\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks",
+						"description": "To create a webhook on a given instance, the user must have the following permissions on the instance:\n- Admin\n- Owner\n- Developer\n \nBody params:\n\n| field name | required\t| type |description |\n|------------|----------|------|------------|\n| `scopedResource` | yes | string | Scoped Resource refers to the service in which to listen in on webhooks. |\n| `parentResourceZUID` | no | string | Refers to a specific parent resource's ZUID. |\n| `resource` | yes | string | Refers to the ZUID or the name of a resource. |\n| `eventAction` | yes | number | The action on the resource which will trigger the webhook. |\n| `method` | yes | string | The HTTP request method that is made by the webhook. |\n| `URL` | yes | string | Destination URL for the webhook to send payload to. |\n| `contentType` | yes | string | The value used to set the HTTP header `Content-type` for the webhook request |\n| `authorization` | no | string | The Bearer token value used to set the HTTP header `Auhorization`. \n| `body` | yes | JSON | The payload body being sent to the destination URL.|\n\n\nPossible values for `scopedResource` are:\n- an instance ZUID\n- `accounts`\n\n\n**`parentResourceZUID`** \n\nIf `scopedResource` is an instance ZUID, possible values for `parentResourceZUID` are:\n- content model ZUID\n \nIf `scopedResource` is `accounts`, possible values for `parentResourceZUID` are:\n- instance ZUID\n\n\n**`resource`**\n\nIf `scopedResource` is an instance ZUID, possible values for `resource` are:\n- `models`\n- `items`\n- `publishings`\n- `fields`\n- `headtags`\n- `views`\n- `stylesheets`\n- `scripts`\n- `redirects`\n- `langs`\n- `leads`\nor its corresponding ZUIDs \n\n\nIf `scopedResource` is `accounts`, possible values for `resource` are:\n- `instances`\n- `users`\n- `invites`\n- `roles`\n- `granulars`\n- `domains`\nor its corresponding ZUIDs\n\nPossible Values for `eventAction`\n- Create: 1 \n- Update: 2\n- Delete: 3\n- Publish: 4\n- Unpublish: 5\n- UndoDelete: 6\n\n\nPossible Values for `method`\n- `POST` \n- `GET`\n\n\nPossible Values for `contentType`\n- `application/json` \n- `application/x-www-form-urlencoded`"
+					},
+					"response": [
+						{
+							"id": "1da16e20-865e-44ef-880b-e35dbe914af6",
+							"name": "Create webhook to look for Item Unpublish for a content model",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{collection_zuid}}\",\n\t\"resource\": \"items\",\n\t\"eventAction\": 5,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Unpublish event {{collection_zuid}} for item has been triggered\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-16T23:42:29.611489864Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 5,\n        \"parentResourceZUID\": \"{{collection_zuid}}\",\n        \"resource\": \"items\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Unpublish event {{collection_zuid}} for item has been triggered\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-16T23:42:29.603760232Z\",\n        \"updatedAt\": \"2019-12-16T23:42:29.603767566Z\"\n    }\n}"
+						},
+						{
+							"id": "46b057a3-7c05-444a-8508-80f62e4f2d07",
+							"name": "Create webhook to look for item creation for a specific content model",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{collection_zuid}}\",\n\t\"resource\": \"items\",\n\t\"eventAction\": 1,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"New {{collection_zuid}} item created\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Dec 2019 18:48:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "602"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-12T22:38:24.863808495Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n    \t\"scopedResource\": \"{{instance_zuid}}\",\n\t\t\"parentResourceZUID\": \"{{collection_zuid}}\",\n        \"eventAction\": 1,\n        \"resource\": \"items\",\n        \"method\": \"POST\",\n       \t\"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"New {{collection_zuid}} item created\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-12T22:38:24.749605126Z\",\n        \"updatedAt\": \"2019-12-12T22:38:24.74961072Z\"\n    }\n}"
+						},
+						{
+							"id": "388bcecb-2797-4cc8-991e-f4d3d095fe95",
+							"name": "Create Webhook Specific Content Model Item Publish ",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{collection_zuid}}\",\n\t\"resource\": \"items\",\n\t\"eventAction\": 4,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Publish event {{collection_zuid}} for item has been triggered\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 12 Dec 2019 22:38:24 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "635"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T21:50:37.138860515Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 4,\n        \"parentResourceZUID\": \"{{collection_zuid}}\",\n        \"resource\": \"items\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Publish event {{collection_zuid}} for item has been triggered\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T21:50:37.132868933Z\",\n        \"updatedAt\": \"2019-12-13T21:50:37.132875689Z\"\n    }\n}"
+						},
+						{
+							"id": "e48e7ff1-ecbf-4627-8d89-7425101da4f0",
+							"name": "Create Webhook for User Role Update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{user_zuid}}\",\n\t\"resource\": \"roles\",\n\t\"eventAction\": 2,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Role for user {{user_zuid}} has been updated\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 00:00:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "609"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T00:18:44.977620437Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 2,\n        \"parentResourceZUID\": \"{{user_zuid}}\",\n        \"resource\": \"roles\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Role for user {{user_zuid}} has been updated\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T00:18:44.971926604Z\",\n        \"updatedAt\": \"2019-12-13T00:18:44.971932097Z\"\n    }\n}"
+						},
+						{
+							"id": "03dbfa2c-25fe-492b-8511-fb2277d57555",
+							"name": "Create Webhook listening for Instance Role Generation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": \"{{instance_zuid}}\",\n\t\"resource\": \"roles\",\n\t\"eventAction\": 1,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Role for instance has been generated\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 00:18:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "623"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T00:56:08.894466158Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 1,\n        \"parentResourceZUID\": \"{{instance_zuid}}\",\n        \"resource\": \"roles\",\n        \"method\": \"POST\",\n    \t\"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Role for instance has been generated\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T00:56:08.881785817Z\",\n        \"updatedAt\": \"2019-12-13T00:56:08.881811583Z\"\n    }\n}"
+						},
+						{
+							"id": "e4d90ad5-1f55-4f63-99d4-56d629dca8a0",
+							"name": "Create Webhook to handle invite responses",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": null,\n\t\"resource\": \"invites\",\n\t\"eventAction\": 2,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Invite response received\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 21:14:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "615"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T21:20:58.235232598Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{wehook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 2,\n        \"parentResourceZUID\": null,\n        \"resource\": \"invites\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Invite response received\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T21:20:58.224616391Z\",\n        \"updatedAt\": \"2019-12-13T21:20:58.224622904Z\"\n    }\n}"
+						},
+						{
+							"id": "dab387d7-f8c0-4c27-b624-8be81bda1627",
+							"name": "Create Webhook to listen on invite creation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": null,\n\t\"resource\": \"invites\",\n\t\"eventAction\": 1,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Invite created\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 21:20:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "590"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T21:38:00.947854465Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 1,\n        \"parentResourceZUID\": null,\n        \"resource\": \"invites\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Invite created\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T21:38:00.940145987Z\",\n        \"updatedAt\": \"2019-12-13T21:38:00.940153199Z\"\n    }\n}"
+						},
+						{
+							"id": "754d1233-9324-4e71-abdd-a61488450d6b",
+							"name": "Create Webhook to handle domain update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": null,\n\t\"resource\": \"domains\",\n\t\"eventAction\": 2,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Instance domain has been updated\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 21:38:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "580"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T21:42:36.316903727Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 2,\n        \"parentResourceZUID\": null,\n        \"resource\": \"domains\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Instance domain has been updated\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T21:42:36.309766223Z\",\n        \"updatedAt\": \"2019-12-13T21:42:36.309775775Z\"\n    }\n}"
+						},
+						{
+							"id": "0081637f-4bb5-4611-8648-ba9afc1a3b7d",
+							"name": "Create Webhook to handle adding domain to an instance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"scopedResource\": \"{{instance_zuid}}\",\n\t\"parentResourceZUID\": null,\n\t\"resource\": \"domains\",\n\t\"eventAction\": 1,\n\t\"method\": \"POST\",\n\t\"URL\": \"{{webhook_url}}\",\n\t\"contentType\": \"application/json\",\n\t\"authorization\": \"\",\n\t\"body\": {\n\t\t\"text\": \"Instance domain has been added\"\n\t}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "JSON",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 13 Dec 2019 21:42:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "598"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2019-12-13T21:50:37.138860515Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"{{webhook_zuid}}\",\n        \"scopedResource\": \"{{instance_zuid}}\",\n        \"eventAction\": 1,\n        \"parentResourceZUID\": null,\n        \"resource\": \"domains\",\n        \"method\": \"POST\",\n        \"URL\": \"{{webhook_url}}\",\n        \"contentType\": \"application/json\",\n        \"authorization\": \"\",\n        \"body\": {\n            \"text\": \"Instance domain has been added\"\n        },\n        \"createdByUserZUID\": \"{{user_zuid}}\",\n        \"description\": null,\n        \"createdAt\": \"2019-12-13T21:50:37.132868933Z\",\n        \"updatedAt\": \"2019-12-13T21:50:37.132875689Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Retrieve Webhook",
+					"_postman_id": "1d39219d-940c-4e3f-bb35-f3c455674d6f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks/{{webhook_zuid}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Retreive Webhooks for an Instance",
+					"_postman_id": "9a4cf4fe-8ad1-4b43-8744-052c47b44444",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/webhooks/",
+						"description": "Get multiple webhooks for a given instance. To retrieve webhooks, user must have the following permissions for the given instance:\n- Admin\n- Owner\n- Developer"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Webhook",
+					"_postman_id": "056ecb82-df53-460e-b92a-852a3ebb7830",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{APP_SID}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks/{{webhook_zuid}}",
+						"description": "Deletes a single webhook. To delete a webhook for a given instance, the user must have the following permissions on the instance:\n- Admin\n- Owner\n- Developer"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "f929ad7b-4bff-4f78-9376-ead64d158b9b"
+		},
+		{
+			"name": "/tokens",
+			"item": [
+				{
+					"name": "Create Token",
+					"_postman_id": "2e9ba85e-45e5-4503-a909-ef2a95ee8709",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"roleZUID\": \"{{role_zuid}}\",\n\t\"name\": \"Example Token Name\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens",
+						"description": "Creates a new developer token. \nUpon successful creation, copy and save the returned token value from the response. \n**This is the only time the token will be available and visible.**"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Token",
+					"_postman_id": "be5c46fe-4e07-4616-8835-becd85608824",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens/{{token_zuid}}",
+						"description": "Gets information about a given token based on its ZUID. \n**NOTE - the token will not be visible upon retrieval**"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Instance Tokens",
+					"_postman_id": "5c5f019c-6d65-41d3-ae07-02c2def25378",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{authorization}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/tokens"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Token",
+					"_postman_id": "bf84750c-10c5-4868-86b1-a2a904e03df4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens/{{token_zuid}}",
+						"description": "Updates a single token by its ZUID. The optional query param `action` can be one of the following values:\n- `renew`"
+					},
+					"response": [
+						{
+							"id": "8d76b7aa-120c-422f-97b6-96aab4ef652e",
+							"name": "Renew Token",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Updated token name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens?action=renew ",
+									"protocol": "{{protocol}}",
+									"host": [
+										"{{accounts_api_url}}"
+									],
+									"path": [
+										"{{accounts_api_version}}",
+										"tokens"
+									],
+									"query": [
+										{
+											"key": "action",
+											"value": "renew ",
+											"description": "Renews the token",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						},
+						{
+							"id": "56d01d7a-74f4-46c4-8bb5-a9467f3d1240",
+							"name": "Update Token",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Updated token name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"responseTime": null,
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Delete Token",
+					"_postman_id": "ec5d06c6-5c9a-4e3f-b265-0e57f406bfc5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/tokens/{{token_zuid}}"
+					},
+					"response": []
+				}
+			],
+			"_postman_id": "2d602695-3f14-44c2-b97a-212c402250f6",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "{{authorization}}"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1ef64a29-4054-41a1-960f-4042b6bab0e6",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f637f326-4120-4d16-85db-671d6dd01148",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "/apps",
+			"item": [
+				{
+					"name": "Register App",
+					"_postman_id": "15c64ad6-b7d7-4f37-853d-4d798ab8de4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"Example App\",\n    \"name\": \"example_app\",\n    \"publisher\": \"Zesty.io\",\n    \"url\": \"https://www.exampleapp.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps",
+						"description": "An application needs to be *registered* with Zesty.io before it can be *installed*. Because application registration and application installation have a one-to-many relationship, applications are immutable(aside from the **public** field).\n\nApplications are either public or private. Private applications are only available to the user who created it and are approved by default. Public applications require approval before they're made available to all Zesty.io users. Applications are private unless manually promoted to public by Zesty.io staff - reach out to [support@zesty.io](mailto:support@zesty.io) to get your private application promoted to public.\n\n| name | description |\n| --- | --- |\n| `label` | \\[string\\] Required. Unique Display Name |\n| `name` | \\[string\\] Required. Unique Parsley Reference Name |\n| `url` | \\[string\\] Required. Unique (secure) URL where the application is hosted |\n| `publisher` | \\[string\\] Required. The party which registered the application |\n| `description` | \\[string\\] Additional context |"
+					},
+					"response": [
+						{
+							"id": "07e93c30-a8dd-4765-9b70-0d8ef8cfa24e",
+							"name": "Register App With Duplicate Name",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"Example App\",\n    \"name\": \"example_app\",\n    \"publisher\": \"Zesty.io\",\n    \"url\": \"https://www.exampleapp.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps"
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:32:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:32:17.791706612Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"duplicate entry 'example_app' for key 'name'\"\n}"
+						},
+						{
+							"id": "647de6ac-acb4-44ab-ad0b-debe93aa9bd9",
+							"name": "Register App",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"Example App\",\n    \"name\": \"example_app\",\n    \"publisher\": \"Zesty.io\",\n    \"url\": \"https://www.exampleapp.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:18:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:18:36.351744052Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"80-caafcdb0d0-2jdbg5\",\n        \"name\": \"example_app\",\n        \"label\": \"Example App\",\n        \"publisher\": \"Zesty.io\",\n        \"description\": null,\n        \"url\": \"https://www.exampleapp.com\",\n        \"public\": false,\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T17:18:36.347289176Z\",\n        \"updatedAt\": \"2022-04-25T17:18:36.34729655Z\"\n    }\n}"
+						},
+						{
+							"id": "d2f6099f-24c9-4cd0-9d31-a8e28c842a04",
+							"name": "Register App With Description",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"Example App Two\",\n    \"name\": \"example_app_two\",\n    \"publisher\": \"Zesty.io\",\n    \"url\": \"https://www.exampleapptwo.com\",\n    \"description\": \"Zesty.io's second example application\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:34:55 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:34:55.066204809Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"80-f6cbafb0cc-d28k0h\",\n        \"name\": \"example_app_two\",\n        \"label\": \"Example App Two\",\n        \"publisher\": \"Zesty.io\",\n        \"description\": \"Zesty.io's second example application\",\n        \"url\": \"https://www.exampleapptwo.com\",\n        \"public\": false,\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T17:34:55.062683608Z\",\n        \"updatedAt\": \"2022-04-25T17:34:55.062688373Z\"\n    }\n}"
+						},
+						{
+							"id": "fd8ddb81-a24b-4a07-93d2-851ebf438ab8",
+							"name": "Register App With Insecure URL",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"Example App\",\n    \"name\": \"example_app\",\n    \"publisher\": \"Zesty.io\",\n    \"url\": \"http://www.exampleapp.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:29:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:29:23.21949702Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Bad Request: validation error: url must use https protocol\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Apps",
+					"_postman_id": "dd42ac70-e7fb-4a18-9619-38bda87553b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps",
+						"description": "Get public applications and private applications registered by the user."
+					},
+					"response": [
+						{
+							"id": "2f7fd71d-83e9-43cf-a322-80d1734c000e",
+							"name": "Get Apps",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:38:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:38:07.52536362Z\",\n        \"totalResults\": 2,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 2\n    },\n    \"data\": [\n        {\n            \"ZUID\": \"80-d8f5a1f7c3-6h02sm\",\n            \"name\": \"example_app_two\",\n            \"label\": \"Example App Two\",\n            \"publisher\": \"Zesty.io\",\n            \"description\": \"Zesty.io's second example application\",\n            \"url\": \"https://www.exampleapptwo.com\",\n            \"public\": false,\n            \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n            \"createdAt\": \"2022-04-25T17:37:11Z\",\n            \"updatedAt\": \"2022-04-25T17:37:11Z\"\n        },\n        {\n            \"ZUID\": \"80-e88f85feec-7rs7sx\",\n            \"name\": \"example_app\",\n            \"label\": \"Example App\",\n            \"publisher\": \"Zesty.io\",\n            \"description\": null,\n            \"url\": \"https://www.exampleapp.com\",\n            \"public\": false,\n            \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n            \"createdAt\": \"2022-04-25T17:36:59Z\",\n            \"updatedAt\": \"2022-04-25T17:36:59Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get App",
+					"_postman_id": "99d33df3-a72d-41db-9030-32517e7567ab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+					},
+					"response": [
+						{
+							"id": "32b11b5f-fdf9-4007-ab01-1ea413c1ead5",
+							"name": "Get Private App Registered By A Different User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:54:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:54:18.036113189Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Forbidden Action\"\n}"
+						},
+						{
+							"id": "3ddb283f-bb4b-48fc-9b5c-55c66d77526e",
+							"name": "Get Nonexistent App",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:52:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:52:37.615148002Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"message\": \"No Results Found for ZUID: 80-e88f85feec-7rs7sy\"\n}"
+						},
+						{
+							"id": "4d37ec05-3e82-4e9a-a0db-6defffb45fc3",
+							"name": "Get App",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:52:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:52:03.670274837Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"80-e88f85feec-7rs7sx\",\n        \"name\": \"example_app\",\n        \"label\": \"Example App\",\n        \"publisher\": \"Zesty.io\",\n        \"description\": null,\n        \"url\": \"https://www.exampleapp.com\",\n        \"public\": false,\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T17:36:59Z\",\n        \"updatedAt\": \"2022-04-25T17:36:59Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete App",
+					"_postman_id": "68764858-0334-4ee3-bc2b-3c8dad0ccc74",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+					},
+					"response": [
+						{
+							"id": "bfba8252-5550-4d32-bc16-b510d6a7e6df",
+							"name": "Delete App",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/apps/{{app_zuid}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 17:57:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T17:57:36.264680292Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"80-d8f5a1f7c3-6h02sm\",\n        \"name\": \"example_app_two\",\n        \"label\": \"Example App Two\",\n        \"publisher\": \"Zesty.io\",\n        \"description\": \"Zesty.io's second example application\",\n        \"url\": \"https://www.exampleapptwo.com\",\n        \"public\": false,\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T17:37:11Z\",\n        \"updatedAt\": \"2022-04-25T17:37:11Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "cd90590b-5e07-4b1d-85d1-13f2e1a9d6f5"
+		},
+		{
+			"name": "/instances/app-installs",
+			"item": [
+				{
+					"name": "Install App",
+					"_postman_id": "b8bdee9e-9c7e-4f42-8e44-53d66143a3a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appZUID\": \"80-abcd-1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs",
+						"description": "Install, on an instance, a registered application.\n\nUsers can install public applications or private applications they registered.\n\nApp installations are immutable. And this endpoint is not idempotent. Meaning calling it multiple times will result in duplicate application installation entities.\n\n| name | description |\n| --- | --- |\n| `appZUID` | \\[zuid\\] Required. Application ZUID |"
+					},
+					"response": [
+						{
+							"id": "d53b2967-3032-4231-8046-72fe0132cf6b",
+							"name": "Install App",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"appZUID\": \"80-e88f85feec-7rs7sx\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 20:47:41 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "346"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T20:47:41.045911697Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"81-d4ff80d1e9-2n6clr\",\n        \"instanceZUID\": \"8-f48cf3a682-7fthvk\",\n        \"appZUID\": \"80-e88f85feec-7rs7sx\",\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T20:47:41.041224162Z\",\n        \"updatedAt\": \"2022-04-25T20:47:41.041228817Z\"\n    }\n}"
+						},
+						{
+							"id": "1dc316e2-23ba-4a59-bddb-79aaf3353bc5",
+							"name": "Install Invalid App",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"appZUID\": \"invalid_zuid\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 20:50:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T20:50:59.425759041Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Bad Request: invalid or unknown ZUID (invalid_zuid) provided for app\"\n}"
+						},
+						{
+							"id": "2fb4dd6f-458c-406f-b5c8-4d6b88c0ffab",
+							"name": "Install Inaccessible Private App",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"appZUID\": \"80-b0b7babebb-pdj6fj\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 23:13:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T23:13:52.062008225Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Bad Request: validation error: private app\"\n}"
+						},
+						{
+							"id": "77b0265f-2b12-447e-abc4-81406a9c7c75",
+							"name": "Install Deleted/Unknown App",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"appZUID\": \"80-e88f85feec-7rs7sy\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 25 Apr 2022 20:49:54 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-25T20:49:54.315670919Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"message\": \"No Results Found for ZUID: 80-e88f85feec-7rs7sy\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get App Installs",
+					"_postman_id": "44bc0a76-3f88-43be-adb5-94f2a45fde40",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+					},
+					"response": [
+						{
+							"id": "68277bf3-ecbf-4740-9530-bbc7f5359d98",
+							"name": "Get App Installs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 19:54:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T19:54:38.615909188Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": [\n        {\n            \"ZUID\": \"81-d4ff80d1e9-2n6clr\",\n            \"instanceZUID\": \"8-f48cf3a682-7fthvk\",\n            \"appZUID\": \"80-e88f85feec-7rs7sx\",\n            \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n            \"createdAt\": \"2022-04-25T20:47:41Z\",\n            \"updatedAt\": \"2022-04-25T20:47:41Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get App Install",
+					"_postman_id": "36a6c890-6d09-4628-bbe6-7d262160fefe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/{{install_zuid}}"
+					},
+					"response": [
+						{
+							"id": "1842746d-3401-4b21-9e9f-92d868362aad",
+							"name": "Get App Install",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/{{install_zuid}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:01:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:01:50.556162272Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"81-d4ff80d1e9-2n6clr\",\n        \"instanceZUID\": \"8-f48cf3a682-7fthvk\",\n        \"appZUID\": \"80-e88f85feec-7rs7sx\",\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T20:47:41Z\",\n        \"updatedAt\": \"2022-04-25T20:47:41Z\"\n    }\n}"
+						},
+						{
+							"id": "8f92ae67-be5b-4103-89c3-63dc972798aa",
+							"name": "Get Deleted/Unknown App Install",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/{{install_zuid}}"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:03:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:03:02.993646144Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"message\": \"No Results Found for ZUID: 81-d4ff80d1e9-2n6clr\"\n}"
+						},
+						{
+							"id": "94fdf652-e2d2-45c2-80ff-387c117f17b5",
+							"name": "Get App Install For Invalid Instance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/invalid_zuid/app-installs/{{install_zuid}}"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:04:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:04:52.305591365Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Bad Request: invalid or unknown ZUID (invalid_zuid) provided for instance\"\n}"
+						},
+						{
+							"id": "a6c48862-8822-48c4-acf6-8ca54d7de48f",
+							"name": "Get App Install For Deleted/Unknown Instance",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}2/app-installs/{{install_zuid}}"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:06:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:06:45.792274359Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"message\": \"No Results Found for ZUID: 8-f48cf3a682-7fthvk2\"\n}"
+						},
+						{
+							"id": "c7a4abe1-f93f-4960-a9e1-d9e54c784f4e",
+							"name": "Get Invalid App Install",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/invalid_zuid"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:03:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:03:46.872726906Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {},\n    \"error\": \"Bad Request: invalid or unknown ZUID (invalid_zuid) provided for app-install\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete App Install",
+					"_postman_id": "ed08b0fe-8f90-4381-8426-e90d268a04f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/{{install_zuid}}"
+					},
+					"response": [
+						{
+							"id": "e0345708-6812-49fd-9f80-f24a2d8b6963",
+							"name": "Delete App Install",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/app-installs/{{install_zuid}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 26 Apr 2022 20:02:49 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": ""
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": ""
+								},
+								{
+									"key": "Feature-Policy",
+									"value": ""
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer-when-downgrade"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "sameorigin"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": ""
+								},
+								{
+									"key": "X-Xss-Protection",
+									"value": "1;mode=block"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2022-04-26T20:02:49.517338985Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"81-d4ff80d1e9-2n6clr\",\n        \"instanceZUID\": \"8-f48cf3a682-7fthvk\",\n        \"appZUID\": \"80-e88f85feec-7rs7sx\",\n        \"createdByUserZUID\": \"5-bae188a3d8-bnwbk1\",\n        \"createdAt\": \"2022-04-25T20:47:41Z\",\n        \"updatedAt\": \"2022-04-25T20:47:41Z\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"_postman_id": "06a5a436-9078-434f-9a8b-ca8ad6d04bc9"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "be75c6c4-7512-489a-9e67-88fc0f798e06",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "286ddf82-199a-4a68-b3e0-1f81f9918585",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
