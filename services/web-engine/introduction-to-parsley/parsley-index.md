@@ -658,7 +658,7 @@ Get the query parameters from url, for example lets use the url /store/12345/my-
 {{ request.queryParam(lala) }} // output: (empty string)
 ```
 
-## response.addHeader(name, value)
+## response.addHeader(name, ...value)
 
 This call will add a header to the response. This call does not output anything.
 
