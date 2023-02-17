@@ -664,6 +664,12 @@ This call will add a header to the response. This call does not output anything.
 
 ```
 {{response.addHeader(ab-test, 4)}}
+
+// adds header to "ab-test" with value "4"
+
+{{response.addHeader(Cache-Control, max-age=300, public)}}
+
+// adds header to "Cache-Control" with value "max-age=300, public"
 ```
 
 ## response.redirect301(url)
