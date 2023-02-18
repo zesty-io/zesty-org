@@ -63,7 +63,7 @@ Executes a regular expression find and replace on the text attached to the call.
 
 ```
 // Replace all instances of whitespace with dashes
-// $title = "Hello all and welcome to Zesty"
+{{ $title = Hello all and welcome to Zesty}}
 {{ $title.preg_replace(' ','-') }}
 // "Hello-all-and-welcome-to-Zesty"
 ```
