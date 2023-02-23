@@ -14,7 +14,7 @@
 					"item": [
 						{
 							"name": "Get Eco Bins",
-							"_postman_id": "42bc563e-be9d-4b75-9220-56a4889db15a",
+							"id": "42bc563e-be9d-4b75-9220-56a4889db15a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -28,7 +28,7 @@
 						},
 						{
 							"name": "Get Site Bins",
-							"_postman_id": "5709d3a3-3dc5-53dc-ba7e-9140fb68ebc2",
+							"id": "5709d3a3-3dc5-53dc-ba7e-9140fb68ebc2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -42,7 +42,7 @@
 						},
 						{
 							"name": "Get Bin",
-							"_postman_id": "b75a7a1d-bd49-6912-9458-4877ef72943a",
+							"id": "b75a7a1d-bd49-6912-9458-4877ef72943a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -55,7 +55,7 @@
 						},
 						{
 							"name": "Create Bin",
-							"_postman_id": "5d7d6d36-cd36-be53-743f-f83dc487bf07",
+							"id": "5d7d6d36-cd36-be53-743f-f83dc487bf07",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -89,10 +89,7 @@
 											"description": "(optional if eco_id is in post body) the site id ",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "{{protocol}}://{{manager_api_url}}/bin",
 								"description": "This endpoint creates a bin based on the default storage driver and default cdn."
@@ -101,7 +98,7 @@
 						},
 						{
 							"name": "Update Bin",
-							"_postman_id": "7bd68b78-8532-e4cb-a59b-efa24d84ce72",
+							"id": "7bd68b78-8532-e4cb-a59b-efa24d84ce72",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -129,10 +126,7 @@
 											"description": "string",
 											"type": "text"
 										}
-									],
-									"options": {
-										"formdata": {}
-									}
+									]
 								},
 								"url": "{{protocol}}://{{manager_api_url}}/bin/{{media_bin_zuid}}",
 								"description": ":id is the bin_id\n\nonly the name can be changed"
@@ -141,7 +135,7 @@
 						},
 						{
 							"name": "Delete Bin",
-							"_postman_id": "449b3da4-69b4-f853-f9d0-31a620859cf6",
+							"id": "449b3da4-69b4-f853-f9d0-31a620859cf6",
 							"request": {
 								"method": "DELETE",
 								"header": [],
@@ -161,8 +155,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -171,7 +164,7 @@
 						},
 						{
 							"name": "Get Bin Files",
-							"_postman_id": "337b8d94-5605-09fb-578a-8449a35a709d",
+							"id": "337b8d94-5605-09fb-578a-8449a35a709d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -184,7 +177,7 @@
 						},
 						{
 							"name": "Get Bin Groups (folders)",
-							"_postman_id": "e9bc7028-d063-b48b-fa44-a50daaf4a70e",
+							"id": "e9bc7028-d063-b48b-fa44-a50daaf4a70e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -196,7 +189,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "f6023a91-531a-87cb-c267-64a18d375dc8",
+					"id": "f6023a91-531a-87cb-c267-64a18d375dc8",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -218,15 +211,14 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Group (AKA folders)",
 					"item": [
 						{
 							"name": "Create Group",
-							"_postman_id": "e2600abe-a4b3-3dc4-5fe1-f48d7559a559",
+							"id": "e2600abe-a4b3-3dc4-5fe1-f48d7559a559",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -260,7 +252,7 @@
 						},
 						{
 							"name": "Update Group",
-							"_postman_id": "2dd8892b-3101-af64-49c2-34f3979c39d0",
+							"id": "2dd8892b-3101-af64-49c2-34f3979c39d0",
 							"request": {
 								"method": "PATCH",
 								"header": [],
@@ -293,8 +285,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -303,7 +294,7 @@
 						},
 						{
 							"name": "Get Group",
-							"_postman_id": "c2668203-f55d-4f0a-a01e-10fd7191e70f",
+							"id": "c2668203-f55d-4f0a-a01e-10fd7191e70f",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -323,8 +314,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -333,7 +323,7 @@
 						},
 						{
 							"name": "Delete Group",
-							"_postman_id": "a25f2562-1c3d-9600-3301-21a6666ca526",
+							"id": "a25f2562-1c3d-9600-3301-21a6666ca526",
 							"request": {
 								"method": "DELETE",
 								"header": [],
@@ -353,8 +343,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -362,7 +351,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "f8ca9f18-b49f-14af-7b59-2cf09a8224cf",
+					"id": "f8ca9f18-b49f-14af-7b59-2cf09a8224cf",
 					"description": "Groups (folders) are virtual tags that group together files. This is used to organize the frontend to create an file system experience.",
 					"event": [
 						{
@@ -385,15 +374,14 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "File",
 					"item": [
 						{
 							"name": "Get File",
-							"_postman_id": "f400371f-8e10-14a2-4bec-11e40427e9e6",
+							"id": "f400371f-8e10-14a2-4bec-11e40427e9e6",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -413,8 +401,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -424,7 +411,7 @@
 						},
 						{
 							"name": "Delete File",
-							"_postman_id": "d15396c1-6083-e2c3-60f8-5335f5cca14b",
+							"id": "d15396c1-6083-e2c3-60f8-5335f5cca14b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -442,7 +429,7 @@
 						},
 						{
 							"name": "Update File",
-							"_postman_id": "3f4912ac-9559-35e2-d467-904d13960966",
+							"id": "3f4912ac-9559-35e2-d467-904d13960966",
 							"request": {
 								"method": "PATCH",
 								"header": [],
@@ -481,8 +468,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								},
@@ -492,7 +478,7 @@
 						},
 						{
 							"name": "Create File",
-							"_postman_id": "101761f2-2950-25ff-4211-957ca5d918b0",
+							"id": "101761f2-2950-25ff-4211-957ca5d918b0",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -542,16 +528,15 @@
 							"response": []
 						}
 					],
-					"_postman_id": "0f67d7d5-e29f-26fe-2888-bccc89f18dea",
-					"description": "Basic file management CRUD calls",
-					"_postman_isSubFolder": true
+					"id": "0f67d7d5-e29f-26fe-2888-bccc89f18dea",
+					"description": "Basic file management CRUD calls"
 				},
 				{
 					"name": "File Modification",
 					"item": [
 						{
 							"name": "Create Modified File",
-							"_postman_id": "70518576-7acd-be35-53cf-ef2a066ab031",
+							"id": "70518576-7acd-be35-53cf-ef2a066ab031",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -608,7 +593,7 @@
 						},
 						{
 							"name": "Get Modified File",
-							"_postman_id": "2e48aa2b-cc89-f56f-e867-659e27f1384c",
+							"id": "2e48aa2b-cc89-f56f-e867-659e27f1384c",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -630,13 +615,11 @@
 									"variable": [
 										{
 											"key": "file_zuid",
-											"value": "",
-											"type": "string"
+											"value": ""
 										},
 										{
 											"key": "actionHash",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -645,7 +628,7 @@
 						},
 						{
 							"name": "Get Modified File",
-							"_postman_id": "a3869b56-b06c-d1ed-f1b6-259bd328ea2f",
+							"id": "a3869b56-b06c-d1ed-f1b6-259bd328ea2f",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -667,13 +650,11 @@
 									"variable": [
 										{
 											"key": "file_zuid",
-											"value": "",
-											"type": "string"
+											"value": ""
 										},
 										{
 											"key": "actionHash",
-											"value": "",
-											"type": "string"
+											"value": ""
 										}
 									]
 								}
@@ -682,7 +663,7 @@
 						},
 						{
 							"name": "Create Modified File",
-							"_postman_id": "e90dd742-7594-32d1-242a-b61593109178",
+							"id": "e90dd742-7594-32d1-242a-b61593109178",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -738,15 +719,14 @@
 							"response": []
 						}
 					],
-					"_postman_id": "fb499549-9f20-11a9-8752-7440b9db9719",
-					"_postman_isSubFolder": true
+					"id": "fb499549-9f20-11a9-8752-7440b9db9719"
 				},
 				{
 					"name": "Admin",
 					"item": [
 						{
 							"name": "Migrate Bin",
-							"_postman_id": "521b783a-5d7c-47b4-4c51-d4e692f069ac",
+							"id": "521b783a-5d7c-47b4-4c51-d4e692f069ac",
 							"request": {
 								"method": null,
 								"header": [],
@@ -760,7 +740,7 @@
 						},
 						{
 							"name": "Clone Bin",
-							"_postman_id": "f35868b4-5c1d-ecad-a560-209a61fbf31a",
+							"id": "f35868b4-5c1d-ecad-a560-209a61fbf31a",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -773,7 +753,7 @@
 							"response": []
 						}
 					],
-					"_postman_id": "6098f7d5-7ad7-0eae-2707-e545dfa79177",
+					"id": "6098f7d5-7ad7-0eae-2707-e545dfa79177",
 					"event": [
 						{
 							"listen": "prerequest",
@@ -795,11 +775,10 @@
 								]
 							}
 						}
-					],
-					"_postman_isSubFolder": true
+					]
 				}
 			],
-			"_postman_id": "358da090-1875-cf66-1424-cb8e4e69462b",
+			"id": "358da090-1875-cf66-1424-cb8e4e69462b",
 			"auth": {
 				"type": "bearer",
 				"bearer": {
@@ -834,7 +813,7 @@
 			"item": [
 				{
 					"name": "Health Endpoint",
-					"_postman_id": "41c8daf8-5195-f1a0-aef0-e27c9681ed6f",
+					"id": "41c8daf8-5195-f1a0-aef0-e27c9681ed6f",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -848,7 +827,7 @@
 				},
 				{
 					"name": "Bucket Creation",
-					"_postman_id": "e394c3af-1fdc-5f70-7501-4ffded16dd9b",
+					"id": "e394c3af-1fdc-5f70-7501-4ffded16dd9b",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -869,7 +848,7 @@
 				},
 				{
 					"name": "Bucket Deletion",
-					"_postman_id": "25c328e4-8f5d-d056-e003-c456da0ccda6",
+					"id": "25c328e4-8f5d-d056-e003-c456da0ccda6",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -896,8 +875,7 @@
 							"variable": [
 								{
 									"key": "bucket_id",
-									"value": "",
-									"type": "string"
+									"value": ""
 								}
 							]
 						}
@@ -906,7 +884,7 @@
 				},
 				{
 					"name": "File Creation",
-					"_postman_id": "ad7e82e3-e314-6b4e-3fbf-5c48ff5a2181",
+					"id": "ad7e82e3-e314-6b4e-3fbf-5c48ff5a2181",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -934,13 +912,11 @@
 							"variable": [
 								{
 									"key": "provider",
-									"value": "",
-									"type": "string"
+									"value": ""
 								},
 								{
 									"key": "bucketName",
-									"value": "",
-									"type": "string"
+									"value": ""
 								}
 							]
 						},
@@ -950,7 +926,7 @@
 				},
 				{
 					"name": "File Update",
-					"_postman_id": "74fc65f1-6963-90c9-190b-c3f6eb6856f4",
+					"id": "74fc65f1-6963-90c9-190b-c3f6eb6856f4",
 					"request": {
 						"method": "PATCH",
 						"header": [],
@@ -989,7 +965,7 @@
 				},
 				{
 					"name": "File Delete",
-					"_postman_id": "760baf8c-6ed5-58dd-daf0-4e06b6a19700",
+					"id": "760baf8c-6ed5-58dd-daf0-4e06b6a19700",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -1021,7 +997,7 @@
 				},
 				{
 					"name": "Batch Files Delete",
-					"_postman_id": "34f7cce0-e105-d363-bde9-18486d40195d",
+					"id": "34f7cce0-e105-d363-bde9-18486d40195d",
 					"request": {
 						"method": "DELETE",
 						"header": [],
@@ -1055,7 +1031,7 @@
 				},
 				{
 					"name": "File Copy (operation)",
-					"_postman_id": "860a0a99-50ae-5e53-bce1-4a124f0b0d40",
+					"id": "860a0a99-50ae-5e53-bce1-4a124f0b0d40",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1088,14 +1064,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "583ca7c5-0362-3f0c-20e6-be86c30ec31a"
+			"id": "583ca7c5-0362-3f0c-20e6-be86c30ec31a"
 		},
 		{
 			"name": "Modify",
 			"item": [
 				{
 					"name": "Crop 200x200 top left",
-					"_postman_id": "822501cb-2dd6-7728-c29c-236c4d5a3543",
+					"id": "822501cb-2dd6-7728-c29c-236c4d5a3543",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1145,7 +1121,7 @@
 				},
 				{
 					"name": "Crop Rotate Optimize",
-					"_postman_id": "ff1fb456-2ec8-02cb-a2fd-021733716010",
+					"id": "ff1fb456-2ec8-02cb-a2fd-021733716010",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1207,7 +1183,7 @@
 				},
 				{
 					"name": "Sepia Optimize Blur",
-					"_postman_id": "1323dc2a-48cb-ca3e-8642-27cf75c09be6",
+					"id": "1323dc2a-48cb-ca3e-8642-27cf75c09be6",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1253,7 +1229,7 @@
 				},
 				{
 					"name": "Resize Blur",
-					"_postman_id": "a10c10b5-51d4-f2af-c5c7-20fc29e2d3e5",
+					"id": "a10c10b5-51d4-f2af-c5c7-20fc29e2d3e5",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1303,7 +1279,7 @@
 				},
 				{
 					"name": "Sepia",
-					"_postman_id": "f4415036-392b-b002-fdde-0ef9a221e51c",
+					"id": "f4415036-392b-b002-fdde-0ef9a221e51c",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1341,7 +1317,7 @@
 				},
 				{
 					"name": "Blur",
-					"_postman_id": "790e7b95-feb8-8c13-542a-a3e0adcec2d5",
+					"id": "790e7b95-feb8-8c13-542a-a3e0adcec2d5",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1379,7 +1355,7 @@
 				},
 				{
 					"name": "Black and White",
-					"_postman_id": "440916cf-e124-f6d4-f68d-b0cd81b36a32",
+					"id": "440916cf-e124-f6d4-f68d-b0cd81b36a32",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1417,7 +1393,7 @@
 				},
 				{
 					"name": "Mosaic",
-					"_postman_id": "9743aafa-7c7b-fd78-7340-ea5dcdcccb7b",
+					"id": "9743aafa-7c7b-fd78-7340-ea5dcdcccb7b",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1455,7 +1431,7 @@
 				},
 				{
 					"name": "Noise",
-					"_postman_id": "e805f56c-0f7a-e3f5-c814-a8043c36a8bc",
+					"id": "e805f56c-0f7a-e3f5-c814-a8043c36a8bc",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1498,7 +1474,7 @@
 				},
 				{
 					"name": "Flop",
-					"_postman_id": "aa2962fc-c376-dd23-272d-0a96139fcd21",
+					"id": "aa2962fc-c376-dd23-272d-0a96139fcd21",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1536,7 +1512,7 @@
 				},
 				{
 					"name": "Flip",
-					"_postman_id": "38024ca0-923c-b96a-9374-4ff5f561acfc",
+					"id": "38024ca0-923c-b96a-9374-4ff5f561acfc",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1574,7 +1550,7 @@
 				},
 				{
 					"name": "Colorize",
-					"_postman_id": "09892cf3-86d2-af21-e332-93099a10be2f",
+					"id": "09892cf3-86d2-af21-e332-93099a10be2f",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1620,7 +1596,7 @@
 				},
 				{
 					"name": "Resize",
-					"_postman_id": "ccebdcae-c8f7-ec79-8b77-8a91fcb4175f",
+					"id": "ccebdcae-c8f7-ec79-8b77-8a91fcb4175f",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1662,7 +1638,7 @@
 				},
 				{
 					"name": "Rotate",
-					"_postman_id": "dfa71194-98c0-b9ea-6a6c-dd62200a4a98",
+					"id": "dfa71194-98c0-b9ea-6a6c-dd62200a4a98",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1700,7 +1676,7 @@
 				},
 				{
 					"name": "Zesty Resize",
-					"_postman_id": "35234dbc-481f-eab4-2532-86c4e878c95a",
+					"id": "35234dbc-481f-eab4-2532-86c4e878c95a",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1738,7 +1714,7 @@
 				},
 				{
 					"name": "Zesty Crop",
-					"_postman_id": "c249338c-0ffc-22b1-81e4-158a3b6f499e",
+					"id": "c249338c-0ffc-22b1-81e4-158a3b6f499e",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1780,7 +1756,7 @@
 				},
 				{
 					"name": "Minify",
-					"_postman_id": "ef0a04bc-f10b-c7a6-d897-76478fe665ba",
+					"id": "ef0a04bc-f10b-c7a6-d897-76478fe665ba",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1818,7 +1794,7 @@
 				},
 				{
 					"name": "Crop",
-					"_postman_id": "33174f1a-f63c-00c4-063a-2b8d4e159c43",
+					"id": "33174f1a-f63c-00c4-063a-2b8d4e159c43",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1861,7 +1837,7 @@
 				},
 				{
 					"name": "Optimize",
-					"_postman_id": "fb69cd25-905e-a3f1-d4f4-148f9c0fd258",
+					"id": "fb69cd25-905e-a3f1-d4f4-148f9c0fd258",
 					"request": {
 						"method": "POST",
 						"header": [],
@@ -1898,14 +1874,14 @@
 					"response": []
 				}
 			],
-			"_postman_id": "b5a5de73-e174-ec19-9893-2e3dba24b769"
+			"id": "b5a5de73-e174-ec19-9893-2e3dba24b769"
 		},
 		{
 			"name": "Resolver",
 			"item": [
 				{
 					"name": "resolve file",
-					"_postman_id": "813165b7-fbf9-47e5-8e54-724915027a81",
+					"id": "813165b7-fbf9-47e5-8e54-724915027a81",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -1951,7 +1927,7 @@
 				},
 				{
 					"name": "invalidate",
-					"_postman_id": "ee287b91-7baa-4d26-923d-db1398d7d57d",
+					"id": "ee287b91-7baa-4d26-923d-db1398d7d57d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2005,7 +1981,7 @@
 				},
 				{
 					"name": "resolve file Copy",
-					"_postman_id": "49e32944-7d24-44a5-962c-b65bb600dcb9",
+					"id": "49e32944-7d24-44a5-962c-b65bb600dcb9",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -2056,13 +2032,13 @@
 					"response": []
 				}
 			],
-			"_postman_id": "ff083543-d708-cb05-90eb-e0a0f5fefa47"
+			"id": "ff083543-d708-cb05-90eb-e0a0f5fefa47"
 		}
 	],
 	"auth": {
 		"type": "bearer",
 		"bearer": {
-			"token": "{{auth_token}}"
+			"token": "{{token}}"
 		}
 	},
 	"event": [
