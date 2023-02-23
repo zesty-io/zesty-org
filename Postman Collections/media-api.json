@@ -246,7 +246,7 @@
 										}
 									]
 								},
-								"url": "{{media_manager_host}}/group",
+								"url": "{{protocol}}://{{media_manager_host}}/group",
 								"description": "Allow user to create a group, nested under another group or at the top level."
 							},
 							"response": []
@@ -275,7 +275,8 @@
 									]
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/group/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/group/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -304,7 +305,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/group/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/group/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -333,7 +335,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/group/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/group/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -391,7 +394,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/file/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/file/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -458,7 +462,8 @@
 									]
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/file/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/file/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -524,7 +529,7 @@
 										}
 									]
 								},
-								"url": "{{media_manager_host}}/file"
+								"url": "{{protocol}}://{{media_manager_host}}/file"
 							},
 							"response": []
 						}
@@ -588,7 +593,7 @@
 										}
 									]
 								},
-								"url": "{{media_manager_host}}/file/modified"
+								"url": "{{protocol}}://{{media_manager_host}}/file/modified"
 							},
 							"response": []
 						},
@@ -603,7 +608,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"raw": "{{protocol}}://{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -638,7 +644,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"raw": "{{protocol}}://{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
@@ -715,7 +722,7 @@
 										}
 									]
 								},
-								"url": "{{media_manager_host}}/file/modified"
+								"url": "{{protocol}}://{{media_manager_host}}/file/modified"
 							},
 							"response": []
 						}
@@ -729,13 +736,13 @@
 							"name": "Migrate Bin",
 							"id": "521b783a-5d7c-47b4-4c51-d4e692f069ac",
 							"request": {
-								"method": null,
+								"method": "GET",
 								"header": [],
 								"body": {
 									"mode": "formdata",
 									"formdata": []
 								},
-								"url": "{{media_manager_host}}/admin/bin/migrate"
+								"url": "{{protocol}}://{{media_manager_host}}/admin/bin/migrate"
 							},
 							"response": []
 						},
@@ -749,7 +756,7 @@
 									"mode": "formdata",
 									"formdata": []
 								},
-								"url": "{{media_manager_host}}/admin/bin/clone"
+								"url": "{{protocol}}://{{media_manager_host}}/admin/bin/clone"
 							},
 							"response": []
 						}
@@ -822,7 +829,7 @@
 							"mode": "formdata",
 							"formdata": []
 						},
-						"url": "{{media_storage_host}}/"
+						"url": "{{protocol}}://{{media_storage_host}}/"
 					},
 					"response": []
 				},
@@ -843,7 +850,7 @@
 								}
 							]
 						},
-						"url": "{{media_storage_host}}/bucket"
+						"url": "{{protocol}}://{{media_storage_host}}/bucket"
 					},
 					"response": []
 				},
@@ -865,7 +872,8 @@
 							]
 						},
 						"url": {
-							"raw": "{{media_storage_host}}/bucket/:bucket_id",
+							"raw": "{{protocol}}://{{media_storage_host}}/bucket/:bucket_id",
+							"protocol": "{{protocol}}",
 							"host": [
 								"{{media_storage_host}}"
 							],
@@ -901,7 +909,8 @@
 							]
 						},
 						"url": {
-							"raw": "{{media_storage_host}}/upload/:provider/:bucketName",
+							"raw": "{{protocol}}://{{media_storage_host}}/upload/:provider/:bucketName",
+							"protocol": "{{protocol}}",
 							"host": [
 								"{{media_storage_host}}"
 							],
@@ -960,7 +969,7 @@
 								}
 							]
 						},
-						"url": "{{media_storage_host}}/file"
+						"url": "{{protocol}}://{{media_storage_host}}/file"
 					},
 					"response": []
 				},
@@ -992,7 +1001,7 @@
 								}
 							]
 						},
-						"url": "{{media_storage_host}}/file"
+						"url": "{{protocol}}://{{media_storage_host}}/file"
 					},
 					"response": []
 				},
@@ -1025,7 +1034,7 @@
 								}
 							]
 						},
-						"url": "{{media_storage_host}}/files",
+						"url": "{{protocol}}://{{media_storage_host}}/files",
 						"description": "Deletes multiple files at once"
 					},
 					"response": []
@@ -1059,7 +1068,7 @@
 								}
 							]
 						},
-						"url": "{{media_storage_host}}/file/copy",
+						"url": "{{protocol}}://{{media_storage_host}}/file/copy",
 						"description": "Copy a file from a remote URL into the storage bucket.\nThis is admittedly not as simple as it should be because I've added in allowing some copies to fail while others succeed as part of the same request.\n\n## Example Response Body\n\n```{ id: {\n    name        : 'test-2.png',\n    originalName: 'test 2.png',\n    storageUrl: 'https://storage.googleapis.com/bucketname/test-2.png',\n    sizeBytes,\n    mimetype\n  },\n  id: {\n    originalName: 'file2.svg',\n    sourceResponseCode: 404\n    error: 'failure reading source url: http://doesnotexist.com/blah'\n  }\n}```"
 					},
 					"response": []
