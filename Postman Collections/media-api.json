@@ -35,7 +35,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{manager_api_url}}/site/{{ex_instance_id}}/bins",
+								"url": "{{protocol}}://{{manager_api_url}}/site/{{instance_id}}/bins",
 								"description": "Fetch bins associated with an Instance ID (unique from an Instance ZUID)"
 							},
 							"response": []
@@ -49,7 +49,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{manager_api_url}}/bin/{{ex_bin_zuid}}"
+								"url": "{{protocol}}://{{manager_api_url}}/bin/{{bin_zuid}}"
 							},
 							"response": []
 						},
@@ -144,7 +144,8 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{media_manager_host}}/bin/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/bin/:id",
+									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
