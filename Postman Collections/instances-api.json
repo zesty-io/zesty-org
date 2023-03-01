@@ -21,25 +21,211 @@
 							"request": {
 								"method": "POST",
 								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links"
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"internal\",\r\n    \"parentZUID\": \"{{item_zuid}}\",\r\n    \"label\": \"Test 2 Link\",\r\n    \"metaTitle\": \"Test 2 Link\",\r\n    \"source\": \"\",\r\n    \"target\": \"{{item_zuid}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links",
+								"description": "Creates an internal or external link.\n\n**Body:** raw JSON\n\n| **name** | **description** |\n| --- | --- |\n| type | \\[string\\] **Required.** Type of link. Accepts `\"internal\"` or `\"external\"` |\n| parentZUID | \\[string\\] **Required.** A parent for your link. Accepts an item ZUID. If there will be no parentZUID, you can pass in \"0\" as a value. |\n| label | \\[string\\] **Required.** Navigation label. |\n| metaTitle | \\[string\\] **Required.** Title of the meta. |\n| source | \\[string\\] Behavior of the link. Accepts `\"rel:true\"` and/or `\"target:_blank\"`. You can set it to a blank string `\"\"` if you don't want to use any of the behaviour and they will be set to their default values. If you want to use both, use a `\";\"` separator. |\n| target | \\[string\\] **Required.** Link to target. If the type is `internal`, this should be an item ZUID you want to link to. If the type is `external`, the value should be a full external URL. Example: \"[https://www.google.com\"](https://www.google.com) |"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "13b36944-c5db-4715-985a-881aad7bb3a8",
+									"name": "Create an internal link",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"type\": \"internal\",\r\n  \"parentZUID\": \"{{item_zuid}}\",\r\n  \"label\": \"Test 2 Link\",\r\n  \"metaTitle\": \"Test 2 Link\",\r\n  \"source\": \"\",\r\n  \"target\": \"{{item_zuid}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "https://8-f48cf3a682-7fthvk.api.stage.zesty.io/v1/content/links"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 18:05:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "524"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-20T18:05:21.395209839Z\",\"totalResults\":1,\"start\":0,\"offset\":0,\"limit\":1},\"data\":{\"ZUID\":\"17-96a5eee6ce-1234\",\"type\":\"internal\",\"contentModelName\":\"zesty_link\",\"parentZUID\":\"7-f4ff97bce5-1234\",\"label\":\"Test 2 Link\",\"metaTitle\":\"Test 2 Link\",\"source\":\"\",\"metaKeywords\":null,\"target\":\"7-e2d1f391ff-5678\",\"langID\":1,\"createdByUserZUID\":\"5-8e92cfe2e6-1234\",\"updatedByUserZUID\":\"5-8e92cfe2e6-1234\",\"createdAt\":\"2023-02-20T18:05:21.38887835Z\",\"updatedAt\":\"2023-02-20T18:05:21.388883627Z\"}}\n"
+								},
+								{
+									"id": "707a7281-0881-4663-bc28-bb7bd6ec0885",
+									"name": "Create an external link",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"external\",\r\n    \"parentZUID\": \"{{item_zuid}}\",\r\n    \"label\": \"New External Link\",\r\n    \"metaTitle\": \"New External Link\",\r\n    \"target\": \"https://your.external.link\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 23:23:59 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "545"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-20T23:23:59.03646804Z\",\"totalResults\":1,\"start\":0,\"offset\":0,\"limit\":1},\"data\":{\"ZUID\":\"17-8ce4d9a5b4-1234\",\"type\":\"external\",\"contentModelName\":\"zesty_link\",\"parentZUID\":\"7-e2d1f391ff-1234\",\"label\":\"New External Link\",\"metaTitle\":\"New External Link\",\"source\":null,\"metaKeywords\":null,\"target\":\"https://your.external.link\",\"langID\":1,\"createdByUserZUID\":\"5-8e92cfe2e6-1234\",\"updatedByUserZUID\":\"5-8e92cfe2e6-1234\",\"createdAt\":\"2023-02-20T23:23:59.025309498Z\",\"updatedAt\":\"2023-02-20T23:23:59.025315548Z\"}}\n"
+								}
+							]
 						},
 						{
-							"name": "Get Link(s)",
-							"id": "171cdaf8-48e6-4c39-aade-6fcc947f7c0f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links"
-							},
-							"response": []
-						},
-						{
-							"name": "Get Single Link",
+							"name": "Get Link",
 							"id": "07d0cadc-523f-48be-8bcc-8f98e0a1ba1e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47,9 +233,196 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}",
+								"description": "Retrieves a specific link based the linkZUID provided as a path param."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "c4e2f0b6-7547-44c9-9dbf-29b8ca1d3392",
+									"name": "Get Link",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 22:46:30 GMT"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-20T22:46:30.248580526Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"17-b685ffaa95-1234\",\n        \"type\": \"internal\",\n        \"contentModelName\": \"zesty_link\",\n        \"parentZUID\": \"7-f4ff97bce5-1234\",\n        \"label\": \"Test 3 Link\",\n        \"metaTitle\": \"Test 3 Link\",\n        \"source\": \"rel:true;target:_blank\",\n        \"metaKeywords\": null,\n        \"target\": \"7-e2cad79582-5678\",\n        \"langID\": 1,\n        \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"createdAt\": \"2023-02-20T18:06:22Z\",\n        \"updatedAt\": \"2023-02-20T18:06:22Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Links",
+							"id": "171cdaf8-48e6-4c39-aade-6fcc947f7c0f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links",
+								"description": "Retrieves all link created within an instance."
+							},
+							"response": [
+								{
+									"id": "787f535d-004c-41a4-be9a-5258e9e55dca",
+									"name": "Get Links",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 22:50:06 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-20T22:50:06.25261444Z\",\n        \"totalResults\": 2,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 2\n    },\n    \"data\": [\n        {\n            \"ZUID\": \"17-90d9cd919a-1234\",\n            \"type\": \"internal\",\n            \"contentModelName\": \"zesty_link\",\n            \"parentZUID\": \"7-d0e7f9f494-1234\",\n            \"label\": \"Test 1 Link\",\n            \"metaTitle\": \"Test 1 Link\",\n            \"source\": \"\",\n            \"metaKeywords\": null,\n            \"target\": \"7-e2d1f391ff-1234\",\n            \"langID\": 1,\n            \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"createdAt\": \"2023-02-20T17:53:29Z\",\n            \"updatedAt\": \"2023-02-20T17:53:29Z\"\n        },\n        {\n            \"ZUID\": \"17-aafbd7e7b6-1234\",\n            \"type\": \"internal\",\n            \"contentModelName\": \"zesty_link\",\n            \"parentZUID\": \"7-e2d1f391ff-1234\",\n            \"label\": \"Test 3 Link\",\n            \"metaTitle\": \"Test 3 Link\",\n            \"source\": \"\",\n            \"metaKeywords\": null,\n            \"target\": \"7-d0e7f9f494-zc9r59\",\n            \"langID\": 1,\n            \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"createdAt\": \"2023-02-20T18:03:52Z\",\n            \"updatedAt\": \"2023-02-20T18:03:52Z\"\n        }\n    ]\n}"
+								}
+							]
 						},
 						{
 							"name": "Update link",
@@ -60,9 +433,208 @@
 							"request": {
 								"method": "PUT",
 								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"type\": \"internal\",\r\n    \"parentZUID\": \"{{item_zuid}}\",\r\n    \"label\": \"Internal Link Updated\",\r\n    \"metaTitle\": \"Internal Link Updated\",\r\n    \"target\": \"{{item_zuid}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}",
+								"description": "Updates an existing link record.\n\n**Body:** raw JSON\n\n| **name** | **description** |\n| --- | --- |\n| type | \\[string\\] **Required.** Type of link. Right now, updating `external` type links are not available. So this will only accepts `\"internal\"`. |\n| parentZUID | \\[string\\] **Required.** A parent for your link. Accepts an item ZUID. |\n| label | \\[string\\] **Required.** Navigation label. |\n| metaTitle | \\[string\\] **Required.** Title of the meta. |\n| source | \\[string\\] Behavior of the link. Accepts `\"rel:true\"` and/or `\"target:_blank\"`. You can set it to a blank string `\"\"` if you don't want to use any of the behaviour and they will be set to their default values. If you want to use both, use a `\";\"` separator. |\n| target | \\[string\\] **Required.** Link to target. The value should be a full external URL. Example: \"[https://www.google.com\"](https://www.google.com) |"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "05dd1d5c-c11d-4668-a711-098b9d5794b7",
+									"name": "Update internal link",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"internal\",\r\n    \"parentZUID\": \"{{item_zuid}}\",\r\n    \"label\": \"Internal Link Updated\",\r\n    \"metaTitle\": \"Internal Link Updated\",\r\n    \"target\": \"{{item_zuid}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 23:27:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-20T23:27:16.759829099Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"17-90d9cd919a-1234\",\n        \"type\": \"internal\",\n        \"contentModelName\": \"zesty_link\",\n        \"parentZUID\": \"7-e2d1f391ff-1234\",\n        \"label\": \"Internal Link Updated\",\n        \"metaTitle\": \"Internal Link Updated\",\n        \"source\": null,\n        \"metaKeywords\": null,\n        \"target\": \"7-e2cad79582-rlrtfl\",\n        \"langID\": 1,\n        \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"createdAt\": \"2023-02-20T17:53:29Z\",\n        \"updatedAt\": \"2023-02-20T23:27:16.749519963Z\"\n    }\n}"
+								},
+								{
+									"id": "5ed05e86-c9c0-4c66-bf31-31ef47d2b10d",
+									"name": "Update external link",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"external\",\r\n    \"parentZUID\": \"{{item_zuid}}\",\r\n    \"label\": \"Test ext 1 Update\",\r\n    \"metaTitle\": \"Test ext 1 Update\",\r\n    \"target\": \"https://www.facebook.com\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 23:12:44 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-20T23:12:44.465904086Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"17-90d9cd919a-lvh9l6\",\n        \"type\": \"external\",\n        \"contentModelName\": \"zesty_link\",\n        \"parentZUID\": \"7-e2d1f391ff-zxmcxs\",\n        \"label\": \"Test ext 1 Update\",\n        \"metaTitle\": \"Test ext 1 Update\",\n        \"source\": null,\n        \"metaKeywords\": null,\n        \"target\": \"https://www.facebook.com\",\n        \"langID\": 1,\n        \"createdByUserZUID\": \"5-8e92cfe2e6-d2s3bd\",\n        \"updatedByUserZUID\": \"5-8e92cfe2e6-d2s3bd\",\n        \"createdAt\": \"2023-02-20T17:53:29Z\",\n        \"updatedAt\": \"2023-02-20T23:12:44.45645302Z\"\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Delete link",
@@ -73,9 +645,96 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}",
+								"description": "Deletes a specific link record."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "4bf774e1-6001-41bb-8f22-73887c777005",
+									"name": "Delete link",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/links/{{link_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 20 Feb 2023 23:34:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-20T23:34:14.239607041Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"17-90d9cd919a-1234\"\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "af0b4a0a-e6d9-4f92-8dd5-ba6acea15464"
