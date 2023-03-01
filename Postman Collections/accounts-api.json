@@ -874,12 +874,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{APP_SID}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
