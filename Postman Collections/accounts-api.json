@@ -2193,12 +2193,6 @@
 					"name": "Delete Team Invite",
 					"id": "e7cb3ad5-bb2b-477f-9bcf-803e869214b8",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "DELETE",
 						"header": [
 							{
