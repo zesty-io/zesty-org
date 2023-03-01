@@ -161,12 +161,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{APP_SID}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/users/pending",
@@ -181,12 +175,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/companies",
