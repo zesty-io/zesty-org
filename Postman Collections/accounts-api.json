@@ -401,12 +401,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "PUT",
 						"header": [
 							{
