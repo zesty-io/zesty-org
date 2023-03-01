@@ -2386,12 +2386,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "POST",
 						"header": [],
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/instances/{{instance_zuid}}/roles",
