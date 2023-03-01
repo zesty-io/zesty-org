@@ -467,7 +467,93 @@
 								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models",
 								"description": "Get array of Model Objects"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "ebec5000-5f5e-4804-bc4d-ec5e80017a67",
+									"name": "Get All Content Models",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 16:09:05 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "hit"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-02-28T17:50:07.693815011Z\",\n        \"totalResults\": 3,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 3\n    },\n    \"data\": [\n        {\n            \"ZUID\": \"6-c895dcbbe5-1234\",\n            \"masterZUID\": \"6-c895dcbbe5-1234\",\n            \"parentZUID\": \"\",\n            \"description\": null,\n            \"label\": \"Clippings\",\n            \"metaTitle\": null,\n            \"metaDescription\": null,\n            \"metaKeywords\": null,\n            \"type\": \"dataset\",\n            \"name\": \"clippings\",\n            \"sort\": 1,\n            \"listed\": true,\n            \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"createdAt\": \"2018-06-15T19:00:44Z\",\n            \"updatedAt\": \"2018-10-23T21:08:27Z\"\n        },\n        {\n            \"ZUID\": \"6-c0abcebbe5-1234\",\n            \"masterZUID\": \"6-c0abcebbe5-1234\",\n            \"parentZUID\": null,\n            \"description\": null,\n            \"label\": \"Dashboard Widgets\",\n            \"metaTitle\": null,\n            \"metaDescription\": null,\n            \"metaKeywords\": null,\n            \"type\": \"dataset\",\n            \"name\": \"widgets\",\n            \"sort\": 1,\n            \"listed\": true,\n            \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"createdAt\": \"2018-06-15T19:00:44Z\",\n            \"updatedAt\": \"2018-10-23T21:08:27Z\"\n        },\n        {\n            \"ZUID\": \"6-d0a4d7bbe5-1234\",\n            \"masterZUID\": \"6-d0a4d7bbe5-1234\",\n            \"parentZUID\": null,\n            \"description\": null,\n            \"label\": \"Homepage\",\n            \"metaTitle\": null,\n            \"metaDescription\": null,\n            \"metaKeywords\": null,\n            \"type\": \"templateset\",\n            \"name\": \"homepage\",\n            \"sort\": 1,\n            \"listed\": true,\n            \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n            \"createdAt\": \"2018-06-15T19:00:47Z\",\n            \"updatedAt\": \"2018-10-23T21:08:27Z\"\n        }\n    ]\n}"
+								}
+							]
 						},
 						{
 							"name": "Get Content Model",
@@ -478,9 +564,104 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}",
+								"description": "Get a specific content model."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "a0dc6f8d-7f06-49ef-ba35-d6427d695a09",
+									"name": "Get Content Model",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 16:14:29 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "miss"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-03-01T16:14:29.834692875Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"6-d0a4d7bbe5-1234\",\n        \"masterZUID\": \"6-d0a4d7bbe5-1234\",\n        \"parentZUID\": null,\n        \"description\": null,\n        \"label\": \"Homepage\",\n        \"metaTitle\": null,\n        \"metaDescription\": null,\n        \"metaKeywords\": null,\n        \"type\": \"templateset\",\n        \"name\": \"homepage\",\n        \"sort\": 1,\n        \"listed\": true,\n        \"createdByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"updatedByUserZUID\": \"5-8e92cfe2e6-1234\",\n        \"createdAt\": \"2018-06-15T19:00:47Z\",\n        \"updatedAt\": \"2018-10-23T21:08:27Z\"\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Update Content Model",
@@ -503,9 +684,104 @@
 									"raw": "{\n  \"label\": \"Example Content Model\",\n  \"name\": \"example_content_model\",\n  \"description\": \"Example Content Model Description Update\"\n}"
 								},
 								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}",
-								"description": "Updates fields of the collection. If the 'parent_zuid' is a Single Page Model, the value needs to be the item zuid which starts with 7-. If it is a Multi Page Model, the value needs to be the content model zuid which starts with 6-."
+								"description": "Updates the info details of a content model including its parentZUID."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "02dbb190-0c7d-4bf9-a323-145c2bd325b1",
+									"name": "Update Content Model and Parent Model",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"label\": \"Updated Label\",\n  \"name\": \"updated_ref_label\",\n  \"description\": \"This is a tested model.\",\n  \"parentZUID\": \"{{parent_zuid}}\"\n}"
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 16:18:56 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-03-01T16:18:56.81337246Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"6-9aadf6e9b8-1233\"\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Delete Content Model",
@@ -519,7 +795,93 @@
 								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}",
 								"description": "Delete a Content Model and associated resources: items, fields, views."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "a883bb85-9732-4c52-adf1-d71acc714285",
+									"name": "Delete Content Model",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 16:22:23 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-03-01T16:22:23.260389357Z\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"6-9aadf6e9b8-1234\"\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "5f8c1a85-1775-f67b-c5e0-a061f69e7ddb",
