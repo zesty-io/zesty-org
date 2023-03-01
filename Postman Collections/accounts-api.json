@@ -3567,17 +3567,11 @@
 				}
 			],
 			"id": "2d602695-3f14-44c2-b97a-212c402250f6",
-			"auth": {
-				"type": "bearer",
-				"bearer": {
-					"token": "{{authorization}}"
-				}
-			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "1ef64a29-4054-41a1-960f-4042b6bab0e6",
+						"id": "7c8d299d-e6bd-495f-b84c-c898cbd7788f",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -3587,7 +3581,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f637f326-4120-4d16-85db-671d6dd01148",
+						"id": "37af388e-550f-4d83-806f-cc2877d388c2",
 						"type": "text/javascript",
 						"exec": [
 							""
