@@ -2036,12 +2036,6 @@
 					"name": "Get All Team Invites",
 					"id": "01066884-29d7-4193-8610-e1c28e406a3e",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
