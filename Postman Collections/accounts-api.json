@@ -2587,7 +2587,7 @@
 							"raw": " [\n        {\n            \"resourceZUID\": \"{{item_zuid}}\",\n            \"name\": \"\",\n            \"create\": true,\n            \"read\": true,\n            \"update\": true,\n            \"delete\": false\n        }\n    ]"
 						},
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars",
-						"description": "Updates the granular roles for the give role ZUID. The resource ZUID for each granular permission must be included in the body of each update.\n\nStartFragment\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragmen"
+						"description": "Updates the granular roles for the give role ZUID. The resource ZUID for each granular permission must be included in the body of each update.\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID."
 					},
 					"response": []
 				}
