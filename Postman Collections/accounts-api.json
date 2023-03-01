@@ -1413,12 +1413,6 @@
 					"name": "Get All Invites",
 					"id": "d3d15373-7936-421a-9ca9-a71381ab4acc",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{APP_SID}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
