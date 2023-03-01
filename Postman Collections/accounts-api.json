@@ -2549,7 +2549,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/roles/{{role_zuid}}/granulars/{{resource_zuid}}",
-						"description": "Deletes a granular role by its role and resource ZUID.\n\nStartFragment\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID.\n\nEndFragme"
+						"description": "Deletes a granular role by its role and resource ZUID.\n\nYou can pass content models (schemas), instances, and item ZUID as the resource ZUID."
 					},
 					"response": []
 				},
