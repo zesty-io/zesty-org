@@ -3218,7 +3218,7 @@
 									},
 									"status": "OK",
 									"code": 200,
-									"_postman_previewlanguage": "Text",
+									"_postman_previewlanguage": "",
 									"header": [
 										{
 											"key": "Content-Type",
@@ -3393,16 +3393,206 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "[\n    {\n        \"data\":{\"label\":\"mylabel\"},\n        \"web\":{\"canonicalTagMode\":1,\"metaLinkText\":\"mylabel\",\"metaTitle\":\"mylabel\"},\n        \"meta\":{\"langID\":1,\"contentModelZUID\":\"6-abcd-1234\"}\n    },\n    {\n        \"data\":{\"label\":\"myotherlabel\"},\n        \"web\":{\"canonicalTagMode\":1,\"metaLinkText\":\"myotherlabel\",\"metaTitle\":\"myotherlabel\"},\n        \"meta\":{\"langID\":1,\"contentModelZUID\":\"6-abcd-1234\"}\n    }\n]",
+									"raw": "[\n    {\n        \"web\": {\n            \"canonicalTagMode\":1,\n            \"metaLinkText\":\"mylabel\",\n            \"metaTitle\":\"mylabel\",\n            \"pathPart\": \"my-label\"\n        },\n        \"meta\": {\n            \"langID\":1\n        },\n        \"data\": {\n            \"title\":\"mylabel\"\n        }\n    },\n    {\n        \"web\": {\n            \"canonicalTagMode\":1,\n            \"metaLinkText\":\"myotherlabel\",\n            \"metaTitle\":\"myotherlabel\",\n            \"pathPart\": \"my-other-label\"\n        },\n        \"meta\": {\n            \"langID\":1\n        },\n        \"data\": {\n            \"title\":\"myotherlabel\"\n        }\n    }\n]",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch",
+								"description": "Creates multiple items at once that will be based on the given content model zuid. Required body key is pathPart. However, it is recommended to supply the metaLinkText (Navigation Link Text) for it to have a label on the navigation panel."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "dc0950a9-f0cb-4f68-99ea-00a643939756",
+									"name": "Create Minimal Payload",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"web\": {\n            \"metaLinkText\":\"myotherlabel\",\n            \"pathPart\": \"my-label\"\n        },\n        \"data\": {\n            \"title\":\"mylabel\"\n        }\n    },\n    {\n        \"web\": {\n            \"metaLinkText\":\"myotherlabel\",\n            \"pathPart\": \"my-other-label\"\n        },\n        \"data\": {\n            \"title\":\"myotherlabel\"\n        }\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 15 Feb 2023 20:27:14 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "158"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-15T20:27:14.571233257Z\",\"totalResults\":2,\"start\":0,\"offset\":0,\"limit\":2},\"data\":[\"7-ac9d98a2b7-1234\",\"7-cccb9ca2b7-1234\"]}\n"
+								},
+								{
+									"id": "7ac1f4ca-cb63-41d5-ae8e-8842a3a3c0f1",
+									"name": "Create 2 Items",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"web\": {\n            \"canonicalTagMode\":1,\n            \"metaLinkText\":\"mylabel\",\n            \"metaTitle\":\"mylabel\",\n            \"pathPart\": \"my-label\"\n        },\n        \"meta\": {\n            \"langID\":1,\n            \"contentModelZUID\":\"{{content_model_zuid}}\"\n        },\n        \"data\": {\n            \"title\":\"mylabel\"\n        }\n    },\n    {\n        \"web\": {\n            \"canonicalTagMode\":1,\n            \"metaLinkText\":\"myotherlabel\",\n            \"metaTitle\":\"myotherlabel\",\n            \"pathPart\": \"my-other-label\"\n        },\n        \"meta\": {\n            \"langID\":1,\n            \"contentModelZUID\":\"{{content_model_zuid}}\"\n        },\n        \"data\": {\n            \"title\":\"myotherlabel\"\n        }\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 15 Feb 2023 20:21:51 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "158"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-15T20:21:51.369453624Z\",\"totalResults\":2,\"start\":0,\"offset\":0,\"limit\":2},\"data\":[\"7-c4c8c394cf-1234\",\"7-80bfcc94cf-1234\"]}"
+								}
+							]
 						},
 						{
 							"name": "Update",
@@ -3415,16 +3605,206 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "[\n    {\n        \"meta\":\t{\"ZUID\": \"7-88b5e7a0e2-t81g9x\", \"masterZUID\": \"7-88b5e7a0e2-t81g9x\"},\n        \"data\": {\"label\": \"myupdatedlabel\"}\n    },\n    {\n        \"meta\":\t{\"ZUID\": \"7-90c3efa0e2-0jbxd3\",\"masterZUID\": \"7-90c3efa0e2-0jbxd3\"},\n        \"data\": {\"label\": \"myotherupdatedlabel\"}\n    }\n]",
+									"raw": "[\n    {\n        \"web\": {\n            \"pathPart\": \"my-other-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-9cd0bae9c3-1234\",\n            \"masterZUID\": \"7-9cd0bae9c3-1234\"\n        },\n        \"data\": {\n            \"fieldLabel\": \"myupdatedlabel\"\n        }\n    },\n    {\n        \"web\": {\n            \"pathPart\": \"my-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-f4a3b2e9c3-5678\",\n            \"masterZUID\": \"7-f4a3b2e9c3-5678\"\n        },\n        \"data\": {\n            \"fieldLabel\": \"myotherupdatedlabel\"\n        }\n    }\n]",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch",
+								"description": "Updates multiple items at once. Required payload keys are pathPart, ZUID and masterZUID.\n\n| **name** | **description** |\n| --- | --- |\n| pathPart | \\[string\\] **Required.** |\n| ZUID | \\[string\\] **Required.**The item ZUID to be updated. |\n| masterZUID | \\[string\\] **Required.** The master ZUID of the item. |\n\nSome keys, but not limited to, that you can update are the meta keys and field values that you want to update."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "9c5747be-ae96-4d42-9216-99e97611746a",
+									"name": "Update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"web\": {\n            \"pathPart\": \"my-other-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-e6a88183f0-1234\",\n            \"masterZUID\": \"7-e6a88183f0-1234\"\n        },\n        \"data\": {\n            \"title\": \"myupdatedlabel\"\n        }\n    },\n    {\n        \"web\": {\n            \"pathPart\": \"my-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-e8e4bcd29e-5678\",\n            \"masterZUID\": \"7-e8e4bcd29e-5678\"\n        },\n        \"data\": {\n            \"title\": \"myotherupdatedlabel\"\n        }\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Length",
+											"value": "158"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 17 Feb 2023 17:48:48 GMT"
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-17T17:48:48.457155599Z\",\"totalResults\":2,\"start\":0,\"offset\":0,\"limit\":2},\"data\":[\"7-e6a88183f0-1234\",\"7-e8e4bcd29e-5678\"]}\n"
+								},
+								{
+									"id": "a7261344-990e-427f-8011-af2eda9f0887",
+									"name": "Update Navigation Label",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"web\": {\n            \"metaLinkText\": \"New Nav Label\",\n            \"pathPart\": \"my-other-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-9cd0bae9c3-1234\",\n            \"masterZUID\": \"7-9cd0bae9c3-1234\"\n        }\n    },\n    {\n        \"web\": {\n            \"metaLinkText\": \"New Other Nav Label\",\n            \"pathPart\": \"my-label\"\n        },\n        \"meta\":\t{\n            \"ZUID\": \"7-f4a3b2e9c3-5678\",\n            \"masterZUID\": \"7-f4a3b2e9c3-5678\"\n        }\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 15 Feb 2023 21:12:27 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-15T21:12:27.243729264Z\",\"totalResults\":2,\"start\":0,\"offset\":0,\"limit\":2},\"data\":[\"7-9cd0bae9c3-1234\",\"7-f4a3b2e9c3-5678\"]}\n"
+								}
+							]
 						},
 						{
 							"name": "Delete",
@@ -3437,11 +3817,110 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "[\"7-abcd-1234\",\"7-abcd-1234\"]"
+									"raw": "[\r\n    \"7-ceb7c5a986-1234\",\r\n    \"7-9cd0bae9c3-5678\"\r\n]"
 								},
-								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{api_version}}/content/models/{{content_model_zuid}}/items/batch"
+								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch",
+								"description": "Deletes multiple items at once. Payload should contain an array of item's ZUIDs that are needed to be deleted. The type of payload is raw-text."
 							},
-							"response": []
+							"response": [
+								{
+									"id": "cc405674-82e0-4a19-a990-6c09e98de013",
+									"name": "Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "[\r\n    \"7-ceb7c5a986-1234\",\r\n    \"7-9cd0bae9c3-5678\"\r\n]"
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/content/models/{{content_model_zuid}}/items/batch"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Wed, 15 Feb 2023 21:22:49 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept-Encoding"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										},
+										{
+											"key": "Content-Encoding",
+											"value": "gzip"
+										},
+										{
+											"key": "Via",
+											"value": "1.1 google"
+										},
+										{
+											"key": "Alt-Svc",
+											"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-02-15T21:22:49.221152049Z\",\"totalResults\":2,\"start\":0,\"offset\":0,\"limit\":2},\"data\":[\"7-ceb7c5a986-1234\",\"7-9cd0bae9c3-5678\"]}\n"
+								}
+							]
 						}
 					],
 					"id": "d0512800-b565-4f89-820c-c4e03952e47c"
