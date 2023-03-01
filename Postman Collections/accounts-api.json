@@ -3375,12 +3375,6 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{APP_SID}}"
-							}
-						},
 						"method": "DELETE",
 						"header": [],
 						"url": "{{protocol}}://{{accounts_api_url}}/{{accounts_api_version}}/webhooks/{{webhook_zuid}}",
