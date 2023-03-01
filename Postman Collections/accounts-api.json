@@ -1398,12 +1398,6 @@
 					"name": "Get Invite",
 					"id": "2bf452f8-619e-40ae-9b27-80c55a8d746d",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
