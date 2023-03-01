@@ -2557,12 +2557,6 @@
 					"name": "Get Granular Roles",
 					"id": "ad8d4832-e0ec-4c80-a20b-0239079bdcee",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
