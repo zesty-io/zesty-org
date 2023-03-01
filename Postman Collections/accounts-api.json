@@ -58,12 +58,6 @@
 					"name": "Verify DNS",
 					"id": "b3e4fd14-01b4-4eba-a911-4c6333821303",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "POST",
 						"header": [
 							{
