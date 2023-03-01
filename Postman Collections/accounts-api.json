@@ -2340,12 +2340,6 @@
 					"name": "Get Role",
 					"id": "e3b0ddd1-0fa3-4039-97da-3184bcac7f87",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{authorization}}"
-							}
-						},
 						"method": "GET",
 						"header": [],
 						"body": {
