@@ -68,7 +68,14 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
 
 * Components
-  * Add Component
+  * Add Component (component / design type)
+      * component : will be any html you like to display on the layout
+      <br/>note: if html is leave blank, it will automatically wrap your preview url to `<img src={previewURL} width='100%'/>`
+      <figure><img src="../../.gitbook/assets/layouts - add component.png" alt=""><figcaption></figcaption></figure>
+
+      * design : anything that can be use for improving spacing or designs. like `<br/>`, `<hr/>` etc..
+      <figure><img src="../../.gitbook/assets/layouts - add design tools.png" alt=""><figcaption></figcaption></figure>
+      
   *   Manage Model&#x20;
 
       <figure><img src="https://lh6.googleusercontent.com/PcI9bd3VsLS9UQtqutRGR9fBc1iICba3CN9Ki1hymImloq4dfDK4bfg1s8EE1_2OyPm6ZK0vRoxAq1DYs8IOlXHYeXAloqBQrsVufhagz0qqUamZ8VqArxMdBjNhNpzs0HXRm2tia-3s5nyiOsryp3HbGG1l53dQY51I8MgdWNimdry58s2WMQV58WksfA" alt=""><figcaption></figcaption></figure>
