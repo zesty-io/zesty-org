@@ -4312,17 +4312,11 @@
 					],
 					"id": "c25bc32e-5f54-d179-4532-7e40b786c379",
 					"description": "Content Items are rows of a Content Model",
-					"auth": {
-						"type": "bearer",
-						"bearer": {
-							"token": "{{APP_SID}}"
-						}
-					},
 					"event": [
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "9804b775-23d5-47a7-b7b3-a17ff28dbb57",
+								"id": "87c59a6f-f8fd-435b-bca8-e391f8217d29",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -4332,7 +4326,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "f3a9fcf6-de1b-4266-8a45-e82d418a7085",
+								"id": "05298648-4879-475d-9117-85f46c9e625d",
 								"type": "text/javascript",
 								"exec": [
 									""
