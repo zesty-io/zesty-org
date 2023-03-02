@@ -54,9 +54,12 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
       Toggle Sidebar - Ctrl+B / Command+B\
 
 * Help
-  * Hotkeys
+  * Hotkeys\
+      <figure><img src="../../.gitbook/assets/layouts - hotkeys.png" alt=""><figcaption></figcaption></figure>
   * How it works
+      <figure><img src="../../.gitbook/assets/layouts - how it works.png" alt=""><figcaption></figcaption></figure>
   * About\
+      <figure><img src="../../.gitbook/assets/layouts - about.png" alt=""><figcaption></figcaption></figure>
 
       <figure><img src="https://lh6.googleusercontent.com/eW4oKnlN2ItPuKZc53iyg_YKr_rRg4R4ns83zG1pkQnjnd1KQ4o0eyKumrmiJd4HWD3pvw3gfaPodgmZI62KQ4kNMQ3usGAcPBJ_yhMZSh_O1GdSkffj9CqagXxA1xyp4E8J9rF_M3Nuetg5rByoyTzp3rB_qkiBtZuaN4TS0KevWeaC970w_5bGbS32Dg" alt=""><figcaption></figcaption></figure>
 
