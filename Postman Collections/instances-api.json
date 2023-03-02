@@ -3949,6 +3949,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{authorization}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -4176,6 +4182,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{APP_SID}}"
+									}
+								},
 								"method": "PUT",
 								"header": [
 									{
@@ -4269,6 +4281,12 @@
 							"name": "Delete Item",
 							"id": "e5825fad-fdee-54af-e921-2824779f7262",
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{authorization}}"
+									}
+								},
 								"method": "DELETE",
 								"header": [],
 								"body": {
