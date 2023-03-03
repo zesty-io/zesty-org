@@ -42,16 +42,11 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
 * View - hotkeys
   *   Visual Layout - Ctrl+1 / Command+1
-
-      ZHTML Output -  Ctrl+2 / Command+2
-
-      JSON Output -  Ctrl+3 / Command+3
-
-      Layout Preview - Ctrl+4 / Command+4
-
-      Page Preview - Ctrl+5 / Command+5
-
-      Toggle Sidebar - Ctrl+B / Command+B\
+  *   ZHTML Output -  Ctrl+2 / Command+2
+  *   JSON Output -  Ctrl+3 / Command+3
+  *   Layout Preview - Ctrl+4 / Command+4
+  *   Page Preview - Ctrl+5 / Command+5
+  *   Toggle Sidebar - Ctrl+B / Command+B
 
 * Help
   * Hotkeys
