@@ -3949,12 +3949,6 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{authorization}}"
-									}
-								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -4182,12 +4176,6 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{APP_SID}}"
-									}
-								},
 								"method": "PUT",
 								"header": [
 									{
@@ -4281,12 +4269,6 @@
 							"name": "Delete Item",
 							"id": "e5825fad-fdee-54af-e921-2824779f7262",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{authorization}}"
-									}
-								},
 								"method": "DELETE",
 								"header": [],
 								"body": {
@@ -4386,7 +4368,7 @@
 					"name": "/content/models/items/batch",
 					"item": [
 						{
-							"name": "Create",
+							"name": "Create Multiple Items",
 							"id": "5c768150-e95b-4d40-b0ad-b4406267cdb6",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4598,7 +4580,7 @@
 							]
 						},
 						{
-							"name": "Update",
+							"name": "Update Multiple Items",
 							"id": "00f63829-682c-4a96-9d49-7b7fca676024",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4810,7 +4792,7 @@
 							]
 						},
 						{
-							"name": "Delete",
+							"name": "Delete Multiple Items",
 							"id": "be237b19-4aba-4592-bb47-43618a56af01",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5260,7 +5242,7 @@
 					"name": "/content/items/publishings",
 					"item": [
 						{
-							"name": "Get All",
+							"name": "Get All Items Publishings",
 							"id": "5fe77366-5dde-402d-87ff-a3e75cd7d2fe",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -15537,7 +15519,7 @@
 					"name": "/env/audits",
 					"item": [
 						{
-							"name": "Get Multiple",
+							"name": "Get All Audits",
 							"id": "a48acd19-7742-4960-b535-cbdc921ed579",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -15603,19 +15585,17 @@
 											"key": "affectedZUID",
 											"value": "[zuid]",
 											"description": "Filter logs by ZUID of the affected resource",
-											"type": "text",
 											"disabled": true
 										},
 										{
 											"key": "userZUID",
 											"value": "[zuid]",
 											"description": "Filter logs by user who created them",
-											"type": "text",
 											"disabled": true
 										}
 									]
 								},
-								"description": "Get all Audt trails for a given instance"
+								"description": "Get all Audit trails of a given instance."
 							},
 							"response": [
 								{
@@ -16510,7 +16490,7 @@
 							]
 						},
 						{
-							"name": "Get Single",
+							"name": "Get Single Audit",
 							"id": "365054c0-dca7-4729-965d-8412d8fe90bc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16906,7 +16886,7 @@
 							]
 						},
 						{
-							"name": "Get All",
+							"name": "Get All Leads",
 							"id": "c0fc0fe9-c749-4477-b581-79eaca9b7f67",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16919,7 +16899,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Single",
+							"name": "Get Single Lead",
 							"id": "d59c34b7-91ee-4a38-9b0b-6059ffec660e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
