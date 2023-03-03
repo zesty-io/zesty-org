@@ -54,13 +54,12 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
       Toggle Sidebar - Ctrl+B / Command+B\
 
 * Help
-  * Hotkeys\
+  * Hotkeys
       <figure><img src="../../.gitbook/assets/layouts - hotkeys.png" alt=""><figcaption></figcaption></figure>
   * How it works
       <figure><img src="../../.gitbook/assets/layouts - how it works.png" alt=""><figcaption></figcaption></figure>
-  * About\
+  * About
       <figure><img src="../../.gitbook/assets/layouts - about.png" alt=""><figcaption></figcaption></figure>
-
       <figure><img src="https://lh6.googleusercontent.com/eW4oKnlN2ItPuKZc53iyg_YKr_rRg4R4ns83zG1pkQnjnd1KQ4o0eyKumrmiJd4HWD3pvw3gfaPodgmZI62KQ4kNMQ3usGAcPBJ_yhMZSh_O1GdSkffj9CqagXxA1xyp4E8J9rF_M3Nuetg5rByoyTzp3rB_qkiBtZuaN4TS0KevWeaC970w_5bGbS32Dg" alt=""><figcaption></figcaption></figure>
 
 
@@ -73,8 +72,9 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
       * Design : anything that can be use for improving spacing or designs. like `<br/>`, `<hr/>` etc..
       <figure><img src="../../.gitbook/assets/layouts - add design tools.png" alt=""><figcaption></figcaption></figure>
-
-  *   Manage Model\
+  * Edit / Delete a component
+      <figure><img src="../../.gitbook/assets/layouts - edit or delete.png" alt=""><figcaption></figcaption></figure>
+  * Manage Model\
       `To manage a model you'll get redirected to the schema route of your instance in order to manager your model.`
 
       <figure><img src="https://lh6.googleusercontent.com/PcI9bd3VsLS9UQtqutRGR9fBc1iICba3CN9Ki1hymImloq4dfDK4bfg1s8EE1_2OyPm6ZK0vRoxAq1DYs8IOlXHYeXAloqBQrsVufhagz0qqUamZ8VqArxMdBjNhNpzs0HXRm2tia-3s5nyiOsryp3HbGG1l53dQY51I8MgdWNimdry58s2WMQV58WksfA" alt=""><figcaption></figcaption></figure>
@@ -82,34 +82,43 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
 
 * Content Model Selector\
-    `Helpful for quick search and selection of your model.`
+  `Helpful for quick search and selection of your model.`
 
     <figure><img src="https://lh3.googleusercontent.com/j8oS7BEqpLFSdG51biSMAyxIGIqy7d4miL13X5E29FQ3U7YE9QnNyQ5CTXTR2BD5eUQI-ZA8K19RIcc6yn4UwqQ_2t4pnRLEvGt3tTp5Fyy63OnWOQO9BZlFs38C2tvVVOE0NToZuzAvY3LvWX428GwrC5nGz5eBoy2nvc2BKGohVsUb4YhBpvG9qE_ycg" alt=""><figcaption></figcaption></figure>
 
 * Layout Design Tools\
-    `These helps to group your content or put additional design.`
+  `These helps to group your content or put additional design.`
 
     <figure><img src="https://lh6.googleusercontent.com/lCbS7vq2RxM3yz0LFkfvBOuGG-ZIl8GHamReX4C6trdSNOLHePzFZZF345avU_5-hHbFYaDTfR36f57AL8gH0bWhJjC4fcLAirAvzI8QclBFW0FUkHFwkf7DjtvqniAWsOhfajBhHPmPFZhIGkCOqiBecc4x2ZEuxeHIcsKwFDrhE-XFDNBrSJv2CE0_mg" alt=""><figcaption></figcaption></figure>
 
-*   Component Design Tools\
-    `Lists of your created components`
+* Component Design Tools\
+  `Lists of your created components`
 
     <figure><img src="https://lh6.googleusercontent.com/Js-V-WHSZRLiFFfdi3Y3UuLT6s5pXAZ0jncXl-Qn2UmUSHZfs0EX33WtStdpNnTm3Ad1Y_oTxnTKv9J3vOKDi5N_eoDCnCoQHcp7voOgIr_xTfTI0a4iqWKUtUElmHE2_FXJasulcJLns25y1E92Okw3g_pwwuIM11ZeJehnNsxCHq1DXvq-ujGv2aFXaw" alt=""><figcaption></figcaption></figure>
+
+* Sidebar Model\
+  `You can also select model in the sidebar, and see the selected model on the top.`
+  * Default Layout - this will be the default layout of all items inside of that model if there's nothing set to an item.
+  * Item(ex: About Component 1, About Component 2) - these are the specific pages/content of the model.
+  * Copy Default Layout - this function lets you copy the default layout on your item(ex: if you unintentionally remove all the contents in the canvas), in order for you not to recreate your layout from scratch.
+
+  <figure><img src="../../.gitbook/assets/layouts - sidebar model.png" alt=""><figcaption></figcaption></figure>
+  <figure><img src="../../.gitbook/assets/layouts - copy default layout.png" alt=""><figcaption></figcaption></figure>
+
+  * You can also change the content of some `other model` that you want to drag in your `selected model`. ex: Once you select an item in the dropdown it will let you preview what it will display in the canvas to provide
+  you an idea.
+  <figure><img src="../../.gitbook/assets/layouts - change content items.png" alt=""><figcaption></figcaption></figure>
+
 
 * Layout Canvas
 
 
 1.  Default view - user may collapse each sidebar for a wider canvas.
-
-
     <figure><img src="https://lh4.googleusercontent.com/SoKSRZdsPoG92bC4_zPQ-TgkfXUfOX1uVUh5ketDuTePjnnaHk-4X2_wPBHvkfaCX3kZUf3J-Lus6MYuCxwzPKsPo8kOsU8sX_I3UFLvebjfN8rQKRcLihMNoIYpq7OmAiOCycIkjDg9qV7ifKcW1fEEcYkcZFcOGNjqCtNnkwpxpdW4rJiEl8pXs-xmOA" alt=""><figcaption></figcaption></figure>
 
 
 
 2. Collapsed view - canvas when each sidebar is collapsed.
-
-
-
     <figure><img src="https://lh4.googleusercontent.com/-CPiqEXcY2Pu8a0DcHKw2LsAGxmD8OryZ6my4aJfXgCjzAyMqDYvzbhMcuiQ3uFJpQfzyO5J8qprz1sal7DjdYKFQQ41Il_UKcKzDIjD-1pVf7c_Y3VLlZODYF-yQnNq_2SpMQ83eyM5Q-PMPTjXKBYMMbbt51bJGH9guE-Vm1Kytd7Uf6JDv1OLG-GiBQ" alt=""><figcaption></figcaption></figure>
 
 Tip: `Ctrl+B` to toggle the view.
