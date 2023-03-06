@@ -64,14 +64,7 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
 * Components
   * Add Component (component / design type)
-      * Component : will be any html you like to display on the layout
-      <br/>note: if html is leave blank, it will automatically wrap your preview url to `<img src={previewURL} width='100%'/>`
-      <figure><img src="../../.gitbook/assets/layouts - add component.png" alt=""><figcaption></figcaption></figure>
-
-      * Design : anything that can be use for improving spacing or designs. like `<br/>`, `<hr/>` etc..
-      <figure><img src="../../.gitbook/assets/layouts - add design tools.png" alt=""><figcaption></figcaption></figure>
   * Edit / Delete a component
-      <figure><img src="../../.gitbook/assets/layouts - edit or delete.png" alt=""><figcaption></figcaption></figure>
   * Manage Model\
       `To manage a model you'll get redirected to the schema route of your instance in order to manager your model.`
 
@@ -94,25 +87,6 @@ The Layouts interface is mainly of file toolbars, canvas/layout preview, content
 
     <figure><img src="https://lh6.googleusercontent.com/Js-V-WHSZRLiFFfdi3Y3UuLT6s5pXAZ0jncXl-Qn2UmUSHZfs0EX33WtStdpNnTm3Ad1Y_oTxnTKv9J3vOKDi5N_eoDCnCoQHcp7voOgIr_xTfTI0a4iqWKUtUElmHE2_FXJasulcJLns25y1E92Okw3g_pwwuIM11ZeJehnNsxCHq1DXvq-ujGv2aFXaw" alt=""><figcaption></figcaption></figure>
 
-* Sidebar Model\
-  `You can also select model in the sidebar, and see the selected model on the top.`
-  * Default Layout - this will be the default layout of all items inside of that model if there's nothing set to an item.
-  * Item(ex: About Component 1, About Component 2) - these are the specific pages/content of the model.
-  
-    <figure><img src="../../.gitbook/assets/layouts - sidebar model.png" alt=""><figcaption></figcaption></figure>
-    
-  * Copy Default Layout - this function lets you copy the default layout on your item(ex: if you unintentionally remove all the contents in the canvas), in order for you not to recreate your layout from scratch.
-   
-    <figure><img src="../../.gitbook/assets/layouts - copy default layout.png" alt=""><figcaption></figcaption></figure>
-   
-  * You can also change the content of some `other model` that you want to drag in your `selected model`. ex: Once you select an item in the dropdown it will let you preview what it will display in the canvas to provide
-  you an idea.
-    
-    <figure><img src="../../.gitbook/assets/layouts - change content items.png" alt=""><figcaption></figcaption></figure>
-    
-  * When saving a `Default Layout` it will always start with this convention `6-` cause we are using the id of the `Selected Model` while the `Selected Item within the Model` is `7-`, you can view your saved item or model in `Code` page.
-    
-    <figure><img src="../../.gitbook/assets/layouts - model and item id convention.png" alt=""><figcaption></figcaption></figure>
   
 * Layout Canvas
 
