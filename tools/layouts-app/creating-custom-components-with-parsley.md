@@ -34,7 +34,7 @@ In the Code app, create a new snippet file.&#x20;
 
 <figure><img src="../../.gitbook/assets/createComponent.gif" alt=""><figcaption></figcaption></figure>
 
-Add your code, you can even call content dynamically using Parsley. Your snippet file can now be used within your custom component by using the `include` Parsley call. For example, a snippet created with the file name: `/components/myComponent` can be called with the following syntax: `{{ include /components/myComponent`
+Add your code, you can even call content dynamically using Parsley. Your snippet file can now be used within your custom component by using the `include` Parsley call. For example, a snippet created with the file name: `/components/myComponent` can be called with the following syntax: `{{ include /components/myComponent }}`
 
 <figure><img src="../../.gitbook/assets/code.gif" alt=""><figcaption></figcaption></figure>
 
