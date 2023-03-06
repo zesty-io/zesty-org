@@ -107,3 +107,6 @@ Using the Layouts app, you can easily create/design web pages with the pre-built
 
 * Start by selecting a Content Model in the dropdown selection (eg. Articles) to work with Layouts.
 * Select a layout design available in the Layout Design Tools which you can drag and drop into your canvas/page view.
+* You can use all the items in sidebar to drag in your canvas to layout your page
+* You can create your custom component, drag design tools.
+* There are available shortcuts to make your creation of layout seamless.
