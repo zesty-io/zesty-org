@@ -13,7 +13,7 @@
    
 <figure><img src="../../.gitbook/assets/layouts - copy default layout.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/layouts - copy default layout vid.webm" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/layouts - copy default layout vid.gif" alt=""><figcaption></figcaption></figure>
    
 ### Single Item
 
@@ -22,11 +22,11 @@ you an idea.
 
 <figure><img src="../../.gitbook/assets/layouts - change content items.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/layouts - showing all items including default layout.webm" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/layouts - showing all items including default layout.gif" alt=""><figcaption></figcaption></figure>
 
 * Saving an item : it shows that it doesn't rely on the default layout anymore, once save it will create new file with the convention of `7-` base on its item zuid.
 
-<figure><img src="../../.gitbook/assets/layouts - saving an item.webm" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/layouts - saving an item.gif" alt=""><figcaption></figcaption></figure>
 
 Note : When saving a `Default Layout` it will always start with this convention `6-` cause we are using the id of the `Selected Model` while the `Selected Item within the Model` is `7-`, you can view your saved item or model in `Code` page.
     
@@ -36,4 +36,4 @@ Note : When saving a `Default Layout` it will always start with this convention 
 
 * You can also preview other model while you're selected to a current model
 
-<figure><img src="../../.gitbook/assets/layouts - previewing other model change content.webm" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/layouts - previewing other model change content.gif" alt=""><figcaption></figcaption></figure>
