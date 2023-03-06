@@ -7,7 +7,7 @@
   
 <figure><img src="../../.gitbook/assets/layouts - sidebar model.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/layouts - showing all items including default layout.webm" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/layouts - showing all items including default layout.gif" alt=""><figcaption></figcaption></figure>
     
 * Copy Default Layout - this function lets you copy the default layout on your item(ex: if you unintentionally remove all the contents in the canvas), in order for you not to recreate your layout from scratch.
    
