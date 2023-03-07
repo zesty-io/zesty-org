@@ -11,8 +11,8 @@ description: >-
 
 Every item of content that is authored in Zesty.io has a paired API endpoint that gives developers JSON access. Two are auto generated, Instance Content API (open) and Instances REST API (authenticated).
 
-{% content-ref url="instant-content-api.md" %}
-[instant-content-api.md](instant-content-api.md)
+{% content-ref url="json-endpoints/instant-content-api.md" %}
+[instant-content-api.md](json-endpoints/instant-content-api.md)
 {% endcontent-ref %}
 
 {% content-ref url="broken-reference" %}

@@ -152,7 +152,7 @@ https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg&auto=
 {% endswagger-response %}
 {% endswagger %}
 
-![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg\&auto=webp](<../../.gitbook/assets/image (9).png>)
+![https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?format=pjpg\&auto=webp](<../../.gitbook/assets/image (9) (2).png>)
 
 {% swagger baseUrl="https://9skdl6.media.zestyio.com/parsley-logo-brackets.png" path="?bg-color=690167" method="get" summary="Background Color:   /image.jpg?bg-color=" %}
 {% swagger-description %}
