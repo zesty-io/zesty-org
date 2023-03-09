@@ -787,17 +787,11 @@
 				}
 			],
 			"id": "358da090-1875-cf66-1424-cb8e4e69462b",
-			"auth": {
-				"type": "bearer",
-				"bearer": {
-					"token": "{{APP_SID}}"
-				}
-			},
 			"event": [
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e734de8c-5c23-4862-a6d2-002416a7d163",
+						"id": "faaf533f-0331-4606-ada8-813ce4a00ccd",
 						"type": "text/javascript",
 						"exec": [
 							""
@@ -807,7 +801,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "eedcde8c-641b-4d64-841b-f88352241e46",
+						"id": "17efff70-da3e-4966-a029-f20bcbdbf0c5",
 						"type": "text/javascript",
 						"exec": [
 							""
