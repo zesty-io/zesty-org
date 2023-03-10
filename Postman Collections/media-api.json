@@ -21,7 +21,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{manager_api_url}}/eco/26556/bins",
+								"url": "{{protocol}}://{{manager_api_url}}/eco/{{ecosystem_id}}/bins",
 								"description": "Fetch bins associated with an Eco ID"
 							},
 							"response": []
@@ -49,7 +49,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{manager_api_url}}/bin/{{bin_zuid}}"
+								"url": "{{protocol}}://{{manager_api_url}}/bin/{{bin_id}}"
 							},
 							"response": []
 						},
@@ -116,11 +116,6 @@
 									"mode": "formdata",
 									"formdata": [
 										{
-											"key": "",
-											"value": "",
-											"type": "text"
-										},
-										{
 											"key": "name",
 											"value": "zesty-corporate-template",
 											"description": "string",
@@ -128,7 +123,7 @@
 										}
 									]
 								},
-								"url": "{{protocol}}://{{manager_api_url}}/bin/{{media_bin_zuid}}",
+								"url": "{{protocol}}://{{manager_api_url}}/bin/{{bin_id}}",
 								"description": ":id is the bin_id\n\nonly the name can be changed"
 							},
 							"response": []
@@ -156,7 +151,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": ""
+											"value": "{{bin_id}}"
 										}
 									]
 								}
@@ -172,7 +167,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{media_manager_host}}/bin/{{media_bin_zuid}}/files"
+								"url": "{{protocol}}://{{media_manager_host}}/bin/{{bin_id}}/files"
 							},
 							"response": []
 						},
@@ -185,7 +180,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{protocol}}://{{media_manager_host}}/bin/{{media_bin_zuid}}/groups"
+								"url": "{{protocol}}://{{media_manager_host}}/bin/{{bin_id}}/groups"
 							},
 							"response": []
 						}
@@ -228,7 +223,7 @@
 									"formdata": [
 										{
 											"key": "bin_id",
-											"value": "",
+											"value": "{{bin_id}}",
 											"description": "media bin id",
 											"type": "text"
 										},
@@ -275,19 +270,19 @@
 									]
 								},
 								"url": {
-									"raw": "{{protocol}}://{{media_manager_host}}/group/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/group/{{bin_id}}",
 									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
 									"path": [
 										"group",
-										":id"
+										"{{bin_id}}"
 									],
 									"variable": [
 										{
-											"key": "id",
-											"value": ""
+											"value": "",
+											"key": "id"
 										}
 									]
 								}
@@ -394,19 +389,19 @@
 									"formdata": []
 								},
 								"url": {
-									"raw": "{{protocol}}://{{media_manager_host}}/file/:id",
+									"raw": "{{protocol}}://{{media_manager_host}}/file/{{file_zuid}}",
 									"protocol": "{{protocol}}",
 									"host": [
 										"{{media_manager_host}}"
 									],
 									"path": [
 										"file",
-										":id"
+										"{{file_zuid}}"
 									],
 									"variable": [
 										{
-											"key": "id",
-											"value": ""
+											"value": "",
+											"key": "id"
 										}
 									]
 								},
@@ -427,7 +422,7 @@
 									"mode": "formdata",
 									"formdata": []
 								},
-								"url": "{{protocol}}://{{media_manager_host}}/file/{{media_file_zuid}}",
+								"url": "{{protocol}}://{{media_manager_host}}/file/{{file_zuid}}",
 								"description": "Hard delete of the file, takes file zuid."
 							},
 							"response": []
@@ -541,63 +536,6 @@
 					"name": "File Modification",
 					"item": [
 						{
-							"name": "Create Modified File",
-							"id": "70518576-7acd-be35-53cf-ef2a066ab031",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file_id",
-											"value": "",
-											"description": "File zuid to be modified",
-											"type": "text"
-										},
-										{
-											"key": "filename",
-											"value": "",
-											"description": "corresponding filename",
-											"type": "text"
-										},
-										{
-											"key": "bin_id",
-											"value": "",
-											"description": "id of the media bin",
-											"type": "text"
-										},
-										{
-											"key": "cdnUrl",
-											"value": "",
-											"description": "CDN url",
-											"type": "text"
-										},
-										{
-											"key": "storageUrl",
-											"value": "",
-											"description": "Storage URL",
-											"type": "text"
-										},
-										{
-											"key": "actions_hash",
-											"value": "",
-											"description": "hash of actions to be send to modify service",
-											"type": "text"
-										},
-										{
-											"key": "created_by",
-											"value": "",
-											"description": "(optional) legacy Zesty.io user id or string",
-											"type": "text"
-										}
-									]
-								},
-								"url": "{{protocol}}://{{media_manager_host}}/file/modified"
-							},
-							"response": []
-						},
-						{
 							"name": "Get Modified File",
 							"id": "2e48aa2b-cc89-f56f-e867-659e27f1384c",
 							"request": {
@@ -622,43 +560,7 @@
 									"variable": [
 										{
 											"key": "file_zuid",
-											"value": ""
-										},
-										{
-											"key": "actionHash",
-											"value": ""
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Modified File",
-							"id": "a3869b56-b06c-d1ed-f1b6-259bd328ea2f",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
-								"url": {
-									"raw": "{{protocol}}://{{media_manager_host}}/file/:file_zuid/modified/:actionHash",
-									"protocol": "{{protocol}}",
-									"host": [
-										"{{media_manager_host}}"
-									],
-									"path": [
-										"file",
-										":file_zuid",
-										"modified",
-										":actionHash"
-									],
-									"variable": [
-										{
-											"key": "file_zuid",
-											"value": ""
+											"value": "{{file_zuid}}"
 										},
 										{
 											"key": "actionHash",
@@ -671,7 +573,7 @@
 						},
 						{
 							"name": "Create Modified File",
-							"id": "e90dd742-7594-32d1-242a-b61593109178",
+							"id": "70518576-7acd-be35-53cf-ef2a066ab031",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -680,7 +582,7 @@
 									"formdata": [
 										{
 											"key": "file_id",
-											"value": "",
+											"value": "{{file_zuid}}",
 											"description": "File zuid to be modified",
 											"type": "text"
 										},
@@ -692,7 +594,7 @@
 										},
 										{
 											"key": "bin_id",
-											"value": "",
+											"value": "{{bin_id}}",
 											"description": "id of the media bin",
 											"type": "text"
 										},
@@ -1084,7 +986,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200&actions[crop][x]=30&actions[crop][y]=40",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200&actions[crop][x]=30&actions[crop][y]=40",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1096,7 +998,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1134,7 +1036,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-23f0b5f-a8k5x&file_name=my_test_file_name&actions[optimize][quality]=100&actions[crop][width]=100&actions[crop][height]=1000&actions[crop][x]=0&actions[crop][y]=0&actions[rotate][degrees]=90&actions[rotate][color]=000000",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[optimize][quality]=100&actions[crop][width]=100&actions[crop][height]=1000&actions[crop][x]=0&actions[crop][y]=0&actions[rotate][degrees]=90&actions[rotate][color]=000000",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1146,7 +1048,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-23f0b5f-a8k5x"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1196,7 +1098,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[sepia]=true&actions[optimize][quality]=50&actions[blur][radius]=0x8",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[sepia]=true&actions[optimize][quality]=50&actions[blur][radius]=0x8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1208,7 +1110,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1242,7 +1144,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[optimize][quality]=100&actions[resize][width]=200&actions[resize][height]=50&actions[blur][radius]=0x4",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[optimize][quality]=100&actions[resize][width]=200&actions[resize][height]=50&actions[blur][radius]=0x4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1254,7 +1156,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1292,7 +1194,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[sepia]=true",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[sepia]=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1304,7 +1206,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1330,7 +1232,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[blur][radius]=0x8",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[blur][radius]=0x8",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1342,7 +1244,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1368,7 +1270,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[blackandwhite]=true",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[blackandwhite]=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1380,7 +1282,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1406,7 +1308,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[mosaic]=true",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[mosaic]=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1418,7 +1320,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1444,7 +1346,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[noise][radius]=0x3&actions[noise][type]=gaussian",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[noise][radius]=0x3&actions[noise][type]=gaussian",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1456,7 +1358,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1487,7 +1389,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[flop]=true",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[flop]=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1499,7 +1401,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1525,7 +1427,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[flip]=true",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[flip]=true",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1537,7 +1439,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1563,7 +1465,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[colorize][r]=74&actions[colorize][g]=3&actions[colorize][b]=4",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[colorize][r]=74&actions[colorize][g]=3&actions[colorize][b]=4",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1575,7 +1477,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1609,7 +1511,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[resize][width]=400&actions[resize][height]=200",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[resize][width]=400&actions[resize][height]=200",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1621,7 +1523,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1651,7 +1553,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[rotate][degrees]=50",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[rotate][degrees]=50",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1663,7 +1565,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1689,7 +1591,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[zesty_resize][width]=200",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[zesty_resize][width]=200",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1701,7 +1603,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1727,7 +1629,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test&actions[crop][width]=200&actions[crop][height]=200",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test&actions[crop][width]=200&actions[crop][height]=200",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1739,7 +1641,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1769,7 +1671,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[minify][factor]=.1",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[minify][factor]=.1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1781,7 +1683,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1807,7 +1709,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[crop][width]=200&actions[crop][height]=200",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1819,7 +1721,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1850,7 +1752,7 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "http://localhost:8040/modify?zuid=3-19c69dd-07a7a&file_name=my_test_file_name&actions[optimize][quality]=50",
+							"raw": "http://localhost:8040/modify?zuid={{file_zuid}}&file_name=my_test_file_name&actions[optimize][quality]=50",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1862,7 +1764,7 @@
 							"query": [
 								{
 									"key": "zuid",
-									"value": "3-19c69dd-07a7a"
+									"value": "{{file_zuid}}"
 								},
 								{
 									"key": "file_name",
@@ -1891,35 +1793,17 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "text/plain",
-								"type": "text"
-							},
-							{
-								"key": "cookie",
-								"value": "APP_SID=67e0548b019ebc596f9204f0e9c8e846fe18d490",
-								"type": "text"
-							},
-							{
-								"key": "x-auth",
-								"value": "67e0548b019ebc596f9204f0e9c8e846fe18d490",
-								"type": "text"
-							},
-							{
-								"key": "Authorization",
-								"value": "Bearer 67e0548b019ebc596f9204f0e9c8e846fe18d490",
-								"type": "text",
-								"disabled": true
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"items\": [\n\t\t\t\t{\t\n\t\t\t\t\t\"id\": \"3-375d91d-6zshl\",\n        \t\t\t\"actions\"  => [\n\t\t\t            [\n\t\t\t                \"type\" : \"getimage\",\n\t\t\t                \"options\": {\n\t\t\t                \t\"width\" : 300,\n\t\t\t                \t\"height\" : 300,\n\t\t\t                \t\"type\" : \"crop\"\n\t\t\t                }\n\t\t\t            ]\n\t\t\t        ],\n        \t\t\t\"property\" => \"url\"\n\t\t\t\t}\n\t\t]\n}"
+							"raw": "{\n\t\"items\": [\n\t\t\t\t{\t\n\t\t\t\t\t\"id\": \"{{file_zuid}}\",\n        \t\t\t\"actions\"  => [\n\t\t\t            [\n\t\t\t                \"type\" : \"getimage\",\n\t\t\t                \"options\": {\n\t\t\t                \t\"width\" : 300,\n\t\t\t                \t\"height\" : 300,\n\t\t\t                \t\"type\" : \"crop\"\n\t\t\t                }\n\t\t\t            ]\n\t\t\t        ],\n        \t\t\t\"property\" => \"url\"\n\t\t\t\t}\n\t\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						"url": "https://svc.zesty.io/media-resolver-service/resolve"
+						"url": "{{protocol}}://{{media_resolver_host}}/resolve"
 					},
 					"response": []
 				},
@@ -1931,43 +1815,17 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"type": "text",
-								"value": "text/plain",
-								"disabled": true
-							},
-							{
-								"key": "cookie",
-								"type": "text",
-								"value": "APP_SID=db99a1ca1659e925d3b4c3995ac623c704ef03c2",
-								"disabled": true
-							},
-							{
-								"key": "x-auth",
-								"type": "text",
-								"value": "db99a1ca1659e925d3b4c3995ac623c704ef03c2",
-								"disabled": true
-							},
-							{
-								"key": "Authorization",
-								"type": "text",
-								"value": "Bearer db99a1ca1659e925d3b4c3995ac623c704ef03c2",
-								"disabled": true
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[[\"3-9c35b26-tojz3\",\"url\",\"*\"]]",
+							"raw": "[[\"{{file_zuid}}\",\"url\",\"*\"]]",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "https://svc.zesty.io/media-resolver-service/invalidatePublic"
+						"url": "{{protocol}}://{{media_resolver_host}}/invalidatePublic"
 					},
 					"response": []
 				},
@@ -1979,32 +1837,16 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "cookie",
-								"value": "APP_SID={{APP_SID}}",
-								"type": "text",
-								"disabled": true
-							}
-						],
+						"header": [],
 						"url": {
-							"raw": "https://svc.zesty.io/media-resolver-service/resolve/3-5ebdca9-hgneq/getimage?w=100",
-							"protocol": "https",
+							"raw": "{{protocol}}://{{media_resolver_host}}/resolve/{{file_zuid}}/getimage?w=100",
+							"protocol": "{{protocol}}",
 							"host": [
-								"svc",
-								"zesty",
-								"io"
+								"{{media_resolver_host}}"
 							],
 							"path": [
-								"media-resolver-service",
 								"resolve",
-								"3-5ebdca9-hgneq",
+								"{{file_zuid}}",
 								"getimage"
 							],
 							"query": [
