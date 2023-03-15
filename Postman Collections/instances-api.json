@@ -10412,9 +10412,101 @@
 									"raw": "{\n    \"referenceName\": \"another_variable_name\",\n    \"name\": \"New Variable\",\n    \"value\": \"myValue\",\n    \"type\": \"text\",\n    \"sort\": 1,\n    \"description\": \"description goes here\",\n    \"category\": 1,\n    \"options\": null\n}"
 								},
 								"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/web/stylesheets/variables",
-								"description": "| name | description |\n| ---- | ----------- |\n|referenceName | [string] Required. The name of your variable that will be referenced by your stylesheets. Must follow conventional LESS/SASS/SCSS variable naming convention |\n| name | [string] Required. Friendly name for your variable |\n| value | [string] Required. The value of your variable represented as a string |\n| type | [string] Required. The variable type you wish to create. Variable must be one of: `text` , `color`, `dropdown`, `font_picker` |\n| category | [number] Required. Should correspond with category ID. |\n| sort | [number] Optional. Defaults to number of variables + 1. |\n| description | [string] Optional. Defaults to `null` string |\n| options | [object] Optional. Object should contain key-value pairs corresponding to dropdown options. Defaults to `null`. |"
+								"description": "| name | description |\n| --- | --- |\n| referenceName | \\[string\\] Required. The name of your variable that will be referenced by your stylesheets. Must follow conventional LESS/SASS/SCSS variable naming convention |\n| name | \\[string\\] Required. Friendly name for your variable |\n| value | \\[string\\] Required. The value of your variable represented as a string |\n| type | \\[string\\] Required. The variable type you wish to create. Variable must be one of: `text` , `color`, `dropdown`, `font_picker` |\n| category | \\[number\\] Required. Should correspond with category ID. |\n| sort | \\[number\\] Optional. Defaults to number of variables + 1. |\n| description | \\[string\\] Optional. Defaults to `null` string |\n| options | \\[object\\] Optional. Object should contain key:value pairs corresponding to dropdown options. Defaults to `null`. The `key` is what is used as the value output using Parsley, while the `value` is used in the UI. |"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "2c111e5f-34af-4141-8a0d-b2fc0b6d0923",
+									"name": "Create Dropdown Color Style Variable",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"referenceName\": \"headings-color\",\n    \"name\": \"Header Color\",\n    \"value\": \"#0d6efd\",\n    \"type\": \"dropdown\",\n    \"sort\": 1,\n    \"description\": \"Colors of all headers from h1 to h6\",\n    \"category\": 2,\n    \"options\": {\n        \"#0d6efd\": \"primary-color\",\n        \"#0dcaf0\": \"info-color\",\n        \"#198754\": \"success-color\",\n        \"#212529\": \"dark-color\",\n        \"#6c757d\": \"secondary-color\",\n        \"#dc3545 \": \"danger-color\",\n        \"#f8f9fa\": \"light-color\",\n        \"#ffc107\": \"warning-color\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/web/stylesheets/variables"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Length",
+											"value": "149"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/plain; charset=utf-8"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 15 Mar 2023 16:09:32 GMT"
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\"_meta\":{\"timestamp\":\"2023-03-16T00:09:32.343689217+08:00\",\"totalResults\":1,\"start\":0,\"offset\":0,\"limit\":1},\"data\":{\"ZUID\":\"13-dc9a9fdbaa-1234\"}}\n"
+								}
+							]
 						},
 						{
 							"name": "Get Stylesheet Variable(s)",
@@ -10595,14 +10687,14 @@
 									"raw": "{\n\t\"value\": \"#ffffgg\"\n}"
 								},
 								"url": {
-									"raw": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{api_version}}/web/stylesheets/variables/:variable_zuid",
+									"raw": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/web/stylesheets/variables/:variable_zuid",
 									"protocol": "{{protocol}}",
 									"host": [
 										"{{instance_zuid}}",
 										"{{instances_api_url}}"
 									],
 									"path": [
-										"{{api_version}}",
+										"{{instances_api_version}}",
 										"web",
 										"stylesheets",
 										"variables",
@@ -10616,9 +10708,117 @@
 										}
 									]
 								},
-								"description": "| name | description |\n| ---- | ----------- |\n| value | [string] Optional. The value of our variable. |\n| description | [string] Optional. The description of your variable |\n| options | [object] Optional. Should correspond to drop down options |"
+								"description": "| name | description |\n| --- | --- |\n| value | \\[string\\] Optional. The value of our variable. |\n| description | \\[string\\] Optional. The description of your variable |\n| options | \\[object\\] Optional. Should correspond to drop down options. Note that the `key` is what is used as the value output using Parsley, while the `value` is used in the UI. |"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "da558261-84a6-4ee0-98d7-b88926dd1daa",
+									"name": "Update Dropdown Color Style Variable",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n\t\"options\": {\n                \"#0d6efd\": \"primary-color\",\n                \"#0dcaf0\": \"info-color\"\n    }\n}"
+										},
+										"url": {
+											"raw": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/web/stylesheets/variables/:variable_zuid",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{instance_zuid}}",
+												"{{instances_api_url}}"
+											],
+											"path": [
+												"{{instances_api_version}}",
+												"web",
+												"stylesheets",
+												"variables",
+												":variable_zuid"
+											],
+											"variable": [
+												{
+													"key": "variable_zuid",
+													"value": "{{variable_zuid}}",
+													"description": "[zuid] Required. Target Stylesheet Variable ZUID."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Length",
+											"value": "149"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 15 Mar 2023 16:16:44 GMT"
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-03-16T00:16:44.409836169+08:00\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"13-dc9a9fdbaa-1234\"\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Delete Stylesheet Variable",
@@ -10652,7 +10852,106 @@
 									]
 								}
 							},
-							"response": []
+							"response": [
+								{
+									"id": "0721dbd7-8f78-4362-b83c-ecd126f53333",
+									"name": "Delete Stylesheet Variable",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{protocol}}://{{instance_zuid}}.{{instances_api_url}}/{{instances_api_version}}/web/stylesheets/variables/:variable_zuid",
+											"protocol": "{{protocol}}",
+											"host": [
+												"{{instance_zuid}}",
+												"{{instances_api_url}}"
+											],
+											"path": [
+												"{{instances_api_version}}",
+												"web",
+												"stylesheets",
+												"variables",
+												":variable_zuid"
+											],
+											"variable": [
+												{
+													"key": "variable_zuid",
+													"value": "{{variable_zuid}}",
+													"description": "[zuid] Required. Target Stylesheet Variable ZUID."
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "Cookie, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, accept, origin, Cache-Control, X-Requested-With, X-Auth"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PUT, POST, GET, PATCH, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": ""
+										},
+										{
+											"key": "Content-Length",
+											"value": "149"
+										},
+										{
+											"key": "Content-Security-Policy",
+											"value": ""
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 15 Mar 2023 16:18:23 GMT"
+										},
+										{
+											"key": "Feature-Policy",
+											"value": ""
+										},
+										{
+											"key": "Instances-Api-Cache",
+											"value": "unreachable"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer-when-downgrade"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "sameorigin"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": ""
+										},
+										{
+											"key": "X-Xss-Protection",
+											"value": "1;mode=block"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"_meta\": {\n        \"timestamp\": \"2023-03-16T00:18:23.382275034+08:00\",\n        \"totalResults\": 1,\n        \"start\": 0,\n        \"offset\": 0,\n        \"limit\": 1\n    },\n    \"data\": {\n        \"ZUID\": \"13-dc9a9fdbaa-1234\"\n    }\n}"
+								}
+							]
 						}
 					],
 					"id": "036c41d0-1c20-42fa-a935-3c3e49444cd4",
