@@ -24,7 +24,7 @@ const main = async () => {
    const data = await getMainCollection()
    const jsonData = JSON.stringify(data)
    // Write the JSON data to a file
-   fs.writeFile("example.json", jsonData, "utf8", (err) => {
+   fs.writeFile("Postman Collections/docs.data.json", jsonData, "utf8", (err) => {
       if (err) {
          console.error(err, 123)
       } else {
