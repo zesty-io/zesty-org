@@ -21,10 +21,10 @@ jobs:
            run: npm install axios
 
          - name: Generate Postman Collection
-           run: node Postman\ Collection/transformer.js
+           run: node Postman\ Collections/transformer.js
 
          - name: Upload artifact
            uses: actions/upload-artifact@v2
            with:
               name: postman-collection
-              path: Postman\ Collection/example1.json
+              path: Postman\ Collections/example1.json
