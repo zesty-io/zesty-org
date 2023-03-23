@@ -26,7 +26,7 @@ const main = async () => {
    // Write the JSON data to a file
    fs.writeFile("example.json", jsonData, "utf8", (err) => {
       if (err) {
-         console.error(err)
+         console.error(err, 123)
       } else {
          console.log("Data written to file")
       }
