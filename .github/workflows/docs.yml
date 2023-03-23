@@ -1,30 +1,38 @@
-name: Generate Postman Collection
+name: Run Generate Data for DOCS
 
+# change this feat/docs to master
 on:
-   pull_request:
+   push:
       branches: ["feat/docs"]
-   workflow_dispatch:
+
+permissions: write-all
+
 jobs:
-   generate-postman-collection:
+   build:
       runs-on: ubuntu-latest
 
       steps:
          - name: Checkout code
            uses: actions/checkout@v2
 
-         - name: Setup Node.js v16
-           uses: actions/setup-node@v2
+         - name: Use Node.js
+           uses: actions/setup-node@v3
            with:
               node-version: "16.x"
 
          - name: Install dependencies
            run: npm install axios
 
-         - name: Generate Postman Collection
+         - name: Run Node function and create file
            run: node Postman\ Collections/transformer.js
 
-         - name: Upload artifact
-           uses: actions/upload-artifact@v2
-           with:
-              name: postman-collection
-              path: Postman\ Collections/example1.json
+         - name: Commit changes
+           run: |
+              git switch -c version-branch
+              git config --global user.email "test@zesty.io"
+              git config --global user.name "Zesty Test"
+              git add .
+              git commit --allow-empty -m ":rocket: chore: bump Docs Data"
+              git push origin version-branch:feat/docs
+
+# change this feat/docs to master
