@@ -39,6 +39,9 @@ This document is a guide on how to configure [Okta](https://help.okta.com/en-us/
 ### **Get ecosystem_zuid**
 
 1. Use Zesty’s [Get Ecosystems API](https://accounts-api.zesty.org/#750eb50b-c53c-44aa-aa4a-b0b1199fb4bf) as seen below, replacing the token for Authorization (obtained in get token step)
+
+**NOTE**: This API requires the user to have access to an instance. You will not get an ecosystem_zuid unless you have access to an instance in an ecosystem
+
 2. This will return the Ecosystems you have access to in JSON format, select one ZUID in the data returned and use that as the ecosystem_zuid in register step. 
     
 ```
