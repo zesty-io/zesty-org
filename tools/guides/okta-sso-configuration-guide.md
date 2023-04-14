@@ -38,7 +38,7 @@ description: >-
 2. Go to the _**"Application"**_ tab and navigate to _**"Cookies"**_ and open https://www.zesty.io
 3. See **APP\_SID** cookie and copy the cookie value (see image below)
 
-<figure><img src="../.gitbook/assets/okta-config-guide-get-token.png" alt=""><figcaption><p>Get token</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/okta-config-guide-get-token.png" alt=""><figcaption><p>Get token</p></figcaption></figure>
 
 ### **Get ecosystem\_zuid**
 
