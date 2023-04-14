@@ -13,9 +13,9 @@ Views can carry one of three associations:
 2. **Endpoint** _View_\
    Views created to load a specific MIME type. Through Parsley they can have access to any data in an Instance, they can also have access to foreign instance data through [EcoCode](../ecosystems.md#ecocode-shared-view-templates).
 3. **Snippet** _View_\
-   ****Code that is intended to be reused, like HTML components or common each loops, can stored in a snippet and be `{{include}}`'d in both Endpoint Views of Content Model Views.
+   Code that is intended to be reused, like HTML components or common each loops, can stored in a snippet and be `{{include}}`'d in both Endpoint Views of Content Model Views.
 4. **Wildcard View** _View_\
-   ****A view that resolves against a dynamic url structure which may contain any URL path part. For example a wild card view created called: /store/\*/\*/ will resolve /store/anything/here/. These views have access to Parsley, but do not have access to the `{{this}}` call.&#x20;
+   A view that resolves against a dynamic url structure which may contain any URL path part. For example a wild card view created called: /store/\*/\*/ will resolve /store/anything/here/. These views have access to Parsley, but do not have access to the `{{this}}` call.&#x20;
 
 ## Zesty.io's Templating Language, Parsley
 

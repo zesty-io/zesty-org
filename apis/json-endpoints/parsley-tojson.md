@@ -19,7 +19,7 @@ The `toJSON()` method has two optional parameters, giving the user control over 
 ```
 
 * `depth` is an integer for hydration depth, max depth is 5
-* `showMeta` supports a boolean value of _true_ or _false. `true` _ provides all meta, routing, zuid details, and locale details. _`false`_ provides only content.
+* `showMeta` supports a boolean value of _true_ or _false. `true`_ provides all meta, routing, zuid details, and locale details. _`false`_ provides only content.
 
 The method's parameters, `depth` and `showMeta,` are optional. The default output of the method, without specification, will include meta data and a hydration depth level of 2.
 

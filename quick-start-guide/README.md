@@ -42,7 +42,7 @@ Follow the link for an in-depth look at [Teams](../services/accounts-ui/teams.md
 
 ### Instance Settings
 
-Instance settings can also be accessed from the Account Manager. Selecting an Instance provides access to the Instance Setting Drawer. From here you will have the ability to view and update the **** [**Instance Settings**](instance-settings.md) **** below:
+Instance settings can also be accessed from the Account Manager. Selecting an Instance provides access to the Instance Setting Drawer. From here you will have the ability to view and update the [**Instance Settings**](instance-settings.md) below:
 
 * Add and update domains
 * Find the Instance [ZUID](../glossary.md#zuid) and creation information&#x20;

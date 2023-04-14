@@ -20,7 +20,7 @@ New redirects are created in the Manager's `/seo` section. First in the From fie
 | External                | `/redirect-away/` => `https://www.google.com` |
 
 {% hint style="info" %}
-_All redirects will pass query parameters. For example_: _ `/this/?hello=world` will becomes `/that/?hello-world`_
+_All redirects will pass query parameters. For example_: _`/this/?hello=world` will becomes `/that/?hello-world`_
 {% endhint %}
 
 ### Path Redirects
@@ -42,7 +42,7 @@ A basic path redirect is a statically typed path to another statically typed pat
 Any request to `/old/path/` will redirect to `/my/new/path/?a=1&b=2`
 
 **API Documentation for path redirects:**\
-****[https://instances-api.zesty.org/#38bf3fb8-44b1-4b22-a743-376c42fda624](https://instances-api.zesty.org/#38bf3fb8-44b1-4b22-a743-376c42fda624)
+[https://instances-api.zesty.org/#38bf3fb8-44b1-4b22-a743-376c42fda624](https://instances-api.zesty.org/#38bf3fb8-44b1-4b22-a743-376c42fda624)
 
 ### Path Redirects with Wildcards
 

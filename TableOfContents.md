@@ -143,7 +143,7 @@
   * [Headless & Hybrid toJSON](apis/json-endpoints/headless-and-hybrid-tojson.md)
   * [Instant API (Read Only)](apis/json-endpoints/instant-content-api.md)
   * [Parsley toJSON()](apis/json-endpoints/parsley-tojson.md)
-  * [Creating a Customizable JSON Endpoint For Content](apis/json-endpoints/how-to-create-a-customizable-json-endpoint-for-content.md)
+  * [Creating a Customizable JSON Endpoint For Content](tools/guides/how-to-create-a-customizable-json-endpoint-for-content.md)
 * [Instant API (Read Only)](apis/instant-content-api.md)
 * [GraphQL](apis/graphql.md)
 * [Node SDK](tools/node-sdk/README.md)
@@ -185,7 +185,7 @@
   * [Building the Schema and Selecting Fields](tools/guides/building-the-schema-and-selecting-fields.md)
   * [Content Entry, Drafts, and Publishing](tools/guides/content-entry-drafts-and-publishing.md)
   * [Controlling and use of og:image](tools/guides/how-to-control-and-use-og-image.md)
-  * [Creating a Customizable JSON Endpoint For Content](tools/guides/how-to-create-a-customizable-json-endpoint-for-content.md)
+  * [Creating a Customizable JSON Endpoint For Content](apis/json-endpoints/how-to-create-a-customizable-json-endpoint-for-content.md)
   * [Creating a feed](tools/guides/creating-a-feed.md)
   * [Creating a Lead Form](tools/guides/how-to-create-a-lead-form.md)
   * [Creating and Adding a Team](tools/guides/adding-a-team.md)
@@ -241,6 +241,7 @@
   * [Jekyll Static Site](tools/code-examples/guide.md)
   * [Hugo Static Site](tools/code-examples/guide-1.md)
 * [Salesforce Commerce Cloud](tools/salesforce-commerce-cloud.md)
+* [Okta SSO Configuration Guide](tools/okta-sso-configuration-guide.md)
 
 ## Community
 

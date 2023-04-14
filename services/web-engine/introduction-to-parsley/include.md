@@ -6,7 +6,7 @@ description: >-
 
 # Include Syntax
 
-``[`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) allows you to insert snippets and endpoints within the [view](https://zesty.org/services/web-engine/view-templating#what-are-views) you are in.
+[`{{ include }}`](https://zesty.org/services/web-engine/introduction-to-parsley/parsley-index#include) allows you to insert snippets and endpoints within the [view](https://zesty.org/services/web-engine/view-templating#what-are-views) you are in.
 
 ## Globally Available Views, Snippets, and Endpoints
 
@@ -63,8 +63,8 @@ Includes make use dynamic reference to globals, settings, query parameters, path
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
-* **Query Params** are accessed like **** `{query_param.key}` or `{get_var.key}`
-* **Path Parts** accessed like **** `{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
+* **Query Params** are accessed like `{query_param.key}` or `{get_var.key}`
+* **Path Parts** accessed like `{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
 * **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
 ```

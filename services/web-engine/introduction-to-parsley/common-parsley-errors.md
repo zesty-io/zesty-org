@@ -38,7 +38,7 @@ This results from empty values in a Parsley `Math()` statement. Resolve this by 
 
 Commonly refers to a Parsley statement that is not properly closed. Look for missing closing brackets `}` or `}}` to resolve the error.
 
-### The field \* __ does not exist _\*_ on the content model
+### The field \* does not exist _\*_ on the content model
 
 A field does not exist on specific model. This results from an unidentified field in the following calls `{{ this.something }}` and `{{ if {this.something} }}`
 
@@ -56,4 +56,4 @@ Often results from calling a field in an Each Loop without scope properly declar
 
 ### zuid is ambiguous needs to be qualified as z.zuid
 
-Results from a malformed filter call. `filter(zuid = '{...}')` **** call needs to be qualified as  with z.zuid `filter(z.zuid = '{...}')`
+Results from a malformed filter call. `filter(zuid = '{...}')` call needs to be qualified as  with z.zuid `filter(z.zuid = '{...}')`

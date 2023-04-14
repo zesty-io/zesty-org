@@ -7,7 +7,7 @@ description: How to add custom head tags to more resources in Web Engine.
 Head tags can be added to content models, views, the instance (global), or content items. They can be used to set facebook open graph tags, twitter cards, script links, css links, favicons, etc.. This document will explain how they works, what they are for, and how to create them with the API.
 
 **There are 5 different types of head tags available in Zesty.io.** \
-****Here is a list of each one with example output:
+Here is a list of each one with example output:
 
 1. **Meta** e.g. _\<meta name="description" content="my page description" />_
 2. **Link** e.g. _\<link rel="stylesheet" type="text/css" href="/site.css" />_
@@ -28,8 +28,8 @@ Even though values shown below use curly braces { } these are **not** Parsley re
 * **Settings** are accessed like `{settings.general.site_protocol}`
 * **Content** item values are accessed like `{this.my_title}`
 * **Globals** are accessed like `{globals.site_name}`
-* **Query Params** are accessed like **** `{query_param.key}` or `{get_var.key}`
-* **Path Parts** accessed like **** `{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
+* **Query Params** are accessed like `{query_param.key}` or `{get_var.key}`
+* **Path Parts** accessed like `{path_part.0}`  e.g. `/first/part/  {path_part.0} returns 'first'`
 * **Multiple** like this `"my page is {this.title} from {globals.site_name}"`
 
 **Examples**

@@ -10,7 +10,7 @@ description: >-
 
 Zesty.io automatically transforms images as the content-type "webp", which is a format made to  optimized image download speed and rendering speed, developed by Google.
 
-> &#x20;WebP is a modern **image format** that provides superior **lossless and lossy** compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster. - _Read the full Google launch article_ [_https://developers.google.com/speed/webp_](https://developers.google.com/speed/webp)__
+> &#x20;WebP is a modern **image format** that provides superior **lossless and lossy** compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster. - _Read the full Google launch article_ [_https://developers.google.com/speed/webp_](https://developers.google.com/speed/webp)
 
 &#x20;When optimization happens, Zesty.io does a few things to the file:
 
@@ -61,7 +61,7 @@ All image may be manipulated on-the-fly by passing query parameter to the end of
 | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **none**       | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg)                         |
 | **?width=**    | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?width=300)     |
-| **?orient=**   | ****[https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v)   |
+| **?orient=**   | [https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v](https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg?orient=v)       |
 | **?bg-color=** | [https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699](https://9skdl6.media.zestyio.com/parsley-logo-brackets.png?bg-color=006699) |
 
 ![Original Image Source: https://9skdl6.media.zestyio.com/Arcade-Space-Ship-Example.jpg](../../.gitbook/assets/arcade-space-ship-example.jpg)
@@ -70,9 +70,9 @@ We recognize the following parameters in the query string of the image request:
 
 | Parameter                                                                                                                     | Description                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto-optimize-image-jpg-auto)``                      | Enable optimization features automatically.                                                     |
+| [`auto`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#auto-optimize-image-jpg-auto)                        | Enable optimization features automatically.                                                     |
 | [`bg-color`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#background-color-bg-color)                       | Set the background color of an image.                                                           |
-| ``[`bypass`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#bypass-image-jpg-raw-true)``                     | Ignore all optimization and fetch the raw original image                                        |
+| [`bypass`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#bypass-image-jpg-raw-true)                         | Ignore all optimization and fetch the raw original image                                        |
 | [`blur`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#gaussian-blur-blur)                                  | Set the blurriness of the output image.                                                         |
 | [`brightness`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#brightness-brightness)                         | Set the brightness of the output image.                                                         |
 | [`canvas`](on-the-fly-media-optimization-and-dynamic-image-manipulation.md#canvas)                                            | Increase the size of the canvas around an image.                                                |
@@ -133,9 +133,13 @@ _Deliver lossless (because input image is lossless) WebP where client support is
 \
 
 
+
+
 _`?format=pjpg&auto=webp`Deliver lossy (because format=pjpg is lossy) WebP where client support is available, otherwise deliver a progressive JPEG_
 
 \
+
+
 
 
 _`?format=png&auto=webp`	Deliver lossless (because format=png is lossless) WebP where client support is available, otherwise deliver a PNG_

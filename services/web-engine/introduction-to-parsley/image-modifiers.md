@@ -28,7 +28,7 @@ To access these images you'll need to loop through them with the following code:
 In this example, `images` is the field's reference name.
 
 {% hint style="info" %}
-&#x20;**** `media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model. \
+&#x20;`media.`is a keyword for defining the scope of the call. It is not a variable name or reference to a model. \
 \
 Replace the`{this.images}`code with a reference to your model's specific field.   \
 &#x20;\

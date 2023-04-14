@@ -18,7 +18,7 @@ This should open the view showing the contents of folder.
 
 ## Step 4: Type your New Folder Name, and click on Done.
 
-Note: The existing folder you are in will already be set as the destination folder. If you change it to another folder, then the sub-folder will be made inside of that folder instead. ****&#x20;
+Note: The existing folder you are in will already be set as the destination folder. If you change it to another folder, then the sub-folder will be made inside of that folder instead.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/Screen Shot 2022-10-31 at 7.59.26 PM.png" alt=""><figcaption></figcaption></figure>
 

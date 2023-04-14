@@ -2,7 +2,7 @@
 description: How to load dynamic zesty.io content into your next.js project
 ---
 
-# Dynamic Pages in Next.js
+# Custom Integrations
 
 To dynamically load your Zesty.io instance's content into your Next.js project, you will need three files and zesty env values in your next.config.js file. You can see a working example of this in our nextjs starter [https://github.com/zesty-io/nextjs-starter](https://github.com/zesty-io/nextjs-starter). The starter is a great place to launch your nextjs app with everything for Zesty.io already configured.
 
@@ -10,9 +10,9 @@ If you plan to integrate Zesty.io into your project, this document will break do
 
 ### Files Needed
 
-1. ``[`[...slug].js`](https://github.com/zesty-io/nextjs-starter/blob/main/pages/\[...slug].js) in the root of your `pages/` directory.
-2. ``[`fetchPage.js`](https://github.com/zesty-io/nextjs-starter/blob/main/lib/zesty/fetchPage.js) a function that resolves dynamic content into `[...slug].js`
-3. ``[`ZestyView`](https://github.com/zesty-io/nextjs-starter/blob/main/components/zesty/ZestyView.js) a dynamic component that resolves `views/zesty/` content model components
+1. [`[...slug].js`](https://github.com/zesty-io/nextjs-starter/blob/main/pages/\[...slug].js) in the root of your `pages/` directory.
+2. [`fetchPage.js`](https://github.com/zesty-io/nextjs-starter/blob/main/lib/zesty/fetchPage.js) a function that resolves dynamic content into `[...slug].js`
+3. [`ZestyView`](https://github.com/zesty-io/nextjs-starter/blob/main/components/zesty/ZestyView.js) a dynamic component that resolves `views/zesty/` content model components
 
 ### ENV Setup - next.config.js&#x20;
 
@@ -53,7 +53,7 @@ module.exports = {
 
 ### Working with Zesty View Components
 
-The Zesty.io configuration for next.js will look for a component name after the content model in `views/zesty` directory in your next.js project. A content model named `articles` will look for a component `views/zesty/Article.js` Note the slight name change, as the naming convention is a `PascalCase` without pluralization, therefore `articles` becomes `Article`. We call this the alternate name, you can find the automated alternate name by look at the [`?toJSON`](../../../apis/json-endpoints/headless-and-hybrid-tojson.md#content-output) response of any content item through WebEngine.
+The Zesty.io configuration for next.js will look for a component name after the content model in `views/zesty` directory in your next.js project. A content model named `articles` will look for a component `views/zesty/Article.js` Note the slight name change, as the naming convention is a `PascalCase` without pluralization, therefore `articles` becomes `Article`. We call this the alternate name, you can find the automated alternate name by look at the [`?toJSON`](../../apis/json-endpoints/headless-and-hybrid-tojson.md#content-output) response of any content item through WebEngine.
 
 {% hint style="info" %}
 Content models that start with a number will need N prepended to the name, e.g. `3slides` will be named `N3slides.js.` The sync script will automatically do this..

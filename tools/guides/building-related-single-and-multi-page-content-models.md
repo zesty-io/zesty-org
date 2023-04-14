@@ -34,7 +34,7 @@ Understanding your content manager's needs allows you to balance them with  your
 
 ![The content section navigation will change depending on how the Schema is built.](../../.gitbook/assets/02-content-manager.png)
 
-The content manager(s) will be the person(s) who are [entering/editing content](https://zesty.org/guides/content-entry-drafts-and-publishing). Consider how much effort managing content will take. The content manager may find it easier to do all of their work in one multi-page model **** (shown above as _One multi-page model for many single-page models_), or they may find it easier to organize their content into several multi-page models (Shown above as _Each single-page model has a child multi-page model_). Be sure to communicate with your content team so you can take their needs into consideration.
+The content manager(s) will be the person(s) who are [entering/editing content](https://zesty.org/guides/content-entry-drafts-and-publishing). Consider how much effort managing content will take. The content manager may find it easier to do all of their work in one multi-page model (shown above as _One multi-page model for many single-page models_), or they may find it easier to organize their content into several multi-page models (Shown above as _Each single-page model has a child multi-page model_). Be sure to communicate with your content team so you can take their needs into consideration.
 
 **Developer**
 

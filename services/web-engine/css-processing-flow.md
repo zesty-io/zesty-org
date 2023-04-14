@@ -12,7 +12,7 @@ Zesty.io’s Code Editor supports [CSS](https://developer.mozilla.org/en-US/docs
 2. **LESS**
 3. **SCSS/SASS**
 
-****
+
 
 ![](https://docs.google.com/a/zesty.io/drawings/d/srvGtbLDWqNiHQ83TwuBrZg/image?w=624\&h=287\&rev=390\&ac=1\&parent=1XwoNkMZD2S8bfQOfOWKOBvbknhJT\_vH6yKsWaDqZfUM)
 
