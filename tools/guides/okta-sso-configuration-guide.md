@@ -34,11 +34,34 @@ description: >-
 
 ### **Get token**
 
-1. Login to [https://www.zesty.io/](https://www.zesty.io/) and open developer tools in browser
-2. Go to the _**"Application"**_ tab and navigate to _**"Cookies"**_ and open https://www.zesty.io
-3. See **APP\_SID** cookie and copy the cookie value (see image below)
+1. If you have an access token created for your instance in Zesty with owner or admin role (see [How to create Access Token](https://zesty.org/quick-start-guide/instance-settings#access-tokens)), this could be used as the token for [get ecosystem\_zuid](okta-sso-configuration-guide.md#get-ecosystem\_zuid) and [register](okta-sso-configuration-guide.md#register) steps. If you have no access token, you can use Zesty's [Login API](https://auth-api.zesty.org/#28b40e26-196b-4283-a483-40a5b537bc22) as seen below, replacing the email and password with your credentials in [https://www.zesty.io/](https://www.zesty.io/)&#x20;
 
-<figure><img src="../../.gitbook/assets/okta-config-guide-get-token.png" alt=""><figcaption><p>Get token</p></figcaption></figure>
+```powershell
+curl --location 'https://auth.api.zesty.io/login' \
+--form 'email="email"' \
+--form 'password="password"'
+```
+
+2. This will return the token that will be used in the next steps. See example response below:
+
+```json
+{
+    "message": "Logged in successfully.",
+    "status": "OK",
+    "data": {
+        "data": "token"
+    },
+    "meta": {
+        "userZuid": "5-000000-000000",
+        "token": "token"
+    },
+    "code": 200
+}
+```
+
+{% hint style="info" %}
+For users with SSO (single sign-on) enabled, there is currently no support for getting a token, creating an access token and using that for [get ecosystem\_zuid](okta-sso-configuration-guide.md#get-ecosystem\_zuid) and [register](okta-sso-configuration-guide.md#register) steps can be used instead.
+{% endhint %}
 
 ### **Get ecosystem\_zuid**
 
