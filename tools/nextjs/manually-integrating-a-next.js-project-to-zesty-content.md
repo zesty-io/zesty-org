@@ -88,7 +88,7 @@ From your terminal, run the following script to install
 npm install @zesty-io/webengine-json
 ```
 
-Now navigate to `src/App.js` and add the following snippet at the top of the file
+Now navigate to `pages/index.js` and add the following snippet at the top of the file
 
 ```javascript
 import { toJSON } from '@zesty-io/webengine-json';
