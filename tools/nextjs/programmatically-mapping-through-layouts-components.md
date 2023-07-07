@@ -8,6 +8,14 @@ description: >-
 
 This guide is a continuation of [https://zesty.org/tools/nextjs/connecting-layouts-app-to-react](https://zesty.org/tools/nextjs/connecting-layouts-app-to-react)
 
+⌛️ Estimated implementation time: 15 minutes
+
+Programmatic component mapping allows developers to dynamically add components without the need to create a manual reference in their project after a new Layouts component is configured in Zesty.&#x20;
+
+In this doc, we will walk you through setting up a folder of components that dynamically map to the Zesty Layouts integration. Here is the **example repo**: [https://github.com/zesty-io/nextjs-custom-integration/blob/main/pages/layouts-test-page.js](https://github.com/zesty-io/nextjs-custom-integration/blob/main/pages/layouts-test-page.js)
+
+Lets get started! 🙌
+
 ### Creating ComponentSelector Component <a href="#_y542s3a2c5fr" id="_y542s3a2c5fr"></a>
 
 In your React/Next.js project create all your custom components in a components folder.
@@ -91,8 +99,4 @@ export default function Home({content}) {
 
 ```
 
-### &#x20;<a href="#_jdyy9ejggbg2" id="_jdyy9ejggbg2"></a>
-
-### Example <a href="#_jdyy9ejggbg2" id="_jdyy9ejggbg2"></a>
-
-[https://github.com/zesty-io/nextjs-custom-integration/blob/main/pages/layouts-test-page.js](https://github.com/zesty-io/nextjs-custom-integration/blob/main/pages/layouts-test-page.js)
+&#x20;🎉 Congratulations! You are now iterating through your custom Layouts components without the need to manually reference these components after each new configuration. So long as your Zesty component name matches your applications component name, you are all set to go!&#x20;
