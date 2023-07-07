@@ -169,6 +169,7 @@
   * [Connecting Layouts App to React](tools/nextjs/connecting-layouts-app-to-react.md)
   * [Next.js Dynamic Routes Component](tools/nextjs/next.js-dynamic-routes-component.md)
   * [\<ZestyView> Component](tools/nextjs/less-than-zestyview-greater-than-component.md)
+  * [Programmatically mapping through Layouts components](tools/nextjs/programmatically-mapping-through-layouts-components.md)
   * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
   * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
   * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
