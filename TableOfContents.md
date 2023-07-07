@@ -165,6 +165,7 @@
 
 * [Next.js Integration](tools/code-examples/nextjs.md)
   * [Zesty Content Object](tools/next.js-integration/zesty-content-object.md)
+  * [Manually integrating a Next.js project to Zesty content](tools/nextjs/manually-integrating-a-next.js-project-to-zesty-content.md)
   * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
   * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
   * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
@@ -249,7 +250,3 @@
 ## Community
 
 * [RFCs/Specs](community/specs.md)
-
-***
-
-* [Manually integrating a Next.js project to Zesty content](manually-integrating-a-next.js-project-to-zesty-content.md)

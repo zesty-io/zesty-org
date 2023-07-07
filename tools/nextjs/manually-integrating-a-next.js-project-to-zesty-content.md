@@ -62,11 +62,11 @@ At the root directory, create a new file called `zesty.config.json` and add the 
 
 Get the following values by logging into [Zesty](http://zesty.io/) and navigating to your instance at [www.zesty.io/instances/](http://www.zesty.io/instances/)
 
-Open your instance settings by clicking on the cog ![](<.gitbook/assets/0 (1).png>) icon
+Open your instance settings by clicking on the cog ![](<../../.gitbook/assets/0 (1).png>) icon
 
 Copy the instance ZUID, and paste it as the value for `instance_zuid`
 
-![](<.gitbook/assets/1 (1).gif>)
+![](<../../.gitbook/assets/1 (1).gif>)
 
 Open your instance domains.
 
@@ -74,11 +74,11 @@ Copy the stage domain and paste it as the value for `stage`
 
 Copy the production domain and paste it as the value for `production`
 
-![](<.gitbook/assets/2 (1).gif>)
+![](<../../.gitbook/assets/2 (1).gif>)
 
 Now, go to your instance settings and copy the Preview Password. If one doesn’t exist, please create one. This value should be saved in your project’s .env file
 
-<figure><img src=".gitbook/assets/3 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/3 (1).gif" alt=""><figcaption></figcaption></figure>
 
 ### Installing packages <a href="#_mildc6fk2pz1" id="_mildc6fk2pz1"></a>
 
