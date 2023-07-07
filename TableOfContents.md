@@ -167,6 +167,7 @@
   * [Zesty Content Object](tools/next.js-integration/zesty-content-object.md)
   * [Manually integrating a Next.js project to Zesty content](tools/nextjs/manually-integrating-a-next.js-project-to-zesty-content.md)
   * [Connecting Layouts App to React](tools/nextjs/connecting-layouts-app-to-react.md)
+  * [Next.js Dynamic Routes Component](tools/nextjs/next.js-dynamic-routes-component.md)
   * [Manager Redirects in Next.js](tools/next.js-integration/manager-redirects-in-next.js.md)
   * [Custom Integrations](tools/next.js-integration/custom-integrations.md)
   * [Next.js & Cookies](tools/next.js-integration/next.js-and-cookies.md)
