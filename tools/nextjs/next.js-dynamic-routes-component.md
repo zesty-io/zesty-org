@@ -10,7 +10,11 @@ As seen in Zesty’s nextjs13-starter package:
 
 Create a component called `[[..zesty]].tsx` in your `pages` directory
 
-Here is an example snippet for the catch all component. Note that we are using Material UI components in this example which are not necessary for your custom build. You will want to setup a `<ZestyView>` component that passes the content property. See the following reference: [\<ZestyView> Component](https://docs.google.com/document/d/1aujd6UZRW4rh7Ul1e8LJklOCt9\_Zwb2KMh3E\_aYM7y8/edit)
+Here is an example snippet for the catch all component. Note that we are using Material UI components in this example which are not necessary for your custom build. You will want to setup a `<ZestyView>` component that passes the content property.&#x20;
+
+See the following reference:&#x20;
+
+[less-than-zestyview-greater-than-component.md](less-than-zestyview-greater-than-component.md "mention")
 
 ```javascript
 import React from "react";
