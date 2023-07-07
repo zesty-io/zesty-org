@@ -80,7 +80,15 @@ Once the setting has been activated, inside the details panel of both Models and
 
 For both Models and Content Items, the API link will be available in the details panel. In a model, the link will appear in the Model Info section. For a content item, the link will appear in the Links portion of the details panel.
 
-![Model Instant API Link](../../.gitbook/assets/instant\_api\_model.png) ![Content Item Instant API Link](../../.gitbook/assets/instant\_api\_item.png)
+<div align="center">
+
+<img src="../../.gitbook/assets/instant_api_model.png" alt="Model Instant API Link">
+
+ 
+
+<img src="../../.gitbook/assets/instant_api_item.png" alt="Content Item Instant API Link">
+
+</div>
 
 ### User Created JSON Endpoints
 

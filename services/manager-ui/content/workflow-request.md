@@ -14,7 +14,11 @@ The Workflow Request is located in the Content Item's Details Panel. Once select
 
 Submitting the form sends an email to the selected recipient's associated user email address. The email provides the requester's name, the list of fields to be reviewed, the requesters message from the form and direct link to the Content Item to be reviewed. &#x20;
 
-![The Workflow Request is a dropdown form located in the Details Panel on the right side of every Content Item](<../../../.gitbook/assets/work\_drop (2).png>)
+<div align="center">
+
+<img src="../../../.gitbook/assets/work_drop (2).png" alt="The Workflow Request is a dropdown form located in the Details Panel on the right side of every Content Item">
+
+</div>
 
 ![The form includes all Instance associated users, field selections and a message form for additional instructions.](<../../../.gitbook/assets/new\_work\_form (2) (2).png>) ![The email contains the requesting Users name, the fields selected for review, additonal message and the direct link to the Content Item itself.](<../../../.gitbook/assets/new\_work\_email (2).png>)
 

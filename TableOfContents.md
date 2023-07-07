@@ -249,3 +249,7 @@
 ## Community
 
 * [RFCs/Specs](community/specs.md)
+
+***
+
+* [Manually integrating a Next.js project to Zesty content](manually-integrating-a-next.js-project-to-zesty-content.md)
