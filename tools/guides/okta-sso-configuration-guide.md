@@ -125,7 +125,7 @@ curl --location 'https://accounts.api.zesty.io/v1/vendors/okta' \
 --header 'Content-Type: application/json' \
 --data
 '{
-    "oktaorg_zuid": "ecosystem_zuid",
+    "ecosystem_zuid": "ecosystem_zuid",
     "client_id": "client_id",
     "client_secret": "client_secret",
     "client_domain": "client_domain"
