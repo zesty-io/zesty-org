@@ -117,7 +117,7 @@ Sample Response:
 ### **Register**
 
 1. Use Zesty’s [Create Okta API](https://accounts-api.zesty.org/#357198d6-6dd3-4002-ba02-f04e94985fcb) as seen below, replacing the actual values for ecosystem\_zuid (obtained in [get ecosystem\_zuid](okta-sso-configuration-guide.md#get-ecosystem\_zuid) step), client\_id, client\_secret, client\_domain (from Okta) and token for Authorization (obtained in [get token](okta-sso-configuration-guide.md#get-token) step)
-2. To know if the organization’s client information was successfully registered, the API will respond with status **“OK”**
+2. To know if the organization’s client information was successfully registered, the API will respond with status **“200”**
 
 ```powershell
 curl --location 'https://accounts.api.zesty.io/v1/vendors/okta' \
@@ -138,3 +138,4 @@ curl --location 'https://accounts.api.zesty.io/v1/vendors/okta' \
 * Users who haven’t used their email in Zesty will have a new account created for them with the default role.
 * All permissions and roles will be updated within Zesty.
 * Okta users can authenticate in Zesty from the Okta end-user dashboard via the Zesty application button
+
