@@ -16,7 +16,7 @@ All domains are added to an Instance in the Accounts interface. As part of the U
 There are different types of URLs, that deliver different content based on environment. Below will cover each type and use case.
 
 1. **Webengine Preview URL** - Dev Branch
-2. **Produciton URL** - Live Branch
+2. **Production URL** - Live Branch
 3. **Origin URLs** - Hybrid CDN setup, Live Branch
 
 ### Webengine Preview URL <a href="#webengine_preview_url" id="webengine_preview_url"></a>
