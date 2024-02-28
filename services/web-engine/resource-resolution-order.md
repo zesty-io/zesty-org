@@ -42,7 +42,7 @@ Once the Base Directory settings has a value the Zesty.io auto-created files lis
 * sitemap.xml
 * robots.txt
 * feed.xml
-* [Instant JSON API](../../apis/json-endpoints/instant-content-api.md)
+* [Instant JSON API](../../apis/instant-content-api.md)
 * [GQL API](../../apis/graphql.md)
 
 **Using the Base Directory setting** **with non-automated files**

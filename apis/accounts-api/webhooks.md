@@ -41,11 +41,7 @@ Webhook for Publish Actions do not trigger for any publish event greater than 30
 
 {% swagger baseUrl="https://accounts.api.zesty.io" path="/v1/webhooks" method="post" summary="Create Webhook" %}
 {% swagger-description %}
-This endpoint allows you to create webhooks.
-
-\
-
-
+This endpoint allows you to create webhooks.\
 NOTE: To create a webhook, the authenticated user must have one or more the roles for the given instance:
 {% endswagger-description %}
 
@@ -58,43 +54,17 @@ A ZUID that corresponds to a resource that acts as a parent. Some examples of pa
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="body" type="object" %}
-A JSON representation of webhook's request body. The 
-
-`contentType`
-
- parameter will determine how the body will be sent.
+A JSON representation of webhook's request body. The `contentType` parameter will determine how the body will be sent.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="authorization" type="string" %}
-The authorization token that will be sent as part of your webhook request. This corresponds to the 
-
-`authorization`
-
- header in the HTTP request.
-
-\
-
-
-Any provided authorization token will automatically be used as a Bearer token.
-
-\
-
-
-Ex. 
-
-`authorization: Bearer ABCDEF123`
+The authorization token that will be sent as part of your webhook request. This corresponds to the `authorization` header in the HTTP request.\
+Any provided authorization token will automatically be used as a Bearer token.\
+Ex. `authorization: Bearer ABCDEF123`
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="contentType" type="string" %}
-The type of content in the request your Webhook will send to the URL. This corresponds to the 
-
-`content-type`
-
- HTTP header in the request your webhook will be sending.
-
-\
-
-
+The type of content in the request your Webhook will send to the URL. This corresponds to the `content-type` HTTP header in the request your webhook will be sending.\
 A valid content types is any one of the following:
 {% endswagger-parameter %}
 
@@ -103,20 +73,12 @@ The URL your webhook send its request to.
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="method" type="string" %}
-The HTTP Method that the webhook will use on the URL.
-
-\
-
-
+The HTTP Method that the webhook will use on the URL.\
 A valid HTTP Method is any of the following
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="eventAction" type="number" %}
-A numerical value that represents an action on a resource.
-
-\
-
-
+A numerical value that represents an action on a resource.\
 A valid action is any of the following
 {% endswagger-parameter %}
 

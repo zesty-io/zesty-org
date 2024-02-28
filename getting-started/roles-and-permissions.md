@@ -14,40 +14,38 @@ All roles have access to publishing/unpublishing and deleting content _except fo
 
 #### **Owner**
 
-Full access to all sections: Content, Media, Web IDE, Leads, Analytics, Schema, Health, Audit Trail, and Settings. In Accounts they have full access as well which includes the ability to: launch instances, add domains, invite new users and set their roles, add a team, create tokens, and reset the blueprint.&#x20;
+Full access to all sections: **Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, and Settings**. In Accounts they have full access as well which includes the ability to: launch instances, add domains, invite new users and set their roles, add a team, and create tokens.
 
 #### **Admin**&#x20;
 
 Admins have the same privileges as the Owner role except for deleting other users.
 
-![Admin role access view.](../.gitbook/assets/admin-role-access.png)
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>Admin role access view</p></figcaption></figure>
 
 #### Developer
 
-Access to: Content, Media, Web IDE, Leads, Analytics, Schema, Health, and Settings sections.
+Access to **Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, and Setting** section.
 
-![Developer role access view.](<../.gitbook/assets/developer-role-access (1).png>)
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption><p>Developer role access view</p></figcaption></figure>
 
 #### SEO&#x20;
 
-Access to: Content, Media, Leads, Analytics, and Health sections.
+Access to **Content, Media, Leads, Redirects, Reports, and Apps** section.
 
-![SEO role access view.](../.gitbook/assets/seo-role-access.png)
+<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption><p>SEO role access view</p></figcaption></figure>
 
 #### Publisher
 
-Access to Content, Media, Leads, and Analytics sections.&#x20;
+Access to **Content, Media, Leads, Reports, and Apps** section.
 
-![Publisher role access view.](../.gitbook/assets/publisher-role-access.png)
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption><p>Publisher role access view</p></figcaption></figure>
 
 #### Contributor
 
-Access to Content and Media sections.&#x20;
+Access to **Content, Media, and Apps section**.
 
-![Contributor role access view.](../.gitbook/assets/contributor-role-access.png)
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption><p>Contributor role access view</p></figcaption></figure>
 
 Contributors can create and edit but they **cannot publish** content. To publish new content, contributors must submit a workflow request to a user with publishing access.&#x20;
 
 Contributors can access media and add files, but they **cannot delete** files.
-
-![Contributor role content view.](../.gitbook/assets/contributor-role-content-access.png)

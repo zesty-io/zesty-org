@@ -59,7 +59,7 @@ To secure this endpoint from being called, you may optional setup a secret key, 
 
 ### Akamai Purge
 
-Zesty.io automatically adds [ZUIDs](../../getting-started/zuids.md) to headers that are recognized by Akamai. Akamai refers to them as `edge-cache-tags.` Learn more about Edge Cache Tags from [Akamai's documentation](https://learn.akamai.com/en-us/webhelp/fast-purge/fast-purge/GUID-64272BAE-BCB0-4F84-BA5A-8A21549A347D.html#:\~:text=When%20a%20web%20asset%20is,at%20the%20Akamai%20edge%20servers.).&#x20;
+Zesty.io automatically adds [ZUIDs](../../getting-started/zuids.md) to headers that are recognized by Akamai. Akamai refers to them as `edge-cache-tags.` Learn more about Edge Cache Tags from [Akamai's documentation](https://learn.akamai.com/en-us/webhelp/fast-purge/fast-purge/GUID-64272BAE-BCB0-4F84-BA5A-8A21549A347D.html).&#x20;
 
 Setup API tokens with administrator access. This will be needed to run a purge
 
@@ -87,50 +87,12 @@ Note that clicking the Clear Cache buttons in the Manager UI will ultimately tri
 
 {% swagger baseUrl="https://accounts.api.zesty.io/v1/ecosystems/35-xyz-xyzxyz?action=updateCDNDefaults" path="" method="post" summary="Update EcoSystem to run a remote Purge URL" %}
 {% swagger-description %}
-Your Post Body looks like: 
-
-\
-
-
-
-
-`{`
-
- 
-
-\
-
-
-  
-
-`"defaultCDNType": "AKAMAI",`
-
- 
-
-\
-
-
-  
-
-`"defaultCDNPurgeURL": "https://location-of-cloud-purge-function.com",`
-
- 
-
-\
-
-
-  
-
-`"defaultCDNPurgeAuth": "SECRET_KEY"`
-
-\
-
-
-`}`
-
-\
-
-
+Your Post Body looks like: \
+`{` \
+&#x20; `"defaultCDNType": "AKAMAI",` \
+&#x20; `"defaultCDNPurgeURL": "https://location-of-cloud-purge-function.com",` \
+&#x20; `"defaultCDNPurgeAuth": "SECRET_KEY"`\
+`}`\
 
 {% endswagger-description %}
 

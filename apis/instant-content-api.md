@@ -42,45 +42,17 @@ Authorization: Bearer XXXXX
 
 {% swagger baseUrl="https://yoursite.com" path="/-/instant/zuid.json" method="get" summary="General Format" %}
 {% swagger-description %}
-All objects will return meta and data fields. 
-
+All objects will return meta and data fields. \
 \
-
-
-
-
+The meta field gives information on what type the object is, in addition to its model container.\
 \
-
-
-The meta field gives information on what type the object is, in addition to its model container.
-
+The data field contains meta, version, and content fields.\
 \
-
-
-
-
-\
-
-
-The data field contains meta, version, and content fields.
-
-\
-
-
-
-
-\
-
-
 The data meta field contains the actual object metadata, the data version field contains information detailing which version was returned. Lastly, the data content field returns the actual content that was set in the config tab of Zesty.io
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+Name and value may change in the future. You can also\
 configure your site to not need this
 {% endswagger-parameter %}
 
@@ -160,11 +132,7 @@ Content Items are designated by a 7 in their zuid. Items will only return one ob
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+Name and value may change in the future. You can also\
 configure your site to not need this
 {% endswagger-parameter %}
 
@@ -244,11 +212,7 @@ Arrays are designated by a 6 in their zuid. They can return multiple items.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Access Token" type="string" %}
-Name and value may change in the future. You can also
-
-\
-
-
+Name and value may change in the future. You can also\
 configure your site to not need this
 {% endswagger-parameter %}
 

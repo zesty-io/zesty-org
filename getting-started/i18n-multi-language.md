@@ -16,7 +16,7 @@ Note: adding a language makes that language's relative pages available in previe
 
 {% swagger baseUrl="https://8-XYZ-XYZXYZ.api.zesty.io" path="/v1/env/langs/" method="post" summary="Adding a Language" %}
 {% swagger-description %}
-Posting to the `/env/langs/` API endpoint will create a new language for all content items in a Zesty.io Content Instance. Rest Documentation: https://instances-api.zesty.org/#082ef04e-b251-493f-92c1-062994292702
+Posting to the \`/env/langs/\` API endpoint will create a new language for all content items in a Zesty.io Content Instance. Rest Documentation: https://instances-api.zesty.org/#082ef04e-b251-493f-92c1-062994292702
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="code" type="string" %}

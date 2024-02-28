@@ -62,74 +62,26 @@ A simple post request to your instances REST API will create a head tag.
 
 {% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" method="post" summary="Head Tag Creation" %}
 {% swagger-description %}
-Post a Request with a raw JSON body. The JSON body requires 3 fields type (meta|link|script|style|title), attributes (key value object), and sortOder (integer). JSON body example given to create meta tag. More specific ones are available under each tag type.
-
+Post a Request with a raw JSON body. The JSON body requires 3 fields type (meta|link|script|style|title), attributes (key value object), and sortOder (integer). JSON body example given to create meta tag. More specific ones are available under each tag type.\
 \
-
-
-
-
+This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear. \
 \
-
-
-This call adds a head tag immediately to Web Engine. A cache refresh in Web Engine is needed to see this the head tag appear. 
-
-\
-
-
-
-
-\
-
-
 When added head tags to view resources, the tag needs to be added to each version of the view, production and stage. This is necessary for views like 404 pages, but content model views, apply the head tag to the resource ZUID of the content model.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" %}
-Bearer XXXXXX (APP_SID Token)
+Bearer XXXXXX (APP\_SID Token)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="raw" type="object" %}
-{ 
-
-\
-
-
-    "type": "meta",
-
-\
-
-
-    "resourceZUID": "8-XyZ-XyZ"
-
-\
-
-
-     "attributes": { 
-
-\
-
-
-           "name": "description",
-
-\
-
-
-           "content": "my page description"
-
-\
-
-
-     }, 
-
-\
-
-
-    "sort": 1 
-
-\
-
-
+{ \
+&#x20;   "type": "meta",\
+&#x20;   "resourceZUID": "8-XyZ-XyZ"\
+&#x20;    "attributes": { \
+&#x20;          "name": "description",\
+&#x20;          "content": "my page description"\
+&#x20;    }, \
+&#x20;   "sort": 1 \
 }
 {% endswagger-parameter %}
 
@@ -350,11 +302,7 @@ To see all the head tags on a content instance, make a Get request to the REST A
 
 {% swagger baseUrl="https://8-XyZ123-123xYz.api.zesty.io" path="/v1/web/headtags" method="get" summary="Get Head Tags" %}
 {% swagger-description %}
-This endpoint allows you to view all the head tags you have on a content instance. Note, if you are logged into Zesty.io you can navigate to this get endpoint in your browser. Replace 
-
-`8-XyZ123-123xYz`
-
-with your Instance ZUID.
+This endpoint allows you to view all the head tags you have on a content instance. Note, if you are logged into Zesty.io you can navigate to this get endpoint in your browser. Replace `8-XyZ123-123xYz`with your Instance ZUID.
 {% endswagger-description %}
 
 {% swagger-parameter in="header" name="Authorization" type="string" %}
@@ -409,42 +357,14 @@ Bearer XXXXXXX (user session token)
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="raw" type="string" %}
-{
-
-\
-
-
-  "type": "meta",
-
-\
-
-
-  "sort" : 2,
-
-\
-
-
-  "attributes" : {
-
-\
-
-
-     "name" : "description",
-
-\
-
-
-     "content" : " hello world"
-
-\
-
-
-  }
-
-\
-
-
- }
+{\
+&#x20; "type": "meta",\
+&#x20; "sort" : 2,\
+&#x20; "attributes" : {\
+&#x20;    "name" : "description",\
+&#x20;    "content" : " hello world"\
+&#x20; }\
+&#x20;}
 {% endswagger-parameter %}
 
 {% swagger-response status="200" description="" %}

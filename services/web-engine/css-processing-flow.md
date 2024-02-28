@@ -66,50 +66,18 @@ Creates a single stylesheet with two versions: dev and live
 {% endswagger-description %}
 
 {% swagger-parameter in="body" name="type" type="string" %}
-type must be one of the following options:
-
-\
-
-
-\- text/less
-
-\
-
-
-\- text/sass
-
-\
-
-
-\- text/scss
-
-\
-
-
+type must be one of the following options:\
+\- text/less\
+\- text/sass\
+\- text/scss\
 \- text/css
 {% endswagger-parameter %}
 
 {% swagger-parameter in="body" name="filename" type="string" %}
-filename must include a file extension. Valid file extensions are:
-
-\
-
-
-\- .less
-
-\
-
-
-\- .sass
-
-\
-
-
-\- .scss
-
-\
-
-
+filename must include a file extension. Valid file extensions are:\
+\- .less\
+\- .sass\
+\- .scss\
 \- .css
 {% endswagger-parameter %}
 
@@ -153,11 +121,7 @@ Retrieve a single stylesheet using its ZUID
 {% endswagger-description %}
 
 {% swagger-parameter in="path" name="stylesheet_zuid" type="string" %}
-unique id assigned to a given stylesheet
-
-\
-
-
+unique id assigned to a given stylesheet\
 
 {% endswagger-parameter %}
 
@@ -196,16 +160,8 @@ Retrieves multiple stylesheets
 {% endswagger-description %}
 
 {% swagger-parameter in="query" name="status" type="string" %}
-A stylesheet's status. Valid options are:
-
-\
-
-
-\- dev
-
-\
-
-
+A stylesheet's status. Valid options are:\
+\- dev\
 \- live
 {% endswagger-parameter %}
 
