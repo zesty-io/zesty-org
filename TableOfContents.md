@@ -238,6 +238,7 @@
   * [Using Snippets](tools/guides/using-snippets.md)
   * [Video Embedding or Streaming Capabilities](tools/guides/video-embedding-or-streaming-capabilities.md)
   * [Okta SSO Configuration Guide](tools/guides/okta-sso-configuration-guide.md)
+  * [Azure SSO Custom Markdown Tile in Azure AD](tools/guides/azure-sso-custom-markdown-tile-in-azure-ad.md)
 * [Atom IDE Package](tools/atom-package.md)
 * [Chrome Browser Extension](tools/chrome-extension.md)
 * [Headless Code Examples](tools/code-examples/README.md)

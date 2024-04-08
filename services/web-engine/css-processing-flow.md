@@ -60,32 +60,22 @@ Comments in Style files can err on compilation especially if they are single-lin
 
 ### Managing Stylesheets Using the API
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/" method="post" summary="Create Stylesheet" %}
-{% swagger-description %}
+## Create Stylesheet
+
+<mark style="color:green;">`POST`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/`
+
 Creates a single stylesheet with two versions: dev and live
-{% endswagger-description %}
 
-{% swagger-parameter in="body" name="type" type="string" %}
-type must be one of the following options:\
-\- text/less\
-\- text/sass\
-\- text/scss\
-\- text/css
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="filename" type="string" %}
-filename must include a file extension. Valid file extensions are:\
-\- .less\
-\- .sass\
-\- .scss\
-\- .css
-{% endswagger-parameter %}
+| Name     | Type   | Description                                                                                                          |
+| -------- | ------ | -------------------------------------------------------------------------------------------------------------------- |
+| type     | string | <p>type must be one of the following options:<br>- text/less<br>- text/sass<br>- text/scss<br>- text/css</p>         |
+| filename | string | <p>filename must include a file extension. Valid file extensions are:<br>- .less<br>- .sass<br>- .scss<br>- .css</p> |
+| code     | string |                                                                                                                      |
 
-{% swagger-parameter in="body" name="code" type="string" %}
-
-{% endswagger-parameter %}
-
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "_meta": {
@@ -112,20 +102,23 @@ filename must include a file extension. Valid file extensions are:\
 }
 
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/:stylesheet_zuid" method="get" summary="Get Single Stylesheet" %}
-{% swagger-description %}
+## Get Single Stylesheet
+
+<mark style="color:blue;">`GET`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/:stylesheet_zuid`
+
 Retrieve a single stylesheet using its ZUID
-{% endswagger-description %}
 
-{% swagger-parameter in="path" name="stylesheet_zuid" type="string" %}
-unique id assigned to a given stylesheet\
+#### Path Parameters
 
-{% endswagger-parameter %}
+| Name             | Type   | Description                                         |
+| ---------------- | ------ | --------------------------------------------------- |
+| stylesheet\_zuid | string | <p>unique id assigned to a given stylesheet<br></p> |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
     "_meta": {
@@ -151,21 +144,23 @@ unique id assigned to a given stylesheet\
     }
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets" method="get" summary="Get Multiple Stylesheets" %}
-{% swagger-description %}
+## Get Multiple Stylesheets
+
+<mark style="color:blue;">`GET`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets`
+
 Retrieves multiple stylesheets
-{% endswagger-description %}
 
-{% swagger-parameter in="query" name="status" type="string" %}
-A stylesheet's status. Valid options are:\
-\- dev\
-\- live
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-response status="200" description="" %}
+| Name   | Type   | Description                                                         |
+| ------ | ------ | ------------------------------------------------------------------- |
+| status | string | <p>A stylesheet's status. Valid options are:<br>- dev<br>- live</p> |
+
+{% tabs %}
+{% tab title="200 " %}
 ```javascript
 {
   "_meta": {
@@ -207,88 +202,101 @@ A stylesheet's status. Valid options are:\
   ]
 }
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/:stylesheet_zuid" method="put" summary="Update Stylesheet" %}
-{% swagger-description %}
+## Update Stylesheet
 
-{% endswagger-description %}
+<mark style="color:orange;">`PUT`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/:stylesheet_zuid`
 
-{% swagger-parameter in="path" name="stylesheet_zuid" type="string" %}
+#### Path Parameters
 
-{% endswagger-parameter %}
+| Name             | Type   | Description |
+| ---------------- | ------ | ----------- |
+| stylesheet\_zuid | string |             |
 
-{% swagger-parameter in="body" name="code" type="string" %}
+#### Request Body
 
-{% endswagger-parameter %}
+| Name | Type   | Description |
+| ---- | ------ | ----------- |
+| code | string |             |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/:stylesheet_zuid" method="put" summary="Update Stylesheet and Publish " %}
-{% swagger-description %}
+## Update Stylesheet and Publish&#x20;
 
-{% endswagger-description %}
+<mark style="color:orange;">`PUT`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/:stylesheet_zuid`
 
-{% swagger-parameter in="path" name="stylesheet_zuid" type="string" %}
+#### Path Parameters
 
-{% endswagger-parameter %}
+| Name             | Type   | Description |
+| ---------------- | ------ | ----------- |
+| stylesheet\_zuid | string |             |
 
-{% swagger-parameter in="query" name="purge_cache" type="boolean" %}
+#### Query Parameters
 
-{% endswagger-parameter %}
+| Name         | Type    | Description |
+| ------------ | ------- | ----------- |
+| purge\_cache | boolean |             |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/:stylesheet_zuid" method="delete" summary="Delete Stylesheet" %}
-{% swagger-description %}
+## Delete Stylesheet
 
-{% endswagger-description %}
+<mark style="color:red;">`DELETE`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/:stylesheet_zuid`
 
-{% swagger-parameter in="path" name="stylesheet_zuid" type="string" %}
+#### Path Parameters
 
-{% endswagger-parameter %}
+| Name             | Type   | Description |
+| ---------------- | ------ | ----------- |
+| stylesheet\_zuid | string |             |
 
-{% swagger-parameter in="query" name="purge_cache" type="boolean" %}
-Default value is true. This value is only checked when you wish to publish
-{% endswagger-parameter %}
+#### Query Parameters
 
-{% swagger-parameter in="query" name="action" type="string" %}
-Set action=publish if you wish to publish
-{% endswagger-parameter %}
+| Name         | Type    | Description                                                                |
+| ------------ | ------- | -------------------------------------------------------------------------- |
+| purge\_cache | boolean | Default value is true. This value is only checked when you wish to publish |
+| action       | string  | Set action=publish if you wish to publish                                  |
 
-{% swagger-response status="200" description="" %}
+{% tabs %}
+{% tab title="200 " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
-{% swagger baseUrl="https://8-xyz-xyzxyz.api.zesty.io" path="/v1/web/stylesheets/:stylesheet_zuid/versions/:version" method="post" summary="Publish Stylesheet" %}
-{% swagger-description %}
+## Publish Stylesheet
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://8-xyz-xyzxyz.api.zesty.io/v1/web/stylesheets/:stylesheet_zuid/versions/:version`
 
-{% swagger-parameter in="path" name="version" type="number" %}
-Specify the version of the resource you wish to publish
-{% endswagger-parameter %}
+#### Path Parameters
 
-{% swagger-parameter in="query" name="purge_cache" type="boolean" %}
-Default value is true
-{% endswagger-parameter %}
+| Name    | Type   | Description                                             |
+| ------- | ------ | ------------------------------------------------------- |
+| version | number | Specify the version of the resource you wish to publish |
 
-{% swagger-response status="200" description="" %}
+#### Query Parameters
+
+| Name         | Type    | Description           |
+| ------------ | ------- | --------------------- |
+| purge\_cache | boolean | Default value is true |
+
+{% tabs %}
+{% tab title="200 " %}
 ```
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 
 ### JavaScript
 
