@@ -10,6 +10,11 @@ description: >-
 ## Supported Features
 
 * IdP-initiated Single Sign-On (SSO) in Azure AD
+
+{% hint style="info" %}
+The Azure SSO implementation in Zesty.io will use the **common** issuer to support both Microsoft accounts and work or school accounts as opposed to using an organization-specific issuer which only supports work or school accounts for the [authorize and token endpoints](https://learn.microsoft.com/en-us/entra/identity-platform/v2-protocols#endpoints). See our [Microsoft Single Sign-On guide](https://zesty.org/tools/guides/microsoft-sso) for more information.
+{% endhint %}
+
 * Support user login to Zesty from [Azure Portal](https://portal.azure.com/)
 * Automatic account creation in Zesty.io on initial SSO
 
