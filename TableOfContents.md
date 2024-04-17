@@ -176,7 +176,7 @@
   * [Pagination and Search Example with Custom Endpoint and Next.js](tools/next.js-integration/pagination-and-search-example-with-custom-endpoint-and-next.js.md)
   * [SSR: Server Side Rendering](tools/next.js-integration/ssr-server-side-rendering.md)
   * [SSG: Static Site Generation](tools/next.js-integration/ssg-static-site-generation.md)
-* [Layouts App](tools/layouts-app/README.md)
+* [Freestyle App](tools/layouts-app/README.md)
   * [Creating Custom Components with Parsley](tools/layouts-app/creating-custom-components-with-parsley.md)
   * [Creating Custom Components with NextJS](tools/layouts-app/creating-custom-components-with-nextjs.md)
   * [Default Layout vs Single Item](tools/layouts-app/default-layout-vs-single-item.md)
